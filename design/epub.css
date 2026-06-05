@@ -54,13 +54,13 @@ pre { background:#0E0E16; color:#E8E8E8; padding:0.8em; overflow:auto;
 code { color:#00F0FF; }
 math, .math { color:#00F0FF; }
 
-/* Boxed display equations (stand out) */
-.math.display {
+/* Boxed display equations (stand out). With --mathml, pandoc emits
+   <math display="block">, so target the attribute (and the class form as fallback). */
+math[display="block"], .math.display {
   display:block; text-align:center; color:#00F0FF;
   background:#0E0E16; border:1px solid #00F0FF; border-left:4px solid #00F0FF;
   padding:12px 14px; margin:16px 0; overflow-x:auto; font-size:1.05em;
 }
-.math.display math { color:#00F0FF; }
 
 /* Tables */
 table { border-collapse:collapse; width:100%; margin:1em 0; }
