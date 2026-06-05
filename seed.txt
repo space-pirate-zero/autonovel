@@ -4,7 +4,7 @@
 the Corporate Immune System
 **Author:** Space Pirate Zero (Greg Gates / Spaceship Alpha 9, LLC)
 **Genre:** Business strategy × cyberpunk graphic novel × spec-ops field manual
-**Target:** 55,000–65,000 words. Prologue + 16 chapters + 3 appendices.
+**Target:** 55,000–65,000 words. Prologue + 16 chapters + 2 appendices.
 
 This is the master brief. The detailed bible lives in the foundation layer —
 read those files, not this one, when drafting:
@@ -38,14 +38,12 @@ fights to build something real inside a city run by a corporate OS called PRISM.
 4. The corporate immune system can be bypassed, but not defeated.
 5. Good trouble is the only kind of trouble worth making.
 
-## THREE PILLARS
+## TWO PILLARS
 
 1. THE PHYSICS — equations that model corporate inertia, fear, entropy, and
    bureaucratic friction as literal forces of nature (24 total; see canon.md).
 2. THE GRAPHIC NOVEL — "The Broadcast," a cyberpunk narrative running through
    every chapter as cold-open vignettes.
-3. THE APP — a companion app (Space Tokens economy) that listens to meetings
-   and computes the formulas live (Appendix C).
 
 ## THE DORIAN GRAY METAPHOR (central)
 
@@ -89,8 +87,8 @@ Field reports (Ch 13–15) may compress the template into case-study form.
 - Prologue + Chapters 1–3: original prose lives in an external .docx not present
   here. chapters/ch_00.md … ch_03.md are scaffolds (beats + format skeleton).
   Build these fresh against the outline, or import the .docx if supplied.
-- Appendices A (cheatsheet of 24 equations), B (Infiltration Canvas), C (the
-  companion app) — to be assembled in the export phase.
+- Appendices A (cheatsheet of 24 equations) and B (Infiltration Canvas) — to be
+  assembled in the export phase.
 
 What the build should do with the v0 drafts:
 1. Use as first drafts — revise, don't discard.

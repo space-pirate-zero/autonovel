@@ -172,7 +172,6 @@ making. The Dorian Gray portrait runs throughout.
 ## Appendices (export phase)
 - A: The Insurgent's Cheatsheet — all 24 equations, benchmarks, war-room scenarios.
 - B: The Infiltration Canvas — 8-part tactical worksheet.
-- C: The Companion App — Digital Insurgency Live (Space Tokens economy).
 
 ## Foreshadowing Ledger
 | ID  | Planted   | Payoff | Thread                         | Status |

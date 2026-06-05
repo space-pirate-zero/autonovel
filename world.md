@@ -80,8 +80,6 @@ CISO, the Legacy Vendor. Each has Intel / Strategy / The Pitch (see chapters).
   Extraction: $40K, 12% complication. ZERO can't remove hers.
 - **The 24 Equations** — the speculative core. Corporate behavior as natural law
   (canon.md).
-- **The Companion App** — Space Tokens economy; listens to meetings, computes the
-  formulas live (Appendix C).
 
 ## Cultural Details (Atlanta in the bones)
 
