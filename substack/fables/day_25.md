@@ -1,10 +1,3 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-![Day 25](cards/day_25.png)
-
-# Day 25/30 — The Trust/Risk Ratio
-*A fable from the field manual · Chapter 12*
-
 ZERO's system ran inside MegaCorp for three months and touched nothing.
 
 Shadow mode. Read-only. It watched every transaction, logged every anomaly the legacy system missed, and changed nothing. To everyone upstairs it was invisible — useful, maybe, but cuttable. You can switch off a thing that only watches and nothing happens.
@@ -21,22 +14,4 @@ The payment queue froze. The attack died at a hundred and twenty-seven thousand 
 
 The risk had inverted. A day earlier, turning ZERO off cost nothing. Now turning her off was the dangerous move. She had stopped being a vendor. She was infrastructure. She was the oxygen. The CIO asked five words: "How fast can you start?"
 
----
-
-**What it means.** The mathematical tipping point. Run silent in shadow mode, logging everything, touching nothing, until the evidence that you work is so overwhelming that turning you OFF becomes the dangerous move. The risk inverts. You stop being a vendor and become infrastructure — the oxygen.
-
-## The equation
-
-$$ T_r = \frac{Volume_{traffic} \times Time_{uptime}}{Severity_{incidents}} $$
-
-🟢 > 10,000 (primary) · 🟢🟢 > 100,000 (System of Record) · 🔴 < 100 (stay in shadow).
-
-**The moral of the story is:** Run silent until the evidence is undeniable, then act. There's a tipping point where turning you OFF becomes the dangerous choice — that's the moment you stop being optional and become the oxygen.
-
----
-
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-**Tomorrow → Day 26: a heist in a bank, told in full.**
-
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+MORAL: Run silent until the evidence is undeniable, then act. There's a tipping point where turning you OFF becomes the dangerous choice — that's the moment you stop being optional and become the oxygen.

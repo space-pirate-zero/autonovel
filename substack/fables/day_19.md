@@ -1,10 +1,3 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-![Day 19](cards/day_19.png)
-
-# Day 19/30 — The Insurgent Index
-*A fable from the field manual · Chapter 8*
-
 By the time ZERO met him, BISHOP had quietly saved MegaCorp fourteen million dollars, and not one person in the building knew it.
 
 That was the design.
@@ -19,22 +12,4 @@ The most dangerous person in the building, ZERO realized, was the one with nothi
 
 When the layoffs came, three VPs with beautiful decks were gone by lunch. BISHOP, who had a deck for nothing and a hand in everything, wasn't on any list. He couldn't be. Nobody could say exactly what he did — only that the floor stopped working the day he didn't show.
 
----
-
-**What it means.** The best internal rebels fix everything and claim nothing. They give the credit away, build a network of quiet debtors, and become load-bearing in ways nobody can quite articulate — which is exactly why they can't be cut. Power through competence, not visibility.
-
-## The equation
-
-$$ I_{insurgent} = \frac{Problems\_Solved_{quietly}}{Credit\_Claimed_{publicly}} $$
-
-🟢 → ∞ (max power) · 🔴 → 0 (you're building a LinkedIn, not a movement).
-
-**The moral of the story is:** The strongest rebels fix everything and claim nothing. Give the credit away and become the gravity no one can see — because they can't cut what they can't explain.
-
----
-
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-**Tomorrow → Day 20: doing nothing is the expensive option.**
-
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+MORAL: The strongest rebels fix everything and claim nothing. Give the credit away and become the gravity no one can see — because they can't cut what they can't explain.

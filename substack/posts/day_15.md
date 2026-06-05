@@ -3,10 +3,25 @@
 ![Day 15](cards/day_15.png)
 
 # Day 15/30 — The Soul Score
-*Chapter 5*
+*A fable from the field manual · Chapter 5*
 
-## The nugget
-A brutally honest metric: for every feature, multiply human impact by the honesty of intent (+1 genuine, −1 exploitative). Most companies never calculate it because they're terrified of the number. The insurgent calculates it anyway, then decides what to build — and what to refuse.
+The MirrorMatch growth team kept a brass bell on the wall and rang it every time a record broke. The week ZERO quit, they rang it for Version B.
+
+Version A of the notification said: *You have a new match. Meet Sarah.* True — a real person had liked their profile. Version B said: *Someone is interested in you. Upgrade to see who.* There might be no one. The "someone" was a manufactured ache, and the only cure on sale was a credit card.
+
+Version B won. Revenue up twenty-three percent. The room cheered. Someone rang the bell.
+
+ZERO wasn't watching the metrics. She was watching the user-research screen the growth lead hadn't shown — real faces, real voices. A woman in Ohio: *I know the notifications are fake. I can't stop checking. It's the only thing that makes me feel like someone might want me.*
+
+She ran the math nobody on that team would run: for every feature, its impact on a human being times the honesty of the intent behind it. Plus one if you built it to serve them. Minus one if you built it to exploit them. Version B's intent was a flat, certain minus one — multiplied across forty-seven million people.
+
+She went to the bathroom and threw up. Then she looked in the mirror, and there it was: the portrait, in her own face.
+
+She didn't ring the bell. She wrote two sentences of resignation and walked out into the Atlanta night.
+
+---
+
+**What it means.** A brutally honest metric: for every feature, multiply human impact by the honesty of intent (+1 genuine, −1 exploitative). Most companies never calculate it because they're terrified of the number. The insurgent calculates it anyway, then decides what to build — and what to refuse.
 
 ## The equation
 
@@ -14,14 +29,12 @@ $$ S_{soul} = \sum (Impact_{human} \times Intent_{honest}) $$
 
 🟢 net positive · 🔴 net negative (fix the product before anything else).
 
-## SPZ closer
-
-> Heaven's Gate had a perfectly internally-consistent worldview. Matching uniforms, sealed logic, every member sincere. Sincerity is not the test. A system can be coherent, beloved by its own people, optimized to the decimal — and still march everyone off a cliff because nobody ran the soul score. If you're building something you wouldn't let your mom use without cringing, you're not an insurgent. You're a mercenary with a nicer UI. The Mirror Test is the first and last thing. Run it.
+**The moral of the story is:** Score every feature by its impact on people times the honesty of why you built it. If the intent is a minus, no amount of revenue makes the total positive — and you'll meet that number in the mirror.
 
 ---
 
-📕 **If this hit, the book has the rest.** → [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
 
 **Tomorrow → Day 16: build the kill switch first.**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) so you don't miss the next one.*
+*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*

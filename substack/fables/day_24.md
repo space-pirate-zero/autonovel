@@ -1,10 +1,3 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-![Day 24](cards/day_24.png)
-
-# Day 24/30 — The Audit Defense Score
-*A fable from the field manual · Chapter 11*
-
 REAPER caught ZERO's scent first. PRISM's algorithm flagged her access as "anomalous vendor behavior," and the internal audit team began to circle — three auditors, a forty-seven-point security questionnaire, and the particular smile of people paid to find something wrong.
 
 Most vendors panic here, or lawyer up. Both trip the immune response and get you ejected. ZERO did the opposite. She walked *toward* the audit.
@@ -17,22 +10,4 @@ The audit was scheduled for three hours. It took forty-five minutes.
 
 REAPER's red flag downgraded from *anomalous* to *reviewed and cleared.* The fortress's own paperwork, turned into a key. Michael Collins beat an empire by reading its intelligence better than it read itself.
 
----
-
-**What it means.** The CISO's job isn't security — it's liability management. Stop selling features; sell the artifacts that let them stamp 'Approved' and sleep. Maximize this and the security review becomes a formality. Bring a comparison matrix and make keeping the legacy vendor the risky choice.
-
-## The equation
-
-$$ D_{audit} = \frac{Certifications \times Scope}{Auditor\_Fear} $$
-
-🟢 > 50 (rubber stamp) · 🟡 20–50 · 🔴 < 5 (rejection).
-
-**The moral of the story is:** The CISO sells the absence of blame, not security. Don't fight the audit — bring the artifacts, the comparison matrix, and your own flagged weakness, and make keeping the old vendor the dangerous choice.
-
----
-
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-**Tomorrow → Day 25: the moment the risk inverts.**
-
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+MORAL: The CISO sells the absence of blame, not security. Don't fight the audit — bring the artifacts, the comparison matrix, and your own flagged weakness, and make keeping the old vendor the dangerous choice.

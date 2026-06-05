@@ -1,10 +1,3 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-![Day 23](cards/day_23.png)
-
-# Day 23/30 — The Vaporware Index
-*A fable from the field manual · Chapter 10*
-
 Two vendors. One demo day.
 
 The first took the stage with a deck full of adjectives — revolutionary, autonomous, cutting-edge, end-to-end — and a sizzle reel of an interface that did not, when anyone asked, actually exist yet. Forty-five slides. Zero live minutes. The CIO nodded the way you nod at a weather forecast.
@@ -19,22 +12,4 @@ Afterward BISHOP did the arithmetic. "Count the adjectives in the pitch. Divide 
 
 She closed the laptop. The cursor was still blinking on the projector. That blink was worth a thousand slides.
 
----
-
-**What it means.** Adjectives in the pitch over live demo minutes. A company describing an 'innovative, cutting-edge, AI-powered, transformational ecosystem' that can't show five minutes of working software is selling slides. Works in reverse, too: score your own pitch before you score theirs.
-
-## The equation
-
-$$ I_v = \frac{Adjectives_{pitch}}{Live\_Demo\_Minutes} $$
-
-🟢 < 5 · 🟡 5–10 · 🔴 > 10 (you're the vaporware).
-
-**The moral of the story is:** Adjectives in the pitch over live-demo minutes tells you who's selling slides and who's selling software. Real work is boring to describe — so open the laptop and let the cursor blink.
-
----
-
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-**Tomorrow → Day 24: weaponize the audit.**
-
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+MORAL: Adjectives in the pitch over live-demo minutes tells you who's selling slides and who's selling software. Real work is boring to describe — so open the laptop and let the cursor blink.

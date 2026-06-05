@@ -1,10 +1,3 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-![Day 21](cards/day_21.png)
-
-# Day 21/30 — The Self-Funding Coefficient
-*A fable from the field manual · Chapter 9*
-
 The pilot needed funding, and ZERO had learned never to ask a CFO to believe in anything.
 
 So she didn't. She brought a trade so lopsided that saying no would have been the irrational act.
@@ -19,22 +12,4 @@ That was the exact question on Park's face. Not *should we?* — *why didn't we?
 
 He signed.
 
----
-
-**What it means.** If this is over 5, the pilot pays for itself five times over and the CFO is negligent not to approve it. This isn't a cost — it's a reallocation from a wasteful line item to a productive one. Below 5? Go back to the User Buyer and expand the use case until it clears.
-
-## The equation
-
-$$ S_{fc} = \frac{Cost_{human} - Cost_{AI}}{Cost_{pilot}} $$
-
-🟢 > 5 (pays for itself) · 🟢🟢 > 10 (free money) · 🔴 < 1 (don't pitch the CFO).
-
-**The moral of the story is:** Don't ask the CFO to believe in your vision — hand him a trade he'd be negligent to refuse. When the pilot pays for itself many times over, "should we?" becomes "why didn't we do this yesterday?"
-
----
-
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-**Tomorrow → Day 22: kill the dead deals.**
-
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+MORAL: Don't ask the CFO to believe in your vision — hand him a trade he'd be negligent to refuse. When the pilot pays for itself many times over, "should we?" becomes "why didn't we do this yesterday?"
