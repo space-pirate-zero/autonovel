@@ -1,0 +1,190 @@
+
+============================================================
+  AUTONOVEL PIPELINE — phases: drafting, revision, export
+============================================================
+  State: phase=drafting, foundation_score=8.0, chapters=0/16, novel_score=0.0
+
+============================================================
+  PHASE 2: DRAFTING
+============================================================
+
+------------------------------------------------------------
+  Drafting Chapter 1/16
+------------------------------------------------------------
+  [22:45:07] Attempt 1/5
+  [22:45:07] RUN: uv run python draft_chapter.py 1
+  [22:47:07] Drafted 3531 words
+  [22:47:07] RUN: uv run python evaluate.py --chapter=1
+  [22:47:50] Chapter 1 score: 6.5
+  [22:47:50] RUN: git add -A
+  [22:47:50] RUN: git commit -m "ch01: score 6.5, 3531w" --allow-empty
+  [22:47:50] RUN: git rev-parse --short HEAD
+  [22:47:50] GIT COMMIT: 9767328 — ch01: score 6.5, 3531w
+
+------------------------------------------------------------
+  Drafting Chapter 2/16
+------------------------------------------------------------
+  [22:47:50] Attempt 1/5
+  [22:47:50] RUN: uv run python draft_chapter.py 2
+  [22:50:03] Drafted 3727 words
+  [22:50:03] RUN: uv run python evaluate.py --chapter=2
+  [22:50:53] Chapter 2 score: 7.0
+  [22:50:53] RUN: git add -A
+  [22:50:53] RUN: git commit -m "ch02: score 7.0, 3727w" --allow-empty
+  [22:50:53] RUN: git rev-parse --short HEAD
+  [22:50:53] GIT COMMIT: 738b0bf — ch02: score 7.0, 3727w
+
+------------------------------------------------------------
+  Drafting Chapter 3/16
+------------------------------------------------------------
+  [22:50:53] Attempt 1/5
+  [22:50:53] RUN: uv run python draft_chapter.py 3
+  [22:53:26] Drafted 4355 words
+  [22:53:26] RUN: uv run python evaluate.py --chapter=3
+  [22:54:06] Chapter 3 score: 3.5
+  [22:54:06] Score 3.5 < 6.0, discarding attempt
+  [22:54:06] RUN: git checkout -- chapters/ch_03.md 2>/dev/null || true
+  [22:54:06] Attempt 2/5
+  [22:54:06] RUN: uv run python draft_chapter.py 3
+  [22:56:31] Drafted 4016 words
+  [22:56:31] RUN: uv run python evaluate.py --chapter=3
+  [22:57:22] Chapter 3 score: 6.7
+  [22:57:22] RUN: git add -A
+  [22:57:22] RUN: git commit -m "ch03: score 6.7, 4016w" --allow-empty
+  [22:57:22] RUN: git rev-parse --short HEAD
+  [22:57:22] GIT COMMIT: 184adf2 — ch03: score 6.7, 4016w
+
+------------------------------------------------------------
+  Drafting Chapter 4/16
+------------------------------------------------------------
+  [22:57:22] Attempt 1/5
+  [22:57:22] RUN: uv run python draft_chapter.py 4
+  [22:59:33] Drafted 3679 words
+  [22:59:33] RUN: uv run python evaluate.py --chapter=4
+  [23:00:26] Chapter 4 score: 6.3
+  [23:00:26] RUN: git add -A
+  [23:00:26] RUN: git commit -m "ch04: score 6.3, 3679w" --allow-empty
+  [23:00:26] RUN: git rev-parse --short HEAD
+  [23:00:26] GIT COMMIT: 2046a48 — ch04: score 6.3, 3679w
+
+------------------------------------------------------------
+  Drafting Chapter 5/16
+------------------------------------------------------------
+  [23:00:26] Attempt 1/5
+  [23:00:26] RUN: uv run python draft_chapter.py 5
+  [23:02:44] Drafted 4018 words
+  [23:02:44] RUN: uv run python evaluate.py --chapter=5
+  [23:03:32] Chapter 5 score: 7.0
+  [23:03:32] RUN: git add -A
+  [23:03:32] RUN: git commit -m "ch05: score 7.0, 4018w" --allow-empty
+  [23:03:32] RUN: git rev-parse --short HEAD
+  [23:03:32] GIT COMMIT: 224b772 — ch05: score 7.0, 4018w
+
+------------------------------------------------------------
+  Drafting Chapter 6/16
+------------------------------------------------------------
+  [23:03:32] Attempt 1/5
+  [23:03:32] RUN: uv run python draft_chapter.py 6
+  [23:05:33] Drafted 3662 words
+  [23:05:33] RUN: uv run python evaluate.py --chapter=6
+  [23:06:15] Chapter 6 score: 7.0
+  [23:06:15] RUN: git add -A
+  [23:06:15] RUN: git commit -m "ch06: score 7.0, 3662w" --allow-empty
+  [23:06:15] RUN: git rev-parse --short HEAD
+  [23:06:15] GIT COMMIT: 1ee79be — ch06: score 7.0, 3662w
+
+------------------------------------------------------------
+  Drafting Chapter 7/16
+------------------------------------------------------------
+  [23:06:15] Attempt 1/5
+  [23:06:15] RUN: uv run python draft_chapter.py 7
+  [23:08:20] Drafted 3650 words
+  [23:08:20] RUN: uv run python evaluate.py --chapter=7
+  [23:09:04] Chapter 7 score: 5.5
+  [23:09:04] Score 5.5 < 6.0, discarding attempt
+  [23:09:04] RUN: git checkout -- chapters/ch_07.md 2>/dev/null || true
+  [23:09:04] Attempt 2/5
+  [23:09:04] RUN: uv run python draft_chapter.py 7
+  [23:11:14] Drafted 3836 words
+  [23:11:14] RUN: uv run python evaluate.py --chapter=7
+  [23:12:01] Chapter 7 score: 7.81
+  [23:12:01] RUN: git add -A
+  [23:12:01] RUN: git commit -m "ch07: score 7.81, 3836w" --allow-empty
+  [23:12:01] RUN: git rev-parse --short HEAD
+  [23:12:01] GIT COMMIT: fdac686 — ch07: score 7.81, 3836w
+
+------------------------------------------------------------
+  Drafting Chapter 8/16
+------------------------------------------------------------
+  [23:12:01] Attempt 1/5
+  [23:12:01] RUN: uv run python draft_chapter.py 8
+  [23:14:07] Drafted 3877 words
+  [23:14:07] RUN: uv run python evaluate.py --chapter=8
+  [23:14:49] Chapter 8 score: 7.16
+  [23:14:49] RUN: git add -A
+  [23:14:49] RUN: git commit -m "ch08: score 7.16, 3877w" --allow-empty
+  [23:14:49] RUN: git rev-parse --short HEAD
+  [23:14:49] GIT COMMIT: 2181502 — ch08: score 7.16, 3877w
+
+------------------------------------------------------------
+  Drafting Chapter 9/16
+------------------------------------------------------------
+  [23:14:49] Attempt 1/5
+  [23:14:49] RUN: uv run python draft_chapter.py 9
+  [23:17:25] Drafted 3776 words
+  [23:17:25] RUN: uv run python evaluate.py --chapter=9
+  [23:18:14] Chapter 9 score: 5.5
+  [23:18:14] Score 5.5 < 6.0, discarding attempt
+  [23:18:14] RUN: git checkout -- chapters/ch_09.md 2>/dev/null || true
+  [23:18:14] Attempt 2/5
+  [23:18:14] RUN: uv run python draft_chapter.py 9
+  [23:20:13] Drafted 3692 words
+  [23:20:13] RUN: uv run python evaluate.py --chapter=9
+  [23:21:01] Chapter 9 score: 6.96
+  [23:21:01] RUN: git add -A
+  [23:21:01] RUN: git commit -m "ch09: score 6.96, 3692w" --allow-empty
+  [23:21:01] RUN: git rev-parse --short HEAD
+  [23:21:01] GIT COMMIT: b89449e — ch09: score 6.96, 3692w
+
+------------------------------------------------------------
+  Drafting Chapter 10/16
+------------------------------------------------------------
+  [23:21:01] Attempt 1/5
+  [23:21:01] RUN: uv run python draft_chapter.py 10
+  [23:23:10] Drafted 3614 words
+  [23:23:10] RUN: uv run python evaluate.py --chapter=10
+  [23:23:56] Chapter 10 score: 5.0
+  [23:23:56] Score 5.0 < 6.0, discarding attempt
+  [23:23:56] RUN: git checkout -- chapters/ch_10.md 2>/dev/null || true
+  [23:23:56] Attempt 2/5
+  [23:23:56] RUN: uv run python draft_chapter.py 10
+  [23:25:55] Drafted 3552 words
+  [23:25:55] RUN: uv run python evaluate.py --chapter=10
+  [23:26:43] Chapter 10 score: 3.26
+  [23:26:43] Score 3.26 < 6.0, discarding attempt
+  [23:26:43] RUN: git checkout -- chapters/ch_10.md 2>/dev/null || true
+  [23:26:43] Attempt 3/5
+  [23:26:43] RUN: uv run python draft_chapter.py 10
+  [23:28:59] Drafted 3871 words
+  [23:28:59] RUN: uv run python evaluate.py --chapter=10
+  [23:29:58] Chapter 10 score: 4.0
+  [23:29:58] Score 4.0 < 6.0, discarding attempt
+  [23:29:58] RUN: git checkout -- chapters/ch_10.md 2>/dev/null || true
+  [23:29:58] Attempt 4/5
+  [23:29:58] RUN: uv run python draft_chapter.py 10
+  [23:32:07] Drafted 3615 words
+  [23:32:07] RUN: uv run python evaluate.py --chapter=10
+  [23:32:57] Chapter 10 score: 4.5
+  [23:32:57] Score 4.5 < 6.0, discarding attempt
+  [23:32:57] RUN: git checkout -- chapters/ch_10.md 2>/dev/null || true
+  [23:32:57] Attempt 5/5
+  [23:32:57] RUN: uv run python draft_chapter.py 10
+  [23:34:58] Drafted 3555 words
+  [23:34:58] RUN: uv run python evaluate.py --chapter=10
+  [23:35:46] Chapter 10 score: 6.0
+  [23:35:46] RUN: git add -A
+  [23:35:46] RUN: git commit -m "ch10: score 6.0, 3555w" --allow-empty
+  [23:35:46] RUN: git rev-parse --short HEAD
+  [23:35:46] GIT COMMIT: 7fa5f57 — ch10: score 6.0, 3555w
+
+------------------------------------------------------------
