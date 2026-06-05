@@ -58,18 +58,29 @@
 
 ### Ch 1: "The Premium Blend" (Cope, ~3,200)
 - BEATS: Opening image — the "Last Human CEO" tribute gala. Cope toasts,
-  charms, doesn't sleep, doesn't see the obituary inside the award. We
-  meet the voice, the mania's first tremor, Mercer-Dale's decline.
-- PLANTS: the Hearthstone told as a folksy anecdote; the insomnia;
-  great-grandfather "quotes"; the empty seat at his table (Margaux).
+  charms, keys a bump in the men's room, doesn't sleep, doesn't see the
+  obituary inside the award. We meet the voice, the chemically-lit
+  "mania," Mercer-Dale's decline, and the appetites — without ever
+  naming them as a problem, because Cope doesn't.
+- PLANTS: the bathroom key / the bell-struck too-bright feeling (= the
+  coke, read by the reader before it's named); a coat-check flirtation
+  that's clearly a worn groove, not a one-off; the Hearthstone told as a
+  folksy anecdote; the insomnia; great-grandfather "quotes"; the empty
+  seat at his table (Margaux).
 - EMOTIONAL ARC: triumphant → first hairline crack.
-- STATUS: drafted (v1)
+- STATUS: drafted (v2 — appetites seeded)
 
 ### Ch 2: "Key-Man Risk" (Cope, ~3,000)
 - BEATS: Monday in the Tower; Sun runs everything; board chair signals
   the 13D is coming; Cope's bravado vs. the numbers. Renata's name
-  glimpsed on an archived org chart.
-- PLANTS: Renata Cho; Sun's old recall memo (mentioned, not opened).
+  glimpsed on an archived org chart. The literal phrase "key-man risk" —
+  the board's polite term for a man who could blow up the company by
+  being himself — lands on Cope as a compliment; the reader hears the
+  diagnosis. Sun manages a small live version of the problem (a young
+  comms hire Cope is too warm with) with weary professionalism.
+- PLANTS: Renata Cho; the "managed" HR drawer; the 2018 hotel favor
+  (alluded to via a security-firm invoice Sun reroutes); Sun's old recall
+  memo (mentioned, not opened).
 - STATUS: unwritten
 
 ### Ch 3: "Thirteen-D" (Cope, ~3,000)
@@ -107,9 +118,15 @@
 ## Act 2: The Human Premium (Ch 9–20) — Mania, False Victory, the Walls
 
 ### Ch 9–11: Fun & Games
-- The campaign rises. Magazine cover ("THE LAST HUMAN"). Cope micro-doses
-  productivity, sleeps in the Aerie, spends. Comic set-pieces. Small real
-  wins that the reader can feel are hollow.
+- The campaign rises. Magazine cover ("THE LAST HUMAN"). Cope is using
+  hard now — reframing it to himself as discipline, as edge, as the cost
+  of carrying the human banner — sleeps in the Aerie, spends, and the
+  affairs accelerate with the adrenaline (a campaign staffer, a
+  journalist embedded on the profile). Comic set-pieces with a cold
+  undertow: the more he performs "the soul in the chair," the more
+  appetite-driven and machine-like-in-his-compulsions he actually is.
+  Small real wins the reader can feel are hollow. Margaux starts the
+  paperwork.
 
 ### Ch 12: "Midpoint — The Delay" (~3,200)
 - BEATS: FALSE VICTORY. He wins a vote delay / a viral redemption
@@ -119,14 +136,24 @@
 
 ### Ch 13–15: Bad Guys Close In (I)
 - Sun begins quietly negotiating to be Marcus's Accountable Officer.
-  Renata resurfaces and refuses to be a redemption prop (Ch 14 payoff of
-  Ch 2 plant). Margaux's leaving becomes real. Mania peaks: a grandiose
-  all-hands "Human Premium Manifesto."
+  Margaux's leaving becomes real. Mania peaks: a grandiose all-hands
+  "Human Premium Manifesto." Then THE SCANDAL BREAKS: during the proxy
+  fight, a story lands — an embedded journalist's piece, or a leak Frade
+  doesn't even have to pay for — alleging a current affair with a
+  subordinate and, separately, the drugs. The Last Human's whole campaign
+  about the irreplaceable human soul is detonated by the most human thing
+  imaginable. The dark-comic peak: pundits note that the *machine* would
+  never have done this; Praxis's stock-photo serenity vs. Cope's
+  TMZ-grade humanity. Try-fail: *no, and* — his denial makes it worse.
 
 ### Ch 16: "Renata" (~3,000)
-- BEATS: the 2019 thing fully surfaces — not via the machine, via a
-  human, ordinary and merciless. The *lie* to the board is the wound,
-  exactly the essay's point.
+- BEATS: with the press already circling, the 2019 settlement gets pulled
+  into the light — and Renata herself surfaces, not via the machine, via
+  a human, ordinary and merciless. She refuses to be a love story, a
+  scandal, or his redemption prop. The *concealment* from the board, not
+  the affair, is the governance wound — exactly the essay's Part 3 point.
+  Cope tries to spin it as a witch hunt against "a flawed human man" and
+  it curdles in his mouth.
 
 ### Ch 17–19: Bad Guys Close In (II)
 - Dr. Adler names the mania (Ch 17). Cope's counter-attacks all slide off
@@ -134,10 +161,15 @@
   consulted for Praxis; the betrayal that's actually love (Ch 19).
 
 ### Ch 20: "All Is Lost — The Hearthstone" (~3,400)
-- BEATS: Marcus, in routine pre-handover due diligence, surfaces the
-  2021 recall cover-up. Two dead in Defiance. It cannot *not* report it.
-  The machine destroys him not with malice but with honesty — the exact
-  ethic the board paid for. PAYOFF of Ch 1 & Ch 8 plants.
+- BEATS: Marcus, in routine pre-handover due diligence, opens the whole
+  drawer at once — the 2018 hotel security report, the chain of "managed"
+  HR settlements, and, underneath them, the 2021 recall cover-up: two
+  dead in Defiance. It cannot *not* report it; it has no instinct for
+  mercy or self-preservation to make it look away. The sex and drugs are
+  the scandal; the dead are the crime. The machine destroys him not with
+  malice but with honesty — the exact ethic the board paid for. PAYOFF of
+  Ch 1, Ch 2, Ch 8 plants. The reader feels the awful symmetry: every
+  appetite he hid was a rehearsal for the bigger thing he hid.
 
 ## Act 3: Accountable Officer (Ch 21–28 + Coda) — Collapse & the Clean Act
 
@@ -196,6 +228,9 @@
 | F4  | Ch 1    | Ch 16  | Margaux's empty chair → she leaves        | planted (ch1) |
 | F5  | Ch 2    | Ch 16  | Renata Cho's name on the org chart        | unwritten |
 | F6  | Ch 2    | Ch 20  | Sun's 2021 recall memo (she kept a copy)  | unwritten |
+| F12 | Ch 1    | Ch 15/17| The cocaine (bathroom key, bell-struck feeling) → public scandal + Adler names the addiction | planted (ch1) |
+| F13 | Ch 1    | Ch 15/16| The philandering groove (coat-check flirtation) → the affair scandal breaks; Renata | planted (ch1) |
+| F14 | Ch 2    | Ch 20  | The 2018 hotel security-firm invoice → surfaced in Marcus's drawer | unwritten |
 | F7  | Ch 4    | Ch 27  | Marcus drafts a "humane" letter → the farewell letter | unwritten |
 | F8  | Ch 5    | Ch 24  | "You think *you* should run it" → the clean act reframes leadership as accountability, not authority | unwritten |
 | F9  | Ch 8    | Ch 20  | The burned house / memorial name in Defiance | unwritten |

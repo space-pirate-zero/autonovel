@@ -72,8 +72,22 @@ Each entry: a short, falsifiable statement with its source.
   (characters.md)
 - Cope's Lie: leadership is a soul thing; he "feels the room"; therefore
   irreplaceable. (characters.md)
+- Cope is a long-standing high-functioning cocaine addict (since the
+  '90s) and a serial philanderer toward subordinates. Both are engines
+  of the same need-to-be-adored; both are itemized indictments against
+  the appetite-free machine. (characters.md)
 - Cope develops a clinically real hypomanic→manic episode across the
-  book (insomnia, grandiosity, pressured speech, spending). (characters)
+  book, fueled by and entangled with the cocaine; Dr. Adler names both
+  the mood disorder and the addiction and can untangle neither.
+  (characters.md)
+- The named, litigated affair is Renata Cho (2019), concealed from the
+  board; it is one of a pattern the company has "managed" for a decade.
+  A separate 2018 cocaine incident (a hotel, a security report, a favor
+  called in) was also kept from the board. Marcus's due diligence
+  surfaces the whole drawer alongside the Hearthstone recall. (characters)
+- Margaux has long known about the women and the using; she has counted
+  the affairs and flushed his stashes; she stayed for Pip and the name.
+  (characters.md)
 - Sunita "Sun" Rao, 39, chief of staff; actually runs the company;
   drafted the 2021 recall memo Cope overrode and kept a copy; becomes
   Marcus's Accountable Officer. (characters.md)
@@ -120,5 +134,9 @@ Each entry: a short, falsifiable statement with its source.
 
 - Ch 1: Cope receives a crystal obelisk at a "Last Human CEO" tribute
   gala and reads the obituary as a beginning. Margaux's seat is empty.
-  He has not slept properly in days. The Hearthstone is mentioned by him
-  as a warm anecdote. (ch_01)
+  He has not slept properly in days. He keys cocaine in the Vance men's
+  room (Desmond the attendant; the folded-paper ritual) and again from
+  the false-backed desk drawer in the Aerie that night. He gives his
+  personal card to "Bryce," the young coat-check attendant; Sun
+  intercepts a second card. The Hearthstone is mentioned by him as a warm
+  anecdote. (ch_01)

@@ -17,7 +17,27 @@ the tragedy is that he half-knows.
 - **Surface:** Tall, golf-tanned, genuinely charming, quotes his
   great-grandfather, gives a good toast, remembers your kids' names
   (Sun briefs him on the cards in the elevator). The last guy in the
-  building who still wears a tie.
+  building who still wears a tie. A man of appetites he has spent thirty
+  years rebranding as charisma.
+- **The appetites (central, not color):** Cope is a high-functioning
+  **cocaine addict** of long standing — started as a Wall Street thing in
+  the '90s, never a problem because it was never *not* working, the way
+  the family money was never a problem because it was never not there. He
+  is also a **serial philanderer**, specifically toward women who work for
+  him or want something from the name — a compulsion he experiences as
+  warmth, generosity, "really seeing people." Both appetites are engines
+  of the same machine: a man who cannot sit alone with himself and has
+  the resources to never have to. The coke fuels the toast, the toast
+  fuels the affairs, the affairs feed the need to be adored, and the
+  whole flywheel has been quietly destroying value and people for
+  decades while the stock went up enough to forgive it.
+- **The brutal irony this sharpens:** He is being replaced by a thing
+  with *no* appetites — Marcus does not get high, does not get hard, does
+  not get bored, does not need to be loved at 2 a.m. by someone it
+  outranks. Every essay argument (no affairs, no conflicts, logs
+  everything, can't lie) is, for Cope specifically, a personalized
+  indictment. The machine isn't generically "more ethical." It is more
+  ethical *than him,* itemized.
 - **Three sliders:** Proactivity HIGH (he never stops *doing* — the
   tragedy is the doing is noise). Likability MEDIUM and falling (charming
   in a room, ruinous in a marriage). Competence LOW-to-MEDIUM and, the
@@ -42,17 +62,28 @@ the tragedy is that he half-knows.
   choice that is genuinely good *and* genuinely too late. He does not
   get the company back. He gets one true thing instead, and it costs
   him everything, and it isn't enough, and it's still worth it.
-- **Mania, clinically grounded:** Across the book he tips from
-  workaholism into a hypomanic/manic episode — grandiosity, no sleep,
-  spending, a religious certainty about his "Human Premium" thesis,
-  pressured speech, a messianic founder-energy that the startup world
-  would have called visionary in a younger, poorer man. Played for
-  dark comedy *and* real fear. He is not "crazy." He is a man whose
-  delusion (I am necessary) is being surgically removed by the market,
-  and the psyche does what psyches do.
-- **Secret #1 (the Easterbrook):** A 2019 affair with a direct report,
-  **Renata Cho**, settled quietly, hidden from the board — the *lie* is
-  the firing offense, exactly as the essay's Part 3 argues.
+- **Mania, clinically grounded — and chemically lit:** Across the book he
+  tips from high-functioning use into a genuine manic spiral. The
+  cocaine and an underlying mood disorder feed each other; Dr. Adler
+  names both and can untangle neither. Grandiosity, no sleep, spending, a
+  religious certainty about his "Human Premium" thesis, pressured speech,
+  a messianic founder-energy the startup world would have called
+  visionary in a younger, poorer man. The reader should feel the
+  ambiguity Cope refuses to: is this a prophet, a manic, or just a man
+  three grams into a sleepless week? All three. Played for dark comedy
+  *and* real fear. He is not "crazy." He is a man whose delusion (I am
+  necessary) is being surgically removed by the market, with a drug that
+  whispers the opposite directly into his blood.
+- **Secret #1 (the Easterbrook — but worse, because it's a pattern):**
+  Not one affair — a *career* of them with subordinates. The named,
+  litigated one is **Renata Cho** (2019), settled quietly and concealed
+  from the board; the *concealment* is the firing offense, exactly the
+  essay's Part 3 logic. But Renata is the one that left a paper trail;
+  there are others, an HR pattern the company has spent a decade
+  "managing." The cocaine lives in this same buried file: a 2018 incident
+  (a hotel, a security report, a favor called in) that never reached the
+  board. The machine, reading every memo because it cannot do otherwise,
+  will find the whole drawer.
 - **Secret #2 (the deeper one, the McMullen/recall):** In 2021, to
   protect a quarter, he personally slow-walked a recall of a Mercer-Dale
   space heater (the *Hearthstone*) with a known ignition defect. Two
@@ -64,9 +95,13 @@ the tragedy is that he half-knows.
   guts"). Sports and sailing metaphors. Calls people "champ" and "my
   friend." Under stress the polish cracks into clipped, biblical
   fragments. Quotes his great-grandfather, often invented on the spot.
-- **Foreshadowing planted:** Ch1 (he can't sleep; the heater anecdote
-  told as folksy charm) → payoff Ch ~20 (the recall). Ch2 (Renata's
-  name on an old org chart) → payoff Ch ~16.
+- **Foreshadowing planted:** Ch1 (the bathroom key, the "not sleeping
+  since Tuesday," the too-bright bell-struck feeling = the coke, read by
+  the reader before it's named) → payoff Ch ~17/20. Ch1 (the heater
+  anecdote told as folksy charm) → payoff Ch ~20 (the recall). Ch2
+  (Renata's name on an old org chart; the "managed" HR drawer) → payoff
+  Ch ~16. The 2018 hotel incident → surfaced by Marcus's due diligence
+  alongside the recall (Ch ~20).
 
 ## Marcus (the AURELIUS — antagonist-by-existence, never a villain)
 
@@ -110,11 +145,16 @@ the tragedy is that he half-knows.
 
 - **Role:** Cope's wife of 22 years, 51. A sculptor who gave it up. The
   one person immune to the toast.
-- **Arc:** Leaving him across the book — not over a woman, over the
-  fact that there was never anyone home behind the charm. Her departure
-  is the human verdict that rhymes with the market's.
-- **Secret:** She has known about Renata since 2019 and stayed for the
-  daughter. The staying is its own indictment.
+- **Arc:** Leaving him across the book — not over any single woman, and
+  not even over the coke, but over the fact that there was never anyone
+  home behind the charm. The affairs and the using are symptoms; the
+  absence is the disease. Her departure is the human verdict that rhymes
+  with the market's: she, like the board, finally does the arithmetic.
+- **Secret:** She has known about the women for years — counted them,
+  even, the way you count anything to survive it — and stayed for Pip and
+  for the name and for a version of him that stopped existing around 2015.
+  She has flushed his stashes and refilled her own prescriptions and
+  called it a marriage. The staying is its own indictment.
 - **Speech:** Spare, devastating, allergic to his triads. The only
   character who can land a line he can't toast over.
 
@@ -157,15 +197,20 @@ the tragedy is that he half-knows.
 
 - **Role:** Cope's reluctant psychiatrist, brought in by Margaux then
   Pip. The book's one honest mirror who isn't trying to sell or replace
-  him. Names the mania. Cannot stop it.
+  him. Names both things — the mood disorder *and* the cocaine — and
+  refuses to let Cope use either as an excuse for the other. Cannot stop
+  the spiral.
 - **Function:** The clinical floor under the comedy. Keeps the manic
-  decline real, not whimsical.
+  decline real, not whimsical; insists, against the book's own
+  temptation, that addiction is not a metaphor.
 
-## Renata Cho (non-POV — the 2019 settlement; mostly offstage)
+## Renata Cho (non-POV — the named settlement; mostly offstage)
 
-- **Role:** Former Mercer-Dale VP. The affair, the NDA, the buried HR
-  matter. Returns once, with devastating ordinariness, to refuse to be
-  Cope's redemption prop.
+- **Role:** Former Mercer-Dale VP. The 2019 affair, the NDA, the buried
+  HR matter — the one of Cope's pattern that left litigable paper.
+  Returns once, with devastating ordinariness, to refuse to be Cope's
+  redemption prop, and to make plain she was neither a love story nor a
+  scandal but an employee whose career he spent. Not bitter. Just done.
 
 ---
 

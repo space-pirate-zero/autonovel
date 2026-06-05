@@ -137,6 +137,17 @@ strongest argument for his own replacement — and he is the one chosen by
 history to defend the human in the chair. The right cause; the wrong
 champion. That gap is the engine of both the comedy and the tragedy.
 
+The gap is itemized in the body. Cope is a high-functioning cocaine
+addict and a serial philanderer toward women who work for him — every
+appetite the AURELIUS conspicuously lacks. The machine doesn't get high,
+doesn't get bored, doesn't need to be adored at 2 a.m. by a subordinate.
+So when the essay-style case for replacement is read in a proxy deck
+("no affairs, no conflicts, logs everything, cannot conceal"), it scans,
+to anyone who knows Cope, as a charge sheet with his name redacted. The
+machine is not abstractly more ethical than humanity. It is concretely
+more ethical than *him,* line by line — and he is the human the species
+has nominated to argue it still needs a soul in the chair.
+
 ## Internal Consistency Rules (evaluator checks)
 
 - No AURELIUS ever knowingly issues a false statement. If a scene needs
