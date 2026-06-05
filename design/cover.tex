@@ -14,7 +14,7 @@ Past the Corporate Immune System\par}
 \vspace*{\fill}
 {\ttfamily\color{cyan}\small ONLY THE WEIRD SURVIVES\par}
 \vspace{6pt}
-{\color{muted}\small Spaceship Alpha 9, LLC \textbullet\ 2027\par}
+{\color{muted}\small Spaceship Alpha 9, LLC \textbullet\ 2026\par}
 \endgroup
 \clearpage
 
@@ -23,6 +23,8 @@ Past the Corporate Immune System\par}
 {\displayfont\color{pink}\LARGE CONTENTS\par}
 \vspace{6pt}{\color{cyan}\rule{\linewidth}{1pt}}\par
 \vspace{12pt}
+% \@starttoc reads the .toc inline (no \chapter* page-break) so the header and
+% the chapter list stay together on one page.
+\makeatletter\@starttoc{toc}\makeatother
 \endgroup
-\tableofcontents
 \clearpage
