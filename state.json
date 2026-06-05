@@ -17,5 +17,5 @@
     "Two run paths: (A) full rebuild -> `uv run python run_pipeline.py --phase drafting` (drafts ch_01..ch_16 fresh from the foundation; v0 preserved in git). (B) revise-in-place -> set chapters_drafted=16 and run `--phase revision`.",
     "Requires ANTHROPIC_API_KEY in .env. Get one at https://console.anthropic.com/settings/keys"
   ],
-  "revision_cycle": 1
+  "revision_cycle": 2
 }
