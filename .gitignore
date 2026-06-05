@@ -8,3 +8,9 @@ __pycache__/
 typeset/*.pdf
 typeset/chapters_content.tex
 *.pdf
+
+# build artifacts
+*.epub
+build/*.png
+build/*.md
+cover.png
