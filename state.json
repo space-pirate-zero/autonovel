@@ -8,7 +8,7 @@
   "lore_score": 8.0,
   "chapters_drafted": 16,
   "chapters_total": 16,
-  "novel_score": 8.0,
+  "novel_score": 7.0,
   "debts": [],
   "notes": [
     "Foundation layer hand-authored from the seed bible (world/characters/outline/voice/canon) + new influences.md. DO NOT run --from-scratch or --phase foundation: it would regenerate and overwrite the hand-authored foundation.",
@@ -17,5 +17,5 @@
     "Two run paths: (A) full rebuild -> `uv run python run_pipeline.py --phase drafting` (drafts ch_01..ch_16 fresh from the foundation; v0 preserved in git). (B) revise-in-place -> set chapters_drafted=16 and run `--phase revision`.",
     "Requires ANTHROPIC_API_KEY in .env. Get one at https://console.anthropic.com/settings/keys"
   ],
-  "revision_cycle": 4
+  "revision_cycle": 5
 }
