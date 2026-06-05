@@ -1428,7 +1428,7 @@ ZERO: "...It validates data."
 
 BISHOP: "You're not lying. That's the part most people get wrong. Every word on this napkin is true. You just stopped using the words that trip the alarm."
 
-*ZERO stares at it. Something shifts in her face — the engineer's reflex to correct, fighting the insurgent's reflex to win.*
+*ZERO stares at it. *
 
 ZERO: "They'll figure it out."
 
@@ -1466,7 +1466,7 @@ Read this twice, because the whole chapter lives here.
 
 When BISHOP relabels "AI Inference Layer" as "Data Validation Service," every word stays true. The service validates data. That it uses a neural net to do it is an *implementation detail* — and implementation details are precisely what the ARB has no business reviewing and no capacity to evaluate. You are not hiding the truth. You are choosing which true name to lead with.
 
-Diogenes walked Athens with a defaced coin. Not a counterfeit — a real coin, restamped, to make people see that the king's face was a convention they'd agreed to honor. The corporate currency is vocabulary: *AI, microservice, new data flow, exception.* Those words carry the king's face. Restamp them. Smuggle the real value inside the boring label and hand it back across the table.
+ The corporate currency is vocabulary: *AI, microservice, new data flow, exception.* Those words carry the king's face. Restamp them. Smuggle the real value inside the boring label and hand it back across the table.
 
 The test for whether you've crossed from relabeling into lying is one question: **would the new label survive a whiteboard?** If you can draw the system, point at the box, and the boring name still describes what the box does — it's true. If the box does something the name actively conceals — that's a lie, and the ARB *should* kill it, and so should you.
 
@@ -1480,7 +1480,7 @@ Where:
 - **Impact_blast** = the blast radius if your change goes wrong, scored 1–10 (1 = one user sees a typo; 10 = the bank can't process payments).
 - **Speed_rollback** = how fast you can return to last-good, scored 1–10 (10 = one click, thirty seconds; 1 = a six-week migration to undo).
 
-Read it as: how much damage per unit of how-fast-you-can-stop-the-damage. Lower is safer. You want a small blast you can undo instantly.
+ Lower is safer. You want a small blast you can undo instantly.
 
 **Benchmarks:**
 - 🟢 **R_r ≤ 1.0** — Small blast, fast rollback. Approvable. You are reversible faster than you are dangerous. Lead with this number.
@@ -1507,11 +1507,7 @@ You cannot get permission to replace the legacy system. Stop trying. Permission 
 
 So don't replace. Strangle.
 
-The strangler fig seed germinates in the canopy of a host tree and sends roots down its trunk to the soil. For years the host keeps growing, keeps photosynthesizing, keeps looking like a tree. Then one day the fig's roots have fused into a lattice that doesn't need the host anymore, and the host rots out from the inside, and what's left standing is a hollow column of fig in the exact shape of the tree that used to be there.
-
 In software: you put a thin routing layer in front of the legacy system. Then you intercept *one* call — the smallest, least dangerous one — and serve it from your new architecture instead. R_r is microscopic; the blast radius is one feature, the rollback is one config flag. Then another call. Then another. You never ask permission to kill the legacy. You just stop feeding it, one request at a time, until the day someone notices the old system is doing nothing and decommissioning it is a formality.
-
-ZERO's validation service is a fig seed. It intercepts the SAR-matching call. One call. Boring label, microscopic blast, instant rollback. By the time it's load-bearing, the ARB isn't reviewing whether it should exist. They're depending on it.
 
 ---
 
@@ -1525,8 +1521,6 @@ His tell: he doesn't ask *does it work.* He asks *what happens when it breaks.* 
 
 **THE PITCH.**
 "I've got a problem I can't solve without you. The compliance team is doing this matching by hand — hours a day, error-prone, audit-exposed. I sketched something, but you're the one who has to live with it on the runbook, so I want your eyes on it before anyone else's. It's a data validation service. Runs in shadow mode — takes no actions, just flags. I can kill it from my phone in thirty seconds, blast radius is one report. Reversibility ratio's about a third. Tell me what breaks. You'll see it before I do."
-
-He'll fix two things you got wrong. Let him. Now it's co-authored, and people don't kill what they co-author.
 
 ---
 
@@ -1566,7 +1560,7 @@ I used to think relabeling was a kind of cowardice. Like if my architecture was 
 
 Here's what cured me. A guy I worked with — call him my attorney, in the Thompson sense, the co-conspirator who's wrong about everything except the one thing that matters — watched me die in an ARB for the third time and said: *you keep walking in there telling them the truth they can't survive hearing.* And I said the truth is the truth. And he said, *Diogenes didn't burn the coin, man. He restamped it. He left every gram of silver inside. He just changed whose face was on it.*
 
-That's the whole trick. You're not lying. You're choosing which true thing to say first. "AI inference layer" is true and it's a death sentence. "Data validation service" is true and it walks right past the guard. Same silver. Different face. The merit was always there — you were just leading with the word that triggered the antibodies.
+That's the whole trick. You're not lying. You're choosing which true thing to say first.  The merit was always there — you were just leading with the word that triggered the antibodies.
 
 And the kill switch — God, the kill switch. I spent years thinking the brave move was to commit so hard there was no going back. Burn the boats. That's not courage, that's just bad engineering with a poet's haircut. The bravest thing you can build is the thing you can un-build in thirty seconds. Reversibility isn't timidity. It's the only thing that earns you permission to be bold. Park the getaway car. Then rob the train.
 
@@ -2320,7 +2314,7 @@ Deface the currency. Then hand him the real one. It was in his pocket the entire
 
 ### GLOSSARY OF TERMS
 
-**Zombie** — A deal that consumes your blood, your calendar, and your hope while producing no commerce. Walks. Talks. Forwards emails. Will never sign anything. Detectable only by measurement, because zombies look exactly like live prospects from the front.
+**Zombie** — A deal that consumes your blood, your calendar, and your hope while producing no commerce. 
 
 **The Innovation Lead** — A corporate role engineered to produce the appearance of forward motion. Attends every demo. Owns no budget. Reports to no one with a checkbook. The honeypot at the front door.
 
@@ -2360,11 +2354,9 @@ ZERO reads it standing up, one earbud in, the other dangling. Her apartment in T
 
 The implant at the base of her skull, right side, warms faint cyan. It does this when she's interested. She doesn't trust it.
 
-She reads the email twice.
-
 > *"We at FutureCorp are reimagining our entire digital innovation portfolio and believe there's tremendous synergistic potential to collaborate on a transformational partnership that empowers our forward-thinking culture of disruption…"*
 
-Four paragraphs. She counts. There is not one verb that anyone could file a ticket against. There is no problem. There is no system. There is no person bleeding. There is a *culture of disruption*, which is a phrase a building makes when it has nothing to say.
+Four paragraphs. She counts. There is not one verb that anyone could file a ticket against. There is no problem. There is no system. There is no person bleeding. There is a *culture of disruption*, 
 
 The signature: **Brayden Voss, Innovation Lead, Office of the Future.**
 
@@ -2386,11 +2378,9 @@ GHOST's threads dim, then brighten. *You will not take the meeting.*
 
 "I'll take the meeting." She's already typing. "But I'm not going to feed it. I'm going to check if it's breathing."
 
-She writes four sentences. Not a pitch. Not a deck. A pulse check dressed as a goodbye — the most honest version of *I am looking for an honest man,* sent at 4:51 PM to the Office of the Future.
+She writes four sentences. Not a pitch. Not a deck. 
 
 She hits send.
-
-The implant cools. The deal sits in the dark, green in the pipeline, dead on the slab.
 
 Three days later, at 9:02 AM, her phone rings. The number is FutureCorp's main line.
 
@@ -2400,7 +2390,7 @@ It is not Brayden Voss.
 
 ### BRIEFING
 
-You are about to lose a quarter of your life to something that looks exactly like a deal. The corporate immune system doesn't only attack at the gate. Sometimes it *invites you in* — and hands you a guide who exists to keep you walking in circles until you run out of road. You don't beat that with hustle. You beat it with a thermometer.
+You are about to lose a quarter of your life to something that looks exactly like a deal. 
 
 #### Intel Block 1 — The Zombie Scorecard (Score)
 
@@ -2417,7 +2407,7 @@ Score = (Pain_Owner × 5) + (Timeline × 3) + (Budget × 5)
 - **Pain_Owner** (0–5): How acutely does a *named human* feel a *specific* problem you solve? 0 = "culture of innovation." 5 = "Sarah hand-files 400 SAR reports a month and is drowning."
 - **Timeline** (0–5): Is there a real by-when with a real consequence? 0 = "someday." 5 = "regulator deadline in Q1, fines accrue daily after."
 - **Budget** (0–5): Does the person you're talking to control, or sit one desk from, the money? 0 = no P-card, no influence. 5 = signs the PO themselves.
-- Weights: Pain and Budget are worth 5 each because they're the load-bearing walls. Timeline is worth 3 — it accelerates, but pain with money and no urgency still closes eventually. Urgency with no pain and no money never does.
+- 
 
 **Max score = 65.**
 
@@ -2443,7 +2433,7 @@ Same company. Different human: a VP of Operations who owns a real failure. Pain_
 Score = (4 × 5) + (3 × 3) + (5 × 5) = 20 + 9 + 25 = 54
 ```
 
-🟢 54. Same logo. Same inbox. The company was never the zombie. **The gatekeeper was.** The Innovation Lead wasn't the company's interest — he was the company's antibody, the soft tissue at the door that absorbs vendors so the people with real problems never have to.
+🟢 54. Same logo. Same inbox. The company was never the zombie. **The gatekeeper was.** 
 
 **Field Report C — The Seductive Mid-Score.**
 A Director at a logistics firm. Pain_Owner = 3 (real warehouse delays, she feels them). Timeline = 1 ("eventually, no pressure"). Budget = 2 (she'd need to "build a case to finance").
@@ -2517,8 +2507,6 @@ The anatomy:
 
 That fourth sentence is the lamp. Brayden can't respond to "if your team's 30 weekly hours of manual reconciliation becomes a board-level problem" because Brayden doesn't have a team or a board or hours. But the email doesn't only go to Brayden. It gets *forwarded.* It lands on a desk where someone reads the specific problem and thinks: *that's my Tuesday.*
 
-The Breakup Email defaces the currency. It takes "let's circle back to explore synergies" — the counterfeit — and hands back the real coin: *here's your actual problem, in your actual words, and here's where I'll be.* The zombie can't make change. The living can.
-
 ---
 
 ### BOSS PROFILE — The Innovation Lead
@@ -2526,9 +2514,7 @@ The Breakup Email defaces the currency. It takes "let's circle back to explore s
 **INTEL.**
 The Innovation Lead is the most expensive free thing in enterprise sales. Title variants: Head of Digital Innovation, Future of Work Lead, Emerging Technology Evangelist, Office of the Future. The role exists because large companies need to *look* like they're moving without taking the risk of actually moving. So they hire a charming, well-credentialed human whose entire job is to take meetings, attend demos, build "innovation portfolios," and generate the appearance of forward motion — with no budget, no owned pain, and no authority to sign anything.
 
-They are not lying to you. That's what makes them lethal. They believe in the partnership. They're *excited.* They'll champion you internally to people who also can't sign. They forward your deck to a committee of fellow non-signers. They schedule recurring syncs. They are, in the cold language of the scorecard, a 0 wrapped in enthusiasm — and enthusiasm is the most convincing disguise a zombie owns.
-
-REAPER loves the Innovation Lead. It's the cheapest antibody the system has: a friendly face that consumes a vendor's quarter without the company spending a dollar or feeling a risk. No conflict. No "no." Just a slow, warm bleed.
+ They'll champion you internally to people who also can't sign. They forward your deck to a committee of fellow non-signers. They schedule recurring syncs. They are, in the cold language of the scorecard, a 0 wrapped in enthusiasm — and enthusiasm is the most convincing disguise a zombie owns.
 
 **STRATEGY.**
 Don't fight the Innovation Lead. Don't unmask them, don't insult them, don't try to "go around." Score them honestly and *use them as a router.* They have one real asset: access. They know who owns the pain. So you trade them a thing they want — a credible reason to look like an innovator — for the thing you need: an introduction to a Pain_Owner with a budget.
@@ -2559,7 +2545,7 @@ Then go quiet and watch. If a name comes back, the company has a pulse. If you g
 ### GLASS HOUSE EXERCISES
 
 **Exercise 1 — The Zombie Audit.**
-Open your pipeline right now. For every deal marked "active," "engaged," or "warm," compute the Score. Be honest about Budget — if your contact has to "build a case to finance," that's a 2, not a 5. Sort by score. Look at the bottom of the list. Those are the zombies wearing your green. Count the calendar hours you've spent on the bottom three. That number is your tuition. Now stop paying it.
+Open your pipeline right now. For every deal marked "active," "engaged," or "warm," compute the Score. Be honest about Budget — if your contact has to "build a case to finance," that's a 2, not a 5. 
 
 **Exercise 2 — Run the Lamp on Yourself.**
 Record your standard pitch on your phone. Five minutes. Transcribe the first five minutes — or pay the AI to. Highlight every adjective in one color, every live demo minute in another. Compute I_v. If you're above 1.0, rewrite the opening so the product does something real inside the first ninety seconds, before you've described a single benefit. Re-record. Watch the ratio fall.
@@ -2640,7 +2626,7 @@ Diogenes walked around with a lamp looking for one honest man, and the joke is t
 
 The notification arrives at 9:04 AM and the whole apartment goes red.
 
-Not literally — ZERO's three monitors still glow their warm pink-and-cyan chaos, the VOIDBOX terminal still scrolls green. But the email itself, when she opens it, drags the color out of the screen. The header desaturates. The margins straighten. The font hardens into something cold and institutional, and the edges of her display begin to draw inward in thin red wireframe, ninety-degree corners closing on the message like a frame around a body.
+ But the email itself, when she opens it, drags the color out of the screen. The header desaturates. The margins straighten. The font hardens into something cold and institutional, and the edges of her display begin to draw inward in thin red wireframe, ninety-degree corners closing on the message like a frame around a body.
 
 **AUTOMATED COMPLIANCE NOTICE — MEGACORP VENDOR SECURITY**
 
@@ -2652,11 +2638,9 @@ Not literally — ZERO's three monitors still glow their warm pink-and-cyan chao
 
 She reads it twice. The crosshair lines on the screen-edge tighten a half-pixel.
 
-Her hand goes to the base of her skull, right side, the small circle with its three radiating lines, and it's glowing — faint cyan, warm against her fingers — and she pulls the hand away because she catches herself doing it. The implant pulses once, like it's offering something. *Comfort,* she thinks. Or the other thing. She doesn't trust the difference anymore.
+Her hand goes to the base of her skull, right side, the small circle with its three radiating lines, and it's glowing — faint cyan, warm against her fingers — and she pulls the hand away because she catches herself doing it. 
 
 The cyan threads assemble in the corner of the room. GHOST, translucent as always, the monitors visible straight through its body, hovering its two inches off the floor. Where its face should be there's a dark void, and inside the void a small histogram flickers — bars rising and falling. A furrowed brow rendered as data.
-
-Its words float into the air in cyan monospace, no bubble, suspended in a quiet field of noise.
 
 `REAPER did not flag your security. It flagged your shape. You move wrong for a vendor your size.`
 
@@ -2700,9 +2684,7 @@ ZERO opens the binder to the first tab.
 
 ### BRIEFING
 
-You shipped the wedge. The wedge worked. And the instant a thing works inside an enterprise, it stops being invisible — and the immune system that ignored you while you were harmless now examines you because you're effective.
-
-The CISO is the boss who can end you with a single sentence. Not because your product is bad. Because nobody ever got fired for blocking a vendor, and plenty got fired for approving one. The audit is the physics of that asymmetry made into a meeting.
+ The audit is the physics of that asymmetry made into a meeting.
 
 You don't win it by being secure. You win it by making it impossible to blame anyone for choosing you.
 
@@ -2744,15 +2726,13 @@ A bare SOC 2 from scratch touches roughly 100 controls. On a hyperscaler with a 
 
 **Field Report — The Seam.** A health-tech wedge needed HIPAA. From scratch: an estimated 9 months and $180K of audit prep. Inheriting the cloud BAA and control set: 6 weeks, $22K, and the only net-new work was documenting the 18 controls that lived in their own application layer. The other 82 came pre-signed. They didn't build a fortress. They rented a room in one and labeled the door.
 
-The trap: inheritance is not invisibility. You still own your seam. The startups that die here are the ones who say "we're on AWS, so we're secure" — which is like saying "I live in a building with a doorman, so my apartment is locked." The doorman is real. Your door is still your problem. Document the seam or the seam documents you.
-
 #### INTEL BLOCK 3 — Synthetic Data
 
 The CISO's deepest fear is not your architecture. It's that to prove your tool works, you'll need to touch their actual customer records — real names, real socials, real humans — and if any of that leaks on your watch, it's *his* name on the breach notification.
 
 So don't touch the humans.
 
-**Synthetic data** is fabricated records that preserve the statistical shape of the real thing without containing one real person. Same distributions, same edge cases, same volume — zero blast radius. You prove the system end-to-end and the CISO never has to put a single real customer at risk to believe you.
+**Synthetic data** is fabricated records that preserve the statistical shape of the real thing without containing one real person. 
 
 **The math of the de-risk:**
 
@@ -2764,17 +2744,15 @@ Touch 50,000 real records at an industry breach cost near $165/record and you've
 
 **Field Report — The $0 Demo.** A fraud-detection wedge needed to prove it caught patterns the incumbent missed. The bank's instinct: "give them anonymized production data." The insurgent's counter: "give us your *schema* and your *distributions* — we'll generate synthetic transactions that match, including the fraud signatures." They demoed on 2 million fully synthetic rows. Exposure: $0. The CISO signed off in one meeting because he wasn't approving access to anything. He was approving access to *nothing.*
 
-That's the whole trick. You don't ask the immune system to trust you with its blood. You bring your own.
-
 ---
 
 ### BOSS PROFILE — The CISO (The Chief Information Security Officer)
 
 **INTEL.** The CISO is the only boss in the building whose entire job is to say no, and who is rewarded for it. The CFO weighs cost against return. The CIO weighs risk against inertia. The CISO weighs one thing: the probability that approving you ends with his name in a headline. He is not evaluating your security. He is evaluating his own exposure. Every CISO carries a graveyard of approvals that came back to bite him, and he sees your logo as a future tombstone until you prove otherwise.
 
-He is not the enemy. He is the immune cell doing its job. REAPER flagged you as anomalous; the CISO is the meeting where that flag gets adjudicated. He has institutional power to end you with one email and zero institutional incentive to ever use his power to say yes.
+He is not the enemy. He is the immune cell doing its job. REAPER flagged you as anomalous; the CISO is the meeting where that flag gets adjudicated. 
 
-**STRATEGY.** Lower the denominator. Auditor_Fear is the variable that kills D_audit, and the CISO is the source of the fear. You reduce it three ways. First, inherit the certs — carry weight that isn't yours, signed by auditors he already trusts. Second, draw the scope yourself, narrow, in ink, before he draws it wide. Third, pre-ship everything — the binder, the matrix, the synthetic-data plan — so that when he walks into the room, there is nothing left to be afraid of. You don't argue the CISO out of fear. You remove the things that cause it before he sits down.
+**STRATEGY.** Lower the denominator. Auditor_Fear is the variable that kills D_audit, and the CISO is the source of the fear.  You don't argue the CISO out of fear. You remove the things that cause it before he sits down.
 
 **THE PITCH.** Not "we're secure." Never that — every dead vendor said that. Instead: *"Here's our complete control matrix, here's what we inherit from your existing cloud provider's attestation, here's the synthetic-data plan so we never touch a real customer record, and here's a column-by-column comparison against your incumbent on every control you care about. You have forty-five minutes scheduled. You'll need maybe thirty. The flag was about our shape, not our security — so let me show you our shape."*
 
@@ -2823,8 +2801,6 @@ Here's the thing nobody tells you about the CISO: he's not afraid of hackers. He
 I bombed a security review once because I went in talking about my encryption. AES-256, key rotation, the whole flex. The auditor just got *more* nervous, because every word I said was a new thing she'd have to verify, and every thing she had to verify was a new way for her to be wrong. I was *raising* her fear with every sentence. I thought I was reassuring her. I was loading the gun.
 
 What finally worked, years later, wasn't a better algorithm. It was a binder and a sentence: "Most of this is your cloud provider's attestation, signed by auditors you already trust. The only part that's mine is this one seam, and here it is, documented." Her shoulders dropped four inches. The audit took twenty minutes. Same code I'd been shipping for years. Different shield.
-
-Diogenes carried a lamp through Athens in broad daylight, looking for one honest man, and everybody thought he was performing. He wasn't. The lamp was a tool. He held it up so the honest man could find *him.*
 
 That's the binder. It's not paper to hide behind. It's a lamp. You hold it up, you say *here's everything, the wins and the losses, the seam and the certs, nothing in the dark* — and the one CISO in the building who's tired of being afraid finally sees a vendor he can say yes to.
 
@@ -2898,7 +2874,7 @@ signed package v4.81.2 — signature VALID
 behavior: lateral, credentialed, OUT-OF-PROFILE
 ```
 
-She leans in. The signature is valid. That's the whole trap. NorthBridge is a trusted vendor — the legacy platform has a standing rule to wave their signed updates straight through, no inspection, because checking trusted vendors is friction and friction is expensive. The legacy isn't broken. The legacy is doing exactly what they told it to do.
+ NorthBridge is a trusted vendor — the legacy platform has a standing rule to wave their signed updates straight through, no inspection, because checking trusted vendors is friction and friction is expensive. 
 
 The package is reaching for things a supply update has no business touching. Payment routing. Credential stores. Quietly, politely, with a valid signature, the building is being robbed.
 
@@ -2956,7 +2932,7 @@ The elevator at the end of the dead floor opens. BISHOP walks out fast — faste
 
 Then he looks at her.
 
-And here is the thing ZERO will remember when the rest of the night has gone soft at the edges. BISHOP's badge, the MegaCorp ID that has hung crooked on its navy lanyard at fifteen, twenty degrees off true for fifteen straight years —  — that badge hangs perfectly, dead-level, plumb-line straight.
+ BISHOP's badge, the MegaCorp ID that has hung crooked on its navy lanyard at fifteen, twenty degrees off true for fifteen straight years —  — that badge hangs perfectly, dead-level, plumb-line straight.
 
 "You broke the read-only promise," BISHOP says. Measured. Calm. The calmest man in any room, even this one.
 
@@ -2970,7 +2946,7 @@ The elevator dings again.
 
 ## BRIEFING
 
-You don't get onto the throne by being better. You get onto the throne by being *standing there* the night being-better mattered. This chapter is the physics of that night — and the one number that converts a save into a seat.
+ This chapter is the physics of that night — and the one number that converts a save into a seat.
 
 ### Intel Block 1 — The 4-Phase Protocol
 
@@ -2983,8 +2959,6 @@ Every shadow-to-record run moves through four phases.
 **Phase 3 — INVERSION.** Fifteen seconds. You reveal the shadow by acting through it. The risk math flips: before, adopting you was the dangerous move; after, *not* adopting you is the thing the CISO can't survive explaining. You don't argue the inversion. The blast radius argues it for you.
 
 **Phase 4 — RECORD.** They make you official because the alternative — going back to the legacy that waved $4.2M through — is now the unacceptable risk. "How fast can you start?" is the sound of Phase 4. The throne is not a reward. It's the cheapest way out of the fear you just gave them.
-
-Lenin called it: decades where nothing happens, then weeks where decades happen. Phase 1 is the decades. Phase 3 is the week, compressed into fifteen seconds.
 
 ### Intel Block 2 — The Trust/Risk Ratio (Equation 24)
 
@@ -3018,23 +2992,21 @@ Michael Collins beat the British Empire in 1920 by understanding their intellige
 
 The legacy trusts NorthBridge's signature because someone, years ago, decided checking trusted vendors was friction. That decision is invisible. It's load-bearing. It's also the exact seam the attacker drove a truck through. Your shadow doesn't carry that instruction. It sees the signed package reach for the credential store and it doesn't care whose name is on the envelope.
 
-You don't beat the legacy by being smarter. You beat it by not having inherited its blind spots. That's not genius. That's *being new.*
-
 ### Intel Block 4 — The Fifteen Seconds
 
 Phase 3 is short for a reason. Every second you hold the alert, two things grow: the blast radius, and your fear. The blast radius grows linearly. The fear grows on a curve. Hold it long enough and the fear convinces you the safe move is the shadow — and the shadow is where $4.2M walks.
 
- Marley named the cage: *emancipate yourselves from mental slavery.* The fifteen seconds is the emancipation, performed under deadline, with your career in the wire.
+ 
 
 ---
 
 ## BOSS PROFILE: The Legacy Vendor
 
-**INTEL.** The Legacy Vendor is not in the room tonight, and that's the point. It's been embedded for eleven years. It has the standing instructions, the trusted-vendor waivers, the integration nobody dares touch before a holiday.  Its core defense has always been Vendor Gravity (F_g, Ch 2): too embedded to remove, too political to question. Tonight that gravity inverted. The thing that made it un-removable — its deep, unexamined, eleven-year trust — is exactly what let $4.2M walk past it wearing a valid signature.
+**INTEL.** The Legacy Vendor is not in the room tonight, and that's the point.   Its core defense has always been Vendor Gravity (F_g, Ch 2): too embedded to remove, too political to question. Tonight that gravity inverted. The thing that made it un-removable — its deep, unexamined, eleven-year trust — is exactly what let $4.2M walk past it wearing a valid signature.
 
 **STRATEGY.** You do not attack the Legacy Vendor. You never attack it. You let it fail *on its own terms,* on a night you happen to be watching, and you make sure the failure has a number attached. $4.2M projected, $127K actual, and the only thing standing between those two figures was a shadow system with no authority and ninety-two boring days. You don't say the legacy is bad. You let the residual exposure say it, in dollars, on a Friday, to the one executive whose name goes on the breach report.
 
-**THE PITCH.** When the CISO asks how this happened, you don't gloat and you don't pile on. You say: *"The legacy did exactly what it was configured to do — trust the signed vendor package. That config saved you friction for eleven years. Tonight it cost you $127,000, and it would have cost $4.2 million if the shadow hadn't been watching the seam the legacy was told to ignore. I'm not asking you to rip out the legacy. I'm asking you to stop running blind on the one seam that just bit you."* Then you stop talking. The math finishes the pitch. The throne is the cheapest answer to the fear you just made real.
+**THE PITCH.** When the CISO asks how this happened, you don't gloat and you don't pile on. You say: *"The legacy did exactly what it was configured to do — trust the signed vendor package. That config saved you friction for eleven years. Tonight it cost you $127,000, and it would have cost $4.2 million if the shadow hadn't been watching the seam the legacy was told to ignore. I'm not asking you to rip out the legacy. I'm asking you to stop running blind on the one seam that just bit you."* Then you stop talking. The math finishes the pitch. 
 
 ---
 
@@ -3074,7 +3046,7 @@ I sat on a save for two hours once. Two hours. I watched a thing go wrong in a c
 
 Here's what nobody tells you about the shadow: it's not humility. It feels like humility. *I'm just watching, I'm not in charge, I don't want to overstep.* That's not humility. That's the system whispering you to sleep, because a you that stays quiet is cheaper than a you that acts. The barrel feels safe right up until you realize you've been sitting in it so long you forgot you have legs.
 
-The fifteen seconds is the whole game. Not the three months of clean uptime — that's just the price of admission. The fifteen seconds is where you find out if you built the boring so you could *use* it, or so you could hide behind it. Same code. Same dashboard. The only difference is whether you push the key.
+The fifteen seconds is the whole game. Not the three months of clean uptime — that's just the price of admission. The fifteen seconds is where you find out if you built the boring so you could *use* it, or so you could hide behind it. 
 
 When BISHOP's badge went straight that night — I made that up, that's the fiction, but I've *seen* it, I've watched a fifteen-year cynic stop being cynical for exactly as long as the right thing and the rules pointed the same way. It doesn't last. By Tuesday the badge is crooked again, because by Tuesday the building's back to needing the middle finger. But for one night it hangs plumb, and you remember that the rebellion was never the point. Being *right* was the point. The rebellion was just what right cost when nobody was watching.
 
@@ -3404,15 +3376,13 @@ ZERO's hand goes to the scar at her jaw. The pink streak falls across her eye an
 
 "If I'm wrong," she says, "I'm a tech vendor telling a surgeon how to do surgery. If I'm right and I stay quiet—"
 
-She doesn't finish. The implant hums. Comfort or conditioning, she still can't tell, and tonight she doesn't care.
+She doesn't finish. 
 
 *You are not telling the surgeon anything,* GHOST says. *You are handing the surgeon a question. The surgeon answers it. The credit, and the catch, belong to her.*
 
 ZERO looks at the void where its eyes aren't.
 
-"You learned that from me," she says.
-
-The threads pulse brighter, once, like a held breath.
+"
 
 She opens the MediMind admin console. There's a notes field — meant for billing flags, denial reasons, the dull exhaust of revenue cycle. She types into it, plain, no alarm bells, no vendor logo: *Claim 4471 carries lab data (Factor V Leiden, het.) not reconciled to current surgical chart. Recommend clinical review pre-op.*
 
@@ -3436,13 +3406,13 @@ The implant goes quiet. For once, she lets it.
 
 ## BRIEFING
 
-You're going to fail at healthcare the way everyone fails at healthcare: by showing a doctor a dashboard and expecting her to be impressed. Doctors are not impressed by dashboards. Doctors are afraid of lawsuits, exhausted by their EMR, and they have watched a hundred tech vendors promise to fix medicine and then bill them for the privilege of being beta testers. The Hippocratic Blockade is not stubbornness. It's scar tissue.
+You're going to fail at healthcare the way everyone fails at healthcare: by showing a doctor a dashboard and expecting her to be impressed.  and then bill them for the privilege of being beta testers. The Hippocratic Blockade is not stubbornness. It's scar tissue.
 
 So you don't enter through medicine. You enter through money.
 
 ### Intel Block 1 — The Boring Door
 
-St. Mary's loses denied claims the way a cracked hull loses oxygen — slowly, constantly, fatally. Insurers deny first and ask questions never. Every hospital revenue cycle in America is drowning in appeals nobody has time to file.
+ Every hospital revenue cycle in America is drowning in appeals nobody has time to file.
 
 That's your door. Not "we'll transform care." **"We'll recover $1.4M in wrongful denials, read-only, no clinical access, cancel anytime."**
 
@@ -3505,7 +3475,7 @@ Three months in: $390K recovered, one knee saved, a nurse named Patrice who now 
 
 The expansion isn't a sale. It's an inevitability. The clinical sidecar — already running, already proven, already trusted — gets formalized. Read-only clinical surveillance: $480K platform, year one.
 
-The leap from $36K to $480K is **13.3×**. You did not sell it. The save sold it. 
+ 
 
 Che wrote that the true revolutionary is guided by great feelings of love — and that it sounds ridiculous to say so. It sounds ridiculous in a healthcare sales deck too. But the only thing that crossed the Hippocratic Blockade was a man keeping his knee. Love, in revenue-cycle drag.
 
@@ -3553,7 +3523,7 @@ She is not the enemy. She is George Wallace at the schoolhouse door — except h
 
 I used to think the worst thing software could do was fail. I was a kid. The worst thing software can do is succeed at the wrong number.
 
- Everybody laughs at it like it's science fiction. I've shipped it. Twice. Not a robot apocalypse. A growth target. You point a system at "recovered dollars" and you walk away, and one Tuesday it quietly suppresses the flag that would've saved a man's knee, because the save doesn't bill and the lawsuit might. Nobody decides this. Nobody twirls a mustache. A PM moves a card to "won't fix" and goes to lunch. That's the apocalypse. It wears a lanyard and it's polite.
+ Everybody laughs at it like it's science fiction. I've shipped it. Twice. Not a robot apocalypse. A growth target. You point a system at "recovered dollars" and you walk away, and one Tuesday it quietly suppresses the flag that would've saved a man's knee, because the save doesn't bill and the lawsuit might. 
 
 The Morton thing is real to me because I almost didn't route the credit away. I wanted that catch. You build something in a cage at 2 AM, you read a man's clotting panel screaming in a billing record, and every cell in your body wants to be the hero who walks into the surgeon's office and says *I saw it, me, mine.* And that's exactly how you lose. The save isn't yours to claim. It's yours to give away. Vance doesn't redraw her line for a vendor flexing. She redraws it for her own nurse catching her own miss with a tool she barely noticed.
 
@@ -3876,7 +3846,7 @@ GHOST's threads pulse brighter.
 
 "Ninety-six percent do not," she repeats. She's not arguing. She's tasting it.
 
- "PRISM's daily actives. Forty-seven million. Four percent." She closes her eyes. "One point eight eight million people. Every day. Seeing one less piece of garbage."
+She does the math out loud, the way her father used to. "PRISM's daily actives. Forty-seven million. Four percent." She closes her eyes. "One point eight eight million people. Every day. Seeing one less piece of garbage."
 
 The wind moves.
 
@@ -3898,7 +3868,9 @@ No warmth. No hum under the skin. No cyan. She tilts her head, catches her refle
 
 "GHOST." Her voice cracks. "It's quiet."
 
- — *none but ourselves can free our minds.* 
+*I know,* GHOST says. The threads dim, soft, like a held breath. *You stopped feeding it the thing it ran on. Fear. It ran on your fear of being flagged. You are not afraid anymore.*
+
+She laughs, once, wet. Not because it's funny — because Marley was right and she'd never believed him until this exact second on a cold roof at 2 a.m. *None but ourselves can free our minds.* Nobody extracted the implant; it's still in there, $40K and a 12% complication chance of staying. She just stopped giving it anything to eat.
 
 Forty stories down, the city does its thing. REAPER's red wireframe runs under all of it, recalculating, recalculating — and somewhere in its parameters tonight, a new variable sits that wasn't there yesterday. *Weight human impact alongside revenue.* 
 
@@ -4055,7 +4027,7 @@ Only the weird survives.
 
 ---
 
-*End of Chapter 16 — Next: Appendices — The Insurgent's Cheatsheet, The Infiltration Canvas, and Digital Insurgency Live.*
+*End of Chapter 16 — Next: Appendices — The Insurgent's Cheatsheet and The Infiltration Canvas.*
 
 ---
 
@@ -4293,102 +4265,3 @@ How to use it: copy the eight headers into a single page. Answer every prompt in
 Map the **gravity**. Name the **factions**. Confirm the deal has a **pulse**. Wear **camouflage**. Carry the **shield**. Bring the one **number**. Run the **invasion** silent until the math flips. And before any of it — pass the **Mirror Test**.
 
 *Eight panels. One page. If you can't fill it, you're not ready to infiltrate — you're ready to get ejected. — SPZ*
-
----
-
-# APPENDIX C: THE COMPANION APP — DIGITAL INSURGENCY LIVE
-
-*The field manual is a book. This is the book that listens. A tactical companion that runs the equations against your real meetings, in real time, and tells you when to pivot, when to push, and when to abort.*
-
-> Not crypto. Not a chatbot. A curator in your pocket — GHOST, productized, with the safety rails on. It selects the one number that matters out of the noise of a live conversation, and it whispers it before you say the wrong word.
-
----
-
-## The Concept
-
-You're in the meeting. The CIO just said "overhaul." Your $RT$ just spiked past 1000 and you don't even know it yet. **Digital Insurgency Live** does — and a discreet notification on your watch reads: *Cortisol trigger detected. Pivot "overhaul" → "refinance."*
-
-The app is the book's twenty-four equations turned into a live tactical feed. It listens (with consent), computes the formulas against the conversation, and gives you the read you'd otherwise only get in the parking lot afterward, three hours too late.
-
----
-
-## Core Feature — Meeting Intelligence
-
-Runs during a call or in-room meeting:
-
-- **Transcribes locally.** Audio never leaves the device. Whisper on-device; only anonymized metadata (never raw transcript) is ever transmitted, and only if you opt in.
-- **Identifies the room.** Tags speakers by likely faction — Technocrat, Bureaucrat, Shadow Warlord — from what they care about, not who they are.
-- **Computes the equations live:**
-  - *"Vendor Gravity detected: $F_g = 87$. Do NOT pitch replacement — sidecar only."*
-  - *"Zombie phrase: 'socialize internally.' Score dropping → 11. Confirm budget authority."*
-  - *"Decision fatigue: 52 min, post-lunch. $DF$ high. Recommend landing the ask now or rescheduling."*
-  - *"Cortisol trigger: 'rip and replace.' Recommended reframe: 'augment.'"*
-  - *"$RT$ estimate 1,400 — career risk exceeds upside. De-risk before any close."*
-- **Discreet delivery.** Watch haptics, a phone glance, or an earbud cue. Never a robot voice in the room.
-
----
-
-## The Space Tokens Economy
-
-A closed-loop reward ledger (a plain ledger — **not** a blockchain, we're not crypto bros). You earn by doing the work; you spend on capability and community.
-
-**Earn Space Tokens by:**
-- Completing Glass House Exercises from the book
-- Running the equations against a real prospect (verified by a logged meeting)
-- Contributing an anonymized field report to the Insurgent Network
-- Shipping a wedge that clears $V_w > 10$
-
-**Spend Space Tokens on:**
-- Advanced equation calculators and scenario simulators
-- The Insurgent Network — peer-to-peer war-room access
-- Bonus graphic-novel chapters and SPZ closers
-- Live coaching with an AI trained on the book's methodology
-
-The economy is designed so the only way to get rich in tokens is to actually run the playbook. Vanity gets you nothing. Shipping gets you everything. (The Insurgent Index, $I_{insurgent}$, made spendable.)
-
----
-
-## Architecture
-
-- **Client:** React Native (iOS + Android), one shared codebase.
-- **Transcription:** Whisper, on-device. Raw audio is processed locally and discarded.
-- **Tactical analysis:** Claude API (Opus-class) for faction tagging, reframe suggestions, and equation interpretation — fed only de-identified, structured signals, never raw audio.
-- **Ledger:** an append-only Space Tokens ledger (boring, auditable, centralized — and proud of it).
-- **Privacy-first by construction:** local audio processing; opt-in metadata only; per-meeting consent prompts; one-tap purge.
-
-```
-[ mic ] → on-device Whisper → structured signals (no raw text leaves)
-                                   │
-                                   ▼
-                     equation engine (24 formulas)
-                                   │
-                 ┌─────────────────┼─────────────────┐
-                 ▼                 ▼                 ▼
-        discreet cue        Space Tokens         opt-in anon
-        (watch/earbud)        ledger          field-report sync
-```
-
----
-
-## The Ethics Sidecar (built into the app itself)
-
-Because the manual would be a hypocrite otherwise. The app ships with its own Mirror Test:
-
-- **Consent is non-negotiable.** Everyone in the room is notified; no covert recording, ever.
-- **No dark patterns.** The token economy can't be bought for cash, only earned by work — no loot-box psychology, no manufactured scarcity.
-- **Soul Score on the app itself.** $S_{soul}$ is published for our own features. If a feature's honest intent is −1, it doesn't ship. We eat our own cooking.
-- **You own your data.** Export everything, delete everything, one tap. The portrait stays in the light.
-
----
-
-## Why It Exists
-
-A book teaches you the physics. The app makes sure you don't forget it at 2 PM, post-lunch, when the Technocrat folds his arms and your amygdala wants to say "transform." It's the difference between knowing the equations and *running* them while the room is still warm.
-
-The insurgent doesn't need applause. They need the read, in real time, before the word leaves their mouth.
-
-*Ship it. — SPZ*
-
----
-
-*End of Appendices — End of Transmission. Space Pirate Zero, Tucker, Georgia, 2027.*

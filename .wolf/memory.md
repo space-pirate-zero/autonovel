@@ -58,3 +58,14 @@
 - OUTPUT: build/Digital_Insurgency_Designed.pdf — 146 pages, ~600KB. Verified by
   rendering pages with pdftoppm. (*.pdf gitignored -> local only.)
 - Two PDFs now: build_pdf.py (plain/light) and build_design_pdf.py (INSURGENT).
+
+## 2026-06-05 — Polish pass (net +1 to 8.0) + companion-app removal
+- Removed companion app: deleted Appendix C (ch_19) + scrubbed all refs (pillars
+  3->2, world/outline/seed/ch_16 end marker).
+- Polish pass (run_pipeline --phase revision, appendices held out): cycle 4 lifted
+  novel_score 7.0->8.0; cycle 5 regressed to 7.0 and apply_cuts DAMAGED ch_16
+  (see buglog). Resolution: reset prose to cycle-4 peak (7c9a2f8, 8.0), hand-repaired
+  ch_16, restored appendices, precise damage scan = 0 flags.
+- FINAL: Prologue + 16 ch + Appendices A,B; 59,166 words; novel_score 8.0.
+  Rebuilt all 3: build/Digital_Insurgency.pdf (plain), _Designed.pdf (INSURGENT),
+  .epub. All gitignored (local).
