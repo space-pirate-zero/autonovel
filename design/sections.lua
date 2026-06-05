@@ -53,3 +53,18 @@ function Header(el)
   end
   return el
 end
+
+-- A paragraph that is just one display equation -> wrap in the cyan \eqbox.
+function Para(el)
+  local sig = {}
+  for _, inl in ipairs(el.content) do
+    if inl.t ~= "Space" and inl.t ~= "SoftBreak"
+       and not (inl.t == "Str" and inl.text == "") then
+      sig[#sig + 1] = inl
+    end
+  end
+  if #sig == 1 and sig[1].t == "Math" and sig[1].mathtype == "DisplayMath" then
+    return pandoc.RawBlock("latex", "\\eqbox{\\[" .. sig[1].text .. "\\]}")
+  end
+  return nil
+end

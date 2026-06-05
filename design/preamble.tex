@@ -83,6 +83,17 @@
   \par\addvspace{9pt}%
 }
 
+% ---- Boxed display equation (cyan-framed panel; makes math stand out) ----
+\newcommand{\eqbox}[1]{%
+  \par\addvspace{13pt}%
+  \begin{center}%
+  {\setlength{\fboxsep}{11pt}\setlength{\fboxrule}{1pt}%
+   \fcolorbox{cyan}{panel}{%
+     \begin{minipage}{0.84\linewidth}\centering\large #1\end{minipage}}}%
+  \end{center}%
+  \addvspace{13pt}%
+}
+
 % ---- Epigraph / blockquote ----
 \renewenvironment{quote}
   {\par\addvspace{8pt}\begingroup\itshape\color{cyan}\leftskip=1.5em\rightskip=1.5em}
