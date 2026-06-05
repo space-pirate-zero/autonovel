@@ -94,5 +94,6 @@
 \fancyfoot[C]{\ttfamily\color{cyan}\small\thepage}
 \fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\ttfamily\color{cyan}\small\thepage}}
 
-% ---- TOC title in brand ----
+% ---- TOC: chapters only. Sections are tagged .unlisted by sections.lua so they
+%      never reach the TOC; only \dichapter's chapter lines remain. ----
 \renewcommand{\contentsname}{}

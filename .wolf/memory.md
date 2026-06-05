@@ -69,3 +69,15 @@
 - FINAL: Prologue + 16 ch + Appendices A,B; 59,166 words; novel_score 8.0.
   Rebuilt all 3: build/Digital_Insurgency.pdf (plain), _Designed.pdf (INSURGENT),
   .epub. All gitignored (local).
+
+## 2026-06-05 — Concise TOC + cover date 2026
+- TOC: now chapters-only. Mechanism: sections.lua tags every non-banner heading
+  {.unnumbered .unlisted} so pandoc emits \section* with no \addcontentsline ->
+  only \dichapter chapter lines reach the .toc. cover.tex uses \@starttoc{toc}
+  (not \tableofcontents) so the CONTENTS header + list sit on one page.
+  Dead-ends learned: lowering tocdepth (0/1) blanks chapters in this class
+  (l@chapter renders only at tocdepth>=2); \l@section/\l@subsection no-op override
+  breaks chapter rendering too. Don't use those.
+- Cover/publication date 2027 -> 2026 in design/cover.tex, build_pdf.py YAML,
+  build_epub.py metadata (prose stays 2027 = in-story year).
+- Rebuilt all 3 (plain PDF, designed PDF, epub).

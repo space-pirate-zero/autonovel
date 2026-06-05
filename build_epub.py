@@ -133,7 +133,7 @@ def main():
         "-M", "title=Digital Insurgency",
         "-M", "subtitle=A Field Manual for Smuggling Authenticity Past the Corporate Immune System",
         "-M", "author=Space Pirate Zero",
-        "-M", "lang=en-US", "-M", "date=2027",
+        "-M", "lang=en-US", "-M", "date=2026",
         "-M", "publisher=Spaceship Alpha 9, LLC",
     ] + cover_args + embed
     r = subprocess.run(cmd, capture_output=True, text=True)

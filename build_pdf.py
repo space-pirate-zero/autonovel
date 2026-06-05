@@ -57,7 +57,7 @@ def main():
         'subtitle: "A Field Manual for Smuggling Authenticity Past the '
         'Corporate Immune System"\n'
         'author: "Space Pirate Zero"\n'
-        'date: "Spaceship Alpha 9, LLC --- 2027"\n'
+        'date: "Spaceship Alpha 9, LLC --- 2026"\n'
         "---\n\n"
     )
     src = BUILD / "digital_insurgency.md"
@@ -68,7 +68,7 @@ def main():
     pdf = BUILD / "Digital_Insurgency.pdf"
     cmd = [
         "pandoc", str(src), "-o", str(pdf),
-        "--pdf-engine=tectonic", "--toc", "--toc-depth=2",
+        "--pdf-engine=tectonic", "--toc", "--toc-depth=1",
         "--top-level-division=chapter",
         "-V", "documentclass=book", "-V", "geometry:margin=1in",
         "-V", "fontsize=11pt", "-V", "colorlinks=true", "-V", "linkcolor=black",

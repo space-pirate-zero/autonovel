@@ -43,5 +43,13 @@ function Header(el)
       return pandoc.RawBlock("latex", "\\dibanner{" .. color .. "}{" .. tex_escape(title) .. "}")
     end
   end
+  -- Non-banner headings: keep their styling but keep them OUT of the TOC
+  -- (chapters-only TOC). .unnumbered + .unlisted => pandoc emits \section* with
+  -- no \addcontentsline.
+  if el.level >= 2 then
+    el.classes:insert("unnumbered")
+    el.classes:insert("unlisted")
+    return el
+  end
   return el
 end
