@@ -1,0 +1,33 @@
+% Paperback front matter (light): title page, copyright, contents.
+\thispagestyle{empty}
+\begingroup\centering
+\vspace*{1.1in}
+{\displaysemi\large SPACE PIRATE ZERO\par}
+\vspace{8pt}{\rule{0.7\linewidth}{1.5pt}}\par
+\vspace{22pt}
+{\displayfont\fontsize{32}{36}\selectfont DIGITAL\par INSURGENCY\par}
+\vspace{16pt}
+{\itshape\large A Field Manual for Smuggling Authenticity\par
+Past the Corporate Immune System\par}
+\vfill
+{\ttfamily\small ONLY THE WEIRD SURVIVES\par}
+\endgroup
+\clearpage
+
+% Copyright page
+\thispagestyle{empty}
+\vspace*{\fill}
+{\footnotesize
+Copyright \textcopyright\ 2026 Greg Gates / Spaceship Alpha 9, LLC.\par
+All rights reserved.\par\vspace{6pt}
+\textit{The Broadcast} is a work of fiction; its names, characters, and incidents
+are products of the imagination and used fictitiously.\par\vspace{6pt}
+First edition, 2026.\par
+Typeset in Orbitron, Space Grotesk, and JetBrains Mono.\par}
+\clearpage
+
+% Contents (chapters only; \@starttoc reads the .toc inline)
+{\displayfont\Large CONTENTS\par}
+\vspace{6pt}{\rule{\linewidth}{1pt}}\par\vspace{10pt}
+\makeatletter\@starttoc{toc}\makeatother
+\clearpage

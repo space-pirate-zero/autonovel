@@ -100,9 +100,14 @@ def main():
         chunk += strip_img(body)
         blocks.append(chunk)
 
+    import sys
+    kindle = "--kindle" in sys.argv
+    css_file = "epub_kindle.css" if kindle else "epub.css"
+    out_name = "Digital_Insurgency_Kindle.epub" if kindle else "Digital_Insurgency.epub"
+
     src = BUILD / "digital_insurgency_epub.md"
     src.write_text("\n\n".join(blocks) + "\n")
-    print(f"Source: {src}  ({len(blocks)} sections)")
+    print(f"Source: {src}  ({len(blocks)} sections)  [{'KINDLE' if kindle else 'deluxe'}]")
 
     # Cover: render page 1 of the designed PDF if available + pdftoppm present.
     cover = BUILD / "cover.png"
@@ -123,11 +128,11 @@ def main():
     for f in fonts:
         embed += ["--epub-embed-font", str(BASE / "fonts" / (f + ".ttf"))]
 
-    epub = BUILD / "Digital_Insurgency.epub"
+    epub = BUILD / out_name
     cmd = [
         "pandoc", str(src), "-o", str(epub),
         "--to", "epub3", "--mathml",
-        "--css", str(BASE / "design" / "epub.css"),
+        "--css", str(BASE / "design" / css_file),
         "--lua-filter", str(BASE / "design" / "epub_sections.lua"),
         "--toc", "--toc-depth=1", "--split-level=1",
         "-M", "title=Digital Insurgency",

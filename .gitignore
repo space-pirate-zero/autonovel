@@ -14,3 +14,6 @@ typeset/chapters_content.tex
 build/*.png
 build/*.md
 cover.png
+build/*.jpg
+build/*.txt
+build/*.tex
