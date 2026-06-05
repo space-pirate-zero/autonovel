@@ -81,3 +81,16 @@
 - Cover/publication date 2027 -> 2026 in design/cover.tex, build_pdf.py YAML,
   build_epub.py metadata (prose stays 2027 = in-story year).
 - Rebuilt all 3 (plain PDF, designed PDF, epub).
+
+## 2026-06-05 — Equations: real LaTeX + boxed
+- Problem: most equations were plain **bold ASCII** (e.g. **F_g = (Sunk_Cost × ...)**),
+  rendered as weak bold text, not math.
+- convert_equations.py: replaced 32 bold/Formula equation DEFINITION lines across
+  chapters with canonical $$ LaTeX (dict keyed by symbol; conservative — single '=',
+  RHS starts with var/'(' not a number, so numeric field reports + glossary mentions
+  are untouched). Now ~59 $$ display-math lines total (incl. Appendix A's 24).
+- Stand-out treatment: design \eqbox (cyan \fcolorbox on panel bg) + sections.lua
+  Para handler wraps any single-DisplayMath para in it. epub.css boxes
+  math[display="block"] (pandoc --mathml emits that, no .math.display class).
+  Plain PDF: real centered LaTeX (unboxed, minimal variant).
+- Verified by rendering p18 (F_g, E_tax boxed fractions, cyan). Rebuilt all 3.
