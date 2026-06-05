@@ -45,3 +45,16 @@
   build_pdf.py (emoji/unicode -> safe text, strips [IMG] markers).
 - RESULT: build/Digital_Insurgency.pdf — 154 pages, ~577KB, 61,120 words
   (Prologue + 16 ch + 3 appendices). *.pdf is gitignored so the PDF is local only.
+
+## 2026-06-05 — INSURGENT design system PDF
+- Built custom XeLaTeX/tectonic design: void #030303 pages, Orbitron (display),
+  Space Grotesk (body), JetBrains Mono (code), pink chapter titles, cyan math,
+  color-coded section banners (SITREP red, BROADCAST/MIRROR pink, BOSS amber,
+  KEY MISSION acid, SPZ orange, GLOSSARY/BRIEFING cyan), colored GREEN/YELLOW/RED
+  benchmarks. Files: fonts/ (OFL TTFs), design/{preamble.tex,sections.lua,cover.tex},
+  build_design_pdf.py.
+- Gotchas fixed: global \defaultfontfeatures{Path} hijacked the math-font lookup
+  (use per-font Path=); \RaggedRight needs ragged2e (used \raggedright).
+- OUTPUT: build/Digital_Insurgency_Designed.pdf — 146 pages, ~600KB. Verified by
+  rendering pages with pdftoppm. (*.pdf gitignored -> local only.)
+- Two PDFs now: build_pdf.py (plain/light) and build_design_pdf.py (INSURGENT).
