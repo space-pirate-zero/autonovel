@@ -25,3 +25,14 @@
 - Run command when unblocked: `uv run python run_pipeline.py` (resumes at
   phase=drafting -> drafting/revision/export; skips foundation). Drafting loop is
   ch_01..ch_16; Prologue ch_00 is front matter, drafted separately.
+
+## 2026-06-05 — Pipeline COMPLETE
+- Switched all models to claude-opus-4-8 (env + every hardcoded default).
+- Fixed Opus-incompatible 'temperature' param (logged in buglog.json).
+- Full autonomous run: drafting (16 ch, some 2-5 attempts to clear 6.0 gate) ->
+  3 revision cycles (plateau at novel_score 7.0) -> 4 Opus review rounds
+  (which rewrote the Prologue ch_00 from scaffold into finished prose) -> export.
+- RESULT: Prologue + 16 chapters, 58,070 words, novel_score 7.0, ~1.9 hrs.
+  manuscript.md (58,086 w) built. No PDF (tectonic not installed).
+- NOT done (optional/separate): Appendices A-C; art (needs FAL_KEY); audiobook
+  (needs ELEVENLABS_API_KEY); PDF (needs `brew install tectonic`).

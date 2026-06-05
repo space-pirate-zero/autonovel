@@ -1,3 +1,11 @@
 {
-  "bugs": []
+  "bugs": [
+    {
+      "date": "2026-06-05",
+      "error_message": "API 400 invalid_request_error: '`temperature` is deprecated for this model.' (claude-opus-4-8). Every draft_chapter/evaluate/review call exit 1.",
+      "root_cause": "autonovel scripts were written for Sonnet and pass a 'temperature' field in the /v1/messages payload. Opus 4.8 rejects 'temperature'. After switching all models to claude-opus-4-8, every API call 400'd.",
+      "fix": "Removed the 'temperature' line from every script payload (sed over *.py). Also made draft_chapter.call_writer raise resp.text on non-200 so the real API error is visible instead of a bare raise_for_status.",
+      "tags": ["anthropic-api", "opus-4-8", "temperature", "400", "autonovel", "model-migration"]
+    }
+  ]
 }

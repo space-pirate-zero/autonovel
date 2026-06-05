@@ -368,3 +368,188 @@ ACTIONABLE ITEMS (0):
 ==================================================
 Stop revising? YES — Only 0 items found
 ==================================================
+
+  [00:28:13] Stars: 3.5, Items: 0 (0 major, 0 qualified)
+  [00:28:13] Generating revision briefs from review...
+  [00:28:13] RUN: uv run python gen_brief.py --auto
+  [00:28:13] Revising Ch 0 from review brief...
+  [00:28:13] RUN: uv run python gen_revision.py 0 /Users/gregchambers/autonovel/briefs/ch00_auto.md
+  [00:28:32] RUN: git add -A
+  [00:28:32] RUN: git commit -m "review round 1: revise ch00 from Opus feedback" --allow-empty
+  [00:28:32] RUN: git rev-parse --short HEAD
+  [00:28:32] GIT COMMIT: 1572dc9 — review round 1: revise ch00 from Opus feedback
+  [00:28:32] Running mechanical cleanup pass...
+  [00:28:32] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+    WARN: exit code 2
+  [00:28:33] RUN: git add -A
+  [00:28:33] RUN: git commit -m "review round 1: mechanical cleanup" --allow-empty
+  [00:28:33] RUN: git rev-parse --short HEAD
+  [00:28:33] GIT COMMIT: 4b8f496 — review round 1: mechanical cleanup
+  [00:28:33] Review round 1 complete.
+
+------------------------------------------------------------
+  Opus Review Round 2/4
+------------------------------------------------------------
+  [00:28:33] Sending manuscript to Opus for review...
+  [00:28:33] RUN: uv run python review.py --output reviews.md
+  [00:29:53] Parsing review...
+  [00:29:53] RUN: uv run python review.py --parse
+Latest review: 20260605_002953
+Stars: 3
+
+ACTIONABLE ITEMS (0):
+
+==================================================
+Stop revising? YES — Only 0 items found
+==================================================
+
+  [00:29:53] Stars: 3, Items: 0 (0 major, 0 qualified)
+  [00:29:53] Generating revision briefs from review...
+  [00:29:53] RUN: uv run python gen_brief.py --auto
+  [00:29:53] Revising Ch 0 from review brief...
+  [00:29:53] RUN: uv run python gen_revision.py 0 /Users/gregchambers/autonovel/briefs/ch00_auto.md
+  [00:30:12] RUN: git add -A
+  [00:30:12] RUN: git commit -m "review round 2: revise ch00 from Opus feedback" --allow-empty
+  [00:30:12] RUN: git rev-parse --short HEAD
+  [00:30:12] GIT COMMIT: f13b2bf — review round 2: revise ch00 from Opus feedback
+  [00:30:12] Running mechanical cleanup pass...
+  [00:30:12] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+    WARN: exit code 2
+  [00:30:12] RUN: git add -A
+  [00:30:12] RUN: git commit -m "review round 2: mechanical cleanup" --allow-empty
+  [00:30:12] RUN: git rev-parse --short HEAD
+  [00:30:12] GIT COMMIT: 8ac4e34 — review round 2: mechanical cleanup
+  [00:30:12] Review round 2 complete.
+
+------------------------------------------------------------
+  Opus Review Round 3/4
+------------------------------------------------------------
+  [00:30:12] Sending manuscript to Opus for review...
+  [00:30:12] RUN: uv run python review.py --output reviews.md
+  [00:31:39] Parsing review...
+  [00:31:39] RUN: uv run python review.py --parse
+Latest review: 20260605_003139
+Stars: None
+
+ACTIONABLE ITEMS (0):
+
+==================================================
+Stop revising? YES — Only 0 items found
+==================================================
+
+  [00:31:40] Stars: 0, Items: 0 (0 major, 0 qualified)
+  [00:31:40] Generating revision briefs from review...
+  [00:31:40] RUN: uv run python gen_brief.py --auto
+  [00:31:40] Revising Ch 0 from review brief...
+  [00:31:40] RUN: uv run python gen_revision.py 0 /Users/gregchambers/autonovel/briefs/ch00_auto.md
+  [00:31:57] RUN: git add -A
+  [00:31:57] RUN: git commit -m "review round 3: revise ch00 from Opus feedback" --allow-empty
+  [00:31:57] RUN: git rev-parse --short HEAD
+  [00:31:57] GIT COMMIT: 7347de8 — review round 3: revise ch00 from Opus feedback
+  [00:31:57] Running mechanical cleanup pass...
+  [00:31:57] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+    WARN: exit code 2
+  [00:31:57] RUN: git add -A
+  [00:31:57] RUN: git commit -m "review round 3: mechanical cleanup" --allow-empty
+  [00:31:57] RUN: git rev-parse --short HEAD
+  [00:31:57] GIT COMMIT: bb5a9ee — review round 3: mechanical cleanup
+  [00:31:57] Review round 3 complete.
+
+------------------------------------------------------------
+  Opus Review Round 4/4
+------------------------------------------------------------
+  [00:31:57] Sending manuscript to Opus for review...
+  [00:31:57] RUN: uv run python review.py --output reviews.md
+  [00:33:20] Parsing review...
+  [00:33:20] RUN: uv run python review.py --parse
+Latest review: 20260605_003320
+Stars: 0
+
+ACTIONABLE ITEMS (0):
+
+==================================================
+Stop revising? YES — Only 0 items found
+==================================================
+
+  [00:33:20] Stars: 0, Items: 0 (0 major, 0 qualified)
+  [00:33:20] Generating revision briefs from review...
+  [00:33:20] RUN: uv run python gen_brief.py --auto
+  [00:33:20] Revising Ch 0 from review brief...
+  [00:33:20] RUN: uv run python gen_revision.py 0 /Users/gregchambers/autonovel/briefs/ch00_auto.md
+  [00:33:44] RUN: git add -A
+  [00:33:44] RUN: git commit -m "review round 4: revise ch00 from Opus feedback" --allow-empty
+  [00:33:44] RUN: git rev-parse --short HEAD
+  [00:33:44] GIT COMMIT: a2850ab — review round 4: revise ch00 from Opus feedback
+  [00:33:44] Running mechanical cleanup pass...
+  [00:33:44] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+    WARN: exit code 2
+  [00:33:44] RUN: git add -A
+  [00:33:44] RUN: git commit -m "review round 4: mechanical cleanup" --allow-empty
+  [00:33:44] RUN: git rev-parse --short HEAD
+  [00:33:44] GIT COMMIT: 739f005 — review round 4: mechanical cleanup
+  [00:33:44] Review round 4 complete.
+
+============================================================
+  OPUS REVIEW LOOP COMPLETE
+============================================================
+
+============================================================
+  REVISION COMPLETE — 3 cycles, novel_score 7.0
+============================================================
+
+============================================================
+  PHASE 4: EXPORT
+============================================================
+  [00:33:44] Rebuilding outline from chapters...
+  [00:33:44] RUN: uv run python build_outline.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/build_outline.py", line 167, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/build_outline.py", line 57, in main
+    text = path.read_text()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gregchambers/.local/share/uv/p
+  [00:37:53] Building arc summary...
+  [00:37:53] RUN: uv run python build_arc_summary.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/build_arc_summary.py", line 111, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/build_arc_summary.py", line 56, in main
+    text = path.read_text()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gregchambers/.local/sh
+  [00:39:15] Building manuscript.md...
+  [00:39:15] Manuscript: 17 chapters, 58070 words
+  [00:39:15] Building LaTeX content...
+  [00:39:15] RUN: uv run python typeset/build_tex.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/typeset/build_tex.py", line 96, in <module>
+    with open(path) as f:
+         ^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jeffq/autonovel/chapters/ch_01.md'
+
+  [00:39:16] RUN: which tectonic
+    WARN: exit code 1
+  [00:39:16] tectonic not found, skipping PDF generation
+  [00:39:16] RUN: git add -A
+  [00:39:16] RUN: git commit -m "export: manuscript, outline, arc summary, PDF" --allow-empty
+  [00:39:16] RUN: git rev-parse --short HEAD
+  [00:39:16] GIT COMMIT: 34faeca — export: manuscript, outline, arc summary, PDF
+
+============================================================
+  EXPORT COMPLETE — 17 chapters, 58070 words
+============================================================
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+  Time:       1.9 hours
+  Phase:      complete
+  Foundation: 8.0
+  Chapters:   16/16
+  Words:      58070
+  Novel:      7.0
+  Cycles:     3
