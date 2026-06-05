@@ -1,8 +1,8 @@
 {
   "title": "Digital Insurgency",
   "branch": "autonovel/digital-insurgency",
-  "phase": "revision",
-  "current_focus": "full_novel",
+  "phase": "export",
+  "current_focus": "export",
   "iteration": 0,
   "foundation_score": 8.0,
   "lore_score": 8.0,
