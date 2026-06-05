@@ -1,0 +1,109 @@
+# SEED — DIGITAL INSURGENCY
+
+**Title:** Digital Insurgency: A Field Manual for Smuggling Authenticity Past
+the Corporate Immune System
+**Author:** Space Pirate Zero (Greg Gates / Spaceship Alpha 9, LLC)
+**Genre:** Business strategy × cyberpunk graphic novel × spec-ops field manual
+**Target:** 55,000–65,000 words. Prologue + 16 chapters + 3 appendices.
+
+This is the master brief. The detailed bible lives in the foundation layer —
+read those files, not this one, when drafting:
+
+  world.md        — 2027 cyberpunk Atlanta, PRISM, the Mesh, locations, tech
+  characters.md   — ZERO, GHOST, BISHOP, REAPER, COUNCIL, supporting cast
+  outline.md      — Prologue + 16 chapters + appendices, beats per chapter
+  voice.md        — Part 1 guardrails + Part 2 the SPZ voice identity
+  canon.md        — hard facts: the 24 equations, visual specs, dates, colors
+  influences.md   — the real figures whose quotes/stories thread the book
+
+---
+
+## PREMISE
+
+Every piece of software on earth is about to be rewritten in the next 24
+months. The only question is whether what gets built on the other side is
+authentic human craft or more algorithmic landfill. This is a spec-ops manual
+for smuggling meaningful products past corporate gatekeepers, a guerrilla
+playbook for making "good trouble" inside the machine, and a warning label for
+the soul-cost of building the wrong thing. It carries a serialized cyberpunk
+graphic novel — "The Broadcast" — through every chapter, following ZERO, a
+burned-out engineer who quit a dating app that weaponized loneliness and now
+fights to build something real inside a city run by a corporate OS called PRISM.
+
+## THE FIVE CLAIMS (the thesis — every chapter reinforces one or more)
+
+1. Every line of software on earth is about to be rewritten.
+2. Authenticity is the real currency of the future.
+3. The enterprise is a physics problem, not a sales problem.
+4. The corporate immune system can be bypassed, but not defeated.
+5. Good trouble is the only kind of trouble worth making.
+
+## THREE PILLARS
+
+1. THE PHYSICS — equations that model corporate inertia, fear, entropy, and
+   bureaucratic friction as literal forces of nature (24 total; see canon.md).
+2. THE GRAPHIC NOVEL — "The Broadcast," a cyberpunk narrative running through
+   every chapter as cold-open vignettes.
+3. THE APP — a companion app (Space Tokens economy) that listens to meetings
+   and computes the formulas live (Appendix C).
+
+## THE DORIAN GRAY METAPHOR (central)
+
+The PRODUCT stays beautiful (clean UI, high NPS, awards) while the SERVER ROOM
+portrait rots (manipulation algorithms, addiction loops, exploitation metrics).
+The prettier the interface, the uglier the engine must be to hold growth
+targets. The beauty is a prerequisite for the exploitation. Runs from
+MirrorMatch in the Prologue to the "portrait healing" in Chapter 16.
+
+---
+
+## CHAPTER FORMAT TEMPLATE (every chapter follows this — do not deviate)
+
+1. CHAPTER HEADER — number (bold), title, italic subtitle
+2. GLOSSARY OF TERMS — 8–12 terms, **Term** — definition, military-intel tone
+3. SITREP — Situation / Complication / Main Point, compressed urgent prose
+4. THE BROADCAST — graphic-novel vignette, cinematic present tense, advances
+   ZERO's arc, 2–5 described panels, characters act per the bible
+5. BRIEFING — 3–7 numbered Intel Blocks; equations get name, formula, variable
+   defs, traffic-light benchmarks, 2–3 worked field-report examples
+6. BOSS PROFILE — the chapter's gatekeeper: Intel / Strategy / The Pitch
+7. KEY MISSION TASKS — numbered, specific, measurable, military-order voice
+8. GLASS HOUSE EXERCISES — 3–4 named practical exercises with real data
+9. SPZ VOICE CLOSER — first-person confessional, raw, 200–400 words
+10. CHAPTER END MARKER — "End of Chapter X — Next: [title]"
+
+Field reports (Ch 13–15) may compress the template into case-study form.
+
+## BENCHMARK SYSTEM (all equations)
+
+🟢 GREEN safe/go · 🟡 YELLOW caution/investigate · 🔴 RED stop/redesign/abort
+
+---
+
+## BUILD STATUS & INSTRUCTIONS (for the pipeline)
+
+- Foundation layer (world/characters/outline/voice/canon/influences): authored
+  directly from the bible. Do NOT regenerate from scratch; refine in place.
+- Chapters 4–16: v0 drafts imported into chapters/ch_04.md … ch_16.md. Treat as
+  first drafts — revise aggressively, do not discard wholesale.
+- Prologue + Chapters 1–3: original prose lives in an external .docx not present
+  here. chapters/ch_00.md … ch_03.md are scaffolds (beats + format skeleton).
+  Build these fresh against the outline, or import the .docx if supplied.
+- Appendices A (cheatsheet of 24 equations), B (Infiltration Canvas), C (the
+  companion app) — to be assembled in the export phase.
+
+What the build should do with the v0 drafts:
+1. Use as first drafts — revise, don't discard.
+2. Expand lean chapters (Ch 11, 13–15 run short of the ~3,500-word target).
+3. Run anti-slop detection (voice.md Part 1 + ANTI-SLOP.md + ANTI-PATTERNS.md).
+4. Verify character consistency against characters.md (ZERO's pink streak +
+   implant scar, BISHOP's 15–20° crooked badge, GHOST's translucency, REAPER
+   as environment never a character).
+5. Sharpen the SPZ closers — raw and personal, not polished.
+6. Ensure each Broadcast vignette advances ZERO's arc.
+7. Add 2–3 worked numeric field reports per equation.
+8. Weave in influences.md figures heavily — quotes and stories as epigraphs,
+   Broadcast texture, briefing analogies, and SPZ-closer anchors.
+
+> "Every character is a force vector. Know the direction before you draw the
+>  arrow." — SPZ

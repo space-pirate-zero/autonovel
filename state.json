@@ -1,11 +1,20 @@
 {
-  "phase": "foundation",
-  "current_focus": null,
+  "title": "Digital Insurgency",
+  "branch": "autonovel/digital-insurgency",
+  "phase": "drafting",
+  "current_focus": "chapter_drafting",
   "iteration": 0,
-  "foundation_score": 0.0,
-  "lore_score": 0.0,
+  "foundation_score": 8.0,
+  "lore_score": 8.0,
   "chapters_drafted": 0,
-  "chapters_total": 0,
+  "chapters_total": 16,
   "novel_score": 0.0,
-  "debts": []
+  "debts": [],
+  "notes": [
+    "Foundation layer hand-authored from the seed bible (world/characters/outline/voice/canon) + new influences.md. DO NOT run --from-scratch or --phase foundation: it would regenerate and overwrite the hand-authored foundation.",
+    "Prologue is front matter at chapters/ch_00.md (not in the 1..16 drafting loop). Numbered chapters = ch_01..ch_16.",
+    "ch_04 and ch_05 hold full v0 drafts imported from the seed. ch_00-03 and ch_06-16 are scaffolds (beats + format + equations + boss + influences); full v0 prose for 6-16 lives in the seed/original brief and can be bulk-imported on request.",
+    "Two run paths: (A) full rebuild -> `uv run python run_pipeline.py --phase drafting` (drafts ch_01..ch_16 fresh from the foundation; v0 preserved in git). (B) revise-in-place -> set chapters_drafted=16 and run `--phase revision`.",
+    "Requires ANTHROPIC_API_KEY in .env. Get one at https://console.anthropic.com/settings/keys"
+  ]
 }
