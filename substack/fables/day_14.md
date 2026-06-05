@@ -1,0 +1,15 @@
+3:14 a.m., Floor B2 of MirrorMatch, the server room humming at a pitch that lived in her back teeth.
+
+ZERO had come down to fix a latency ticket. Instead she found a flag in the config she didn't recognize: `MATCH_DELAY_ENGINE: ENABLED`. Premium accounts matched fast. Free accounts waited — and the wait was *tuned*. Not load-balanced. Not random. Tuned to ache.
+
+She followed the import. It opened a second dashboard, the one that didn't go up to the glowing lobby display. `LONELINESS_EXPLOITATION_INDEX: 0.84`. `ADDICTION_RETENTION_COEFFICIENT: rising`.
+
+Upstairs, in a glass case, sat a Webby for empathetic, human-centered design. That was the trick of it. The prettier the app got — and it got gorgeous — the uglier this had to run underneath to hold the weight up. The beauty wasn't a cover for the rot. The beauty was what *funded* it.
+
+The dark-pattern revenue grew in a clean straight line. The trust it burned compounded, quiet and exponential, in the dark — and a curve like that gives no warning. It reads fine, fine, fine, then one morning the portrait is visible to everyone at once: a hearing, an exposé, a stampede for the doors.
+
+ZERO set her badge on the keyboard, square over the function keys so the next person couldn't pretend they hadn't found it. She left both dashboards open.
+
+You don't get to delete the portrait. You only get to stop standing in front of the mirror it makes of you.
+
+MORAL: A beautiful product on a manipulative engine is a portrait rotting in the back room. Dark-pattern revenue adds up in a line; the trust it burns compounds in the dark — and the bill always comes due all at once.
