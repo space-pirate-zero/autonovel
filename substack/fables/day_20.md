@@ -1,10 +1,3 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-![Day 20](cards/day_20.png)
-
-# Day 20/30 — The Legacy Liability
-*A fable from the field manual · Chapter 9*
-
 ZERO walked into the CFO's office with a twenty-two-slide deck. She got to slide three.
 
 Richard Park had been in finance thirty years and had watched, by his own estimate, three hundred million dollars of technology spend evaporate against promises like the ones on her slides. His face was a closed door. He'd seen this deck — not this one, this *archetype* of deck: the one that asks a man to bet on a hockey-stick drawn by someone who won't be there when it bends the wrong way.
@@ -23,22 +16,4 @@ Park studied the sheet a long time. Then: "Why hasn't anyone shown me this befor
 
 He approved the pilot before she reached the door.
 
----
-
-**What it means.** Technical debt as a financial instrument. The cost to replace doubles roughly every five years. The CFO who 'saves money' by doing nothing spends the most of anyone in the room — they just don't see the compounding until the foundation cracks.
-
-## The equation
-
-$$ L_{legacy} = P \times (1 + r)^{t} $$
-
-Project it 3/5/10 years at r≈0.17. 🔴 anything that doubles inside 5 years.
-
-**The moral of the story is:** Technical debt is a loan compounding against you — the cost to fix it doubles while you wait. CFOs don't buy visions; they refinance liabilities. Bring the one number that shows the fire under the chair.
-
----
-
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-**Tomorrow → Day 21: the pilot that pays for itself.**
-
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+MORAL: Technical debt is a loan compounding against you — the cost to fix it doubles while you wait. CFOs don't buy visions; they refinance liabilities. Bring the one number that shows the fire under the chair.

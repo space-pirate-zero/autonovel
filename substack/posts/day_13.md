@@ -3,10 +3,25 @@
 ![Day 13](cards/day_13.png)
 
 # Day 13/30 — Decision Fatigue
-*Chapter 4*
+*A fable from the field manual · Chapter 4*
 
-## The nugget
-Decision quality collapses after ~4 hours of deciding. By 2 PM the average exec has made 200 calls and defaults to the lowest-energy option, which is always 'no' or 'defer.' Never pitch after lunch. 'No' costs zero calories.
+ZERO pitched the same CFO twice.
+
+The first time was a 4 p.m. slot on a Friday — the only opening his assistant offered. He had made two hundred decisions since breakfast. By the time she opened her mouth, his prefrontal cortex was running on fumes, and the brain on fumes has exactly one default: *no*, or its cousin, *let's circle back.* His eyes glazed at minute three. He said the thing tired people say — "send me a one-pager" — and she lost a deal she should have won.
+
+She told GHOST that night, furious at herself.
+
+*You didn't lose on the merits,* GHOST said. *You lost on glucose. A "no" costs zero calories. A "yes" costs a thousand — it's a bet he has to defend tomorrow. At 4 p.m. on a Friday he had no thousand left to spend.*
+
+The second time, ZERO took the 9:15 a.m. slot. Same CFO, same one sheet, same numbers. But now the man across the table had a full tank — attention, willpower, the capacity to be brave. He read the sheet, asked two sharp questions, and approved the pilot before his coffee went cold.
+
+Nothing about the pitch had changed. Only the hour.
+
+*Respect the biology of the only organ that can say yes,* she wrote in her field notes. *Never bring a decision to an empty tank.*
+
+---
+
+**What it means.** Decision quality collapses after ~4 hours of deciding. By 2 PM the average exec has made 200 calls and defaults to the lowest-energy option, which is always 'no' or 'defer.' Never pitch after lunch. 'No' costs zero calories.
 
 ## The equation
 
@@ -14,14 +29,12 @@ $$ DF = \frac{Decisions_{made}}{Glucose_{remaining}} $$
 
 🟢 before 11 AM · 🟡 post-lunch · 🔴 after 2 PM.
 
-## SPZ closer
-
-> Thompson again — the man understood that *when* matters as much as *what.* He filed the wildest copy at dawn after the all-nighter, not in the stale afternoon. Your brilliant pitch dropped into a 4 PM, post-lunch, tenth-meeting brain is a beautiful song played to a room full of people whose ears have already gone home. Get the morning slot. Bring literal glucose if you have to. This isn't a hack; it's respecting the biology of the only organ that can say yes.
+**The moral of the story is:** Decision quality is a fuel gauge, not a personality. A tired brain defaults to no. Bring your ask to a full tank — the morning, not the dregs of the afternoon.
 
 ---
 
-📕 **If this hit, the book has the rest.** → [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
 
 **Tomorrow → Day 14: the portrait in the server room.**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) so you don't miss the next one.*
+*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*

@@ -3,10 +3,29 @@
 ![Day 10](cards/day_10.png)
 
 # Day 10/30 — The Curator's Edge
-*Chapter 3*
+*A fable from the field manual · Chapter 3*
 
-## The nugget
-As noise approaches infinity — which it has — the value of selection explodes, but only if your context is real. AI made creation free, so creation is worthless as a differentiator. The scarce skill is judgment: saying *this matters and this doesn't,* and being right.
+GHOST took ZERO into the Feed.
+
+Not a screen — the Feed itself, the infinite river PRISM pushes into forty-seven million phones a day. Content scrolled past them faster than thought, every piece technically competent: clean, optimized, on-brand, and dead. A trillion bowls with no thumbprint.
+
+"How does anyone find anything in this?" ZERO asked.
+
+*They don't,* GHOST said. *They drown politely. The machine made creation free, so creation is worthless now as a way to stand out. Everyone can make everything. The river is the proof.*
+
+Then GHOST did the thing only GHOST could do. It reached into the torrent and held up a single fragment — a small, strange essay by a hospice nurse in Macon about what a dying man had taught her about software. Unpolished. Specific. Unmistakably made by one person who had been in the room.
+
+*That,* GHOST said, threads pulsing. *One in ten thousand. The fingerprint. I don't create, ZERO. I select. As the noise goes to infinity, the value of choosing — of saying this matters and that doesn't — explodes. But only if the one choosing actually understands why.*
+
+"That's the whole job now," ZERO said slowly. "Not making more. Holding the lamp."
+
+*The machines can paint a million paintings tonight,* GHOST said. *They cannot hang the gallery. Be the one who walks the infinite river and says: this one, not that one. And be right.*
+
+She watched the nurse's essay glow in the dark between them — one warm light in a flood of cold ones — and understood, finally, what she was for.
+
+---
+
+**What it means.** As noise approaches infinity — which it has — the value of selection explodes, but only if your context is real. AI made creation free, so creation is worthless as a differentiator. The scarce skill is judgment: saying *this matters and this doesn't,* and being right.
 
 ## The equation
 
@@ -14,14 +33,12 @@ $$ V_{curator} = \frac{Signal_{selected}}{Noise_{available}} \times Context_{dep
 
 Explodes as noise→∞ — only if Context_depth is real. 🔴 context≈0 = a listicle.
 
-## SPZ closer
-
-> Diogenes again, because he earned it twice. The lamp in daylight wasn't a stunt; it was a filter. He held light to faces and read what came back. That's curation — not making more, but holding the lamp steady while the world drowns in cheap light. The machines can paint a million paintings tonight. They can't hang the gallery. Be the one who walks the infinite feed and says *this one. Not that one.* That sentence is the whole job now, and almost nobody can say it with conviction.
+**The moral of the story is:** When everyone can make everything, the rare skill is choosing — pointing at the one real thing in the flood and being right. Be the gallery, not the paint.
 
 ---
 
-📕 **If this hit, the book has the rest.** → [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
 
 **Tomorrow → Day 11: the currency of the future.**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) so you don't miss the next one.*
+*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*

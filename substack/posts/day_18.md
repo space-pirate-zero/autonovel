@@ -3,10 +3,25 @@
 ![Day 18](cards/day_18.png)
 
 # Day 18/30 — The Good Trouble Coefficient
-*Chapter 8*
+*A fable from the field manual · Chapter 8*
 
-## The nugget
-When is the risk worth it? A moral calculator: if your values-alignment is zero — if you're doing it for ego or credit — the whole thing collapses no matter the impact. Good trouble requires good intent. That's not sentiment; it's structural.
+Three years before ZERO, there was Keisha.
+
+Twenty-four years old, eight months at MegaCorp, brilliant in the way that sees a problem and builds the fix before the requirements doc is written. She found the compliance team burning six thousand hours a quarter on something a tool could do in an afternoon. So she built the tool, on her own time. It worked. It saved two million dollars a year.
+
+They fired her for it. Not because it failed — because she'd shipped it without the Architecture Review Board, and the VP whose three-million-dollar vendor she'd just made obsolete filed the complaint. Security escort. A cardboard box. Badge killed before she reached her car.
+
+BISHOP watched it through the conference-room glass and did nothing, and the doing-nothing was the worst thing he ever swallowed.
+
+That night he didn't go home. He read the policy — all two hundred and forty-seven pages. By 4 a.m. he had twenty-three loopholes on a yellow pad: twenty-three places the rules said one thing and meant another. Then he reached up, loosened his badge until it hung crooked, fifteen degrees off true, and never straightened it again.
+
+Keisha's mistake was never the tool. The tool was right. She built the right thing the *visible, unilateral, unprotected* way, and the immune system ate her at 4:40 on a Tuesday. BISHOP learned the lesson she paid for: don't break the rules — read them better than the people who wrote them, and build a case so airtight that punishing you costs more than promoting you.
+
+Good trouble, John Lewis called it. Necessary trouble. But only the kind with receipts.
+
+---
+
+**What it means.** When is the risk worth it? A moral calculator: if your values-alignment is zero — if you're doing it for ego or credit — the whole thing collapses no matter the impact. Good trouble requires good intent. That's not sentiment; it's structural.
 
 ## The equation
 
@@ -14,14 +29,12 @@ $$ GT = \frac{Impact_{change} \times Alignment_{values}}{Risk_{career} + Frictio
 
 🟢 > 5 (go) · 🟡 2–5 (find a shadow sponsor) · 🔴 < 1 (wrong terrain).
 
-## SPZ closer
-
-> John Lewis walked across the Edmund Pettus Bridge knowing he'd get his skull cracked — and knowing the cameras were rolling. Good trouble isn't recklessness; it's calculated defiance with receipts. Fred Hampton built a Rainbow Coalition out of people who were supposed to hate each other, and it scared the state badly enough to kill him at 21. Inside a Fortune 500 the stakes are smaller and the lesson is identical: don't break the rules, read them better than the people who wrote them, and build a case so airtight that punishing you would be more embarrassing than promoting you.
+**The moral of the story is:** Make good trouble when the impact is real and your intent is clean — but only the survivable kind. Don't break the rule; read it better than its authors, and keep the receipts.
 
 ---
 
-📕 **If this hit, the book has the rest.** → [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
 
 **Tomorrow → Day 19: the best rebels are invisible.**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) so you don't miss the next one.*
+*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*

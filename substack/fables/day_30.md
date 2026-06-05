@@ -1,10 +1,3 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-![Day 30](cards/day_30.png)
-
-# Day 30/30 — Victory Without Fire
-*A fable from the field manual · Chapter 16 — the finale*
-
 The roof of MegaCorp at 2 a.m. The Atlanta skyline burned its holographic billboards into the low clouds; PRISM's nodes blinked on every corner, scoring every human still awake.
 
 ZERO sat on the parapet with a single number refreshing on her ThinkPad. Four percent. GHOST hovered beside her, the city woven straight through its translucent threads.
@@ -25,22 +18,4 @@ Victory doesn't look like a movie. It looks like a Tuesday — green dashboard, 
 
 She stood, brushed the gravel off her jeans, and went to write it all down.
 
----
-
-**What it means.** Victory doesn't look like a movie. No fire, no explosion. It looks like a Tuesday: green dashboard, no tickets, no drama. You don't burn the system down — you plant an authenticity layer inside it and walk out before it notices it's breathing different air. Four percent. 1.88 million people seeing one less piece of garbage a day. That's not a revolution. That's good trouble, and it compounds.
-
-## The equation
-
-$$ GT = \frac{Impact_{change} \times Alignment_{values}}{Risk + Friction} \;\to\; \textbf{good trouble} $$
-
-The Insurgent's Oath: see the portrait · pass the Mirror Test · choose good trouble · protect the Keishas · ship.
-
-**The moral of the story is:** You don't burn the system down — you plant something real inside it and let it compound. Victory is quiet: a Tuesday, a few percent, a fingerprint that survives. Now go make some good trouble — the whole field manual is waiting.
-
----
-
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-**The whole field manual is waiting.**
-
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+MORAL: You don't burn the system down — you plant something real inside it and let it compound. Victory is quiet: a Tuesday, a few percent, a fingerprint that survives. Now go make some good trouble — the whole field manual is waiting.

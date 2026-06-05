@@ -121,3 +121,15 @@
   (fvextra, ragged heads, small tables, emergencystretch, hidelinks). 0 overfull.
 - Re-uploadable: interior = build/Digital_Insurgency_Paperback_6x9.pdf (198pp,
   unchanged count so the existing cover wrap still matches). All formats rebuilt.
+
+## 2026-06-05 — Substack reformatted as cyberpunk FABLES (all 30)
+- User changed format: each post is a longer FABLE set in ZERO's 2027 world,
+  ties to the book, shows the equation in LaTeX, ends "The moral of the story is..."
+  + read-the-book CTA. (Branch note: work belongs on autonovel/digital-insurgency;
+  the-last-human-ceo is a separate empty branch — don't commit DI work there.)
+- substack/fables/day_01..30.md = 30 authored cyberpunk fables (ZERO/GHOST/BISHOP/
+  Sarah/Iron Mike/Dr Vance/SIGNAL), each ending `MORAL: ...`.
+- build_posts.py v2 assembles: buy bar -> card -> fable -> "What it means" (nugget)
+  -> equation ($$) -> "The moral of the story is" -> CTA. Verified via preview.
+- Still pending: live Substack push needs auth (cookies; email/pw 403'd = magic-link
+  account). push_substack.py ready; reads .env.

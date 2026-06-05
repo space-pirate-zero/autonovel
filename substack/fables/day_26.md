@@ -1,10 +1,3 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-![Day 26](cards/day_26.png)
-
-# Day 26/30 — Field Report — The Fortress Run
-*A fable from the field manual · Chapter 13 (Banking)*
-
 Goliath Bank had a CIO named Iron Mike — sixty-one, gray-faced, with a framed sign on his wall: IF IT AIN'T BROKE, DON'T TOUCH IT. He'd survived four CEOs and one congressional hearing by touching nothing.
 
 His fraud system was built in the Obama years. It worked — slow, blind to modern attacks, expensive, but it worked, and "worked" was enough for Mike.
@@ -19,22 +12,4 @@ IT WAS BROKE. WE FIXED IT.
 
 That's the win. Not the technology. The moment the gatekeeper becomes the convert and writes the sequel to his own slogan.
 
----
-
-**What it means.** Nineteen months, three people, one of the ten largest banks in America. It started with a $0 Excel plugin and an exhausted compliance VP, expanded under Budget Dust, ran silent in shadow — and then a Friday-night supply-chain attack the legacy system never saw. $4.2M saved in one night. The risk inverted. Self-funding coefficient: 58.4. The pilot was free money.
-
-## The equation
-
-$$ S_{fc} = \frac{Cost_{human} - Cost_{AI}}{Cost_{pilot}} \quad\Rightarrow\quad 58.4 $$
-
-🟢 $6.89M first-year value on a $1.8M contract.
-
-**The moral of the story is:** You don't argue a fortress into changing — you make yourself undeniable through one bleeding neck, then let the math convert the gatekeeper. The best victory ends with the old guard rewriting their own sign.
-
----
-
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
-
-**Tomorrow → Day 27: a billing bot saves a life.**
-
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+MORAL: You don't argue a fortress into changing — you make yourself undeniable through one bleeding neck, then let the math convert the gatekeeper. The best victory ends with the old guard rewriting their own sign.
