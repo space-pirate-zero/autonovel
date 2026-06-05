@@ -4056,3 +4056,339 @@ Only the weird survives.
 ---
 
 *End of Chapter 16 — Next: Appendices — The Insurgent's Cheatsheet, The Infiltration Canvas, and Digital Insurgency Live.*
+
+---
+
+# APPENDIX A: THE INSURGENT'S CHEATSHEET
+
+*All twenty-four equations. Formula, variables, traffic-light benchmarks, and the one move each number tells you to make. Rip this out. Tape it to the wall.*
+
+> "Deface the currency." — Diogenes. The corporate ledger is written in bullshit. These twenty-four numbers are a counter-currency you can actually trust.
+
+Benchmark key: 🟢 GREEN = go / safe · 🟡 YELLOW = caution / investigate · 🔴 RED = stop / redesign / abort.
+
+---
+
+## Act I — The Physics
+
+### 1. Extinction Rate — $R_{ext}$
+$$R_{ext} = \frac{Lines_{generic}}{Lines_{authentic}} \times AI_{velocity}$$
+**Vars:** generic = code a model regenerates in seconds; authentic = code carrying human judgment; AI_velocity = rate of model improvement (rising, treat as gravity).
+**Benchmarks:** 🟢 < 1 · 🟡 1–5 · 🔴 > 5 (you are landfill the moment tooling catches up).
+**Move:** raise the denominator. Find the weird. Everything generic is already gone.
+
+### 2. Authenticity Half-Life — $A_{hl}$
+$$A_{hl} = \frac{Taste + Context + Craft}{Replicability}$$
+**Benchmarks:** 🟢 long (months→years) · 🟡 weeks · 🔴 < 6 months.
+**Move:** if your half-life is in minutes, you don't have a product, you have a prompt.
+
+### 3. Theater Ratio — $R_t$
+$$R_t = \frac{Press\_Releases + Demo\_Days}{Production\_Deployments}$$
+**Benchmarks:** 🟢 < 2 · 🟡 2–5 · 🔴 > 5 (all talk, no ship).
+**Move:** count their deploys, not their announcements. The Innovation Lab is a thermodynamic scam — heat in, zero work out.
+
+### 4. Vendor Gravity Force — $F_g$
+$$F_g = \frac{Sunk\_Cost \times Political\_Capital}{Migration\_Effort^2}$$
+**Benchmarks:** 🟢 < 20 (movable) · 🟡 20–80 · 🔴 > 80 (do NOT pitch replacement).
+**Move:** high gravity → be a sidecar, not a rip-and-replace. You can't fight the well; orbit it.
+
+### 5. Entropy Tax — $E_{tax}$
+$$E_{tax} = Maintenance \times e^{\lambda t}$$
+**Benchmarks:** read the curve, not a point. 🟢 flat · 🟡 bending · 🔴 hockey stick.
+**Move:** the status quo is never free. Run the Financial Autopsy and show them the bill they're already paying.
+
+### 6. Legacy Friction Coefficient — $\mu_{leg}$
+$$\mu_{leg} = \frac{Years\_Since\_Last\_Update}{Pages\_of\_Documentation}$$
+**Benchmarks:** 🟢 low · 🟡 mid · 🔴 high (obscure + terrifying = nobody will touch it).
+**Move:** high friction is your opening — be the only one who understands it.
+
+### 7. Technical Debt Compound Rate — $D_{comp}$
+$$D_{comp} = \frac{Bugs\_Found}{Bugs\_Fixed}$$
+**Benchmarks:** 🟢 < 0.8 · 🟡 0.8–1.0 · 🔴 > 1.0 (the team is underwater).
+**Move:** don't pitch the blueprint to a drowning person. Be the bucket.
+
+### 8. Consensus Paralysis Factor — $F_{cp}$
+$$F_{cp} = \frac{n(n-1)}{2}$$
+**Benchmarks:** 🟢 ≤ 6 (n≤4) · 🟡 10–21 (n 5–7) · 🔴 > 28 (n ≥ 8).
+**Move:** keep the room small. Committees are graveyards. Every added head multiplies paths to "no" and adds none to "yes."
+
+### 9. Curator Value Function — $V_{curator}$
+$$V_{curator} = \frac{Signal_{selected}}{Noise_{available}} \times Context_{depth}$$
+**Benchmarks:** explodes as noise → ∞, **only if** context is real. 🔴 context_depth ≈ 0 = a Top-10 listicle.
+**Move:** sell the taste layer, not the generator. They have infinite generation and zero trust.
+
+### 10. Authenticity Token — $T_{authentic}$
+$$T_{authentic} = Trust_{human} \times \frac{1}{Substitutability_{AI}}$$
+**Benchmarks:** 🟢 high trust / low substitutability (a sommelier's pick) · 🔴 → 0 (AI-washable).
+**Move:** prove you have context AI can't fake. That's the whole moat.
+
+---
+
+## Act II — The Protocol
+
+### 11. Risk Tax — $RT$
+$$RT = (P_f \times C_d) + (T_{panic} \times C_{career})$$
+**Benchmarks:** 🟢 < 100 · 🟡 100–1000 · 🔴 > 1000 (career risk > any upside; walk).
+**Move:** you're not selling features. You're lowering the number running in their amygdala. Flip the cortisol source — make the status quo the scary option.
+
+### 12. Decision Fatigue — $DF$
+$$DF = \frac{Decisions_{made}}{Glucose_{remaining}}$$
+**Benchmarks:** 🟢 before 11 AM · 🟡 post-lunch · 🔴 after 2 PM (default answer is "no").
+**Move:** pitch in the morning. "No" costs zero calories. Bring food if you must go late.
+
+### 13. Dorian Gray Index — $D_{gray}$
+$$D_{gray} = \frac{Revenue_{dark\text{-}pattern}}{Trust_{eroded}} \times Time$$
+**Benchmarks:** 🟢 < 10 · 🟡 10–50 · 🔴 > 50 (the portrait is becoming visible; collapse incoming).
+**Move:** trust erodes exponentially, not linearly. Put this next to the growth dashboard. Some execs look. Those are your allies.
+
+### 14. Soul Score — $S_{soul}$
+$$S_{soul} = \sum_{features}(Impact_{human} \times Intent_{honest})$$
+**Vars:** Intent_honest is binary: +1 (genuine) or −1 (exploitative).
+**Benchmarks:** 🟢 net positive · 🔴 net negative (fix the product before you read another page).
+**Move:** if it's negative, you're a mercenary, not an insurgent. The Mirror Test, quantified.
+
+### 15. Reversibility Ratio — $R_r$
+$$R_r = \frac{Impact_{blast}}{Speed_{rollback}}$$
+**Benchmarks:** 🟢 < 1 (ship it) · 🟡 1–10 (feature-flag it) · 🔴 > 10–100 (canary first / do not deploy).
+**Move:** build the Kill Switch before the feature. Hand the CIO the button and say "press it."
+
+### 16. Wedge Velocity — $V_w$
+$$V_w = \frac{Pain_{acute} \times Trust_{increment}}{Friction_{adopt}}$$
+**Benchmarks:** 🟢 > 50 (viral) · 🟡 10–50 · 🔴 < 1 (it's a platform pretending to be a wedge).
+**Move:** if adoption needs procurement, legal, or IT permission, your wedge is blunt. Find the bleeding neck.
+
+### 17. Good Trouble Coefficient — $GT$
+$$GT = \frac{Impact_{change} \times Alignment_{values}}{Risk_{career} + Friction_{bureaucracy}}$$
+**Benchmarks:** 🟢 > 5 (go) · 🟡 2–5 (find a Shadow Sponsor) · 🔴 < 1 (vanity — wrong terrain).
+**Move:** if Alignment_values = 0, GT collapses no matter the impact. Good trouble requires good intent. It's structural, not sentimental.
+
+### 18. Insurgent Index — $I_{insurgent}$
+$$I_{insurgent} = \frac{Problems\_Solved_{quietly}}{Credit\_Claimed_{publicly}}$$
+**Benchmarks:** 🟢 → ∞ (max power) · 🔴 → 0 (you're building a LinkedIn, not a movement).
+**Move:** give the credit away. Make your manager the hero. They become your shield.
+
+### 19. Legacy Liability — $L_{legacy}$
+$$L_{legacy} = P \times (1 + r)^t$$
+**Vars:** r ≈ 0.15–0.20 decay constant.
+**Benchmarks:** read the 3/5/10-year projection. 🔴 anything that doubles inside 5 years.
+**Move:** the cheapest option always looks expensive today. Show them what doing nothing costs.
+
+### 20. Self-Funding Coefficient — $S_{fc}$
+$$S_{fc} = \frac{Cost_{human} - Cost_{AI}}{Cost_{pilot}}$$
+**Benchmarks:** 🟢 > 5 (pays for itself) · 🟢🟢 > 10 (CFO is negligent not to buy) · 🔴 < 1 (don't pitch the CFO yet).
+**Move:** below 5? Go back to the User Buyer and expand the use case until it clears.
+
+---
+
+## Act III — The Invasion
+
+### 21. Zombie Scorecard — $Score$
+$$Score = (Pain\_Owner \times 5) + (Timeline \times 3) + (Budget\_Code \times 5)$$
+**Benchmarks (max 65):** 🟢 45–65 (live) · 🟡 25–44 (one vital missing) · 🔴 0–24 (corpse — send the Breakup Email).
+**Move:** the zombie is usually the gatekeeper, not the company. Walk away and watch who calls back.
+
+### 22. Vaporware Index — $I_v$
+$$I_v = \frac{Adjectives_{pitch}}{Live\_Demo\_Minutes}$$
+**Benchmarks:** 🟢 < 5 · 🟡 5–10 · 🔴 > 10 (slides, not software).
+**Move:** works both ways. Score yourself. Cut adjectives, add demo.
+
+### 23. Audit Defense Score — $D_{audit}$
+$$D_{audit} = \frac{Certifications \times Scope}{Auditor\_Fear}$$
+**Cert weights:** FedRAMP 10 · ISO 27001 6 · SOC 2 Type II 7 · Type I 4 · pen test 3 · self-assessment 1.
+**Benchmarks:** 🟢 > 50 (rubber stamp) · 🟡 20–50 · 🔴 < 5 (rejection).
+**Move:** make saying NO riskier than saying YES. Bring the comparison matrix. Inherit compliance from your cloud. Lower the auditor's fear to zero.
+
+### 24. Trust/Risk Ratio — $T_r$
+$$T_r = \frac{Volume_{traffic} \times Time_{uptime}}{Severity_{incidents}}$$
+**Benchmarks:** 🟢 > 10,000 (ready for primary) · 🟢🟢 > 100,000 (System of Record) · 🔴 < 100 (stay in shadow).
+**Move:** run silent until the math is undeniable, then push the alert. The risk inverts: turning you OFF becomes the dangerous move.
+
+---
+
+*Twenty-four numbers. None of them care about your intentions. That's what makes them honest. Run them before you write another line, take another meeting, or ship another feature. — SPZ*
+
+---
+
+# APPENDIX B: THE INFILTRATION CANVAS
+
+*One page per engagement. Fill it out before you take the meeting, not after you lose it. Eight panels, in order. Skip one and the fortress finds the gap you didn't.*
+
+> "Every character is a force vector. Know the direction before you draw the arrow." — SPZ. The same is true of every deal. The Canvas is how you map the vectors before you move.
+
+How to use it: copy the eight headers into a single page. Answer every prompt in one line. If a field is blank, that blank is your next mission task. A Canvas with three blanks is a deal you are not ready to run.
+
+---
+
+## Panel 1 — ENVIRONMENT *(the physics)*
+*What kind of gravity well am I entering?*
+- **Vendor Gravity** $F_g$: sunk cost × political capital / migration effort². → Replace or sidecar?
+- **Entropy Tax** $E_{tax}$: what is the status quo costing per day, and is the curve bending?
+- **Legacy Friction** $\mu_{leg}$ and **Debt Compound** $D_{comp}$: is the team building or drowning?
+- **Theater Ratio** $R_t$: do they ship, or do they announce?
+- **One-line read:** _This account is a ____-gravity well; the right entry is ____._
+
+## Panel 2 — PEOPLE *(the factions)*
+*Who owns the pain, the budget, and the veto?*
+- **Technocrat** (architecture): name ___ · fear ___ · win with ___
+- **Bureaucrat** (process/security): name ___ · fear ___ · win with ___
+- **Shadow Warlord** (budget, off-org-chart): name ___ · fear ___ · win with ___
+- **Champion / User Buyer** (the bleeding neck): name ___ · what makes them want to quit ___
+- **Shadow Sponsor** (senior cover): name ___ (or: none yet — find one)
+- **The Three Ghosts:** which past vendor/migration/cloud trauma haunts this room?
+- **One-line read:** _Enter through ____; pitch ____ for money, ____ for credibility, bribe ____ with compliance artifacts._
+
+## Panel 3 — QUALIFICATION *(is it alive?)*
+*Am I selling to a corpse?*
+- **Zombie Score** = (Pain_Owner ×5) + (Timeline ×3) + (Budget_Code ×5). Total ___ / 65.
+- **Pain Owner:** the named human who bleeds from this specific problem ___
+- **Timeline:** the real by-when with a real consequence ___
+- **Budget Code:** does my contact control or sit one desk from the money? ___
+- **Vaporware check** $I_v$: my adjectives ÷ my live-demo minutes = ___
+- **One-line read:** 🟢/🟡/🔴 — _if 🔴, send the Breakup Email and move my blood somewhere it circulates._
+
+## Panel 4 — CAMOUFLAGE *(architecture as disguise)*
+*Does my radical thing look boring enough to survive the ARB?*
+- **Relabels:** "AI Inference Layer" → ____ · "Event Mesh" → ____ · "ML pipeline" → ____
+- **Box count:** ≤ 6 boxes, all names the ARB has approved before? Y / N
+- **Strangler plan:** intercept → observe → route → strangle. Current phase: ___
+- **Inception script:** which Socratic questions lead them to draw my diagram themselves?
+- **One-line read:** _The ARB will read this as a ____ and approve it without seeing the ____ inside._
+
+## Panel 5 — SHIELD *(weaponized bureaucracy)*
+*Can I make saying NO riskier than saying YES?*
+- **Audit Defense** $D_{audit}$ = certs × scope / auditor_fear = ___
+- **Certs in hand / inheritable from cloud:** ___ (GovCloud → FedRAMP, etc.)
+- **Synthetic data ready?** (kills the privacy review) Y / N
+- **Comparison matrix:** control points where I beat the incumbent ___ / total ___
+- **One-line read:** _Keeping the legacy vendor is the risky choice because ____._
+
+## Panel 6 — MATH *(the economics of safety)*
+*What's the one number that ends the argument?*
+- **Legacy Liability** $L_{legacy}$ at r=0.17 → 3yr ___ · 5yr ___ · 10yr ___
+- **Self-Funding** $S_{fc}$ = (human − AI) / pilot = ___ (need > 5)
+- **The One-Sheet:** daily cost of inaction = $___/day = $___/yr
+- **Budget pocket:** CapEx or OpEx? which quarter? who signs under threshold?
+- **One-line read:** _Doing nothing costs $____ a day. Here's the fire under your chair._
+
+## Panel 7 — INVASION PLAN *(shadow → system of record)*
+*How do I go from experiment to oxygen?*
+- **Reversibility** $R_r$ = blast / rollback; kill switch reverts in ___ ms
+- **Wedge Velocity** $V_w$ = pain × trust / friction = ___ (need > 10; adopt-friction = 1)
+- **Trust/Risk** $T_r$ target before going live = ___ (>10,000 primary; >100,000 SoR)
+- **4 phases:** Shadow (read-only) → Canary (1–5%) → Strangle (route by type) → System of Record
+- **Risk-inversion trigger:** what crisis makes turning me OFF the dangerous move? ___
+- **One-line read:** _I run silent until $T_r$ is undeniable, then I push the alert._
+
+## Panel 8 — PRE-MORTEM *(the Mirror Test, last)*
+*Assume it's a year later and this failed — or worse, it succeeded and shouldn't have.*
+- **Soul Score** $S_{soul}$: is what I'm smuggling medicine or poison? net ___
+- **Empathy gap:** whose fear did I fail to neutralize? ___
+- **The Keisha risk:** if this gets someone fired, is it me protecting them, or me?
+- **Good Trouble** $GT$ = (impact × alignment) / (risk + friction) = ___ (need > 2)
+- **One-line read:** _If this works, the portrait heals by ____%. If it doesn't, the failure mode is ____._
+
+---
+
+### The Canvas, in one breath
+Map the **gravity**. Name the **factions**. Confirm the deal has a **pulse**. Wear **camouflage**. Carry the **shield**. Bring the one **number**. Run the **invasion** silent until the math flips. And before any of it — pass the **Mirror Test**.
+
+*Eight panels. One page. If you can't fill it, you're not ready to infiltrate — you're ready to get ejected. — SPZ*
+
+---
+
+# APPENDIX C: THE COMPANION APP — DIGITAL INSURGENCY LIVE
+
+*The field manual is a book. This is the book that listens. A tactical companion that runs the equations against your real meetings, in real time, and tells you when to pivot, when to push, and when to abort.*
+
+> Not crypto. Not a chatbot. A curator in your pocket — GHOST, productized, with the safety rails on. It selects the one number that matters out of the noise of a live conversation, and it whispers it before you say the wrong word.
+
+---
+
+## The Concept
+
+You're in the meeting. The CIO just said "overhaul." Your $RT$ just spiked past 1000 and you don't even know it yet. **Digital Insurgency Live** does — and a discreet notification on your watch reads: *Cortisol trigger detected. Pivot "overhaul" → "refinance."*
+
+The app is the book's twenty-four equations turned into a live tactical feed. It listens (with consent), computes the formulas against the conversation, and gives you the read you'd otherwise only get in the parking lot afterward, three hours too late.
+
+---
+
+## Core Feature — Meeting Intelligence
+
+Runs during a call or in-room meeting:
+
+- **Transcribes locally.** Audio never leaves the device. Whisper on-device; only anonymized metadata (never raw transcript) is ever transmitted, and only if you opt in.
+- **Identifies the room.** Tags speakers by likely faction — Technocrat, Bureaucrat, Shadow Warlord — from what they care about, not who they are.
+- **Computes the equations live:**
+  - *"Vendor Gravity detected: $F_g = 87$. Do NOT pitch replacement — sidecar only."*
+  - *"Zombie phrase: 'socialize internally.' Score dropping → 11. Confirm budget authority."*
+  - *"Decision fatigue: 52 min, post-lunch. $DF$ high. Recommend landing the ask now or rescheduling."*
+  - *"Cortisol trigger: 'rip and replace.' Recommended reframe: 'augment.'"*
+  - *"$RT$ estimate 1,400 — career risk exceeds upside. De-risk before any close."*
+- **Discreet delivery.** Watch haptics, a phone glance, or an earbud cue. Never a robot voice in the room.
+
+---
+
+## The Space Tokens Economy
+
+A closed-loop reward ledger (a plain ledger — **not** a blockchain, we're not crypto bros). You earn by doing the work; you spend on capability and community.
+
+**Earn Space Tokens by:**
+- Completing Glass House Exercises from the book
+- Running the equations against a real prospect (verified by a logged meeting)
+- Contributing an anonymized field report to the Insurgent Network
+- Shipping a wedge that clears $V_w > 10$
+
+**Spend Space Tokens on:**
+- Advanced equation calculators and scenario simulators
+- The Insurgent Network — peer-to-peer war-room access
+- Bonus graphic-novel chapters and SPZ closers
+- Live coaching with an AI trained on the book's methodology
+
+The economy is designed so the only way to get rich in tokens is to actually run the playbook. Vanity gets you nothing. Shipping gets you everything. (The Insurgent Index, $I_{insurgent}$, made spendable.)
+
+---
+
+## Architecture
+
+- **Client:** React Native (iOS + Android), one shared codebase.
+- **Transcription:** Whisper, on-device. Raw audio is processed locally and discarded.
+- **Tactical analysis:** Claude API (Opus-class) for faction tagging, reframe suggestions, and equation interpretation — fed only de-identified, structured signals, never raw audio.
+- **Ledger:** an append-only Space Tokens ledger (boring, auditable, centralized — and proud of it).
+- **Privacy-first by construction:** local audio processing; opt-in metadata only; per-meeting consent prompts; one-tap purge.
+
+```
+[ mic ] → on-device Whisper → structured signals (no raw text leaves)
+                                   │
+                                   ▼
+                     equation engine (24 formulas)
+                                   │
+                 ┌─────────────────┼─────────────────┐
+                 ▼                 ▼                 ▼
+        discreet cue        Space Tokens         opt-in anon
+        (watch/earbud)        ledger          field-report sync
+```
+
+---
+
+## The Ethics Sidecar (built into the app itself)
+
+Because the manual would be a hypocrite otherwise. The app ships with its own Mirror Test:
+
+- **Consent is non-negotiable.** Everyone in the room is notified; no covert recording, ever.
+- **No dark patterns.** The token economy can't be bought for cash, only earned by work — no loot-box psychology, no manufactured scarcity.
+- **Soul Score on the app itself.** $S_{soul}$ is published for our own features. If a feature's honest intent is −1, it doesn't ship. We eat our own cooking.
+- **You own your data.** Export everything, delete everything, one tap. The portrait stays in the light.
+
+---
+
+## Why It Exists
+
+A book teaches you the physics. The app makes sure you don't forget it at 2 PM, post-lunch, when the Technocrat folds his arms and your amygdala wants to say "transform." It's the difference between knowing the equations and *running* them while the room is still warm.
+
+The insurgent doesn't need applause. They need the read, in real time, before the word leaves their mouth.
+
+*Ship it. — SPZ*
+
+---
+
+*End of Appendices — End of Transmission. Space Pirate Zero, Tucker, Georgia, 2027.*
