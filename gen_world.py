@@ -25,7 +25,6 @@ def call_writer(prompt, max_tokens=16000):
     payload = {
         "model": WRITER_MODEL,
         "max_tokens": max_tokens,
-        "temperature": 0.7,
         "system": (
             "You are a fantasy worldbuilder with deep knowledge of Sanderson's Laws, "
             "Le Guin's prose philosophy, and TTRPG-quality lore design. "

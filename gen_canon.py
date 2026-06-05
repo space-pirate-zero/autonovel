@@ -24,7 +24,6 @@ def call_writer(prompt, max_tokens=16000):
     payload = {
         "model": WRITER_MODEL,
         "max_tokens": max_tokens,
-        "temperature": 0.2,  # Low temp for factual extraction
         "system": (
             "You are a continuity editor extracting hard facts from fantasy novel "
             "planning documents. You are precise, exhaustive, and never invent facts "
