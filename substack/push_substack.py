@@ -24,6 +24,11 @@ import argparse, os, sys
 from pathlib import Path
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE))
+try:
+    from dotenv import load_dotenv
+    load_dotenv(HERE.parent / ".env")   # read SUBSTACK_* from gitignored .env
+except Exception:
+    pass
 from series_data import SERIES, BUY_KINDLE, BUY_PAPERBACK, SUBSCRIBE  # noqa
 
 CARDS = HERE / "cards"
@@ -34,8 +39,11 @@ def connect():
     pub = os.environ.get("SUBSTACK_PUBLICATION_URL")
     if not pub:
         sys.exit("Set SUBSTACK_PUBLICATION_URL (e.g. https://you.substack.com)")
+    cpath = os.environ.get("SUBSTACK_COOKIES_PATH")
     cookies = os.environ.get("SUBSTACK_COOKIES_STRING")
-    if cookies:
+    if cpath:
+        api = Api(cookies_path=cpath, publication_url=pub)
+    elif cookies:
         api = Api(cookies_string=cookies, publication_url=pub)
     elif os.environ.get("SUBSTACK_EMAIL"):
         api = Api(email=os.environ["SUBSTACK_EMAIL"],
