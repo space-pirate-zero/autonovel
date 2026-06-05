@@ -18,3 +18,4 @@ build/*.jpg
 build/*.txt
 build/*.tex
 substack/cards/*.png
+substack_cookies.json
