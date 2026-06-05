@@ -64,7 +64,7 @@ function Para(el)
     end
   end
   if #sig == 1 and sig[1].t == "Math" and sig[1].mathtype == "DisplayMath" then
-    return pandoc.RawBlock("latex", "\\eqbox{\\[" .. sig[1].text .. "\\]}")
+    return pandoc.RawBlock("latex", "\\eqbox{$\\displaystyle " .. sig[1].text .. "$}")
   end
   return nil
 end

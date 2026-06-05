@@ -9,6 +9,7 @@
 \usepackage{array}
 \usepackage{fancyhdr}
 \usepackage{microtype}
+\usepackage{adjustbox}
 
 % ---- Palette (redefine xcolor's cyan/red/orange to brand) ----
 \definecolor{void}{HTML}{030303}
@@ -89,7 +90,7 @@
   \begin{center}%
   {\setlength{\fboxsep}{11pt}\setlength{\fboxrule}{1pt}%
    \fcolorbox{cyan}{panel}{%
-     \begin{minipage}{0.84\linewidth}\centering\large #1\end{minipage}}}%
+     \begin{minipage}{0.86\linewidth}\centering\adjustbox{max width=\linewidth}{#1}\end{minipage}}}%
   \end{center}%
   \addvspace{13pt}%
 }

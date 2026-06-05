@@ -5,10 +5,17 @@
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage[paperwidth=6in,paperheight=9in,
-            inner=0.75in,outer=0.5in,top=0.7in,bottom=0.7in]{geometry}
+            inner=0.7in,outer=0.5in,top=0.65in,bottom=0.65in]{geometry}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \usepackage{microtype}
+\usepackage{fvextra}          % wrap long code lines (no overflow)
+\usepackage{adjustbox}        % scale wide equations to fit
+\usepackage{etoolbox}
+\fvset{breaklines=true,breakanywhere=true,fontsize=\footnotesize}
+\AtBeginEnvironment{longtable}{\footnotesize\setlength{\tabcolsep}{4pt}}
+\emergencystretch=3em \hbadness=10000  % absorb tight justification
+\AtBeginDocument{\hypersetup{hidelinks}}  % no link markup in print
 
 \definecolor{ink}{HTML}{111111}
 \definecolor{mid}{HTML}{555555}
@@ -30,11 +37,11 @@
 
 \setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\linespread{1.05}
 
-\titleformat{\section}{\displaysemi\large}{}{0pt}{\MakeUppercase}[{\titlerule[0.8pt]}]
+\titleformat{\section}{\displaysemi\large\raggedright}{}{0pt}{\MakeUppercase}[{\titlerule[0.8pt]}]
 \titlespacing*{\section}{0pt}{14pt}{6pt}
-\titleformat{\subsection}{\displaysemi\normalsize}{}{0pt}{}
+\titleformat{\subsection}{\displaysemi\normalsize\raggedright}{}{0pt}{}
 \titlespacing*{\subsection}{0pt}{10pt}{3pt}
-\titleformat{\subsubsection}{\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\bfseries\raggedright}{}{0pt}{}
 
 \newcommand{\dichapter}[3]{%
   \cleardoublepage
@@ -62,7 +69,7 @@
 \newcommand{\eqbox}[1]{%
   \par\addvspace{11pt}\begin{center}%
   {\setlength{\fboxsep}{9pt}\setlength{\fboxrule}{0.8pt}%
-   \fcolorbox{ink}{white}{\begin{minipage}{0.86\linewidth}\centering\large #1\end{minipage}}}%
+   \fcolorbox{ink}{white}{\begin{minipage}{0.88\linewidth}\centering\adjustbox{max width=\linewidth}{#1}\end{minipage}}}%
   \end{center}\addvspace{11pt}}
 
 \renewenvironment{quote}
