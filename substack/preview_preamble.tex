@@ -1,0 +1,21 @@
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage[paperwidth=8in,paperheight=13in,margin=0.9in]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\definecolor{ink}{HTML}{1A1A1A}\definecolor{teal}{HTML}{0E7C99}\definecolor{deeppink}{HTML}{C1006A}
+\color{ink}
+\setmainfont{SpaceGrotesk-400.ttf}[Path=/Users/gregchambers/autonovel/fonts/,
+  BoldFont=SpaceGrotesk-700.ttf,
+  ItalicFont=SpaceGrotesk-400.ttf, ItalicFeatures={FakeSlant=0.18},
+  BoldItalicFont=SpaceGrotesk-700.ttf, BoldItalicFeatures={FakeSlant=0.18}]
+\newfontfamily\disp{Orbitron-700.ttf}[Path=/Users/gregchambers/autonovel/fonts/]
+\setlength{\parindent}{0pt}\setlength{\parskip}{7pt}\linespread{1.08}
+\titleformat{\section}{\disp\LARGE\color{deeppink}}{}{0pt}{}
+\titleformat{\subsection}{\disp\large\color{deeppink}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\subsection}{0pt}{12pt}{2pt}
+% blockquote: teal left rule, italic
+\renewenvironment{quote}{\par\smallskip\begingroup\color{ink}\itshape
+  \setlength{\leftskip}{1.2em}\rule{2pt}{0pt}}{\endgroup\par\smallskip}
+\AtBeginDocument{\hypersetup{colorlinks=true,urlcolor=teal,linkcolor=teal}}
