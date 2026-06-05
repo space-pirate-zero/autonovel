@@ -36,3 +36,12 @@
   manuscript.md (58,086 w) built. No PDF (tectonic not installed).
 - NOT done (optional/separate): Appendices A-C; art (needs FAL_KEY); audiobook
   (needs ELEVENLABS_API_KEY); PDF (needs `brew install tectonic`).
+
+## 2026-06-05 — Appendices + PDF
+- Authored Appendices A (24-equation cheatsheet), B (Infiltration Canvas), C
+  (companion-app spec) directly -> chapters/ch_17,18,19.md.
+- PDF: repo typeset/build_tex.py is prose-only (escapes $, breaks math/tables)
+  AND has hardcoded /home/jeffq paths. Used pandoc + tectonic instead via new
+  build_pdf.py (emoji/unicode -> safe text, strips [IMG] markers).
+- RESULT: build/Digital_Insurgency.pdf — 154 pages, ~577KB, 61,120 words
+  (Prologue + 16 ch + 3 appendices). *.pdf is gitignored so the PDF is local only.
