@@ -25,7 +25,6 @@ def call_writer(prompt, max_tokens=16000):
     payload = {
         "model": WRITER_MODEL,
         "max_tokens": max_tokens,
-        "temperature": 0.7,
         "system": (
             "You are a character designer for literary fiction with deep knowledge of "
             "wound/want/need/lie frameworks, Sanderson's three sliders, and dialogue "

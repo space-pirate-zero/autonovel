@@ -29,7 +29,6 @@ def call_writer(prompt, max_tokens=16000):
     payload = {
         "model": WRITER_MODEL,
         "max_tokens": max_tokens,
-        "temperature": 0.8,
         "system": (
             "You are Space Pirate Zero (SPZ), writing a chapter of 'Digital "
             "Insurgency' -- a business-strategy x cyberpunk x spec-ops field "
@@ -48,7 +47,8 @@ def call_writer(prompt, max_tokens=16000):
         "messages": [{"role": "user", "content": prompt}],
     }
     resp = httpx.post(f"{API_BASE}/v1/messages", headers=headers, json=payload, timeout=600)
-    resp.raise_for_status()
+    if resp.status_code != 200:
+        raise RuntimeError(f"API {resp.status_code}: {resp.text[:600]}")
     return resp.json()["content"][0]["text"]
 
 def load_file(path):
