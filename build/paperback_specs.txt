@@ -1,0 +1,7 @@
+Paperback specs (KDP, white paper)
+  Interior page count : 198
+  Trim                : 6 x 9 in
+  Bleed               : 0.125 in all sides
+  Spine width         : 0.446 in  (198 x 0.002252)
+  Full cover wrap     : 12.696 x 9.25 in
+  (back 6.0 | spine 0.446 | front 6.0, + bleed)
