@@ -94,3 +94,21 @@
   math[display="block"] (pandoc --mathml emits that, no .math.display class).
   Plain PDF: real centered LaTeX (unboxed, minimal variant).
 - Verified by rendering p18 (F_g, E_tax boxed fractions, cyan). Rebuilt all 3.
+
+## 2026-06-05 — KDP (Amazon) publishing package
+- Cannot upload for the user (KDP is a manual, login-gated portal; no public API).
+  Prepared every asset + a step-by-step in kdp/KDP_UPLOAD.md.
+- Kindle eBook: build_epub.py --kindle -> Digital_Insurgency_Kindle.epub
+  (epub_kindle.css = light/reader-friendly, no forced dark bg; banners as
+  left-border dividers; light equation boxes). epubcheck: 0 errors/warnings.
+- eBook cover: build/cover_ebook.jpg 1600x2560 RGB (pdftoppm cover page + sips
+  resample + pad with void #030303 -> seamless).
+- Paperback: build_print_pdf.py -> 6x9 black-ink interior, 198pp, mirror margins
+  (inner .75 outer .5), embedded+subset fonts (pdffonts emb=yes), monochrome
+  design (black banner bars white text, framed eqs, bold B&W benchmarks).
+  preamble_print.tex + cover_print.tex (light title/copyright/contents).
+- Paperback cover wrap: build_paperback_cover.py -> 12.696x9.25in, spine 0.446in
+  (198 x 0.002252 white). Auto-recomputes from interior page count.
+- Metadata: kdp/kdp_metadata.md (title/subtitle/desc HTML/7 keywords/3 cats/price).
+- Dark Designed.pdf stays screen-only (NOT for KDP print). build/*.jpg,*.txt,*.tex
+  gitignored.
