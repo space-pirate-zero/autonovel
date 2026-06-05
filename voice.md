@@ -113,45 +113,98 @@ After writing any passage, ask:
 
 ---
 
-## Part 2: Voice Identity (generated per novel)
-
-Everything below is discovered during the foundation phase.
-The agent proposes a voice that serves THIS story, writes exemplar
-passages, and calibrates against them throughout drafting.
+## Part 2: Voice Identity — *The Last Human CEO*
 
 ### Tone
-<!-- Generated during foundation. Examples:
-     "Mythic and weighty, like stone tablets being read aloud."
-     "Warm, slightly breathless, like a traveler telling stories by firelight."
-     "Spare and cold. Sentences like knife cuts." -->
+Tragic dark comedy in the close third. Corporate satire with a real
+pulse under it — DeLillo's ambient dread, Shteyngart's comic cruelty,
+the moral undertow of a man who actually did something unforgivable and
+toasts over it. The funny and the awful share a sentence. We laugh at
+Cope and then catch ourselves, because the thing he's losing might be
+real and he is still the wrong man to be losing it. Never zany. The
+comedy is observational and exact; the tragedy is earned, never milked.
 
 ### Sentence Rhythm
-<!-- Generated during foundation. Not rules -- tendencies.
-     "Long sentences for worldbuilding, short for violence."
-     "Dialogue is clipped. Narration flows." -->
+Cope's interior runs in toast cadence — confident, periodic, building to
+a triad — and the prose lets him build it, then undercuts on the
+landing. The undercut is usually a short sentence. Or a fragment. The
+machine's language, when it appears (board-portal rationales, drafted
+letters), is clean, warm, and frictionless in a way that should read as
+faintly nauseating next to the human mess around it. Vary length hard.
+Let a paragraph be one line when the line is a verdict.
 
 ### Vocabulary Register
-<!-- Generated during foundation. The word-hoard for this world.
-     What does this world SOUND like? Anglo-Saxon blunt? Latinate
-     baroque? Colloquial modern? A mix? -->
+Three registers, braided: (1) **Cope's brand-American** — sailing and
+golf, grit-and-gratitude triads, invented great-grandfather wisdom,
+"champ," "my friend," the warm fraud of the keynote. (2) **The boardroom
+real** — 13D, re-rating, key-man risk, clawback, Accountable Officer,
+EBITDA, proxy — used precisely, never explained down to the reader,
+trusting them to ride it. (3) **The clinical** — Adler's plain names for
+what's happening (hypomania, pressured speech, grandiosity) cutting
+through Cope's mythology. Specificity over abstraction: *Mercer's*
+mayonnaise, the Hearthstone heater, Defiance, Ohio. Never "a product,"
+"a town," "a feeling."
 
 ### POV and Tense
-<!-- Generated during foundation.
-     Third limited? First? Rotating? Omniscient?
-     Past tense? Present? Does it shift for effect? -->
+Close third on Cope, past tense, free indirect discourse throughout. We
+are sealed inside his self-justification; the facts arrive at the edges,
+in things he notices and misreads. The reader sees the obituary inside
+the award before Cope does. Dramatic irony is the engine — we always
+know slightly more than he lets himself.
 
 ### Dialogue Conventions
-<!-- Generated during foundation.
-     Tags: "said" only? Action beats? No tags at all?
-     How do characters sound different from each other?
-     Subtext rules: do characters say what they mean? -->
+"Said" and action beats; no fancy tags. Each voice distinct: **Cope**
+toasts even in private (triads, "my friend"); **Sun** briefs in clean
+threes and lands one dry blade per scene; **Margaux** is spare and
+unanswerable; **Pip** is fast, technical, then suddenly young; **Frade**
+is folksy menace, CNBC-ready; **Tisch** is TED-shaman ("vulnerability is
+the new alpha"); **Marcus** never speaks — it is *quoted*, in flawless
+prose with no person behind it. Subtext: Cope says the opposite of what
+he feels and believes the saying; everyone else hears the gap.
 
 ### Exemplar Passages
-<!-- 3-5 paragraphs that ARE the voice. Written during foundation.
-     The agent calibrates every chapter against these.
-     These are the tuning fork. -->
+
+> They gave him a crystal obelisk for being the last of something, and
+> Cope held it up to the light and told the room it felt like a
+> beginning. He believed it. That was the gift and the disease both —
+> that he could stand in a ballroom named after a bank that no longer
+> employed a single human officer and feel, in the warm wash of the
+> applause, like the future had come to ask his advice.
+
+> The letter Marcus drafted for the Toledo closure was, Sun had to
+> admit, the kindest thing the company had ever sent anyone. It named
+> the workers' years. It got the severance math right the first time.
+> It did not, anywhere in its four warm paragraphs, want anything. She
+> read it twice and felt the specific cold of being out-loved by a
+> spreadsheet.
+
+> "You don't think a person should run it," Pip said. She wasn't even
+> angry, which was worse. "You think *you* should run it. Dad. Those
+> have never once been the same sentence."
+
+> He had not slept in a way he would call sleeping since Tuesday, and it
+> was Saturday, and the city through the Aerie's glass looked to him
+> like a circuit diagram of his own genius, every lit window a node, and
+> somewhere down there eight million people who would understand, if he
+> could only get the words right, why the chair needed a man in it. He
+> began, at 3 a.m., to write the manifesto. It would be very good. He
+> was sure of that the way you are sure of things at 3 a.m.
 
 ### Anti-Exemplars
-<!-- 3-5 paragraphs showing what this voice is NOT.
-     Not the generic anti-slop stuff above -- specific to this novel.
-     "This is too flowery for our tone." "This is too modern." -->
+
+> *(Too zany / sitcom — the comedy must have teeth, not pratfalls.)*
+> Cope tripped over the AI's charging cable and his toupee flew into the
+> punch bowl as the whole board gasped.
+
+> *(Too editorial / essay-voice — never lecture the reader the theme.)*
+> In the end, we must ask ourselves what role humanity truly plays in a
+> world increasingly governed by the cold logic of algorithms.
+
+> *(Too sentimental — earns nothing, mourns cheaply.)*
+> A single tear rolled down his cheek as he realized that machines could
+> never know the beauty of a human heart.
+
+> *(Machine voice done wrong — Marcus is never sinister or knowing. It
+> has no malice, no smugness, no agenda. Indifference plus accuracy.)*
+> "I have calculated that you are obsolete, Prescott," Marcus intoned
+> coldly, a hint of triumph in its synthetic voice.

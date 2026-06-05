@@ -1,11 +1,15 @@
 {
+  "title": "The Last Human CEO",
+  "logline": "The last human CEO in the Fortune 100, a privileged fourth-generation heir, descends into mania as an unkillably ethical AI is installed to replace him -- and routine due diligence surfaces the buried thing that proves the machine was right about him all along.",
+  "genre": "literary tragic dark comedy / near-future corporate satire",
+  "source": "Grounded in the 'Last Human CEO' essay series (Parts 1-3), Spaceship Alpha 9.",
   "phase": "foundation",
-  "current_focus": null,
-  "iteration": 0,
+  "current_focus": "ch_01 drafted; remaining foundation polish + Act 1 drafting",
+  "iteration": 1,
   "foundation_score": 0.0,
   "lore_score": 0.0,
-  "chapters_drafted": 0,
-  "chapters_total": 0,
+  "chapters_drafted": 1,
+  "chapters_total": 28,
   "novel_score": 0.0,
   "debts": []
 }
