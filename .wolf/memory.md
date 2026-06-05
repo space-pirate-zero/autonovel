@@ -112,3 +112,12 @@
 - Metadata: kdp/kdp_metadata.md (title/subtitle/desc HTML/7 keywords/3 cats/price).
 - Dark Designed.pdf stays screen-only (NOT for KDP print). build/*.jpg,*.txt,*.tex
   gitignored.
+
+## 2026-06-05 — KDP paperback fix (margins/gutter)
+- KDP rejected paperback: text outside margins / insufficient gutter. Cause:
+  6 equations were trapped inside ``` code fences (convert_equations.py didn't
+  track fence state) -> literal $$ ran off the page. Unwrapped via inline script;
+  eqbox now adjustbox max-width scales wide eqs (Score). Print preamble hardened
+  (fvextra, ragged heads, small tables, emergencystretch, hidelinks). 0 overfull.
+- Re-uploadable: interior = build/Digital_Insurgency_Paperback_6x9.pdf (198pp,
+  unchanged count so the existing cover wrap still matches). All formats rebuilt.
