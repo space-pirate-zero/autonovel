@@ -17,3 +17,4 @@ cover.png
 build/*.jpg
 build/*.txt
 build/*.tex
+substack/cards/*.png
