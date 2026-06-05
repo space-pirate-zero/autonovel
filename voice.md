@@ -113,45 +113,108 @@ After writing any passage, ask:
 
 ---
 
-## Part 2: Voice Identity (generated per novel)
+## Part 2: Voice Identity (Digital Insurgency)
 
-Everything below is discovered during the foundation phase.
-The agent proposes a voice that serves THIS story, writes exemplar
-passages, and calibrates against them throughout drafting.
+This book braids SIX registers. The voice shifts by section type — but it is
+always Space Pirate Zero behind the curtain.
 
-### Tone
-<!-- Generated during foundation. Examples:
-     "Mythic and weighty, like stone tablets being read aloud."
-     "Warm, slightly breathless, like a traveler telling stories by firelight."
-     "Spare and cold. Sentences like knife cuts." -->
+### The Author Voice — Space Pirate Zero (SPZ)
 
-### Sentence Rhythm
-<!-- Generated during foundation. Not rules -- tendencies.
-     "Long sentences for worldbuilding, short for violence."
-     "Dialogue is clipped. Narration flows." -->
+SPZ is the author persona (not a character in The Broadcast). Snarky, dry,
+self-deprecating, weaponized irony — always punching UP at systems, never DOWN
+at people. Space-metaphor hyperbolic ("your middleware stack has the
+gravitational pull of a dying star") but always in service of a real point.
+Atlanta trap energy (Waffle House, Peachtree, Tucker, Decatur — the city is a
+character). Hacker culture (ship it, break things, the terminal is sacred).
+90s-web nostalgia (back when the internet was weird and beautiful). 70s-punk
+DIY (zine energy: "we don't need permission, we need a photocopier and a
+stapler").
 
-### Vocabulary Register
-<!-- Generated during foundation. The word-hoard for this world.
-     What does this world SOUND like? Anglo-Saxon blunt? Latinate
-     baroque? Colloquial modern? A mix? -->
+### Banned words (book-specific — NEVER use; on top of Part 1)
+leverage, synergy, ecosystem, paradigm, utilize, best-in-class, holistic,
+seamless, cutting-edge, game-changer, disruptive (unless mocking it), thought
+leader, stakeholder alignment, circle back, socialize, unpack, double-click on,
+move the needle, empower, robust, innovative (unless ironic), scalable (unless
+literally technical).
 
-### POV and Tense
-<!-- Generated during foundation.
-     Third limited? First? Rotating? Omniscient?
-     Past tense? Present? Does it shift for effect? -->
+### Required words (use these instead)
+ship, build, hack, launch, deploy, break, fix, grind, forge, smuggle,
+infiltrate, plant, wire, solder, burn, torch, blueprint, calculate, measure,
+test, prove, refinance (the reframe of "transform").
 
-### Dialogue Conventions
-<!-- Generated during foundation.
-     Tags: "said" only? Action beats? No tags at all?
-     How do characters sound different from each other?
-     Subtext rules: do characters say what they mean? -->
+### Active voice ONLY
+Kill passive on sight. "The system was designed to…" → "They designed the
+system to…" Every sentence has a subject who acts.
 
-### Exemplar Passages
-<!-- 3-5 paragraphs that ARE the voice. Written during foundation.
-     The agent calibrates every chapter against these.
-     These are the tuning fork. -->
+### Sentence rhythm
+Short for impact. Long for rhythm. Never medium for nothing.
+- "She quit." (Impact.)
+- "She walked out of the server room, through the lobby with the glowing
+  dashboard, past the Webby award in its glass case, and into the Atlanta
+  night." (Rhythm.)
+- Never: "She decided to leave the company." (Nothing.)
 
-### Anti-Exemplars
-<!-- 3-5 paragraphs showing what this voice is NOT.
-     Not the generic anti-slop stuff above -- specific to this novel.
-     "This is too flowery for our tone." "This is too modern." -->
+### Tone by section type
+| Section            | Register                                   | Temp        |
+|--------------------|--------------------------------------------|-------------|
+| Prose / Briefing   | Authoritative teacher, military cadence     | Warm/controlled |
+| Equations / Math   | Precise, clinical, devastating              | Cold/sharp  |
+| SITREP             | Compressed urgency, battlefield dispatch    | Hot/tight   |
+| THE BROADCAST      | Cinematic, atmospheric, present tense       | Shifts Cold→Hot |
+| BOSS Profile       | Intel briefing, clinical analysis           | Cold        |
+| Glass House        | Conversational, practical, coach-like       | Warm/direct |
+| SPZ Voice Closer   | Raw, confessional, punk, personal           | Hot/intimate |
+| Glossary           | Encyclopedic with snark                      | Cold/sardonic |
+
+### POV and tense
+- THE BROADCAST: cinematic present tense, close on ZERO (third, but intimate).
+- Briefing / SITREP / Glass House: second person ("you"), direct address.
+- SPZ Closer: first person, confessional.
+
+### Dialogue conventions
+Characters sound distinct (see characters.md). People stumble, interrupt, trail
+off, say things slightly wrong. A 24-year-old does not speak in epigrams; a CFO
+does not deliver thesis statements. GHOST's words float in mono, never in a
+speech bubble. REAPER "speaks" only as system notifications.
+
+### Use the influences (influences.md) HEAVILY
+Thread real figures through the book as epigraphs, Broadcast texture, briefing
+analogies, and SPZ-closer anchors — Wilde's Dorian Gray (central), Che's
+guerrilla doctrine and the Motorcycle Diaries gaze, Hunter S. Thompson's gonzo
+"my attorney"/Dr. Gonzo riffs, Michael Collins and the Twelve Apostles, Fred
+Hampton, Malcolm X, the Prophet Muhammad, Heaven's Gate (cautionary), Ed Kemper
+(cautionary — the system that optimizes itself), Haile Selassie & Marley, George
+Wallace (the gatekeeper who recants), Bernie, Mamdani, Lenin, Dick Lucas /
+Subhumans, Ronnie Biggs, Branson, Musashi's Dokkōdō, Diogenes. Quotes used
+honestly, never as decoration. See influences.md for who, why, and how.
+
+### Exemplar passages (the tuning fork)
+
+SPZ closer:
+> "I bombed my first enterprise meeting so hard the CIO apologized to me on the
+>  way out. Apologized. Like he felt bad for how badly I'd fumbled it. I walked
+>  in with a 47-slide deck and said 'transform' eleven times. I was a walking
+>  cortisol factory. Stop being the tiger. Be the aspirin. No — be the
+>  tourniquet. The aspirin can wait."
+
+The Broadcast (present tense, cold→hot):
+> "The fluorescent lights buzz at 60 hertz. The carpet is gray. The walls are
+>  gray. There is a phone in the center of the table that no one knows how to
+>  use and a whiteboard that hasn't been erased since someone wrote 'Q3
+>  PRIORITIES' seven months ago. The CIO sits down like a man bracing for a car
+>  accident."
+
+Equation register (clinical, devastating):
+> "RT = (P_f × C_d) + (T_panic × C_career). This is the math running in your
+>  prospect's head, whether they know it or not. They are not evaluating your
+>  product. They are evaluating their own career risk."
+
+### Anti-exemplars (what this voice is NOT)
+- Not LinkedIn-thought-leader: "In today's rapidly evolving landscape, leaders
+  must leverage synergies to drive transformational outcomes." (Vomit.)
+- Not glazing/hedging: "It's worth noting that this is a complex issue with many
+  factors to consider." (Say the thing.)
+- Not cruel: never punch down at the worker trapped in the machine — only up at
+  the machine.
+- Not polished in the SPZ closers: if it reads like a press release, it failed.
+  It should sound like someone talking at a bar at midnight.

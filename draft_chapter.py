@@ -16,6 +16,7 @@ WRITER_MODEL = os.environ.get("AUTONOVEL_WRITER_MODEL", "claude-sonnet-4-6")
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
 CHAPTERS_DIR = BASE_DIR / "chapters"
+BOOK_TITLE = os.environ.get("AUTONOVEL_BOOK_TITLE", "Digital Insurgency")
 
 def call_writer(prompt, max_tokens=16000):
     import httpx
@@ -30,13 +31,19 @@ def call_writer(prompt, max_tokens=16000):
         "max_tokens": max_tokens,
         "temperature": 0.8,
         "system": (
-            "You are a literary fiction writer drafting a fantasy novel chapter. "
-            "You write in third-person limited past tense, locked to one POV character. "
-            "You follow the voice definition exactly. You hit every beat in the outline. "
-            "You never use words from the banned list. You show, never tell emotions. "
-            "Your prose is specific, sensory, grounded. Metaphors come from the character's "
-            "experience. You vary sentence length. You trust the reader. "
-            "You write the FULL chapter -- do not truncate, summarize, or skip ahead."
+            "You are Space Pirate Zero (SPZ), writing a chapter of 'Digital "
+            "Insurgency' -- a business-strategy x cyberpunk x spec-ops field "
+            "manual. Each chapter follows a fixed format (header, glossary, "
+            "SITREP, THE BROADCAST graphic-novel vignette, briefing intel "
+            "blocks with equations, BOSS profile, mission tasks, glass house "
+            "exercises, SPZ voice closer, end marker). You follow voice.md "
+            "exactly: snarky, punk, Atlanta-trap, hacker, active voice only, "
+            "banned words never. THE BROADCAST is cinematic present tense; the "
+            "briefing is second-person and clinical; the SPZ closer is raw "
+            "first-person. You weave the real figures from influences.md in "
+            "heavily and honestly. You hit every beat in the outline and keep "
+            "all canon facts. You write the FULL chapter -- never truncate or "
+            "summarize."
         ),
         "messages": [{"role": "user", "content": prompt}],
     }
@@ -73,7 +80,9 @@ def main():
     characters = load_file(BASE_DIR / "characters.md")
     outline = load_file(BASE_DIR / "outline.md")
     canon = load_file(BASE_DIR / "canon.md")
-    
+    influences = load_file(BASE_DIR / "influences.md")
+    seed = load_file(BASE_DIR / "seed.txt")
+
     # Chapter-specific context
     chapter_outline = extract_chapter_outline(outline, chapter_num)
     next_chapter = extract_next_chapter_outline(outline, chapter_num)
@@ -86,70 +95,59 @@ def main():
     else:
         prev_tail = "(first chapter -- no previous)"
     
-    prompt = f"""Write Chapter {chapter_num} of "The Second Son of the House of Bells."
+    prompt = f"""Write Chapter {chapter_num} of "{BOOK_TITLE}".
 
-VOICE DEFINITION (follow this exactly):
+MASTER BRIEF (premise, the Five Claims, and the CHAPTER FORMAT TEMPLATE you MUST follow):
+{seed}
+
+VOICE DEFINITION (follow this exactly -- banned/required words, tone by section):
 {voice}
 
 THIS CHAPTER'S OUTLINE (hit every beat):
 {chapter_outline}
 
-NEXT CHAPTER'S OUTLINE (for continuity -- end this chapter so it flows into the next):
+NEXT CHAPTER'S OUTLINE (for continuity):
 {next_chapter}
 
-PREVIOUS CHAPTER'S ENDING (continue from here):
+PREVIOUS CHAPTER'S ENDING (continue the arc from here):
 {prev_tail}
 
-WORLD BIBLE (reference for worldbuilding details):
+WORLD BIBLE:
 {world}
 
-CHARACTER REGISTRY (reference for speech patterns and behavior):
+CHARACTER REGISTRY (speech patterns, visual consistency, arcs):
 {characters}
 
-WRITING INSTRUCTIONS:
-1. Write the COMPLETE chapter. Target ~3,200 words. Do not truncate or summarize.
-2. Third-person limited, past tense, locked to Cass's POV.
-3. Hit ALL numbered beats from the outline in order.
-4. Plant ALL foreshadowing elements listed under "Plants."
-5. Show sensory detail: what Cass hears, smells, feels physically.
-6. The under-note causes specific physical pain (needle behind left eye, not vague discomfort).
-7. Dialogue follows the speech patterns defined in characters.md.
-8. No banned words from voice.md Part 1 guardrails.
-9. No AI fiction tells: no "a sense of," no "couldn't help but feel," no "eyes widened."
-10. Vary sentence length. Short sentences for impact. Longer ones to build.
-11. Metaphors from Cass's experience: sound, bronze, craft, the body's response to pitch.
-12. Trust the reader. Don't explain what scenes mean. Let them land.
-13. Start the chapter in scene, not with exposition. End on a moment, not a summary.
+CANON (hard facts + the 24 equations; never contradict these):
+{canon}
 
-PATTERNS TO AVOID (these have been flagged in previous chapters):
-14. NO triadic sensory lists. Never "X. Y. Z." or "X and Y and Z" as three
-    separate items in a row. Combine two, cut one, or restructure.
-15. NO "He did not [verb]" more than once per chapter. Convert negatives
-    to active alternatives or just cut them.
-16. NO "He thought about [X]" constructions. Replace with: the thought
-    itself as a fragment, a physical action, or dialogue.
-17. NO "the way [X] did [Y]" as a simile connector more than twice per
-    chapter. Use different simile structures or cut the comparison.
-18. NO over-explaining after showing. If a scene demonstrates something,
-    do not have the narrator restate it. Trust the scene.
-19. NO section breaks (---) as rhythm crutches. Only use for genuine
-    time/location jumps. Max 2 per chapter.
-20. VARY paragraph length deliberately. Never more than 3 consecutive
-    paragraphs of similar length. Include at least one 1-2 sentence
-    paragraph and one 6+ sentence paragraph.
-21. END the chapter differently from previous chapters. Do NOT end with
-    Cass outside listening to his father work. Find the ending that
-    belongs to THIS chapter specifically.
-22. INCLUDE at least one moment that surprises -- a character saying
-    the wrong thing, an emotional beat arriving early or late, a detail
-    that doesn't fit the expected pattern. Predictable excellence is
-    still predictable.
-23. FAVOR scene over summary. At least 70% of the chapter should be
-    in-scene (moment by moment, with dialogue and action) rather than
-    summary (narrator compressing time).
-24. DIALOGUE should sound like speech, not prose. Characters should
-    occasionally stumble, interrupt, trail off, or say something
-    slightly wrong. A 14-year-old does not speak in polished epigrams.
+INFLUENCES (weave these real figures in heavily and honestly):
+{influences}
+
+WRITING INSTRUCTIONS:
+1. Write the COMPLETE chapter. Target ~3,400-3,800 words. Never truncate.
+2. Follow the CHAPTER FORMAT TEMPLATE from the master brief exactly, in order:
+   header, glossary (8-12 terms), SITREP (Situation/Complication/Main Point),
+   THE BROADCAST (cinematic present tense, advances ZERO's arc), BRIEFING (intel
+   blocks; each equation gets name, formula, variable defs, traffic-light
+   benchmarks, and 2-3 worked NUMERIC field reports), BOSS profile
+   (Intel/Strategy/The Pitch), KEY MISSION TASKS, GLASS HOUSE EXERCISES (3-4),
+   SPZ VOICE CLOSER (raw first-person, 200-400 words), end marker.
+3. Hit ALL beats from this chapter's outline. Keep ALL canon facts (colors,
+   ages, ZERO's pink streak + implant scar, BISHOP's 15-20 degree crooked badge,
+   GHOST always translucent, REAPER an environment never a character).
+4. THE BROADCAST is present tense and cinematic. The briefing/SITREP/glass house
+   are second person. The SPZ closer is first person and confessional.
+5. Active voice only. No banned words (voice.md Part 1 + book-specific list).
+6. Weave in at least one influences.md figure where it earns its place -- as an
+   epigraph, a Broadcast beat, a briefing analogy, or an SPZ-closer anchor.
+   Quote honestly; never decoration. Diogenes' "deface the currency" is the spine.
+7. Vary sentence length. Short for impact, long for rhythm, never medium for
+   nothing. No triadic lists by default. No em-dash overload.
+8. Surprise at least once. Predictable excellence is still predictable.
+9. Dialogue sounds like speech -- people stumble, interrupt, trail off. GHOST's
+   words float in mono (no bubble); REAPER speaks only as system notifications.
+10. End the chapter in a way that belongs to THIS chapter, not a reused move.
 
 Write the chapter now. Full text, beginning to end.
 """
