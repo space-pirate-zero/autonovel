@@ -31,7 +31,7 @@ load_dotenv(BASE_DIR / ".env")
 
 # Judge uses Opus 4.6 (harsh, critical). Writer uses Sonnet 4.6 (fast, long context).
 # Intentionally different to avoid self-congratulation.
-JUDGE_MODEL = os.environ.get("AUTONOVEL_JUDGE_MODEL", "claude-opus-4-6")
+JUDGE_MODEL = os.environ.get("AUTONOVEL_JUDGE_MODEL", "claude-opus-4-8")
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 API_BASE_URL = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
 

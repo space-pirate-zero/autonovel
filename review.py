@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).parent
 load_dotenv(BASE_DIR / ".env", override=True)
 
 # Use Opus for reviews — it's the best at literary analysis
-REVIEW_MODEL = os.environ.get("AUTONOVEL_REVIEW_MODEL", "claude-opus-4-6")
+REVIEW_MODEL = os.environ.get("AUTONOVEL_REVIEW_MODEL", "claude-opus-4-8")
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
 

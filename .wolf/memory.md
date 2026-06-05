@@ -15,3 +15,13 @@
 - .env created from example (gitignored); ANTHROPIC_API_KEY still a placeholder —
   user to add from console.anthropic.com.
 - Bootstrapped this .wolf/ directory (did not exist before).
+
+## 2026-06-04 — Pipeline run attempt (blocked on billing)
+- API key added to .env (gitignored). Smoke test: key AUTHENTICATES; models
+  claude-sonnet-4-6 and claude-opus-4-8 both VALID. Set REVIEW model to
+  claude-opus-4-8 (was claude-opus-4-6, unconfirmed).
+- BLOCKER: account has zero API credit ("credit balance is too low"). Pipeline
+  not launched. User must add credits at console.anthropic.com/settings/billing.
+- Run command when unblocked: `uv run python run_pipeline.py` (resumes at
+  phase=drafting -> drafting/revision/export; skips foundation). Drafting loop is
+  ch_01..ch_16; Prologue ch_00 is front matter, drafted separately.
