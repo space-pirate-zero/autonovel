@@ -188,3 +188,183 @@
   [23:35:46] GIT COMMIT: 7fa5f57 — ch10: score 6.0, 3555w
 
 ------------------------------------------------------------
+  Drafting Chapter 11/16
+------------------------------------------------------------
+  [23:35:46] Attempt 1/5
+  [23:35:46] RUN: uv run python draft_chapter.py 11
+  [23:37:43] Drafted 3493 words
+  [23:37:43] RUN: uv run python evaluate.py --chapter=11
+  [23:38:34] Chapter 11 score: 6.7
+  [23:38:34] RUN: git add -A
+  [23:38:34] RUN: git commit -m "ch11: score 6.7, 3493w" --allow-empty
+  [23:38:34] RUN: git rev-parse --short HEAD
+  [23:38:34] GIT COMMIT: 31116b3 — ch11: score 6.7, 3493w
+
+------------------------------------------------------------
+  Drafting Chapter 12/16
+------------------------------------------------------------
+  [23:38:34] Attempt 1/5
+  [23:38:34] RUN: uv run python draft_chapter.py 12
+  [23:40:52] Drafted 4089 words
+  [23:40:52] RUN: uv run python evaluate.py --chapter=12
+  [23:41:48] Chapter 12 score: 6.5
+  [23:41:48] RUN: git add -A
+  [23:41:48] RUN: git commit -m "ch12: score 6.5, 4089w" --allow-empty
+  [23:41:48] RUN: git rev-parse --short HEAD
+  [23:41:48] GIT COMMIT: 5de1893 — ch12: score 6.5, 4089w
+
+------------------------------------------------------------
+  Drafting Chapter 13/16
+------------------------------------------------------------
+  [23:41:48] Attempt 1/5
+  [23:41:48] RUN: uv run python draft_chapter.py 13
+  [23:43:45] Drafted 3463 words
+  [23:43:45] RUN: uv run python evaluate.py --chapter=13
+  [23:44:32] Chapter 13 score: 7.0
+  [23:44:32] RUN: git add -A
+  [23:44:32] RUN: git commit -m "ch13: score 7.0, 3463w" --allow-empty
+  [23:44:32] RUN: git rev-parse --short HEAD
+  [23:44:32] GIT COMMIT: 4a36691 — ch13: score 7.0, 3463w
+
+------------------------------------------------------------
+  Drafting Chapter 14/16
+------------------------------------------------------------
+  [23:44:32] Attempt 1/5
+  [23:44:32] RUN: uv run python draft_chapter.py 14
+  [23:46:21] Drafted 3123 words
+  [23:46:21] RUN: uv run python evaluate.py --chapter=14
+  [23:47:17] Chapter 14 score: 7.0
+  [23:47:17] RUN: git add -A
+  [23:47:17] RUN: git commit -m "ch14: score 7.0, 3123w" --allow-empty
+  [23:47:17] RUN: git rev-parse --short HEAD
+  [23:47:17] GIT COMMIT: c824f81 — ch14: score 7.0, 3123w
+
+------------------------------------------------------------
+  Drafting Chapter 15/16
+------------------------------------------------------------
+  [23:47:17] Attempt 1/5
+  [23:47:17] RUN: uv run python draft_chapter.py 15
+  [23:49:27] Drafted 3770 words
+  [23:49:27] RUN: uv run python evaluate.py --chapter=15
+  [23:50:15] Chapter 15 score: 7.0
+  [23:50:15] RUN: git add -A
+  [23:50:15] RUN: git commit -m "ch15: score 7.0, 3770w" --allow-empty
+  [23:50:15] RUN: git rev-parse --short HEAD
+  [23:50:15] GIT COMMIT: b80ffc8 — ch15: score 7.0, 3770w
+
+------------------------------------------------------------
+  Drafting Chapter 16/16
+------------------------------------------------------------
+  [23:50:15] Attempt 1/5
+  [23:50:15] RUN: uv run python draft_chapter.py 16
+  [23:52:04] Drafted 3267 words
+  [23:52:04] RUN: uv run python evaluate.py --chapter=16
+  [23:52:53] Chapter 16 score: 6.8
+  [23:52:53] RUN: git add -A
+  [23:52:53] RUN: git commit -m "ch16: score 6.8, 3267w" --allow-empty
+  [23:52:53] RUN: git rev-parse --short HEAD
+  [23:52:53] GIT COMMIT: 1371425 — ch16: score 6.8, 3267w
+
+============================================================
+  DRAFTING COMPLETE — 16 chapters, 59039 words
+============================================================
+
+============================================================
+  PHASE 3: REVISION
+============================================================
+
+------------------------------------------------------------
+  Revision Cycle 1/6
+------------------------------------------------------------
+  [23:52:53] Running adversarial editing on all chapters...
+  [23:52:53] RUN: uv run python adversarial_edit.py all
+  [00:03:49] Applying mechanical cuts (OVER-EXPLAIN, REDUNDANT)...
+  [00:03:49] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+  [00:03:49] Running reader panel evaluation...
+  [00:03:49] RUN: uv run python reader_panel.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 243, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 186, in main
+    arc_summary = (BASE_DIR / "arc_summary.md").read_text()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  [00:03:49] No strong consensus items found from panel
+  [00:03:49] Running full novel evaluation...
+  [00:03:49] RUN: uv run python evaluate.py --full
+  [00:04:11] Novel score: 7.0  (prev: 0.0, words: 58842)
+  [00:04:11] RUN: git add -A
+  [00:04:11] RUN: git commit -m "revision cycle 1 complete: novel_score 7.0" --allow-empty
+  [00:04:11] RUN: git rev-parse --short HEAD
+  [00:04:11] GIT COMMIT: 81db604 — revision cycle 1 complete: novel_score 7.0
+
+------------------------------------------------------------
+  Revision Cycle 2/6
+------------------------------------------------------------
+  [00:04:11] Running adversarial editing on all chapters...
+  [00:04:11] RUN: uv run python adversarial_edit.py all
+  [00:15:27] Applying mechanical cuts (OVER-EXPLAIN, REDUNDANT)...
+  [00:15:27] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+  [00:15:27] Running reader panel evaluation...
+  [00:15:27] RUN: uv run python reader_panel.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 243, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 186, in main
+    arc_summary = (BASE_DIR / "arc_summary.md").read_text()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  [00:15:27] No strong consensus items found from panel
+  [00:15:27] Running full novel evaluation...
+  [00:15:27] RUN: uv run python evaluate.py --full
+  [00:15:49] Novel score: 7.0  (prev: 7.0, words: 57792)
+  [00:15:49] RUN: git add -A
+  [00:15:49] RUN: git commit -m "revision cycle 2 complete: novel_score 7.0" --allow-empty
+  [00:15:49] RUN: git rev-parse --short HEAD
+  [00:15:49] GIT COMMIT: 569dad1 — revision cycle 2 complete: novel_score 7.0
+
+------------------------------------------------------------
+  Revision Cycle 3/6
+------------------------------------------------------------
+  [00:15:49] Running adversarial editing on all chapters...
+  [00:15:49] RUN: uv run python adversarial_edit.py all
+  [00:26:40] Applying mechanical cuts (OVER-EXPLAIN, REDUNDANT)...
+  [00:26:40] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+  [00:26:40] Running reader panel evaluation...
+  [00:26:40] RUN: uv run python reader_panel.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 243, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 186, in main
+    arc_summary = (BASE_DIR / "arc_summary.md").read_text()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  [00:26:40] No strong consensus items found from panel
+  [00:26:40] Running full novel evaluation...
+  [00:26:40] RUN: uv run python evaluate.py --full
+  [00:27:01] Novel score: 7.0  (prev: 7.0, words: 57363)
+  [00:27:01] RUN: git add -A
+  [00:27:01] RUN: git commit -m "revision cycle 3 complete: novel_score 7.0" --allow-empty
+  [00:27:01] RUN: git rev-parse --short HEAD
+  [00:27:01] GIT COMMIT: 04179ce — revision cycle 3 complete: novel_score 7.0
+  [00:27:01] Plateau detected (delta 0.00 < 0.3) after 3 cycles — stopping
+
+============================================================
+  PHASE 3b: OPUS REVIEW LOOP
+============================================================
+
+------------------------------------------------------------
+  Opus Review Round 1/4
+------------------------------------------------------------
+  [00:27:01] Sending manuscript to Opus for review...
+  [00:27:01] RUN: uv run python review.py --output reviews.md
+  [00:28:13] Parsing review...
+  [00:28:13] RUN: uv run python review.py --parse
+Latest review: 20260605_002813
+Stars: 3.5
+
+ACTIONABLE ITEMS (0):
+
+==================================================
+Stop revising? YES — Only 0 items found
+==================================================
