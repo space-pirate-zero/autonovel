@@ -1,4 +1,4 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the whole field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 ![Day 9](cards/day_09.png)
 
@@ -35,8 +35,8 @@ $$ F_{cp} = \frac{n(n-1)}{2} $$
 
 ---
 
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 **Tomorrow → Day 10: taste is the new code.**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+*[Subscribe](https://spacepiratezero.substack.com) — one fable a day for 30 days.*

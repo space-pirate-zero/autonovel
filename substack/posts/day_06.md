@@ -1,4 +1,4 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the whole field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 ![Day 6](cards/day_06.png)
 
@@ -37,8 +37,8 @@ Read the curve, not a point: 🟢 flat · 🟡 bending · 🔴 hockey stick.
 
 ---
 
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 **Tomorrow → Day 7: fear lives in the undocumented system.**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+*[Subscribe](https://spacepiratezero.substack.com) — one fable a day for 30 days.*

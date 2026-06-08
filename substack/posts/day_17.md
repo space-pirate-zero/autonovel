@@ -1,4 +1,4 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the whole field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 ![Day 17](cards/day_17.png)
 
@@ -33,8 +33,8 @@ $$ V_w = \frac{Pain_{acute} \times Trust_{increment}}{Friction_{adopt}} $$
 
 ---
 
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 **Tomorrow → Day 18: good trouble, John Lewis inside the F500.**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+*[Subscribe](https://spacepiratezero.substack.com) — one fable a day for 30 days.*

@@ -1,4 +1,4 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the whole field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 ![Day 12](cards/day_12.png)
 
@@ -35,8 +35,8 @@ $$ RT = (P_f \times C_d) + (T_{panic} \times C_{career}) $$
 
 ---
 
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 **Tomorrow → Day 13: never pitch after lunch.**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+*[Subscribe](https://spacepiratezero.substack.com) — one fable a day for 30 days.*

@@ -1,4 +1,4 @@
-📕 **Read the whole field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the whole field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 ![Day 14](cards/day_14.png)
 
@@ -33,8 +33,8 @@ $$ D_{gray} = \frac{Revenue_{dark\text{-}pattern}}{Trust_{eroded}} \times Time $
 
 ---
 
-📕 **Read the field manual →** [Kindle]({{KINDLE_URL}}) · [Paperback]({{PAPERBACK_URL}})
+📕 **Read the field manual →** [Kindle](https://www.amazon.com/dp/B0H4D92BSF) · [Paperback](https://www.amazon.com/dp/B0H4D92BSF)
 
 **Tomorrow → Day 15: medicine or poison?**
 
-*[Subscribe]({{SUBSCRIBE_URL}}) — one fable a day for 30 days.*
+*[Subscribe](https://spacepiratezero.substack.com) — one fable a day for 30 days.*
