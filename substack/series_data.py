@@ -6,9 +6,9 @@ push_substack.py creates the Substack drafts. Edit the buy links once the book
 is live on Amazon (placeholders below).
 """
 
-BUY_KINDLE = "{{KINDLE_URL}}"        # TODO: real Amazon Kindle link once live
-BUY_PAPERBACK = "{{PAPERBACK_URL}}"  # TODO: real Amazon paperback link once live
-SUBSCRIBE = "{{SUBSCRIBE_URL}}"
+BUY_KINDLE = "https://www.amazon.com/dp/B0H4D92BSF"     # live on Amazon
+BUY_PAPERBACK = "https://www.amazon.com/dp/B0H4D92BSF"  # live on Amazon
+SUBSCRIBE = "https://spacepiratezero.substack.com"
 
 # eq = inner LaTeX (display). None => title-only card.
 SERIES = [

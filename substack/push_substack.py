@@ -53,58 +53,56 @@ def connect():
     return api
 
 
-def buy_bar(post, tail=False):
-    msg = ("If this hit, the book has the rest. → " if tail
-           else "📕 Read the whole field manual → ")
-    post.add_complex_text([
-        {"content": msg},
-        {"content": "Kindle", "marks": [{"type": "link", "href": BUY_KINDLE}]},
-        {"content": " · "},
-        {"content": "Paperback", "marks": [{"type": "link", "href": BUY_PAPERBACK}]},
-    ])
+from build_posts import load_fable   # reuse the fable+moral loader
+
+BUY_BAR = (f"📕 **Read the whole field manual →** "
+           f"[Kindle]({BUY_KINDLE}) · [Paperback]({BUY_PAPERBACK})")
+
+
+def to_markdown(d, card_url, native_math):
+    """Assemble the FABLE-format post body as Markdown for Post.from_markdown().
+    Mirrors build_posts.py. Title/subtitle are set on the Post, not in the body.
+    card_url is the already-uploaded Substack image URL (remote https)."""
+    fable, moral = load_fable(d["n"])
+    L = [BUY_BAR, ""]
+    if card_url:
+        L += [f"![Day {d['n']}: {d['title']}]({card_url})", ""]
+    if fable:
+        L += [fable, "", "---", ""]
+    L += ["**What it means.** " + d["nugget"], ""]
+    if d.get("eq"):
+        L += ["## The equation", ""]
+        if native_math:
+            L += [f"$$ {d['eq']} $$", ""]
+        else:
+            # fenced code block -> Substack codeBlock node (clean "LaTeX source" look)
+            L += ["```latex", d["eq"], "```", ""]
+        if d.get("bench"):
+            L += [d["bench"], ""]
+    if d.get("broadcast"):
+        L += ["## From the Broadcast", "", d["broadcast"], ""]
+    if moral:
+        L += [f"**The moral of the story is:** {moral}", ""]
+    L += ["---", "", BUY_BAR, "",
+          (f"**Tomorrow → {d['teaser']}**" if d["n"] < 30 else f"**{d['teaser']}**")]
+    return "\n".join(L) + "\n"
 
 
 def build(api, d, native_math):
     from substack.post import Post
     uid = api.get_user_id()
     post = Post(title=f"Day {d['n']}/30 — {d['title']}",
-                subtitle=d["source"], user_id=uid, audience="everyone")
-    buy_bar(post)
-
-    # hero card (rendered-LaTeX brand image)
+                subtitle=f"A fable from the field manual · {d['source']}",
+                user_id=uid, audience="everyone")
+    # Pre-upload the hero card and embed the remote URL (from_markdown mangles
+    # absolute local paths by stripping the leading slash, so upload it ourselves).
+    card_url = None
     card = CARDS / f"day_{d['n']:02d}.png"
     if card.exists():
         src = api.get_image(str(card))
-        if isinstance(src, dict):
-            src = src.get("url") or src.get("href")
-        post.captioned_image(src=src, alt=f"Day {d['n']}: {d['title']}")
-
-    post.heading("The nugget", 2)
-    post.paragraph(d["nugget"])
-
-    if d.get("eq"):
-        post.heading("The equation", 2)
-        if native_math:
-            # experimental: Substack inline LaTeX node (test on --limit 1 first)
-            post.add({"type": "paragraph",
-                      "content": [{"type": "latex", "attrs": {"value": d["eq"]}}]})
-        else:
-            post.code_block(d["eq"])  # the LaTeX, copyable (card shows it rendered)
-        if d.get("bench"):
-            post.paragraph(d["bench"])
-
-    if d.get("broadcast"):
-        post.heading("From the Broadcast", 2)
-        post.paragraph(d["broadcast"])
-
-    post.heading("SPZ closer", 2)
-    post.blockquote(d["closer"])
-
-    post.horizontal_rule()
-    buy_bar(post, tail=True)
-    post.paragraph(("Tomorrow → " + d["teaser"]) if d["n"] < 30
-                   else ("That's the series. " + d["teaser"]))
-    post.subscribe_with_caption("Subscribe so you don't miss the next one.")
+        card_url = src.get("url") or src.get("href") if isinstance(src, dict) else src
+    post.from_markdown(to_markdown(d, card_url, native_math), api=api)
+    post.subscribe_with_caption("Subscribe — one fable a day for 30 days.")
     return post.get_draft()
 
 
@@ -112,23 +110,43 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--test", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--start", type=int, default=1, help="1-based day to start from")
+    ap.add_argument("--delay", type=float, default=8.0, help="seconds between posts")
     ap.add_argument("--native-math", action="store_true")
     a = ap.parse_args()
 
     api = connect()
     print("Connected. user_id =", api.get_user_id(),
-          "| publication =", api.get_publication_url() if hasattr(api, "get_publication_url") else "?")
+          "| publication =", os.environ.get("SUBSTACK_PUBLICATION_URL", "?"))
     if a.test:
         print("Test OK — no drafts created.")
         return
 
-    days = SERIES[:a.limit] if a.limit else SERIES
-    for d in days:
+    import time
+    days = SERIES[a.start - 1:]
+    if a.limit:
+        days = days[:a.limit]
+    made = 0
+    for i, d in enumerate(days):
         body = build(api, d, a.native_math)
-        res = api.post_draft(body)
+        # retry on 429 (Substack rate limit) with exponential backoff
+        for attempt in range(6):
+            try:
+                res = api.post_draft(body)
+                break
+            except Exception as e:
+                if "429" in str(e) and attempt < 5:
+                    wait = a.delay * (2 ** attempt)
+                    print(f"    429 rate-limited; backing off {wait}s ...")
+                    time.sleep(wait)
+                    continue
+                raise
         did = res.get("id") if isinstance(res, dict) else res
+        made += 1
         print(f"  draft created: Day {d['n']:02d} — {d['title']}  (id {did})")
-    print(f"\nDone. {len(days)} drafts created (unpublished). Review/schedule in Substack.")
+        if i != len(days) - 1:
+            time.sleep(a.delay)   # throttle between posts
+    print(f"\nDone. {made} drafts created (unpublished). Review/schedule in Substack.")
 
 
 if __name__ == "__main__":
