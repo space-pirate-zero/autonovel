@@ -1,0 +1,13 @@
+A brutally honest metric: for every feature, multiply human impact by the honesty of intent (+1 genuine, −1 exploitative).
+
+Most companies never calculate it because they're terrified of the number. The insurgent calculates it anyway, then decides what to build — and what to refuse.
+
+The moral of the story: Score every feature by its impact on people times the honesty of why you built it. If the intent is a minus, no amount of revenue makes the total positive — and you'll meet that number in the mirror.
+
+📖 Day 15/30 of my fable series — “The Soul Score”. A 2-minute read from the field:
+https://spacepiratezero.substack.com/p/day-1530-the-soul-score
+
+📕 The book it's smuggled out of — DIGITAL INSURGENCY: A Field Manual for Smuggling Authenticity Past the Corporate Immune System:
+https://www.amazon.com/dp/B0H4D92BSF
+
+#AI #FutureOfWork #Authenticity #Leadership #DigitalInsurgency
