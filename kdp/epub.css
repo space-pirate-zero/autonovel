@@ -1,0 +1,9 @@
+body{font-family:serif;line-height:1.5;}
+h1{text-align:center;font-style:italic;font-weight:normal;margin:3em 0 1em;}
+blockquote{font-style:italic;font-size:0.95em;border:0;border-top:1px solid #999;
+  border-bottom:1px solid #999;margin:1.5em 1.2em;padding:0.8em 0;}
+blockquote p:first-child{font-variant:small-caps;font-style:normal;letter-spacing:0.06em;font-size:0.85em;}
+hr{border:0;text-align:center;margin:1.4em 0;}
+hr:after{content:"* * *";letter-spacing:0.4em;color:#444;}
+p{margin:0;text-indent:1.4em;}
+p:first-of-type{text-indent:0;}
