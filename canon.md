@@ -130,6 +130,57 @@ Each entry: a short, falsifiable statement with its source.
 - Invent no sci-fi superpowers; every machine advantage was argued in
   the essays (cost, speed/data, consistency, no scandals). (world.md)
 
+## Continuity Canon (post-draft reconciliation — SINGLE SOURCE OF TRUTH)
+
+Chapters 2–28 were drafted in parallel and drifted on invented details.
+These values WIN. Conform all prose to them.
+
+NAMES:
+- Board chair / lead director = **Helen Voss** (retired pharma CEO; runs
+  the termination vote). She is the ONLY board chair.
+- **Garrett Halloran** = the CNBC anchor/host, ONLY. Never on the board.
+- General Counsel = **Hal Brennan** (GC "since the Clinton
+  administration"). The ONLY GC name. (Replaces any Devane / "Marty" /
+  Hollis-as-GC usage.)
+- Special-committee director = **Adaeze Okafor** (keep).
+- Praxis founder/presenter = **Asha Varma** (keep).
+- Praxis principal at the behind-the-curtain meeting (ch_13) = **Devi**.
+- Praxis principal onstage at the Governance Futures Forum (ch_18) =
+  **Vogel** (rename from "Devesh" to kill the Devi/Devesh rhyme).
+- Praxis term-sheet liaison (ch_12) = **Pratt** (rename from "Okafor").
+- Lead criminal-defense attorney = **Okonjo**, throughout the trial arc
+  (ch_23, 25, 26). Other lawyers may appear as co-counsel/juniors, but
+  Okonjo is the single lead voice. Keep the prosecutor (AUSA) a distinct
+  name.
+- Building doorman = **Hector** (reconcile any "Esposito" doorman).
+
+FACTS:
+- Hearthstone fire victims = **Karen Lasko, 34, and her son Petey Lasko,
+  6** (a mother and her six-year-old). NOT "a man and his mother."
+- The house = on **Sherwood Street**, Defiance.
+- The fire = a **January night, 2021**.
+- Cope's CEO tenure = **nineteen years** (per Marcus's letter, ch_27).
+  Fix any "twenty-six years" tenure claim.
+- Renata Cho = hired **2016**; ran the **Hearthside division** (small
+  appliances — the family that includes the Hearthstone heater). This
+  resonance is INTENTIONAL. Fix ch_02's org-chart title to match.
+- Plant geography (three distinct sites): **Defiance** = original
+  founding plant, closed 2019, mayonnaise moved outside **Columbus**
+  (~400→~40), holds the memorial. **Toledo** = the ch_04 layoff-letter
+  closure (340 roles). **Camden** = still-operating town-hall plant
+  (~400). ch_18's "3,100 jobs" = **cumulative, company-wide, 2019–2024**,
+  NOT the single Defiance line.
+- 2018 cocaine hotel report: **Marcus's due diligence** is the true
+  unearthing (ch_20) via the **Cardinal & Vane** invoice (ch_02). If
+  ch_15 implies the magazine had the full firewalled report, soften to a
+  secondhand account/rumor.
+
+TIMELINE / AGES (elapsed-time scheme — do NOT "correct" the finale):
+- Aug 2027: Cope **54**, Pip **24**. Trial/handover run through 2028.
+- Finale ch_28 = Spring 2029: Cope **56**, "eleven months sober"; Pip
+  **26**. These are CORRECT under elapsed time — leave them. Only fix
+  hard contradictions like ch_18's tenure.
+
 ## Established In-Story (fill as chapters are drafted)
 
 - Ch 1: Cope receives a crystal obelisk at a "Last Human CEO" tribute
