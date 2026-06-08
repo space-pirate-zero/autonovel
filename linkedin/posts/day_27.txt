@@ -1,0 +1,13 @@
+A health-tech team enters a 400-bed hospital through the least-defended door: billing.
+
+The wedge is a claims-coding bot. The payload is a read-only clinical sidecar nobody asked for — which, parsing billing data, catches an undiagnosed coagulation disorder in a man two days from routine knee surgery. The catch goes to a nurse, then the surgeon. $36K wedge becomes a $480K platform. The billing was 7.5%…
+
+The moral of the story: You don't argue past a guardian — you let the boring tool save a life on its own, with their name on the catch. Then erasing the line becomes their decision, not your pitch.
+
+📖 Day 27/30 of my fable series — “Field Report — The Paperclip Maximizer”. A 2-minute read from the field:
+https://spacepiratezero.substack.com/p/day-2730-field-report-the-paperclip
+
+📕 The book it's smuggled out of — DIGITAL INSURGENCY: A Field Manual for Smuggling Authenticity Past the Corporate Immune System:
+https://www.amazon.com/dp/B0H4D92BSF
+
+#AI #FutureOfWork #Authenticity #Leadership #DigitalInsurgency
