@@ -1,0 +1,33 @@
+IMAGE SPEC: lastceo-cover-wrap-01
+description: Wraparound cover background art for The Last Human CEO (KDP
+  paperback 12.0625x8.75in incl. bleed; LEFT third = back, CENTER = spine,
+  RIGHT third = front). Typography is composited in cover.tex on top.
+asset_type: hero (print wraparound background)
+dimensions: 3:2 panoramic at 4K (scaled/cropped to 3619x2625 @300dpi)
+design_system: book palette (void #0E1014, paper #ECE6D8, signal #C8A24A)
+namespace: the-last-human-ceo
+
+COMPOSITION:
+  subject: single cheap blue foil toy pinwheel staked in dark earth,
+    lower-middle of the RIGHT third (front panel), head ~2/3 down frame
+  camera: low, close-medium, shallow depth
+  negative_space: upper half + left two-thirds near-pure void (title,
+    blurb, spine text live there); bottom 12% dark (author line)
+
+COLOR:
+  dominant: '#0E1014 near-black cold void'
+  secondary: cobalt/cerulean blue foil (the only saturated color)
+  accent: '#C8A24A faint gold glints + sparse distant window lights'
+  background: '#0E1014'
+
+STYLE:
+  rendering: painterly-photographic, matte, subtle film grain, chiaroscuro
+  mood: elegy; corporate dread; one small real thing vs indifferent dark
+
+TESTS:
+  - T1: upper half of image is near-black void (no clouds/moon/glow) -> PASS if mean luminance very low and texture minimal
+  - T2: pinwheel located in right third, head between 55-75% frame height -> PASS by inspection
+  - T3: left two-thirds contains no focal object competing with text -> PASS by inspection
+  - T4: only colors = cold near-black, blue foil, faint gold -> PASS by inspection
+  - T5: no text, watermark, people, logos, border -> PASS by inspection
+  - T6: pinwheel is a coherent toy pinwheel (foil vanes on stick), not a flower/windmill -> PASS by inspection

@@ -30,3 +30,18 @@
   cost"), coda consolations stripped.
 - New page count 325 -> spine 0.8125in, cover 12.0625x8.75. All rebuilt; epubcheck
   0/0; fonts embedded; build now does `--epub` via pandoc with embedded cover.
+
+## 2026-06-11 — Gemini art backend + tabloid cover (The Last Human CEO)
+- gen_art.py: added gemini_generate() (REST, model fallback gemini-3.1-flash-image-preview
+  -> gemini-2.5-flash-image, 4K/aspect mapping, 429 backoff, ref_images for edit) and
+  backend-agnostic art_generate/art_edit/save_image; ART_BACKEND auto-picks gemini when
+  GEMINI_API_KEY set (key lives in gitignored .env). fal path kept.
+- Cover redesigned as 1960s scandal tabloid (user-directed): cover_tex() fully replaced.
+  Real type (Impact/Arial Black/American Typewriter/EB Garamond, system fonts embedded OK),
+  5 Gemini halftone assets in art/cover/ (cope_toast, cope_shield, machine_board,
+  pinwheel_spot color spot photo, paper_bg). Headlines all book-accurate. Barcode keep-out
+  2.2x1.4 white. Spine = red band, white Impact. \pgfresetboundingbox guards page size.
+- ebook-cover.jpg + epub cover regenerate automatically; epubcheck 0/0; all fonts embedded.
+- Old pinwheel-void cover art gitignored (art/cover/wrap_*.png), tabloid assets tracked.
+- WATCH: run builds from repo root — cd kdp persists across Bash calls and silently breaks
+  typeset/build_kdp.py invocations.

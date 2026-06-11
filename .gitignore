@@ -11,3 +11,6 @@ typeset/chapters_content.tex
 kdp/*.epub
 kdp/_epub/
 kdp/*.jpg
+art/cover/wrap_*.png
+.DS_Store
+substack_cookies.json

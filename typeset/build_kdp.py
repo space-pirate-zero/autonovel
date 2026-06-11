@@ -318,19 +318,26 @@ Set in EB Garamond.\par}
 \end{document}""")
     return '\n'.join(parts)
 
-# ---------- COVER ----------
+# ---------- COVER (1960s scandal-tabloid design) ----------
 def cover_tex(pages):
     spine = pages * SPINE_PER_PAGE
     W = 2*BLEED + 2*TRIM_W + spine
     H = 2*BLEED + TRIM_H
-    back_cx = BLEED + TRIM_W/2
-    front_cx = BLEED + TRIM_W + spine + TRIM_W/2
-    spine_cx = BLEED + TRIM_W + spine/2
-    show_spine = spine >= 0.0625
+    bx0 = BLEED                  # back panel trim left
+    bx1 = BLEED + TRIM_W         # spine left fold
+    fx0 = bx1 + spine            # front panel trim left
+    fx1 = fx0 + TRIM_W           # front panel trim right
+    front_cx = (fx0 + fx1) / 2
+    back_cx = (bx0 + bx1) / 2
+    spine_cx = bx1 + spine/2
+
+    def p(v): return f"{v:.4f}"
+    def pt(x, y): return "(" + p(x) + "," + p(y) + ")"
+
     blurb = (r"It is 2027, and the boards have done the math. One by one, the "
              r"Fortune 100 is firing its chief executives and installing an "
              r"artificial intelligence that is cheaper, sharper, and---most "
-             r"unforgivably---incapable of a scandal.\par\medskip "
+             r"unforgivably---incapable of a scandal.\par\smallskip "
              r"Prescott `Cope' Mercer IV is the last human CEO left in the "
              r"consumer economy: a fourth-generation heir, a charmer, a "
              r"cokehead, a man who long ago mistook being obeyed for being "
@@ -338,58 +345,161 @@ def cover_tex(pages):
              r"into his chair, Cope launches a manic crusade to prove a human "
              r"still belongs at the top---right until the machine, doing "
              r"nothing but its dull honest job, opens the drawer where he "
-             r"buried the thing that got two people killed.\par\medskip "
-             r"\textit{A tragic dark comedy about the last man to confuse a "
+             r"buried the thing that got two people killed.\par\smallskip "
+             r"\textbf{A tragic dark comedy about the last man to confuse a "
              r"throne for a soul.}")
-    def p(v):
-        return f"{v:.4f}"
-    def pt(x, y):
-        return "(" + p(x) + "," + p(y) + ")"
 
     L = []
     L.append(r"\documentclass{article}")
     L.append(r"\usepackage[paperwidth=" + p(W) + "in,paperheight=" + p(H) + "in,margin=0in]{geometry}")
     L.append(r"\usepackage{fontspec}")
     L.append(r"\setmainfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, ItalicFont=EBGaramond-Italic-VF.ttf, Numbers=OldStyle, Ligatures=TeX]")
-    L.append(r"\newfontfamily\dispfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, Letters=SmallCaps, Numbers=OldStyle]")
-    L.append(r"\newfontfamily\titlefont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, Letters=SmallCaps, Numbers=OldStyle, WordSpace=1.45]")
+    L.append(r"\newfontfamily\impact{Impact}[Ligatures=TeX]")
+    L.append(r"\newfontfamily\ablack{Arial Black}[Ligatures=TeX]")
+    L.append(r"\newfontfamily\arial{Arial}[Ligatures=TeX]")
+    L.append(r"\newfontfamily\atype{American Typewriter}[Ligatures=TeX]")
     L.append(r"\usepackage{tikz}")
     L.append(r"\usepackage{xcolor}")
     L.append(r"\usepackage{setspace}")
-    L.append(r"\definecolor{void}{HTML}{0E1014}")
-    L.append(r"\definecolor{paperw}{HTML}{ECE6D8}")
-    L.append(r"\definecolor{signal}{HTML}{C8A24A}")
+    L.append(r"\usepackage{graphicx}")
+    L.append(r"\definecolor{inkred}{HTML}{C0201E}")
+    L.append(r"\definecolor{inkyellow}{HTML}{F0C518}")
+    L.append(r"\definecolor{inkblue}{HTML}{1E5AA8}")
+    L.append(r"\definecolor{inkblack}{HTML}{1A1714}")
+    L.append(r"\definecolor{paperw}{HTML}{F0E8D2}")
     L.append(r"\pagestyle{empty}")
     L.append(r"\begin{document}\noindent")
-    L.append(r"\begin{tikzpicture}[x=1in,y=1in,every node/.style={inner sep=0pt}]")
-    # background
-    L.append(r"\fill[void] " + pt(0, 0) + " rectangle " + pt(W, H) + ";")
-    # spine accent rules: inset 0.09in onto the spine (so KDP's +-1/16in wrap
-    # tolerance keeps them on the spine panel) and run full height into bleed
-    rule_inset = 0.09
-    L.append(r"\draw[signal,line width=0.8pt,overlay] " + pt(BLEED+TRIM_W+rule_inset, 0) + " -- " + pt(BLEED+TRIM_W+rule_inset, H) + ";")
-    L.append(r"\draw[signal,line width=0.8pt,overlay] " + pt(BLEED+TRIM_W+spine-rule_inset, 0) + " -- " + pt(BLEED+TRIM_W+spine-rule_inset, H) + ";")
-    # FRONT COVER
-    L.append(r"\node[text=signal,font=\dispfont\footnotesize] at " + pt(front_cx, H-BLEED-0.55) + r" {transmission \ensuremath{\infty}};")
-    L.append(r"\node[text=paperw,align=center,text width=4.4in] at " + pt(front_cx, H-2.55) + r" {\titlefont\fontsize{38}{42}\selectfont the last\\[3pt] human ceo};")
-    L.append(r"\draw[signal,line width=0.5pt] " + pt(front_cx-1.5, H-3.45) + " -- " + pt(front_cx+1.5, H-3.45) + ";")
-    L.append(r"\node[text=paperw,font=\itshape\large] at " + pt(front_cx, H-3.85) + r" {a tragic dark comedy};")
-    L.append(r"\node[text=paperw,align=center] at " + pt(front_cx, BLEED+1.2) + r" {\dispfont\Large space pirate zero};")
-    L.append(r"\node[text=signal,font=\itshape\footnotesize] at " + pt(front_cx, BLEED+0.88) + r" {transmitting from spaceship alpha 9};")
-    # BACK COVER
-    L.append(r"\node[text=paperw,align=left,text width=4.3in,font=\normalsize] at " + pt(back_cx, H-3.15) + r" {\setstretch{1.2}" + blurb + r"};")
-    L.append(r"\node[text=signal,align=center,text width=4.2in,font=\dispfont\footnotesize] at " + pt(back_cx, H-5.85) + r" {fiction / satire \quad\ensuremath{\cdot}\quad spaceship alpha 9};")
-    # barcode keep-out (KDP prints a 2.0 x 1.2 in barcode here): box must
-    # exceed that or the bars overhang onto the dark background
-    bx2 = BLEED + TRIM_W - 0.375
-    bx1 = bx2 - 2.2
-    by1 = BLEED + 0.30
-    by2 = by1 + 1.4
-    L.append(r"\fill[paperw] " + pt(bx1, by1) + " rectangle " + pt(bx2, by2) + ";")
-    L.append(r"\node[text=void,font=\tiny] at " + pt((bx1+bx2)/2, (by1+by2)/2) + r" {barcode area};")
-    # SPINE
-    if show_spine:
-        L.append(r"\node[rotate=-90,text=paperw,font=\dispfont] at " + pt(spine_cx, BLEED+TRIM_H/2) + r" {the last human ceo \quad\ensuremath{\cdot}\quad space pirate zero};")
+    L.append(r"\begin{tikzpicture}[x=1in,y=1in,every node/.style={inner sep=0pt,outer sep=0pt}]")
+
+    # ---- background: aged newsprint, full bleed ----
+    L.append(r"\fill[paperw] " + pt(0, 0) + " rectangle " + pt(W, H) + ";")
+    if os.path.exists(os.path.join(ROOT, "art", "cover", "paper_bg.png")):
+        L.append(r"\node[anchor=south west] at " + pt(0, 0)
+                 + r" {\includegraphics[width=" + p(W) + "in,height=" + p(H)
+                 + r"in]{../art/cover/paper_bg.png}};")
+
+    PH = "../art/cover/"
+
+    # ================= FRONT PANEL =================
+    # top kicker banner (runs into top/right bleed)
+    L.append(r"\fill[inkred] " + pt(fx0, H-0.62) + " rectangle " + pt(W, H) + ";")
+    L.append(r"\node[text=paperw] at " + pt(front_cx, H-0.345)
+             + r" {\impact\fontsize{15.5}{17}\selectfont SEE WHAT MERCER PAID \$14.2 MILLION TO HIDE!};")
+
+    # masthead
+    L.append(r"\draw[inkblack,line width=1.6pt] " + pt(fx0+0.22, H-0.78) + " -- " + pt(fx1-0.22, H-0.78) + ";")
+    L.append(r"\node[text=inkblack] at " + pt(front_cx, H-1.22)
+             + r" {\impact\fontsize{55}{55}\selectfont THE LAST};")
+    L.append(r"\node[text=inkblack] at " + pt(front_cx, H-1.98)
+             + r" {\impact\fontsize{55}{55}\selectfont HUMAN CEO};")
+    L.append(r"\draw[inkblack,line width=1.6pt] " + pt(fx0+0.22, H-2.42) + " -- " + pt(fx1-0.22, H-2.42) + ";")
+    L.append(r"\node[text=inkred] at " + pt(front_cx, H-2.62)
+             + r" {\arial\bfseries\itshape\fontsize{12.5}{13}\selectfont a novel \textemdash{} by SPACE PIRATE ZERO};")
+    L.append(r"\node[text=inkblack] at " + pt(front_cx, H-2.86)
+             + r" {\atype\fontsize{7.5}{8}\selectfont 95th AND FINAL YEAR OF PUBLICATION \quad\textbullet\quad DEFIANCE, OHIO};")
+    # price bubble
+    L.append(r"\fill[paperw] " + pt(fx0+0.52, H-1.05) + " circle (0.30);")
+    L.append(r"\draw[inkblack,line width=1.1pt] " + pt(fx0+0.52, H-1.05) + " circle (0.30);")
+    L.append(r"\node[text=inkblack] at " + pt(fx0+0.52, H-1.05)
+             + r" {\ablack\fontsize{13}{13}\selectfont 35\textcent};")
+
+    # main photo: the toast (right side), tilted
+    L.append(r"\node[rotate=-2.5] at " + pt(fx1-1.32, H-4.78)
+             + r" {\includegraphics[width=2.35in]{" + PH + "cope_toast.png}};")
+    L.append(r"\fill[paperw] " + pt(fx1-2.52, H-6.86) + " rectangle " + pt(fx1-0.12, H-6.42) + ";")
+    L.append(r"\draw[inkblack,line width=0.5pt] " + pt(fx1-2.52, H-6.86) + " rectangle " + pt(fx1-0.12, H-6.42) + ";")
+    L.append(r"\node[text=inkblack,align=center,text width=2.25in] at " + pt(fx1-1.32, H-6.64)
+             + r" {\atype\fontsize{7.2}{8.4}\selectfont TOAST OF THE CENTURY? Mercer, moments before the arithmetic.};")
+
+    # left headline stack
+    lx = fx0 + 0.24
+    lw = 2.30
+    lcx = lx + lw/2
+    # 1) yellow box
+    L.append(r"\fill[inkyellow] " + pt(lx, H-4.12) + " rectangle " + pt(lx+lw, H-3.08) + ";")
+    L.append(r"\node[text=inkblack,align=center,text width=2.05in] at " + pt(lcx, H-3.60)
+             + r" {\impact\fontsize{16.5}{18}\selectfont COCAINE, CHARM \& MAYONNAISE!};")
+    # 2) red on paper
+    L.append(r"\node[text=inkred,align=center,text width=2.3in] at " + pt(lcx, H-4.62)
+             + r" {\impact\fontsize{15}{16.5}\selectfont BOARDS DO THE MATH: ROBOT BOSS CHEAPER THAN A MAN!};")
+    # 3) blue box
+    L.append(r"\fill[inkblue] " + pt(lx, H-6.10) + " rectangle " + pt(lx+lw, H-5.10) + ";")
+    L.append(r"\node[text=paperw,align=center,text width=2.15in] at " + pt(lcx, H-5.60)
+             + r" {\impact\fontsize{13.5}{15}\selectfont MARGAUX TELLS ALL: `THERE WAS NEVER ANYBODY HOME!'};")
+    # 4) black quote
+    L.append(r"\node[text=inkblack,align=center,text width=2.3in] at " + pt(lcx, H-6.34)
+             + r" {\impact\fontsize{14}{15.5}\selectfont `I HAVE A BEATING HEART!'};")
+    L.append(r"\node[text=inkred,align=center,text width=2.3in] at " + pt(lcx, H-6.62)
+             + r" {\arial\bfseries\itshape\fontsize{9.5}{10.5}\selectfont the 4 a.m. manifesto that finished him};")
+
+    # pinwheel spot photo, bottom left of front
+    L.append(r"\node[rotate=2] at " + pt(fx0+0.86, H-7.56)
+             + r" {\includegraphics[width=1.02in]{" + PH + "pinwheel_spot.png}};")
+    L.append(r"\node[text=inkblack,align=left,text width=2.05in,anchor=west] at " + pt(fx0+1.52, H-7.56)
+             + r" {\atype\fontsize{7.5}{9}\selectfont WHAT STILL TURNS IN DEFIANCE \textemdash{} and who keeps planting it? SEE BACK};")
+
+    # Tisch quote box (lower right)
+    L.append(r"\draw[inkblack,line width=1pt] " + pt(fx1-2.42, 0.80) + " rectangle " + pt(fx1-0.10, 1.72) + ";")
+    L.append(r"\node[text=inkblack,align=center,text width=2.1in] at " + pt(fx1-1.26, 1.40)
+             + r" {\impact\fontsize{11.5}{13}\selectfont `THE WITHHELD TEAR OUT-PERFORMS THE TEAR BY 12 POINTS!'};")
+    L.append(r"\node[text=inkred,align=center,text width=2.1in] at " + pt(fx1-1.26, 0.97)
+             + r" {\arial\bfseries\itshape\fontsize{8.5}{9}\selectfont \textemdash{} his \$200,000-a-month image doctor};")
+
+    # bottom banner (runs into bottom/right bleed)
+    L.append(r"\fill[inkred] " + pt(fx0, 0) + " rectangle " + pt(W, 0.55) + ";")
+    L.append(r"\node[text=paperw] at " + pt(front_cx, 0.34)
+             + r" {\impact\fontsize{14.5}{16}\selectfont $\star$ BONUS EXTRA $\star$ \; THE NAMES ARE ON PAGE EIGHT};")
+
+    # ================= SPINE =================
+    L.append(r"\fill[inkred] " + pt(bx1, 0) + " rectangle " + pt(fx0, H) + ";")
+    if spine >= 0.0625:
+        L.append(r"\node[rotate=-90,text=paperw] at " + pt(spine_cx, BLEED+TRIM_H/2)
+                 + r" {\impact\fontsize{13}{13}\selectfont THE LAST HUMAN CEO \quad$\star$\quad SPACE PIRATE ZERO};")
+
+    # ================= BACK PANEL =================
+    # top black band
+    L.append(r"\fill[inkblack] " + pt(0, H-0.92) + " rectangle " + pt(bx1, H) + ";")
+    L.append(r"\node[text=paperw] at " + pt(back_cx, H-0.50)
+             + r" {\impact\fontsize{23}{24}\selectfont HOW LONG CAN COPE KEEP IT UP?};")
+    L.append(r"\node[text=inkred,align=center,text width=4.9in] at " + pt(back_cx, H-1.32)
+             + r" {\impact\fontsize{16.5}{18}\selectfont TWO DEAD IN DEFIANCE \textemdash{} WHAT DID THE MAYONNAISE KING KNOW?};")
+
+    # photos: machine boardroom (left), shield shot (right)
+    L.append(r"\node[rotate=1.5] at " + pt(bx0+1.45, H-3.05)
+             + r" {\includegraphics[width=2.55in]{" + PH + "machine_board.png}};")
+    L.append(r"\node[text=inkblack,align=center,text width=2.4in] at " + pt(bx0+1.45, H-4.18)
+             + r" {\atype\fontsize{7.2}{8.4}\selectfont EXCLUSIVE PHOTO: the new chief executive takes the chair. It was not close.};")
+    L.append(r"\node[rotate=-2] at " + pt(bx1-1.30, H-3.30)
+             + r" {\includegraphics[width=1.78in]{" + PH + "cope_shield.png}};")
+    L.append(r"\node[rotate=-8,text=paperw,fill=inkred,inner sep=2.5pt] at " + pt(bx1-1.30, H-3.35)
+             + r" {\impact\fontsize{12}{12}\selectfont NO COMMENT!};")
+    L.append(r"\node[text=inkblack,align=center,text width=1.8in] at " + pt(bx1-1.30, H-4.78)
+             + r" {\atype\fontsize{7.2}{8.4}\selectfont CAUGHT! Leaving Wilmington with eleven minutes to explain.};")
+
+    # blurb box
+    L.append(r"\fill[paperw] " + pt(bx0+0.28, 1.95) + " rectangle " + pt(bx1-0.28, H-4.98) + ";")
+    L.append(r"\draw[inkblack,line width=0.8pt] " + pt(bx0+0.28, 1.95) + " rectangle " + pt(bx1-0.28, H-4.98) + ";")
+    L.append(r"\node[text=inkblack,anchor=north,align=center,text width=4.5in] at " + pt(back_cx, H-5.08)
+             + r" {\impact\fontsize{12.5}{13.5}\selectfont THE STORY THEY COULDN'T SETTLE:};")
+    L.append(r"\node[text=inkblack,anchor=north,align=left,text width=4.5in] at " + pt(back_cx, H-5.40)
+             + r" {\atype\fontsize{7.3}{9.2}\selectfont " + blurb + r"};")
+
+    # bottom-left lines
+    L.append(r"\node[text=inkred,anchor=south west,align=left,text width=2.35in] at " + pt(bx0+0.30, 0.78)
+             + r" {\atype\fontsize{8.5}{10}\selectfont CHEMIST'S REPORT: thirty months is not what they cost.};")
+    L.append(r"\node[text=inkblack,anchor=south west,align=left,text width=2.35in] at " + pt(bx0+0.30, 0.32)
+             + r" {\atype\fontsize{7.5}{8.5}\selectfont FICTION / SATIRE \textbullet{} SPACESHIP ALPHA 9};")
+
+    # barcode keep-out (KDP prints a 2.0 x 1.2 in barcode here)
+    bqx2 = bx1 - 0.375
+    bqx1 = bqx2 - 2.2
+    bqy1 = BLEED + 0.30
+    bqy2 = bqy1 + 1.4
+    L.append(r"\fill[white] " + pt(bqx1, bqy1) + " rectangle " + pt(bqx2, bqy2) + ";")
+    L.append(r"\node[text=inkblack] at " + pt((bqx1+bqx2)/2, (bqy1+bqy2)/2) + r" {\tiny barcode area};")
+
+    # exact page bounding box regardless of stroke/photo overhang
+    L.append(r"\pgfresetboundingbox\path " + pt(0, 0) + " rectangle " + pt(W, H) + ";")
     L.append(r"\end{tikzpicture}")
     L.append(r"\end{document}")
     return "\n".join(L)

@@ -39,6 +39,17 @@ FAL_KEY = os.environ.get("FAL_KEY", "")
 FAL_URL = "https://fal.run/fal-ai/nano-banana-2"
 FAL_EDIT_URL = "https://fal.run/fal-ai/nano-banana-2/edit"
 
+GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
+# tried in order; 404s fall through to the next
+GEMINI_IMAGE_MODELS = [
+    "gemini-3.1-flash-image-preview",
+    "gemini-2.5-flash-image",
+]
+# backend: "gemini" or "fal"; auto-picks gemini when its key is set
+ART_BACKEND = os.environ.get("ART_BACKEND", "") or (
+    "gemini" if GEMINI_KEY and not GEMINI_KEY.startswith("your-") else "fal")
+
 ART_DIR = BASE_DIR / "art"
 VARIANTS_DIR = ART_DIR / "variants"
 SVG_DIR = ART_DIR / "svg"
@@ -112,6 +123,123 @@ def download_image(url, dest_path):
     return len(resp.content)
 
 
+# ---------- Gemini (Nano Banana via Google AI) ----------
+
+def _gemini_aspect(aspect_ratio):
+    # map fal-style ratios to Gemini's supported set
+    supported = {"1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4",
+                 "9:16", "16:9", "21:9"}
+    if aspect_ratio in supported:
+        return aspect_ratio
+    return {"4:1": "21:9", "1:4": "9:16"}.get(aspect_ratio)  # None for "auto"
+
+
+def gemini_generate(prompt, resolution="1K", aspect_ratio="auto", seed=None,
+                    ref_images=None):
+    """Generate via Gemini image models. Returns (png_bytes, description).
+
+    ref_images: optional list of local file paths used as style/content
+    references (Gemini's equivalent of fal's /edit endpoint).
+    """
+    import httpx, base64, json as _json
+    parts = []
+    for p in (ref_images or []):
+        b64 = base64.b64encode(Path(p).read_bytes()).decode()
+        parts.append({"inline_data": {"mime_type": "image/png", "data": b64}})
+    parts.append({"text": prompt})
+
+    img_cfg = {}
+    asp = _gemini_aspect(aspect_ratio)
+    if asp:
+        img_cfg["aspectRatio"] = asp
+    if resolution in ("1K", "2K", "4K"):
+        img_cfg["imageSize"] = resolution
+
+    last_err = None
+    for model in GEMINI_IMAGE_MODELS:
+        cfg = {"responseModalities": ["IMAGE"]}
+        if img_cfg:
+            cfg["imageConfig"] = dict(img_cfg)
+        for attempt in range(4):
+            resp = httpx.post(
+                f"{GEMINI_BASE}/{model}:generateContent",
+                headers={"x-goog-api-key": GEMINI_KEY,
+                         "Content-Type": "application/json"},
+                json={"contents": [{"parts": parts}],
+                      "generationConfig": cfg},
+                timeout=300,
+            )
+            if resp.status_code == 404:
+                last_err = f"{model}: 404 (model not available)"
+                break
+            if resp.status_code == 429:
+                time.sleep(30)
+                continue
+            if resp.status_code == 400 and "imageSize" in _json.dumps(cfg):
+                # older models reject imageSize; retry without it
+                cfg["imageConfig"].pop("imageSize", None)
+                if not cfg["imageConfig"]:
+                    cfg.pop("imageConfig")
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            img_bytes, desc = None, ""
+            for part in data["candidates"][0]["content"]["parts"]:
+                if "inlineData" in part:
+                    img_bytes = base64.b64decode(part["inlineData"]["data"])
+                elif "text" in part:
+                    desc += part["text"]
+            if img_bytes is None:
+                last_err = f"{model}: no image in response ({desc[:120]!r})"
+                break
+            return img_bytes, desc
+    raise RuntimeError(f"gemini_generate failed: {last_err}")
+
+
+# ---------- backend dispatch ----------
+
+def art_generate(prompt, resolution="1K", aspect_ratio="auto", seed=None):
+    """Backend-agnostic generation. Returns (png_bytes, description)."""
+    if ART_BACKEND == "gemini":
+        return gemini_generate(prompt, resolution, aspect_ratio, seed)
+    import httpx
+    url, desc = fal_generate(prompt, resolution, aspect_ratio, seed)
+    resp = httpx.get(url, timeout=60, follow_redirects=True)
+    resp.raise_for_status()
+    return resp.content, desc
+
+
+def art_edit(prompt, refs, resolution="1K", aspect_ratio="1:1", seed=None):
+    """Backend-agnostic image-conditioned generation. refs may be local
+    paths (gemini) or URLs (fal). Returns (png_bytes, description)."""
+    if ART_BACKEND == "gemini":
+        import httpx, tempfile
+        paths = []
+        for r in refs:
+            if str(r).startswith("http"):
+                resp = httpx.get(r, timeout=60, follow_redirects=True)
+                resp.raise_for_status()
+                tmp = Path(tempfile.mkstemp(suffix=".png")[1])
+                tmp.write_bytes(resp.content)
+                paths.append(tmp)
+            else:
+                paths.append(Path(r))
+        return gemini_generate(prompt, resolution, aspect_ratio, seed,
+                               ref_images=paths)
+    import httpx
+    url, desc = fal_edit(prompt, [str(r) for r in refs], resolution,
+                         aspect_ratio, seed)
+    resp = httpx.get(url, timeout=60, follow_redirects=True)
+    resp.raise_for_status()
+    return resp.content, desc
+
+
+def save_image(data, dest_path):
+    dest_path.parent.mkdir(parents=True, exist_ok=True)
+    dest_path.write_bytes(data)
+    return len(data)
+
+
 def call_claude(prompt, max_tokens=1500):
     import httpx
     resp = httpx.post(
@@ -151,10 +279,10 @@ def save_picks(picks):
 
 
 def get_reference_url(art_type):
-    """Get the URL of the picked reference image for a type."""
+    """Get a usable reference (URL or local path) for the picked image."""
     picks = load_picks()
     if art_type in picks:
-        return picks[art_type].get("url")
+        return picks[art_type].get("url") or picks[art_type].get("path")
     return None
 
 
@@ -257,14 +385,14 @@ def cmd_curate(args):
         print(f"\n  [{i}/{n}] {label.upper()}: {d.get('concept', '')[:80]}")
         print(f"    Medium: {d.get('medium', 'N/A')}")
 
-        url, desc = fal_generate(prompt, resolution=resolution, aspect_ratio=aspect)
+        data, desc = art_generate(prompt, resolution=resolution, aspect_ratio=aspect)
         dest = VARIANTS_DIR / f"{art_type}_{i:02d}.png"
-        size = download_image(url, dest)
+        size = save_image(data, dest)
 
         # Cache URL and direction info
         picks = load_picks()
         picks[f"variant_{art_type}_{i}"] = {
-            "url": url,
+            "url": "",
             "path": str(dest),
             "direction": label,
             "concept": d.get("concept", ""),
@@ -392,12 +520,12 @@ def cmd_ornaments_all(args):
         print(f"  Ch {num}: '{title}'", end="", flush=True)
 
         if ref_url:
-            url, _ = fal_edit(prompt, [ref_url], resolution="0.5K", aspect_ratio="1:1")
+            data, _ = art_edit(prompt, [ref_url], resolution="0.5K", aspect_ratio="1:1")
         else:
-            url, _ = fal_generate(prompt, resolution="0.5K", aspect_ratio="1:1")
+            data, _ = art_generate(prompt, resolution="0.5K", aspect_ratio="1:1")
 
         dest = ART_DIR / f"ornament_ch{num:02d}.png"
-        size = download_image(url, dest)
+        size = save_image(data, dest)
         print(f" → {dest.name} ({size:,} bytes)")
         time.sleep(1)
 
@@ -409,9 +537,9 @@ def cmd_scene_break(args):
         f"Style: {style['art_style']}. Very simple. White background. No text."
     )
     print("Generating scene break...")
-    url, _ = fal_generate(prompt, resolution="0.5K", aspect_ratio="4:1")
+    data, _ = art_generate(prompt, resolution="0.5K", aspect_ratio="4:1")
     dest = ART_DIR / "scene_break.png"
-    size = download_image(url, dest)
+    size = save_image(data, dest)
     print(f"  Saved: {dest} ({size:,} bytes)")
 
 

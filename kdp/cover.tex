@@ -2,30 +2,71 @@
 \usepackage[paperwidth=12.0625in,paperheight=8.7500in,margin=0in]{geometry}
 \usepackage{fontspec}
 \setmainfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, ItalicFont=EBGaramond-Italic-VF.ttf, Numbers=OldStyle, Ligatures=TeX]
-\newfontfamily\dispfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, Letters=SmallCaps, Numbers=OldStyle]
-\newfontfamily\titlefont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, Letters=SmallCaps, Numbers=OldStyle, WordSpace=1.45]
+\newfontfamily\impact{Impact}[Ligatures=TeX]
+\newfontfamily\ablack{Arial Black}[Ligatures=TeX]
+\newfontfamily\arial{Arial}[Ligatures=TeX]
+\newfontfamily\atype{American Typewriter}[Ligatures=TeX]
 \usepackage{tikz}
 \usepackage{xcolor}
 \usepackage{setspace}
-\definecolor{void}{HTML}{0E1014}
-\definecolor{paperw}{HTML}{ECE6D8}
-\definecolor{signal}{HTML}{C8A24A}
+\usepackage{graphicx}
+\definecolor{inkred}{HTML}{C0201E}
+\definecolor{inkyellow}{HTML}{F0C518}
+\definecolor{inkblue}{HTML}{1E5AA8}
+\definecolor{inkblack}{HTML}{1A1714}
+\definecolor{paperw}{HTML}{F0E8D2}
 \pagestyle{empty}
 \begin{document}\noindent
-\begin{tikzpicture}[x=1in,y=1in,every node/.style={inner sep=0pt}]
-\fill[void] (0.0000,0.0000) rectangle (12.0625,8.7500);
-\draw[signal,line width=0.8pt,overlay] (5.7150,0.0000) -- (5.7150,8.7500);
-\draw[signal,line width=0.8pt,overlay] (6.3475,0.0000) -- (6.3475,8.7500);
-\node[text=signal,font=\dispfont\footnotesize] at (9.1875,8.0750) {transmission \ensuremath{\infty}};
-\node[text=paperw,align=center,text width=4.4in] at (9.1875,6.2000) {\titlefont\fontsize{38}{42}\selectfont the last\\[3pt] human ceo};
-\draw[signal,line width=0.5pt] (7.6875,5.3000) -- (10.6875,5.3000);
-\node[text=paperw,font=\itshape\large] at (9.1875,4.9000) {a tragic dark comedy};
-\node[text=paperw,align=center] at (9.1875,1.3250) {\dispfont\Large space pirate zero};
-\node[text=signal,font=\itshape\footnotesize] at (9.1875,1.0050) {transmitting from spaceship alpha 9};
-\node[text=paperw,align=left,text width=4.3in,font=\normalsize] at (2.8750,5.6000) {\setstretch{1.2}It is 2027, and the boards have done the math. One by one, the Fortune 100 is firing its chief executives and installing an artificial intelligence that is cheaper, sharper, and---most unforgivably---incapable of a scandal.\par\medskip Prescott `Cope' Mercer IV is the last human CEO left in the consumer economy: a fourth-generation heir, a charmer, a cokehead, a man who long ago mistook being obeyed for being loved. As an unkillably ethical machine named Marcus moves into his chair, Cope launches a manic crusade to prove a human still belongs at the top---right until the machine, doing nothing but its dull honest job, opens the drawer where he buried the thing that got two people killed.\par\medskip \textit{A tragic dark comedy about the last man to confuse a throne for a soul.}};
-\node[text=signal,align=center,text width=4.2in,font=\dispfont\footnotesize] at (2.8750,2.9000) {fiction / satire \quad\ensuremath{\cdot}\quad spaceship alpha 9};
-\fill[paperw] (3.0500,0.4250) rectangle (5.2500,1.8250);
-\node[text=void,font=\tiny] at (4.1500,1.1250) {barcode area};
-\node[rotate=-90,text=paperw,font=\dispfont] at (6.0312,4.3750) {the last human ceo \quad\ensuremath{\cdot}\quad space pirate zero};
+\begin{tikzpicture}[x=1in,y=1in,every node/.style={inner sep=0pt,outer sep=0pt}]
+\fill[paperw] (0.0000,0.0000) rectangle (12.0625,8.7500);
+\node[anchor=south west] at (0.0000,0.0000) {\includegraphics[width=12.0625in,height=8.7500in]{../art/cover/paper_bg.png}};
+\fill[inkred] (6.4375,8.1300) rectangle (12.0625,8.7500);
+\node[text=paperw] at (9.1875,8.4050) {\impact\fontsize{15.5}{17}\selectfont SEE WHAT MERCER PAID \$14.2 MILLION TO HIDE!};
+\draw[inkblack,line width=1.6pt] (6.6575,7.9700) -- (11.7175,7.9700);
+\node[text=inkblack] at (9.1875,7.5300) {\impact\fontsize{55}{55}\selectfont THE LAST};
+\node[text=inkblack] at (9.1875,6.7700) {\impact\fontsize{55}{55}\selectfont HUMAN CEO};
+\draw[inkblack,line width=1.6pt] (6.6575,6.3300) -- (11.7175,6.3300);
+\node[text=inkred] at (9.1875,6.1300) {\arial\bfseries\itshape\fontsize{12.5}{13}\selectfont a novel \textemdash{} by SPACE PIRATE ZERO};
+\node[text=inkblack] at (9.1875,5.8900) {\atype\fontsize{7.5}{8}\selectfont 95th AND FINAL YEAR OF PUBLICATION \quad\textbullet\quad DEFIANCE, OHIO};
+\fill[paperw] (6.9575,7.7000) circle (0.30);
+\draw[inkblack,line width=1.1pt] (6.9575,7.7000) circle (0.30);
+\node[text=inkblack] at (6.9575,7.7000) {\ablack\fontsize{13}{13}\selectfont 35\textcent};
+\node[rotate=-2.5] at (10.6175,3.9700) {\includegraphics[width=2.35in]{../art/cover/cope_toast.png}};
+\fill[paperw] (9.4175,1.8900) rectangle (11.8175,2.3300);
+\draw[inkblack,line width=0.5pt] (9.4175,1.8900) rectangle (11.8175,2.3300);
+\node[text=inkblack,align=center,text width=2.25in] at (10.6175,2.1100) {\atype\fontsize{7.2}{8.4}\selectfont TOAST OF THE CENTURY? Mercer, moments before the arithmetic.};
+\fill[inkyellow] (6.6775,4.6300) rectangle (8.9775,5.6700);
+\node[text=inkblack,align=center,text width=2.05in] at (7.8275,5.1500) {\impact\fontsize{16.5}{18}\selectfont COCAINE, CHARM \& MAYONNAISE!};
+\node[text=inkred,align=center,text width=2.3in] at (7.8275,4.1300) {\impact\fontsize{15}{16.5}\selectfont BOARDS DO THE MATH: ROBOT BOSS CHEAPER THAN A MAN!};
+\fill[inkblue] (6.6775,2.6500) rectangle (8.9775,3.6500);
+\node[text=paperw,align=center,text width=2.15in] at (7.8275,3.1500) {\impact\fontsize{13.5}{15}\selectfont MARGAUX TELLS ALL: `THERE WAS NEVER ANYBODY HOME!'};
+\node[text=inkblack,align=center,text width=2.3in] at (7.8275,2.4100) {\impact\fontsize{14}{15.5}\selectfont `I HAVE A BEATING HEART!'};
+\node[text=inkred,align=center,text width=2.3in] at (7.8275,2.1300) {\arial\bfseries\itshape\fontsize{9.5}{10.5}\selectfont the 4 a.m. manifesto that finished him};
+\node[rotate=2] at (7.2975,1.1900) {\includegraphics[width=1.02in]{../art/cover/pinwheel_spot.png}};
+\node[text=inkblack,align=left,text width=2.05in,anchor=west] at (7.9575,1.1900) {\atype\fontsize{7.5}{9}\selectfont WHAT STILL TURNS IN DEFIANCE \textemdash{} and who keeps planting it? SEE BACK};
+\draw[inkblack,line width=1pt] (9.5175,0.8000) rectangle (11.8375,1.7200);
+\node[text=inkblack,align=center,text width=2.1in] at (10.6775,1.4000) {\impact\fontsize{11.5}{13}\selectfont `THE WITHHELD TEAR OUT-PERFORMS THE TEAR BY 12 POINTS!'};
+\node[text=inkred,align=center,text width=2.1in] at (10.6775,0.9700) {\arial\bfseries\itshape\fontsize{8.5}{9}\selectfont \textemdash{} his \$200,000-a-month image doctor};
+\fill[inkred] (6.4375,0.0000) rectangle (12.0625,0.5500);
+\node[text=paperw] at (9.1875,0.3400) {\impact\fontsize{14.5}{16}\selectfont $\star$ BONUS EXTRA $\star$ \; THE NAMES ARE ON PAGE EIGHT};
+\fill[inkred] (5.6250,0.0000) rectangle (6.4375,8.7500);
+\node[rotate=-90,text=paperw] at (6.0312,4.3750) {\impact\fontsize{13}{13}\selectfont THE LAST HUMAN CEO \quad$\star$\quad SPACE PIRATE ZERO};
+\fill[inkblack] (0.0000,7.8300) rectangle (5.6250,8.7500);
+\node[text=paperw] at (2.8750,8.2500) {\impact\fontsize{23}{24}\selectfont HOW LONG CAN COPE KEEP IT UP?};
+\node[text=inkred,align=center,text width=4.9in] at (2.8750,7.4300) {\impact\fontsize{16.5}{18}\selectfont TWO DEAD IN DEFIANCE \textemdash{} WHAT DID THE MAYONNAISE KING KNOW?};
+\node[rotate=1.5] at (1.5750,5.7000) {\includegraphics[width=2.55in]{../art/cover/machine_board.png}};
+\node[text=inkblack,align=center,text width=2.4in] at (1.5750,4.5700) {\atype\fontsize{7.2}{8.4}\selectfont EXCLUSIVE PHOTO: the new chief executive takes the chair. It was not close.};
+\node[rotate=-2] at (4.3250,5.4500) {\includegraphics[width=1.78in]{../art/cover/cope_shield.png}};
+\node[rotate=-8,text=paperw,fill=inkred,inner sep=2.5pt] at (4.3250,5.4000) {\impact\fontsize{12}{12}\selectfont NO COMMENT!};
+\node[text=inkblack,align=center,text width=1.8in] at (4.3250,3.9700) {\atype\fontsize{7.2}{8.4}\selectfont CAUGHT! Leaving Wilmington with eleven minutes to explain.};
+\fill[paperw] (0.4050,1.9500) rectangle (5.3450,3.7700);
+\draw[inkblack,line width=0.8pt] (0.4050,1.9500) rectangle (5.3450,3.7700);
+\node[text=inkblack,anchor=north,align=center,text width=4.5in] at (2.8750,3.6700) {\impact\fontsize{12.5}{13.5}\selectfont THE STORY THEY COULDN'T SETTLE:};
+\node[text=inkblack,anchor=north,align=left,text width=4.5in] at (2.8750,3.3500) {\atype\fontsize{7.3}{9.2}\selectfont It is 2027, and the boards have done the math. One by one, the Fortune 100 is firing its chief executives and installing an artificial intelligence that is cheaper, sharper, and---most unforgivably---incapable of a scandal.\par\smallskip Prescott `Cope' Mercer IV is the last human CEO left in the consumer economy: a fourth-generation heir, a charmer, a cokehead, a man who long ago mistook being obeyed for being loved. As an unkillably ethical machine named Marcus moves into his chair, Cope launches a manic crusade to prove a human still belongs at the top---right until the machine, doing nothing but its dull honest job, opens the drawer where he buried the thing that got two people killed.\par\smallskip \textbf{A tragic dark comedy about the last man to confuse a throne for a soul.}};
+\node[text=inkred,anchor=south west,align=left,text width=2.35in] at (0.4250,0.7800) {\atype\fontsize{8.5}{10}\selectfont CHEMIST'S REPORT: thirty months is not what they cost.};
+\node[text=inkblack,anchor=south west,align=left,text width=2.35in] at (0.4250,0.3200) {\atype\fontsize{7.5}{8.5}\selectfont FICTION / SATIRE \textbullet{} SPACESHIP ALPHA 9};
+\fill[white] (3.0500,0.4250) rectangle (5.2500,1.8250);
+\node[text=inkblack] at (4.1500,1.1250) {\tiny barcode area};
+\pgfresetboundingbox\path (0.0000,0.0000) rectangle (12.0625,8.7500);
 \end{tikzpicture}
 \end{document}

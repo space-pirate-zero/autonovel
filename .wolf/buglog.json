@@ -1,44 +1,39 @@
-[
-  {
-    "date": "2026-06-10",
-    "error_message": "Drop cap overprints body text on ~14 chapter openers (worst: ch_17, coda)",
-    "root_cause": "LaTeX lettrine shapes only ONE paragraph; when the opening paragraph ran shorter than the 3-line drop cap, the next paragraph returned to full measure and printed through the glyph. Separate sub-bug: single-letter first words ('A year on...') made rest.find(' ')==0, dumping the whole paragraph into lettrine's small-caps argument.",
-    "fix": "build_kdp.py drop_cap(): join short openers (<210 visible chars) to following paragraph(s) inside one TeX paragraph via \\hfill\\break\\hspace*{1.4em}; handle rest[:1]==' ' single-letter case with empty word_rest.",
-    "tags": ["latex", "lettrine", "typesetting", "kdp"]
-  },
-  {
-    "date": "2026-06-10",
-    "error_message": "Reversed opening quotes in print wherever dialogue opens with italic text (”Human, ”Firing, ...)",
-    "root_cause": "smart() ran per-segment AFTER the italic split, so a quote at segment end (before *italics*) failed the (?=\\w) lookahead and fell through to the closing-quote default.",
-    "fix": "New dquotes() resolves straight double quotes with full-line context BEFORE the italic split (open after start/whitespace/dash/paren, else close).",
-    "tags": ["typesetting", "quotes", "regex"]
-  },
-  {
-    "date": "2026-06-10",
-    "error_message": "Mid-chapter markdown blockquotes typeset with literal '> ' glyphs (40 lines: ch_18 debate, ch_27 letter)",
-    "root_cause": "body_to_tex() had no blockquote handling; only the opener transmission was consumed by split_chapter.",
-    "fix": "body_to_tex() groups '^>' runs into a new machineblock list environment (indented, \\small, parskip).",
-    "tags": ["markdown", "latex", "blockquote"]
-  },
-  {
-    "date": "2026-06-10",
-    "error_message": "Cover PDF became 2 pages with page 1 blank after extending spine rules to full bleed height",
-    "root_cause": "TikZ stroke extends half a line width beyond the path; rules drawn 0..H grew the picture bounding box 0.4pt past the page, pushing the inline picture to page 2.",
-    "fix": "Mark the full-height rules [overlay] so they don't enter the bounding box.",
-    "tags": ["tikz", "cover", "bounding-box"]
-  },
-  {
-    "date": "2026-06-10",
-    "error_message": "fontspec: 'WordSpace font feature cannot be used in \\addfontfeatures'",
-    "root_cause": "WordSpace is definition-time-only in fontspec.",
-    "fix": "Define a dedicated \\titlefont family with WordSpace=1.45 instead of \\addfontfeature at use site.",
-    "tags": ["fontspec", "xetex"]
-  },
-  {
-    "date": "2026-06-10",
-    "error_message": "Persistent 11.9pt overfull after closing up em dashes (XeTeX wouldn't break after the dash)",
-    "root_cause": "Closed-up em dashes removed break-friendly spaces; combined with tight measure the para had no feasible break. \\XeTeXdashbreakstate alone did not resolve it.",
-    "fix": "\\emergencystretch=2.5em (plus \\XeTeXdashbreakstate=1) -> 0 overfull lines book-wide.",
-    "tags": ["xetex", "linebreaking", "em-dash"]
-  }
-]
+{
+  "bugs": [
+    {
+      "date": "2026-06-10",
+      "error_message": "cover.pdf compiled to 2 pages (page 1 blank); pdftoppm rendered blank white",
+      "root_cause": "TikZ bounding box grew past the exact-page size: first from stroke half-width of full-bleed rules (0.4pt overhang), then from a full-bleed \\includegraphics node's default outer sep (0.2pt). Inline tikzpicture taller than \\textheight spills to page 2.",
+      "fix": "Mark decorative full-bleed elements [overlay]; in the tabloid cover, end the picture with \\pgfresetboundingbox\\path (0,0) rectangle (W,H); so the bbox is exact regardless of overhang.",
+      "tags": ["tikz", "cover", "kdp", "bounding-box", "tectonic"]
+    },
+    {
+      "date": "2026-06-10",
+      "error_message": "Literal '> ' glyphs typeset in print (ch_18 debate, ch_27 letter); 40 lines affected",
+      "root_cause": "build_kdp.py body_to_tex only handled the opener transmission blockquote; mid-body markdown blockquotes passed through as plain text.",
+      "fix": "body_to_tex groups consecutive '>' lines into a machineblock list environment (small, indented both sides).",
+      "tags": ["typesetting", "markdown", "blockquote"]
+    },
+    {
+      "date": "2026-06-10",
+      "error_message": "Drop cap overprinted following paragraph on ~12 chapter openers; coda opener line overflowed margin in small caps",
+      "root_cause": "lettrine shapes only one paragraph; openers shorter than 3 lines collide. Single-letter first words ('A') made rest.find(' ')==0 so the whole paragraph landed in lettrine's small-caps arg.",
+      "fix": "drop_cap joins short openers into one TeX paragraph via \\hfill\\break + indent; single-letter first word gets empty word_rest.",
+      "tags": ["lettrine", "drop-cap", "typesetting"]
+    },
+    {
+      "date": "2026-06-10",
+      "error_message": "fontspec error: WordSpace cannot be used in \\addfontfeatures",
+      "root_cause": "WordSpace is a load-time-only fontspec feature.",
+      "fix": "Define a dedicated \\newfontfamily with WordSpace at declaration.",
+      "tags": ["fontspec", "fonts"]
+    },
+    {
+      "date": "2026-06-11",
+      "error_message": "fal.ai 401 Unauthorized on art generation",
+      "root_cause": ".env FAL_KEY was the literal placeholder 'your-fal-...'; never configured.",
+      "fix": "Added Gemini backend (gen_art.py gemini_generate + art_generate/art_edit dispatch, ART_BACKEND auto-select); GEMINI_API_KEY in .env.",
+      "tags": ["api", "gen-art", "gemini", "fal"]
+    }
+  ]
+}
