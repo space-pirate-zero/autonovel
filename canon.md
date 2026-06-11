@@ -33,11 +33,12 @@ Each entry: a short, falsifiable statement with its source.
   (world.md)
 - The 2019 Renata Cho affair/settlement; concealed from the board.
   (characters.md, payoff Ch 16)
-- The 2021 Hearthstone space-heater recall was slow-walked by Cope to
+- The 2021 Hearthstone space-heater recall (defect found March 2021,
+  fire January 2022) was slow-walked by Cope to
   protect a quarter; two people died in a Defiance house fire; buried in
   a settlement + a "voluntary service bulletin." (characters.md, payoff
   Ch 20)
-- Story present: August 2027 → Spring 2029. (world.md)
+- Story present: August 2027 → Fall 2029 (ch_28) / 2030 (coda).
 - Aug 2027: 31 of the S&P 100 run an AURELIUS-class CEO; 11 "Last
   Humans" remain. By midpoint, 3. (world.md)
 - Ch 1 (gala) → Coda (Defiance, ~1 year after the handover). (outline.md)
@@ -116,7 +117,7 @@ Each entry: a short, falsifiable statement with its source.
   *Mercer's* mayonnaise + shelf-stable food, household chemicals, a
   mid-tier P&C insurance arm, and a money-losing streaming service,
   Dale+. (world.md)
-- HQ: a 1961 limestone tower on Sixth Avenue, NYC; the 40th-floor
+- HQ: a 1961 limestone tower on Sixth Avenue, NYC; the 41st-floor
   executive suite is "the Aerie." (world.md)
 - The founding town, Defiance, Ohio, holds the closed plant and the
   Hearthstone memorial. (world.md)
@@ -158,7 +159,10 @@ FACTS:
 - Hearthstone fire victims = **Karen Lasko, 34, and her son Petey Lasko,
   6** (a mother and her six-year-old). NOT "a man and his mother."
 - The house = on **Sherwood Street**, Defiance.
-- The fire = a **January night, 2021**.
+- The fire = a **January night, 2022** — AFTER the chain of knowledge:
+  engineering memo March 2021 → Cope's eleven-minute Saturday decision
+  July 2021 (Q3) → voluntary service bulletin November 2021 → fire
+  January 2022. The deaths FOLLOW the decision; the order is the crime.
 - Cope's CEO tenure = **nineteen years** (per Marcus's letter, ch_27).
   Fix any "twenty-six years" tenure claim.
 - Renata Cho = hired **2016**; ran the **Hearthside division** (small
@@ -176,10 +180,16 @@ FACTS:
   secondhand account/rumor.
 
 TIMELINE / AGES (elapsed-time scheme — do NOT "correct" the finale):
-- Aug 2027: Cope **54**, Pip **24**. Trial/handover run through 2028.
-- Finale ch_28 = Spring 2029: Cope **56**, "eleven months sober"; Pip
-  **26**. These are CORRECT under elapsed time — leave them. Only fix
-  hard contradictions like ch_18's tenure.
+- Aug 2027: Cope **54**, Pip **24**. Master clock: manifesto ~Apr 2028
+  (gala+8mo), scandal May 2028, forum Jul 2028 (gala+11mo), drawer/
+  collapse ~Sep 2028 (gala+13mo), deposition ~Dec 2028, handover and
+  Marcus's letter early 2029, plea mid-2029.
+- Finale ch_28 = September 2029: Cope **56**, "eleven months sober",
+  **26 days before reporting to a state facility outside Marion, Ohio**
+  (thirty months, involuntary manslaughter, two counts); Pip **26**.
+  Coda = 2030, "a year on" from the handover; Cope is in Marion.
+- Sentence: **thirty months**. Margaux's card: "Thirty months is not
+  what they cost." The prison gun IS fired — do not re-soften.
 
 ## Established In-Story (fill as chapters are drafted)
 

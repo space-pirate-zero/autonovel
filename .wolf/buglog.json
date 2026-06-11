@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-06-10",
+    "error_message": "Drop cap overprints body text on ~14 chapter openers (worst: ch_17, coda)",
+    "root_cause": "LaTeX lettrine shapes only ONE paragraph; when the opening paragraph ran shorter than the 3-line drop cap, the next paragraph returned to full measure and printed through the glyph. Separate sub-bug: single-letter first words ('A year on...') made rest.find(' ')==0, dumping the whole paragraph into lettrine's small-caps argument.",
+    "fix": "build_kdp.py drop_cap(): join short openers (<210 visible chars) to following paragraph(s) inside one TeX paragraph via \\hfill\\break\\hspace*{1.4em}; handle rest[:1]==' ' single-letter case with empty word_rest.",
+    "tags": ["latex", "lettrine", "typesetting", "kdp"]
+  },
+  {
+    "date": "2026-06-10",
+    "error_message": "Reversed opening quotes in print wherever dialogue opens with italic text (”Human, ”Firing, ...)",
+    "root_cause": "smart() ran per-segment AFTER the italic split, so a quote at segment end (before *italics*) failed the (?=\\w) lookahead and fell through to the closing-quote default.",
+    "fix": "New dquotes() resolves straight double quotes with full-line context BEFORE the italic split (open after start/whitespace/dash/paren, else close).",
+    "tags": ["typesetting", "quotes", "regex"]
+  },
+  {
+    "date": "2026-06-10",
+    "error_message": "Mid-chapter markdown blockquotes typeset with literal '> ' glyphs (40 lines: ch_18 debate, ch_27 letter)",
+    "root_cause": "body_to_tex() had no blockquote handling; only the opener transmission was consumed by split_chapter.",
+    "fix": "body_to_tex() groups '^>' runs into a new machineblock list environment (indented, \\small, parskip).",
+    "tags": ["markdown", "latex", "blockquote"]
+  },
+  {
+    "date": "2026-06-10",
+    "error_message": "Cover PDF became 2 pages with page 1 blank after extending spine rules to full bleed height",
+    "root_cause": "TikZ stroke extends half a line width beyond the path; rules drawn 0..H grew the picture bounding box 0.4pt past the page, pushing the inline picture to page 2.",
+    "fix": "Mark the full-height rules [overlay] so they don't enter the bounding box.",
+    "tags": ["tikz", "cover", "bounding-box"]
+  },
+  {
+    "date": "2026-06-10",
+    "error_message": "fontspec: 'WordSpace font feature cannot be used in \\addfontfeatures'",
+    "root_cause": "WordSpace is definition-time-only in fontspec.",
+    "fix": "Define a dedicated \\titlefont family with WordSpace=1.45 instead of \\addfontfeature at use site.",
+    "tags": ["fontspec", "xetex"]
+  },
+  {
+    "date": "2026-06-10",
+    "error_message": "Persistent 11.9pt overfull after closing up em dashes (XeTeX wouldn't break after the dash)",
+    "root_cause": "Closed-up em dashes removed break-friendly spaces; combined with tight measure the para had no feasible break. \\XeTeXdashbreakstate alone did not resolve it.",
+    "fix": "\\emergencystretch=2.5em (plus \\XeTeXdashbreakstate=1) -> 0 overfull lines book-wide.",
+    "tags": ["xetex", "linebreaking", "em-dash"]
+  }
+]

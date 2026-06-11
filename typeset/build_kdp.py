@@ -38,18 +38,23 @@ def esc(t):
         t = t.replace(a, b)
     return t
 
+def dquotes(s):
+    # Disambiguate straight double quotes with full-line context. Must run
+    # BEFORE the italic split: an opening quote may directly precede an
+    # italic span ("*Human,*"), which the old word-char lookahead missed,
+    # producing reversed quotes in print.
+    s = re.sub(r'(^|(?<=[\s(—–-]))"', '“', s)
+    return s.replace('"', '”')
+
 def smart(s):
+    s = re.sub(r'(?<=\S)\s*—\s*(?=\S)', '—', s)  # house style: closed-up em dash
     s = s.replace('—', '---').replace('–', '--')
     s = s.replace('“', '``').replace('”', "''").replace('‘', '`').replace('’', "'")
     s = s.replace('…', r'\ldots{}')
-    s = re.sub(r'(?<=\s)"(?=\w)', '``', s)
-    s = re.sub(r'^"(?=\w)', '``', s)
-    s = re.sub(r'(?<=\w)"', "''", s)
-    s = re.sub(r'(?<=[\.\?\!,])"', "''", s)
-    s = s.replace('"', "''")
     return s
 
 def inline(s):
+    s = dquotes(s)
     parts = re.split(r'(?<!\*)\*([^*]+)\*(?!\*)', s)
     out = []
     for i, p in enumerate(parts):
@@ -57,34 +62,79 @@ def inline(s):
     return ''.join(out)
 
 def body_to_tex(body):
+    # mid-body markdown blockquotes (the machine's on-screen answers, its
+    # letter) -> machineblock environment; the opener transmission was
+    # already consumed by split_chapter
     out = []
-    for line in body.split('\n'):
-        s = line.strip()
+    lines = body.split('\n')
+    i = 0
+    while i < len(lines):
+        s = lines[i].strip()
+        if s.startswith('>'):
+            block = []
+            while i < len(lines) and lines[i].strip().startswith('>'):
+                block.append(re.sub(r'^\s*>\s?', '', lines[i].rstrip()))
+                i += 1
+            paras, cur = [], []
+            for b in block:
+                if b.strip() == '':
+                    if cur:
+                        paras.append(' '.join(cur)); cur = []
+                else:
+                    cur.append(b.strip())
+            if cur:
+                paras.append(' '.join(cur))
+            out.append('\\begin{machineblock}')
+            out.append('\n\n'.join(inline(p) for p in paras))
+            out.append('\\end{machineblock}')
+            continue
         if s == '---':
             out.append('\n\\scenebreak\n')
         elif s == '':
             out.append('')
         else:
             out.append(inline(s))
+        i += 1
     return '\n'.join(out)
 
 def drop_cap(tex):
     lines = tex.split('\n')
+    n = len(lines)
     start = next((i for i, l in enumerate(lines)
                   if l.strip() and not l.strip().startswith('\\scenebreak')), None)
     if start is None:
         return tex
-    para, end = [], start
-    for i in range(start, len(lines)):
-        if lines[i].strip() == '' or lines[i].strip().startswith('\\scenebreak'):
-            end = i; break
-        para.append(lines[i]); end = i + 1
-    text = ' '.join(para).lstrip()
+
+    def grab_para(idx):
+        para = []
+        while idx < n and lines[idx].strip() and not lines[idx].strip().startswith('\\scenebreak'):
+            para.append(lines[idx]); idx += 1
+        return ' '.join(para).strip(), idx
+
+    text, end = grab_para(start)
     if len(text) < 2:
         return tex
+    # lettrine only shapes ONE paragraph: if the opener is shorter than the
+    # 3-line drop cap, the next paragraph overprints the glyph. Join short
+    # openers to the following paragraph(s) inside one TeX paragraph, keeping
+    # the visual paragraph break via \hfill\break + indent, so every line
+    # beside the drop cap is shaped around it.
+    SHORT = 210
+    while len(re.sub(r'\\[a-zA-Z]+\*?(\{[^}]*\})?', '', text)) < SHORT:
+        j = end
+        while j < n and not lines[j].strip():
+            j += 1
+        if j >= n or lines[j].strip().startswith(('\\scenebreak', '\\begin')):
+            break
+        nxt, end = grab_para(j)
+        text += r'\hfill\break\hspace*{1.4em}' + nxt
     first, rest = text[0], text[1:]
-    sp = rest.find(' ')
-    word_rest, para_rest = (rest[:sp], rest[sp:]) if sp > 0 else (rest, '')
+    if rest[:1] == ' ':
+        # single-letter first word ("A", "I"): nothing left of the word
+        word_rest, para_rest = '', rest
+    else:
+        sp = rest.find(' ')
+        word_rest, para_rest = (rest[:sp], rest[sp:]) if sp > 0 else (rest, '')
     drop = (r'\lettrine[lines=3, lhang=0.07, findent=0.1em, nindent=0.25em]{'
             + first + '}{' + word_rest + '}' + para_rest)
     return '\n'.join(lines[:start]) + '\n' + drop + '\n' + '\n'.join(lines[end:])
@@ -127,7 +177,7 @@ def split_chapter(text):
 
 def transmission_tex(opener):
     header, body, signoff = opener
-    h = smart(esc(header)).replace('---', r'\textemdash{}').replace('--', r'\textendash{}')
+    h = smart(esc(dquotes(header))).replace('---', r' \textemdash{} ').replace('--', r'\textendash{}')
     out = [r'\begin{transmission}',
            r'{\transheader ' + h + r'}\par\vspace{0.55em}',
            inline(body) + r'\par']
@@ -172,7 +222,7 @@ FONT_BLOCK = r"""\usepackage{fontspec}
   Path=../typeset/fonts/,
   ItalicFont=EBGaramond-Italic-VF.ttf,
   Numbers=OldStyle, Ligatures=TeX]
-\newfontfamily\dispfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, Letters=SmallCaps, Numbers=OldStyle]
+\newfontfamily\dispfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, Letters=SmallCaps, Numbers=OldStyle, Ligatures=TeX]
 """
 
 def interior_tex():
@@ -186,6 +236,11 @@ def interior_tex():
 \usepackage{microtype}
 \usepackage{setspace}\setstretch{1.12}
 \setlength{\parindent}{1.4em}
+\frenchspacing
+\ifdefined\XeTeXdashbreakstate \XeTeXdashbreakstate=1 \fi
+\emergencystretch=2.5em
+\widowpenalty=10000 \clubpenalty=10000
+\raggedbottom
 \usepackage{lettrine}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
@@ -198,8 +253,13 @@ def interior_tex():
   \itshape\small\setlength{\parindent}{0pt}\setstretch{1.05}}%
   {\end{minipage}\end{center}\vspace{0.45\baselineskip}%
   \noindent\hfil\rule{0.32\textwidth}{0.3pt}\hfil\par\vspace{1.0\baselineskip}}
-\newcommand{\scenebreak}{\par\vspace{0.45\baselineskip}%
-  \begin{center}\dispfont\small *\quad *\quad *\end{center}\vspace{0.45\baselineskip}\par}
+\newcommand{\scenebreak}{\par\penalty-50\vspace{0.45\baselineskip}\nopagebreak
+  {\centering\dispfont\small *\quad *\quad *\par}\nopagebreak\vspace{0.45\baselineskip}\nopagebreak}
+\newenvironment{machineblock}{\par\vspace{0.5\baselineskip}%
+  \begin{list}{}{\setlength{\leftmargin}{1.6em}\setlength{\rightmargin}{1.6em}%
+  \setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}}\item[]%
+  \small\setlength{\parindent}{0pt}\setlength{\parskip}{0.45\baselineskip}\setstretch{1.05}}%
+  {\end{list}\vspace{0.5\baselineskip}\par}
 
 \titleformat{\chapter}[display]{\normalfont\centering}
   {\vspace*{0.9in}\dispfont\footnotesize chapter \thechapter}
@@ -254,7 +314,7 @@ Set in EB Garamond.\par}
     if os.path.exists(coda):
         parts.append(chapter_tex(coda, numbered=False))
     parts.append(r"""\backmatter\cleardoublepage\thispagestyle{empty}\vspace*{3in}
-\begin{center}{\dispfont\small \textemdash\ \ $\diamond$\ \ \textemdash}\\[0.3in]{\itshape Keep it tuned.}\end{center}
+\begin{center}{\dispfont\small \textemdash\ \ $\diamond$\ \ \textemdash}\\[0.3in]{\itshape End of transmission.}\end{center}
 \end{document}""")
     return '\n'.join(parts)
 
@@ -292,6 +352,7 @@ def cover_tex(pages):
     L.append(r"\usepackage{fontspec}")
     L.append(r"\setmainfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, ItalicFont=EBGaramond-Italic-VF.ttf, Numbers=OldStyle, Ligatures=TeX]")
     L.append(r"\newfontfamily\dispfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, Letters=SmallCaps, Numbers=OldStyle]")
+    L.append(r"\newfontfamily\titlefont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, Letters=SmallCaps, Numbers=OldStyle, WordSpace=1.45]")
     L.append(r"\usepackage{tikz}")
     L.append(r"\usepackage{xcolor}")
     L.append(r"\usepackage{setspace}")
@@ -303,12 +364,14 @@ def cover_tex(pages):
     L.append(r"\begin{tikzpicture}[x=1in,y=1in,every node/.style={inner sep=0pt}]")
     # background
     L.append(r"\fill[void] " + pt(0, 0) + " rectangle " + pt(W, H) + ";")
-    # spine accent rules
-    L.append(r"\draw[signal,line width=0.6pt] " + pt(BLEED+TRIM_W, BLEED+0.6) + " -- " + pt(BLEED+TRIM_W, H-BLEED-0.6) + ";")
-    L.append(r"\draw[signal,line width=0.6pt] " + pt(BLEED+TRIM_W+spine, BLEED+0.6) + " -- " + pt(BLEED+TRIM_W+spine, H-BLEED-0.6) + ";")
+    # spine accent rules: inset 0.09in onto the spine (so KDP's +-1/16in wrap
+    # tolerance keeps them on the spine panel) and run full height into bleed
+    rule_inset = 0.09
+    L.append(r"\draw[signal,line width=0.8pt,overlay] " + pt(BLEED+TRIM_W+rule_inset, 0) + " -- " + pt(BLEED+TRIM_W+rule_inset, H) + ";")
+    L.append(r"\draw[signal,line width=0.8pt,overlay] " + pt(BLEED+TRIM_W+spine-rule_inset, 0) + " -- " + pt(BLEED+TRIM_W+spine-rule_inset, H) + ";")
     # FRONT COVER
     L.append(r"\node[text=signal,font=\dispfont\footnotesize] at " + pt(front_cx, H-BLEED-0.55) + r" {transmission \ensuremath{\infty}};")
-    L.append(r"\node[text=paperw,align=center,text width=4.4in] at " + pt(front_cx, H-2.55) + r" {\dispfont\fontsize{38}{42}\selectfont the last\\[3pt] human ceo};")
+    L.append(r"\node[text=paperw,align=center,text width=4.4in] at " + pt(front_cx, H-2.55) + r" {\titlefont\fontsize{38}{42}\selectfont the last\\[3pt] human ceo};")
     L.append(r"\draw[signal,line width=0.5pt] " + pt(front_cx-1.5, H-3.45) + " -- " + pt(front_cx+1.5, H-3.45) + ";")
     L.append(r"\node[text=paperw,font=\itshape\large] at " + pt(front_cx, H-3.85) + r" {a tragic dark comedy};")
     L.append(r"\node[text=paperw,align=center] at " + pt(front_cx, BLEED+1.2) + r" {\dispfont\Large space pirate zero};")
@@ -316,11 +379,12 @@ def cover_tex(pages):
     # BACK COVER
     L.append(r"\node[text=paperw,align=left,text width=4.3in,font=\normalsize] at " + pt(back_cx, H-3.15) + r" {\setstretch{1.2}" + blurb + r"};")
     L.append(r"\node[text=signal,align=center,text width=4.2in,font=\dispfont\footnotesize] at " + pt(back_cx, H-5.85) + r" {fiction / satire \quad\ensuremath{\cdot}\quad spaceship alpha 9};")
-    # barcode keep-out (KDP prints the real barcode here): 2.0 x 1.0 in, lower-right of back panel
-    bx2 = BLEED + TRIM_W - 0.40
-    bx1 = bx2 - 2.0
-    by1 = BLEED + 0.35
-    by2 = by1 + 1.0
+    # barcode keep-out (KDP prints a 2.0 x 1.2 in barcode here): box must
+    # exceed that or the bars overhang onto the dark background
+    bx2 = BLEED + TRIM_W - 0.375
+    bx1 = bx2 - 2.2
+    by1 = BLEED + 0.30
+    by2 = by1 + 1.4
     L.append(r"\fill[paperw] " + pt(bx1, by1) + " rectangle " + pt(bx2, by2) + ";")
     L.append(r"\node[text=void,font=\tiny] at " + pt((bx1+bx2)/2, (by1+by2)/2) + r" {barcode area};")
     # SPINE
@@ -441,6 +505,26 @@ Narrated as a pirate broadcast from Spaceship Alpha 9, *The Last Human CEO* is a
     with open(os.path.join(KDP, "metadata.md"), "w") as f:
         f.write(md)
 
+def build_epub():
+    """Rebuild the EPUB3 from chapter markdown via pandoc, cover embedded."""
+    import subprocess
+    srcs = [os.path.join(KDP, "epub-metadata.yaml")]
+    p0 = os.path.join(CHAP, "ch_00.md")
+    if os.path.exists(p0):
+        srcs.append(p0)
+    srcs += [os.path.join(CHAP, f"ch_{i:02d}.md") for i in range(1, 29)
+             if os.path.exists(os.path.join(CHAP, f"ch_{i:02d}.md"))]
+    coda = os.path.join(CHAP, "ch_coda.md")
+    if os.path.exists(coda):
+        srcs.append(coda)
+    cmd = ["pandoc", "-o", os.path.join(KDP, "the-last-human-ceo.epub"),
+           "--css", os.path.join(KDP, "epub.css"), "--split-level=1"]
+    cover = os.path.join(KDP, "ebook-cover.jpg")
+    if os.path.exists(cover):
+        cmd += ["--epub-cover-image", cover]
+    subprocess.run(cmd + srcs, check=True)
+    print("wrote kdp/the-last-human-ceo.epub")
+
 def write_ebook_cover(pages):
     """Crop the front panel out of cover.pdf -> ebook-cover.jpg (KDP eBook cover)."""
     import subprocess
@@ -474,6 +558,8 @@ def main():
         write_metadata(pages)
         print(f"wrote kdp/cover.tex + kdp/metadata.md (pages={pages}, spine={pages*SPINE_PER_PAGE:.4f}in)")
         write_ebook_cover(pages)
+    if "--epub" in sys.argv:
+        build_epub()
     else:
         write_metadata(0)
         print("wrote kdp/metadata.md (run again with --pages N after building interior)")

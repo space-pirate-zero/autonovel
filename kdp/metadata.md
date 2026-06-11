@@ -39,14 +39,14 @@ Narrated as a pirate broadcast from Spaceship Alpha 9, *The Last Human CEO* is a
 - **Bleed:** none for interior (text only)
 - **Paper:** cream
 - **Ink:** black & white
-- **Page count:** 321
-- **Spine width:** 0.8025 in  (= 321 pp x 0.0025 in/pp, cream paper)
+- **Page count:** 0
+- **Spine width:** 0.0000 in  (= 0 pp x 0.0025 in/pp, cream paper)
 - **Interior margins:** inside/gutter 0.875 in, outside 0.6 in, top 0.8 in, bottom 0.85 in (meets KDP gutter min for 301–500 pp)
 - **Fonts:** EB Garamond (OFL, embedded)
 
 ## Cover specs (full wraparound)
-- **Full cover size (with bleed):** 12.053 x 8.750 in
-- Back (5.5) + spine (0.802) + front (5.5) + 0.125 bleed each outer edge
+- **Full cover size (with bleed):** 11.250 x 8.750 in
+- Back (5.5) + spine (0.000) + front (5.5) + 0.125 bleed each outer edge
 - Barcode keep-out left clear on lower-right of back cover (KDP supplies the barcode)
 - File: cover.pdf (single PDF, fonts embedded)
 

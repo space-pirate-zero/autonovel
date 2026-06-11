@@ -6,3 +6,27 @@
 - Added `write_ebook_cover()` to build_kdp.py — crops front panel of cover.pdf at 300 dpi → kdp/ebook-cover.jpg (1650×2550 RGB) for the KDP eBook cover upload.
 - Added kdp/*.jpg to .gitignore (matches existing convention: generated binaries untracked).
 - Commit: aa03542.
+
+## 2026-06-10 — Full audit + darkness pass (The Last Human CEO)
+- 10-agent audit (6 visual over all 321 pp + cover, 4 literary over the manuscript).
+- Typesetting fixes in build_kdp.py: drop-cap join for short openers, dquotes()
+  context-aware quote pass, machineblock env for mid-body blockquotes,
+  \frenchspacing, widow/club penalties + \raggedbottom, scene-break keep rules,
+  \emergencystretch=2.5em (0 overfull lines), dispfont Ligatures=TeX, backmatter
+  line now "End of transmission." Cover: barcode box 2.2x1.4, spine rules inset
+  0.09in full-bleed [overlay], titlefont WordSpace=1.45.
+- Continuity: fire moved to Jan 2022 (deaths now FOLLOW the eleven-minute
+  decision), Marcus pre-access codas rewritten to public-record + sealed-gap,
+  master clock conformed (gala Aug 2027 -> collapse Sep 2028 -> finale Sep 2029),
+  Voss/Okonjo genders, Halloran first name, AO designation harmonized as
+  substitution-before-execution, 61-page settlement, Pip reveal in Aerie+hospital,
+  ninety-five years, ages 55/56.
+- Darkness pass on the ending: prison gun FIRED (30 months, Marion, report date
+  26 days after ch_28 gala; coda states it flat with day-rate arithmetic),
+  Marcus's letter de-souled ("I am not telling you it was good... it was the
+  only one"; "No response is sought, and none will be read"), validation chorus
+  cut to Sun's knife, ch_26 closing-line failure + ambient-despair train, ch_25
+  near-relapse + Okonjo bills, Margaux's card ("Thirty months is not what they
+  cost"), coda consolations stripped.
+- New page count 325 -> spine 0.8125in, cover 12.0625x8.75. All rebuilt; epubcheck
+  0/0; fonts embedded; build now does `--epub` via pandoc with embedded cover.
