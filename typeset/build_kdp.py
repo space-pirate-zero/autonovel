@@ -235,8 +235,7 @@ def interior_tex():
 All rights reserved. No part of this book may be reproduced in any form without written permission, except brief quotations in reviews.\par\smallskip
 This is a work of fiction. Names, characters, businesses, companies, places, events, and incidents are either the products of the author's imagination or used in a fictitious and satirical manner. Any resemblance to actual persons, living or dead, or actual events, is coincidental.\par\smallskip
 Published by Spaceship Alpha 9.\par
-First edition, %YEAR%.\par
-ISBN: 979-8-XXXXXXX-X-X\par\smallskip
+First edition, %YEAR%.\par\smallskip
 Set in EB Garamond.\par}
 \vspace*{0.4in}\clearpage
 % epigraph
@@ -423,20 +422,42 @@ Narrated as a pirate broadcast from Spaceship Alpha 9, *The Last Human CEO* is a
 - File: cover.pdf (single PDF, fonts embedded)
 
 ## eBook
-- the-last-human-ceo.epub (reflowable EPUB3; Kindle accepts EPUB)
+- the-last-human-ceo.epub (reflowable EPUB3, epubcheck-clean; cover image embedded; Kindle accepts EPUB)
+- ebook-cover.jpg (1650 x 2550 px, RGB JPEG — upload to KDP eBook > Cover)
 
 ## Artifacts in this folder
 - `interior.pdf` — print interior (upload to KDP Paperback > Manuscript)
 - `cover.pdf` — print wraparound cover (upload to KDP Paperback > Cover)
 - `the-last-human-ceo.epub` — eBook (upload to KDP eBook > Manuscript)
+- `ebook-cover.jpg` — eBook marketing cover (upload to KDP eBook > Cover)
 - `interior.tex`, `cover.tex` — sources (regenerate via typeset/build_kdp.py)
 
-> NOTE: Replace the ISBN placeholder on the copyright page if you use your own
-> ISBN; KDP can also assign a free one. Update the spine width and re-run the
-> cover build if the final page count changes.
+> NOTE: The copyright page intentionally omits the ISBN — KDP assigns a free
+> ISBN at publish time and prints it in the back-cover barcode. If you bring
+> your own ISBN, add it to the copyright page in typeset/build_kdp.py and
+> rebuild. Update the spine width and re-run the cover build if the final
+> page count changes.
 """
     with open(os.path.join(KDP, "metadata.md"), "w") as f:
         f.write(md)
+
+def write_ebook_cover(pages):
+    """Crop the front panel out of cover.pdf -> ebook-cover.jpg (KDP eBook cover)."""
+    import subprocess
+    src = os.path.join(KDP, "cover.pdf")
+    if not os.path.exists(src):
+        print("skip ebook-cover.jpg (build cover.pdf first)"); return
+    dpi = 300
+    spine = pages * SPINE_PER_PAGE
+    x = round((BLEED + TRIM_W + spine) * dpi)
+    y = round(BLEED * dpi)
+    w, h = round(TRIM_W * dpi), round(TRIM_H * dpi)
+    subprocess.run(["pdftoppm", "-jpeg", "-jpegopt", "quality=95", "-r", str(dpi),
+                    "-x", str(x), "-y", str(y), "-W", str(w), "-H", str(h),
+                    src, os.path.join(KDP, "_ebookcover")], check=True)
+    os.replace(os.path.join(KDP, "_ebookcover-1.jpg"),
+               os.path.join(KDP, "ebook-cover.jpg"))
+    print(f"wrote kdp/ebook-cover.jpg ({w}x{h}px @ {dpi}dpi)")
 
 def main():
     os.makedirs(KDP, exist_ok=True)
@@ -452,6 +473,7 @@ def main():
             f.write(cover_tex(pages))
         write_metadata(pages)
         print(f"wrote kdp/cover.tex + kdp/metadata.md (pages={pages}, spine={pages*SPINE_PER_PAGE:.4f}in)")
+        write_ebook_cover(pages)
     else:
         write_metadata(0)
         print("wrote kdp/metadata.md (run again with --pages N after building interior)")

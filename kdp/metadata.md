@@ -51,14 +51,18 @@ Narrated as a pirate broadcast from Spaceship Alpha 9, *The Last Human CEO* is a
 - File: cover.pdf (single PDF, fonts embedded)
 
 ## eBook
-- the-last-human-ceo.epub (reflowable EPUB3; Kindle accepts EPUB)
+- the-last-human-ceo.epub (reflowable EPUB3, epubcheck-clean; cover image embedded; Kindle accepts EPUB)
+- ebook-cover.jpg (1650 x 2550 px, RGB JPEG — upload to KDP eBook > Cover)
 
 ## Artifacts in this folder
 - `interior.pdf` — print interior (upload to KDP Paperback > Manuscript)
 - `cover.pdf` — print wraparound cover (upload to KDP Paperback > Cover)
 - `the-last-human-ceo.epub` — eBook (upload to KDP eBook > Manuscript)
+- `ebook-cover.jpg` — eBook marketing cover (upload to KDP eBook > Cover)
 - `interior.tex`, `cover.tex` — sources (regenerate via typeset/build_kdp.py)
 
-> NOTE: Replace the ISBN placeholder on the copyright page if you use your own
-> ISBN; KDP can also assign a free one. Update the spine width and re-run the
-> cover build if the final page count changes.
+> NOTE: The copyright page intentionally omits the ISBN — KDP assigns a free
+> ISBN at publish time and prints it in the back-cover barcode. If you bring
+> your own ISBN, add it to the copyright page in typeset/build_kdp.py and
+> rebuild. Update the spine width and re-run the cover build if the final
+> page count changes.

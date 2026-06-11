@@ -10,3 +10,4 @@ typeset/chapters_content.tex
 *.pdf
 kdp/*.epub
 kdp/_epub/
+kdp/*.jpg
