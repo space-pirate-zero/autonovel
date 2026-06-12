@@ -14,3 +14,6 @@ kdp/*.jpg
 art/cover/wrap_*.png
 .DS_Store
 substack_cookies.json
+art/tabloids/tabloid-*.png
+art/tabloids/art_sheet.pdf
+art/cover/art_sheet.pdf

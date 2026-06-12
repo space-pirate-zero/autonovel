@@ -45,3 +45,14 @@
 - Old pinwheel-void cover art gitignored (art/cover/wrap_*.png), tabloid assets tracked.
 - WATCH: run builds from repo root — cd kdp persists across Bash calls and silently breaks
   typeset/build_kdp.py invocations.
+
+## 2026-06-11 — Ten vintage tabloid covers (press-clippings dossier)
+- typeset/build_tabloids.py: parameterized generator -> art/tabloids/tabloids.pdf,
+  ten 8.5x11 scandal-mag covers charting Cope's arc (Aug 2027 -> Oct 2029), one per
+  headline. Rotating mastheads (Boardroom Confidential, Hush-Hush, Inside Story, Top
+  Secret, Whisper, Photoplay Confessions, The National Ledger, Commerce Gazette,
+  Lowdown, Exposed!). All type live (Impact/Arial/American Typewriter); fit() auto-
+  shrinks single-line headlines (0.46em/char Impact heuristic).
+- 4 new Gemini assets in art/tabloids/: cope_mirror, cope_weep, plane_girl, margaux
+  (color movie-mag). GOTCHA: python non-raw "\textemdash" in specs = TAB+extemdash;
+  use r-strings or --- ligatures in spec text.
