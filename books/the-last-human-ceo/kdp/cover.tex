@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[paperwidth=12.9143in,paperheight=9.2500in,margin=0in]{geometry}
+\usepackage{fontspec}
+\setmainfont{EBGaramond-VF.ttf}[Path=../typeset/fonts/, ItalicFont=EBGaramond-Italic-VF.ttf, Numbers=OldStyle, Ligatures=TeX]
+\newfontfamily\arial{Arial}[Ligatures=TeX]
+\newfontfamily\ablack{Arial Black}[Ligatures=TeX]
+\newfontfamily\atype{American Typewriter}[Ligatures=TeX]
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\definecolor{coverblack}{HTML}{0A0A0B}
+\definecolor{cream}{HTML}{ECE6D6}
+\definecolor{wireblue}{HTML}{9CC0E8}
+\pagestyle{empty}
+\begin{document}\noindent
+\begin{tikzpicture}[x=1in,y=1in,every node/.style={inner sep=0pt,outer sep=0pt}]
+\fill[coverblack] (0.0000,0.0000) rectangle (12.9143,9.2500);
+\node[anchor=south west,inner sep=0pt] at (6.7893,0.0000) {\includegraphics[width=6.1250in,height=9.2500in]{../art/cover_front_master.png}};
+\node[text=cream,align=center] at (9.7893,8.0700) {\arial\fontsize{25}{27}\selectfont THE {\ablack LAST} HUMAN CEO};
+\node[text=wireblue] at (9.7893,7.6100) {\arial\fontsize{11}{12}\selectfont A NOVEL};
+\node[text=cream] at (9.7893,1.0500) {\arial\fontsize{13}{14}\selectfont SPACE PIRATE ZERO};
+\node[rotate=-90,text=cream] at (6.4572,4.6250) {\arial\fontsize{12}{12}\selectfont THE LAST HUMAN CEO};
+\node[rotate=-90,text=wireblue] at (6.4572,1.0750) {\arial\fontsize{9}{9}\selectfont SPACE PIRATE ZERO};
+\draw[wireblue,line width=0.6pt] (0.5750,8.4500) -- (5.6750,8.4500);
+\node[anchor=north west,text=cream,align=left,text width=4.45in] at (0.5750,8.1700) {\atype\fontsize{9}{13.5}\selectfont RATIONALE: No comment is required; the following is accurate to the record. It is 2027, and the boards have done the math. Prescott `Cope' Mercer IV --- fourth-generation Atlanta heir, charmer, cokehead --- is the last human CEO in the consumer economy. An unkillably honest machine named Darlene is moving into his chair, and then into his company, his marriage, and the one all-night refuge he thought was his. He launches a manic crusade to prove a human still belongs at the top --- right until the machine, doing nothing but its dull honest job, opens the drawer where he buried the thing that got two people killed. A tragic dark comedy about the last man to confuse a throne for a soul. This communication seeks no response.};
+\node[anchor=south west,text=wireblue] at (0.5750,0.4200) {\arial\fontsize{8}{9}\selectfont FICTION / LITERARY \textbullet{} SPACESHIP ALPHA 9};
+\fill[white] (3.7500,0.4250) rectangle (5.7500,1.8250);
+\node[text=black] at (4.7500,1.1250) {\tiny barcode area};
+\pgfresetboundingbox\path (0.0000,0.0000) rectangle (12.9143,9.2500);
+\end{tikzpicture}
+\end{document}

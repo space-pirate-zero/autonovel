@@ -20,3 +20,6 @@ build/*.tex
 substack/cards/*.png
 substack_cookies.json
 substack/preview/
+
+# macOS
+.DS_Store

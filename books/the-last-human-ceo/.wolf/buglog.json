@@ -1,0 +1,103 @@
+{
+  "bugs": [
+    {
+      "date": "2026-06-10",
+      "error_message": "cover.pdf compiled to 2 pages (page 1 blank); pdftoppm rendered blank white",
+      "root_cause": "TikZ bounding box grew past the exact-page size: first from stroke half-width of full-bleed rules (0.4pt overhang), then from a full-bleed \\includegraphics node's default outer sep (0.2pt). Inline tikzpicture taller than \\textheight spills to page 2.",
+      "fix": "Mark decorative full-bleed elements [overlay]; in the tabloid cover, end the picture with \\pgfresetboundingbox\\path (0,0) rectangle (W,H); so the bbox is exact regardless of overhang.",
+      "tags": [
+        "tikz",
+        "cover",
+        "kdp",
+        "bounding-box",
+        "tectonic"
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "error_message": "Literal '> ' glyphs typeset in print (ch_18 debate, ch_27 letter); 40 lines affected",
+      "root_cause": "build_kdp.py body_to_tex only handled the opener transmission blockquote; mid-body markdown blockquotes passed through as plain text.",
+      "fix": "body_to_tex groups consecutive '>' lines into a machineblock list environment (small, indented both sides).",
+      "tags": [
+        "typesetting",
+        "markdown",
+        "blockquote"
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "error_message": "Drop cap overprinted following paragraph on ~12 chapter openers; coda opener line overflowed margin in small caps",
+      "root_cause": "lettrine shapes only one paragraph; openers shorter than 3 lines collide. Single-letter first words ('A') made rest.find(' ')==0 so the whole paragraph landed in lettrine's small-caps arg.",
+      "fix": "drop_cap joins short openers into one TeX paragraph via \\hfill\\break + indent; single-letter first word gets empty word_rest.",
+      "tags": [
+        "lettrine",
+        "drop-cap",
+        "typesetting"
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "error_message": "fontspec error: WordSpace cannot be used in \\addfontfeatures",
+      "root_cause": "WordSpace is a load-time-only fontspec feature.",
+      "fix": "Define a dedicated \\newfontfamily with WordSpace at declaration.",
+      "tags": [
+        "fontspec",
+        "fonts"
+      ]
+    },
+    {
+      "date": "2026-06-11",
+      "error_message": "fal.ai 401 Unauthorized on art generation",
+      "root_cause": ".env FAL_KEY was the literal placeholder 'your-fal-...'; never configured.",
+      "fix": "Added Gemini backend (gen_art.py gemini_generate + art_generate/art_edit dispatch, ART_BACKEND auto-select); GEMINI_API_KEY in .env.",
+      "tags": [
+        "api",
+        "gen-art",
+        "gemini",
+        "fal"
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "error_message": "KDP cover.pdf back-cover and metadata.md/epub description carried pre-revision content: AI named 'Marcus' and a 'THIRTY MONTHS! IS THAT ALL THEY COST?' chip from the deleted prison arc.",
+      "root_cause": "Sales/marketing copy is hardcoded in typeset/build_kdp.py (back-cover TikZ blurb ~L437, prison chip ~L442, epub_meta desc ~L536, metadata.md desc ~L577) and was never updated during the full re-vision to the Atlanta/Darlene/suicide story.",
+      "fix": "Updated all four strings in build_kdp.py: Marcus->Darlene, replaced prison chip with 'WIFE LEAVES HIM FOR A ROBOT!', added Atlanta + the wife/refuge losses; regenerated metadata.md/epub + recompiled cover.",
+      "tags": [
+        "kdp",
+        "metadata",
+        "cover",
+        "re-vision",
+        "stale-copy"
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "error_message": "KDP cover rejected: 'expected cover size is 13.018x9.250 but the submitted file size is 12.102x8.750'",
+      "root_cause": "build_kdp.py trim/paper constants (5.5x8.5 cream, spine .0025) did not match the KDP product-listing selection (6x9 white). KDP derives the expected full-cover size from the dashboard trim+paper plus the uploaded interior's page count, so a correct-geometry cover is rejected when the listing differs from the build target.",
+      "fix": "Decode expected size to identify the listing config: height-0.25 => trim height (9.25-0.25=9 -> 6x9); spine=width-0.25-2*trimW (13.018-0.25-12=0.768); spine/pages=rate (0.768/341=.002252 -> white). Set TRIM_W/H=6/9, PAPER=white, SPINE_PER_PAGE=0.002252; rebuild interior (reflowed 341pp->295pp at 6x9), then cover --pages 295. New cover 12.914x9.250 matches KDP. Re-upload BOTH interior and cover (page count changed). Gutter 0.875 still exceeds KDP min at 295pp.",
+      "tags": [
+        "kdp",
+        "cover",
+        "trim-size",
+        "paper",
+        "spine",
+        "size-mismatch",
+        "reflow"
+      ]
+    },
+    {
+      "date": "2026-06-29",
+      "error_message": "kdp/metadata.md committed with 'Page count: 0' and 'Spine width: 0.0000 in' despite running build_kdp.py --pages 295",
+      "root_cause": "main() in typeset/build_kdp.py had an if/else where the else branch called write_metadata(0) whenever --epub was absent. With '--pages 295' (no --epub), it first wrote correct metadata then the else branch immediately clobbered it back to pages=0. So metadata was only correct if --epub was also passed.",
+      "fix": "Restructured main(): write placeholder write_metadata(0) only when `not pages`; build_epub() runs independently under `if --epub`. Now '--pages N' finalizes metadata regardless of --epub. Also made the ebook-cover px line in metadata computed (int(TRIM_W*300) x int(TRIM_H*300)) instead of hardcoded 1650x2550.",
+      "tags": [
+        "kdp",
+        "build_kdp.py",
+        "metadata",
+        "page-count",
+        "spine",
+        "cli-flags"
+      ]
+    }
+  ]
+}
