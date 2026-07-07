@@ -1,0 +1,47 @@
+{
+  "bugs": [
+    {
+      "date": "2026-06-05",
+      "error_message": "API 400 invalid_request_error: '`temperature` is deprecated for this model.' (claude-opus-4-8). Every draft_chapter/evaluate/review call exit 1.",
+      "root_cause": "autonovel scripts were written for Sonnet and pass a 'temperature' field in the /v1/messages payload. Opus 4.8 rejects 'temperature'. After switching all models to claude-opus-4-8, every API call 400'd.",
+      "fix": "Removed the 'temperature' line from every script payload (sed over *.py). Also made draft_chapter.call_writer raise resp.text on non-200 so the real API error is visible instead of a bare raise_for_status.",
+      "tags": [
+        "anthropic-api",
+        "opus-4-8",
+        "temperature",
+        "400",
+        "autonovel",
+        "model-migration"
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "error_message": "Polish pass damaged prose: ch_16 left with an orphaned em-dash line (' \u2014 *none but ourselves can free our minds.*'), dropped GHOST dialogue, and empty '**' markers; novel_score regressed 8.0 -> 7.0 in revision cycle 5.",
+      "root_cause": "apply_cuts.py (mechanical OVER-EXPLAIN/REDUNDANT span deletion) and the per-cycle/per-review 'mechanical cleanup' step are NOT gated by per-chapter re-eval and are tuned for prose fiction. On this format-heavy book they delete spans, leaving dangling markdown and incoherent fragments. The full-novel judge score is too coarse to catch single-chapter breakage, so damage was committed under a passing cycle score.",
+      "fix": "Killed the pass; reset prose chapters to the cycle-4 peak commit 7c9a2f8 (novel_score 8.0); hand-repaired ch_16's two cut passages; ran a precise odd-'**'/orphan scan (0 flags); rebuilt all formats. For future polish runs: exclude the appendices and skip apply_cuts, or gate every mechanical edit with a per-chapter re-eval+revert.",
+      "tags": [
+        "autonovel",
+        "apply_cuts",
+        "revision",
+        "prose-damage",
+        "opus-4-8",
+        "regression"
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "error_message": "KDP paperback rejected: 'This text is outside the margins' (p13) + 'Insufficient gutter ... require at least 0.5\"' (p118,140).",
+      "root_cause": "convert_equations.py rewrote some formula lines to $$...$$ but several were INSIDE ``` code fences (ch_10 Score/I_v, ch_11 D_audit, ch_12 T_r, ch_01 R_ext/A_hl). pandoc rendered them as verbatim -> literal '$$' text that can't wrap -> ran past the 6in text block into the gutter/margin. (Also affected designed PDF + epub.)",
+      "fix": "Unwrap-script removed the code fences around single-equation blocks -> real display math. eqbox redefined to scale wide equations with adjustbox(max width). Print preamble hardened: fvextra breaklines, ragged headings, small longtables, emergencystretch, hidelinks. Result: 0 overfull hboxes; epubcheck clean.",
+      "tags": [
+        "kdp",
+        "paperback",
+        "pandoc",
+        "code-fence",
+        "display-math",
+        "overfull",
+        "margins"
+      ]
+    }
+  ]
+}

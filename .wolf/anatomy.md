@@ -1,42 +1,41 @@
-# Anatomy — autonovel (branch: autonovel/digital-insurgency)
+# Anatomy — autonovel (monorepo of books)
 
 Map of the project. Check this before reading project files.
 
 ## What this repo is
-An autonomous novel-writing pipeline (seed → foundation → drafts → revision →
-export). Framework lives on `master`; each book is a branch. This branch is
-**Digital Insurgency** — a business × cyberpunk × spec-ops field manual.
+An autonomous book-writing pipeline (seed → foundation → drafts → revision →
+export). **As of the consolidation, `master` is a monorepo of books.** Each book
+is a self-contained folder under `books/` carrying its own copy of the pipeline
+tooling, foundation docs, chapters, and build artifacts. There is no longer a
+shared framework at the repo root — the root holds only book-agnostic config.
 
-## Foundation layer (the five co-evolving docs the tools read)
-- `voice.md`   — Part 1 universal anti-slop guardrails; Part 2 the SPZ voice.
-- `world.md`   — 2027 cyberpunk Atlanta, PRISM, the Mesh, locations, the physics.
-- `characters.md` — ZERO, GHOST, BISHOP, REAPER, COUNCIL + supporting cast.
-- `outline.md` — Prologue + 16 chapters + appendices; beats; foreshadow ledger.
-- `canon.md`   — hard facts + the 24 equations (evaluator constraints).
-- `influences.md` — NEW layer: real figures (Wilde, Che, HST, Diogenes, Musashi,
-  Mamdani, …) wired into `draft_chapter.py`. Used heavily, honestly.
-- `seed.txt`   — master brief + the Chapter Format Template.
+## Books (under `books/`)
+- `books/digital-insurgency/` — **Digital Insurgency**: business × cyberpunk ×
+  spec-ops field manual. Was `master`/`autonovel/digital-insurgency`.
+- `books/the-last-human-ceo/` — **The Last Human CEO**. Was
+  `autonovel/the-last-human-ceo`. (A film/script `studio` treatment lives on the
+  `autonovel/studio` branch, derived from this book.)
+- `books/zero-trust-reality/` — **Zero Trust Reality**: nonfiction. Was
+  `autonovel/zero-trust-reality`.
+- `books/neko-death-cult/` — **Neko Death Cult**: gonzo time-slip cyberpunk;
+  audio/album project (~377 MB of mp3/wav under `audio/`). Was previously only
+  uncommitted work in a worktree; now committed here.
 
-## Chapters
-`chapters/ch_00.md` = Prologue (front matter). `ch_01..ch_16` = numbered chapters.
-ch_04, ch_05 = full v0 drafts. Rest = scaffolds (full v0 prose for 6-16 in the
-original brief, importable on request). Prologue + Ch1-3 originals in an external
-.docx not in repo.
+## Per-book shape
+Each folder repeats the pipeline shape (evolved per book): foundation docs
+(`voice.md`, `world.md`, `characters.md`, `outline.md`, `canon.md`), `chapters/`,
+Python tooling (`run_pipeline.py`, `draft_chapter.py`, `evaluate.py`, `gen_*.py`,
+`build_*.py`), and per-book `PIPELINE.md` / `WORKFLOW.md`. Read a given book's own
+`README.md`/`PIPELINE.md` before diving in — details differ per book.
 
-## Key tools (Python; run via `uv run python <tool>.py`)
-- `run_pipeline.py` — orchestrator (phases: foundation/drafting/revision/export).
-- `draft_chapter.py` — drafts one chapter; EDITED for this book + loads influences.md.
-- `evaluate.py` — mechanical slop scorer + LLM judge.
-- `review.py`, `reader_panel.py`, `adversarial_edit.py`, `apply_cuts.py`,
-  `gen_brief.py`, `gen_revision.py` — revision loop.
-- art: `gen_art*.py`, `gen_cover*.py`; audiobook: `gen_audiobook*.py`; export:
-  `build_outline.py`, `build_arc_summary.py`, `typeset/`.
+## Root (shared, book-agnostic)
+- `.env.example` — API keys template (`ANTHROPIC_API_KEY` required; fal.ai +
+  ElevenLabs optional).
+- `pyproject.toml`, `uv.lock`, `.python-version` — Python env (uv).
+- `.wolf/` — OpenWolf context.
+- `README.md` — monorepo overview + shared pipeline design.
 
-## State
-`state.json` — phase=drafting, chapters_total=16, chapters_drafted=0. See its
-`notes` array for the two run paths and the DO-NOT-regenerate-foundation warning.
-
-## Config
-`.env` (gitignored) needs `ANTHROPIC_API_KEY`
-(https://console.anthropic.com/settings/keys). `AUTONOVEL_BOOK_TITLE` set.
-fal.ai + ElevenLabs optional. `.env.example` is the committed template.
+## Branch archives
+Original per-book branches are retained as full-history archives:
+`autonovel/digital-insurgency`, `autonovel/the-last-human-ceo`,
+`autonovel/zero-trust-reality`, `autonovel/studio`, `autonovel/bells`.

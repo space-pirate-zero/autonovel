@@ -1,0 +1,1369 @@
+{
+  "_schema": "autonovel-studio/breakdown@1",
+  "chapter": 1,
+  "title": "Chapter 1 \u2014 The Premium Blend",
+  "style_profile": "cinematic",
+  "scenes": [
+    {
+      "id": "ch01-sc01",
+      "heading": "EXT. SALVAGE DECKS - TRANSMISSION",
+      "location": "SALVAGE_DECKS",
+      "summary": "Space Pirate Zero tunes in the audience and frames the tale of woe.",
+      "shots": [
+        {
+          "id": "ch01-sc01-sh01",
+          "description": "Static-laced screen flickers; a ruined salvage deck glows behind a lone figure leaning toward an old set.",
+          "characters": [
+            "SPACE_PIRATE_ZERO"
+          ],
+          "camera": "WIDE establishing through static",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "SPACE_PIRATE_ZERO",
+              "text": "Pull your chair in close to the set, friend, and never mind the static \u2014 out here on the salvage decks the static is most of what's left, and the rest is the story I've been waiting for somebody to tune in and hear."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc01-sh02",
+          "description": "Close on Space Pirate Zero's face lit by screen-glow, warning of woe.",
+          "characters": [
+            "SPACE_PIRATE_ZERO"
+          ],
+          "camera": "CU, slow push-in",
+          "est_seconds": 9,
+          "dialogue": [
+            {
+              "character": "SPACE_PIRATE_ZERO",
+              "text": "It is a tale of woe. I'll tell you that up front, the way an honest man tells you the dog dies, because you should know going in what you're spending your evening on."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc01-sh03",
+          "description": "Ghostly overlay on the static: a man lifting an award to the light in a glittering ballroom.",
+          "characters": [
+            "SPACE_PIRATE_ZERO"
+          ],
+          "camera": "Match-dissolve overlay",
+          "est_seconds": 10,
+          "dialogue": [
+            {
+              "character": "SPACE_PIRATE_ZERO",
+              "text": "It opens, as the good woeful ones do, at a party: a man handed an award for being the last of his kind, lifting it to the light, reading the engraving as a coronation when it is, in every line, a death certificate with generous margins."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc01-sh04",
+          "description": "Space Pirate Zero gestures at the dark, the count of thirty-one machines hanging in the air.",
+          "characters": [
+            "SPACE_PIRATE_ZERO"
+          ],
+          "camera": "MEDIUM, firelight flicker",
+          "est_seconds": 11,
+          "dialogue": [
+            {
+              "character": "SPACE_PIRATE_ZERO",
+              "text": "Thirty-one of the hundred have already handed the chair to the machine. Our man toasts the eleven who haven't, and mistakes a countdown for an ovation, and I am going to tell you the whole of how he got from that ballroom to the dark at the bottom, all of it, because someone should, and you are the only one still listening."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc01-sh05",
+          "description": "Space Pirate Zero leans in conspiratorially; the transmission ID flickers across the screen.",
+          "characters": [
+            "SPACE_PIRATE_ZERO"
+          ],
+          "camera": "CU into static cut",
+          "est_seconds": 6,
+          "dialogue": [
+            {
+              "character": "SPACE_PIRATE_ZERO",
+              "text": "So lean in. Stay with me. Watch what he does now."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch01-sc02",
+      "heading": "INT. CONRAD VANCE BALLROOM - NIGHT",
+      "location": "Conrad Vance Ballroom, Atlanta hotel",
+      "summary": "Cope accepts the Steward of the Year award and delivers a triumphant toast as the room rises, half-aware the citation is an obituary.",
+      "shots": [
+        {
+          "id": "ch01-sc02-sh01",
+          "description": "Cope holds a crystal obelisk up to the chandelier light, the city of nine hundred guests beyond him.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "WIDE establishing from the floor, low angle",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "My great-grandfather Aldous used to say a man's worth is three things."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh02",
+          "description": "CU on the obelisk swinging the light around in Cope's hand.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "CU on hands and crystal",
+          "est_seconds": 7,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "What he builds. What he keeps. And what he's willing to lose to keep it."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh03",
+          "description": "Cope at the lectern, overexposed glaze on the room, every surface one stop too bright.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MEDIUM, slightly blown-out exposure",
+          "est_seconds": 12,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "Aldous started this company in a town called Defiance, Georgia, with a recipe for mayonnaise his wife wrote on the back of a feed receipt and four hundred borrowed dollars, and tonight a very kind committee has given me a paperweight for being the only one of us left who still has to sleep."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh04",
+          "description": "Warm laughter sweeps the round tables; faces tilt up toward the stage.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "WIDE on audience, slow pan",
+          "est_seconds": 6,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh05",
+          "description": "A lanyard-wearing woman reads the citation card; insert of the engraved words 'the last human chief executive.'",
+          "characters": [
+            "COPE",
+            "MINOR"
+          ],
+          "camera": "OTS to insert of citation",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "MINOR",
+              "text": "The last human chief executive in the consumer Fortune 100, a custodian of the irreplaceable."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh06",
+          "description": "Tight on Cope's eyes, half a second too wide, as the quiet unwelcome report flickers behind the smile.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "ECU on eyes, hold",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh07",
+          "description": "Cope works the crowd on the theme of the machines, surfing a murmur.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MEDIUM, slow push-in",
+          "est_seconds": 13,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "People ask me, they say, Cope \u2014 aren't you afraid? The machines run thirty-one of the hundred now. They run them, and I'll be honest with you, my friends, because honesty is the last luxury good left in this country \u2014 they run some of them well."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh08",
+          "description": "Cope lands the jokes; an empty chair at his own table glimpsed past him.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MEDIUM with empty chair in deep focus",
+          "est_seconds": 10,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "They don't draw a salary you could feed half of Augusta on. They don't have affairs. They don't, the Lord be praised, carry a backswing like mine."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh09",
+          "description": "Cope sets the obelisk on the lectern and takes the long Mercer Inhale; tables stretch out like lit city windows.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "WIDE from behind Cope toward the dark room",
+          "est_seconds": 9,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "So they ask me. Aren't you afraid."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh10",
+          "description": "Insert: the reserved card with Margaux's name in calligraphy on an empty chair.",
+          "characters": [],
+          "camera": "INSERT CU on place card and empty seat",
+          "est_seconds": 5,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh11",
+          "description": "Cope opens his hands to the room, priest to parish, delivering the crescendo.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MEDIUM-WIDE, slow rise",
+          "est_seconds": 15,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "I am not afraid. Because a machine can run a company. I have watched one do it. But it cannot love one. There are things you cannot put a machine in charge of. Grief. Mercy. A christening. Mayonnaise. And, so help me, my friends \u2014 leadership."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh12",
+          "description": "The room rises in ovation; Cope leans a degree into the surf of applause.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "CRANE rising over standing crowd",
+          "est_seconds": 8,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc02-sh13",
+          "description": "Down at the table, Sun Rao claps with her hands and not her eyes, the empty chair beside her.",
+          "characters": [
+            "SUN"
+          ],
+          "camera": "MEDIUM on Sun, applause muffled",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch01-sc03",
+      "heading": "INT. MEN'S ROOM OFF COAT CHECK - NIGHT",
+      "location": "Conrad Vance Ballroom men's room and corridor",
+      "summary": "Cope tips the attendant, takes cocaine in the stall, addresses the mirror, then charms and cards the young coat-check girl before Sun intercepts.",
+      "shots": [
+        {
+          "id": "ch01-sc03-sh01",
+          "description": "Buttery marble restroom; Desmond the attendant nods, Cope presses a folded hundred into his hand.",
+          "characters": [
+            "COPE",
+            "MINOR"
+          ],
+          "camera": "MEDIUM tracking in",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "How's that grandson of yours, Desmond?"
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc03-sh02",
+          "description": "Cope sets his back to the far stall door, ballroom hum dropping away.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "CU on back against door, sound muffling",
+          "est_seconds": 5,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc03-sh03",
+          "description": "Cope draws out the carefully folded paper and lays out a line, neat and practiced.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "CU on hands and folded paper",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [
+            "drugs"
+          ],
+          "render": {
+            "engine": "wan2.2",
+            "kind": "local",
+            "filtered": false,
+            "flags": [
+              "drugs"
+            ],
+            "sensitive": true,
+            "reason": "sensitive content \u2192 first unfiltered preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc03-sh04",
+          "description": "Cope takes the line; his head tips back as the flare goes up the back of his skull.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "ECU, snap rack-focus",
+          "est_seconds": 6,
+          "dialogue": [],
+          "content_flags": [
+            "drugs"
+          ],
+          "render": {
+            "engine": "wan2.2",
+            "kind": "local",
+            "filtered": false,
+            "flags": [
+              "drugs"
+            ],
+            "sensitive": true,
+            "reason": "sensitive content \u2192 first unfiltered preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc03-sh05",
+          "description": "Cope braces both hands on the cold sink and stares at himself in the good mirror.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MIRROR shot, slow push-in",
+          "est_seconds": 9,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc03-sh06",
+          "description": "Tight on the mirrored face, eyes too bright; he whispers his private word.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "ECU on mirror reflection",
+          "est_seconds": 6,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "Watch me."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc03-sh07",
+          "description": "Corridor by the coat check; Cope leans on the counter, full wattage, the young crying coat-check girl beginning to laugh.",
+          "characters": [
+            "COPE",
+            "MINOR"
+          ],
+          "camera": "MEDIUM two-shot",
+          "est_seconds": 10,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "What is a face like that doing handing strangers their coats?"
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc03-sh08",
+          "description": "Cope presses his personal card into Bryce's hand.",
+          "characters": [
+            "COPE",
+            "MINOR"
+          ],
+          "camera": "CU on card changing hands",
+          "est_seconds": 7,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "If you ever want to do something more interesting than this, you call me. I mean it."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc03-sh09",
+          "description": "Sun materializes out of the architecture and lifts a second card from Cope's fingers before he can deed it.",
+          "characters": [
+            "COPE",
+            "SUN"
+          ],
+          "camera": "MEDIUM, Sun steps into frame",
+          "est_seconds": 7,
+          "dialogue": [
+            {
+              "character": "SUN",
+              "text": "The car's up."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch01-sc04",
+      "heading": "INT. CAR ON PEACHTREE - NIGHT",
+      "location": "Cope's car, Peachtree Street, Atlanta",
+      "summary": "Cope spins his Human Premium manifesto while Sun warns him about sleep, about Tidewater's coming 13D, and about the name he must not say.",
+      "shots": [
+        {
+          "id": "ch01-sc04-sh01",
+          "description": "Interior of the moving car; Cope sprawled and lit, Sun tired in the front, city orange across her empty lenses.",
+          "characters": [
+            "COPE",
+            "SUN"
+          ],
+          "camera": "WIDE car interior, city lights streaking",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "You moved a hand. On cheaper than a man. I caught it. That was you wanting to cut the line."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh02",
+          "description": "Sun in profile, glasses up in her hair, the limestone tower rising lit ahead through the windshield.",
+          "characters": [
+            "SUN"
+          ],
+          "camera": "MEDIUM profile, tower in background",
+          "est_seconds": 9,
+          "dialogue": [
+            {
+              "character": "SUN",
+              "text": "Frade will run that clip on a loop. 'Cheaper than a man.' You gift-wrapped him a chyron."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh03",
+          "description": "Cope thumbs his scalding phone, three turns down the road from her.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "CU on phone-lit face",
+          "est_seconds": 10,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "Let him have it. People are sick to death of cheaper. People are starving for better. What if that's the whole campaign, Sun. Human. Lead with the word. A premium product at a premium \u2014"
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh04",
+          "description": "Sun turns to him, flat.",
+          "characters": [
+            "SUN",
+            "COPE"
+          ],
+          "camera": "OTS on Sun",
+          "est_seconds": 6,
+          "dialogue": [
+            {
+              "character": "SUN",
+              "text": "You haven't slept."
+            },
+            {
+              "character": "COPE",
+              "text": "I slept."
+            },
+            {
+              "character": "SUN",
+              "text": "Tuesday you told me you'd played the back nine of consciousness."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh05",
+          "description": "A bus shelter slides past wearing a Praxis ad \u2014 wordmark and 'Leadership as a service' / 'No off-sites.'",
+          "characters": [],
+          "camera": "INSERT tracking past bus shelter ad",
+          "est_seconds": 6,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh06",
+          "description": "Cope nods at the passing ad through the glass.",
+          "characters": [
+            "COPE",
+            "SUN"
+          ],
+          "camera": "MEDIUM two-shot",
+          "est_seconds": 7,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "They're buying bus shelters now. For whom. Who closes at a bus shelter."
+            },
+            {
+              "character": "SUN",
+              "text": "Boards read bus shelters. Boards' wives do."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh07",
+          "description": "At the red light a teenage water boy in a hoodie holds a case of bottled water up against the back glass.",
+          "characters": [],
+          "camera": "POV through back window at water boy",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh08",
+          "description": "Cope buzzes the glass down, takes two bottles, and presses a fold of bills into the kid's hand, full wattage.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MEDIUM through open window",
+          "est_seconds": 9,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "Keep the case, champ, keep all of it, what's your name."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh09",
+          "description": "The water boy clocks Cope flat and quick, pockets the money, and moves up the lane.",
+          "characters": [],
+          "camera": "CU on the boy's appraising face, then he turns away",
+          "est_seconds": 7,
+          "dialogue": [
+            {
+              "character": "MINOR",
+              "text": "'preciate it."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh10",
+          "description": "Glass up; Sun fixes him, briefing in threes.",
+          "characters": [
+            "SUN",
+            "COPE"
+          ],
+          "camera": "MEDIUM on Sun, deliberate",
+          "est_seconds": 14,
+          "dialogue": [
+            {
+              "character": "SUN",
+              "text": "Cope. Monday. We have to talk about Monday before it's Monday."
+            },
+            {
+              "character": "COPE",
+              "text": "I love a Monday."
+            },
+            {
+              "character": "SUN",
+              "text": "Tidewater's at four and a half. They cross five this week and the file isn't a rumor, it's a 13D, and the 13D names a successor, and the successor is a machine. Decide who you are this weekend. Please. Not Monday."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh11",
+          "description": "Cope, radiant and oblivious, lets a drowned name surface.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "CU, dreamy",
+          "est_seconds": 7,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "Renata used to say I do my best thinking on a Saturday."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh12",
+          "description": "Sun goes very still in the front seat, then answers level.",
+          "characters": [
+            "SUN"
+          ],
+          "camera": "CU on Sun, frozen",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "SUN",
+              "text": "You don't say that name in a car, Cope. You don't say it anywhere. We have been over this."
+            },
+            {
+              "character": "COPE",
+              "text": "Said what name."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh13",
+          "description": "Cope steps lightly over the word 'thing,' already gone back into the glass.",
+          "characters": [
+            "COPE",
+            "SUN"
+          ],
+          "camera": "MEDIUM two-shot, his phone glowing",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "Drop me at the office. I'm not going to Buckhead, the house is \u2014 Margaux's got her thing. I'll work. I think better up high."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc04-sh14",
+          "description": "Sun holds his eyes in the mirror one beat too long; he gives her the whole smile and she decides not to fight.",
+          "characters": [
+            "COPE",
+            "SUN"
+          ],
+          "camera": "MIRROR shot on both",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch01-sc05",
+      "heading": "INT. THE AERIE, PRAXIS HQ - 1 AM",
+      "location": "PRAXIS_HQ",
+      "summary": "Alone in the dark office, Cope worships the lit city, brushes against the buried Hearthstone memory, takes another line, communes with the certified number, and writes the first line of his manifesto.",
+      "shots": [
+        {
+          "id": "ch01-sc05-sh01",
+          "description": "Dark office, lit city beyond the glass like a circuit diagram; Cope at the window, tie undone, obelisk in hand.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "WIDE silhouette against the city",
+          "est_seconds": 9,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh02",
+          "description": "Cope turns the obelisk; the city breaks through the cut crystal into fragments and reassembles.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "CU through the obelisk, refracted city",
+          "est_seconds": 8,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh03",
+          "description": "The museum-suite behind him: Pres III in oils, the putter in its brass cradle, the boyhood photo of Cope arm-deep in a mayonnaise vat.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "SLOW PAN across portraits and relics",
+          "est_seconds": 11,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh04",
+          "description": "Cope stands at the mouth of a black, breathing hallway; cold seems to come off it as the Hearthstone memory surfaces.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MEDIUM, dark corridor in deep focus",
+          "est_seconds": 9,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh05",
+          "description": "He turns from the dark hall as the manifesto surges back warm; the moment seals over.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "TRACKING as he turns toward the desk",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh06",
+          "description": "Cope sits at his father's desk and opens the second drawer with the false back.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "CU on drawer and false back",
+          "est_seconds": 6,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh07",
+          "description": "He sets himself up again, neat and quick, and takes another line in the dark office.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "ECU on the desk, low light",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [
+            "drugs"
+          ],
+          "render": {
+            "engine": "wan2.2",
+            "kind": "local",
+            "filtered": false,
+            "flags": [
+              "drugs"
+            ],
+            "sensitive": true,
+            "reason": "sensitive content \u2192 first unfiltered preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh08",
+          "description": "Cope sits back, the certified number sitting in his chest like a second colder heart; he looks almost well.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MEDIUM, held still in low light",
+          "est_seconds": 9,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh09",
+          "description": "Insert: thumbs typing on the phone screen in the dark, the manifesto's first line appearing.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "INSERT CU on phone screen text",
+          "est_seconds": 10,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "They will tell you a company is a machine. I am here to tell you it is a family that happens to make mayonnaise, and you cannot fire your way to a family, and you cannot compute your way to a soul."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc05-sh10",
+          "description": "The father's empty chair at the head of the table, turned a few degrees out as though just vacated; Pres III watches from oils.",
+          "characters": [],
+          "camera": "WIDE on empty chair and portrait",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "NARRATOR",
+              "text": "You'll get the company because you're a Mercer. Not because you're good."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch01-sc06",
+      "heading": "INT. WAFFLE HOUSE ON PONCE - 3 AM",
+      "location": "WAFFLE_HOUSE",
+      "summary": "Cope arrives at the one room that asks nothing of him; Darlene the overnight waitress knows his order, calls him baby, and the wattage finally switches off.",
+      "shots": [
+        {
+          "id": "ch01-sc06-sh01",
+          "description": "Cope steps in out of the dark; yellow Waffle House sign glowing, flattop steam, the wattage visibly switching off in his face.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "WIDE establishing through the door",
+          "est_seconds": 9,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc06-sh02",
+          "description": "Interior tableau: cook scraping the flattop, a kid asleep upright in a back booth, a sheriff's deputy with coffee.",
+          "characters": [
+            "COPE",
+            "MINOR"
+          ],
+          "camera": "SLOW PAN across the counter and booths",
+          "est_seconds": 8,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc06-sh03",
+          "description": "Cope sits at the far end of the counter, shoulders down, nobody to play it for.",
+          "characters": [
+            "COPE"
+          ],
+          "camera": "MEDIUM down the counter",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc06-sh04",
+          "description": "Darlene sets down black coffee without being asked, steam standing straight up in the cold fluorescent air.",
+          "characters": [
+            "COPE",
+            "DARLENE_WAFFLE"
+          ],
+          "camera": "CU on cup and steam, then up to Darlene",
+          "est_seconds": 8,
+          "dialogue": [
+            {
+              "character": "DARLENE_WAFFLE",
+              "text": "Long night, baby?"
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc06-sh05",
+          "description": "Cope answers her, both exactly right and exactly wrong; warm fluorescent light on his tired face.",
+          "characters": [
+            "COPE",
+            "DARLENE_WAFFLE"
+          ],
+          "camera": "MEDIUM two-shot across counter",
+          "est_seconds": 6,
+          "dialogue": [
+            {
+              "character": "COPE",
+              "text": "Beginning of one."
+            }
+          ],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc06-sh06",
+          "description": "Out past the plate glass the sky over Ponce goes the gray of a screen with no signal yet.",
+          "characters": [],
+          "camera": "WIDE through window to dawn sky",
+          "est_seconds": 7,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        },
+        {
+          "id": "ch01-sc06-sh07",
+          "description": "Cope drinks his coffee in the one warm lit human box against the dark, not sleeping, not knowing.",
+          "characters": [
+            "COPE",
+            "DARLENE_WAFFLE"
+          ],
+          "camera": "SLOW PULL-OUT to the lit diner in the dark city",
+          "est_seconds": 10,
+          "dialogue": [],
+          "content_flags": [],
+          "render": {
+            "engine": "seedance2",
+            "kind": "cloud",
+            "filtered": true,
+            "flags": [],
+            "sensitive": false,
+            "reason": "clean content \u2192 first preferred engine"
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "scenes": 6,
+    "shots": 58,
+    "sensitive_shots": 3,
+    "est_runtime_seconds": 476,
+    "unknown_characters": []
+  }
+}
