@@ -183,3 +183,22 @@ counts and finds his own name on a 25th door — he's Door Zero; sealed door now
   the harness won't notify. Launch as a plain run_in_background command.
 - Next: Ep13 Lenny Bruce, Ep14 Sid Vicious, Ep15 Heath Ledger, Ep16 Amy Winehouse (Act II close,
   Door-16 = Kat's "one more jump and I'm gone" confession per characters.md). Then Act III 17-24.
+
+## 2026-07-07 (cont) — SEASON TWO "The Mastery" (Eps 9-16) COMPLETE
+Act II fully produced. New this batch: Ep13 Lenny Bruce "Held in Contempt" (invoice-don't-ban;
+the modern censorship is attrition) 23.8m; Ep14 Sid Vicious "Cash from Chaos" (manufactured
+rebellion; SPZ's own punk jacket came off the same rail) 24.6m; Ep15 Heath Ledger "The Mask Eats
+the Man" (disappear-into-the-role = Kat dissolving into signal; she asks him not to follow) 24.2m;
+Ep16 Amy Winehouse "One Jump Left" (LOAD-BEARING Act II finale: 27-club = scheduled shelf-life;
+Kat's CONFESSION — one jump left, spent dying in his arms in Seattle; forbids the sealed-door
+shortcut; extracts the Act III promise = SURVIVE ME, don't go dark. That promise is why the show exists).
+- GOTCHA (logged): never put a foreign bed-keyword (e.g. "dread") in a DIFFERENT bed's cue text —
+  assemble.py bed_for() matches BEDMAP order (vault,cathedral,motel,dread,cosmic,europa,outro,theme),
+  so "EUROPA — ... dread" wrongly maps to motel. Fixed ch_13 (dread→rain).
+- Credits: user reports 435k remaining (plenty; ~15 eps). Stopped watching for refusals.
+- ACT III (17-24) SCOUTED but NOT requested (user said "act 2"). Plan: 17 MJ (rewind fails),
+  18 Hunter S Thompson (sealed-door temptation peaks), 19 Davos (LOAD-BEARING: Cult takes contracts
+  from the system — beige's quality control, not cure; first recipe he authors), 20 Dubai (refuses a
+  reap), 21 GG Allin (nihilism out/punk in; turn to the light), 22 River Phoenix (beige hereditary;
+  Kat's last solid night), 23 Sealed Door (LOAD-BEARING), 24 Door Zero (LOAD-BEARING finale: refusal;
+  he becomes the whisper toward signal; dawn at Europa; mirrors Door 1).

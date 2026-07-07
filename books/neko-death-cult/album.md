@@ -94,7 +94,19 @@ stepping through the instrumental, not buried under the vocal.
 - **T12 Europa/reveal:** SPZ — *"I counted the doors, the way she told me. And one of them was
   mine."* · Kat — *"When the kind one lights up, count the doors."* · Kat — *"It's the best
   morning I've had in a hundred years. You finally know I'm real."*
-- **T13–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
+- **T13 Lenny Bruce:** SPZ — *"They didn't ban him. They invoiced him."* · Kat — *"I keep the
+  record they think they're destroying. Every word, love."* · Kat — *"Whatever it costs you, keep
+  talking. I'll catch every word."*
+- **T14 Sid Vicious:** SPZ — *"They didn't sell out the rebellion. The rebellion was the product
+  all along."* · Kat — *"They sold you the jacket, love. Wear it awake. Keep your eyes open in the
+  shop."* · Kat — *"The most punk thing about you was the second you doubted the jacket."*
+- **T15 Heath Ledger:** SPZ — *"The machine gives its highest crown to whoever disappears the most
+  completely."* · Kat — *"I'm a stand-in for myself now. There's less and less of anyone on the
+  mark."* · Kat — *"Don't disappear after me. Stay off the tape. Let it be you."*
+- **T16 Amy Winehouse (Act II finale):** SPZ — *"The twenty-seven club isn't cursed. It's
+  scheduled."* · Kat — *"I've got one jump left in me, love. One. And then I'm all signal and no
+  girl."* · Kat — *"Worth every door."*
+- **T17–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
   are written).
 
 ## Per-door morph
@@ -847,6 +859,245 @@ so whatever door you turn out to be, love, I'll walk through you
 
 ---
 
-## Tracklist (13–24, to write as chapters are written)
+## TRACK 13 — "Held in Contempt"  *(The Lenny Bruce Door)*
+
+**Style:**
+> cool 1966 West-Coast jazz up front — a smoky comedy-club combo, brushed drums, an upright
+> walking bass, a late-night noir saxophone, a beatnik-coffeehouse vibraphone, bebop cool — fused
+> over an industrial-goth engine: enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape
+> saturation, vinyl/VHS crackle, a typewriter/stenograph clatter buried low, a courtroom hush; a
+> ghost of Fosse horn; intimate male goth crooner answered by a breathy female keeping the record,
+> call-and-response torch duet; ~70 BPM, wry, doomed, romantic; leaves beat-only instrumental
+> breaks (intro, a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: smoky club sax, brushed drums and walking upright bass over a low 808, a faint stenograph clatter, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+Said one small word on a stage in the smoke,
+a cop in the crowd wrote it down, and it broke —
+they can't ban a mouth in the land of the free,
+so they billed him instead, that's the trick, don't you see
+
+[Pre-Chorus - SPZ]
+Violet in the black at a stenograph key,
+typing me into forever so the truth stays free
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] They held me in contempt, but they never said stop,
+[Kat] they just made it cost, love, till the running made him drop
+[SPZ] no gag and no cell, just a bill I can't pay,
+[Kat] but I keep the record, so you're never sanded away
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] keep talking, keep talking — every word gets made,
+[Both] held in contempt, but I love you
+
+[Verse 2 - SPZ]
+He read his own paperwork to an empty room,
+the case ate the comic, and the joke ate the tomb
+love it to death, then they sell you the pose,
+an edge you can wear where the danger once rose
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] They held me in contempt, but they never said stop,
+[Kat] they just made it cost, love, till the running made him drop
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] held in contempt, but I love you
+
+[Breakdown - instrumental: sax drops to a lone walking bass, 808 and stenograph clatter, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] They can't defund the record, so whatever it costs,
+[SPZ] I keep talking, keep talking, through the treadmill and loss —
+[Both] and she catches every word that they'd bury or drown,
+so keep the joke landing, love, and don't you go down
+
+[Outro - instrumental: the club combo dissolves into 808 and vinyl hiss and a last stenograph key, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 14 — "Cash from Chaos"  *(The Sid Vicious Door)*
+
+**Style:**
+> unmistakable 1979 punk up front — raw buzzsaw drop-of-a-hat distorted guitars, a snotty three-
+> chord thrash, spitting snare, a sneering shouted energy, King's Road grime and blank-generation
+> nihilism — fused over an industrial-goth engine (its own direct descendant): enormous distorted
+> 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a till-drawer chime
+> and camera-shutter click buried low; a ghost of Fosse horn under the fuzz; intimate snarling
+> male goth crooner answered by a breathy female with a camera, call-and-response torch duet;
+> ~70 BPM building to a thrash, furious, doomed, secretly romantic; leaves beat-only instrumental
+> breaks (intro, a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a lone feedback squeal and a snotty guitar riff over a low 808 and a till-drawer chime, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+A boy on a stage with a bass unplugged,
+a scream for a logo, a sneer to be hugged
+they auditioned a movement and cast him the face,
+and there you stood, love, shooting the crowd, not the stage
+
+[Pre-Chorus - SPZ]
+Violet in the black behind a cracked lens,
+photographing the wanting where the con never ends
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] Cash from chaos, they sell you the no,
+[Kat] and the jacket you're wearing came off the same row
+[SPZ] my anarchy had a barcode all along,
+[Kat] so wear it awake, love — that's the only free song
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] the most punk thing on you is a doubt, not a blade,
+[Both] cash from chaos, but I love you
+
+[Verse 2 - SPZ]
+They can't play a note and it's proof that it's true,
+incompetence bottled and sold back to you
+love it to death, put the martyr on a shirt,
+nine quid of rebellion to fund what it hurt
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] Cash from chaos, they sell you the no,
+[Kat] and the jacket you're wearing came off the same row
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] cash from chaos, but I love you
+
+[Breakdown - instrumental: the thrash drops to a lone 808 and a camera shutter and feedback, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] They sold all of us the coat, but here's what they missed,
+[SPZ] the moment I clocked it and I still made a fist —
+[Both] so keep your eyes open in the shop where you're sold,
+and the doubt in the jacket is the last thing they can't hold
+
+[Outro - instrumental: the fuzz collapses into feedback, 808 and a last camera shutter, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 15 — "The Mask Eats the Man"  *(The Heath Ledger Door)*
+
+**Style:**
+> a 2008 cinematic dread up front — a dark blockbuster orchestral score, rising Shepard-tone
+> strings and low brass swells, a single sustained bowed-cello note of menace, plus a hushed
+> late-2000s indie-NYC melancholy (a lone piano, a film-set hum) — fused over an industrial-goth
+> engine: enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS
+> crackle, a green-room mirror-bulb buzz; a ghost of Fosse horn far off; intimate male goth
+> crooner answered by a breathy female fading out of herself, call-and-response torch duet;
+> ~70 BPM, vast, doomed, aching; leaves beat-only instrumental breaks (intro, a mid breakdown,
+> and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a lone piano and a rising bowed-cello dread over a low 808 and a mirror-bulb buzz, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+He went so deep in the mask that the man couldn't sleep,
+built a dark with no bottom that he couldn't keep
+and there you stood, love, in the dark off the light,
+a stand-in for someone, disappearing on sight
+
+[Pre-Chorus - SPZ]
+Violet gone faint where a girl used to stand,
+holding a pose in the dark with a fading hand
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] The mask eats the man, and they hand you a crown,
+[Kat] for the one who most perfectly vanishes down
+[SPZ] I begged you to do it my ugly way, whole,
+[Kat] but I pay in the thing I've got most of — my soul
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] don't disappear after me, love — stay off the tape they made,
+[Both] the mask eats the man, but I love you
+
+[Verse 2 - SPZ]
+They mint you a martyr the minute you're gone,
+a genius who vanished, the campaign runs on
+love it to death, run the ghost for the gold,
+a statue for a man who was already sold
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] The mask eats the man, and they hand you a crown,
+[Kat] for the one who most perfectly vanishes down
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] the mask eats the man, but I love you
+
+[Breakdown - instrumental: the score drops to a lone piano note and 808 heartbeat and mirror-buzz, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] There's a mark on the floor and I keep hitting it clean,
+[SPZ] with less of you on it each time I have seen —
+[Both] so keep one room in yourself with no camera, no light,
+stay a person off-tape, love, and don't follow me into the night
+
+[Outro - instrumental: the cello dread and piano dissolve into 808 and vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 16 — "One Jump Left"  *(The Amy Winehouse Door — Season Two finale, the confession)*
+
+**Style:**
+> unmistakable 2011 Camden retro-soul up front — a smoky girl-group / Motown backbeat, punchy
+> vintage brass stabs, a Wurlitzer, a hundred-year-old torch-and-blues voice cracked with
+> feeling, beehive-and-eyeliner heartbreak, British neo-soul — fused over an industrial-goth
+> engine: enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS
+> crackle, a camera-shutter storm and rain; a ghost of Fosse horn; intimate male goth crooner
+> answered by a breathy soul female flickering out of the signal, call-and-response torch duet;
+> ~70 BPM, devastating, romantic, the emotional peak of the record; leaves beat-only instrumental
+> breaks (intro, a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a smoky Wurlitzer and brushed Motown backbeat over a low 808 and Camden rain, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+Camden in the rain and a beehive half-gone,
+a voice from a century that's already moved on
+they filmed her falling and they sold every frame,
+and there you sang, love, in the back of the flame
+
+[Pre-Chorus - SPZ]
+Violet gone faint and the neon shines through,
+one flicker left in a girl I could see the street through
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] You told me in the alley, you've got one jump left,
+[Kat] and I'm spending it on you, love, so don't you go deft
+[SPZ] don't beat me to the dark, don't you dare go first,
+[Kat] just outlive me, my love — that's the best and the worst
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] worth every door, worth the whole backward trade,
+[Both] one jump left, and I love you
+
+[Verse 2 - SPZ]
+The twenty-seven club is a shelf life they've timed,
+ignition to ashes, the tribute pre-signed
+love it to death, hold the clip for the day,
+grief's the highest converting, so they film you away
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] You told me in the alley, you've got one jump left,
+[Kat] and I'm spending it on you, love, so don't you go deft
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] one jump left, and I love you
+
+[Breakdown - instrumental: the brass drops to a lone Wurlitzer and 808 and rain, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] Swear you'll survive me, don't follow me down,
+[SPZ] keep the broadcast alive when the answer's gone drowned —
+[Both] a real death held in a hand that's still warm,
+that's the only gift left, so stay through the storm
+
+[Outro - instrumental: the soul horns and Wurlitzer dissolve into 808, rain and vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## Tracklist (17–24, to write as chapters are written)
 One song per remaining door, same duet aesthetic bent to each door's era/mood (see
 `outline.md`). Every one is still, underneath, a song for Daniela.
