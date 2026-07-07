@@ -78,7 +78,10 @@ stepping through the instrumental, not buried under the vocal.
 - **T7 Hemingway (sealed):** SPZ — *"The cure is to stay a signal. Don't go dark."* · Kat —
   *"You're not the audience. You're the only broadcast I've ever loved."* · Kat — *"Signal finds
   signal — but only if there's a signal to find. Don't you dare go dark."*
-- **T8–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
+- **T8 Anna Nicole (finale):** SPZ — *"I'm not dreaming. I'm travelling."* · Kat — *"You can't
+  dream a broadcast. You're not dreaming — you're travelling."* · Kat — *"There's a night I'm
+  going to need catching. Wake up, love. And keep waking."*
+- **T9–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
   are written).
 
 ## Per-door morph
@@ -531,6 +534,67 @@ don't leave me calling a channel gone dark
 
 ---
 
-## Tracklist (8–24, to write as chapters are written)
+## TRACK 8 — "Forty Screens"  *(The Anna Nicole Door — Season One finale)*
+
+**Style:**
+> unmistakable 2007 tabloid-glare up front — glossy mid-2000s celebrity electro-pop, autotune
+> sheen, breaking-news stabs, a news-ticker pulse, paparazzi flashbulb hits, glossy radio R&B —
+> fused over an industrial-goth engine: enormous distorted 808 sub-bass, cold cyberpunk neon
+> pads, tape saturation, vinyl/VHS crackle, a flat news-tone drone; a ghost of Fosse horn;
+> intimate male goth crooner answered by a breathy female news-anchor voice, call-and-response
+> torch duet; ~70 BPM, cinematic, doomed, the biggest and most romantic on the record (the
+> Fog lifts here); leaves beat-only instrumental breaks (intro, a mid breakdown, and the outro)
+> wide open with NO vocals, for clean spoken samples (see Sampling).
+
+**Lyrics:**
+```
+[Intro - instrumental: glossy 2007 tabloid-pop synths, a news-ticker pulse and paparazzi flashbulb hits over industrial 808 sub-bass, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+Forty screens in a Florida bar,
+same face burning on every channel, near and far
+they farmed her for content, they sold her whole life,
+and she looked through the glass and she cut the dream like a knife
+
+[Pre-Chorus - SPZ]
+Violet in the black on the evening news,
+forty mouths moving, and all of them you
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] You can't dream a broadcast, she said,
+[Kat] so wake up now, love, get out of your head
+[SPZ] they eat the watched and the watching the same,
+[Kat] but I spent a death just to make you say my name
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] I'm not dreaming, I'm travelling — that's the trade,
+[Both] forty screens, and every one you
+
+[Verse 2 - SPZ]
+A grifter went out past the reef for a shot,
+the deep sent the whales and it took what he'd got
+his death ran right after hers, same glare, same night,
+two spectacles sold under one little red light
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] You can't dream a broadcast, she said,
+[Kat] so wake up now, love, get out of your head
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] forty screens, and every one you
+
+[Breakdown - instrumental: the news-tone bleeds under a lone 808 heartbeat and static, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] There's a night up the road I'm going to need you awake,
+[SPZ] Seattle and rain and a sound I can't shake —
+[Kat] so keep waking, my love, every door, every year:
+[Both] "I'm not dreaming, I'm travelling, and I'm going to be there,
+so don't you go dark, and don't disappear"
+
+[Outro - instrumental: the tabloid synths dissolve into a flat news-tone and 808, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## Tracklist (9–24, to write as chapters are written)
 One song per remaining door, same duet aesthetic bent to each door's era/mood (see
 `outline.md`). Every one is still, underneath, a song for Daniela.

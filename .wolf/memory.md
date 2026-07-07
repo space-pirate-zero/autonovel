@@ -159,3 +159,12 @@ Active worktree now .claude/worktrees/mystifying-hertz-fe888c (branch master).
   ep02_FINAL 28.4m, ep03_FINAL 27.7m. All ep0N_FINAL.mp3 + sampled songs copied to ~/Downloads.
 - Open-build gotcha (ffmpeg 8.1): build stages as separate single-output files, final amix/acrossfade
   reads RAW input files with -map "[ob]" (see buglog). assemble.py bed_for matches keywords in cue text.
+
+## 2026-07-07 (cont) — Ep8 finale done → SEASON ONE (Eps 1-8) COMPLETE
+- Ep8 "The Anna Nicole Door" (Florida '07 attention-age finale, the Fog lifts; Kat=news anchor
+  on 40 screens): expanded ch_08 to ~26min w/ 6 scene beds; album TRACK 8 "Forty Screens" (2007
+  tabloid-glare × industrial-goth). Full pipeline → ep08_FINAL 26.2min + track08 SAMPLED. All Downloads.
+- Pushed local master → NEW branch spz/neko-death-cult (spz=digital-insurgency repo; spz/master
+  had diverged 66/69 w/ its own Substack history, so used a new branch to avoid clobbering it).
+- Season One "The Fog" (Eps 1-8) all produced: branded open + scene scoring + album song + samples.
+- Ep8 NOT yet committed (prior batch committed as 188881d). Act Two = Eps 9-24 (Ep9 = Cobain/Seattle).
