@@ -145,3 +145,17 @@
   .python-version, .wolf, README). Rewrote README + anatomy.md for new layout.
 - Pruned spz/* worktrees + branches. Kept autonovel/* branches as archives.
   Excluded autonovel/bells per user. NOT pushed (local only).
+
+## 2026-07-07 — Eps 1–7 all produced (credits restored; worktree=mystifying-hertz on master)
+Note: the nifty-kilby worktree was deleted; work survived on master (books/neko-death-cult).
+Active worktree now .claude/worktrees/mystifying-hertz-fe888c (branch master).
+- Batch-rendered Eps 5,6,7 end-to-end (record→samples→song(music.compose)→open→assemble→layer):
+  ep05_FINAL 26.6m, ep06_FINAL 27.1m, ep07_FINAL 24.2m (Ep7 stripped 4-bed). Songs track05/06/07
+  SAMPLED (Ep6/7 clean pockets; Ep5 vocal-dense so intro/mid have slight soft-vocal tail).
+- Redid Eps 1,2,3 audiobooks with proper scene-bed scores + branded opens (NO re-record; reused
+  ch_0N.voice.mp3). Ep1 already had scene cues; rewrote Ep2 & Ep3 descriptive MUSIC cues to
+  bed keywords (COSMIC→CATHEDRAL→EUROPA→MOTEL→THEME→OUTRO). Built standardized ep0N_open (sting→
+  theme→SPZ identifier VO "This is episode N, the door marked X") for all three. ep01_FINAL 30.2m,
+  ep02_FINAL 28.4m, ep03_FINAL 27.7m. All ep0N_FINAL.mp3 + sampled songs copied to ~/Downloads.
+- Open-build gotcha (ffmpeg 8.1): build stages as separate single-output files, final amix/acrossfade
+  reads RAW input files with -map "[ob]" (see buglog). assemble.py bed_for matches keywords in cue text.
