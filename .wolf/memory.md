@@ -202,3 +202,18 @@ shortcut; extracts the Act III promise = SURVIVE ME, don't go dark. That promise
   reap), 21 GG Allin (nihilism out/punk in; turn to the light), 22 River Phoenix (beige hereditary;
   Kat's last solid night), 23 Sealed Door (LOAD-BEARING), 24 Door Zero (LOAD-BEARING finale: refusal;
   he becomes the whisper toward signal; dawn at Europa; mirrors Door 1).
+
+## 2026-07-07 (cont) — Act III "The Refusal" underway (Eps 17-19 done)
+Ep17 Michael Jackson "You Can't Rewind" (SPZ tries to rewind to a younger Kat, tears the calendar
+onto nothing, slams into never-rewind; the nostalgia/comeback economy; first refusal) 25.5m.
+Ep18 Hunter S Thompson "Buy the Ticket" (first gun-door opened on purpose; the sealed-door temptation
+PEAKS — a shortcut to beat Kat to the dark — Kat forbids it: "his was an ending, yours would be an
+exit"; disruptor kills the free press) 26.6m. Ep19 Davos "Quality Control" (LOAD-BEARING REVEAL: SPZ
+authors his FIRST door — a nameless service-worker OD — to reach the WEF; discovers the Cult are a
+FIRM, staff, subcontractors; the geniuses were CONTRACTS commissioned by the elite protecting portfolios;
+the Cult = beige's QUALITY CONTROL; SPZ's own door has a buyer; a door that reads its contract and
+declines to open is the machine's one unbuilt defense) 25.5m.
+- Act III remaining: 20 Dubai (refuses a reap for the first time), 21 GG Allin (nihilism out/punk in,
+  turn to the light), 22 River Phoenix (beige hereditary; Kat's LAST SOLID NIGHT), 23 Sealed Door
+  (LOAD-BEARING: dissolve with Kat or stay solid & lose her), 24 Door Zero (LOAD-BEARING FINALE: the
+  refusal — chooses forward, becomes the whisper toward signal, dawn at Europa, mirrors Door 1).

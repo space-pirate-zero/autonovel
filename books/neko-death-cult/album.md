@@ -106,7 +106,16 @@ stepping through the instrumental, not buried under the vocal.
 - **T16 Amy Winehouse (Act II finale):** SPZ — *"The twenty-seven club isn't cursed. It's
   scheduled."* · Kat — *"I've got one jump left in me, love. One. And then I'm all signal and no
   girl."* · Kat — *"Worth every door."*
-- **T17–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
+- **T17 Michael Jackson:** SPZ — *"You can't rewind the tape. It only ever goes forward."* · Kat —
+  *"The rewind was never the love. The love is you keep going forward anyway."* · Kat — *"That's not
+  a countdown, love. That's a gift with a known number of days."*
+- **T18 Hunter S. Thompson:** SPZ — *"Buy the ticket, take the ride. No refunds, no getting off
+  early."* · Kat — *"His was an ending. Yours would be an exit. Know the difference or it'll kill us
+  both."* · Kat — *"There's no shortcut to me through that door, love."*
+- **T19 Davos (the reveal):** SPZ — *"They're not beige's cure. They're its quality control."* ·
+  Kat — *"Now you know who waves the paw, and who pays for the waving."* · Kat — *"A door that knows
+  it's a door, and knows its client, is the one thing they never learned to price."*
+- **T20–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
   are written).
 
 ## Per-door morph
@@ -1098,6 +1107,186 @@ that's the only gift left, so stay through the storm
 
 ---
 
-## Tracklist (17–24, to write as chapters are written)
+## TRACK 17 — "You Can't Rewind"  *(The Michael Jackson Door — Act III opens)*
+
+**Style:**
+> unmistakable late-2000s / King-of-Pop production up front — glossy moonwalk-era funk-pop bass,
+> gated gospel-pop drums, staccato string stabs, a breathy pop-soul falsetto ghost, plus the
+> haunted emptiness of a midnight rehearsal hall (a lone piano and a ghost-light hum) — fused over
+> an industrial-goth engine: enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape
+> saturation, vinyl/VHS crackle, a rewinding-tape whir and a carousel music-box far off; a ghost
+> of Fosse horn; intimate male goth crooner answered by a breathy female fading nearly to nothing,
+> call-and-response torch duet; ~70 BPM, glossy and devastated, romantic; leaves beat-only
+> instrumental breaks (intro, a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a lone piano and ghost-light hum with a distant carousel music-box over a low 808 and a rewinding-tape whir, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+An empty stage and a comeback that kills,
+they sold him some sleep in a bag full of bills
+I clawed at the card for a year I once knew,
+and there you stood, love, with the light shining through
+
+[Pre-Chorus - SPZ]
+Violet gone faint as a tape running down,
+a younger you gone where the old doors drowned
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] You can't rewind — it only goes on,
+[Kat] the door that you opened, my love, it's just gone
+[SPZ] I tore the whole card for a solider you,
+[Kat] but the rewind was never the love, love — the forward is true
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] it's not a countdown, it's a gift with its days,
+[Both] you can't rewind, but I love you
+
+[Verse 2 - SPZ]
+They stole him a childhood and sold him it back,
+a funfair of nothing, a knife for the tape
+love it to death, run the ghost as a film,
+a comeback that dances long after they're still
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] You can't rewind — it only goes on,
+[Kat] the door that you opened, my love, it's just gone
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] you can't rewind, but I love you
+
+[Breakdown - instrumental: everything drops to a lone rewinding-tape whir, 808 and music-box, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] Don't grieve me early, don't go dark to get back,
+[SPZ] just be here six more times through the flicker and black —
+[Both] 'cause on is the only refusal that counts,
+so carry me forward, love, in whatever amounts
+
+[Outro - instrumental: the piano and 808 slow, the tape-whir stops, dissolves into vinyl hiss, fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 18 — "Buy the Ticket"  *(The Hunter S. Thompson Door)*
+
+**Style:**
+> a wild, ragged 2005 gonzo desert-rock up front — outlaw-country-blues swagger, a fuzzed
+> Fender twang, a Vegas-lounge-organ gone paranoid, a manic honky-tonk piano, whiskey-and-
+> mescaline chaos, a lone mournful harmonica — fused over an industrial-goth engine: enormous
+> distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a
+> typewriter clatter and a single distant gunshot-reverb; a ghost of Fosse horn; intimate
+> male goth crooner answered by a breathy female pulling him back from the edge, call-and-
+> response torch duet; ~70 BPM, unhinged and doomed, secretly tender; leaves beat-only
+> instrumental breaks (intro, a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a lone harmonica and paranoid lounge-organ over a low 808, a typewriter clatter and distant gunshot-reverb, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+A gun in a kitchen and a snow-quiet night,
+an old lion calm as he turns off the light
+I put my hand to the sealed door for a ride to the dark,
+and there you crossed, love, to take out the spark
+
+[Pre-Chorus - SPZ]
+Violet gone thin as the cordite and snow,
+a shortcut to nothing where I wanted to go
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] Buy the ticket and take the whole ride,
+[Kat] his was an ending, love — yours is a hide
+[SPZ] I reached for the exit to beat you to black,
+[Kat] but there's no shortcut to me down that track
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] finish your ride, love — the one that you made,
+[Both] buy the ticket, and I love you
+
+[Verse 2 - SPZ]
+They drowned the last mirror and called it set free,
+ten thousand loud liars where the truth used to be
+love it to death, sell the swagger, not the spine,
+a disruptor gets a statue, and the gonzo saint a line
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] Buy the ticket and take the whole ride,
+[Kat] his was an ending, love — yours is a hide
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] buy the ticket, and I love you
+
+[Breakdown - instrumental: everything drops to a lone typewriter, harmonica and 808, a gunshot-reverb, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] A full stop he earned isn't yours to steal,
+[SPZ] so I put my hand back and I felt the whole real —
+[Both] no refunds, no getting off early from here,
+just ride it all the way, love, through the flicker and fear
+
+[Outro - instrumental: the desert-rock dissolves into 808, harmonica and vinyl hiss, one last typewriter key, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 19 — "Quality Control"  *(The Davos Door — the reveal)*
+
+**Style:**
+> a cold, sleek, modern corporate menace up front — glacial minimal-techno, a boardroom-hum drone,
+> icy generative-ambient pads, a luxury-lobby muzak turned sinister, a distant alpine wind, the
+> click of expensive shoes on marble — fused over an industrial-goth engine at its most exposed:
+> enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a
+> subliminal beckoning-cat bell and a cash-register chime; a ghost of Fosse horn frozen out; intimate
+> male goth crooner answered by a breathy female nearly gone to signal, call-and-response torch duet;
+> ~70 BPM, glacial, vast, dread-and-devotion; leaves beat-only instrumental breaks (intro, a mid
+> breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a boardroom-hum drone and icy ambient pads over a low 808, a faint cat-bell and a cash-register chime, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+A fortress in the snow where they align, not conspire,
+I made my own door out of a nameless pyre
+I followed the clean ones not down but up,
+and there you waited, love, in the light going soft
+
+[Pre-Chorus - SPZ]
+Violet nearly gone as a signal too thin,
+you spent yourself to show me the room they're in
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] They're not the disease and they're not the cure,
+[Kat] they're the quality control, love, patient and sure
+[SPZ] every saint was a contract, a clean brief, a call,
+[Kat] and beige has a budget that pays for it all
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] now you know who's paid, and exactly who paid,
+[Both] quality control, but I love you
+
+[Verse 2 - SPZ]
+A comfortable man ordered a death like a car,
+"she's sincere, she's a problem, and she's raising the bar"
+love it to death, file it under managed and gone,
+the world isn't going beige — it's kept beige, all along
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] They're not the disease and they're not the cure,
+[Kat] they're the quality control, love, patient and sure
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] quality control, but I love you
+
+[Breakdown - instrumental: the drone drops to a lone 808, cat-bell and register-chime and alpine wind, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] A door that has read its own contract at last,
+[SPZ] is a thing they can't price and they can't hold fast —
+[Both] so it might not open the way it was sold,
+refuse well, my love — it's the last weapon they hold
+
+[Outro - instrumental: the boardroom-hum dissolves into 808 and vinyl hiss and one cat-bell, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## Tracklist (20–24, to write as chapters are written)
 One song per remaining door, same duet aesthetic bent to each door's era/mood (see
 `outline.md`). Every one is still, underneath, a song for Daniela.
