@@ -81,7 +81,20 @@ stepping through the instrumental, not buried under the vocal.
 - **T8 Anna Nicole (finale):** SPZ — *"I'm not dreaming. I'm travelling."* · Kat — *"You can't
   dream a broadcast. You're not dreaming — you're travelling."* · Kat — *"There's a night I'm
   going to need catching. Wake up, love. And keep waking."*
-- **T9–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
+- **T9 Cobain:** SPZ — *"The authenticity they sell is the thing they kill."* · Kat — *"I don't
+  overdose to travel, love. I dance. I hold myself light enough to slip."* · Kat — *"Hold me while
+  I flicker. It's all right. It won't be — but it's all right."*
+- **T10 Elvis:** SPZ — *"By the end, the King was doing an impression of the King."* · Kat —
+  *"There's exactly one person on the whole rack you're allowed to save, and you're not ready to
+  know who."* · Kat — *"Learn to hold still, my love. When you push against the world, I'm the one
+  the bill comes to."*
+- **T11 Whitney:** SPZ — *"The show must go on — it's the only prayer the machine ever meant."* ·
+  Kat — *"Before you move, ask one question: if this goes wrong, who pays?"* · Kat — *"You sat
+  still. That was the shot. Keep your face to the body."*
+- **T12 Europa/reveal:** SPZ — *"I counted the doors, the way she told me. And one of them was
+  mine."* · Kat — *"When the kind one lights up, count the doors."* · Kat — *"It's the best
+  morning I've had in a hundred years. You finally know I'm real."*
+- **T13–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
   are written).
 
 ## Per-door morph
@@ -595,6 +608,245 @@ so don't you go dark, and don't disappear"
 
 ---
 
-## Tracklist (9–24, to write as chapters are written)
+## TRACK 9 — "Hold Me While I Flicker"  *(The Cobain Door — Season Two opens)*
+
+**Style:**
+> unmistakable 1994 Seattle grunge up front — raw drop-D Big-Muff fuzz guitars, pounding live
+> drums, quiet-loud dynamics that explode from a whisper to a wall, howling feedback, flannel-
+> and-rain melancholy, a cracked throat that means it — fused over an industrial-goth engine:
+> enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle,
+> a broken-signal glitch stutter; a ghost of Fosse horn buried deep; intimate broken male crooner
+> answered by a breathy female flickering in and out of the signal, call-and-response torch duet;
+> ~70 BPM building to a wall, devastating, romantic, doomed; leaves beat-only instrumental breaks
+> (intro, a mid breakdown, and the outro) wide open with NO vocals, for clean spoken samples.
+
+**Lyrics:**
+```
+[Intro - instrumental: rainy clean-guitar arpeggio and feedback hum over a low 808 heartbeat, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+Mildew and beer and a stage like a door,
+a band screaming true at a room of the poor
+I opened this one myself, came early, came fast,
+and there you were, love, at a card table, aghast
+
+[Pre-Chorus - SPZ]
+Flannel and violet gone pink in the light,
+two white moons reading me right through the night
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] Then the loud part hit and you thinned into air,
+[Kat] hold me, hold me while I flicker, don't stare
+[SPZ] I could see the wall through your heart, through your hand,
+[Kat] just don't let go and I'll come back where I land
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] I dance to travel, and dancing's the trade,
+[Both] hold me while I flicker, and stay
+
+[Verse 2 - SPZ]
+They buy up the real and they sell it pre-torn,
+love it to death, bill the estate it was born
+a scream in a mall for the price of a shirt,
+and a boy from a logging town under the dirt
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] Then the loud part hit and you thinned into air,
+[Kat] hold me, hold me while I flicker, don't stare
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] hold me while I flicker, and stay
+
+[Breakdown - instrumental: everything drops to feedback, rain and the 808 heartbeat, glitch stutters, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] Every clean jump takes a little more girl,
+[SPZ] and a little less of you comes back to the world —
+[Kat] so learn how to hold on, my love, learn it now:
+[Both] "the big door is coming, and your hand knows how,
+so hold me while I flicker, and don't let go"
+
+[Outro - instrumental: the wall of fuzz collapses into feedback and rain, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 10 — "Caught in a Trap"  *(The Elvis Door)*
+
+**Style:**
+> unmistakable 1977 Las Vegas showroom Elvis up front — big gospel-soul brass, Hammond organ,
+> a slow rockabilly shuffle, orchestral supper-club grandeur gone to seed, a jumpsuit-cape
+> sweat and a cracked baritone croon — fused over an industrial-goth engine: enormous distorted
+> 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a slot-machine
+> chime buried low; a ghost of Fosse brass; intimate male goth crooner answered by a breathy
+> gospel-backup female, call-and-response torch duet; ~70 BPM, grand, doomed, romantic; leaves
+> beat-only instrumental breaks (intro, a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: Vegas showroom brass, gospel Hammond organ and a slow rockabilly shuffle over 808 sub-bass, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+Gold on the gate and a chain on the King,
+two shows a night and he can't feel a thing
+a carny that owns him won't let him leave home,
+and there you sang backup, love, moons in the chrome
+
+[Pre-Chorus - SPZ]
+Violet gone dark under wig and white light,
+the best voice in Vegas and hid out of sight
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] Caught in a trap, and I can't walk out,
+[Kat] you can't change a record that already played out
+[SPZ] I reached for the King and you paid for the reach,
+[Kat] there's one soul to save, love, and it's not his to teach
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] learn to hold still, and don't come to my aid,
+[Both] caught in a trap, but I love you
+
+[Verse 2 - SPZ]
+They kill you alive and they keep you on stage,
+an impression of you doing you for a wage
+love it to death, then they license the ghost,
+a thousand men in capes for the one they loved most
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] Caught in a trap, and I can't walk out,
+[Kat] you can't change a record that already played out
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] caught in a trap, but I love you
+
+[Breakdown - instrumental: brass drops to lone organ and 808 heartbeat, a slot-machine chime, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] Stay a played string, my love, fray from the use,
+[SPZ] not a monument standing there taking abuse —
+[Both] so hold still and hold on, and don't do an act,
+just be a man, be a man, and I'll come right back
+
+[Outro - instrumental: gospel organ swells and fades under 808 and vinyl hiss, slows to a stop, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 11 — "One Floor Up"  *(The Whitney Door)*
+
+**Style:**
+> unmistakable 2012 gospel-diva balladry up front — a colossal soul voice, Hammond church organ,
+> a full gospel choir swelling behind, glossy R&B production, cinematic string sweeps, hand-claps
+> and tambourine from the pew — fused over an industrial-goth engine: enormous distorted 808 sub-
+> bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a hotel-corridor hush; a
+> ghost of Fosse horn; intimate male goth crooner answered by a soaring breathy gospel female,
+> call-and-response torch duet; ~70 BPM, devastating, reverent, romantic; leaves beat-only
+> instrumental breaks (intro, a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: lone church organ and a distant choir hum over a low 808 heartbeat and hotel-corridor hush, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+Marble and lilies and a hush on the floor,
+a woman gone quiet behind a closed door
+and four floors down they were warming the room,
+tuning the party right over the tomb
+
+[Pre-Chorus - SPZ]
+Violet gone wet in two moons for eyes,
+the only one grieving in a building of lies
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] The show goes on, one floor up from the dead,
+[Kat] keep your face to the body, love, not the light ahead
+[SPZ] they'll dim it and hold a note and call it a wake,
+[Kat] but sit with me still, for her own sake
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] the shot was to sit here — the shot's the one you made,
+[Both] one floor up, but I'm here with you
+
+[Verse 2 - SPZ]
+They sanded the church off the truest of throats,
+sold her the smooth, then they booed her own notes
+love it to death, then they license the pain,
+a candle, a ribbon, and back to the game
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] The show goes on, one floor up from the dead,
+[Kat] keep your face to the body, love, not the light ahead
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] one floor up, but I'm here with you
+
+[Breakdown - instrumental: organ drops to a lone 808 heartbeat and a held choir chord, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] You can't tell the shot from the wanting, my love,
+[SPZ] so I ask who pays if I reach from above —
+[Both] and if it's ever anyone but me, I hold still,
+I keep my face to the body, and I always will
+
+[Outro - instrumental: the choir chord swells and dissolves into 808 and vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 12 — "Count the Doors"  *(The Europa Door — the reveal)*
+
+**Style:**
+> a haunted Belfast Celtic-punk lament up front — mournful uilleann pipes and a lament fiddle,
+> a bodhrán heartbeat, a rebel-folk melody turned cold, ragged post-punk guitar from the city's
+> own bricks — fused over an industrial-goth engine: enormous distorted 808 sub-bass, cold
+> cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a struck-match hiss, the show's own
+> recurring theme-motif surfacing under it; a ghost of Fosse horn; intimate male goth crooner
+> answered by a breathy dissolving female, call-and-response torch duet; ~70 BPM, spectral,
+> devotional, doomed; leaves beat-only instrumental breaks (intro, a mid breakdown, and the
+> outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: lone uilleann pipes and a bodhrán heartbeat over a low 808 and rain, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+Most-bombed hotel and it's still pouring tea,
+they knocked it down thirty times, still it stands over me
+the calendar sent me back home to the grey,
+and there you sat, love, dissolving away
+
+[Pre-Chorus - SPZ]
+A kind man's lighter goes up in the room,
+and a violet note says to look at my doom
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] When the kind one lights up, count the doors,
+[Kat] one to twenty-four, love — but there's one more
+[SPZ] I counted them all in the light of his flame,
+[Kat] and the twenty-fifth door had your own name
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] there's no watchers, love, only doors that get made,
+[Both] so count the doors, and be one worth the walk
+
+[Verse 2 - SPZ]
+They heritage the horror and they sell you the wall,
+a wound with a gift shop, a plaque for it all
+love it to death, put a star on the grief,
+but the building rebuilds, and that's my belief
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] When the kind one lights up, count the doors,
+[Kat] one to twenty-four, love — but there's one more
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] so count the doors, and be one worth the walk
+
+[Breakdown - instrumental: pipes drop to a lone bodhrán, 808 and a struck-match hiss, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] It's the best grey morning I've had in a hundred years,
+[SPZ] you're dissolving to light and I'm holding my tears —
+[Both] but you finally know that I'm real, that it's true,
+so whatever door you turn out to be, love, I'll walk through you
+
+[Outro - instrumental: the pipes and theme-motif swell and dissolve into 808 and vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## Tracklist (13–24, to write as chapters are written)
 One song per remaining door, same duet aesthetic bent to each door's era/mood (see
 `outline.md`). Every one is still, underneath, a song for Daniela.

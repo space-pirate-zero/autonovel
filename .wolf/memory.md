@@ -168,3 +168,18 @@ Active worktree now .claude/worktrees/mystifying-hertz-fe888c (branch master).
   had diverged 66/69 w/ its own Substack history, so used a new branch to avoid clobbering it).
 - Season One "The Fog" (Eps 1-8) all produced: branded open + scene scoring + album song + samples.
 - Ep8 NOT yet committed (prior batch committed as 188881d). Act Two = Eps 9-24 (Ep9 = Cobain/Seattle).
+
+## 2026-07-07 (cont) — Act Two underway (Eps 9-12 produced)
+Rolling Act Two ("The Mastery") one full episode per pass (write→record→song→samples→open→
+assemble→layer). Done: Ep9 Cobain "Hold Me While I Flicker" (the Seattle flicker payoff; SPZ's
+first deliberate landing) 24.3m; Ep10 Elvis "Caught in a Trap" (tribute-act-of-yourself beige;
+reaching costs Kat) 25.9m; Ep11 Whitney "One Floor Up" (the wake-not-a-party; the discipline of
+NOT reaching — "who pays if it goes wrong?") 25.2m; Ep12 Europa/reveal "Count the Doors" (LOAD-
+BEARING: SPZ parked at the Europa, bearded man finally speaks cryptically, Door-2 note lands, SPZ
+counts and finds his own name on a 25th door — he's Door Zero; sealed door now heavier) 22.7m.
+- GOTCHA: ElevenLabs Music blocks prompts NAMING real artists (Elvis etc.) → describe era/sound
+  generically, no names. Audiobook TTS unaffected. Logged to buglog would be good.
+- GOTCHA: don't background record.py with `&` inside a run_in_background bash — it orphans and
+  the harness won't notify. Launch as a plain run_in_background command.
+- Next: Ep13 Lenny Bruce, Ep14 Sid Vicious, Ep15 Heath Ledger, Ep16 Amy Winehouse (Act II close,
+  Door-16 = Kat's "one more jump and I'm gone" confession per characters.md). Then Act III 17-24.
