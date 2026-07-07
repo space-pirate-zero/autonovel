@@ -133,3 +133,15 @@
   -> equation ($$) -> "The moral of the story is" -> CTA. Verified via preview.
 - Still pending: live Substack push needs auth (cookies; email/pw 403'd = magic-link
   account). push_substack.py ready; reads .env.
+
+## 2026-07-07 — Consolidated all books into books/ monorepo
+- master reshaped: framework-on-master + per-book branches -> monorepo. Each book
+  a self-contained folder under books/: digital-insurgency (relocated from root via
+  git renames), the-last-human-ceo, zero-trust-reality (from their autonovel/* branches),
+  neko-death-cult (was untracked worktree work — nearly lost; found before pruning).
+- Method: `git read-tree --prefix=books/<name>/ <branch>`; verified each subtree
+  byte-identical via `git diff <branch> HEAD:books/<name>` (empty). Commit 1fd7de3.
+- Root trimmed to shared config only (.env.example, pyproject.toml, uv.lock,
+  .python-version, .wolf, README). Rewrote README + anatomy.md for new layout.
+- Pruned spz/* worktrees + branches. Kept autonovel/* branches as archives.
+  Excluded autonovel/bells per user. NOT pushed (local only).
