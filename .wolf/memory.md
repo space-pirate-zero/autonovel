@@ -272,3 +272,11 @@ SPZ's thesis line ("the rebellion was the product all along") clean room up fron
 awake" sits clean in the mid gap; Kat "doubted the jacket" is pitched-down+reverbed as the
 haunted outro. Master -9.6 LUFS. Output: audio/produced/ep14_song_FINAL.mp3 (+ ~/Downloads).
 SAMPLE_ORDER override in produce_song.py fixes narrative order (else alphabetical).
+
+## SPZ brand kit made CANONICAL (2026-07-08)
+User: "Save this as THE one and only brand kit." The interactive brand/spz/brand_kit.html
+(playable audio + live visualizers + microanimations) is now the definitive SPZ brand kit.
+brand.json bumped to 1.1.0 with status=CANONICAL + canonical_deliverable (file + artifact URL
+https://claude.ai/code/artifact/753aa02e-8d51-4f64-98e4-a9fe2bd46aa0). README crowns it. Rule:
+edit build_brand_kit.py and redeploy to the SAME url; never fork variants. Saved to auto-memory
+spz-brand-kit.md.

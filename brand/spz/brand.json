@@ -3,8 +3,15 @@
   "short": "SPZ",
   "tagline": "Signal finds signal.",
   "essence": "Diogenes with a laptop — deface the counterfeit, live honest. Snarky, punk, Atlanta-trap, hacker. Cyberpunk-noir in look, industrial-goth in sound, bar-at-midnight in voice.",
-  "version": "1.0.0",
-  "updated": "2026-07-07",
+  "version": "1.1.0",
+  "updated": "2026-07-08",
+  "status": "CANONICAL — the one and only SPZ brand kit. Do not fork or create variants; edit brand/spz/build_brand_kit.py and redeploy to the same artifact URL.",
+  "canonical_deliverable": {
+    "file": "brand_kit.html",
+    "what": "The interactive, playable brand board — the definitive SPZ brand kit. Self-contained: embedded fonts + real brand audio, live audio-reactive visualizers, microanimations.",
+    "generator": "build_brand_kit.py",
+    "artifact_url": "https://claude.ai/code/artifact/753aa02e-8d51-4f64-98e4-a9fe2bd46aa0"
+  },
   "repo": "github.com/space-pirate-zero/digital-insurgency",
   "productions": {
     "books": ["Digital Insurgency", "The Last Human CEO", "Zero Trust Reality", "Neko Death Cult"],
@@ -12,6 +19,7 @@
     "album": "Signal Finds Signal (24 tracks)"
   },
   "kit": {
+    "board": "brand_kit.html — THE brand kit (interactive, playable). Start here.",
     "verbal": "verbal.md — voice & tone, the two gears, banned words, the mantra",
     "voices": "voices.json — ElevenLabs cast; hero NARRATOR = SPZ",
     "palette": "palette.json — void / pink / cyan / paper / muted",

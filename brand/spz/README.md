@@ -6,6 +6,14 @@ drama, and the *Signal Finds Signal* album.
 
 > **Tagline / lockup:** *Signal finds signal.*
 
+> ## ★ THE brand kit — the one and only
+> **[`brand_kit.html`](brand_kit.html)** is the canonical, definitive SPZ brand kit:
+> an interactive, playable board (embedded fonts + real brand audio, live
+> audio-reactive visualizers, microanimations). Everything else in this folder is
+> its source data.
+> **Live:** https://claude.ai/code/artifact/753aa02e-8d51-4f64-98e4-a9fe2bd46aa0
+> **To change it:** edit `build_brand_kit.py` and redeploy to the *same* URL — never fork a variant.
+
 Every value here is extracted from the real production system (cover/design scripts,
 `fonts/`, the scoring bible, and `tools/`), not invented — so anything you build with
 it matches what already shipped.
