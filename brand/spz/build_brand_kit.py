@@ -89,7 +89,6 @@ STUDIO_PRODUCTS = [
  ("GhostDeck","The VM manager that makes Docker Desktop look expensive.","beta"),
  ("Grocery Ninja","Stop wasting $150/month on groceries you throw away.","beta"),
  ("Space Tokens","One credit system. Fifteen products. Zero friction.","beta"),
- ("Phantom Tiles","Beat grandma at Rummikub. If you can.","beta"),
  ("DARKWAVE","Kubernetes for humans. Not for consultants.","development"),
  ("Brand Casino","Turn foot traffic into brand fanatics.","development"),
  ("RONIN","Tell Final Cut Pro what to do. In English.","development"),

@@ -32,7 +32,6 @@
     { "name": "Space Tokens", "tagline": "One credit system. Fifteen products. Zero friction.", "domain": "tokens", "status": "beta", "type": "platform" },
     { "name": "DARKWAVE", "tagline": "Kubernetes for humans. Not for consultants.", "domain": "darkwave", "status": "development", "type": "infra" },
     { "name": "Brand Casino", "tagline": "Turn foot traffic into brand fanatics.", "domain": "brand-casino", "status": "development", "type": "platform" },
-    { "name": "Phantom Tiles", "tagline": "Beat grandma at Rummikub. If you can.", "domain": "phantom-tiles", "status": "beta", "type": "game" },
     { "name": "RONIN", "tagline": "Tell Final Cut Pro what to do. In English.", "domain": "cut-command", "status": "development", "type": "tool" },
     { "name": "TradeCraft", "tagline": "They watch everything. Now you watch back.", "domain": "tradecraft", "status": "development", "type": "tool" }
   ],
