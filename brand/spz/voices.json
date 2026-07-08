@@ -1,0 +1,75 @@
+{
+  "brand": "SPZ / Space Pirate Zero",
+  "kit": "voices",
+  "provider": "ElevenLabs",
+  "version": "1.0.0",
+  "updated": "2026-07-07",
+  "source": "Battle-tested producing 'The Maneki Neko Death Cult' — a 24-episode scored audio drama (~10.5h) + 24-track album. Values are the exact CAST/ROLES from books/neko-death-cult/tools/record.py.",
+  "hero_voice": "NARRATOR",
+  "voices": {
+    "NARRATOR": {
+      "label": "Space Pirate Zero (SPZ) — THE brand narrator voice",
+      "voice_id": "8bOIcU4hJx9LYJV4NS1I",
+      "type": "custom (built with ElevenLabs Voice Design)",
+      "character": "raspy, slight Belfast/Irish lilt, raw and punk, nihilist-then-tender; delivered a little fast with some chaos in it. This is the Space Pirate Zero voice — reuse it for any SPZ narration, VO, brand spot, or audio drama.",
+      "model_id": "eleven_v3",
+      "voice_settings": {
+        "stability": 0.5,
+        "similarity_boost": 0.85,
+        "style": 0.35,
+        "use_speaker_boost": true,
+        "speed": 1.08
+      }
+    },
+    "KAT": {
+      "label": "Cosmic Swing Kat / Daniela — the beloved (female lead)",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "type": "ElevenLabs library — 'Lily', velvety actress, British middle-aged female",
+      "character": "warm, knowing, tender; the goodbye-that's-a-hello",
+      "model_id": "eleven_v3",
+      "voice_settings": { "stability": 0.5, "similarity_boost": 0.85, "style": 0.2, "use_speaker_boost": true, "speed": 1.0 }
+    },
+    "WOMAN": {
+      "label": "The Cult agent (female) — posh, affectless G-woman",
+      "voice_id": "4JHJuokHot8d75SnR53J",
+      "type": "ElevenLabs shared library — 'Clarissa', Upper-Class British",
+      "character": "monotone, lifeless, upper-class contempt; menace by restraint. Direct with [condescending, upper-class] tags.",
+      "model_id": "eleven_v3",
+      "voice_settings": { "stability": 0.45, "similarity_boost": 0.85, "style": 0.0, "use_speaker_boost": true, "speed": 1.0 }
+    },
+    "MAN": {
+      "label": "The Cult agent (male) — sinister, posh",
+      "voice_id": "agL69Vji082CshT65Tcy",
+      "type": "ElevenLabs shared library — 'Blackwood', Sinister & Posh British",
+      "character": "cold, condescending, reasonable-sounding menace",
+      "model_id": "eleven_v3",
+      "voice_settings": { "stability": 0.45, "similarity_boost": 0.85, "style": 0.0, "use_speaker_boost": true, "speed": 1.0 }
+    },
+    "BEARDED": {
+      "label": "The kind one / the Cancer-Man figure (never explained)",
+      "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+      "type": "ElevenLabs library — 'George', warm British storyteller",
+      "character": "warm, unhurried, gives nothing away; cryptic",
+      "model_id": "eleven_v3",
+      "voice_settings": { "stability": 0.5, "similarity_boost": 0.85, "style": 0.0, "use_speaker_boost": true, "speed": 1.0 }
+    },
+    "GUEST": {
+      "label": "Bit parts / the marks (male)",
+      "voice_id": "N2lVS1w4EtoT3dr4eOWO",
+      "type": "ElevenLabs library — 'Callum', husky male",
+      "character": "flexible; used for the doomed rich men / the marks",
+      "model_id": "eleven_v3",
+      "voice_settings": { "stability": 0.5, "similarity_boost": 0.85, "style": 0.2, "use_speaker_boost": true, "speed": 1.0 }
+    }
+  },
+  "usage_notes": [
+    "Model eleven_v3 ACTS inline [delivery] tags (e.g. [dry], [building], [raw]) — put them at the start of a line. Great for expressive VO.",
+    "eleven_v3 DROPS whole chunks of text at low stability. Keep NARRATOR stability >= 0.5. A drop-guard (retry if response < ~220 bytes/char) is implemented in record.py.",
+    "Use the native `speed` voice setting (NOT ffmpeg atempo) — NARRATOR runs at 1.08 for pace/chaos.",
+    "Inline <break time=\"0.4s\"/> tags are IGNORED by v3 — insert real silence in post (ffmpeg anullsrc) at those points.",
+    "API key lives in ELEVENLABS_API_KEY (autonovel parent .env). SDK 2.56.0+: client.text_to_speech.convert(voice_id, model_id, text, voice_settings).",
+    "Run generation with: uv run --with elevenlabs python3 ...",
+    "Full recorder/mixer/assembler pipeline: books/neko-death-cult/tools/{record,mix,assemble,detag}.py"
+  ],
+  "python_snippet": "import os\nfrom elevenlabs.client import ElevenLabs\nc = ElevenLabs(api_key=os.environ['ELEVENLABS_API_KEY'])\nSPZ = {'voice_id':'8bOIcU4hJx9LYJV4NS1I','model_id':'eleven_v3','voice_settings':{'stability':0.5,'similarity_boost':0.85,'style':0.35,'use_speaker_boost':True,'speed':1.08}}\naudio = c.text_to_speech.convert(voice_id=SPZ['voice_id'], model_id=SPZ['model_id'], text='[dry] Signal finds signal.', voice_settings=SPZ['voice_settings'])\nopen('spz.mp3','wb').write(b''.join(audio))"
+}

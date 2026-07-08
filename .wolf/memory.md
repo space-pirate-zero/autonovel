@@ -232,3 +232,11 @@ relieved; dawn at Europa mirroring Door 1; the show revealed AS the counter-whis
 - ALL 24 ep0N_FINAL.mp3 (Eps 1-24) + track01-24 SAMPLED songs in ~/Downloads. Album "Signal Finds
   Signal" = 24 tracks written in album.md. Three acts: The Fog (1-8), The Mastery (9-16), The Refusal
   (17-24). Total ~10.5 hrs of produced scored audio drama + a 24-song companion album.
+
+## SPZ Brand Kit — voices (saved 2026-07-07)
+Saved the reusable SPZ voice identity to `brand/spz/` (repo, version-controlled) and
+`~/.claude/brand/spz/` (global, cross-project). Hero voice NARRATOR = Space Pirate Zero,
+ElevenLabs custom voice_id `8bOIcU4hJx9LYJV4NS1I`, model eleven_v3, settings
+{stability 0.5, similarity_boost 0.85, style 0.35, speaker_boost, speed 1.08}. Full cast +
+gotchas + Python snippet in `brand/spz/voices.json`. Source of truth stays
+`books/neko-death-cult/tools/record.py`; the kit is a durable snapshot for reuse.
