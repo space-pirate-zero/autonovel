@@ -31,16 +31,10 @@
     { "name": "Grocery Ninja", "tagline": "Stop wasting $150/month on groceries you throw away.", "domain": "groceryninja.app", "status": "beta", "type": "consumer" },
     { "name": "Space Tokens", "tagline": "One credit system. Fifteen products. Zero friction.", "domain": "tokens", "status": "beta", "type": "platform" },
     { "name": "DARKWAVE", "tagline": "Kubernetes for humans. Not for consultants.", "domain": "darkwave", "status": "development", "type": "infra" },
-    { "name": "GhostGrid", "tagline": "Your MCP servers, one click away.", "domain": "ghostgrid", "status": "development", "type": "tool" },
-    { "name": "Atomic Sound", "tagline": "A recording studio that fits on your Mac.", "domain": "atomic-sound", "status": "development", "type": "consumer" },
-    { "name": "Atomic Video", "tagline": "Video editing that feels the music.", "domain": "atomic-video", "status": "development", "type": "consumer" },
-    { "name": "Atomic Distro", "tagline": "Get your music everywhere. Keep 90% of the money.", "domain": "atomic-distro", "status": "development", "type": "consumer" },
     { "name": "Brand Casino", "tagline": "Turn foot traffic into brand fanatics.", "domain": "brand-casino", "status": "development", "type": "platform" },
-    { "name": "HomeGrid", "tagline": "One app for every smart device. No cloud required.", "domain": "homegrid", "status": "development", "type": "saas" },
     { "name": "Phantom Tiles", "tagline": "Beat grandma at Rummikub. If you can.", "domain": "phantom-tiles", "status": "beta", "type": "game" },
     { "name": "RONIN", "tagline": "Tell Final Cut Pro what to do. In English.", "domain": "cut-command", "status": "development", "type": "tool" },
-    { "name": "TradeCraft", "tagline": "They watch everything. Now you watch back.", "domain": "tradecraft", "status": "development", "type": "tool" },
-    { "name": "REWIND TV", "tagline": "Channel surfing is back. And it's glorious.", "domain": "rewind-tv", "status": "development", "type": "entertainment" }
+    { "name": "TradeCraft", "tagline": "They watch everything. Now you watch back.", "domain": "tradecraft", "status": "development", "type": "tool" }
   ],
   "stylelift": {
     "domain": "stylelift.fashion",

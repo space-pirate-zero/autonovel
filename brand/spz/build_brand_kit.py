@@ -91,15 +91,9 @@ STUDIO_PRODUCTS = [
  ("Space Tokens","One credit system. Fifteen products. Zero friction.","beta"),
  ("Phantom Tiles","Beat grandma at Rummikub. If you can.","beta"),
  ("DARKWAVE","Kubernetes for humans. Not for consultants.","development"),
- ("GhostGrid","Your MCP servers, one click away.","development"),
- ("Atomic Sound","A recording studio that fits on your Mac.","development"),
- ("Atomic Video","Video editing that feels the music.","development"),
- ("Atomic Distro","Get your music everywhere. Keep 90% of the money.","development"),
  ("Brand Casino","Turn foot traffic into brand fanatics.","development"),
- ("HomeGrid","One app for every smart device. No cloud required.","development"),
  ("RONIN","Tell Final Cut Pro what to do. In English.","development"),
  ("TradeCraft","They watch everything. Now you watch back.","development"),
- ("REWIND TV","Channel surfing is back. And it's glorious.","development"),
 ]
 def prod_card(p):
     name,tag,st=p
