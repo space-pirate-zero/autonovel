@@ -115,8 +115,21 @@ stepping through the instrumental, not buried under the vocal.
 - **T19 Davos (the reveal):** SPZ — *"They're not beige's cure. They're its quality control."* ·
   Kat — *"Now you know who waves the paw, and who pays for the waving."* · Kat — *"A door that knows
   it's a door, and knows its client, is the one thing they never learned to price."*
-- **T20–24:** each door's mantra + Kat's key line + the sting line (flagged as chapters
-  are written).
+- **T20 Dubai:** SPZ — *"A reaper who lays down the scythe is the one thing the machine can't
+  survive."* · Kat — *"This is the first door where you get to choose. Really choose. Eyes all the
+  way open."* · Kat — *"You don't need a relic any more, love. You've become the lesson."*
+- **T21 GG Allin:** SPZ — *"There's a line. On one side, signal — real, even when it's ugly. On the
+  other, its merch."* · Kat — *"You're not a nihilist, love. You're a broken-hearted romantic in a
+  leather jacket."* · Kat — *"Take the jacket off. Not the caring. Just the pretending you don't."*
+- **T22 River Phoenix:** SPZ — *"The gifted die young and the connected fail up forever. Beige is
+  hereditary."* · Kat — *"I spent the last of myself to be solid tonight. One whole night. For you."*
+  · Kat — *"Remember there was one whole night I was real, and warm, and here, and it was ours."*
+- **T23 The Sealed Door:** SPZ — *"The love was never about not losing her. The love is the
+  staying."* · Kat — *"Hold me while I flicker. Last time now. And then don't follow. You
+  promised."* · Kat — *"Signal finds signal. I'll find you again. Out of order. Every time. Forever."*
+- **T24 Door Zero (title track / finale):** SPZ — *"The machine made me a reaper to end the signal.
+  I made myself a reaper to spread it."* · Kat — *"I found you again, love. Out of order. It's not
+  the tragedy. It's the love."* · Kat — *"Signal finds signal. I'll see you at the next door. I always do."*
 
 ## Per-door morph
 | Door | Bends toward |
@@ -1287,6 +1300,308 @@ refuse well, my love — it's the last weapon they hold
 
 ---
 
-## Tracklist (20–24, to write as chapters are written)
+## TRACK 20 — "Nobody Gets Out"  *(The Dubai Door — the first refusal of a reap)*
+
+**Style:**
+> opulent modern gulf-futurism up front — grand Arabic-tinged EDM, a mournful oud and ney flute,
+> luxury-mall trap hi-hats, a call-to-prayer melisma turned cold, glass-tower grandeur over desert
+> heat-shimmer — fused over an industrial-goth engine: enormous distorted 808 sub-bass, cold
+> cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a rocket-rumble and a blast-door clang
+> far off; a ghost of Fosse horn; intimate male goth crooner answered by a breathy female almost
+> entirely gone to light, call-and-response torch duet; ~70 BPM, vast, doomed, resolute; leaves
+> beat-only instrumental breaks (intro, a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a lone oud and ney flute over a low 808 and desert heat-shimmer, a distant rocket-rumble, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+A gold tower rising on the bones of the poor,
+the rich building lifeboats and locking the door
+I climbed in on a dead man they'd never once name,
+and there you shimmered, love, near gone in the flame
+
+[Pre-Chorus - SPZ]
+Violet gone to almost nothing at all,
+you stood at the glass just to watch me not fall
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] They handed me a monster and a reason to reap,
+[Kat] the sweetest deserved death, love — but it's theirs to keep
+[SPZ] so I laid down the scythe and I let the door stay wide,
+[Kat] nobody gets out, love — so we stay inside
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] you've become the lesson, no relic to trade,
+[Both] nobody gets out, but I love you
+
+[Verse 2 - SPZ]
+They stopped saving the world and they started to flee,
+a bunker, a rocket, a guest list to be free
+love it to death, then they write the rest off,
+a fireproof room while the whole house is lost
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] They handed me a monster and a reason to reap,
+[Kat] the sweetest deserved death, love — but it's theirs to keep
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] nobody gets out, but I love you
+
+[Breakdown - instrumental: the EDM drops to a lone oud, 808 and a blast-door clang, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] The day you call one death acceptable, you're theirs,
+[SPZ] so I saved a monster, and it felt like a snare —
+[Both] but a refusal that costs is the only kind true,
+so stay on the surface, my love, and build something new
+
+[Outro - instrumental: the oud and 808 slow under a rocket-rumble that never launches, dissolves into vinyl hiss, fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 21 — "Signal and Its Merch"  *(The GG Allin Door — nihilism out, the light in)*
+
+**Style:**
+> the record's most extreme collision — genuine 1993 scumrock / blown-out hardcore-punk fury
+> (buzzsaw distortion past the red, a screamed throat, blood-and-chaos live-basement filth) that
+> keeps cutting to its own beige replica: a sterile, glossy, influencer-pop "edgy" jingle with all
+> the danger removed — both fused over an industrial-goth engine: enormous distorted 808 sub-bass,
+> cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a ring-light hum against a basement
+> hum; a ghost of Fosse horn; intimate male goth crooner (finally dropping the sneer) answered by a
+> breathy female nearly all light, call-and-response torch duet that turns, at the end, toward warmth;
+> ~70 BPM building then softening, doomed-then-tender; leaves beat-only instrumental breaks (intro,
+> a mid breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a filthy buzzsaw guitar and basement hum that keeps glitching into a sterile ring-light jingle, over a low 808, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+A basement of blood where the realest man died,
+and a clean little studio selling the ride
+one room will kill you, one room owns you whole,
+and there you flickered, love, near all soul
+
+[Pre-Chorus - SPZ]
+Violet gone to almost only the light,
+you spent it to show me the line in the night
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] There's a line between signal and its merch,
+[Kat] one is a horror, love — one's a smirk in a church
+[SPZ] I thought I should pick the real over the fake,
+[Kat] but neither's the answer — it's the love you forsake
+[SPZ] how beautiful... Daniela, don't fade,
+[Kat] you're no nihilist, love — just a heart that's afraid,
+[Both] signal, not merch, and I love you
+
+[Verse 2 - SPZ]
+They sell you the edge with the danger removed,
+the pose of the real, and a mattress, approved
+love it to death, then they franchise the skull,
+the sneer on a poster, the void looking dull
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] There's a line between signal and its merch,
+[Kat] one is a horror, love — one's a smirk in a church
+[SPZ] how beautiful... Daniela, don't fade,
+[Both] signal, not merch, and I love you
+
+[Breakdown - instrumental: the scumrock collapses into a lone 808, basement hum and a distant ring-light whine, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] So take off the jacket, keep only the care,
+[SPZ] the armour was grief that I wore everywhere —
+[Both] and the punk thing was never the burning, my love,
+it's building something true and out loud, from above
+
+[Outro - instrumental: the fury softens into a warm 808 hum and vinyl and one faint laugh of feedback, slows and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 22 — "Last Solid Night"  *(The River Phoenix Door — Kat's last solid night)*
+
+**Style:**
+> the tenderest, warmest track on the record — a gentle 1993 LA indie-folk up front: soft fingerpicked
+> acoustic guitar, a brushed-snare shuffle, a warm Rhodes, a late-night Sunset-Strip lounge-jazz
+> saxophone, an aching earnest boy-with-a-guitar sincerity — fused *gently* with the industrial-goth
+> engine (dialled way down, for once): a soft warm 808 pulse instead of a crushing one, cosy tape
+> saturation, vinyl crackle like a diner radio, a distant neon hum; a ghost of Fosse horn kept kind;
+> intimate male goth crooner (no sneer, all heart) answered by a fully-present, solid, warm female
+> voice for the first and last time, call-and-response torch duet; ~70 BPM, bittersweet, luminous,
+> a happy song about the last happy night; leaves beat-only instrumental breaks (intro, a mid
+> breakdown, and the outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: soft fingerpicked acoustic and warm Rhodes over a gentle 808 pulse, a distant neon hum and diner-radio crackle, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+A gentle boy gone on a Halloween street,
+stepped over by surnames who fail up so neat
+but I braced for a ghost and you stood there instead —
+solid and warm, love, with weight, with a thread
+
+[Pre-Chorus - SPZ]
+Violet all back for a borrowed few hours,
+you spent the whole girl to be real and be ours
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] You gave me a last solid night in the neon,
+[Kat] I gathered the girl up and spent every one
+[SPZ] we walked and we ate bad pancakes at four,
+[Kat] and a waitress called us hon and knew nothing more
+[SPZ] how beautiful... Daniela, so here,
+[Kat] remember this one, love, when I disappear,
+[Both] one last solid night, and I love you
+
+[Verse 2 - SPZ]
+The gifted die young and the heirs never fall,
+beige is hereditary, a crest on it all
+love it to death, hand the grey ones the crown,
+while the bright ones get stepped over, face-down
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] You gave me a last solid night in the neon,
+[Kat] I gathered the girl up and spent every one
+[SPZ] how beautiful... Daniela, so here,
+[Both] one last solid night, and I love you
+
+[Breakdown - instrumental: the acoustic drops to a warm Rhodes, soft 808 and diner hum, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] It's not the sad part, my love, it's the whole reason why,
+[SPZ] two signals, one night, unfilmed under the sky —
+[Both] so carry the pancakes, the cups and the "hon,"
+it's the one thing they never could own, and it's won
+
+[Outro - instrumental: the acoustic and warm 808 slow into a dawn-grey Rhodes chord and vinyl hiss, lightens and fades out, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 23 — "The Only Way Is Through"  *(The Sealed Door — the climax)*
+
+**Style:**
+> the deepest, most cosmic and devastating track on the record — the Cathedral of Wires made
+> fully audible: a vast reverberant choir-of-signal drone, a lone grieving piano, Seattle rain,
+> the show's own main-theme motif surfacing whole for the first time and then dissolving — fused
+> over the industrial-goth engine at its most emotional: enormous distorted 808 sub-bass swelling
+> like a heartbeat, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a single held
+> sustained signal-tone rising to white; a ghost of Fosse horn, one last time, far away; intimate
+> broken male goth crooner answered by a female voice flickering out into pure light mid-phrase,
+> call-and-response torch duet that loses one voice by the end; ~70 BPM building to an unbearable
+> swell then a single held tone; leaves beat-only instrumental breaks (a long intro, a mid
+> breakdown, and a long outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a lone grieving piano and Seattle rain over a slow swelling 808 heartbeat and a distant choir-of-signal drone, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+A small room in Seattle, the rain and a bulb,
+and you flickering out in my arms at the pull
+they opened the sealed door and it wasn't the dark,
+it was you in the signal, a hand's-breadth, a spark
+
+[Pre-Chorus - SPZ]
+Violet all light now, no weight and no hand,
+and the door offered union I could barely withstand
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] They said dissolve with me, love, and never lose,
+[Kat] but that's the rewind in its prettiest ruse
+[SPZ] the love was never keeping you — it's the stay,
+[Kat] so hold me while I flicker, then don't come my way
+[SPZ] how beautiful... Daniela, don't — stay,
+[Kat] signal finds signal, love — I'll find you, always,
+[Both] the only way is through
+
+[Verse 2 - SPZ]
+I put my hand on a door that was warm as your things,
+with you a breath behind it and the whole of me pulling to sing
+but the coat full of relics was a case you'd built true,
+every one of them saying the same thing: go through
+
+[Chorus - SPZ lead, Kat answering]
+[SPZ] They said dissolve with me, love, and never lose,
+[Kat] but that's the rewind in its prettiest ruse
+[SPZ] how beautiful... Daniela, don't — stay,
+[Both] the only way is through
+
+[Breakdown - instrumental: everything drops to a single held signal-tone rising over 808 and rain, the choir folding in one more voice, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat lead, SPZ answering]
+[Kat] Don't follow me down where it stops hurting, my love,
+[SPZ] so I took my hand off, turned around, stayed above —
+[Both (Kat's voice thinning to light, SPZ alone by the end)] signal finds signal, out of order, forever,
+I'll find you again, love — stay lit — we're not severed
+
+[Outro - instrumental: the main-theme motif swells whole then dissolves into a single held signal-tone, 808 heartbeat and rain, one voice gone, slows and fades to white, NO vocals - leave clean space, then fade]
+```
+
+---
+
+## TRACK 24 — "Signal Finds Signal"  *(Door Zero — the finale · the album's title track)*
+
+**Style:** *the one hopeful song — the whole record's sounds gathered and resolved into dawn.*
+> a triumphant-but-tender finale that gathers every era-thread of the album (a ghost of the fuzz,
+> the gospel organ, the soul horns, the acoustic, the choir-of-signal) and resolves them, for the
+> first time on the record, into WARMTH — the main-title theme "Signal Finds Signal" arriving whole
+> and hopeful at last, a Belfast dawn, a full-band swell, a redeemed industrial-goth engine where the
+>808 becomes a living heartbeat rather than a dread, cosy tape saturation, vinyl crackle like a
+> kitchen radio, church-bell-bright synths, sunrise pads; a ghost of Fosse horn, warm now; intimate
+> male goth crooner (armour off, all heart) answered by a female voice returning from the pure signal
+> — radiant, everywhere, joyful — call-and-response torch duet that does NOT lose its second voice this
+> time but rejoins it; ~70 BPM rising to a full dawn swell; the only track that resolves warm and does
+> not fade to nothing but to light; leaves beat-only instrumental breaks (intro, a mid breakdown, and
+> a long luminous outro) wide open with NO vocals.
+
+**Lyrics:**
+```
+[Intro - instrumental: a lone warm Rhodes and church-bell synth over a living 808 heartbeat, a Belfast-dawn pad rising, kitchen-radio crackle, 8 bars, NO vocals - leave clean space]
+
+[Verse 1 - SPZ]
+Dawn at the Europa, the tea and the light,
+my own door held open, and I won't close it tight
+they built me to end it, to cull and go dark,
+but I read my own contract and I kept the spark
+
+[Pre-Chorus - SPZ]
+Twenty-four doors and a coat full of names,
+and I turned every death into reasons and flames
+
+[Chorus - SPZ lead, Kat answering, together]
+[SPZ] I'm the whisper they never once built you a door for,
+[Kat] the reaper who reaps toward the light, not the shore
+[SPZ] at your worst door I'll be there and I'll say the one thing:
+[Kat] stay lit, love, build something true, and hold on and sing
+[SPZ] how beautiful... Daniela, you're here,
+[Kat] I found you again, out of order, my dear,
+[Both] signal finds signal, and I love you
+
+[Verse 2 - SPZ]
+Not a saint, just a nobody managed and gone,
+but a nobody woke up and carried them on
+so hold on, whoever you are, at your door,
+the exit's a lie — there is so much more
+
+[Chorus - SPZ lead, Kat answering, together]
+[SPZ] I'm the whisper they never once built you a door for,
+[Kat] the reaper who reaps toward the light, not the shore
+[SPZ] how beautiful... Daniela, you're here,
+[Both] signal finds signal, and I love you
+
+[Breakdown - instrumental: the heartbeat 808 and a rising choir-of-signal that resolves warm, church bells, 4 bars, NO vocals - leave clean space]
+
+[Bridge - Kat and SPZ, together, rejoined]
+[Both] It's not the tragedy, love — the wrong-ended meeting's the whole of the plan,
+we'll collide down the doors out of order forever, and that is the love, that's the man —
+so don't go dark, stay a signal, keep building, keep on,
+signal finds signal, I'll see you at the next door, I always do — go on
+
+[Outro - instrumental: the full main-title theme swells whole and warm into a Belfast-dawn crescendo over the living 808 and bells, does NOT fade to silence but rises and resolves to light, NO vocals - leave clean space, then a warm resolve]
+```
 One song per remaining door, same duet aesthetic bent to each door's era/mood (see
 `outline.md`). Every one is still, underneath, a song for Daniela.

@@ -217,3 +217,18 @@ declines to open is the machine's one unbuilt defense) 25.5m.
   turn to the light), 22 River Phoenix (beige hereditary; Kat's LAST SOLID NIGHT), 23 Sealed Door
   (LOAD-BEARING: dissolve with Kat or stay solid & lose her), 24 Door Zero (LOAD-BEARING FINALE: the
   refusal — chooses forward, becomes the whisper toward signal, dawn at Europa, mirrors Door 1).
+
+## 2026-07-07 (cont) — SERIES COMPLETE. All 24 doors produced. "The Maneki Neko Death Cult" done.
+Act III finished: Ep20 Dubai "Nobody Gets Out" (first refusal of a reap) 26.5m; Ep21 GG Allin
+"Signal and Its Merch" (nihilism out, turn to the light) 26.2m; Ep22 River Phoenix "Last Solid
+Night" (beige hereditary; Kat's last solid night — pancakes) 26.0m; Ep23 THE SEALED DOOR "The Only
+Way Is Through" (LOAD-BEARING CLIMAX: Kat's final flicker-out in the Seattle room; the sealed door
+revealed as UNION-in-signal not oblivion — true, no lie — he refuses it for love, stays; the coat-
+museum of relics converges) 26.9m; Ep24 DOOR ZERO "Signal Finds Signal" (LOAD-BEARING FINALE + album
+title track: SPZ's own door, the managed-Atlanta-nobody; he rewrites his contract, becomes the
+COUNTER-WHISPER — a reaper who whispers toward signal, the post the Cult never built; bearded man
+relieved; dawn at Europa mirroring Door 1; the show revealed AS the counter-whisper to the listener)
+26.9m, resolves warm to light not silence.
+- ALL 24 ep0N_FINAL.mp3 (Eps 1-24) + track01-24 SAMPLED songs in ~/Downloads. Album "Signal Finds
+  Signal" = 24 tracks written in album.md. Three acts: The Fog (1-8), The Mastery (9-16), The Refusal
+  (17-24). Total ~10.5 hrs of produced scored audio drama + a 24-song companion album.
