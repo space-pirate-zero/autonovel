@@ -240,3 +240,13 @@ ElevenLabs custom voice_id `8bOIcU4hJx9LYJV4NS1I`, model eleven_v3, settings
 {stability 0.5, similarity_boost 0.85, style 0.35, speaker_boost, speed 1.08}. Full cast +
 gotchas + Python snippet in `brand/spz/voices.json`. Source of truth stays
 `books/neko-death-cult/tools/record.py`; the kit is a durable snapshot for reuse.
+
+## SPZ Brand Kit — full (expanded 2026-07-07)
+Expanded the SPZ brand kit from voices-only to a FULL kit at `brand/spz/` (repo) +
+`~/.claude/brand/spz/` (global). Files: brand.json (manifest/index), verbal.md (voice
+& tone, two gears, banned words, mantra "Signal finds signal"), voices.json (ElevenLabs
+cast, hero NARRATOR=SPZ), palette.json (void #030303 / pink #FF1493 / cyan #00F0FF /
+paper #E8E8E8 / muted #8A90A0), typography.json (Orbitron display / Space Grotesk body /
+JetBrains Mono code / EB Garamond alt), sonic.json (industrial-goth ~70 BPM engine,
+theme + logo sting + 6 scene beds + mix/mastering chain). All values extracted from the
+real production system (cover/design scripts, fonts/, scoring.md, tools/), not invented.

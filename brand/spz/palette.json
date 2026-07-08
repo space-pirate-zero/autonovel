@@ -1,0 +1,52 @@
+{
+  "brand": "SPZ / Space Pirate Zero",
+  "kit": "palette",
+  "version": "1.0.0",
+  "updated": "2026-07-07",
+  "source": "Extracted from the production cover/design system (build_design_pdf.py \\definecolor set). This is the cyberpunk-noir identity used across the SPZ books and the Neko Death Cult audio drama.",
+  "mood": "industrial-goth cyberpunk noir — near-black void, hot neon, cold signal, newsprint grit",
+  "colors": {
+    "void": {
+      "hex": "#030303",
+      "rgb": [3, 3, 3],
+      "role": "primary background / ground. Near-black, not pure black. The default field everything sits on.",
+      "usage": "page backgrounds, cover fields, dark UI"
+    },
+    "pink": {
+      "hex": "#FF1493",
+      "rgb": [255, 20, 147],
+      "role": "primary accent — hot magenta. The brand's loudest color; the punk shout, the title glow.",
+      "usage": "titles, primary CTAs, highlights, the SPZ logotype flush"
+    },
+    "cyan": {
+      "hex": "#00F0FF",
+      "rgb": [0, 240, 255],
+      "role": "secondary accent — cold signal cyan. The 'signal' half of 'signal finds signal'; the terminal glow.",
+      "usage": "links, code/terminal accents, secondary highlights, glitch lines"
+    },
+    "paper": {
+      "hex": "#E8E8E8",
+      "rgb": [232, 232, 232],
+      "role": "primary foreground text on void; a dirty off-white, newsprint not paper-white.",
+      "usage": "body text on dark, captions"
+    },
+    "muted": {
+      "hex": "#8A90A0",
+      "rgb": [138, 144, 160],
+      "role": "muted slate — de-emphasis, metadata, rules, secondary text.",
+      "usage": "subtitles, timestamps, dividers, disabled states"
+    }
+  },
+  "pairings": {
+    "primary": "pink (#FF1493) on void (#030303)",
+    "signal": "cyan (#00F0FF) on void (#030303)",
+    "body": "paper (#E8E8E8) on void (#030303)",
+    "never": "do not put pink on cyan or cyan on pink — both are max-chroma neon and vibrate. Separate them with void or paper."
+  },
+  "notes": [
+    "Two neons, one void. The pink/cyan tension IS the brand — hot vs cold, flesh vs signal. Use void generously between them.",
+    "Backgrounds are #030303, never #000000 — the near-black keeps a hair of warmth and lets true-black shadows read.",
+    "Newsprint/VHS grit texture over the void is on-brand (the tabloid cover lineage).",
+    "For light/print contexts, invert: void text on paper field, pink + cyan kept as accents."
+  ]
+}

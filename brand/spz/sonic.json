@@ -1,0 +1,57 @@
+{
+  "brand": "SPZ / Space Pirate Zero",
+  "kit": "sonic",
+  "version": "1.0.0",
+  "updated": "2026-07-07",
+  "source": "The scoring bible (books/neko-death-cult/scoring.md) + the assembler/mixer (tools/assemble.py, tools/mix.py), battle-tested across the 24-episode audio drama.",
+  "signature": "industrial-goth cyberpunk engine — deep distorted 808 sub-bass, pounding industrial kick, cold detuned analog synths, cyberpunk arpeggios, strobe-hum drone, vinyl/VHS grit, neon reverb, and a ghost of Fosse muted trumpet. ~70 BPM. One haunting romantic motif that swells then dissolves.",
+  "tempo_bpm": 70,
+  "generator": {
+    "provider": "ElevenLabs Music (music.compose) / Suno (Instrumental mode ON)",
+    "rule": "Everything under the spoken word is INSTRUMENTAL — narration is never fought by sung lyrics. The door's song (album track) becomes the episode theme only in instrumental form.",
+    "tos_gotcha": "Music generators REJECT prompts that NAME real artists (bad_prompt). Describe era/sound/instrumentation only — never the artist. (TTS is unaffected; names are fine in narration.)"
+  },
+  "theme": {
+    "name": "Signal Finds Signal",
+    "role": "series main theme — open and close of every episode; the album title track (#24)",
+    "prompt": "instrumental main-title theme for a dark cyberpunk audio drama; industrial-goth engine — deep distorted 808 sub-bass, pounding industrial kick, cold detuned analog synths, cyberpunk arpeggios, strobe-hum drone, vinyl/VHS grit, neon reverb, a ghost of Fosse muted trumpet; one haunting romantic motif that builds to a full cinematic swell then drops to a loopable bed; ~70 BPM; instrumental, no vocals"
+  },
+  "logo_sting": {
+    "role": "series sound-logo (~8 s) under the identifier voice",
+    "prompt": "short cinematic sound-logo, dark cyberpunk-goth; a paper-tear whoosh into a deep 808 hit and a rising neon-synth swell, vinyl crackle, a single distant beckoning-cat bell; ominous, branded, ~8 seconds; instrumental, no vocals",
+    "motif": "the single distant beckoning-cat (maneki-neko) bell is the audio mnemonic"
+  },
+  "scene_beds": {
+    "vault": "early-2000s industrial-goth nightclub heard through walls (EBM/cyber-goth); four-on-the-floor kick, distorted 808, cold synth stabs, strobe-hum, fog hiss; hypnotic, menacing, loopable, mixed low",
+    "cathedral": "cavernous glitching techno-gospel; reverberant choir pads, distant broken church organ, dial-up static, granular glitches, deep sub drones; sacred and broken",
+    "motel": "cold minimal dread; one detuned drone, sparse sub pulses, fluorescent hum, faint clock tick, vast empty reverb; affectless, bureaucratic, menacing by restraint",
+    "europa": "warm but uncanny morning ambience; soft Rhodes, analog pads, distant birdsong/cutlery, a faint detune under the warmth so it feels too clean; tender and wrong",
+    "cosmic": "cosmic lofi; dreamy downtempo, warped tape, celestial pads, a slow jukebox arpeggio, deep 808 heartbeat, vinyl crackle, starfield reverb; awe and dread",
+    "outro": "end-credits reprise of the main theme; the romantic motif swelling then dissolving into a long reverb tail; unresolved, cinematic; fades out",
+    "underbed": "very quiet subliminal dark-ambient drone; almost inaudible floor of tension under narration; no melody, no drums"
+  },
+  "episode_anatomy": [
+    "OPEN (~25-30s): logo sting -> main theme swell -> series identifier VO ducked over it -> swell into story",
+    "COLD OPEN: theme drops to a low bed, story begins",
+    "SCORED NARRATION: scene-specific instrumental beds under the voice, ducked ~-16 dB, swelling at beats",
+    "STING TRANSITIONS: needle-lift / paper-door SFX at scene breaks",
+    "OUTRO: theme reprise + whispered mantra, fading out"
+  ],
+  "mix_chain": {
+    "voice_bus": "narration stays fully intelligible; TTS via the SPZ voice kit (see voices.json)",
+    "bed_duck_db": -16,
+    "bed_volume_scalar": 0.4,
+    "bed_fades": "afade in/out per bed; loop bed to scene length",
+    "crossfades": "acrossfade d=4 between sections; c=tri for bed-to-bed, c=qsin for open->body",
+    "limiter": "alimiter=limit=0.97 on the master (0.97 true-peak ceiling)",
+    "open_build_note": "FFmpeg 8.1: build each open stage (sting head, theme bed, delayed VO) as separate single-output mp3 files, then amix RAW inputs and acrossfade — the terminal -map '[label]' path mis-maps and the mp3 muxer rejects multi-stream output.",
+    "target_loudness_lufs": -16
+  },
+  "sample_the_show": {
+    "concept": "the show's own voice (SPZ) is sampled INTO the album songs — clean intro/mid, haunting-faded outro",
+    "isolate": "demucs --two-stems=vocals on the song; ffmpeg silencedetect=noise=-30dB:d=1.5 on vocals.wav to find pockets",
+    "clean_filter": "highpass=f=100,acompressor=threshold=-18dB:ratio=2.5:attack=5:release=120",
+    "haunt_filter": "asetrate=45000 (pitch down) + aecho reverb + volume=2.5 + afade out",
+    "layer": "adelay per sample, volume~2.3, amix inputs=N:duration=first:normalize=0, alimiter=limit=0.97"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "brand": "Space Pirate Zero",
+  "short": "SPZ",
+  "tagline": "Signal finds signal.",
+  "essence": "Diogenes with a laptop — deface the counterfeit, live honest. Snarky, punk, Atlanta-trap, hacker. Cyberpunk-noir in look, industrial-goth in sound, bar-at-midnight in voice.",
+  "version": "1.0.0",
+  "updated": "2026-07-07",
+  "repo": "github.com/space-pirate-zero/digital-insurgency",
+  "productions": {
+    "books": ["Digital Insurgency", "The Last Human CEO", "Zero Trust Reality", "Neko Death Cult"],
+    "audio_drama": "The Maneki Neko Death Cult (24 episodes, ~10.5h)",
+    "album": "Signal Finds Signal (24 tracks)"
+  },
+  "kit": {
+    "verbal": "verbal.md — voice & tone, the two gears, banned words, the mantra",
+    "voices": "voices.json — ElevenLabs cast; hero NARRATOR = SPZ",
+    "palette": "palette.json — void / pink / cyan / paper / muted",
+    "typography": "typography.json — Orbitron (display) / Space Grotesk (body) / JetBrains Mono (code)",
+    "sonic": "sonic.json — industrial-goth engine, ~70 BPM, theme + beds + mix chain"
+  },
+  "quick_reference": {
+    "colors": { "void": "#030303", "pink": "#FF1493", "cyan": "#00F0FF", "paper": "#E8E8E8", "muted": "#8A90A0" },
+    "fonts": { "display": "Orbitron", "body": "Space Grotesk", "mono": "JetBrains Mono" },
+    "hero_voice_id": "8bOIcU4hJx9LYJV4NS1I",
+    "voice_benchmark": "someone talking at a bar at midnight",
+    "one_rule": "punch up, never down"
+  },
+  "locations": {
+    "repo": "brand/spz/ (version-controlled)",
+    "global": "~/.claude/brand/spz/ (cross-project reuse)"
+  }
+}

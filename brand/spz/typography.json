@@ -1,0 +1,50 @@
+{
+  "brand": "SPZ / Space Pirate Zero",
+  "kit": "typography",
+  "version": "1.0.0",
+  "updated": "2026-07-07",
+  "source": "The production type system (fonts/ + build_design_pdf.py fontspec). All are open-licensed (see fonts/SOURCES.md in the repo).",
+  "system": {
+    "display": {
+      "family": "Orbitron",
+      "files": ["Orbitron-900.ttf", "Orbitron-700.ttf", "Orbitron-500.ttf"],
+      "role": "Display / titles / logotype. Geometric, techno, wide. All-caps for titles.",
+      "web_fallback": "Orbitron (Google Fonts), then a wide geometric sans, then sans-serif",
+      "usage": "cover titles, section headers, the SPZ wordmark, big airport-shelf-readable type",
+      "notes": "Weight 900 for the loudest titles, 700 for subheads. Tracking slightly open; all-caps."
+    },
+    "body": {
+      "family": "Space Grotesk",
+      "files": ["SpaceGrotesk-400.ttf", "SpaceGrotesk-700.ttf", "SpaceGrotesk-500.ttf", "SpaceGrotesk-300.ttf"],
+      "role": "Main body + UI text. Warm-geometric grotesque; reads long-form, still feels near-future.",
+      "web_fallback": "Space Grotesk (Google Fonts), then system-ui, then sans-serif",
+      "usage": "body copy, paragraphs, captions, buttons, most running text",
+      "italic": "no true italic shipped — the print pipeline fakes a 0.18 slant (FakeSlant). Prefer weight/color for emphasis over faux-italic on screen."
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "files": ["JetBrainsMono-400.ttf", "JetBrainsMono-700.ttf"],
+      "role": "Code / terminal / signal. The hacker voice made visible.",
+      "web_fallback": "JetBrains Mono, then ui-monospace, then monospace",
+      "usage": "code blocks, terminal output, timestamps, track IDs, data/metadata, glitch text",
+      "color": "often set in cyan (#00F0FF) on void to read as 'signal'"
+    },
+    "serif_alt": {
+      "family": "EB Garamond",
+      "role": "Alternate serif used on some book covers for a literary/tabloid register (contrast against the neon).",
+      "web_fallback": "EB Garamond, then Georgia, then serif",
+      "usage": "optional — book-cover author lines, pull quotes where a serif contrast is wanted. Not part of the core digital system."
+    }
+  },
+  "hierarchy": {
+    "title": "Orbitron 900, all-caps, pink (#FF1493) on void",
+    "subhead": "Orbitron 700 or Space Grotesk 700, muted or paper",
+    "body": "Space Grotesk 400, paper (#E8E8E8) on void",
+    "code_meta": "JetBrains Mono 400, cyan (#00F0FF)"
+  },
+  "notes": [
+    "Three-voice system: Orbitron shouts (display), Space Grotesk speaks (body), JetBrains Mono computes (signal/code).",
+    "Titles are LARGE and airport-shelf readable — the covers deliberately over-size the display type.",
+    "Fonts live in fonts/ at the repo root; all open-licensed per fonts/SOURCES.md."
+  ]
+}
