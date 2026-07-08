@@ -1,0 +1,13 @@
+The CIO's real question isn't 'will it work?' but 'what happens when it doesn't?' If you can roll back in under 200ms, you don't have a bomb, you have a product.
+
+Build the kill switch before you build the feature, and hand them the button.
+
+The moral of the story: The real question isn't "will it work" but "what happens when it doesn't." Build the kill switch before the feature, hand them the button, and the radical change becomes the safe one.
+
+📖 Day 16/30 of my fable series — “The Reversibility Ratio”. A 2-minute read from the field:
+https://spacepiratezero.substack.com/p/day-1630-the-reversibility-ratio
+
+📕 The book it's smuggled out of — DIGITAL INSURGENCY: A Field Manual for Smuggling Authenticity Past the Corporate Immune System:
+https://www.amazon.com/dp/B0H4D92BSF
+
+#AI #FutureOfWork #Authenticity #Leadership #DigitalInsurgency

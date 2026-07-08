@@ -1,0 +1,555 @@
+
+============================================================
+  AUTONOVEL PIPELINE — phases: drafting, revision, export
+============================================================
+  State: phase=drafting, foundation_score=8.0, chapters=0/16, novel_score=0.0
+
+============================================================
+  PHASE 2: DRAFTING
+============================================================
+
+------------------------------------------------------------
+  Drafting Chapter 1/16
+------------------------------------------------------------
+  [22:45:07] Attempt 1/5
+  [22:45:07] RUN: uv run python draft_chapter.py 1
+  [22:47:07] Drafted 3531 words
+  [22:47:07] RUN: uv run python evaluate.py --chapter=1
+  [22:47:50] Chapter 1 score: 6.5
+  [22:47:50] RUN: git add -A
+  [22:47:50] RUN: git commit -m "ch01: score 6.5, 3531w" --allow-empty
+  [22:47:50] RUN: git rev-parse --short HEAD
+  [22:47:50] GIT COMMIT: 9767328 — ch01: score 6.5, 3531w
+
+------------------------------------------------------------
+  Drafting Chapter 2/16
+------------------------------------------------------------
+  [22:47:50] Attempt 1/5
+  [22:47:50] RUN: uv run python draft_chapter.py 2
+  [22:50:03] Drafted 3727 words
+  [22:50:03] RUN: uv run python evaluate.py --chapter=2
+  [22:50:53] Chapter 2 score: 7.0
+  [22:50:53] RUN: git add -A
+  [22:50:53] RUN: git commit -m "ch02: score 7.0, 3727w" --allow-empty
+  [22:50:53] RUN: git rev-parse --short HEAD
+  [22:50:53] GIT COMMIT: 738b0bf — ch02: score 7.0, 3727w
+
+------------------------------------------------------------
+  Drafting Chapter 3/16
+------------------------------------------------------------
+  [22:50:53] Attempt 1/5
+  [22:50:53] RUN: uv run python draft_chapter.py 3
+  [22:53:26] Drafted 4355 words
+  [22:53:26] RUN: uv run python evaluate.py --chapter=3
+  [22:54:06] Chapter 3 score: 3.5
+  [22:54:06] Score 3.5 < 6.0, discarding attempt
+  [22:54:06] RUN: git checkout -- chapters/ch_03.md 2>/dev/null || true
+  [22:54:06] Attempt 2/5
+  [22:54:06] RUN: uv run python draft_chapter.py 3
+  [22:56:31] Drafted 4016 words
+  [22:56:31] RUN: uv run python evaluate.py --chapter=3
+  [22:57:22] Chapter 3 score: 6.7
+  [22:57:22] RUN: git add -A
+  [22:57:22] RUN: git commit -m "ch03: score 6.7, 4016w" --allow-empty
+  [22:57:22] RUN: git rev-parse --short HEAD
+  [22:57:22] GIT COMMIT: 184adf2 — ch03: score 6.7, 4016w
+
+------------------------------------------------------------
+  Drafting Chapter 4/16
+------------------------------------------------------------
+  [22:57:22] Attempt 1/5
+  [22:57:22] RUN: uv run python draft_chapter.py 4
+  [22:59:33] Drafted 3679 words
+  [22:59:33] RUN: uv run python evaluate.py --chapter=4
+  [23:00:26] Chapter 4 score: 6.3
+  [23:00:26] RUN: git add -A
+  [23:00:26] RUN: git commit -m "ch04: score 6.3, 3679w" --allow-empty
+  [23:00:26] RUN: git rev-parse --short HEAD
+  [23:00:26] GIT COMMIT: 2046a48 — ch04: score 6.3, 3679w
+
+------------------------------------------------------------
+  Drafting Chapter 5/16
+------------------------------------------------------------
+  [23:00:26] Attempt 1/5
+  [23:00:26] RUN: uv run python draft_chapter.py 5
+  [23:02:44] Drafted 4018 words
+  [23:02:44] RUN: uv run python evaluate.py --chapter=5
+  [23:03:32] Chapter 5 score: 7.0
+  [23:03:32] RUN: git add -A
+  [23:03:32] RUN: git commit -m "ch05: score 7.0, 4018w" --allow-empty
+  [23:03:32] RUN: git rev-parse --short HEAD
+  [23:03:32] GIT COMMIT: 224b772 — ch05: score 7.0, 4018w
+
+------------------------------------------------------------
+  Drafting Chapter 6/16
+------------------------------------------------------------
+  [23:03:32] Attempt 1/5
+  [23:03:32] RUN: uv run python draft_chapter.py 6
+  [23:05:33] Drafted 3662 words
+  [23:05:33] RUN: uv run python evaluate.py --chapter=6
+  [23:06:15] Chapter 6 score: 7.0
+  [23:06:15] RUN: git add -A
+  [23:06:15] RUN: git commit -m "ch06: score 7.0, 3662w" --allow-empty
+  [23:06:15] RUN: git rev-parse --short HEAD
+  [23:06:15] GIT COMMIT: 1ee79be — ch06: score 7.0, 3662w
+
+------------------------------------------------------------
+  Drafting Chapter 7/16
+------------------------------------------------------------
+  [23:06:15] Attempt 1/5
+  [23:06:15] RUN: uv run python draft_chapter.py 7
+  [23:08:20] Drafted 3650 words
+  [23:08:20] RUN: uv run python evaluate.py --chapter=7
+  [23:09:04] Chapter 7 score: 5.5
+  [23:09:04] Score 5.5 < 6.0, discarding attempt
+  [23:09:04] RUN: git checkout -- chapters/ch_07.md 2>/dev/null || true
+  [23:09:04] Attempt 2/5
+  [23:09:04] RUN: uv run python draft_chapter.py 7
+  [23:11:14] Drafted 3836 words
+  [23:11:14] RUN: uv run python evaluate.py --chapter=7
+  [23:12:01] Chapter 7 score: 7.81
+  [23:12:01] RUN: git add -A
+  [23:12:01] RUN: git commit -m "ch07: score 7.81, 3836w" --allow-empty
+  [23:12:01] RUN: git rev-parse --short HEAD
+  [23:12:01] GIT COMMIT: fdac686 — ch07: score 7.81, 3836w
+
+------------------------------------------------------------
+  Drafting Chapter 8/16
+------------------------------------------------------------
+  [23:12:01] Attempt 1/5
+  [23:12:01] RUN: uv run python draft_chapter.py 8
+  [23:14:07] Drafted 3877 words
+  [23:14:07] RUN: uv run python evaluate.py --chapter=8
+  [23:14:49] Chapter 8 score: 7.16
+  [23:14:49] RUN: git add -A
+  [23:14:49] RUN: git commit -m "ch08: score 7.16, 3877w" --allow-empty
+  [23:14:49] RUN: git rev-parse --short HEAD
+  [23:14:49] GIT COMMIT: 2181502 — ch08: score 7.16, 3877w
+
+------------------------------------------------------------
+  Drafting Chapter 9/16
+------------------------------------------------------------
+  [23:14:49] Attempt 1/5
+  [23:14:49] RUN: uv run python draft_chapter.py 9
+  [23:17:25] Drafted 3776 words
+  [23:17:25] RUN: uv run python evaluate.py --chapter=9
+  [23:18:14] Chapter 9 score: 5.5
+  [23:18:14] Score 5.5 < 6.0, discarding attempt
+  [23:18:14] RUN: git checkout -- chapters/ch_09.md 2>/dev/null || true
+  [23:18:14] Attempt 2/5
+  [23:18:14] RUN: uv run python draft_chapter.py 9
+  [23:20:13] Drafted 3692 words
+  [23:20:13] RUN: uv run python evaluate.py --chapter=9
+  [23:21:01] Chapter 9 score: 6.96
+  [23:21:01] RUN: git add -A
+  [23:21:01] RUN: git commit -m "ch09: score 6.96, 3692w" --allow-empty
+  [23:21:01] RUN: git rev-parse --short HEAD
+  [23:21:01] GIT COMMIT: b89449e — ch09: score 6.96, 3692w
+
+------------------------------------------------------------
+  Drafting Chapter 10/16
+------------------------------------------------------------
+  [23:21:01] Attempt 1/5
+  [23:21:01] RUN: uv run python draft_chapter.py 10
+  [23:23:10] Drafted 3614 words
+  [23:23:10] RUN: uv run python evaluate.py --chapter=10
+  [23:23:56] Chapter 10 score: 5.0
+  [23:23:56] Score 5.0 < 6.0, discarding attempt
+  [23:23:56] RUN: git checkout -- chapters/ch_10.md 2>/dev/null || true
+  [23:23:56] Attempt 2/5
+  [23:23:56] RUN: uv run python draft_chapter.py 10
+  [23:25:55] Drafted 3552 words
+  [23:25:55] RUN: uv run python evaluate.py --chapter=10
+  [23:26:43] Chapter 10 score: 3.26
+  [23:26:43] Score 3.26 < 6.0, discarding attempt
+  [23:26:43] RUN: git checkout -- chapters/ch_10.md 2>/dev/null || true
+  [23:26:43] Attempt 3/5
+  [23:26:43] RUN: uv run python draft_chapter.py 10
+  [23:28:59] Drafted 3871 words
+  [23:28:59] RUN: uv run python evaluate.py --chapter=10
+  [23:29:58] Chapter 10 score: 4.0
+  [23:29:58] Score 4.0 < 6.0, discarding attempt
+  [23:29:58] RUN: git checkout -- chapters/ch_10.md 2>/dev/null || true
+  [23:29:58] Attempt 4/5
+  [23:29:58] RUN: uv run python draft_chapter.py 10
+  [23:32:07] Drafted 3615 words
+  [23:32:07] RUN: uv run python evaluate.py --chapter=10
+  [23:32:57] Chapter 10 score: 4.5
+  [23:32:57] Score 4.5 < 6.0, discarding attempt
+  [23:32:57] RUN: git checkout -- chapters/ch_10.md 2>/dev/null || true
+  [23:32:57] Attempt 5/5
+  [23:32:57] RUN: uv run python draft_chapter.py 10
+  [23:34:58] Drafted 3555 words
+  [23:34:58] RUN: uv run python evaluate.py --chapter=10
+  [23:35:46] Chapter 10 score: 6.0
+  [23:35:46] RUN: git add -A
+  [23:35:46] RUN: git commit -m "ch10: score 6.0, 3555w" --allow-empty
+  [23:35:46] RUN: git rev-parse --short HEAD
+  [23:35:46] GIT COMMIT: 7fa5f57 — ch10: score 6.0, 3555w
+
+------------------------------------------------------------
+  Drafting Chapter 11/16
+------------------------------------------------------------
+  [23:35:46] Attempt 1/5
+  [23:35:46] RUN: uv run python draft_chapter.py 11
+  [23:37:43] Drafted 3493 words
+  [23:37:43] RUN: uv run python evaluate.py --chapter=11
+  [23:38:34] Chapter 11 score: 6.7
+  [23:38:34] RUN: git add -A
+  [23:38:34] RUN: git commit -m "ch11: score 6.7, 3493w" --allow-empty
+  [23:38:34] RUN: git rev-parse --short HEAD
+  [23:38:34] GIT COMMIT: 31116b3 — ch11: score 6.7, 3493w
+
+------------------------------------------------------------
+  Drafting Chapter 12/16
+------------------------------------------------------------
+  [23:38:34] Attempt 1/5
+  [23:38:34] RUN: uv run python draft_chapter.py 12
+  [23:40:52] Drafted 4089 words
+  [23:40:52] RUN: uv run python evaluate.py --chapter=12
+  [23:41:48] Chapter 12 score: 6.5
+  [23:41:48] RUN: git add -A
+  [23:41:48] RUN: git commit -m "ch12: score 6.5, 4089w" --allow-empty
+  [23:41:48] RUN: git rev-parse --short HEAD
+  [23:41:48] GIT COMMIT: 5de1893 — ch12: score 6.5, 4089w
+
+------------------------------------------------------------
+  Drafting Chapter 13/16
+------------------------------------------------------------
+  [23:41:48] Attempt 1/5
+  [23:41:48] RUN: uv run python draft_chapter.py 13
+  [23:43:45] Drafted 3463 words
+  [23:43:45] RUN: uv run python evaluate.py --chapter=13
+  [23:44:32] Chapter 13 score: 7.0
+  [23:44:32] RUN: git add -A
+  [23:44:32] RUN: git commit -m "ch13: score 7.0, 3463w" --allow-empty
+  [23:44:32] RUN: git rev-parse --short HEAD
+  [23:44:32] GIT COMMIT: 4a36691 — ch13: score 7.0, 3463w
+
+------------------------------------------------------------
+  Drafting Chapter 14/16
+------------------------------------------------------------
+  [23:44:32] Attempt 1/5
+  [23:44:32] RUN: uv run python draft_chapter.py 14
+  [23:46:21] Drafted 3123 words
+  [23:46:21] RUN: uv run python evaluate.py --chapter=14
+  [23:47:17] Chapter 14 score: 7.0
+  [23:47:17] RUN: git add -A
+  [23:47:17] RUN: git commit -m "ch14: score 7.0, 3123w" --allow-empty
+  [23:47:17] RUN: git rev-parse --short HEAD
+  [23:47:17] GIT COMMIT: c824f81 — ch14: score 7.0, 3123w
+
+------------------------------------------------------------
+  Drafting Chapter 15/16
+------------------------------------------------------------
+  [23:47:17] Attempt 1/5
+  [23:47:17] RUN: uv run python draft_chapter.py 15
+  [23:49:27] Drafted 3770 words
+  [23:49:27] RUN: uv run python evaluate.py --chapter=15
+  [23:50:15] Chapter 15 score: 7.0
+  [23:50:15] RUN: git add -A
+  [23:50:15] RUN: git commit -m "ch15: score 7.0, 3770w" --allow-empty
+  [23:50:15] RUN: git rev-parse --short HEAD
+  [23:50:15] GIT COMMIT: b80ffc8 — ch15: score 7.0, 3770w
+
+------------------------------------------------------------
+  Drafting Chapter 16/16
+------------------------------------------------------------
+  [23:50:15] Attempt 1/5
+  [23:50:15] RUN: uv run python draft_chapter.py 16
+  [23:52:04] Drafted 3267 words
+  [23:52:04] RUN: uv run python evaluate.py --chapter=16
+  [23:52:53] Chapter 16 score: 6.8
+  [23:52:53] RUN: git add -A
+  [23:52:53] RUN: git commit -m "ch16: score 6.8, 3267w" --allow-empty
+  [23:52:53] RUN: git rev-parse --short HEAD
+  [23:52:53] GIT COMMIT: 1371425 — ch16: score 6.8, 3267w
+
+============================================================
+  DRAFTING COMPLETE — 16 chapters, 59039 words
+============================================================
+
+============================================================
+  PHASE 3: REVISION
+============================================================
+
+------------------------------------------------------------
+  Revision Cycle 1/6
+------------------------------------------------------------
+  [23:52:53] Running adversarial editing on all chapters...
+  [23:52:53] RUN: uv run python adversarial_edit.py all
+  [00:03:49] Applying mechanical cuts (OVER-EXPLAIN, REDUNDANT)...
+  [00:03:49] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+  [00:03:49] Running reader panel evaluation...
+  [00:03:49] RUN: uv run python reader_panel.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 243, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 186, in main
+    arc_summary = (BASE_DIR / "arc_summary.md").read_text()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  [00:03:49] No strong consensus items found from panel
+  [00:03:49] Running full novel evaluation...
+  [00:03:49] RUN: uv run python evaluate.py --full
+  [00:04:11] Novel score: 7.0  (prev: 0.0, words: 58842)
+  [00:04:11] RUN: git add -A
+  [00:04:11] RUN: git commit -m "revision cycle 1 complete: novel_score 7.0" --allow-empty
+  [00:04:11] RUN: git rev-parse --short HEAD
+  [00:04:11] GIT COMMIT: 81db604 — revision cycle 1 complete: novel_score 7.0
+
+------------------------------------------------------------
+  Revision Cycle 2/6
+------------------------------------------------------------
+  [00:04:11] Running adversarial editing on all chapters...
+  [00:04:11] RUN: uv run python adversarial_edit.py all
+  [00:15:27] Applying mechanical cuts (OVER-EXPLAIN, REDUNDANT)...
+  [00:15:27] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+  [00:15:27] Running reader panel evaluation...
+  [00:15:27] RUN: uv run python reader_panel.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 243, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 186, in main
+    arc_summary = (BASE_DIR / "arc_summary.md").read_text()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  [00:15:27] No strong consensus items found from panel
+  [00:15:27] Running full novel evaluation...
+  [00:15:27] RUN: uv run python evaluate.py --full
+  [00:15:49] Novel score: 7.0  (prev: 7.0, words: 57792)
+  [00:15:49] RUN: git add -A
+  [00:15:49] RUN: git commit -m "revision cycle 2 complete: novel_score 7.0" --allow-empty
+  [00:15:49] RUN: git rev-parse --short HEAD
+  [00:15:49] GIT COMMIT: 569dad1 — revision cycle 2 complete: novel_score 7.0
+
+------------------------------------------------------------
+  Revision Cycle 3/6
+------------------------------------------------------------
+  [00:15:49] Running adversarial editing on all chapters...
+  [00:15:49] RUN: uv run python adversarial_edit.py all
+  [00:26:40] Applying mechanical cuts (OVER-EXPLAIN, REDUNDANT)...
+  [00:26:40] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+  [00:26:40] Running reader panel evaluation...
+  [00:26:40] RUN: uv run python reader_panel.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 243, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/reader_panel.py", line 186, in main
+    arc_summary = (BASE_DIR / "arc_summary.md").read_text()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  [00:26:40] No strong consensus items found from panel
+  [00:26:40] Running full novel evaluation...
+  [00:26:40] RUN: uv run python evaluate.py --full
+  [00:27:01] Novel score: 7.0  (prev: 7.0, words: 57363)
+  [00:27:01] RUN: git add -A
+  [00:27:01] RUN: git commit -m "revision cycle 3 complete: novel_score 7.0" --allow-empty
+  [00:27:01] RUN: git rev-parse --short HEAD
+  [00:27:01] GIT COMMIT: 04179ce — revision cycle 3 complete: novel_score 7.0
+  [00:27:01] Plateau detected (delta 0.00 < 0.3) after 3 cycles — stopping
+
+============================================================
+  PHASE 3b: OPUS REVIEW LOOP
+============================================================
+
+------------------------------------------------------------
+  Opus Review Round 1/4
+------------------------------------------------------------
+  [00:27:01] Sending manuscript to Opus for review...
+  [00:27:01] RUN: uv run python review.py --output reviews.md
+  [00:28:13] Parsing review...
+  [00:28:13] RUN: uv run python review.py --parse
+Latest review: 20260605_002813
+Stars: 3.5
+
+ACTIONABLE ITEMS (0):
+
+==================================================
+Stop revising? YES — Only 0 items found
+==================================================
+
+  [00:28:13] Stars: 3.5, Items: 0 (0 major, 0 qualified)
+  [00:28:13] Generating revision briefs from review...
+  [00:28:13] RUN: uv run python gen_brief.py --auto
+  [00:28:13] Revising Ch 0 from review brief...
+  [00:28:13] RUN: uv run python gen_revision.py 0 /Users/gregchambers/autonovel/briefs/ch00_auto.md
+  [00:28:32] RUN: git add -A
+  [00:28:32] RUN: git commit -m "review round 1: revise ch00 from Opus feedback" --allow-empty
+  [00:28:32] RUN: git rev-parse --short HEAD
+  [00:28:32] GIT COMMIT: 1572dc9 — review round 1: revise ch00 from Opus feedback
+  [00:28:32] Running mechanical cleanup pass...
+  [00:28:32] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+    WARN: exit code 2
+  [00:28:33] RUN: git add -A
+  [00:28:33] RUN: git commit -m "review round 1: mechanical cleanup" --allow-empty
+  [00:28:33] RUN: git rev-parse --short HEAD
+  [00:28:33] GIT COMMIT: 4b8f496 — review round 1: mechanical cleanup
+  [00:28:33] Review round 1 complete.
+
+------------------------------------------------------------
+  Opus Review Round 2/4
+------------------------------------------------------------
+  [00:28:33] Sending manuscript to Opus for review...
+  [00:28:33] RUN: uv run python review.py --output reviews.md
+  [00:29:53] Parsing review...
+  [00:29:53] RUN: uv run python review.py --parse
+Latest review: 20260605_002953
+Stars: 3
+
+ACTIONABLE ITEMS (0):
+
+==================================================
+Stop revising? YES — Only 0 items found
+==================================================
+
+  [00:29:53] Stars: 3, Items: 0 (0 major, 0 qualified)
+  [00:29:53] Generating revision briefs from review...
+  [00:29:53] RUN: uv run python gen_brief.py --auto
+  [00:29:53] Revising Ch 0 from review brief...
+  [00:29:53] RUN: uv run python gen_revision.py 0 /Users/gregchambers/autonovel/briefs/ch00_auto.md
+  [00:30:12] RUN: git add -A
+  [00:30:12] RUN: git commit -m "review round 2: revise ch00 from Opus feedback" --allow-empty
+  [00:30:12] RUN: git rev-parse --short HEAD
+  [00:30:12] GIT COMMIT: f13b2bf — review round 2: revise ch00 from Opus feedback
+  [00:30:12] Running mechanical cleanup pass...
+  [00:30:12] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+    WARN: exit code 2
+  [00:30:12] RUN: git add -A
+  [00:30:12] RUN: git commit -m "review round 2: mechanical cleanup" --allow-empty
+  [00:30:12] RUN: git rev-parse --short HEAD
+  [00:30:12] GIT COMMIT: 8ac4e34 — review round 2: mechanical cleanup
+  [00:30:12] Review round 2 complete.
+
+------------------------------------------------------------
+  Opus Review Round 3/4
+------------------------------------------------------------
+  [00:30:12] Sending manuscript to Opus for review...
+  [00:30:12] RUN: uv run python review.py --output reviews.md
+  [00:31:39] Parsing review...
+  [00:31:39] RUN: uv run python review.py --parse
+Latest review: 20260605_003139
+Stars: None
+
+ACTIONABLE ITEMS (0):
+
+==================================================
+Stop revising? YES — Only 0 items found
+==================================================
+
+  [00:31:40] Stars: 0, Items: 0 (0 major, 0 qualified)
+  [00:31:40] Generating revision briefs from review...
+  [00:31:40] RUN: uv run python gen_brief.py --auto
+  [00:31:40] Revising Ch 0 from review brief...
+  [00:31:40] RUN: uv run python gen_revision.py 0 /Users/gregchambers/autonovel/briefs/ch00_auto.md
+  [00:31:57] RUN: git add -A
+  [00:31:57] RUN: git commit -m "review round 3: revise ch00 from Opus feedback" --allow-empty
+  [00:31:57] RUN: git rev-parse --short HEAD
+  [00:31:57] GIT COMMIT: 7347de8 — review round 3: revise ch00 from Opus feedback
+  [00:31:57] Running mechanical cleanup pass...
+  [00:31:57] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+    WARN: exit code 2
+  [00:31:57] RUN: git add -A
+  [00:31:57] RUN: git commit -m "review round 3: mechanical cleanup" --allow-empty
+  [00:31:57] RUN: git rev-parse --short HEAD
+  [00:31:57] GIT COMMIT: bb5a9ee — review round 3: mechanical cleanup
+  [00:31:57] Review round 3 complete.
+
+------------------------------------------------------------
+  Opus Review Round 4/4
+------------------------------------------------------------
+  [00:31:57] Sending manuscript to Opus for review...
+  [00:31:57] RUN: uv run python review.py --output reviews.md
+  [00:33:20] Parsing review...
+  [00:33:20] RUN: uv run python review.py --parse
+Latest review: 20260605_003320
+Stars: 0
+
+ACTIONABLE ITEMS (0):
+
+==================================================
+Stop revising? YES — Only 0 items found
+==================================================
+
+  [00:33:20] Stars: 0, Items: 0 (0 major, 0 qualified)
+  [00:33:20] Generating revision briefs from review...
+  [00:33:20] RUN: uv run python gen_brief.py --auto
+  [00:33:20] Revising Ch 0 from review brief...
+  [00:33:20] RUN: uv run python gen_revision.py 0 /Users/gregchambers/autonovel/briefs/ch00_auto.md
+  [00:33:44] RUN: git add -A
+  [00:33:44] RUN: git commit -m "review round 4: revise ch00 from Opus feedback" --allow-empty
+  [00:33:44] RUN: git rev-parse --short HEAD
+  [00:33:44] GIT COMMIT: a2850ab — review round 4: revise ch00 from Opus feedback
+  [00:33:44] Running mechanical cleanup pass...
+  [00:33:44] RUN: uv run python apply_cuts.py all --types OVER-EXPLAIN REDUNDANT --min-fat 15
+    WARN: exit code 2
+  [00:33:44] RUN: git add -A
+  [00:33:44] RUN: git commit -m "review round 4: mechanical cleanup" --allow-empty
+  [00:33:44] RUN: git rev-parse --short HEAD
+  [00:33:44] GIT COMMIT: 739f005 — review round 4: mechanical cleanup
+  [00:33:44] Review round 4 complete.
+
+============================================================
+  OPUS REVIEW LOOP COMPLETE
+============================================================
+
+============================================================
+  REVISION COMPLETE — 3 cycles, novel_score 7.0
+============================================================
+
+============================================================
+  PHASE 4: EXPORT
+============================================================
+  [00:33:44] Rebuilding outline from chapters...
+  [00:33:44] RUN: uv run python build_outline.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/build_outline.py", line 167, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/build_outline.py", line 57, in main
+    text = path.read_text()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gregchambers/.local/share/uv/p
+  [00:37:53] Building arc summary...
+  [00:37:53] RUN: uv run python build_arc_summary.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/build_arc_summary.py", line 111, in <module>
+    main()
+  File "/Users/gregchambers/autonovel/build_arc_summary.py", line 56, in main
+    text = path.read_text()
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gregchambers/.local/sh
+  [00:39:15] Building manuscript.md...
+  [00:39:15] Manuscript: 17 chapters, 58070 words
+  [00:39:15] Building LaTeX content...
+  [00:39:15] RUN: uv run python typeset/build_tex.py
+    WARN: exit code 1
+    stderr: Traceback (most recent call last):
+  File "/Users/gregchambers/autonovel/typeset/build_tex.py", line 96, in <module>
+    with open(path) as f:
+         ^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jeffq/autonovel/chapters/ch_01.md'
+
+  [00:39:16] RUN: which tectonic
+    WARN: exit code 1
+  [00:39:16] tectonic not found, skipping PDF generation
+  [00:39:16] RUN: git add -A
+  [00:39:16] RUN: git commit -m "export: manuscript, outline, arc summary, PDF" --allow-empty
+  [00:39:16] RUN: git rev-parse --short HEAD
+  [00:39:16] GIT COMMIT: 34faeca — export: manuscript, outline, arc summary, PDF
+
+============================================================
+  EXPORT COMPLETE — 17 chapters, 58070 words
+============================================================
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+  Time:       1.9 hours
+  Phase:      complete
+  Foundation: 8.0
+  Chapters:   16/16
+  Words:      58070
+  Novel:      7.0
+  Cycles:     3

@@ -1,0 +1,75 @@
+/* ===== INSURGENT design system — ePub ===== */
+@font-face { font-family:'Orbitron'; font-weight:900;
+  src:url('../fonts/Orbitron-900.ttf'); }
+@font-face { font-family:'Orbitron'; font-weight:700;
+  src:url('../fonts/Orbitron-700.ttf'); }
+@font-face { font-family:'SpaceGrotesk'; font-weight:400;
+  src:url('../fonts/SpaceGrotesk-400.ttf'); }
+@font-face { font-family:'SpaceGrotesk'; font-weight:700;
+  src:url('../fonts/SpaceGrotesk-700.ttf'); }
+@font-face { font-family:'SpaceGrotesk'; font-style:italic; font-weight:400;
+  src:url('../fonts/SpaceGrotesk-400.ttf'); }
+@font-face { font-family:'JBMono'; font-weight:400;
+  src:url('../fonts/JetBrainsMono-400.ttf'); }
+
+body {
+  background:#030303; color:#E8E8E8;
+  font-family:'SpaceGrotesk', sans-serif;
+  line-height:1.5; margin:5%;
+}
+p { margin:0 0 0.8em 0; }
+
+/* Headings */
+h1 { font-family:'Orbitron', sans-serif; font-weight:900; color:#FF1493;
+  font-size:1.8em; line-height:1.15; margin:0.2em 0 0.1em; page-break-before:always; }
+h1 + p em, p.subtitle { color:#00F0FF; font-style:italic; font-size:1.1em;
+  display:block; margin-bottom:0.6em; }
+h2 { font-family:'Orbitron', sans-serif; font-weight:700; color:#FF1493;
+  text-transform:uppercase; font-size:1.05em; letter-spacing:0.04em;
+  border-bottom:1px solid rgba(255,20,147,0.4); padding-bottom:2px; }
+h3 { font-family:'Orbitron', sans-serif; font-weight:700; color:#FFAB00;
+  font-size:0.95em; }
+
+a { color:#00F0FF; }
+strong { color:#FFFFFF; }
+em { font-style:italic; }
+hr { border:0; border-top:1px solid rgba(0,240,255,0.4); margin:1.4em 20%; }
+
+/* Color-coded section banners (from epub_sections.lua) */
+.banner { font-family:'Orbitron', sans-serif; font-weight:700;
+  text-transform:uppercase; color:#030303; padding:7px 10px;
+  margin:1.2em 0 0.6em; font-size:1.0em; letter-spacing:0.03em; }
+.banner p { margin:0; }
+.banner.cyan   { background:#00F0FF; }
+.banner.pink   { background:#FF1493; color:#030303; }
+.banner.red    { background:#FF1744; }
+.banner.amber  { background:#FFAB00; }
+.banner.acid   { background:#C6FF00; }
+.banner.orange { background:#FF6A00; }
+
+/* Code + equations */
+pre, code, tt { font-family:'JBMono', monospace; }
+pre { background:#0E0E16; color:#E8E8E8; padding:0.8em; overflow:auto;
+  border-left:3px solid #00F0FF; font-size:0.85em; }
+code { color:#00F0FF; }
+math, .math { color:#00F0FF; }
+
+/* Boxed display equations (stand out). With --mathml, pandoc emits
+   <math display="block">, so target the attribute (and the class form as fallback). */
+math[display="block"], .math.display {
+  display:block; text-align:center; color:#00F0FF;
+  background:#0E0E16; border:1px solid #00F0FF; border-left:4px solid #00F0FF;
+  padding:12px 14px; margin:16px 0; overflow-x:auto; font-size:1.05em;
+}
+
+/* Tables */
+table { border-collapse:collapse; width:100%; margin:1em 0; }
+th, td { border:1px solid rgba(0,240,255,0.5); padding:5px 8px; text-align:left; }
+th { color:#00F0FF; font-family:'Orbitron', sans-serif; font-weight:700;
+  text-transform:uppercase; font-size:0.85em; }
+
+/* Epigraph / quotes */
+blockquote { color:#00F0FF; font-style:italic;
+  border-left:3px solid #FF1493; margin:1em 0; padding:0.2em 0 0.2em 1em; }
+
+ul, ol { margin:0 0 0.8em 1.2em; }

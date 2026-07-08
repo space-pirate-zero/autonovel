@@ -1,0 +1,35 @@
+timestamp	phase	score	words	keep_discard	description
+9a9d2da	ch01	?	295	forced	Chapter 1: kept after max attempts
+f3f3d0d	ch02	?	296	forced	Chapter 2: kept after max attempts
+7718afe	ch03	?	280	forced	Chapter 3: kept after max attempts
+118b6bf	ch04	?	2890	forced	Chapter 4: kept after max attempts
+a2f48bd	ch05	?	2429	forced	Chapter 5: kept after max attempts
+9767328	ch01	6.5	3531	keep	Chapter 1 (attempt 1)
+738b0bf	ch02	7.0	3727	keep	Chapter 2 (attempt 1)
+discarded	ch03	3.5	4355	discard	Chapter 3 attempt 1
+184adf2	ch03	6.7	4016	keep	Chapter 3 (attempt 2)
+2046a48	ch04	6.3	3679	keep	Chapter 4 (attempt 1)
+224b772	ch05	7.0	4018	keep	Chapter 5 (attempt 1)
+1ee79be	ch06	7.0	3662	keep	Chapter 6 (attempt 1)
+discarded	ch07	5.5	3650	discard	Chapter 7 attempt 1
+fdac686	ch07	7.81	3836	keep	Chapter 7 (attempt 2)
+2181502	ch08	7.16	3877	keep	Chapter 8 (attempt 1)
+discarded	ch09	5.5	3776	discard	Chapter 9 attempt 1
+b89449e	ch09	6.96	3692	keep	Chapter 9 (attempt 2)
+discarded	ch10	5.0	3614	discard	Chapter 10 attempt 1
+discarded	ch10	3.26	3552	discard	Chapter 10 attempt 2
+discarded	ch10	4.0	3871	discard	Chapter 10 attempt 3
+discarded	ch10	4.5	3615	discard	Chapter 10 attempt 4
+7fa5f57	ch10	6.0	3555	keep	Chapter 10 (attempt 5)
+31116b3	ch11	6.7	3493	keep	Chapter 11 (attempt 1)
+5de1893	ch12	6.5	4089	keep	Chapter 12 (attempt 1)
+4a36691	ch13	7.0	3463	keep	Chapter 13 (attempt 1)
+c824f81	ch14	7.0	3123	keep	Chapter 14 (attempt 1)
+b80ffc8	ch15	7.0	3770	keep	Chapter 15 (attempt 1)
+1371425	ch16	6.8	3267	keep	Chapter 16 (attempt 1)
+81db604	revision-cycle-1	7.0	58842	cycle	Cycle 1: novel_score 0.0->7.0
+569dad1	revision-cycle-2	7.0	57792	cycle	Cycle 2: novel_score 7.0->7.0
+04179ce	revision-cycle-3	7.0	57363	cycle	Cycle 3: novel_score 7.0->7.0
+34faeca	export	7.0	58070	export	Final export
+7c9a2f8	revision-cycle-4	8.0	56823	cycle	Cycle 4: novel_score 7.0->8.0
+24090ac	revision-cycle-5	7.0	56246	cycle	Cycle 5: novel_score 8.0->7.0
