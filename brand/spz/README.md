@@ -30,6 +30,7 @@ it matches what already shipped.
 | **`sonic.json`** | Sound: industrial-goth engine ~70 BPM, main theme + logo sting + 6 scene beds + the full mix/mastering chain. |
 | **`links.json`** | Presence pulled from spacepiratezero.com — site, taglines, the operator (Greg Chambers / Spaceship Alpha 9 / patents), social, streaming, studio. |
 | **`catalog.json`** | The 6 released albums (Lambada on Saturn's Rings, Afternoon Delight, Vaudeville Nebula, The Yellow 5, американское порно, Tentacle Love) + streaming + in-production work. |
+| **`studio.json`** | Spaceship Alpha 9 (SPZ's parent studio) pulled from the private SA9 repo: 16-product roster, 8-principle manifesto, Space Tokens, 5 design systems, and full StyleLift detail. |
 
 ## The lockup at a glance
 

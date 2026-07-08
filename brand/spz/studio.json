@@ -1,0 +1,63 @@
+{
+  "brand": "Space Pirate Zero",
+  "kit": "studio",
+  "version": "1.0.0",
+  "updated": "2026-07-08",
+  "source": "Pulled from the SpaceShipAlpha9 GitHub repo (not on the public web) — website/src/lib/products.ts, website/src/app (home + manifesto), sites/stylelift/src/app.",
+  "studio": {
+    "name": "Spaceship Alpha 9",
+    "domain": "spaceshipalpha9.co",
+    "what": "AI-native indie software studio. Fifteen products across AI, music, fashion, gaming, privacy, and infrastructure. No investors. No board. No permission required.",
+    "press_quote": "One indie studio. Fifteen products. Zero venture capital. The most ambitious software operation you've never heard of.",
+    "relation": "Space Pirate Zero is the flagship brand of Spaceship Alpha 9. Greg Chambers = Captain; co-founded with Daniela Chambers.",
+    "colors": { "pink": "#ff1493", "cyan": "#00f0ff" },
+    "design_systems": ["NEON (cyberpunk)", "PHOSPHOR (terminal)", "LEOPARD (fashion)", "STEALTH (minimal)", "CATHODE (retro TV)"],
+    "space_tokens": "Universal AI credit system — buy once, use in any SA9 product. StoreKit 2 (iOS) + Stripe (enterprise). One Keycloak SSO identity across the ecosystem.",
+    "manifesto": [
+      "Ship or Die",
+      "Own Your Stack",
+      "Don't Kill the Lamp",
+      "AI Is a Crew Member",
+      "Bootstrap Everything",
+      "Build in Public, Ship in Stealth",
+      "Quality Is Non-Negotiable",
+      "Small Teams > Big Committees"
+    ]
+  },
+  "products": [
+    { "name": "Space Pirate Zero", "tagline": "One indie studio is quietly building the future of software.", "domain": "spaceshipalpha9.co", "status": "live", "type": "flagship" },
+    { "name": "StyleLift", "tagline": "The AI stylist that learns what you actually like.", "domain": "stylelift.fashion", "status": "beta", "type": "consumer" },
+    { "name": "GhostDeck", "tagline": "The VM manager that makes Docker Desktop look expensive.", "domain": "ghostdeck.dev", "status": "beta", "type": "tool" },
+    { "name": "Grocery Ninja", "tagline": "Stop wasting $150/month on groceries you throw away.", "domain": "groceryninja.app", "status": "beta", "type": "consumer" },
+    { "name": "Space Tokens", "tagline": "One credit system. Fifteen products. Zero friction.", "domain": "tokens", "status": "beta", "type": "platform" },
+    { "name": "DARKWAVE", "tagline": "Kubernetes for humans. Not for consultants.", "domain": "darkwave", "status": "development", "type": "infra" },
+    { "name": "GhostGrid", "tagline": "Your MCP servers, one click away.", "domain": "ghostgrid", "status": "development", "type": "tool" },
+    { "name": "Atomic Sound", "tagline": "A recording studio that fits on your Mac.", "domain": "atomic-sound", "status": "development", "type": "consumer" },
+    { "name": "Atomic Video", "tagline": "Video editing that feels the music.", "domain": "atomic-video", "status": "development", "type": "consumer" },
+    { "name": "Atomic Distro", "tagline": "Get your music everywhere. Keep 90% of the money.", "domain": "atomic-distro", "status": "development", "type": "consumer" },
+    { "name": "Brand Casino", "tagline": "Turn foot traffic into brand fanatics.", "domain": "brand-casino", "status": "development", "type": "platform" },
+    { "name": "HomeGrid", "tagline": "One app for every smart device. No cloud required.", "domain": "homegrid", "status": "development", "type": "saas" },
+    { "name": "Phantom Tiles", "tagline": "Beat grandma at Rummikub. If you can.", "domain": "phantom-tiles", "status": "beta", "type": "game" },
+    { "name": "RONIN", "tagline": "Tell Final Cut Pro what to do. In English.", "domain": "cut-command", "status": "development", "type": "tool" },
+    { "name": "TradeCraft", "tagline": "They watch everything. Now you watch back.", "domain": "tradecraft", "status": "development", "type": "tool" },
+    { "name": "REWIND TV", "tagline": "Channel surfing is back. And it's glorious.", "domain": "rewind-tv", "status": "development", "type": "entertainment" }
+  ],
+  "stylelift": {
+    "domain": "stylelift.fashion",
+    "tagline": "The AI stylist that learns what you actually like.",
+    "pitch": "What Stitch Fix promised. What AI can actually deliver.",
+    "one_liner": "Everything you need to shop smarter, starting at zero.",
+    "design_system": "LEOPARD",
+    "platforms": ["Web", "iOS", "tvOS"],
+    "features": [
+      "Style DNA Engine — 12 questions, a 512-dimensional style vector in under 60s",
+      "Virtual Try-On — AR fitting with realistic fabric physics",
+      "Smart Wardrobe Sync — photo import + email-receipt parsing from 200+ retailers in under 3 min",
+      "Curated Collections — budget-optimized capsule wardrobes that evolve with your taste",
+      "Social Style Boards / Circles — fashion as a social experience",
+      "Budget Optimizer — cost-per-wear analysis and sale alerts"
+    ],
+    "pricing": "Free Forever; Pro at $9.99/mo. Creators earn 8-12% commission per sale, bi-weekly Stripe payouts, brand-partnership marketplace.",
+    "stat": "87% average fit-confidence score across supported retailers"
+  }
+}

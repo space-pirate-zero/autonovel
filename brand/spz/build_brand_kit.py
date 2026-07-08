@@ -79,6 +79,37 @@ def link_group(g):
             f'<div class="lgrid">'+"".join(link_card(l) for l in items)+"</div></div>")
 links_html = "\n".join(link_group(g) for g in LINKGROUPS)
 
+# ---- Studio (Spaceship Alpha 9) — pulled from the SpaceShipAlpha9 repo ----
+MANIFESTO = ["Ship or Die","Own Your Stack","Don't Kill the Lamp","AI Is a Crew Member",
+             "Bootstrap Everything","Build in Public, Ship in Stealth","Quality Is Non-Negotiable","Small Teams > Big Committees"]
+# (name, tagline, status)
+STUDIO_PRODUCTS = [
+ ("Space Pirate Zero","One indie studio quietly building the future of software.","live"),
+ ("StyleLift","The AI stylist that learns what you actually like.","beta"),
+ ("GhostDeck","The VM manager that makes Docker Desktop look expensive.","beta"),
+ ("Grocery Ninja","Stop wasting $150/month on groceries you throw away.","beta"),
+ ("Space Tokens","One credit system. Fifteen products. Zero friction.","beta"),
+ ("Phantom Tiles","Beat grandma at Rummikub. If you can.","beta"),
+ ("DARKWAVE","Kubernetes for humans. Not for consultants.","development"),
+ ("GhostGrid","Your MCP servers, one click away.","development"),
+ ("Atomic Sound","A recording studio that fits on your Mac.","development"),
+ ("Atomic Video","Video editing that feels the music.","development"),
+ ("Atomic Distro","Get your music everywhere. Keep 90% of the money.","development"),
+ ("Brand Casino","Turn foot traffic into brand fanatics.","development"),
+ ("HomeGrid","One app for every smart device. No cloud required.","development"),
+ ("RONIN","Tell Final Cut Pro what to do. In English.","development"),
+ ("TradeCraft","They watch everything. Now you watch back.","development"),
+ ("REWIND TV","Channel surfing is back. And it's glorious.","development"),
+]
+def prod_card(p):
+    name,tag,st=p
+    cls={"live":"live","beta":"beta"}.get(st,"dev")
+    lab={"live":"LIVE","beta":"BETA","development":"DEV"}[st]
+    return (f'<div class="prod p-{cls}"><div class="prod-h"><span class="prod-n">{name}</span>'
+            f'<span class="prod-st s-{cls}">{lab}</span></div><div class="prod-t">{tag}</div></div>')
+studio_products_html = "".join(prod_card(p) for p in STUDIO_PRODUCTS)
+manifesto_html = "".join(f'<span class="mchip">{m}</span>' for m in MANIFESTO)
+
 HTML = r"""<title>Space Pirate Zero — Brand Kit</title>
 <style>
 __FONTFACE__
@@ -342,6 +373,25 @@ nav a.active::after,nav a:hover::after{transform:scaleX(1)}
 .lnk-u{font-family:var(--mono);font-size:11px;color:var(--cyan);margin-top:12px;display:flex;justify-content:space-between;align-items:center}
 .lnk-u i{font-style:normal;transition:transform .2s}
 .lnk:hover .lnk-u i{transform:translate(3px,-3px)}
+/* ---------- STUDIO ---------- */
+.studio-lede{font-size:16px;color:var(--paper);line-height:1.65;max-width:58ch}
+.studio-lede b{color:var(--cyan);font-weight:500}
+.manifesto{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 30px}
+.mchip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--paper);border:1px solid var(--line);border-radius:20px;padding:7px 13px;transition:transform .15s,border-color .15s,color .15s}
+.mchip:hover{transform:translateY(-2px);border-color:var(--pink);color:var(--pink)}
+.mchip::before{content:"› ";color:var(--pink)}
+.prodgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.prod{border:1px solid var(--line);border-radius:3px;padding:15px 16px;background:var(--surface);transition:transform .2s,border-color .2s}
+.prod:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.prod-h{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.prod-n{font-family:var(--disp);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.02em}
+.prod-t{color:var(--muted);font-size:12.5px;margin-top:7px;line-height:1.45}
+.prod-st{font-family:var(--mono);font-size:9px;letter-spacing:.14em;padding:3px 7px;border-radius:3px;white-space:nowrap}
+.s-live{color:#050507;background:var(--cyan)}
+.s-beta{color:#050507;background:var(--pink)}
+.s-dev{color:var(--muted2);border:1px solid var(--line)}
+.p-live{border-color:rgba(0,240,255,.4)}
+.prodgrid .prod:first-child{border-color:var(--pink)}
 .operator{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-top:24px;padding:20px 22px;border:1px solid var(--line);border-radius:3px;background:linear-gradient(120deg,rgba(0,240,255,.05),transparent)}
 .operator .who{font-family:var(--disp);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.03em}
 .operator .det{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6;max-width:64ch}
@@ -375,7 +425,7 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
   <span class="nav-dot"></span>
   <a href="#essence">Essence</a><a href="#voice">Voice</a><a href="#color">Color</a>
   <a href="#type">Type</a><a href="#sonic">Sound</a><a href="#voices">Voices</a>
-  <a href="#catalog">Catalog</a><a href="#links">Links</a>
+  <a href="#catalog">Catalog</a><a href="#links">Links</a><a href="#studio">Studio</a>
 </nav>
 
 <div class="hero">
@@ -543,6 +593,15 @@ __CATALOG__
   <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Links &amp; Presence</h2>
     <p class="sec-note">Every channel, pulled from spacepiratezero.com. Opens in a new tab.</p></div>
 __LINKS__
+</div></section>
+
+<section id="studio"><div class="wrap reveal">
+  <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-title">The Studio</h2>
+    <p class="sec-note">SPZ is the flagship brand of Spaceship Alpha 9. Pulled from the SA9 repo.</p></div>
+  <p class="studio-lede"><b>Spaceship Alpha 9</b> — an AI-native indie software studio. Fifteen products across AI, music, fashion, gaming, privacy &amp; infrastructure. <b>No investors. No board. No permission required.</b> Captain: Greg Chambers, with Daniela Chambers.</p>
+  <div class="manifesto">__MANIFESTO__</div>
+  <div class="prodgrid">__PRODUCTS__</div>
+  <p class="rec-note">One <b>Space Tokens</b> credit system + Keycloak SSO across the fleet. Sites live in the repo, not the web: <a href="https://spaceshipalpha9.co" target="_blank" rel="noopener">spaceshipalpha9.co</a> · <a href="https://stylelift.fashion" target="_blank" rel="noopener">stylelift.fashion</a> (Free forever · Pro $9.99/mo · 512-dim Style DNA · 87% fit confidence).</p>
 </div></section>
 
 <footer><div class="wrap reveal">
@@ -726,7 +785,8 @@ __LINKS__
 """
 
 full = (HTML.replace("__FONTFACE__", fontface).replace("__TRACKS__", tracks_js)
-            .replace("__CATALOG__", catalog_html).replace("__LINKS__", links_html))
+            .replace("__CATALOG__", catalog_html).replace("__LINKS__", links_html)
+            .replace("__MANIFESTO__", manifesto_html).replace("__PRODUCTS__", studio_products_html))
 
 # Make charset-independent: HTML text -> numeric entities, JS strings -> \u escapes.
 # (base64 blobs are pure ASCII and pass through untouched.)
