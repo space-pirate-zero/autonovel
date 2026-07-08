@@ -28,6 +28,8 @@ it matches what already shipped.
 | **`palette.json`** | Colors: `void #030303`, `pink #FF1493`, `cyan #00F0FF`, `paper #E8E8E8`, `muted #8A90A0`. |
 | **`typography.json`** | Type: **Orbitron** (display) · **Space Grotesk** (body) · **JetBrains Mono** (code) · EB Garamond (alt serif). |
 | **`sonic.json`** | Sound: industrial-goth engine ~70 BPM, main theme + logo sting + 6 scene beds + the full mix/mastering chain. |
+| **`links.json`** | Presence pulled from spacepiratezero.com — site, taglines, the operator (Greg Chambers / Spaceship Alpha 9 / patents), social, streaming, studio. |
+| **`catalog.json`** | The 6 released albums (Lambada on Saturn's Rings, Afternoon Delight, Vaudeville Nebula, The Yellow 5, американское порно, Tentacle Love) + streaming + in-production work. |
 
 ## The lockup at a glance
 

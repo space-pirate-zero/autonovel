@@ -235,6 +235,45 @@ nav a.active::after,nav a:hover::after{transform:scaleX(1)}
 .vc .who{color:var(--muted);font-size:11.5px;margin-top:5px;line-height:1.4;min-height:2.7em}
 .vc .id{font-family:var(--mono);font-size:10px;color:var(--muted2);margin-top:10px;word-break:break-all}
 
+/* ---------- CATALOG ---------- */
+.records{border-top:1px solid var(--line)}
+.rec{display:grid;grid-template-columns:34px 1fr auto 22px;gap:16px;align-items:center;
+  padding:16px 4px;border-bottom:1px solid var(--line);color:var(--paper);transition:padding-left .22s,background .22s}
+.rec:hover{padding-left:16px;background:rgba(0,240,255,.045)}
+.rec-n{font-family:var(--mono);font-size:12px;color:var(--muted2)}
+.rec:hover .rec-n{color:var(--pink)}
+.rec-t{font-family:var(--disp);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.02em;display:block}
+.rec-b{color:var(--muted);font-size:12.5px;margin-top:3px;display:block}
+.rec-meta{text-align:right;white-space:nowrap}
+.rec-g{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:.05em;display:block}
+.rec-tr{font-family:var(--mono);font-size:10.5px;color:var(--muted2);display:block;margin-top:3px}
+.rec-go{font-family:var(--mono);color:var(--muted2);transition:transform .22s,color .22s}
+.rec:hover .rec-go{color:var(--cyan);transform:translate(3px,-3px)}
+.rec-note{margin-top:20px;font-size:13px;color:var(--muted)}
+.rec-note b{color:var(--paper);font-weight:500}
+
+/* ---------- LINKS ---------- */
+.lgrp{margin-bottom:26px}
+.lgrp-h{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted2);margin-bottom:12px}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.lnk{position:relative;display:block;padding:16px 16px 14px;border:1px solid var(--line);border-radius:3px;
+  background:var(--surface);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.lnk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--pink);transform:scaleY(0);transform-origin:top;transition:transform .22s}
+.lnk:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 14px 40px -22px var(--cyan)}
+.lnk:hover::before{transform:scaleY(1)}
+.lnk-l{font-family:var(--disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.03em;color:var(--paper);display:block}
+.lnk-d{color:var(--muted);font-size:12px;margin-top:4px;display:block}
+.lnk-u{font-family:var(--mono);font-size:11px;color:var(--cyan);margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+.lnk-u i{font-style:normal;transition:transform .2s}
+.lnk:hover .lnk-u i{transform:translate(3px,-3px)}
+.operator{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-top:24px;padding:20px 22px;border:1px solid var(--line);border-radius:3px;background:linear-gradient(120deg,rgba(0,240,255,.05),transparent)}
+.operator .who{font-family:var(--disp);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.03em}
+.operator .det{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6;max-width:64ch}
+.operator .pat{font-family:var(--mono);font-size:10.5px;color:var(--muted2);text-align:right;white-space:nowrap;line-height:1.7}
+.taglines{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.tagpill{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:7px 14px}
+.tagpill b{color:var(--cyan);font-weight:400}
+
 footer{padding:64px 0 90px;border-top:1px solid var(--line);text-align:center}
 footer .lock{font-family:var(--disp);font-weight:900;font-size:clamp(20px,3vw,30px);text-transform:uppercase;letter-spacing:.04em}
 footer .lock .z{color:var(--pink)}
@@ -260,6 +299,7 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
   <span class="nav-dot"></span>
   <a href="#essence">Essence</a><a href="#voice">Voice</a><a href="#color">Color</a>
   <a href="#type">Type</a><a href="#sonic">Sound</a><a href="#voices">Voices</a>
+  <a href="#catalog">Catalog</a><a href="#links">Links</a>
 </nav>
 
 <div class="hero">
@@ -273,7 +313,12 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
     </div>
     <h1 class="wordmark"><span class="l1">Space</span><br><span class="l2">Pirate</span><br><span class="l3">Zero</span></h1>
     <div class="tagline">&gt; signal finds signal<span class="cur"></span></div>
-    <p class="hero-sub">The visual, verbal &amp; sonic identity behind the Digital Insurgency books, the Maneki Neko Death Cult audio drama, and the album.</p>
+    <p class="hero-sub">Digital insurgent at large. The visual, verbal &amp; sonic identity behind the music, the books, and the Maneki Neko Death Cult audio drama.</p>
+    <div class="taglines">
+      <span class="tagpill">site &#183; <b>Digital Insurgent at Large</b></span>
+      <span class="tagpill">motto &#183; <b>No algorithms. No noise. Just shipping.</b></span>
+      <span class="tagpill">sonic &#183; <b>Signal finds signal</b></span>
+    </div>
     <div class="hero-cta">
       <button class="btn play-hero" id="heroPlay"><span class="ico ico-pp paused"><i class="bar1"></i><i class="bar2"></i><i class="tri"></i></span> Play the identity</button>
       <span class="eyebrow" style="color:var(--muted2)">4 tracks &#183; live visualizer</span>
@@ -291,10 +336,18 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
       <p class="bio">Burned-out DJ turned digital insurgent &#8212; narrates the counterfeit world at a bar at midnight, sneers up at the machine, never down at the broke. Irish grandmother in the blood; Atlanta in the bones.</p>
     </div>
     <ul class="prods">
-      <li><span class="k">Books</span><span class="v"><b>Digital Insurgency</b><span>The Last Human CEO &#183; Zero Trust Reality &#183; Neko Death Cult</span></span></li>
-      <li><span class="k">Audio</span><span class="v"><b>The Maneki Neko Death Cult</b><span>24 episodes &#183; ~10.5 hours</span></span></li>
-      <li><span class="k">Album</span><span class="v"><b>Signal Finds Signal</b><span>24 tracks</span></span></li>
+      <li><span class="k">Music</span><span class="v"><b>6 albums released</b><span>Lambada on Saturn's Rings &#183; Afternoon Delight &#183; Vaudeville Nebula &#183; +3</span></span></li>
+      <li><span class="k">Audio</span><span class="v"><b>The Maneki Neko Death Cult</b><span>24 episodes &#183; ~10.5 hours &#183; in production</span></span></li>
+      <li><span class="k">Books</span><span class="v"><b>Digital Insurgency &amp; more</b><span>forthcoming &#8212; in the monorepo</span></span></li>
+      <li><span class="k">Studio</span><span class="v"><b>Spaceship Alpha 9</b><span>15-product indie studio &#183; no VC</span></span></li>
     </ul>
+  </div>
+  <div class="operator">
+    <div>
+      <div class="who">Greg Chambers <span style="color:var(--muted2);font-weight:400;font-size:12px">&#8212; a.k.a. Space Pirate Zero</span></div>
+      <div class="det">Enterprise architect, inventor, musician, gonzo journalist &#8212; "the frequency beneath the frequency." Founder &amp; CTO of Spaceship Alpha 9 with Daniela Chambers (the real-world Kat), Atlanta-based, no VC. Formerly Global Group Director of Digital Innovation at Coca-Cola.</div>
+    </div>
+    <div class="pat">US&nbsp;11432994<br>Intelligence Engine<br><br>US&nbsp;11600383<br>Theft-Prevention</div>
   </div>
 </div></section>
 
@@ -399,6 +452,30 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
     <div class="vc"><div class="r">Bearded</div><div class="who">The kind one. Warm, unhurried, gives nothing away.</div><div class="id">JBFqnCBsd6RMkjVDRZzb</div></div>
     <div class="vc"><div class="r">Guest</div><div class="who">Bit parts &amp; the marks. Husky, flexible.</div><div class="id">N2lVS1w4EtoT3dr4eOWO</div></div>
   </div>
+</div></section>
+
+<section id="catalog"><div class="wrap reveal">
+  <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Catalog</h2>
+    <p class="sec-note">The released discography. Click any record to open it.</p></div>
+  <div class="records">
+<a class="rec" href="https://spacepiratezero.com/content/music/lambada-on-saturns-rings" target="_blank" rel="noopener"><span class="rec-n">01</span><span class="rec-main"><span class="rec-t">Lambada on Saturn's Rings</span><span class="rec-b">Debut LP &#8212; irreverent, melodic, permanently orbiting the edge of taste.</span></span><span class="rec-meta"><span class="rec-g">Alternative / Latin</span><span class="rec-tr">13 trk</span></span><span class="rec-go">&#8599;</span></a>
+<a class="rec" href="https://spacepiratezero.com/content/music/afternoon-delight" target="_blank" rel="noopener"><span class="rec-n">02</span><span class="rec-main"><span class="rec-t">Afternoon Delight</span><span class="rec-b">Nostalgic retro-futurism &#8212; a parallel 1979.</span></span><span class="rec-meta"><span class="rec-g">Alternative / Rock</span><span class="rec-tr">14 trk</span></span><span class="rec-go">&#8599;</span></a>
+<a class="rec" href="https://spacepiratezero.com/content/music/vaudeville-nebula" target="_blank" rel="noopener"><span class="rec-n">03</span><span class="rec-main"><span class="rec-t">Vaudeville Nebula</span><span class="rec-b">The EP that named the persona. Lo-fi, strange, deeply human.</span></span><span class="rec-meta"><span class="rec-g">Lo-Fi / Cosmic</span><span class="rec-tr">4 trk</span></span><span class="rec-go">&#8599;</span></a>
+<a class="rec" href="https://spacepiratezero.com/content/music/the-yellow-5" target="_blank" rel="noopener"><span class="rec-n">04</span><span class="rec-main"><span class="rec-t">The Yellow 5</span><span class="rec-b">Samba rhythms in zero gravity. Bossa nova on the event horizon.</span></span><span class="rec-meta"><span class="rec-g">Latin / Bossa Nova</span><span class="rec-tr">8 trk</span></span><span class="rec-go">&#8599;</span></a>
+<a class="rec" href="https://spacepiratezero.com/content/music/amerikanskoe-porno" target="_blank" rel="noopener"><span class="rec-n">05</span><span class="rec-main"><span class="rec-t">&#1072;&#1084;&#1077;&#1088;&#1080;&#1082;&#1072;&#1085;&#1089;&#1082;&#1086;&#1077; &#1087;&#1086;&#1088;&#1085;&#1086;</span><span class="rec-b">Cosmic pop, Cyrillic aesthetic &#8212; seductive, disorienting, unashamed.</span></span><span class="rec-meta"><span class="rec-g">Pop / Synth</span><span class="rec-tr">7 trk</span></span><span class="rec-go">&#8599;</span></a>
+<a class="rec" href="https://spacepiratezero.com/content/music/tentacle-love" target="_blank" rel="noopener"><span class="rec-n">06</span><span class="rec-main"><span class="rec-t">Tentacle Love</span><span class="rec-b">Eight transmissions from the outer edge &#8212; raw percussion, interstellar bars.</span></span><span class="rec-meta"><span class="rec-g">Hip-Hop / Rap</span><span class="rec-tr">8 trk</span></span><span class="rec-go">&#8599;</span></a>
+  </div>
+  <p class="rec-note">Also streaming on <a href="https://open.spotify.com/artist/5hsu0KPjwVKMCx1hAMFvI4" target="_blank" rel="noopener">Spotify</a> &amp; <a href="https://music.apple.com/us/artist/space-pirate-zero/1751347344" target="_blank" rel="noopener">Apple Music</a>. In production: <b>Signal Finds Signal</b> (24-track companion to the Neko Death Cult audio drama) &#8212; heard in the Sound player above.</p>
+</div></section>
+
+<section id="links"><div class="wrap reveal">
+  <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Links &amp; Presence</h2>
+    <p class="sec-note">Every channel, pulled from spacepiratezero.com. Opens in a new tab.</p></div>
+<div class="lgrp"><div class="lgrp-h">Home base</div><div class="lgrid"><a class="lnk" href="https://spacepiratezero.com" target="_blank" rel="noopener"><span class="lnk-l">spacepiratezero.com</span><span class="lnk-d">digital insurgent at large</span><span class="lnk-u">spacepiratezero.com <i>&#8599;</i></span></a></div></div>
+<div class="lgrp"><div class="lgrp-h">Channels</div><div class="lgrid"><a class="lnk" href="https://spacepiratezero.substack.com" target="_blank" rel="noopener"><span class="lnk-l">Substack</span><span class="lnk-d">weekly dispatches</span><span class="lnk-u">spacepiratezero.substack.com <i>&#8599;</i></span></a><a class="lnk" href="https://github.com/space-pirate-zero" target="_blank" rel="noopener"><span class="lnk-l">GitHub</span><span class="lnk-d">the org</span><span class="lnk-u">github.com <i>&#8599;</i></span></a><a class="lnk" href="https://www.linkedin.com/in/gregchambers/" target="_blank" rel="noopener"><span class="lnk-l">LinkedIn</span><span class="lnk-d">Greg Chambers</span><span class="lnk-u">linkedin.com <i>&#8599;</i></span></a><a class="lnk" href="https://www.instagram.com/space_pirate_zero/" target="_blank" rel="noopener"><span class="lnk-l">Instagram</span><span class="lnk-d">@space_pirate_zero</span><span class="lnk-u">instagram.com <i>&#8599;</i></span></a></div></div>
+<div class="lgrp"><div class="lgrp-h">Listen</div><div class="lgrid"><a class="lnk" href="https://open.spotify.com/artist/5hsu0KPjwVKMCx1hAMFvI4" target="_blank" rel="noopener"><span class="lnk-l">Spotify</span><span class="lnk-d">full discography</span><span class="lnk-u">open.spotify.com <i>&#8599;</i></span></a><a class="lnk" href="https://music.apple.com/us/artist/space-pirate-zero/1751347344" target="_blank" rel="noopener"><span class="lnk-l">Apple Music</span><span class="lnk-d">full discography</span><span class="lnk-u">music.apple.com <i>&#8599;</i></span></a></div></div>
+<div class="lgrp"><div class="lgrp-h">Studio</div><div class="lgrid"><a class="lnk" href="https://spaceshipalpha9.co" target="_blank" rel="noopener"><span class="lnk-l">Spaceship Alpha 9</span><span class="lnk-d">15-product indie studio &#183; no VC</span><span class="lnk-u">spaceshipalpha9.co <i>&#8599;</i></span></a><a class="lnk" href="https://stylelift.fashion" target="_blank" rel="noopener"><span class="lnk-l">StyleLift</span><span class="lnk-d">AI fashion retail</span><span class="lnk-u">stylelift.fashion <i>&#8599;</i></span></a></div></div>
+<div class="lgrp"><div class="lgrp-h">On the site</div><div class="lgrid"><a class="lnk" href="https://spacepiratezero.com/content/article" target="_blank" rel="noopener"><span class="lnk-l">Dispatches</span><span class="lnk-d">essays</span><span class="lnk-u">spacepiratezero.com <i>&#8599;</i></span></a><a class="lnk" href="https://spacepiratezero.com/content/music" target="_blank" rel="noopener"><span class="lnk-l">Music</span><span class="lnk-d">the records</span><span class="lnk-u">spacepiratezero.com <i>&#8599;</i></span></a><a class="lnk" href="https://spacepiratezero.com/content/book" target="_blank" rel="noopener"><span class="lnk-l">Books</span><span class="lnk-d">forthcoming</span><span class="lnk-u">spacepiratezero.com <i>&#8599;</i></span></a><a class="lnk" href="https://spacepiratezero.com/bio" target="_blank" rel="noopener"><span class="lnk-l">Dossier</span><span class="lnk-d">the bio</span><span class="lnk-u">spacepiratezero.com <i>&#8599;</i></span></a><a class="lnk" href="https://spacepiratezero.com/contact" target="_blank" rel="noopener"><span class="lnk-l">Comms</span><span class="lnk-d">contact</span><span class="lnk-u">spacepiratezero.com <i>&#8599;</i></span></a><a class="lnk" href="https://spacepiratezero.com/waitlist" target="_blank" rel="noopener"><span class="lnk-l">Join Waitlist</span><span class="lnk-d">get on the list</span><span class="lnk-u">spacepiratezero.com <i>&#8599;</i></span></a></div></div>
 </div></section>
 
 <footer><div class="wrap reveal">

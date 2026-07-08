@@ -3,7 +3,7 @@
   "short": "SPZ",
   "tagline": "Signal finds signal.",
   "essence": "Diogenes with a laptop — deface the counterfeit, live honest. Snarky, punk, Atlanta-trap, hacker. Cyberpunk-noir in look, industrial-goth in sound, bar-at-midnight in voice.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updated": "2026-07-08",
   "status": "CANONICAL — the one and only SPZ brand kit. Do not fork or create variants; edit brand/spz/build_brand_kit.py and redeploy to the same artifact URL.",
   "canonical_deliverable": {
@@ -24,7 +24,22 @@
     "voices": "voices.json — ElevenLabs cast; hero NARRATOR = SPZ",
     "palette": "palette.json — void / pink / cyan / paper / muted",
     "typography": "typography.json — Orbitron (display) / Space Grotesk (body) / JetBrains Mono (code)",
-    "sonic": "sonic.json — industrial-goth engine, ~70 BPM, theme + beds + mix chain"
+    "sonic": "sonic.json — industrial-goth engine, ~70 BPM, theme + beds + mix chain",
+    "links": "links.json — site, taglines, operator (Greg Chambers/SA9), social, listen, studio (pulled from spacepiratezero.com)",
+    "catalog": "catalog.json — the 6 released albums + streaming + in-production work"
+  },
+  "web": {
+    "site": "https://spacepiratezero.com",
+    "tagline": "Digital Insurgent at Large",
+    "motto": "No algorithms. No noise. Just shipping.",
+    "substack": "https://spacepiratezero.substack.com",
+    "github": "https://github.com/space-pirate-zero",
+    "linkedin": "https://www.linkedin.com/in/gregchambers/",
+    "instagram": "https://www.instagram.com/space_pirate_zero/",
+    "spotify": "https://open.spotify.com/artist/5hsu0KPjwVKMCx1hAMFvI4",
+    "apple_music": "https://music.apple.com/us/artist/space-pirate-zero/1751347344",
+    "studio": "https://spaceshipalpha9.co",
+    "stylelift": "https://stylelift.fashion"
   },
   "quick_reference": {
     "colors": { "void": "#030303", "pink": "#FF1493", "cyan": "#00F0FF", "paper": "#E8E8E8", "muted": "#8A90A0" },

@@ -30,6 +30,55 @@ tracks_js = ",\n".join([
     f"{{name:'Cash from Chaos',era:\"Door 14 · Sid '79 punk · full production\",src:'{clip('sid.mp3')}'}}",
 ])
 
+SITE = "https://spacepiratezero.com"
+# (title, tracks, genre, url, blurb) — real released discography from spacepiratezero.com
+ALBUMS = [
+ ("Lambada on Saturn's Rings",13,"Alternative / Latin",SITE+"/content/music/lambada-on-saturns-rings","Debut LP — irreverent, melodic, permanently orbiting the edge of taste."),
+ ("Afternoon Delight",14,"Alternative / Rock",SITE+"/content/music/afternoon-delight","Nostalgic retro-futurism — a parallel 1979."),
+ ("Vaudeville Nebula",4,"Lo-Fi / Cosmic",SITE+"/content/music/vaudeville-nebula","The EP that named the persona. Lo-fi, strange, deeply human."),
+ ("The Yellow 5",8,"Latin / Bossa Nova",SITE+"/content/music/the-yellow-5","Samba rhythms in zero gravity. Bossa nova on the event horizon."),
+ ("американское порно",7,"Pop / Synth",SITE+"/content/music/amerikanskoe-porno","Cosmic pop, Cyrillic aesthetic — seductive, disorienting, unashamed."),
+ ("Tentacle Love",8,"Hip-Hop / Rap",SITE+"/content/music/tentacle-love","Eight transmissions from the outer edge — raw percussion, interstellar bars."),
+]
+def rec_row(i,a):
+    t,tr,g,u,b=a
+    return (f'<a class="rec" href="{u}" target="_blank" rel="noopener">'
+            f'<span class="rec-n">{i+1:02d}</span>'
+            f'<span class="rec-main"><span class="rec-t">{t}</span><span class="rec-b">{b}</span></span>'
+            f'<span class="rec-meta"><span class="rec-g">{g}</span><span class="rec-tr">{tr} trk</span></span>'
+            f'<span class="rec-go">↗</span></a>')
+catalog_html = "\n".join(rec_row(i,a) for i,a in enumerate(ALBUMS))
+
+# (group, [(label, url, desc)])
+LINKGROUPS = [
+ ("Home base",[("spacepiratezero.com",SITE,"digital insurgent at large")]),
+ ("Channels",[("Substack","https://spacepiratezero.substack.com","weekly dispatches"),
+              ("GitHub","https://github.com/space-pirate-zero","the org"),
+              ("LinkedIn","https://www.linkedin.com/in/gregchambers/","Greg Chambers"),
+              ("Instagram","https://www.instagram.com/space_pirate_zero/","@space_pirate_zero")]),
+ ("Listen",[("Spotify","https://open.spotify.com/artist/5hsu0KPjwVKMCx1hAMFvI4","full discography"),
+            ("Apple Music","https://music.apple.com/us/artist/space-pirate-zero/1751347344","full discography")]),
+ ("Studio",[("Spaceship Alpha 9","https://spaceshipalpha9.co","15-product indie studio · no VC"),
+            ("StyleLift","https://stylelift.fashion","AI fashion retail")]),
+ ("On the site",[("Dispatches",SITE+"/content/article","essays"),
+                 ("Music",SITE+"/content/music","the records"),
+                 ("Books",SITE+"/content/book","forthcoming"),
+                 ("Dossier",SITE+"/bio","the bio"),
+                 ("Comms",SITE+"/contact","contact"),
+                 ("Join Waitlist",SITE+"/waitlist","get on the list")]),
+]
+def host(u): return u.split("//",1)[-1].split("/",1)[0].replace("www.","")
+def link_card(l):
+    lab,u,d=l
+    return (f'<a class="lnk" href="{u}" target="_blank" rel="noopener">'
+            f'<span class="lnk-l">{lab}</span><span class="lnk-d">{d}</span>'
+            f'<span class="lnk-u">{host(u)} <i>↗</i></span></a>')
+def link_group(g):
+    name,items=g
+    return (f'<div class="lgrp"><div class="lgrp-h">{name}</div>'
+            f'<div class="lgrid">'+"".join(link_card(l) for l in items)+"</div></div>")
+links_html = "\n".join(link_group(g) for g in LINKGROUPS)
+
 HTML = r"""<title>Space Pirate Zero — Brand Kit</title>
 <style>
 __FONTFACE__
@@ -262,6 +311,45 @@ nav a.active::after,nav a:hover::after{transform:scaleX(1)}
 .vc .who{color:var(--muted);font-size:11.5px;margin-top:5px;line-height:1.4;min-height:2.7em}
 .vc .id{font-family:var(--mono);font-size:10px;color:var(--muted2);margin-top:10px;word-break:break-all}
 
+/* ---------- CATALOG ---------- */
+.records{border-top:1px solid var(--line)}
+.rec{display:grid;grid-template-columns:34px 1fr auto 22px;gap:16px;align-items:center;
+  padding:16px 4px;border-bottom:1px solid var(--line);color:var(--paper);transition:padding-left .22s,background .22s}
+.rec:hover{padding-left:16px;background:rgba(0,240,255,.045)}
+.rec-n{font-family:var(--mono);font-size:12px;color:var(--muted2)}
+.rec:hover .rec-n{color:var(--pink)}
+.rec-t{font-family:var(--disp);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.02em;display:block}
+.rec-b{color:var(--muted);font-size:12.5px;margin-top:3px;display:block}
+.rec-meta{text-align:right;white-space:nowrap}
+.rec-g{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:.05em;display:block}
+.rec-tr{font-family:var(--mono);font-size:10.5px;color:var(--muted2);display:block;margin-top:3px}
+.rec-go{font-family:var(--mono);color:var(--muted2);transition:transform .22s,color .22s}
+.rec:hover .rec-go{color:var(--cyan);transform:translate(3px,-3px)}
+.rec-note{margin-top:20px;font-size:13px;color:var(--muted)}
+.rec-note b{color:var(--paper);font-weight:500}
+
+/* ---------- LINKS ---------- */
+.lgrp{margin-bottom:26px}
+.lgrp-h{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted2);margin-bottom:12px}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.lnk{position:relative;display:block;padding:16px 16px 14px;border:1px solid var(--line);border-radius:3px;
+  background:var(--surface);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.lnk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--pink);transform:scaleY(0);transform-origin:top;transition:transform .22s}
+.lnk:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 14px 40px -22px var(--cyan)}
+.lnk:hover::before{transform:scaleY(1)}
+.lnk-l{font-family:var(--disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.03em;color:var(--paper);display:block}
+.lnk-d{color:var(--muted);font-size:12px;margin-top:4px;display:block}
+.lnk-u{font-family:var(--mono);font-size:11px;color:var(--cyan);margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+.lnk-u i{font-style:normal;transition:transform .2s}
+.lnk:hover .lnk-u i{transform:translate(3px,-3px)}
+.operator{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-top:24px;padding:20px 22px;border:1px solid var(--line);border-radius:3px;background:linear-gradient(120deg,rgba(0,240,255,.05),transparent)}
+.operator .who{font-family:var(--disp);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.03em}
+.operator .det{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6;max-width:64ch}
+.operator .pat{font-family:var(--mono);font-size:10.5px;color:var(--muted2);text-align:right;white-space:nowrap;line-height:1.7}
+.taglines{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.tagpill{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:7px 14px}
+.tagpill b{color:var(--cyan);font-weight:400}
+
 footer{padding:64px 0 90px;border-top:1px solid var(--line);text-align:center}
 footer .lock{font-family:var(--disp);font-weight:900;font-size:clamp(20px,3vw,30px);text-transform:uppercase;letter-spacing:.04em}
 footer .lock .z{color:var(--pink)}
@@ -287,6 +375,7 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
   <span class="nav-dot"></span>
   <a href="#essence">Essence</a><a href="#voice">Voice</a><a href="#color">Color</a>
   <a href="#type">Type</a><a href="#sonic">Sound</a><a href="#voices">Voices</a>
+  <a href="#catalog">Catalog</a><a href="#links">Links</a>
 </nav>
 
 <div class="hero">
@@ -300,7 +389,12 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
     </div>
     <h1 class="wordmark"><span class="l1">Space</span><br><span class="l2">Pirate</span><br><span class="l3">Zero</span></h1>
     <div class="tagline">&gt; signal finds signal<span class="cur"></span></div>
-    <p class="hero-sub">The visual, verbal &amp; sonic identity behind the Digital Insurgency books, the Maneki Neko Death Cult audio drama, and the album.</p>
+    <p class="hero-sub">Digital insurgent at large. The visual, verbal &amp; sonic identity behind the music, the books, and the Maneki Neko Death Cult audio drama.</p>
+    <div class="taglines">
+      <span class="tagpill">site · <b>Digital Insurgent at Large</b></span>
+      <span class="tagpill">motto · <b>No algorithms. No noise. Just shipping.</b></span>
+      <span class="tagpill">sonic · <b>Signal finds signal</b></span>
+    </div>
     <div class="hero-cta">
       <button class="btn play-hero" id="heroPlay"><span class="ico ico-pp paused"><i class="bar1"></i><i class="bar2"></i><i class="tri"></i></span> Play the identity</button>
       <span class="eyebrow" style="color:var(--muted2)">4 tracks · live visualizer</span>
@@ -318,10 +412,18 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
       <p class="bio">Burned-out DJ turned digital insurgent — narrates the counterfeit world at a bar at midnight, sneers up at the machine, never down at the broke. Irish grandmother in the blood; Atlanta in the bones.</p>
     </div>
     <ul class="prods">
-      <li><span class="k">Books</span><span class="v"><b>Digital Insurgency</b><span>The Last Human CEO · Zero Trust Reality · Neko Death Cult</span></span></li>
-      <li><span class="k">Audio</span><span class="v"><b>The Maneki Neko Death Cult</b><span>24 episodes · ~10.5 hours</span></span></li>
-      <li><span class="k">Album</span><span class="v"><b>Signal Finds Signal</b><span>24 tracks</span></span></li>
+      <li><span class="k">Music</span><span class="v"><b>6 albums released</b><span>Lambada on Saturn's Rings · Afternoon Delight · Vaudeville Nebula · +3</span></span></li>
+      <li><span class="k">Audio</span><span class="v"><b>The Maneki Neko Death Cult</b><span>24 episodes · ~10.5 hours · in production</span></span></li>
+      <li><span class="k">Books</span><span class="v"><b>Digital Insurgency &amp; more</b><span>forthcoming — in the monorepo</span></span></li>
+      <li><span class="k">Studio</span><span class="v"><b>Spaceship Alpha 9</b><span>15-product indie studio · no VC</span></span></li>
     </ul>
+  </div>
+  <div class="operator">
+    <div>
+      <div class="who">Greg Chambers <span style="color:var(--muted2);font-weight:400;font-size:12px">— a.k.a. Space Pirate Zero</span></div>
+      <div class="det">Enterprise architect, inventor, musician, gonzo journalist — "the frequency beneath the frequency." Founder &amp; CTO of Spaceship Alpha 9 with Daniela Chambers (the real-world Kat), Atlanta-based, no VC. Formerly Global Group Director of Digital Innovation at Coca-Cola.</div>
+    </div>
+    <div class="pat">US&nbsp;11432994<br>Intelligence Engine<br><br>US&nbsp;11600383<br>Theft-Prevention</div>
   </div>
 </div></section>
 
@@ -426,6 +528,21 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
     <div class="vc"><div class="r">Bearded</div><div class="who">The kind one. Warm, unhurried, gives nothing away.</div><div class="id">JBFqnCBsd6RMkjVDRZzb</div></div>
     <div class="vc"><div class="r">Guest</div><div class="who">Bit parts &amp; the marks. Husky, flexible.</div><div class="id">N2lVS1w4EtoT3dr4eOWO</div></div>
   </div>
+</div></section>
+
+<section id="catalog"><div class="wrap reveal">
+  <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Catalog</h2>
+    <p class="sec-note">The released discography. Click any record to open it.</p></div>
+  <div class="records">
+__CATALOG__
+  </div>
+  <p class="rec-note">Also streaming on <a href="https://open.spotify.com/artist/5hsu0KPjwVKMCx1hAMFvI4" target="_blank" rel="noopener">Spotify</a> &amp; <a href="https://music.apple.com/us/artist/space-pirate-zero/1751347344" target="_blank" rel="noopener">Apple Music</a>. In production: <b>Signal Finds Signal</b> (24-track companion to the Neko Death Cult audio drama) — heard in the Sound player above.</p>
+</div></section>
+
+<section id="links"><div class="wrap reveal">
+  <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Links &amp; Presence</h2>
+    <p class="sec-note">Every channel, pulled from spacepiratezero.com. Opens in a new tab.</p></div>
+__LINKS__
 </div></section>
 
 <footer><div class="wrap reveal">
@@ -608,7 +725,8 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
 </script>
 """
 
-full = HTML.replace("__FONTFACE__", fontface).replace("__TRACKS__", tracks_js)
+full = (HTML.replace("__FONTFACE__", fontface).replace("__TRACKS__", tracks_js)
+            .replace("__CATALOG__", catalog_html).replace("__LINKS__", links_html))
 
 # Make charset-independent: HTML text -> numeric entities, JS strings -> \u escapes.
 # (base64 blobs are pure ASCII and pass through untouched.)

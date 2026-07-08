@@ -1,0 +1,24 @@
+{
+  "brand": "Space Pirate Zero",
+  "kit": "catalog",
+  "version": "1.0.0",
+  "updated": "2026-07-08",
+  "source": "spacepiratezero.com/content/music + streaming profiles.",
+  "streaming": {
+    "spotify": "https://open.spotify.com/artist/5hsu0KPjwVKMCx1hAMFvI4",
+    "apple_music": "https://music.apple.com/us/artist/space-pirate-zero/1751347344"
+  },
+  "albums": [
+    { "title": "Lambada on Saturn's Rings", "tracks": 13, "genre": "Alternative / Latin", "url": "https://spacepiratezero.com/content/music/lambada-on-saturns-rings", "blurb": "Debut full-length — irreverent, melodic, permanently orbiting the edge of taste." },
+    { "title": "Afternoon Delight", "tracks": 14, "genre": "Alternative / Rock", "url": "https://spacepiratezero.com/content/music/afternoon-delight", "blurb": "Nostalgic retro-futurism — a parallel 1979." },
+    { "title": "Vaudeville Nebula", "tracks": 4, "genre": "Lo-Fi / Cosmic", "url": "https://spacepiratezero.com/content/music/vaudeville-nebula", "blurb": "The EP that named the persona. Lo-fi, strange, deeply human." },
+    { "title": "The Yellow 5", "tracks": 8, "genre": "Latin / Bossa Nova", "url": "https://spacepiratezero.com/content/music/the-yellow-5", "blurb": "Samba rhythms in zero gravity. Bossa nova on the event horizon." },
+    { "title": "amerikanskoe porno", "title_display": "американское порно", "tracks": 7, "genre": "Pop / Synth", "url": "https://spacepiratezero.com/content/music/amerikanskoe-porno", "blurb": "Cosmically-influenced pop with a Cyrillic aesthetic — seductive, disorienting, unashamed." },
+    { "title": "Tentacle Love", "tracks": 8, "genre": "Hip-Hop / Rap", "url": "https://spacepiratezero.com/content/music/tentacle-love", "blurb": "Eight transmissions from the outer edge — raw percussion, interstellar bars." }
+  ],
+  "in_production": {
+    "album": { "title": "Signal Finds Signal", "tracks": 24, "note": "Companion to the Maneki Neko Death Cult audio drama; not yet on the site." },
+    "books": { "published_on_site": 0, "note": "Digital Insurgency, The Last Human CEO, Zero Trust Reality, Neko Death Cult are in production in the monorepo; the site shows 0 published so far." },
+    "audio_drama": { "title": "The Maneki Neko Death Cult", "episodes": 24, "note": "~10.5h scored serialized audio drama." }
+  }
+}

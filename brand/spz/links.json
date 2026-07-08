@@ -1,0 +1,48 @@
+{
+  "brand": "Space Pirate Zero",
+  "kit": "links",
+  "version": "1.0.0",
+  "updated": "2026-07-08",
+  "source": "Pulled from the live site spacepiratezero.com (home, /bio, /content/music).",
+  "home": "https://spacepiratezero.com",
+  "taglines": {
+    "site": "Digital Insurgent at Large",
+    "motto": "No algorithms. No noise. Just shipping.",
+    "mission": "No algorithms. No noise. Zero venture capital.",
+    "sonic_lockup": "Signal finds signal.",
+    "persona": "the frequency beneath the frequency"
+  },
+  "operator": {
+    "name": "Greg Chambers",
+    "alias": "Space Pirate Zero",
+    "roles": ["enterprise architect", "inventor", "musician", "gonzo journalist"],
+    "studio": "Spaceship Alpha 9 LLC — co-founder & CTO with Daniela Chambers; Atlanta-based, globally deployed; no VC",
+    "patents": ["US 11432994 — Intelligence Engine", "US 11600383 — Networked Theft-Prevention System"],
+    "products": ["StyleLift (AI fashion retail)"],
+    "prior": "former Global Group Director of Digital Innovation, Coca-Cola",
+    "note": "Daniela Chambers (SA9 co-founder) is the real-world Kat / Cosmic Swing Kat of the Neko album."
+  },
+  "site_sections": [
+    { "label": "Dispatches", "url": "https://spacepiratezero.com/content/article", "desc": "essays / long-form" },
+    { "label": "Books", "url": "https://spacepiratezero.com/content/book", "desc": "graphic novels + strategy guides (forthcoming)" },
+    { "label": "Music", "url": "https://spacepiratezero.com/content/music", "desc": "the discography" },
+    { "label": "Dossier", "url": "https://spacepiratezero.com/bio", "desc": "the bio" },
+    { "label": "Comms", "url": "https://spacepiratezero.com/contact", "desc": "contact" },
+    { "label": "Join Waitlist", "url": "https://spacepiratezero.com/waitlist", "desc": "waitlist" }
+  ],
+  "social": [
+    { "label": "Substack", "url": "https://spacepiratezero.substack.com", "desc": "weekly dispatches" },
+    { "label": "GitHub", "url": "https://github.com/space-pirate-zero", "desc": "code / the org" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/gregchambers/", "desc": "Greg Chambers" },
+    { "label": "Instagram", "url": "https://www.instagram.com/space_pirate_zero/", "desc": "@space_pirate_zero" }
+  ],
+  "listen": [
+    { "label": "Spotify", "url": "https://open.spotify.com/artist/5hsu0KPjwVKMCx1hAMFvI4" },
+    { "label": "Apple Music", "url": "https://music.apple.com/us/artist/space-pirate-zero/1751347344" }
+  ],
+  "studio": [
+    { "label": "Spaceship Alpha 9", "url": "https://spaceshipalpha9.co", "desc": "15-product indie studio" },
+    { "label": "StyleLift", "url": "https://stylelift.fashion", "desc": "AI fashion retail platform" }
+  ],
+  "contact_email": "zero@spacepiratezero.com"
+}
