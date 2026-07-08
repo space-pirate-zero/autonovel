@@ -42,6 +42,19 @@
         "overfull",
         "margins"
       ]
+    },
+    {
+      "error_message": "Album songs all start with quiet static and sound generic/samey",
+      "root_cause": "Songs were generated via elevenlabs music.compose with a single prose prompt + force_instrumental=True. The prose prompt collapsed each track to the shared 'industrial-goth 808 ~70BPM' denominator (era washed out), and the model prepended a quiet vinyl-crackle/ambient lead-in (~-56dB head) identical on every track = 'static intro'.",
+      "fix": "New tools/compose_songs.py uses composition_plan (MusicPrompt) instead: era instruments woven into positive_global_styles AND every SongSection's positive_local_styles; negative_global_styles bans 'long ambient intro/slow fade-in/static intro/vinyl-crackle intro/white-noise wash'; an Intro section forces 'cold start on the downbeat, beat from bar one'; output mp3_44100_192; master = silenceremove head + loudnorm I=-10 TP=-1 + alimiter. API constraints learned: (a) must NOT pass music_length_ms with composition_plan (length = sum of section durations); (b) force_instrumental only works with prompt, not composition_plan (use empty section lines + 'no vocals' negative styles).",
+      "tags": [
+        "elevenlabs",
+        "music",
+        "composition_plan",
+        "audio",
+        "mastering",
+        "neko-death-cult"
+      ]
     }
   ]
 }

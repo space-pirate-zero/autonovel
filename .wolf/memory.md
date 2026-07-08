@@ -250,3 +250,15 @@ paper #E8E8E8 / muted #8A90A0), typography.json (Orbitron display / Space Grotes
 JetBrains Mono code / EB Garamond alt), sonic.json (industrial-goth ~70 BPM engine,
 theme + logo sting + 6 scene beds + mix/mastering chain). All values extracted from the
 real production system (cover/design scripts, fonts/, scoring.md, tools/), not invented.
+
+## Songs redo — composition_plan, era-forward, sung duets (2026-07-08)
+User: old 24 songs "start with static and sound the same/generic." Root cause: single prose
+prompt + force_instrumental flattened every track to the shared industrial-goth denominator,
+and the model prepended a quiet vinyl-crackle lead-in (the "static"). Fix = new
+tools/compose_songs.py using ElevenLabs music.compose composition_plan (MusicPrompt): era
+instruments woven into positive_global_styles AND every SongSection; negative_global_styles
+bans ambient/static intros; downbeat "cold start" Intro; master = silenceremove head +
+loudnorm I=-10 + alimiter; output 44100/192k. Two modes: --instrumental (7-section beat) and
+default VOCAL (parses album.md lyrics into sung sections, keeps Intro/Breakdown/Outro
+instrumental pockets for spoken samples). User chose SUNG VOCALS. Proved on doors 2/3/14
+(Joplin/Pimp C/Sid) — hot from bar one, ~-10 LUFS, ~2min. Pending: batch all 24 on approval.
