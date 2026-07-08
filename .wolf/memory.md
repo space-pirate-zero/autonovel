@@ -262,3 +262,13 @@ loudnorm I=-10 + alimiter; output 44100/192k. Two modes: --instrumental (7-secti
 default VOCAL (parses album.md lyrics into sung sections, keeps Intro/Breakdown/Outro
 instrumental pockets for spoken samples). User chose SUNG VOCALS. Proved on doors 2/3/14
 (Joplin/Pimp C/Sid) — hot from bar one, ~-10 LUFS, ~2min. Pending: batch all 24 on approval.
+
+## Sid track fully produced (2026-07-08)
+Door 14 "Cash from Chaos" delivered complete: era-forward '79 punk music + sung SPZ/Kat duet
+(track14_cash-from-chaos_VOX.mp3) + door-14 spoken samples woven into instrumental pockets via
+new tools/produce_song.py. The VOX take sings densely (~115s, only 2 vocal-free gaps), so the
+producer builds a clean intro pocket from the demucs no_vocals stem and prepends it, giving
+SPZ's thesis line ("the rebellion was the product all along") clean room up front; Kat "wear it
+awake" sits clean in the mid gap; Kat "doubted the jacket" is pitched-down+reverbed as the
+haunted outro. Master -9.6 LUFS. Output: audio/produced/ep14_song_FINAL.mp3 (+ ~/Downloads).
+SAMPLE_ORDER override in produce_song.py fixes narrative order (else alphabetical).

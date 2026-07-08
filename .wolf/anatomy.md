@@ -39,3 +39,7 @@ Python tooling (`run_pipeline.py`, `draft_chapter.py`, `evaluate.py`, `gen_*.py`
 Original per-book branches are retained as full-history archives:
 `autonovel/digital-insurgency`, `autonovel/the-last-human-ceo`,
 `autonovel/zero-trust-reality`, `autonovel/studio`, `autonovel/bells`.
+
+## Song production tools (neko-death-cult/tools/)
+- `compose_songs.py` — regenerate album tracks via ElevenLabs composition_plan (era-forward, no static intro, mastered). Default sung duet (parses album.md lyrics); `--instrumental` for beats.
+- `produce_song.py <door>` — full production: demucs-split the VOX song, find vocal-free pockets, place that door's spoken samples clean (intro thesis + mid + haunted outro), master. Output audio/produced/ep NN _song_FINAL.mp3.
