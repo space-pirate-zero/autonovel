@@ -280,3 +280,31 @@ brand.json bumped to 1.1.0 with status=CANONICAL + canonical_deliverable (file +
 https://claude.ai/code/artifact/753aa02e-8d51-4f64-98e4-a9fe2bd46aa0). README crowns it. Rule:
 edit build_brand_kit.py and redeploy to the SAME url; never fork variants. Saved to auto-memory
 spz-brand-kit.md.
+
+## Brand kit v1.2 — pulled real data from spacepiratezero.com (2026-07-08)
+Read the live site and integrated real links + data into the canonical brand kit. New data files
+links.json (site, taglines "Digital Insurgent at Large"/"No algorithms. No noise. Just shipping.",
+operator = Greg Chambers/SA9/patents US11432994+US11600383, social, streaming, studio) and
+catalog.json (6 released albums: Lambada on Saturn's Rings, Afternoon Delight, Vaudeville Nebula,
+The Yellow 5, американское порно, Tentacle Love + Spotify/Apple). Board gained Catalog (07) and
+Links (08) sections + operator card + tagline pills; nav now 8 items. Books show 0 published on
+the site, so the monorepo books are framed as forthcoming. brand.json -> 1.2.0 with a web{} block.
+
+## Brand kit v1.3 — pulled SA9 + StyleLift site data from the private repo (2026-07-08)
+User: the spaceshipalpha9.co and stylelift.fashion sites aren't deployed to the web — read them
+from the SpaceShipAlpha9 GitHub repo (gh, logged in as space-pirate-zero). Found sa9 marketing
+site at website/ (name "sa9-website"; roster in website/src/lib/products.ts; 8-principle manifesto
+in website/src/app/(main)/manifesto) and stylelift.fashion at sites/stylelift/. New studio.json
+captures: SA9 = AI-native indie studio, 16-product roster (name/tagline/domain/status), manifesto,
+Space Tokens + Keycloak SSO, 5 design systems (NEON/PHOSPHOR/LEOPARD/STEALTH/CATHODE), StyleLift
+detail (512-dim Style DNA, Free/$9.99 Pro, 87% fit). Board gained Studio section (09); nav now 9.
+SPZ is the FLAGSHIP brand of SA9 (Greg=Captain, w/ Daniela). brand.json -> 1.3.0. Note: the SPZ
+site itself (spacepiratezero.com) also lives in the repo at apps/stylelift/apps/spz/.
+
+## Brand kit v1.4 — Enterprise Consulting (Meijer + MOS) (2026-07-08)
+Added an Enterprise Consulting section (the B2B facet) pulled from the space-pirate-zero/MOS repo.
+MOS = "Marketing OS" — "Marketing intent in, governed execution out"; declarative MOSL docs = the
+deployments, one durable Temporal runtime, MCP tool rails, compliance pinned by tests; built as the
+substrate for MEIJER marketing (integrations/meijer-digitalapis: 215 ops / 10 Azure APIM APIs,
+mPerks loyalty, Emarsys, consent/opt-out). New enterprise.json + board section 10 (capabilities
+chips + two engagement cards Meijer/MOS + prior Coca-Cola + patents). nav now 10. brand.json 1.4.0.

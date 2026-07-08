@@ -1,0 +1,35 @@
+{
+  "brand": "Space Pirate Zero",
+  "kit": "enterprise",
+  "version": "1.0.0",
+  "updated": "2026-07-08",
+  "source": "Pulled from the space-pirate-zero/MOS repo (README, integrations/meijer-digitalapis, docs).",
+  "positioning": "Enterprise Consulting — enterprise-grade AI, governed and shipped. Greg Chambers (a.k.a. SPZ) architects AI into corporate and retail infrastructure: strategy first, then working, compliant systems. The bridge between corporate infrastructure and consumer magic.",
+  "capabilities": [
+    "AI strategy & architecture",
+    "Governed AI execution",
+    "Retail marketing automation",
+    "MCP tool rails / integrations",
+    "Compliance-as-code",
+    "Durable workflow orchestration"
+  ],
+  "engagements": [
+    {
+      "name": "Meijer",
+      "kind": "client",
+      "label": "RETAIL",
+      "summary": "AI-governed marketing automation across Meijer's Digital APIs — 215 operations over 10 APIs (Azure APIM), mPerks loyalty (expiring points, available rewards), and Emarsys. Consent and frequency caps enforced structurally, not by policy.",
+      "stack": ["Azure APIM", "mPerks", "Emarsys", "CDP", "Temporal", "Kubernetes"]
+    },
+    {
+      "name": "MOS — Marketing OS",
+      "kind": "platform",
+      "label": "PLATFORM",
+      "tagline": "Marketing intent in, governed execution out.",
+      "summary": "The umbrella substrate for Meijer marketing workloads: a declarative language (MOSL) whose documents ARE the deployments, one durable runtime that executes them all, MCP tool rails for every integration, and compliance enforced in code and pinned by tests. Author journeys, campaigns, A/B experiments, and cohorts as a single .mosl.yaml (43 marketing verbs); compile at PR time; dispatch by event; execute durably with consent checked against the live opt-out registry.",
+      "stack": ["MOSL", "Temporal", "Kubernetes", "MCP", "Python", "TypeScript"]
+    }
+  ],
+  "prior": "Global Group Director of Digital Innovation at Coca-Cola — conversational AI in vending infrastructure ('Operation VR 12Pack').",
+  "patents": ["US 11432994 — Intelligence Engine", "US 11600383 — Networked Theft-Prevention System"]
+}

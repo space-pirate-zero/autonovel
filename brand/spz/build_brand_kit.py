@@ -103,6 +103,28 @@ def prod_card(p):
 studio_products_html = "".join(prod_card(p) for p in STUDIO_PRODUCTS)
 manifesto_html = "".join(f'<span class="mchip">{m}</span>' for m in MANIFESTO)
 
+# ---- Enterprise Consulting (from the MOS repo) ----
+ENT_CAPS = ["AI Strategy & Architecture","Governed AI Execution","Retail Marketing Automation",
+            "MCP Tool Rails","Compliance-as-Code","Durable Orchestration"]
+# (name, label, tagline, summary, stack)
+ENGAGEMENTS = [
+ ("Meijer","RETAIL","",
+  "AI-governed marketing automation across Meijer's Digital APIs — 215 operations over 10 APIs (Azure APIM), mPerks loyalty, and Emarsys. Consent and frequency caps enforced structurally, not by policy.",
+  ["Azure APIM","mPerks","Emarsys","Temporal","Kubernetes"]),
+ ("MOS &mdash; Marketing OS","PLATFORM","Marketing intent in, governed execution out.",
+  "The umbrella substrate for Meijer marketing workloads: a declarative language (MOSL) whose documents ARE the deployments, one durable Temporal runtime that executes them all, MCP tool rails for every integration, and compliance pinned by tests. Author a journey, campaign, A/B experiment, or cohort as a single .mosl.yaml (43 marketing verbs); compile at PR time; dispatch by event; execute durably against the live opt-out registry.",
+  ["MOSL","Temporal","Kubernetes","MCP"]),
+]
+def eng_card(e):
+    name,lab,tag,summ,stack=e
+    tagline = f'<div class="eng-tag">{tag}</div>' if tag else ''
+    chips = "".join(f'<span class="eng-s">{s}</span>' for s in stack)
+    return (f'<div class="eng"><div class="eng-h"><span class="eng-n">{name}</span>'
+            f'<span class="eng-lab">{lab}</span></div>{tagline}'
+            f'<div class="eng-sum">{summ}</div><div class="eng-stack">{chips}</div></div>')
+engagements_html = "".join(eng_card(e) for e in ENGAGEMENTS)
+entcaps_html = "".join(f'<span class="mchip">{c}</span>' for c in ENT_CAPS)
+
 HTML = r"""<title>Space Pirate Zero — Brand Kit</title>
 <style>
 __FONTFACE__
@@ -385,6 +407,17 @@ nav a.active::after,nav a:hover::after{transform:scaleX(1)}
 .s-dev{color:var(--muted2);border:1px solid var(--line)}
 .p-live{border-color:rgba(0,240,255,.4)}
 .prodgrid .prod:first-child{border-color:var(--pink)}
+/* ---------- ENTERPRISE ---------- */
+.engs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.eng{border:1px solid var(--line);border-radius:3px;padding:22px;background:var(--surface);transition:transform .2s,border-color .2s}
+.eng:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.eng-h{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.eng-n{font-family:var(--disp);font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.02em}
+.eng-lab{font-family:var(--mono);font-size:9px;letter-spacing:.16em;padding:4px 8px;border-radius:3px;color:#050507;background:var(--cyan);white-space:nowrap}
+.eng-tag{font-family:var(--mono);font-size:12px;color:var(--pink);margin-top:10px;letter-spacing:.02em}
+.eng-sum{color:var(--muted);font-size:13.5px;line-height:1.6;margin-top:12px}
+.eng-stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.eng-s{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:4px 8px}
 .operator{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-top:24px;padding:20px 22px;border:1px solid var(--line);border-radius:3px;background:linear-gradient(120deg,rgba(0,240,255,.05),transparent)}
 .operator .who{font-family:var(--disp);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.03em}
 .operator .det{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6;max-width:64ch}
@@ -400,7 +433,7 @@ footer .mant{font-family:var(--mono);color:var(--cyan);letter-spacing:.16em;marg
 footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(--muted2);letter-spacing:.04em;line-height:2}
 
 @media (max-width:820px){
-  .essence-grid,.voice-grid,.sonic-top{grid-template-columns:1fr}
+  .essence-grid,.voice-grid,.sonic-top,.engs{grid-template-columns:1fr}
   .swatches{grid-template-columns:repeat(2,1fr)}
   .cast{grid-template-columns:repeat(2,1fr)}
   .type-row{grid-template-columns:1fr;gap:14px}
@@ -418,7 +451,7 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
   <span class="nav-dot"></span>
   <a href="#essence">Essence</a><a href="#voice">Voice</a><a href="#color">Color</a>
   <a href="#type">Type</a><a href="#sonic">Sound</a><a href="#voices">Voices</a>
-  <a href="#catalog">Catalog</a><a href="#links">Links</a><a href="#studio">Studio</a>
+  <a href="#catalog">Catalog</a><a href="#links">Links</a><a href="#studio">Studio</a><a href="#enterprise">Enterprise</a>
 </nav>
 
 <div class="hero">
@@ -595,6 +628,15 @@ __LINKS__
   <div class="manifesto">__MANIFESTO__</div>
   <div class="prodgrid">__PRODUCTS__</div>
   <p class="rec-note">One <b>Space Tokens</b> credit system + Keycloak SSO across the fleet. Sites live in the repo, not the web: <a href="https://spaceshipalpha9.co" target="_blank" rel="noopener">spaceshipalpha9.co</a> · <a href="https://stylelift.fashion" target="_blank" rel="noopener">stylelift.fashion</a> (Free forever · Pro $9.99/mo · 512-dim Style DNA · 87% fit confidence).</p>
+</div></section>
+
+<section id="enterprise"><div class="wrap reveal">
+  <div class="sec-head"><span class="sec-num">10</span><h2 class="sec-title">Enterprise Consulting</h2>
+    <p class="sec-note">The B2B facet — enterprise-grade AI, governed and shipped.</p></div>
+  <p class="studio-lede">Greg Chambers architects AI into corporate and retail infrastructure — <b>strategy first, then working, compliant systems</b>. The bridge between corporate infrastructure and consumer magic.</p>
+  <div class="manifesto">__ENTCAPS__</div>
+  <div class="engs">__ENGAGEMENTS__</div>
+  <p class="rec-note">Prior: <b>Global Group Director of Digital Innovation at Coca-Cola</b> — conversational AI in vending ("Operation VR 12Pack"). Patents: US&nbsp;11432994 (Intelligence Engine) &amp; US&nbsp;11600383 (Networked Theft-Prevention).</p>
 </div></section>
 
 <footer><div class="wrap reveal">
@@ -779,7 +821,8 @@ __LINKS__
 
 full = (HTML.replace("__FONTFACE__", fontface).replace("__TRACKS__", tracks_js)
             .replace("__CATALOG__", catalog_html).replace("__LINKS__", links_html)
-            .replace("__MANIFESTO__", manifesto_html).replace("__PRODUCTS__", studio_products_html))
+            .replace("__MANIFESTO__", manifesto_html).replace("__PRODUCTS__", studio_products_html)
+            .replace("__ENTCAPS__", entcaps_html).replace("__ENGAGEMENTS__", engagements_html))
 
 # Make charset-independent: HTML text -> numeric entities, JS strings -> \u escapes.
 # (base64 blobs are pure ASCII and pass through untouched.)

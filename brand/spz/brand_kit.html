@@ -285,6 +285,17 @@ nav a.active::after,nav a:hover::after{transform:scaleX(1)}
 .s-dev{color:var(--muted2);border:1px solid var(--line)}
 .p-live{border-color:rgba(0,240,255,.4)}
 .prodgrid .prod:first-child{border-color:var(--pink)}
+/* ---------- ENTERPRISE ---------- */
+.engs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.eng{border:1px solid var(--line);border-radius:3px;padding:22px;background:var(--surface);transition:transform .2s,border-color .2s}
+.eng:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.eng-h{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.eng-n{font-family:var(--disp);font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.02em}
+.eng-lab{font-family:var(--mono);font-size:9px;letter-spacing:.16em;padding:4px 8px;border-radius:3px;color:#050507;background:var(--cyan);white-space:nowrap}
+.eng-tag{font-family:var(--mono);font-size:12px;color:var(--pink);margin-top:10px;letter-spacing:.02em}
+.eng-sum{color:var(--muted);font-size:13.5px;line-height:1.6;margin-top:12px}
+.eng-stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.eng-s{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:4px 8px}
 .operator{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-top:24px;padding:20px 22px;border:1px solid var(--line);border-radius:3px;background:linear-gradient(120deg,rgba(0,240,255,.05),transparent)}
 .operator .who{font-family:var(--disp);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.03em}
 .operator .det{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6;max-width:64ch}
@@ -300,7 +311,7 @@ footer .mant{font-family:var(--mono);color:var(--cyan);letter-spacing:.16em;marg
 footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(--muted2);letter-spacing:.04em;line-height:2}
 
 @media (max-width:820px){
-  .essence-grid,.voice-grid,.sonic-top{grid-template-columns:1fr}
+  .essence-grid,.voice-grid,.sonic-top,.engs{grid-template-columns:1fr}
   .swatches{grid-template-columns:repeat(2,1fr)}
   .cast{grid-template-columns:repeat(2,1fr)}
   .type-row{grid-template-columns:1fr;gap:14px}
@@ -318,7 +329,7 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
   <span class="nav-dot"></span>
   <a href="#essence">Essence</a><a href="#voice">Voice</a><a href="#color">Color</a>
   <a href="#type">Type</a><a href="#sonic">Sound</a><a href="#voices">Voices</a>
-  <a href="#catalog">Catalog</a><a href="#links">Links</a><a href="#studio">Studio</a>
+  <a href="#catalog">Catalog</a><a href="#links">Links</a><a href="#studio">Studio</a><a href="#enterprise">Enterprise</a>
 </nav>
 
 <div class="hero">
@@ -504,6 +515,15 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
   <div class="manifesto"><span class="mchip">Ship or Die</span><span class="mchip">Own Your Stack</span><span class="mchip">Don't Kill the Lamp</span><span class="mchip">AI Is a Crew Member</span><span class="mchip">Bootstrap Everything</span><span class="mchip">Build in Public, Ship in Stealth</span><span class="mchip">Quality Is Non-Negotiable</span><span class="mchip">Small Teams > Big Committees</span></div>
   <div class="prodgrid"><div class="prod p-live"><div class="prod-h"><span class="prod-n">Space Pirate Zero</span><span class="prod-st s-live">LIVE</span></div><div class="prod-t">One indie studio quietly building the future of software.</div></div><div class="prod p-beta"><div class="prod-h"><span class="prod-n">StyleLift</span><span class="prod-st s-beta">BETA</span></div><div class="prod-t">The AI stylist that learns what you actually like.</div></div><div class="prod p-beta"><div class="prod-h"><span class="prod-n">GhostDeck</span><span class="prod-st s-beta">BETA</span></div><div class="prod-t">The VM manager that makes Docker Desktop look expensive.</div></div><div class="prod p-beta"><div class="prod-h"><span class="prod-n">Grocery Ninja</span><span class="prod-st s-beta">BETA</span></div><div class="prod-t">Stop wasting $150/month on groceries you throw away.</div></div><div class="prod p-beta"><div class="prod-h"><span class="prod-n">Space Tokens</span><span class="prod-st s-beta">BETA</span></div><div class="prod-t">One credit system. Fifteen products. Zero friction.</div></div><div class="prod p-dev"><div class="prod-h"><span class="prod-n">DARKWAVE</span><span class="prod-st s-dev">DEV</span></div><div class="prod-t">Kubernetes for humans. Not for consultants.</div></div><div class="prod p-dev"><div class="prod-h"><span class="prod-n">Brand Casino</span><span class="prod-st s-dev">DEV</span></div><div class="prod-t">Turn foot traffic into brand fanatics.</div></div><div class="prod p-dev"><div class="prod-h"><span class="prod-n">RONIN</span><span class="prod-st s-dev">DEV</span></div><div class="prod-t">Tell Final Cut Pro what to do. In English.</div></div><div class="prod p-dev"><div class="prod-h"><span class="prod-n">TradeCraft</span><span class="prod-st s-dev">DEV</span></div><div class="prod-t">They watch everything. Now you watch back.</div></div></div>
   <p class="rec-note">One <b>Space Tokens</b> credit system + Keycloak SSO across the fleet. Sites live in the repo, not the web: <a href="https://spaceshipalpha9.co" target="_blank" rel="noopener">spaceshipalpha9.co</a> &#183; <a href="https://stylelift.fashion" target="_blank" rel="noopener">stylelift.fashion</a> (Free forever &#183; Pro $9.99/mo &#183; 512-dim Style DNA &#183; 87% fit confidence).</p>
+</div></section>
+
+<section id="enterprise"><div class="wrap reveal">
+  <div class="sec-head"><span class="sec-num">10</span><h2 class="sec-title">Enterprise Consulting</h2>
+    <p class="sec-note">The B2B facet &#8212; enterprise-grade AI, governed and shipped.</p></div>
+  <p class="studio-lede">Greg Chambers architects AI into corporate and retail infrastructure &#8212; <b>strategy first, then working, compliant systems</b>. The bridge between corporate infrastructure and consumer magic.</p>
+  <div class="manifesto"><span class="mchip">AI Strategy & Architecture</span><span class="mchip">Governed AI Execution</span><span class="mchip">Retail Marketing Automation</span><span class="mchip">MCP Tool Rails</span><span class="mchip">Compliance-as-Code</span><span class="mchip">Durable Orchestration</span></div>
+  <div class="engs"><div class="eng"><div class="eng-h"><span class="eng-n">Meijer</span><span class="eng-lab">RETAIL</span></div><div class="eng-sum">AI-governed marketing automation across Meijer's Digital APIs &#8212; 215 operations over 10 APIs (Azure APIM), mPerks loyalty, and Emarsys. Consent and frequency caps enforced structurally, not by policy.</div><div class="eng-stack"><span class="eng-s">Azure APIM</span><span class="eng-s">mPerks</span><span class="eng-s">Emarsys</span><span class="eng-s">Temporal</span><span class="eng-s">Kubernetes</span></div></div><div class="eng"><div class="eng-h"><span class="eng-n">MOS &mdash; Marketing OS</span><span class="eng-lab">PLATFORM</span></div><div class="eng-tag">Marketing intent in, governed execution out.</div><div class="eng-sum">The umbrella substrate for Meijer marketing workloads: a declarative language (MOSL) whose documents ARE the deployments, one durable Temporal runtime that executes them all, MCP tool rails for every integration, and compliance pinned by tests. Author a journey, campaign, A/B experiment, or cohort as a single .mosl.yaml (43 marketing verbs); compile at PR time; dispatch by event; execute durably against the live opt-out registry.</div><div class="eng-stack"><span class="eng-s">MOSL</span><span class="eng-s">Temporal</span><span class="eng-s">Kubernetes</span><span class="eng-s">MCP</span></div></div></div>
+  <p class="rec-note">Prior: <b>Global Group Director of Digital Innovation at Coca-Cola</b> &#8212; conversational AI in vending ("Operation VR 12Pack"). Patents: US&nbsp;11432994 (Intelligence Engine) &amp; US&nbsp;11600383 (Networked Theft-Prevention).</p>
 </div></section>
 
 <footer><div class="wrap reveal">
