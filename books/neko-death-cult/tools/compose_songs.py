@@ -55,19 +55,19 @@ DOORS = {
  2:("indra","1967 San Francisco psychedelic acid-rock",
     ["fuzz-and-wah electric guitar","swirling Hammond organ","sitar drone","tambourine","bluesy soul-wail lead"],85,"cosmic hallucinatory","lava-lamp warmth"),
  3:("slow-enough-to-stay","2007 Houston chopped-and-screwed",
-    ["DJ-Screw half-time syrup tempo","pitched-down screwed Southern-soul sample","UGK country-rap swing","Southern trap triplet hi-hats","codeine-slow groove"],60,"screwed-down hypnotic","purple syrup haze"),
+    ["chopped-and-screwed half-time syrup tempo","pitched-down screwed Southern-soul sample","Southern country-rap swing","Southern trap triplet hi-hats","codeine-slow groove"],60,"screwed-down hypnotic","purple syrup haze"),
  4:("weather-in-your-hands","1970 London acid-rock",
-    ["wailing fuzz-and-wah Stratocaster","Marshall-stack overdrive","backwards-guitar swirls","Band-of-Gypsys funk drums","bluesy string bends"],70,"psychedelic doomed","turpentine-rain haze"),
+    ["wailing fuzz-and-wah Stratocaster","Marshall-stack overdrive","backwards-guitar swirls","psychedelic funk-rock drums","bluesy string bends"],70,"psychedelic doomed","turpentine-rain haze"),
  5:("edge-of-the-light","1962 Hollywood supper-club glamour",
-    ["lush orchestral-pop strings","brushed jazz drums","upright bass","vibraphone","sultry Rat-Pack nightclub saxophone"],70,"cinematic doomed romance","platinum-and-shadow"),
+    ["lush orchestral-pop strings","brushed jazz drums","upright bass","vibraphone","sultry vintage nightclub saxophone"],70,"cinematic doomed romance","platinum-and-shadow"),
  6:("a-name-outlives-the-man","1971 Paris psychedelic blues-rock",
-    ["Vox Continental combo organ","snake-charming bluesy lead guitar","brushed cafe-noir jazz drums","ghost of French accordion chanson","baritone croon phrasing"],70,"hypnotic doomed","grey Paris rain"),
+    ["vintage combo organ","snake-charming bluesy lead guitar","brushed cafe-noir jazz drums","ghost of French accordion chanson","baritone croon phrasing"],70,"hypnotic doomed","grey Paris rain"),
  7:("dont-go-dark","late-1950s desolate noir-jazz",
-    ["lone spare grand piano","soft brushed drums","upright bass","distant Chet-Baker muted trumpet","vast empty room ache"],60,"glacial claustrophobic naked","one dead yellow lamp"),
+    ["lone spare grand piano","soft brushed drums","upright bass","distant cool-jazz muted trumpet","vast empty room ache"],60,"glacial claustrophobic naked","one dead yellow lamp"),
  8:("forty-screens","2007 tabloid celebrity electro-pop",
     ["glossy mid-2000s electro-pop synths","autotune-sheen lead","news-ticker pulse","paparazzi flashbulb hits","glossy radio-R&B groove"],70,"cinematic doomed spectacle","forty-screens glare"),
  9:("hold-me-while-i-flicker","1994 Seattle grunge",
-    ["drop-D Big-Muff fuzz guitars","pounding live rock drums","quiet-loud whisper-to-wall dynamics","howling guitar feedback","broken-signal glitch stutter"],70,"devastating quiet-loud doomed","flannel-and-rain"),
+    ["drop-D big-fuzz guitars","pounding live rock drums","quiet-loud whisper-to-wall dynamics","howling guitar feedback","broken-signal glitch stutter"],70,"devastating quiet-loud doomed","flannel-and-rain"),
  10:("caught-in-a-trap","1977 Las Vegas showroom",
     ["big gospel-soul brass section","Hammond organ","slow rockabilly shuffle","orchestral supper-club grandeur gone to seed","buried slot-machine chime"],70,"grand doomed","jumpsuit-sweat neon"),
  11:("one-floor-up","2012 gospel-diva balladry",
@@ -81,9 +81,9 @@ DOORS = {
  15:("the-mask-eats-the-man","2008 cinematic blockbuster dread",
     ["dark orchestral score","rising Shepard-tone strings","low brass swells","single sustained bowed-cello note of menace","hushed indie-NYC lone piano"],70,"vast doomed aching","green-room mirror-bulb buzz"),
  16:("one-jump-left","2011 Camden retro-soul",
-    ["smoky girl-group Motown backbeat","punchy vintage brass stabs","Wurlitzer electric piano","British neo-soul phrasing","beehive-and-eyeliner heartbreak"],70,"devastating peak romance","Camden rain"),
- 17:("you-cant-rewind","late-2000s King-of-Pop production",
-    ["glossy moonwalk-era funk-pop bass","gated gospel-pop drums","staccato string stabs","breathy pop-soul falsetto ghost","rehearsal-hall piano and rewinding-tape whir"],70,"glossy devastated","midnight ghost-light hall"),
+    ["smoky girl-group soul backbeat","punchy vintage brass stabs","vintage electric piano","British neo-soul phrasing","beehive-and-eyeliner heartbreak"],70,"devastating peak romance","Camden rain"),
+ 17:("you-cant-rewind","late-2000s glossy dance-pop production",
+    ["glossy funk-pop bass","gated gospel-pop drums","staccato string stabs","breathy pop-soul falsetto ghost","rehearsal-hall piano and rewinding-tape whir"],70,"glossy devastated","midnight ghost-light hall"),
  18:("buy-the-ticket","2005 gonzo desert-rock",
     ["outlaw-country-blues swagger","fuzzed desert-rock guitar","ragged barroom piano","loose whiskey-soaked drums","harmonica wail"],70,"unhinged doomed secretly-tender","Vegas-desert heat-shimmer"),
  19:("quality-control","cold sleek modern corporate menace",
@@ -210,12 +210,31 @@ def generate(n, vocal=True):
     print(f"[door {n:>2}] {slug} — {DOORS[n][1]} · ~{total//1000}s · {'sung duet' if vocal else 'instrumental'}")
     # API notes: no music_length_ms with composition_plan (length = section durations);
     # force_instrumental only pairs with `prompt` (instrumental = empty lines + no-vocals styles).
-    audio = c.music.compose(composition_plan=plan,
-                            model_id="music_v1",
-                            respect_sections_durations=respect,
-                            output_format="mp3_44100_192")
+    def _compose(p):
+        return c.music.compose(composition_plan=p, model_id="music_v1",
+                               respect_sections_durations=respect,
+                               output_format="mp3_44100_192")
+    try:
+        audio = _compose(plan)
+        data = b"".join(audio)
+    except Exception as ex:
+        # On a ToS 'bad_composition_plan', the API hands back a compliant
+        # composition_plan_suggestion — rebuild from it and retry once.
+        sug = None
+        body = getattr(ex, "body", None)
+        if isinstance(body, dict):
+            sug = body.get("detail", {}).get("data", {}).get("composition_plan_suggestion")
+        if not sug:
+            raise
+        from elevenlabs.types.music_prompt import MusicPrompt
+        from elevenlabs.types.song_section import SongSection
+        plan2 = MusicPrompt(positive_global_styles=sug["positive_global_styles"],
+                            negative_global_styles=sug["negative_global_styles"],
+                            sections=[SongSection(**s) for s in sug["sections"]])
+        print("          ToS flagged the plan; retrying with the API's compliant suggestion...")
+        data = b"".join(_compose(plan2))
     raw = SONGS / f"track{n:02d}_{slug}_{tag}_RAW.mp3"
-    raw.write_bytes(b"".join(audio))
+    raw.write_bytes(data)
     out = SONGS / f"track{n:02d}_{slug}_{tag}.mp3"
     master(raw, out)
     (DOWNLOADS / out.name).write_bytes(out.read_bytes())

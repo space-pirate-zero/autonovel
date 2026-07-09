@@ -66,6 +66,7 @@ def trim(src):
 # Per-door sample order: intro line first, emotional closer last (gets the haunt).
 # Defaults to spz_* then kat_* (alphabetical) when a door isn't listed.
 SAMPLE_ORDER = {
+    5:  ["t5_spz_offcamera", "t5_kat_light", "t5_kat_allatonce"],
     14: ["t14_spz_product", "t14_kat_jacket", "t14_kat_doubted"],
 }
 
