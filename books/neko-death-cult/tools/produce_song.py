@@ -125,7 +125,53 @@ def produce(n):
                                       for i,(_,_,s,c) in enumerate(plan)))
     print(f"  -> {out.name} ({out.stat().st_size//1024} KB, {dur(out):.0f}s) + ~/Downloads")
 
+def pro_song(n):
+    hits=sorted(SONGS.glob(f"track{n:02d}_*_PRO.mp3"))
+    if not hits: sys.exit(f"no PRO instrumental for door {n} (run compose_songs.py {n} --instrumental)")
+    return hits[0]
+
+def produce_pro(n):
+    """Instrumental track (no AI singing) + spoken samples spaced over the beat.
+    Matches the locked tracks 1-4: clean instrumental, no garbled vocals."""
+    song=pro_song(n); slug=song.stem.split("_",1)[1].rsplit("_PRO",1)[0]
+    D=dur(song)
+    if n in SAMPLE_ORDER:
+        order=[SAMP/f"{s}.mp3" for s in SAMPLE_ORDER[n]]
+    else:
+        order=sorted(SAMP.glob(f"t{n}_spz_*.mp3"))+sorted(SAMP.glob(f"t{n}_kat_*.mp3"))
+    order=[p for p in order if p.exists()]
+    if not order: sys.exit(f"no samples t{n}_* in {SAMP}")
+    S=[trim(s) for s in order]
+    # no singing to dodge — space the samples evenly over the instrumental
+    slots=[2.5, D*0.46]
+    plan=[]  # (path, dur, start, chain)
+    for i,(p,d) in enumerate(S):
+        haunt=(i==len(S)-1)
+        if haunt:
+            hlen=d*(44100/36000)+1.6
+            start=max((slots[1] if len(S)>1 else 2.5)+8, D-hlen-3)
+        else:
+            start=slots[i] if i<len(slots) else (plan[-1][2]+plan[-1][1]+3)
+        plan.append((p,d,start,HAUNT if haunt else CLEAN))
+    inputs=["-i",str(song)]; parts=[]; mixlabels="[0:a]"
+    for idx,(p,d,start,chain) in enumerate(plan,1):
+        inputs+=["-i",str(p)]
+        extra=f",afade=t=out:st={max(0,d-1.4):.2f}:d=1.6" if chain is HAUNT else ""
+        parts.append(f"[{idx}:a]{chain}{extra},adelay={int(start*1000)}|{int(start*1000)}[a{idx}]")
+        mixlabels+=f"[a{idx}]"
+    # sum + loudness-normalize (true-peak-safe) + limit
+    fc=";".join(parts)+f";{mixlabels}amix=inputs={len(plan)+1}:duration=first:normalize=0,loudnorm=I=-10:TP=-1.0:LRA=11,alimiter=limit=0.97[out]"
+    out=PROD/f"ep{n:02d}_song_FINAL.mp3"
+    ff(*inputs,"-filter_complex",fc,"-map","[out]","-ar","44100","-b:a","192k",str(out))
+    (DL/f"track{n:02d}_{slug}_FINAL.mp3").write_bytes(out.read_bytes())
+    print("  placements: "+", ".join(f"{order[i].stem}@{s:.1f}s{' [haunt]' if c is HAUNT else ''}"
+                                      for i,(_,_,s,c) in enumerate(plan)))
+    print(f"  -> {out.name} ({out.stat().st_size//1024} KB, {dur(out):.0f}s) + ~/Downloads")
+
 if __name__=="__main__":
-    if len(sys.argv)<2: sys.exit(__doc__)
-    for a in sys.argv[1:]:
-        produce(int(a))
+    args=sys.argv[1:]
+    pro = "--pro" in args
+    if pro: args.remove("--pro")
+    if not args: sys.exit(__doc__)
+    for a in args:
+        (produce_pro if pro else produce)(int(a))
