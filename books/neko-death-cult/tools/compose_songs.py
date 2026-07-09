@@ -25,6 +25,8 @@ HERE = pathlib.Path(__file__).resolve().parent
 SONGS = HERE.parent / "audio" / "songs"
 SONGS.mkdir(parents=True, exist_ok=True)
 DOWNLOADS = pathlib.Path.home() / "Downloads"
+REVIEW = pathlib.Path.home()/"Library"/"Mobile Documents"/"com~apple~CloudDocs"/"a+_neko"/"review"
+REVIEW.mkdir(parents=True, exist_ok=True)
 
 # The engine every track shares — the SPZ sound. Era leads; this is the spine.
 ENGINE = [
@@ -103,7 +105,9 @@ DOORS = {
 import re
 ALBUM = HERE.parent / "album.md"
 VOCAL = ["intimate male goth-crooner lead answered by a breathy female voice",
-         "call-and-response torch duet", "emotional devoted delivery", "clear diction"]
+         "call-and-response torch duet", "emotional devoted delivery",
+         "clearly enunciated intelligible English lyrics", "crisp diction, words out front in the mix",
+         "natural unhurried phrasing", "lead vocal loud and clear above the instrumental"]
 NO_VOX = ["no vocals", "instrumental only", "leave a clean open pocket for spoken word"]
 
 def parse_lyrics(n):
@@ -156,18 +160,22 @@ def plan_for(n, vocal=True):
         first = True
         for sec in parsed:
             if sec["inst"]:
-                extra = (intro_extra if (first or sec["name"].startswith("Intro"))
+                nm = sec["name"].lower()
+                is_outro = "outro" in nm
+                extra = (intro_extra if (first or "intro" in nm)
                          else ["drop to beat and 808 only, minimal", "one era instrument echoing"]) + NO_VOX
-                secs = 13 if first else 12
+                # generous instrumental pockets = clean room for the spoken samples
+                secs = 24 if is_outro else 17
                 sections.append(S(sec["name"], secs, extra, lines=[], neg=intro_neg))
             else:
-                secs = max(9, min(26, len(sec["lines"]) * 3.0))
+                # longer sung sections so the track runs full-length (~3.5 min)
+                secs = max(14, min(34, len(sec["lines"]) * 4.4))
                 sections.append(S(sec["name"], secs, VOCAL + ["lead melody carries the hook"], lines=sec["lines"]))
             first = False
         # guarantee a clean instrumental pocket at head and tail for samples
         if not sections[0].lines == [] or "intro" not in sections[0].section_name.lower():
-            sections.insert(0, S("Intro", 13, intro_extra + NO_VOX, lines=[], neg=intro_neg))
-        respect = False   # let the singing breathe; durations are guidance
+            sections.insert(0, S("Intro", 17, intro_extra + NO_VOX, lines=[], neg=intro_neg))
+        respect = True   # honor the durations so the track is full-length
     else:
         sections = [
             S("Intro", 14, intro_extra + ["instrumental"], lines=[], neg=intro_neg + ["vocals","singing"]),
@@ -238,6 +246,7 @@ def generate(n, vocal=True):
     out = SONGS / f"track{n:02d}_{slug}_{tag}.mp3"
     master(raw, out)
     (DOWNLOADS / out.name).write_bytes(out.read_bytes())
+    (REVIEW / out.name).write_bytes(out.read_bytes())
     print(f"          -> {out.name}  ({out.stat().st_size//1024} KB, {probe_dur(out):.0f}s)  + copied to ~/Downloads")
     return out
 

@@ -26,6 +26,8 @@ SONGS = NDC/"audio/songs"; SAMP = NDC/"audio/samples"
 PROD = NDC/"audio/produced"; PROD.mkdir(parents=True, exist_ok=True)
 WORK = pathlib.Path("/tmp/neko_produce"); WORK.mkdir(exist_ok=True)
 DL = pathlib.Path.home()/"Downloads"
+REVIEW = pathlib.Path.home()/"Library"/"Mobile Documents"/"com~apple~CloudDocs"/"a+_neko"/"review"
+REVIEW.mkdir(parents=True, exist_ok=True)
 
 def run(a): subprocess.run(a, check=True)
 def ff(*a): run(["ffmpeg","-y","-v","error",*a])
@@ -44,7 +46,8 @@ def separate(song):
     out=WORK/song.stem
     voc=out/"htdemucs"/song.stem/"vocals.wav"
     nov=out/"htdemucs"/song.stem/"no_vocals.wav"
-    if not (voc.exists() and nov.exists()):
+    fresh = voc.exists() and nov.exists() and voc.stat().st_mtime >= song.stat().st_mtime
+    if not fresh:
         run(["demucs","--two-stems=vocals","-o",str(out),str(song)])
     return voc,nov
 
@@ -70,8 +73,9 @@ SAMPLE_ORDER = {
     14: ["t14_spz_product", "t14_kat_jacket", "t14_kat_doubted"],
 }
 
-CLEAN="highpass=f=100,acompressor=threshold=-18dB:ratio=2.5:attack=5:release=120,volume=1.7"
-HAUNT=("aformat=sample_rates=44100,asetrate=36000,aresample=44100,aecho=0.8:0.7:70:0.4,volume=2.1")
+CLEAN="highpass=f=90,acompressor=threshold=-20dB:ratio=3:attack=6:release=140,volume=2.0"
+# gentle haunt — a mild pitch-down + light reverb (not the demonic asetrate=36000)
+HAUNT=("aformat=sample_rates=44100,asetrate=41000,aresample=44100,aecho=0.6:0.5:55:0.3,volume=1.9")
 INTRO_LEN=7.0; XF=0.5
 
 def produce(n):
@@ -88,42 +92,50 @@ def produce(n):
     if not order: sys.exit(f"no samples t{n}_* in {SAMP}")
     S=[trim(s) for s in order]
 
-    # clean intro pocket from no_vocals, prepend seamlessly
-    ff("-ss","0","-t",str(INTRO_LEN),"-i",str(nov),
-       "-af","afade=t=in:st=0:d=0.05,aformat=sample_rates=44100:channel_layouts=stereo",str(WORK/"introbed.wav"))
-    ff("-i",str(WORK/"introbed.wav"),"-i",str(song),
-       "-filter_complex",f"[0:a][1:a]acrossfade=d={XF}:c1=tri:c2=tri[b]","-map","[b]",str(WORK/"base.wav"))
-    OFF=INTRO_LEN-XF
-    # placement plan: sample 0 -> intro; rest -> detected gaps (shifted by OFF), last haunted
-    mid_gaps=[(a+OFF,b+OFF) for a,b in G]
+    D=dur(song)
+    # Use the take's own vocal-free pockets. Spread the samples: intro -> first
+    # pocket, haunt -> last pocket, middles -> spaced pockets in between.
+    def eff(d, h): return d*(44100/41000)+1.6 if h else d
+    usable=[(a,b) for (a,b) in G if b-a >= 1.8] or [(0.5, D)]
     plan=[]  # (path, dur, start, chain)
-    p0,d0=S[0]; plan.append((p0,d0,1.1,CLEAN))
-    gi=0
-    for i,(p,d) in enumerate(S[1:],1):
-        haunt=(i==len(S)-1)
-        if gi<len(mid_gaps):
-            gs,ge=mid_gaps[gi]; gi+=1; pocket=max(2.0,ge-gs-0.2); start=gs+0.1
-        else:
-            start=max(p for _,_,p,_ in plan)+d+1.0; pocket=d
-        chain=HAUNT if haunt else CLEAN
-        if not haunt and d>pocket:
-            chain=chain.replace("volume=1.7",f"atempo={d/pocket:.3f},volume=1.7")
-        plan.append((p,d,start,chain))
+    ns=len(S)
+    a0,b0=usable[0]; plan.append((S[0][0], S[0][1], a0+0.5, CLEAN))          # intro
+    haunt_plan=None
+    if ns>=2:
+        hp,hd=S[-1]; hlen=eff(hd,True); oa,ob=usable[-1]
+        hstart=max(oa+0.3, min((ob-hlen-0.3) if (ob-oa)>hlen else oa+0.3, D-hlen-2))
+        haunt_plan=(hp,hd,hstart,HAUNT)
+    mids=usable[1:-1] or usable[1:] or usable                                 # candidate middle pockets
+    for k,(mp,md) in enumerate(S[1:-1] if ns>=3 else []):
+        target=D*(k+1)/((ns-2)+1)                                             # even spread across the track
+        cand=[g for g in mids if (g[1]-g[0])>=min(md,2.0)] or mids
+        ga,gb=min(cand, key=lambda g:abs((g[0]+g[1])/2 - target))
+        start=max(ga+0.3, min((ga+gb)/2 - md/2, gb-md-0.3))
+        plan.append((mp,md,start,CLEAN))
+    if haunt_plan: plan.append(haunt_plan)
 
-    # build filter graph
-    inputs=["-i",str(WORK/"base.wav")]; parts=[]; mixlabels="[0:a]"
+    # build sample tracks, then duck the music under them (sidechain) so the
+    # spoken word is clearly audible over the full-band instrumental
+    inputs=["-i",str(song)]; parts=[]; samplabels=""
     for idx,(p,d,start,chain) in enumerate(plan,1):
         inputs+=["-i",str(p)]
         extra=f",afade=t=out:st={max(0,d-1.4):.2f}:d=1.6" if chain is HAUNT else ""
         parts.append(f"[{idx}:a]{chain}{extra},adelay={int(start*1000)}|{int(start*1000)}[a{idx}]")
-        mixlabels+=f"[a{idx}]"
-    fc=";".join(parts)+f";{mixlabels}amix=inputs={len(plan)+1}:duration=first:normalize=0,loudnorm=I=-10:TP=-1.0:LRA=11,alimiter=limit=0.95[out]"
+        samplabels+=f"[a{idx}]"
+    N=len(plan)
+    parts.append(f"{samplabels}amix=inputs={N}:duration=longest:normalize=0[smix]")
+    parts.append("[smix]asplit=2[sctrig][sfg]")
+    parts.append("[0:a][sctrig]sidechaincompress=threshold=0.03:ratio=12:attack=8:release=320:makeup=1[duck]")
+    parts.append("[duck][sfg]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-10:TP=-1.0:LRA=11,alimiter=limit=0.97[out]")
+    fc=";".join(parts)
     out=PROD/f"ep{n:02d}_song_FINAL.mp3"
     ff(*inputs,"-filter_complex",fc,"-map","[out]","-ar","44100","-b:a","192k",str(out))
-    (DL/f"track{n:02d}_{slug}_FINAL.mp3").write_bytes(out.read_bytes())
+    fn=f"track{n:02d}_{slug}_FINAL.mp3"
+    (DL/fn).write_bytes(out.read_bytes())
+    (REVIEW/fn).write_bytes(out.read_bytes())
     print("  placements: "+", ".join(f"{order[i].stem}@{s:.1f}s{' [haunt]' if c is HAUNT else ''}"
                                       for i,(_,_,s,c) in enumerate(plan)))
-    print(f"  -> {out.name} ({out.stat().st_size//1024} KB, {dur(out):.0f}s) + ~/Downloads")
+    print(f"  -> {out.name} ({out.stat().st_size//1024} KB, {dur(out):.0f}s)")
 
 def pro_song(n):
     hits=sorted(SONGS.glob(f"track{n:02d}_*_PRO.mp3"))
@@ -153,17 +165,26 @@ def produce_pro(n):
         else:
             start=slots[i] if i<len(slots) else (plan[-1][2]+plan[-1][1]+3)
         plan.append((p,d,start,HAUNT if haunt else CLEAN))
-    inputs=["-i",str(song)]; parts=[]; mixlabels="[0:a]"
+    inputs=["-i",str(song)]; parts=[]; samplabels=""
     for idx,(p,d,start,chain) in enumerate(plan,1):
         inputs+=["-i",str(p)]
         extra=f",afade=t=out:st={max(0,d-1.4):.2f}:d=1.6" if chain is HAUNT else ""
         parts.append(f"[{idx}:a]{chain}{extra},adelay={int(start*1000)}|{int(start*1000)}[a{idx}]")
-        mixlabels+=f"[a{idx}]"
-    # sum + loudness-normalize (true-peak-safe) + limit
-    fc=";".join(parts)+f";{mixlabels}amix=inputs={len(plan)+1}:duration=first:normalize=0,loudnorm=I=-10:TP=-1.0:LRA=11,alimiter=limit=0.97[out]"
+        samplabels+=f"[a{idx}]"
+    # Duck the music under the spoken samples so they're clearly audible (they'd
+    # otherwise be masked by the full-band instrumental). Sidechain the music by
+    # the summed sample track, then mix the samples back on top.
+    N=len(plan)
+    parts.append(f"{samplabels}amix=inputs={N}:duration=longest:normalize=0[smix]")
+    parts.append("[smix]asplit=2[sctrig][sfg]")
+    parts.append("[0:a][sctrig]sidechaincompress=threshold=0.03:ratio=12:attack=8:release=320:makeup=1[duck]")
+    parts.append("[duck][sfg]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-10:TP=-1.0:LRA=11,alimiter=limit=0.97[out]")
+    fc=";".join(parts)
     out=PROD/f"ep{n:02d}_song_FINAL.mp3"
     ff(*inputs,"-filter_complex",fc,"-map","[out]","-ar","44100","-b:a","192k",str(out))
-    (DL/f"track{n:02d}_{slug}_FINAL.mp3").write_bytes(out.read_bytes())
+    fn=f"track{n:02d}_{slug}_FINAL.mp3"
+    (DL/fn).write_bytes(out.read_bytes())
+    (REVIEW/fn).write_bytes(out.read_bytes())
     print("  placements: "+", ".join(f"{order[i].stem}@{s:.1f}s{' [haunt]' if c is HAUNT else ''}"
                                       for i,(_,_,s,c) in enumerate(plan)))
     print(f"  -> {out.name} ({out.stat().st_size//1024} KB, {dur(out):.0f}s) + ~/Downloads")
