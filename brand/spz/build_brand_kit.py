@@ -108,12 +108,9 @@ ENT_CAPS = ["AI Strategy & Architecture","Governed AI Execution","Retail Marketi
             "MCP Tool Rails","Compliance-as-Code","Durable Orchestration"]
 # (name, label, tagline, summary, stack)
 ENGAGEMENTS = [
- ("Meijer","RETAIL","",
-  "AI-governed marketing automation across Meijer's Digital APIs — 215 operations over 10 APIs (Azure APIM), mPerks loyalty, and Emarsys. Consent and frequency caps enforced structurally, not by policy.",
-  ["Azure APIM","mPerks","Emarsys","Temporal","Kubernetes"]),
- ("MOS &mdash; Marketing OS","PLATFORM","Marketing intent in, governed execution out.",
-  "The umbrella substrate for Meijer marketing workloads: a declarative language (MOSL) whose documents ARE the deployments, one durable Temporal runtime that executes them all, MCP tool rails for every integration, and compliance pinned by tests. Author a journey, campaign, A/B experiment, or cohort as a single .mosl.yaml (43 marketing verbs); compile at PR time; dispatch by event; execute durably against the live opt-out registry.",
-  ["MOSL","Temporal","Kubernetes","MCP"]),
+ ("MOS &mdash; Marketing OS","MEIJER &middot; RETAIL","Marketing intent in, governed execution out.",
+  "Meijer's marketing automation, rebuilt as a governed platform. A declarative language (MOSL) whose documents ARE the deployments, one durable Temporal runtime that executes them all, and MCP tool rails across Meijer's Digital APIs (215 operations over 10 Azure APIM APIs), mPerks loyalty, and Emarsys. Author a journey, campaign, A/B experiment, or cohort as a single .mosl.yaml (43 marketing verbs); compile at PR time; dispatch by event; execute durably against the live opt-out registry &mdash; consent and frequency caps enforced structurally, in code and pinned by tests, not by policy.",
+  ["MOSL","Temporal","Kubernetes","MCP","Azure APIM","mPerks","Emarsys"]),
 ]
 def eng_card(e):
     name,lab,tag,summ,stack=e
@@ -408,7 +405,7 @@ nav a.active::after,nav a:hover::after{transform:scaleX(1)}
 .p-live{border-color:rgba(0,240,255,.4)}
 .prodgrid .prod:first-child{border-color:var(--pink)}
 /* ---------- ENTERPRISE ---------- */
-.engs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.engs{display:grid;grid-template-columns:1fr;gap:16px;margin-top:6px}
 .eng{border:1px solid var(--line);border-radius:3px;padding:22px;background:var(--surface);transition:transform .2s,border-color .2s}
 .eng:hover{transform:translateY(-3px);border-color:var(--cyan)}
 .eng-h{display:flex;justify-content:space-between;align-items:center;gap:12px}

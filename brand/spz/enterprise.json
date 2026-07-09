@@ -15,19 +15,13 @@
   ],
   "engagements": [
     {
-      "name": "Meijer",
-      "kind": "client",
-      "label": "RETAIL",
-      "summary": "AI-governed marketing automation across Meijer's Digital APIs — 215 operations over 10 APIs (Azure APIM), mPerks loyalty (expiring points, available rewards), and Emarsys. Consent and frequency caps enforced structurally, not by policy.",
-      "stack": ["Azure APIM", "mPerks", "Emarsys", "CDP", "Temporal", "Kubernetes"]
-    },
-    {
-      "name": "MOS — Marketing OS",
-      "kind": "platform",
-      "label": "PLATFORM",
+      "name": "MOS — Marketing OS (Meijer)",
+      "kind": "client-platform",
+      "label": "MEIJER · RETAIL",
       "tagline": "Marketing intent in, governed execution out.",
-      "summary": "The umbrella substrate for Meijer marketing workloads: a declarative language (MOSL) whose documents ARE the deployments, one durable runtime that executes them all, MCP tool rails for every integration, and compliance enforced in code and pinned by tests. Author journeys, campaigns, A/B experiments, and cohorts as a single .mosl.yaml (43 marketing verbs); compile at PR time; dispatch by event; execute durably with consent checked against the live opt-out registry.",
-      "stack": ["MOSL", "Temporal", "Kubernetes", "MCP", "Python", "TypeScript"]
+      "note": "MOS and Meijer are the same engagement — MOS is the governed marketing platform built for Meijer.",
+      "summary": "Meijer's marketing automation, rebuilt as a governed platform: a declarative language (MOSL) whose documents ARE the deployments, one durable Temporal runtime that executes them all, and MCP tool rails across Meijer's Digital APIs (215 operations over 10 Azure APIM APIs), mPerks loyalty, and Emarsys. Author a journey, campaign, A/B experiment, or cohort as a single .mosl.yaml (43 marketing verbs); compile at PR time; dispatch by event; execute durably against the live opt-out registry — consent and frequency caps enforced structurally, in code and pinned by tests.",
+      "stack": ["MOSL", "Temporal", "Kubernetes", "MCP", "Azure APIM", "mPerks", "Emarsys"]
     }
   ],
   "prior": "Global Group Director of Digital Innovation at Coca-Cola — conversational AI in vending infrastructure ('Operation VR 12Pack').",
