@@ -72,7 +72,23 @@ SAMPLE_ORDER = {
     5:  ["t5_spz_offcamera", "t5_kat_light", "t5_kat_allatonce"],
     6:  ["t6_spz_debt", "t6_kat_nameoutlives", "t6_kat_notyet"],
     7:  ["t7_spz_signal", "t7_kat_broadcast", "t7_kat_dontgodark"],
+    8:  ["t8_spz_travelling", "t8_kat_broadcast", "t8_kat_seattle"],
+    9:  ["t9_spz_authenticity", "t9_kat_dance", "t9_kat_flicker"],
+    10: ["t10_spz_impression", "t10_kat_onesave", "t10_kat_holdstill"],
+    11: ["t11_spz_showgoeson", "t11_kat_whopays", "t11_kat_satstill"],
+    12: ["t12_spz_iwasone", "t12_kat_kindone", "t12_kat_besttuesday"],
+    13: ["t13_spz_invoiced", "t13_kat_record", "t13_kat_keeptalking"],
     14: ["t14_spz_product", "t14_kat_jacket", "t14_kat_doubted"],
+    15: ["t15_spz_crown", "t15_kat_standin", "t15_kat_dontdisappear"],
+    16: ["t16_spz_scheduled", "t16_kat_onejump", "t16_kat_worth"],
+    17: ["t17_spz_rewind", "t17_kat_forward", "t17_kat_gift"],
+    18: ["t18_spz_ticket", "t18_kat_ending", "t18_kat_noshortcut"],
+    19: ["t19_spz_qc", "t19_kat_paw", "t19_kat_refuse"],
+    20: ["t20_spz_scythe", "t20_kat_choose", "t20_kat_lesson"],
+    21: ["t21_spz_line", "t21_kat_romantic", "t21_kat_takeoff"],
+    22: ["t22_spz_hereditary", "t22_kat_solid", "t22_kat_remember"],
+    23: ["t23_spz_staying", "t23_kat_flicker", "t23_kat_findyou"],
+    24: ["t24_spz_reaper", "t24_kat_foundyou", "t24_kat_signal"],
 }
 
 CLEAN="highpass=f=90,acompressor=threshold=-20dB:ratio=3:attack=6:release=140,volume=2.0"
