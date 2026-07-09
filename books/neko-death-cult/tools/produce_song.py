@@ -71,6 +71,7 @@ def trim(src):
 SAMPLE_ORDER = {
     5:  ["t5_spz_offcamera", "t5_kat_light", "t5_kat_allatonce"],
     6:  ["t6_spz_debt", "t6_kat_nameoutlives", "t6_kat_notyet"],
+    7:  ["t7_spz_signal", "t7_kat_broadcast", "t7_kat_dontgodark"],
     14: ["t14_spz_product", "t14_kat_jacket", "t14_kat_doubted"],
 }
 
