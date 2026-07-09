@@ -122,6 +122,40 @@ def eng_card(e):
 engagements_html = "".join(eng_card(e) for e in ENGAGEMENTS)
 entcaps_html = "".join(f'<span class="mchip">{c}</span>' for c in ENT_CAPS)
 
+# ---- Storytelling Studio (founder bios from the SA9 repo + danielachambers.com) ----
+# (title, form, note)
+IP_SLATE = [
+ ("The Last Human CEO","Novel","The last human running the machine."),
+ ("Signal Finds Signal","Album &middot; 24 tracks","The sonic universe &mdash; secretly a love letter."),
+ ("The Maneki Neko Death Cult","Audio drama &middot; 24 eps","Serialized, scored, narrated by SPZ. ~10.5h."),
+ ("Digital Insurgency","Book","Business &times; cyberpunk &times; spec-ops field manual."),
+ ("Zero Trust Reality","Book &middot; nonfiction","Original SA9 concept."),
+]
+def ip_card(x):
+    t,form,note=x
+    return (f'<div class="ip"><div class="ip-t">{t}</div><div class="ip-f">{form}</div>'
+            f'<div class="ip-n">{note}</div></div>')
+ip_html = "".join(ip_card(x) for x in IP_SLATE)
+
+# (name, sub, role, bio, badges[list], link, linklabel)
+FOUNDERS = [
+ ("Greg Chambers","Space Pirate Zero","Co-Founder &amp; CTO &mdash; architects the intelligence",
+  "Senior Staff Engineer &amp; Enterprise Architect, 25+ years building systems at the intersection of enterprise scale and lived human experience. Former Global Group Director of Digital Innovation at The Coca-Cola Company &mdash; deployed AI across 15,000 locations. Inventor, musician, gonzo journalist.",
+  ["25+ yrs","2 US patents"],"https://spacepiratezero.com","spacepiratezero.com"),
+ ("Daniela Chambers","","Co-Founder &amp; CEO &mdash; engineers the empathy",
+  "The human layer in everything Spaceship Alpha 9 ships. Emmy-nominated Editor, Producer &amp; visual storyteller with 27+ years at CNN / CNN en Espa&ntilde;ol &mdash; bilingual, a national modeling career, fluent in After Effects, Premiere Pro &amp; Apple Motion, and an early adopter of generative AI (Midjourney, DALL&middot;E). She turns AI systems into experiences people don't just use &mdash; they recognize themselves in.",
+  ["Emmy-nominated","27+ yrs at CNN"],"https://danielachambers.com","danielachambers.com"),
+]
+def founder_card(f):
+    name,sub,role,bio,badges,link,ll=f
+    subhtml=f'<span class="f-sub">{sub}</span>' if sub else ''
+    badgehtml="".join(f'<span class="f-badge">{b}</span>' for b in badges)
+    return (f'<div class="founder"><div class="f-h"><span class="f-n">{name}</span>{subhtml}</div>'
+            f'<div class="f-role">{role}</div><div class="f-badges">{badgehtml}</div>'
+            f'<div class="f-bio">{bio}</div>'
+            f'<a class="f-link" href="{link}" target="_blank" rel="noopener">{ll} <i>&#8599;</i></a></div>')
+founders_html = "".join(founder_card(f) for f in FOUNDERS)
+
 HTML = r"""<title>Space Pirate Zero — Brand Kit</title>
 <style>
 __FONTFACE__
@@ -404,6 +438,34 @@ nav a.active::after,nav a:hover::after{transform:scaleX(1)}
 .s-dev{color:var(--muted2);border:1px solid var(--line)}
 .p-live{border-color:rgba(0,240,255,.4)}
 .prodgrid .prod:first-child{border-color:var(--pink)}
+/* ---------- STORYTELLING STUDIO ---------- */
+.story-hero{font-family:var(--disp);font-weight:700;font-size:clamp(20px,2.7vw,30px);line-height:1.3;max-width:24ch;letter-spacing:.01em}
+.story-hero .pink{color:var(--pink)}.story-hero .cyan{color:var(--cyan)}
+.story-top{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-bottom:12px}
+.story-ethos{border-left:2px solid var(--pink);padding:4px 0 4px 22px;font-size:16px;line-height:1.6;color:var(--paper)}
+.story-ethos b{color:var(--cyan);font-weight:500}
+.story-sub{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted2);margin:34px 0 14px}
+.ipgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.ip{border:1px solid var(--line);border-radius:3px;padding:16px;background:var(--surface);transition:transform .2s,border-color .2s}
+.ip:hover{transform:translateY(-3px);border-color:var(--pink)}
+.ip-t{font-family:var(--disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
+.ip-f{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--cyan);margin-top:8px;text-transform:uppercase}
+.ip-n{color:var(--muted);font-size:12px;margin-top:9px;line-height:1.45}
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.founder{border:1px solid var(--line);border-radius:3px;padding:22px;background:linear-gradient(150deg,rgba(255,20,147,.05),rgba(0,240,255,.04));transition:transform .2s,border-color .2s}
+.founder:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.f-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.f-n{font-family:var(--disp);font-weight:900;font-size:19px;text-transform:uppercase;letter-spacing:.02em}
+.f-sub{font-family:var(--mono);font-size:11px;color:var(--pink);letter-spacing:.06em}
+.f-role{color:var(--cyan);font-size:12.5px;margin-top:6px}
+.f-badges{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.f-badge{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:#050507;background:var(--pink);border-radius:3px;padding:4px 9px}
+.f-badge:first-child{background:var(--cyan)}
+.f-bio{color:var(--muted);font-size:13px;line-height:1.6}
+.f-link{display:inline-flex;gap:6px;align-items:center;font-family:var(--mono);font-size:11px;color:var(--cyan);margin-top:14px}
+.f-link i{transition:transform .2s}
+.f-link:hover i{transform:translate(3px,-3px)}
+
 /* ---------- ENTERPRISE ---------- */
 .engs{display:grid;grid-template-columns:1fr;gap:16px;margin-top:6px}
 .eng{border:1px solid var(--line);border-radius:3px;padding:22px;background:var(--surface);transition:transform .2s,border-color .2s}
@@ -430,7 +492,7 @@ footer .mant{font-family:var(--mono);color:var(--cyan);letter-spacing:.16em;marg
 footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(--muted2);letter-spacing:.04em;line-height:2}
 
 @media (max-width:820px){
-  .essence-grid,.voice-grid,.sonic-top,.engs{grid-template-columns:1fr}
+  .essence-grid,.voice-grid,.sonic-top,.engs,.story-top,.founders{grid-template-columns:1fr}
   .swatches{grid-template-columns:repeat(2,1fr)}
   .cast{grid-template-columns:repeat(2,1fr)}
   .type-row{grid-template-columns:1fr;gap:14px}
@@ -448,7 +510,7 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
   <span class="nav-dot"></span>
   <a href="#essence">Essence</a><a href="#voice">Voice</a><a href="#color">Color</a>
   <a href="#type">Type</a><a href="#sonic">Sound</a><a href="#voices">Voices</a>
-  <a href="#catalog">Catalog</a><a href="#links">Links</a><a href="#studio">Studio</a><a href="#enterprise">Enterprise</a>
+  <a href="#story">Story</a><a href="#catalog">Catalog</a><a href="#links">Links</a><a href="#studio">Studio</a><a href="#enterprise">Enterprise</a>
 </nav>
 
 <div class="hero">
@@ -603,8 +665,21 @@ footer .loc{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(-
   </div>
 </div></section>
 
+<section id="story"><div class="wrap reveal">
+  <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Storytelling Studio</h2>
+    <p class="sec-note">The premier AI-based storytelling studio in the South.</p></div>
+  <div class="story-top">
+    <p class="story-hero"><span class="pink">Spaceship Alpha 9</span> is a storytelling studio &mdash; original concepts and <span class="cyan">original IP</span>, born in the South.</p>
+    <p class="story-ethos">Where Greg <b>architects the intelligence</b>, Daniela <b>engineers the empathy</b>. Storytelling isn't a support role &mdash; it's the mission. We build worlds people don't just watch; they recognize themselves in them.</p>
+  </div>
+  <div class="story-sub">Original IP</div>
+  <div class="ipgrid">__IP__</div>
+  <div class="story-sub">The Founders</div>
+  <div class="founders">__FOUNDERS__</div>
+</div></section>
+
 <section id="catalog"><div class="wrap reveal">
-  <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Catalog</h2>
+  <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Catalog</h2>
     <p class="sec-note">The released discography. Click any record to open it.</p></div>
   <div class="records">
 __CATALOG__
@@ -613,13 +688,13 @@ __CATALOG__
 </div></section>
 
 <section id="links"><div class="wrap reveal">
-  <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Links &amp; Presence</h2>
+  <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-title">Links &amp; Presence</h2>
     <p class="sec-note">Every channel, pulled from spacepiratezero.com. Opens in a new tab.</p></div>
 __LINKS__
 </div></section>
 
 <section id="studio"><div class="wrap reveal">
-  <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-title">The Studio</h2>
+  <div class="sec-head"><span class="sec-num">10</span><h2 class="sec-title">The Studio</h2>
     <p class="sec-note">SPZ is the flagship brand of Spaceship Alpha 9. Pulled from the SA9 repo.</p></div>
   <p class="studio-lede"><b>Spaceship Alpha 9</b> — an AI-native indie software studio. Fifteen products across AI, music, fashion, gaming, privacy &amp; infrastructure. <b>No investors. No board. No permission required.</b> Captain: Greg Chambers, with Daniela Chambers.</p>
   <div class="manifesto">__MANIFESTO__</div>
@@ -628,7 +703,7 @@ __LINKS__
 </div></section>
 
 <section id="enterprise"><div class="wrap reveal">
-  <div class="sec-head"><span class="sec-num">10</span><h2 class="sec-title">Enterprise Consulting</h2>
+  <div class="sec-head"><span class="sec-num">11</span><h2 class="sec-title">Enterprise Consulting</h2>
     <p class="sec-note">The B2B facet — enterprise-grade AI, governed and shipped.</p></div>
   <p class="studio-lede">Greg Chambers architects AI into corporate and retail infrastructure — <b>strategy first, then working, compliant systems</b>. The bridge between corporate infrastructure and consumer magic.</p>
   <div class="manifesto">__ENTCAPS__</div>
@@ -819,7 +894,8 @@ __LINKS__
 full = (HTML.replace("__FONTFACE__", fontface).replace("__TRACKS__", tracks_js)
             .replace("__CATALOG__", catalog_html).replace("__LINKS__", links_html)
             .replace("__MANIFESTO__", manifesto_html).replace("__PRODUCTS__", studio_products_html)
-            .replace("__ENTCAPS__", entcaps_html).replace("__ENGAGEMENTS__", engagements_html))
+            .replace("__ENTCAPS__", entcaps_html).replace("__ENGAGEMENTS__", engagements_html)
+            .replace("__IP__", ip_html).replace("__FOUNDERS__", founders_html))
 
 # Make charset-independent: HTML text -> numeric entities, JS strings -> \u escapes.
 # (base64 blobs are pure ASCII and pass through untouched.)

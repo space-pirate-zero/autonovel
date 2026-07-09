@@ -3,7 +3,7 @@
   "short": "SPZ",
   "tagline": "Signal finds signal.",
   "essence": "Diogenes with a laptop — deface the counterfeit, live honest. Snarky, punk, Atlanta-trap, hacker. Cyberpunk-noir in look, industrial-goth in sound, bar-at-midnight in voice.",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "updated": "2026-07-08",
   "status": "CANONICAL — the one and only SPZ brand kit. Do not fork or create variants; edit brand/spz/build_brand_kit.py and redeploy to the same artifact URL.",
   "canonical_deliverable": {
@@ -27,6 +27,7 @@
     "sonic": "sonic.json — industrial-goth engine, ~70 BPM, theme + beds + mix chain",
     "links": "links.json — site, taglines, operator (Greg Chambers/SA9), social, listen, studio (pulled from spacepiratezero.com)",
     "catalog": "catalog.json — the 6 released albums + streaming + in-production work",
+    "storytelling": "storytelling.json — SA9 as the premier AI storytelling studio in the South: positioning, original IP slate, and the two founders (Greg + Daniela, Emmy-nominated). See danielachambers.com.",
     "studio": "studio.json — Spaceship Alpha 9: product roster, 8-principle manifesto, Space Tokens, StyleLift detail (pulled from the private SA9 repo, not the public web)",
     "enterprise": "enterprise.json — Enterprise Consulting: positioning, capabilities, engagements (Meijer + MOS), prior work, patents (from the MOS repo)"
   },

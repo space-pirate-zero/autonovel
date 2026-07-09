@@ -308,3 +308,15 @@ deployments, one durable Temporal runtime, MCP tool rails, compliance pinned by 
 substrate for MEIJER marketing (integrations/meijer-digitalapis: 215 ops / 10 Azure APIM APIs,
 mPerks loyalty, Emarsys, consent/opt-out). New enterprise.json + board section 10 (capabilities
 chips + two engagement cards Meijer/MOS + prior Coca-Cola + patents). nav now 10. brand.json 1.4.0.
+
+## Brand kit v1.5 — Storytelling Studio + founders (2026-07-08)
+Added a Storytelling Studio section (07): SA9 = the premier AI-based storytelling studio in the
+South, producing original IP (The Last Human CEO, Signal Finds Signal, Neko Death Cult, Digital
+Insurgency, Zero Trust Reality) + the two founders. Founder bios pulled from the SA9 repo
+(src/components/sections/Bio.tsx): Greg Chambers (Co-Founder & CTO, "architects the intelligence",
+25+ yrs, ex-Coca-Cola Global Group Director Digital Innovation, AI across 15,000 locations) and
+Daniela Chambers (Co-Founder & CEO, "engineers the empathy", EMMY-NOMINATED editor/producer/visual
+storyteller, 27+ yrs at CNN en Español, bilingual, national modeling career, AE/Premiere/Motion,
+early GenAI adopter; danielachambers.com is a client-rendered SPA — header confirmed Emmy-nominated
++ CNN en Español). Ethos: "Storytelling isn't a support role. It's the mission." New
+storytelling.json. Sections renumbered to 01-11; nav now 11 (added Story). brand.json 1.5.0.

@@ -1,0 +1,33 @@
+{
+  "brand": "Space Pirate Zero",
+  "kit": "storytelling",
+  "version": "1.0.0",
+  "updated": "2026-07-08",
+  "source": "Founder bios from the SpaceShipAlpha9 repo (src/components/sections/Bio.tsx, STYLELIFT_CHEAT_SHEET.md) + danielachambers.com.",
+  "positioning": "Spaceship Alpha 9 is a storytelling studio — the premier AI-based storytelling studio in the South. It builds original concepts and IP where the intelligence is architected and the empathy is engineered.",
+  "ethos": "Storytelling isn't a support role. It's the mission. Where Greg architects the intelligence, Daniela engineers the empathy.",
+  "home_base": "Atlanta, GA — the South",
+  "original_ip": [
+    { "title": "The Last Human CEO", "form": "Novel", "note": "Original SA9 concept — the last human running the machine." },
+    { "title": "Signal Finds Signal", "form": "Album (24 tracks)", "note": "The sonic universe; secretly a love letter." },
+    { "title": "The Maneki Neko Death Cult", "form": "Scored audio drama (24 eps, ~10.5h)", "note": "Serialized, narrated by Space Pirate Zero." },
+    { "title": "Digital Insurgency", "form": "Book", "note": "Business x cyberpunk x spec-ops field manual." },
+    { "title": "Zero Trust Reality", "form": "Book (nonfiction)", "note": "Original SA9 concept." }
+  ],
+  "founders": [
+    {
+      "name": "Greg Chambers",
+      "alias": "Space Pirate Zero",
+      "role": "Co-Founder & CTO — architects the intelligence",
+      "bio": "Senior Staff Engineer and Enterprise Architect with 25+ years building systems at the intersection of enterprise scale and lived human experience. As former Global Group Director of Digital Innovation at The Coca-Cola Company, he deployed AI across 15,000 locations. Inventor (US patents 11432994 + 11600383), musician, gonzo journalist.",
+      "link": "https://spacepiratezero.com"
+    },
+    {
+      "name": "Daniela Chambers",
+      "role": "Co-Founder & CEO — engineers the empathy",
+      "bio": "The human layer in everything Spaceship Alpha 9 ships. Emmy-nominated Editor, Producer, and visual storyteller with 27+ years at CNN / CNN en Español — bilingual, a national modeling career, fluent in After Effects, Premiere Pro, and Apple Motion, and an early adopter of generative AI (Midjourney, DALL·E). She turns Greg's AI systems into experiences people don't just use — they recognize themselves in.",
+      "honors": ["Emmy-nominated", "27+ years at CNN en Español"],
+      "link": "https://danielachambers.com"
+    }
+  ]
+}
