@@ -320,3 +320,13 @@ storyteller, 27+ yrs at CNN en Español, bilingual, national modeling career, AE
 early GenAI adopter; danielachambers.com is a client-rendered SPA — header confirmed Emmy-nominated
 + CNN en Español). Ethos: "Storytelling isn't a support role. It's the mission." New
 storytelling.json. Sections renumbered to 01-11; nav now 11 (added Story). brand.json 1.5.0.
+
+## Signal Finds Signal — tracks 1-4 LOCKED (2026-07-08)
+Resumed album production. User curated final versions in iCloud a+_neko/ and locked tracks 1-4.
+Established canonical album masters folder at books/neko-death-cult/audio/album/ with numbered
+locked masters (01_cold-heart-warm-hands, 02_indra, 03_slow-enough-to-stay, 04_weather-in-your-
+hands) + ALBUM.md manifest tracking lock status for all 24. The locked files are byte-identical to
+the original _SAMPLED versions in audio/songs/ (NOT the newer era-forward VOX/PRO redos — user
+chose the original SAMPLED takes for the album). Rule: never regenerate/overwrite a LOCKED track.
+Next: generate/produce tracks 5-24. Lyrics/style source = album.md; tools = compose_songs.py +
+produce_song.py.
