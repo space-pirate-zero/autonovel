@@ -70,6 +70,7 @@ def trim(src):
 # Defaults to spz_* then kat_* (alphabetical) when a door isn't listed.
 SAMPLE_ORDER = {
     5:  ["t5_spz_offcamera", "t5_kat_light", "t5_kat_allatonce"],
+    6:  ["t6_spz_debt", "t6_kat_nameoutlives", "t6_kat_notyet"],
     14: ["t14_spz_product", "t14_kat_jacket", "t14_kat_doubted"],
 }
 
