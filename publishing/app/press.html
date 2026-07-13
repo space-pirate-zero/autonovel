@@ -138,9 +138,29 @@ h1{background-size:200% auto;animation:sheen 9s linear infinite}
 .ded p{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease}
 .js .ded p.in{opacity:1;transform:none}
 .ded h1{animation:none}
+/* ---- trailer card (hero) ---- */
+.trailer-card{position:relative;width:300px;height:300px;padding:0;border:0;background:none;cursor:pointer;display:block;border-radius:16px}
+.trailer-card .cover{width:300px;height:300px}
+.tc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:var(--pink);color:#0a0208;display:flex;align-items:center;justify-content:center;font-size:1.5rem;padding-left:4px;box-shadow:0 8px 30px #ff149366;transition:transform .2s,box-shadow .2s}
+.trailer-card:hover .tc-play{transform:translate(-50%,-50%) scale(1.09);box-shadow:0 10px 44px #ff1493aa}
+.tc-label{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 2px 10px #000c;pointer-events:none}
+.tc-play{animation:tcpulse 2.2s ease-in-out infinite}
+@keyframes tcpulse{0%,100%{box-shadow:0 8px 30px #ff149355}50%{box-shadow:0 8px 44px #ff1493aa}}
+/* ---- chapter audiogram button ---- */
+.ag-btn{margin-top:10px;display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:999px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);background:#00f0ff10;border:1px solid #00f0ff33;cursor:pointer;transition:.15s}
+.ag-btn:hover{background:#00f0ff22;border-color:var(--cyan);transform:translateY(-1px)}
+.ag-btn .dot{color:var(--pink)}
+/* ---- video lightbox ---- */
+.lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:#030308ee;backdrop-filter:blur(6px);padding:24px}
+.lb.on{display:flex;animation:lbin .2s ease}
+@keyframes lbin{from{opacity:0}to{opacity:1}}
+.lb-vid{max-width:min(92vw,520px);max-height:86vh;width:auto;border-radius:14px;box-shadow:0 30px 100px #000e,0 0 0 1px #ffffff1a;background:#000}
+.lb-close{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:1px solid #ffffff2a;background:#14141c;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;transition:.15s}
+.lb-close:hover{background:var(--pink);color:#0a0208;border-color:transparent;transform:rotate(90deg)}
+@media(max-width:760px){.trailer-card{margin:0 auto}.trailer-card,.trailer-card .cover{width:260px;height:260px}}
 @media (prefers-reduced-motion:reduce){
 .js .reveal,.js .ded p{opacity:1!important;transform:none!important;transition:none!important}
-.kicker,h1,h2 .hash,#play-first,.ep.playing{animation:none!important}
+.kicker,h1,h2 .hash,#play-first,.ep.playing,.tc-play{animation:none!important}
 }
 </style></head><body>
 <canvas id="matrix" aria-hidden="true"></canvas>

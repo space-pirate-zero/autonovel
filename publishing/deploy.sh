@@ -49,7 +49,14 @@ if ls "$ART"/ep*.jpg >/dev/null 2>&1; then
   echo "uploading per-episode artwork…"
   gcloud storage cp "$ART"/ep*.jpg "$GCS/art/" --cache-control="public,max-age=86400" >/dev/null
 fi
-echo "  audio + cover public at $BASE/"
+# social video: trailer + audiograms + per-chapter teasers (for the site hero + chapter audiograms)
+VID="books/the-last-human-ceo/social/video"
+if ls "$VID"/*.mp4 >/dev/null 2>&1; then
+  echo "uploading trailer + audiograms + teasers…"
+  gcloud storage cp "$VID"/trailer.mp4 "$VID"/audiogram_*.mp4 "$GCS/video/" --cache-control="public,max-age=86400" >/dev/null 2>&1 || true
+  ls "$VID"/teasers/teaser_ep*.mp4 >/dev/null 2>&1 && gcloud storage cp "$VID"/teasers/teaser_ep*.mp4 "$GCS/video/" --cache-control="public,max-age=86400" >/dev/null 2>&1 || true
+fi
+echo "  audio + cover + video public at $BASE/"
 
 # 3) first feed + site (self-url guessed) + deploy to learn the service URL
 python3 "$PUB/gen_feed.py" --base "$BASE" >/dev/null

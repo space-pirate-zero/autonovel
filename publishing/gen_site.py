@@ -166,9 +166,29 @@ h1{background-size:200% auto;animation:sheen 9s linear infinite}
 .ded p{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease}
 .js .ded p.in{opacity:1;transform:none}
 .ded h1{animation:none}
+/* ---- trailer card (hero) ---- */
+.trailer-card{position:relative;width:300px;height:300px;padding:0;border:0;background:none;cursor:pointer;display:block;border-radius:16px}
+.trailer-card .cover{width:300px;height:300px}
+.tc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:var(--pink);color:#0a0208;display:flex;align-items:center;justify-content:center;font-size:1.5rem;padding-left:4px;box-shadow:0 8px 30px #ff149366;transition:transform .2s,box-shadow .2s}
+.trailer-card:hover .tc-play{transform:translate(-50%,-50%) scale(1.09);box-shadow:0 10px 44px #ff1493aa}
+.tc-label{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 2px 10px #000c;pointer-events:none}
+.tc-play{animation:tcpulse 2.2s ease-in-out infinite}
+@keyframes tcpulse{0%,100%{box-shadow:0 8px 30px #ff149355}50%{box-shadow:0 8px 44px #ff1493aa}}
+/* ---- chapter audiogram button ---- */
+.ag-btn{margin-top:10px;display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:999px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);background:#00f0ff10;border:1px solid #00f0ff33;cursor:pointer;transition:.15s}
+.ag-btn:hover{background:#00f0ff22;border-color:var(--cyan);transform:translateY(-1px)}
+.ag-btn .dot{color:var(--pink)}
+/* ---- video lightbox ---- */
+.lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:#030308ee;backdrop-filter:blur(6px);padding:24px}
+.lb.on{display:flex;animation:lbin .2s ease}
+@keyframes lbin{from{opacity:0}to{opacity:1}}
+.lb-vid{max-width:min(92vw,520px);max-height:86vh;width:auto;border-radius:14px;box-shadow:0 30px 100px #000e,0 0 0 1px #ffffff1a;background:#000}
+.lb-close{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:1px solid #ffffff2a;background:#14141c;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;transition:.15s}
+.lb-close:hover{background:var(--pink);color:#0a0208;border-color:transparent;transform:rotate(90deg)}
+@media(max-width:760px){.trailer-card{margin:0 auto}.trailer-card,.trailer-card .cover{width:260px;height:260px}}
 @media (prefers-reduced-motion:reduce){
 .js .reveal,.js .ded p{opacity:1!important;transform:none!important;transition:none!important}
-.kicker,h1,h2 .hash,#play-first,.ep.playing{animation:none!important}
+.kicker,h1,h2 .hash,#play-first,.ep.playing,.tc-play{animation:none!important}
 }
 """
 
@@ -191,9 +211,23 @@ audio.addEventListener('timeupdate',()=>{const d=audio.duration||0;bar.style.wid
 playBtn.addEventListener('click',()=>{if(cur<0){load(1);return;}audio.paused?audio.play():audio.pause();});
 prog.addEventListener('click',ev=>{const r=prog.getBoundingClientRect();if(audio.duration)audio.currentTime=(ev.clientX-r.left)/r.width*audio.duration;});
 document.getElementById('p-toggle').addEventListener('click',()=>{player.classList.toggle('min');sizeCanvas();});
-document.querySelectorAll('.ep').forEach(li=>li.addEventListener('click',e=>{if(e.target.closest('a'))return;load(+li.dataset.n);}));
+document.querySelectorAll('.ep').forEach(li=>li.addEventListener('click',e=>{if(e.target.closest('a')||e.target.closest('[data-video]'))return;load(+li.dataset.n);}));
 const pf=document.getElementById('play-first');if(pf)pf.addEventListener('click',()=>{load(1);location.hash='#episodes';});
 window.addEventListener('resize',sizeCanvas);
+"""
+
+
+LIGHTBOX_JS = r"""
+(function(){
+  var lb=document.getElementById('lb'),lbv=document.getElementById('lb-vid'),a=document.getElementById('p-audio');
+  if(!lb)return;
+  function open(src){if(a){try{a.pause();}catch(e){}}lbv.src=src;lb.classList.add('on');document.body.style.overflow='hidden';lbv.play().catch(function(){});}
+  function close(){try{lbv.pause();}catch(e){}lbv.removeAttribute('src');lbv.load();lb.classList.remove('on');document.body.style.overflow='';}
+  document.getElementById('lb-close').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))close();});
+  document.querySelectorAll('[data-video]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();open(b.dataset.video);});});
+})();
 """
 
 
@@ -275,6 +309,8 @@ def build(site_url):
     base = gf.public_base(CFG)
     self_feed = f"{site_url}/feed.xml"
     cover = f"{base}/cover.jpg"
+    vbase = f"{base}/video"
+    trailer_url = f"{vbase}/trailer.mp4"
     og = f"{site_url}/static/og.jpg"
     items = gf.build_items(CFG, base)
 
@@ -283,10 +319,12 @@ def build(site_url):
         n, art, title = it["ep"], it["art"], it["title"]
         dur, notes, url = gf.hms(it["dur"]), it["notes"], it["url"]
         players.append({"n": n, "title": title, "art": art, "src": url, "dur": dur})
+        ag = f"{vbase}/teaser_ep{n:02d}.mp4"
         cards.append(f'''<li class="ep reveal" id="ep{n}" data-n="{n}" style="transition-delay:{(n-1)%6*45}ms">
   <span class="ep-play"><img class="ep-art" src="{A(art)}" alt="Cover art for {A(title)}" width="120" height="120" loading="lazy" decoding="async"><span class="ep-ico" aria-hidden="true">&#9654;</span></span>
   <div class="ep-meta"><div class="ep-num">EP {n:02d}<span class="ep-dur">{dur}</span></div>
-  <h3 class="ep-title">{A(title)}</h3><p class="ep-notes">{A(notes)}</p></div></li>''')
+  <h3 class="ep-title">{A(title)}</h3><p class="ep-notes">{A(notes)}</p>
+  <button class="ag-btn" type="button" data-video="{ag}" aria-label="Watch the {A(title)} audiogram"><span class="dot">&#9673;</span> Audiogram</button></div></li>''')
     cards_html = "\n".join(cards)
 
     ld = {"@context": "https://schema.org", "@graph": [
@@ -326,11 +364,14 @@ def build(site_url):
 <canvas id="matrix" aria-hidden="true"></canvas>
 {navbar("home")}
 <header class="hero"><div class="wrap hero-grid">
-  <img class="cover reveal" src="{cover}" alt="{A(SHOW['title'])} cover art" width="300" height="300">
+  <button class="trailer-card reveal" type="button" data-video="{trailer_url}" aria-label="Watch the trailer">
+    <img class="cover" src="{cover}" alt="{A(SHOW['title'])} cover art" width="300" height="300">
+    <span class="tc-play" aria-hidden="true">&#9654;</span><span class="tc-label">Watch trailer</span></button>
   <div class="reveal" style="transition-delay:.1s"><div class="kicker">A Space Pirate Zero Transmission &middot; Full-Cast Audiobook</div>
   <h1>{A(SHOW['title'])}</h1><p class="logline">{A(LOGLINE)}</p>
   <div class="meta-row">29 EPISODES &middot; <b>~12.6 HOURS</b> &middot; FICTION &middot; EXPLICIT &middot; <b>SERIAL</b></div>
   <div class="cta"><button class="btn pink" id="play-first">&#9654;&nbsp; Play Episode 1</button>
+  <button class="btn" type="button" data-video="{trailer_url}">&#9654;&nbsp; Watch trailer</button>
   <a class="btn" href="{APPLE}" target="_blank" rel="noopener">Apple Podcasts</a>
   <a class="btn green" href="{SPOTIFY}" target="_blank" rel="noopener">Spotify</a>
   <a class="btn" href="{self_feed}">RSS</a></div></div>
@@ -371,7 +412,12 @@ production: written, scored, and voiced in-house. <a href="/about">Read the dedi
 <footer><div class="wrap"><div class="sig">&gt; SIGNAL FINDS SIGNAL</div>
 <p style="margin-top:8px">&copy; 2026 Space Pirate Zero &middot; Spaceship Alpha 9 &middot; <a href="/about">For Daniela</a> &middot; <a href="/press">Press / Media Kit</a> &middot; <a href="{self_feed}">RSS</a></p></div></footer>
 {player_html}
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Video player">
+  <button class="lb-close" id="lb-close" aria-label="Close video">&times;</button>
+  <video class="lb-vid" id="lb-vid" controls playsinline preload="none" crossorigin="anonymous"></video>
+</div>
 <script>{js}
+{LIGHTBOX_JS}
 {MATRIX_JS}
 {REVEAL_JS}</script>
 </body></html>'''
