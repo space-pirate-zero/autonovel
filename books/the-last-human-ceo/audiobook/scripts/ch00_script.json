@@ -1,0 +1,31 @@
+{
+  "chapter": 0,
+  "title": "The Last Human CEO",
+  "segments": [
+    {
+      "speaker": "NARRATOR",
+      "text": "[slowly] Chapter Zero: The Last Human CEO"
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "There is a dimension beyond the org chart. A dimension as cheap as compute and as old as greed, lying between the quarterly guidance and the obituary."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "It is the place where a man discovers that everything he was paid twenty-nine million dollars a year to be \u2014 the vision, the nerve, the soul in the chair \u2014 can be done better by something that has never once needed to be loved."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "[slowly] He is about to take that trip. He thinks it's a victory lap. Submitted for your consideration: the last human CEO."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "\u2014 Space Pirate Zero, transmitting from Spaceship Alpha 9."
+    }
+  ],
+  "total_segments": 5,
+  "speakers": [
+    "NARRATOR"
+  ],
+  "total_chars": 598
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ep17",
+  "model": "gemini-2.5-flash-image",
+  "timestamp": "2026-07-13T10:38:45.000599",
+  "path": "/Users/gregchambers/autonovel/.claude/worktrees/last-human-ceo-audiobook-7bb567/books/the-last-human-ceo/art/episodes/ep17.png",
+  "width": 1024,
+  "height": 1024,
+  "prompt_hash": "c84b3c661c23b620",
+  "prompt_length": 1561,
+  "model_text": null,
+  "attempt": 1
+}

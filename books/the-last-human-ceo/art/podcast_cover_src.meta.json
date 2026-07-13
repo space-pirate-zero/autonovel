@@ -1,0 +1,12 @@
+{
+  "id": "podcast_cover_src",
+  "model": "gemini-2.5-flash-image",
+  "timestamp": "2026-07-13T10:50:18.673153",
+  "path": "art/podcast_cover_src.png",
+  "width": 1024,
+  "height": 1024,
+  "prompt_hash": "89e2daa0d153d52f",
+  "prompt_length": 1736,
+  "model_text": null,
+  "attempt": 1
+}

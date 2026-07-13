@@ -1,0 +1,108 @@
+project=stylelift region=us-central1 bucket=spz-podcasts service=spz-podcast-lhceo
+Updated property [core/project].
+enabling required services (run, cloudbuild, storage)…
+Operation "operations/acat.p2-373293565001-8329c7fa-16e1-4004-ab33-ea0cd9ebe659" finished successfully.
+granting public object read (allUsers:objectViewer)…
+cover: /Users/gregchambers/autonovel/.claude/worktrees/last-human-ceo-audiobook-7bb567/publishing/build/cover.jpg  (3000,3000, 473 KB)
+uploading cover + episodes to gs://spz-podcasts/the-last-human-ceo …
+Copying file://publishing/build/cover.jpg to gs://spz-podcasts/the-last-human-ceo/cover.jpg
+  
+......
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_01_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_01_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_02_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_02_PRODUCED.mp3
+  
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_03_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_03_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_04_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_04_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_05_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_05_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_06_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_06_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_07_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_07_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_08_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_08_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_09_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_09_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_10_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_10_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_11_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_11_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_12_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_12_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_13_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_13_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_14_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_14_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_15_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_15_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_16_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_16_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_17_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_17_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_18_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_18_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_19_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_19_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_20_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_20_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_21_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_21_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_22_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_22_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_23_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_23_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_24_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_24_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_25_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_25_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_26_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_26_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_27_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_27_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_28_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_28_PRODUCED.mp3
+Copying file://books/the-last-human-ceo/audiobook/produced/ch_29_PRODUCED.mp3 to gs://spz-podcasts/the-last-human-ceo/ch_29_PRODUCED.mp3
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Average throughput: 3.3MiB/s
+uploading per-episode artwork…
+Copying file://books/the-last-human-ceo/art/episodes/ep01.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep01.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep02.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep02.jpg
+  
+Copying file://books/the-last-human-ceo/art/episodes/ep03.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep03.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep04.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep04.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep05.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep05.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep06.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep06.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep07.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep07.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep08.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep08.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep09.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep09.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep10.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep10.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep11.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep11.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep12.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep12.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep13.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep13.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep14.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep14.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep15.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep15.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep16.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep16.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep17.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep17.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep18.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep18.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep19.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep19.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep20.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep20.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep21.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep21.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep22.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep22.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep23.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep23.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep24.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep24.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep25.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep25.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep26.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep26.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep27.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep27.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep28.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep28.jpg
+Copying file://books/the-last-human-ceo/art/episodes/ep29.jpg to gs://spz-podcasts/the-last-human-ceo/art/ep29.jpg
+.............................................
+
+Average throughput: 2.9MiB/s
+  audio + cover public at https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/
+deploying Cloud Run service (pass 1)…
+Building using Dockerfile and deploying container to Cloud Run service [spz-podcast-lhceo] in project [stylelift] region [us-central1]
+Building and deploying...
+Validating configuration........done
+Uploading sources...........done
+Building Container......................................................................................................................................................................................................................done
+Setting IAM Policy.............done
+Creating Revision............................................................................................done
+Routing traffic.....done
+Done.
+Service [spz-podcast-lhceo] revision [spz-podcast-lhceo-00005-8f2] has been deployed and is serving 100 percent of traffic.
+Service URL: https://spz-podcast-lhceo-373293565001.us-central1.run.app
+redeploying with canonical feed URL (pass 2)…
+Building using Dockerfile and deploying container to Cloud Run service [spz-podcast-lhceo] in project [stylelift] region [us-central1]
+Building and deploying...
+Validating configuration.......done
+Uploading sources..............done
+Building Container..................................................................................................................................................................................................................................................................................................done
+Setting IAM Policy...............done
+Creating Revision.......................................................................................................................done
+Routing traffic.....done
+Done.
+Service [spz-podcast-lhceo] revision [spz-podcast-lhceo-00006-znz] has been deployed and is serving 100 percent of traffic.
+Service URL: https://spz-podcast-lhceo-373293565001.us-central1.run.app
+
+=================== DEPLOYED ===================
+Landing page : https://spz-podcast-lhceo-mzbi2syoxa-uc.a.run.app
+FEED URL     : https://spz-podcast-lhceo-mzbi2syoxa-uc.a.run.app/feed.xml
+  ^ submit THIS URL once to Apple Podcasts Connect and Spotify for Podcasters.
+  (see publishing/README.md for the submit steps)

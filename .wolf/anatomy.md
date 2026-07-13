@@ -34,6 +34,19 @@ Python tooling (`run_pipeline.py`, `draft_chapter.py`, `evaluate.py`, `gen_*.py`
 - `pyproject.toml`, `uv.lock`, `.python-version` — Python env (uv).
 - `.wolf/` — OpenWolf context.
 - `README.md` — monorepo overview + shared pipeline design.
+- **`UNIVERSE.md`** — shared-reality canon bible. Every book is a *transmission*
+  from **Spaceship Alpha 9**, narrated by **Space Pirate Zero**. Holds the frame,
+  the transmission ledger, the shared law, and the "add a new book" procedure.
+  Read before writing/shipping any title.
+- **`standards/`** — the repeatable cross-book production playbook. `README.md`
+  (index + launch checklist) + `AUDIOBOOK.md` (manuscript→full-cast audiobook) +
+  `PUBLISHING.md` (GCS + Cloud Run + RSS + Apple/Spotify + custom domain + SEO) +
+  `SOCIAL.md` (images/video/teasers/press kit/copy) + `BRAND.md` (SPZ tokens).
+  Reference implementation for all four: `books/the-last-human-ceo/` + `publishing/`.
+- `brand/spz/` — the CANONICAL SPZ brand kit (palette/type/voice/sonic/storytelling
+  JSON + `build_brand_kit.py` + `brand_kit.html`). Do not fork.
+- `publishing/` — book-agnostic podcast+site publisher, driven by `config.json`
+  (per-book show metadata, GCP target, `public_url` canonical domain).
 
 ## Branch archives
 Original per-book branches are retained as full-history archives:

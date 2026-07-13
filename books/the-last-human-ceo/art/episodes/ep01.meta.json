@@ -1,0 +1,12 @@
+{
+  "id": "ep01",
+  "model": "gemini-2.5-flash-image",
+  "timestamp": "2026-07-13T10:32:30.990010",
+  "path": "books/the-last-human-ceo/art/episodes/ep01.png",
+  "width": 1024,
+  "height": 1024,
+  "prompt_hash": "15ce86872aee426c",
+  "prompt_length": 2045,
+  "model_text": null,
+  "attempt": 1
+}

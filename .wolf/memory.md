@@ -330,3 +330,33 @@ the original _SAMPLED versions in audio/songs/ (NOT the newer era-forward VOX/PR
 chose the original SAMPLED takes for the album). Rule: never regenerate/overwrite a LOCKED track.
 Next: generate/produce tracks 5-24. Lyrics/style source = album.md; tools = compose_songs.py +
 produce_song.py.
+
+## 2026-07-11 — The Last Human CEO: multi-voice SPZ audiobook + theme/intro
+Built the audiobook pipeline in books/the-last-human-ceo/: retargeted the stale
+(fantasy) audiobook_voices.json + gen_audiobook_script.py CHARACTERS to the real
+cast on the SPZ brand voices (SPZ narrates; Callum=Cope, Lily=Sun/Margaux/Viv,
+Clarissa=the machine on v2, Blackwood=Frade/Tisch, George=Adler). New
+render_audiobook.py = proven per-segment v3 TTS (drop-guard, real silence, ffmpeg
+stitch), gen_theme.py = ElevenLabs Music API theme + ducked SPZ title-card intro,
+produce_chapter.py = theme-wrapped chapter. Fixed opus-4-8 'temperature' 400 +
+switched call_claude to streaming (ReadTimeout on long chapters); made parse+render
+resume-safe; run long renders detached (nohup+disown) to survive session teardown.
+Act 1 (slots 0-9) done: ch_00-09 rendered (~4.3h), theme.mp3, 00_intro.mp3,
+produced/ch_01_PRODUCED.mp3. Pending: slots 10-29 + full assembly. See auto-memory
+last-human-ceo-audiobook.md.
+
+## 2026-07-13 — Repo-wide production standards + shared-universe canon
+Consolidated all TLHC launch work into reusable, cross-book form:
+- **`standards/`** (new): README (index + new-book launch checklist), AUDIOBOOK.md,
+  PUBLISHING.md, SOCIAL.md, BRAND.md — the four pipelines, with
+  `books/the-last-human-ceo/` + `publishing/` as the reference implementation.
+- **`UNIVERSE.md`** (new): shared-reality canon. All books are *transmissions* from
+  **Spaceship Alpha 9** (studio = in-fiction vessel), narrated by **Space Pirate
+  Zero**. Transmission ledger (TLHC, Neko Death Cult, Digital Insurgency, Zero Trust
+  Reality, Signal Finds Signal album), shared law (counterfeit vs honest; signal
+  finds signal; machines are honest mirrors not villains; "beige"; cameos travel,
+  plots don't), and an "add a new transmission" procedure.
+- Linked both from top-level `README.md`; recorded in `.wolf/anatomy.md`.
+- Social motion upgrade also shipped: glow-pulse audiograms, title-reveal trailer
+  intro, 29 per-episode teaser Reels (`social/gen_teasers.py`), reproducible
+  `social/make_presskit.sh` (press-kit.zip → GCS, git-ignored).

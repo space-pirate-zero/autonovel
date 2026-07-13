@@ -13,6 +13,23 @@ See the `autonovel/bells` branch.
 
 ---
 
+## One universe, one brand
+
+Every book here is a transmission from a single shared reality — **Spaceship
+Alpha 9** — narrated by **Space Pirate Zero**. Before writing or shipping any
+title, read:
+
+- **[`UNIVERSE.md`](UNIVERSE.md)** — the shared-reality canon bible (the frame,
+  SPZ, the transmission ledger, the shared law, how to add a new book).
+- **[`standards/`](standards/README.md)** — the repeatable production playbook:
+  turn a finished manuscript into a full-cast **[audiobook](standards/AUDIOBOOK.md)**,
+  **[publish](standards/PUBLISHING.md)** it to Apple/Spotify + a Cloud Run site,
+  and ship a **[social launch kit](standards/SOCIAL.md)** — all on the one
+  **[SPZ brand](standards/BRAND.md)**. Reference implementation:
+  `books/the-last-human-ceo/`.
+
+---
+
 ## Quick Start
 
 ```bash

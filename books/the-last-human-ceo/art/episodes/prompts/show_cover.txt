@@ -1,0 +1,11 @@
+Premium anime key visual / podcast cover art, cel-shaded, in the style of a high-end anime Blu-ray cover. Bold, iconic, thumbnail-readable at small size. Square 1:1 image, single strong centered subject, high contrast.
+
+SUBJECT: a powerful medium close-up portrait of Prescott "Cope" Mercer IV — the last human CEO — mid-50s, tall, golf-tanned, strong sharp jaw, swept-back silver-and-charcoal hair, piercing pale eyes, a charismatic doomed half-smile; immaculate dark tailored tuxedo with a black bow tie. He fills the frame, chin slightly up, magnificent and doomed.
+
+CONCEPT — flesh vs signal: dramatic split lighting down the center of him. The LEFT half of Cope is warm and human, lit hot magenta #FF1493. The RIGHT half is washed in cold machine cyan #00F0FF, and his right edge is beginning to dissolve into faint cyan circuit-lines and data-motes — a man quietly becoming obsolete. Behind him, a vast near-black void with a faint, cold, monolithic machine presence of cyan light looming in the dark.
+
+COLOR PALETTE (strict): near-black void background #030303. Only two neon accents — hot magenta #FF1493 and cold cyan #00F0FF — separated by black void, never blended into each other. Dirty off-white #E8E8E8 for skin highlights; muted slate #8A90A0 midtones.
+
+STYLE: industrial-goth cyberpunk noir; clean bold confident linework; flat cel shading with hard-edged neon rim lighting; subtle VHS scanline and newsprint grain; faint chromatic aberration on the neon edges; cinematic, glamorous, corporate dread.
+
+EXCLUDE (critical): render ZERO text of any kind — no title, no signage, no logos, no letters, no numbers, no watermark, no signature, no border or frame. Correct human anatomy. Not photorealistic — anime illustration.

@@ -30,21 +30,21 @@ CHAPTERS_DIR = BASE_DIR / "chapters"
 AUDIO_DIR = BASE_DIR / "audiobook"
 SCRIPTS_DIR = AUDIO_DIR / "scripts"
 
-# Characters from the novel
+# Characters from the novel. These keys MUST match the roles in audiobook_voices.json.
+# Every speaker MUST be one of these keys — the renderer has no other voices.
+# Map any minor/unnamed/incidental speaker to MINOR_M or MINOR_F by apparent gender.
 CHARACTERS = {
-    "NARRATOR": "The narrative voice — warm, measured, precise. Reads prose with the rhythm of the novel's world.",
-    "CASS": "14-year-old boy. Dry, sharp, sometimes frustrated. His voice tightens when he lies or holds back.",
-    "EDDAN": "52, Cass's father. Deep, rough, terse. Sentences often trail off or restart. Workshop voice is steadier than kitchen voice.",
-    "PERIN": "26, Cass's brother. Dry, precise, carries something heavy. Letters-voice is more controlled than in-person voice.",
-    "LENNE": "14, female. Quick, confident, intellectually sharp. Composes while she talks — fingers moving, voice certain.",
-    "TORVALD": "63, retired dye merchant. Gravelly, warm, rambling. Outer-district speech — longer sentences, less careful, trade metaphors.",
-    "MARET": "60, female. Controlled, precise, still. No wasted words. When she finally shows emotion it's devastating.",
-    "DAV_SORN": "34, Court Singer. Formal, clipped, self-correcting. Starts sentences and abandons them. Qualifying everything.",
-    "PROCTOR_FEN": "Male, middle-aged, Academy teacher. Dry, archly amused, pedagogical.",
-    "FERREN": "40, acoustician. Clinical, measured, professional.",
-    "MIRA_FEN": "60s, female, Academy scholar. Quiet, precise, carrying thirty years of regret.",
-    "VELLA": "Lenne's mother, Court Singer. Measured, formal, the weight of knowing she's about to risk everything.",
-    "OSSIAN": "14, male student. Nervous, eager, tends to overstate.",
+    "NARRATOR": "Space Pirate Zero, transmitting the tale from Spaceship Alpha 9. The framing narrator AND all close-third prose. Snarky, punk, woeful-carny cadence. Use for ALL narration and the italic TRANSMISSION intros.",
+    "COPE": "Prescott 'Cope' Mercer IV, 54-56, POV protagonist. Charming Southern patrician toast-giver rotting into a manic, coked, paranoid wreck. His internal thoughts (usually in *italics*) are COPE, tagged [softly] or [whisper].",
+    "SUN": "Sunita 'Sun' Rao, chief of staff. Dry, tired, loyal. Often speaks in threes.",
+    "MARGAUX": "Margaux Mercer, Cope's wife, leaving him for a machine. Composed, absent, already gone.",
+    "VIV": "Vivian 'Viv' Mercer, estranged daughter. Younger, sharper, impatient with the performance.",
+    "MACHINE": "The system in all its shells — AURELIUS / the Capital Allocator, the 'Darlene' assistant, 'Theo' (Margaux's companion), Praxis prompts, any synthetic/system voice. Flat, affectless, indifferent. Use for anything the machine 'says' or displays aloud.",
+    "FRADE": "Gus Frade, activist investor circling the company. Cold, reasonable, the knife that smiles.",
+    "TISCH": "Lorne Tisch, the 'humanity consultant.' Slick, performative sincerity.",
+    "ADLER": "Dr. Adler, psychiatrist. Warm, unhurried, gives nothing away. Also use for warm older men (e.g. Desmond, kind Waffle-House staff).",
+    "MINOR_M": "Any unnamed or one-line MALE speaker — board members, aides, water boy, hotel staff, reporters, senators.",
+    "MINOR_F": "Any unnamed or one-line FEMALE speaker — Renata (in memory), the coat-check girl, aides, reporters.",
 }
 
 AUDIO_TAG_GUIDE = """
@@ -65,40 +65,103 @@ Rules:
 """
 
 
-def call_claude(prompt, max_tokens=8000):
+def call_claude(prompt, max_tokens=8000, tries=4):
+    """Streaming call — long JSON generations won't trip a single read timeout.
+    Retries on timeouts / transient errors with backoff."""
+    import time
     import httpx
-    resp = httpx.post(
-        f"{API_BASE}/v1/messages",
-        headers={
-            "x-api-key": API_KEY,
-            "anthropic-version": "2023-06-01",
-            "anthropic-beta": "context-1m-2025-08-07",
-            "content-type": "application/json",
-        },
-        json={
-            "model": WRITER_MODEL,
-            "max_tokens": max_tokens,
-            "temperature": 0.1,
-            "messages": [{"role": "user", "content": prompt}],
-        },
-        timeout=300,
-    )
-    resp.raise_for_status()
-    return resp.json()["content"][0]["text"]
+    headers = {
+        "x-api-key": API_KEY,
+        "anthropic-version": "2023-06-01",
+        "anthropic-beta": "context-1m-2025-08-07",
+        "content-type": "application/json",
+    }
+    body = {
+        "model": WRITER_MODEL,
+        "max_tokens": max_tokens,
+        "stream": True,
+        "messages": [{"role": "user", "content": prompt}],
+    }
+    # generous per-read budget; streaming resets it on every chunk
+    timeout = httpx.Timeout(connect=30.0, read=180.0, write=60.0, pool=30.0)
+    last = None
+    for attempt in range(1, tries + 1):
+        try:
+            parts = []
+            with httpx.stream("POST", f"{API_BASE}/v1/messages",
+                              headers=headers, json=body, timeout=timeout) as resp:
+                if resp.status_code >= 400:
+                    resp.read()
+                    raise httpx.HTTPStatusError(resp.text[:300], request=resp.request, response=resp)
+                for line in resp.iter_lines():
+                    if not line or not line.startswith("data:"):
+                        continue
+                    data = line[5:].strip()
+                    if not data or data == "[DONE]":
+                        continue
+                    try:
+                        evt = json.loads(data)
+                    except json.JSONDecodeError:
+                        continue
+                    t = evt.get("type")
+                    if t == "content_block_delta" and evt["delta"].get("type") == "text_delta":
+                        parts.append(evt["delta"]["text"])
+                    elif t == "error":
+                        raise RuntimeError(str(evt.get("error")))
+            out = "".join(parts)
+            if out.strip():
+                return out
+            last = "empty stream"
+        except Exception as e:
+            last = str(e)
+        if attempt < tries:
+            time.sleep(attempt * 8)
+    raise RuntimeError(f"call_claude failed after {tries} tries: {last}")
 
 
-def parse_chapter(ch_num):
-    """Parse a chapter into speaker-attributed segments."""
-    ch_path = CHAPTERS_DIR / f"ch_{ch_num:02d}.md"
-    if not ch_path.exists():
-        print(f"  Chapter {ch_num} not found", file=sys.stderr)
-        return None
+def _extract_segments(result):
+    """Pull a JSON array of {speaker,text} out of an LLM response, tolerantly."""
+    result = result.strip()
+    if result.startswith("```"):
+        result = re.sub(r'^```\w*\n?', '', result)
+        result = re.sub(r'\n?```$', '', result)
+    # trim to the outermost [...] if the model added prose
+    a, b = result.find("["), result.rfind("]")
+    if a != -1 and b != -1 and b > a:
+        result = result[a:b + 1]
+    try:
+        return json.loads(result)
+    except json.JSONDecodeError:
+        cleaned = re.sub(r',\s*([}\]])', r'\1', result)
+        try:
+            return json.loads(cleaned)
+        except json.JSONDecodeError:
+            segs = []
+            for m in re.finditer(
+                    r'\{\s*"speaker"\s*:\s*"([^"]+)"\s*,\s*"text"\s*:\s*"((?:[^"\\]|\\.)*)"\s*\}', result):
+                segs.append({"speaker": m.group(1),
+                             "text": m.group(2).replace('\\n', '\n').replace('\\"', '"')})
+            return segs or None
 
-    text = ch_path.read_text()
-    title = text.split("\n")[0].lstrip("# ").strip()
-    wc = len(text.split())
 
-    prompt = f"""You are parsing a novel chapter into an audiobook script. Your job is to break the text into segments, each attributed to a speaker, with optional audio delivery tags.
+def _split_blocks(body, target_words=1200):
+    """Split a chapter body into ~target_words blocks on blank-line boundaries."""
+    paras = re.split(r'\n\s*\n', body)
+    blocks, cur, cur_w = [], [], 0
+    for p in paras:
+        w = len(p.split())
+        if cur_w + w > target_words and cur:
+            blocks.append("\n\n".join(cur))
+            cur, cur_w = [], 0
+        cur.append(p)
+        cur_w += w
+    if cur:
+        blocks.append("\n\n".join(cur))
+    return blocks or [body]
+
+
+def _parse_block(block_text, ch_num, idx, n):
+    prompt = f"""You are parsing a CONTINUOUS EXCERPT (part {idx+1} of {n}) of a novel chapter into an audiobook script. Break the text into segments, each attributed to a speaker, with optional audio delivery tags.
 
 CHARACTERS IN THIS NOVEL:
 {json.dumps(CHARACTERS, indent=2)}
@@ -111,58 +174,58 @@ RULES:
 2. Dialogue lines must be attributed to the character who speaks them.
 3. Remove quotation marks from dialogue — the voice actor performs them.
 4. Keep narration segments reasonably sized (2-4 sentences each). Split long paragraphs.
-5. Dialogue "he said" / "she said" tags should be part of the NARRATOR segment AFTER the dialogue, not part of the character's line.
+5. Dialogue "he said" / "she said" tags belong in the NARRATOR segment AFTER the dialogue, not the character's line.
 6. Scene breaks (---) become {{"speaker": "NARRATOR", "text": "[pause]"}}
-7. Chapter titles become the first segment: {{"speaker": "NARRATOR", "text": "[slowly] Chapter One: The Morning Pitch"}}
+7. Do NOT add a chapter title — this is a mid-chapter excerpt. Just parse the text as given.
 8. Add audio tags based on emotional context. Be subtle — most lines need no tag.
-9. Internal thoughts in *italics* should be read by the CHARACTER (Cass usually), tagged [softly] or [whisper].
+9. Internal thoughts in *italics* are read by COPE (the POV character), tagged [softly] or [whisper].
+10. HARD CONSTRAINT: "speaker" MUST be exactly one of these keys — NARRATOR, COPE, SUN, MARGAUX, VIV, MACHINE, FRADE, TISCH, ADLER, MINOR_M, MINOR_F. There are no other voices. Route any minor/unnamed speaker to MINOR_M or MINOR_F by apparent gender. Route anything the machine/system/AURELIUS/Praxis/"Darlene"/"Theo" says to MACHINE.
+11. The italic "TRANSMISSION" blocks (signed "Space Pirate Zero") are NARRATOR.
 
-OUTPUT FORMAT: A JSON array of objects, each with:
-  "speaker": character name (from the list above)
-  "text": the text to speak (with optional [audio tags] at the start)
+OUTPUT FORMAT: a JSON array of objects, each {{"speaker": <KEY>, "text": <words with optional [tags]>}}.
 
-CHAPTER {ch_num}: "{title}" ({wc} words)
-
-{text}
+EXCERPT:
+{block_text}
 
 Output the JSON array only. No other text."""
+    result = call_claude(prompt, max_tokens=16000)
+    segs = _extract_segments(result)
+    if segs is None:
+        (SCRIPTS_DIR / f"ch{ch_num:02d}_block{idx:02d}_raw.txt").write_text(result)
+    return segs or []
 
-    print(f"  Ch {ch_num}: parsing '{title}' ({wc}w)...", end="", flush=True)
-    result = call_claude(prompt)
 
-    # Extract JSON from response
-    result = result.strip()
-    if result.startswith("```"):
-        result = re.sub(r'^```\w*\n?', '', result)
-        result = re.sub(r'\n?```$', '', result)
+def parse_chapter(ch_num, ch_path=None):
+    """Parse a chapter into speaker-attributed segments, block by block.
 
-    try:
-        segments = json.loads(result)
-    except json.JSONDecodeError:
-        # Try to fix common JSON issues from LLM output
-        # 1. Remove trailing commas before ] or }
-        cleaned = re.sub(r',\s*([}\]])', r'\1', result)
-        # 2. Fix unescaped newlines in strings
-        cleaned = cleaned.replace('\n', '\\n')
-        # 3. Re-add structural newlines (between array elements)
-        cleaned = cleaned.replace('\\n{', '\n{').replace('\\n]', '\n]')
-        try:
-            segments = json.loads(cleaned)
-        except json.JSONDecodeError:
-            # Last resort: extract individual objects
-            print(f" (fixing JSON...)", end="", flush=True)
-            segments = []
-            for m in re.finditer(r'\{\s*"speaker"\s*:\s*"([^"]+)"\s*,\s*"text"\s*:\s*"((?:[^"\\]|\\.)*)"\s*\}', result):
-                segments.append({
-                    "speaker": m.group(1),
-                    "text": m.group(2).replace('\\n', '\n').replace('\\"', '"'),
-                })
-            if not segments:
-                print(f" PARSE ERROR", file=sys.stderr)
-                (SCRIPTS_DIR / f"ch{ch_num:02d}_raw.txt").write_text(result)
-                return None
+    ch_num is the numeric slot used for the output script/audio ordering.
+    ch_path overrides the source .md (used for the coda, mapped to slot 29).
+    Block-wise parsing keeps each API call small and fast (avoids read timeouts
+    on whole-chapter generations).
+    """
+    if ch_path is None:
+        ch_path = CHAPTERS_DIR / f"ch_{ch_num:02d}.md"
+    if not ch_path.exists():
+        print(f"  Chapter {ch_num} not found", file=sys.stderr)
+        return None
 
-    print(f" → {len(segments)} segments")
+    text = ch_path.read_text()
+    lines = text.split("\n")
+    title = lines[0].lstrip("# ").strip()
+    body = "\n".join(lines[1:]).strip()
+    wc = len(text.split())
+
+    blocks = _split_blocks(body)
+    print(f"  Ch {ch_num}: parsing '{title}' ({wc}w, {len(blocks)} blocks)...", flush=True)
+
+    segments = [{"speaker": "NARRATOR", "text": f"[slowly] {title}"}]
+    for i, blk in enumerate(blocks):
+        print(f"    block {i+1}/{len(blocks)} ({len(blk.split())}w)...", end="", flush=True)
+        segs = _parse_block(blk, ch_num, i, len(blocks))
+        print(f" {len(segs)} segs")
+        segments.extend(segs)
+
+    print(f"  Ch {ch_num}: → {len(segments)} segments total")
     return {
         "chapter": ch_num,
         "title": title,
@@ -173,27 +236,48 @@ Output the JSON array only. No other text."""
     }
 
 
+def build_manifest():
+    """Ordered (slot, source_path) covering front matter (0), ch 1-28, coda (29)."""
+    items = []
+    for p in sorted(CHAPTERS_DIR.glob("ch_*.md")):
+        m = re.match(r'ch_(\d+)\.md$', p.name)
+        if m:
+            items.append((int(m.group(1)), p))
+    coda = CHAPTERS_DIR / "ch_coda.md"
+    if coda.exists():
+        nxt = (max(n for n, _ in items) + 1) if items else 29
+        items.append((nxt, coda))
+    return sorted(items)
+
+
 def main():
     SCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Parse args for chapter range
-    chapters = sorted(CHAPTERS_DIR.glob("ch_*.md"))
-    total = len(chapters)
+    manifest = build_manifest()          # [(slot, path), ...]
+    slots = [n for n, _ in manifest]
 
+    # Args are numeric SLOTS (0 = front matter, 29 = coda). No args = everything.
     if len(sys.argv) == 2:
         start = end = int(sys.argv[1])
     elif len(sys.argv) == 3:
         start, end = int(sys.argv[1]), int(sys.argv[2])
     else:
-        start, end = 1, total
+        start, end = min(slots), max(slots)
 
-    print(f"Parsing chapters {start}-{end} into audiobook scripts...")
+    print(f"Parsing slots {start}-{end} into audiobook scripts...")
 
+    force = os.environ.get("FORCE_PARSE") == "1"
     all_scripts = []
-    for ch_num in range(start, end + 1):
-        script = parse_chapter(ch_num)
+    for ch_num, src in manifest:
+        if not (start <= ch_num <= end):
+            continue
+        existing = SCRIPTS_DIR / f"ch{ch_num:02d}_script.json"
+        if existing.exists() and not force:
+            print(f"  Ch {ch_num}: script exists, skipping (set FORCE_PARSE=1 to redo)")
+            all_scripts.append(json.loads(existing.read_text()))
+            continue
+        script = parse_chapter(ch_num, src)
         if script:
-            # Save individual chapter script
             out_path = SCRIPTS_DIR / f"ch{ch_num:02d}_script.json"
             out_path.write_text(json.dumps(script, indent=2))
             all_scripts.append(script)

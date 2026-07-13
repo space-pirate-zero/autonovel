@@ -55,6 +55,38 @@
         "mastering",
         "neko-death-cult"
       ]
+    },
+    {
+      "date": "2026-07-11",
+      "error_message": "gen_audiobook_script.py: API 400 '`temperature` is deprecated for this model.' then, after removing it, httpx.ReadTimeout on longer chapters ('The read operation timed out') killing the parse mid-run (died at ch_04, ch_08).",
+      "root_cause": "(1) call_claude posted a 'temperature' field, rejected by claude-opus-4-8 (same class as the 2026-06-05 temperature bug, different script). (2) Non-streaming httpx.post with timeout=300 can't cover Opus generating a large speaker-attributed JSON for a 4-5k-word chapter (100-175 segments), so the single read times out.",
+      "fix": "Removed 'temperature'. Rewrote call_claude to STREAM (stream:true, parse SSE content_block_delta text deltas) with a per-read Timeout(read=180) that resets on every chunk + 4 retries with backoff. Also made parse (skip existing ch{NN}_script.json unless FORCE_PARSE=1) and render (skip existing ch_NN.mp3 unless FORCE_RENDER=1) resume-safe so a mid-run failure or session teardown never re-bills completed work. Long background renders launched detached via nohup+disown so a session restart doesn't kill them.",
+      "tags": [
+        "anthropic-api",
+        "opus-4-8",
+        "temperature",
+        "streaming",
+        "read-timeout",
+        "audiobook",
+        "the-last-human-ceo",
+        "resume"
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "error_message": "Apple Podcasts Connect: 'An error has occurred. Try again later.' when submitting the podcast RSS feed; show got created (name pulled from feed) but Episodes tab stayed empty.",
+      "root_cause": "The Cloud Run feed service (publishing/app/main.py) declared /feed.xml with FastAPI @app.get only. Apple's iTMS crawler issues HEAD requests to validate the feed; HEAD returned 405 Method Not Allowed, so Apple treated the feed as unreachable/invalid and did not ingest episodes. (Confirmed via Cloud Run request logs: userAgent 'iTMS' HEAD /feed.xml -> 405.)",
+      "fix": "Changed the route to @app.api_route('/feed.xml', methods=['GET','HEAD']) (and '/' likewise) so HEAD returns 200. Redeployed. Verified HEAD and GET both 200, incl. with -A iTMS. Also pinned Cloud Run --min-instances 1 (in deploy.sh) so Apple's fetch never hits a cold start. Debug tip: `gcloud logging read 'resource.labels.service_name=... httpRequest.requestUrl:feed.xml' --format='value(httpRequest.requestMethod,httpRequest.status,httpRequest.userAgent)'` to see the crawler.",
+      "tags": [
+        "apple-podcasts",
+        "rss",
+        "cloud-run",
+        "fastapi",
+        "http-head",
+        "405",
+        "publishing",
+        "the-last-human-ceo"
+      ]
     }
   ]
 }

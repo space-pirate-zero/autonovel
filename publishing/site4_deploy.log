@@ -1,0 +1,11 @@
+Building using Dockerfile and deploying container to Cloud Run service [spz-podcast-lhceo] in project [stylelift] region [us-central1]
+Building and deploying...
+Validating configuration........done
+Uploading sources..........done
+Building Container.............................................................................................................................................................................................................................................................................................done
+Setting IAM Policy..............done
+Creating Revision...................................................................................................................................................................done
+Routing traffic.....done
+Done.
+Service [spz-podcast-lhceo] revision [spz-podcast-lhceo-00011-4vn] has been deployed and is serving 100 percent of traffic.
+Service URL: https://spz-podcast-lhceo-373293565001.us-central1.run.app

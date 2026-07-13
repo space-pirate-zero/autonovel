@@ -1,72 +1,124 @@
 {
+  "_meta": {
+    "book": "The Last Human CEO",
+    "provider": "ElevenLabs",
+    "cast_source": "brand/spz/voices.json — the battle-tested SPZ brand cast (built producing The Maneki Neko Death Cult). SPZ narrates; established brand voices perform the characters.",
+    "note": "Only 6 established brand voices exist, so principals get dedicated voices and minor parts double onto MINOR_M/MINOR_F. Any unmapped speaker falls back to NARRATOR (SPZ performs it).",
+    "usage_notes": [
+      "eleven_v3 ACTS inline [tags] at the start of a line; keep NARRATOR/expressive roles on v3.",
+      "v3 drops text at low stability — keep stability >= 0.45; renderer has a drop-guard + retry.",
+      "The MACHINE runs on eleven_multilingual_v2 at high stability = dead, affectless, perfect. Tags are stripped for it.",
+      "Use the native `speed` setting, not ffmpeg atempo."
+    ]
+  },
+
   "NARRATOR": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "George \u2014 Warm, Captivating Storyteller. British, middle-aged. Perfect for literary narration.",
-    "why": "narrative_story use case, warm and measured, the novel's register"
+    "voice_id": "8bOIcU4hJx9LYJV4NS1I",
+    "brand_voice": "SPZ (custom) — raspy, Belfast/Irish lilt, raw punk, nihilist-then-tender",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.5, "similarity_boost": 0.85, "style": 0.35, "use_speaker_boost": true, "speed": 1.08 },
+    "character": "Space Pirate Zero, transmitting the whole tale from Spaceship Alpha 9. The framing narrator AND all close-third prose. Snarky, punk, woeful-carny cadence.",
+    "why": "SPZ literally narrates this book (TRANSMISSION 01). This is THE brand voice."
   },
-  "CASS": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Liam \u2014 young male. Energetic but can be restrained.",
-    "why": "youngest male voice available. 14-year-old protagonist."
+
+  "COPE": {
+    "voice_id": "N2lVS1w4EtoT3dr4eOWO",
+    "brand_voice": "Callum — husky male; the brand cast's 'doomed rich men / the marks'",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.42, "similarity_boost": 0.85, "style": 0.35, "use_speaker_boost": true, "speed": 1.05 },
+    "character": "Prescott 'Cope' Mercer IV, 54-56. Charming Southern patrician toast-giver rotting into a manic, coked, paranoid wreck. Charm at full wattage early; ash late.",
+    "why": "Callum is literally cast as the doomed rich man. Husky + flexible carries charm->collapse."
   },
-  "EDDAN": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Brian \u2014 Deep, Resonant and Comforting. Middle-aged.",
-    "why": "deep and resonant matches the bellwright patriarch. The comfort is right for workshop scenes."
+
+  "SUN": {
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "brand_voice": "Lily — velvety actress, British middle-aged female",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.5, "similarity_boost": 0.85, "style": 0.15, "use_speaker_boost": true, "speed": 1.0 },
+    "character": "Sunita 'Sun' Rao — chief of staff, the competent one. Dry, tired, loyal, speaks in threes to slip past his charm.",
+    "why": "Female lead brand voice; warm-but-dry fits the handler who runs the estate."
   },
-  "PERIN": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Daniel \u2014 Steady Broadcaster. British, middle-aged.",
-    "why": "steady and measured. Perin is precise, dry, controlled after 10 years of Corda service."
+
+  "MARGAUX": {
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "brand_voice": "Lily (cooler settings) — differentiated from SUN by delivery",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.58, "similarity_boost": 0.85, "style": 0.08, "use_speaker_boost": true, "speed": 0.97 },
+    "character": "Margaux Mercer — the wife, leaving him for a machine. Composed, absent, already gone.",
+    "why": "Second female principal; only two female brand voices exist, so she shares Lily with a cooler, stiller delivery."
   },
-  "LENNE": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Jessica \u2014 Playful, Bright, Warm. Young female.",
-    "why": "bright and quick matches Lenne's intellectual energy. Young voice."
+
+  "VIV": {
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "brand_voice": "Lily (younger/quicker settings)",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.4, "similarity_boost": 0.85, "style": 0.28, "use_speaker_boost": true, "speed": 1.06 },
+    "character": "Vivian 'Viv' Mercer — estranged daughter. Younger, sharper, quicker, no patience for the performance.",
+    "why": "Third female principal on Lily, pushed younger/faster to separate from Sun and Margaux."
   },
-  "TORVALD": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Bill \u2014 Wise, Mature, Balanced. Old male.",
-    "why": "old, wise \u2014 the 63-year-old dye merchant. Gravelly warmth."
+
+  "MACHINE": {
+    "voice_id": "4JHJuokHot8d75SnR53J",
+    "brand_voice": "Clarissa — Upper-Class British; posh, affectless, menace-by-restraint",
+    "model_id": "eleven_multilingual_v2",
+    "strip": true,
+    "voice_settings": { "stability": 0.9, "similarity_boost": 0.85, "style": 0.0, "use_speaker_boost": true, "speed": 1.0 },
+    "character": "The system in all its shells — AURELIUS / the Capital Allocator, the Darlene assistant, 'Theo' (Margaux's companion), Praxis prompts. Wants nothing. Perfect, indifferent, reads the number to the cent.",
+    "why": "v2 at high stability = dead, monotone, emotionless — exactly a machine that has learned the shape of a voice but none of the need."
   },
-  "MARET": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Lily \u2014 Velvety Actress. British, middle-aged female.",
-    "why": "controlled, precise, powerful presence. Maret's stillness."
+
+  "FRADE": {
+    "voice_id": "agL69Vji082CshT65Tcy",
+    "brand_voice": "Blackwood — Sinister, Posh & British; reasonable-sounding menace",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.45, "similarity_boost": 0.85, "style": 0.1, "use_speaker_boost": true, "speed": 1.0 },
+    "character": "Gus Frade — activist investor circling the company. Cold, reasonable, the knife that smiles.",
+    "why": "Sinister-posh predator voice for the man doing the arithmetic on Cope's chair."
   },
-  "DAV_SORN": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Eric \u2014 Smooth, Trustworthy. Middle-aged male.",
-    "why": "formal trained voice for the Court Singer. Smooth but can be clipped."
+
+  "TISCH": {
+    "voice_id": "agL69Vji082CshT65Tcy",
+    "brand_voice": "Blackwood (oilier settings)",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.45, "similarity_boost": 0.85, "style": 0.22, "use_speaker_boost": true, "speed": 1.0 },
+    "character": "Lorne Tisch — the 'humanity consultant.' Slick, performative sincerity for hire.",
+    "why": "Shares Blackwood with Frade, pushed to higher style for the salesman oil."
   },
-  "PROCTOR_FEN": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Roger \u2014 Laid-Back, Casual, Resonant. Middle-aged male.",
-    "why": "dry, archly amused pedagogue. The casual resonance fits."
+
+  "ADLER": {
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "brand_voice": "George — warm British storyteller",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.5, "similarity_boost": 0.85, "style": 0.0, "use_speaker_boost": true, "speed": 0.98 },
+    "character": "Dr. Adler — psychiatrist who names the mood disorder and the cocaine and can untangle neither. Warm, unhurried, gives nothing away. Also lends his warmth to kind older men (Desmond, the human Waffle-House warmth).",
+    "why": "Warm, human counterweight — the one voice in the book that isn't selling or dying."
   },
-  "FERREN": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Chris \u2014 Charming, Down-to-Earth. Middle-aged male.",
-    "why": "clinical, professional acoustician. Down-to-earth delivery."
+
+  "MINOR_M": {
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "brand_voice": "George — utility for incidental men",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.55, "similarity_boost": 0.85, "style": 0.1, "use_speaker_boost": true, "speed": 1.0 },
+    "character": "Unnamed / one-line men — board members, aides, the water boy, hotel staff, reporters.",
+    "why": "Neutral warm utility so incidental men don't collide with Cope's lead voice."
   },
-  "MIRA_FEN": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Alice \u2014 Clear, Engaging Educator. British, middle-aged female.",
-    "why": "Academy scholar, 60s, precise. Educational voice matches."
-  },
-  "VELLA": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Matilda \u2014 Knowledgeable, Professional. Middle-aged female.",
-    "why": "Court Singer, formal, weighted. Professional matches."
-  },
-  "OSSIAN": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Will \u2014 Relaxed Optimist. Young male.",
-    "why": "nervous, eager student. Young voice, can be less confident."
-  },
-  "MINOR": {
-    "voice_id": "REPLACE_WITH_VOICE_ID",
-    "description": "Roger \u2014 utility voice for unnamed characters.",
-    "why": "neutral enough for merchants, clerks, minor parts."
+
+  "MINOR_F": {
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "brand_voice": "Lily — utility for incidental women",
+    "model_id": "eleven_v3",
+    "strip": false,
+    "voice_settings": { "stability": 0.55, "similarity_boost": 0.85, "style": 0.12, "use_speaker_boost": true, "speed": 1.0 },
+    "character": "Unnamed / one-line women — Renata (in memory), the coat-check girl, aides, reporters.",
+    "why": "Neutral female utility."
   }
 }

@@ -1,0 +1,36 @@
+{
+  "show": {
+    "title": "The Last Human CEO",
+    "subtitle": "A tragic dark comedy, narrated by Space Pirate Zero",
+    "author": "Space Pirate Zero",
+    "owner_name": "Space Pirate Zero",
+    "owner_email": "zero@spacepiratezero.com",
+    "language": "en-us",
+    "category": "Fiction",
+    "explicit": true,
+    "type": "serial",
+    "copyright": "© 2026 Space Pirate Zero",
+    "link": "https://spacepiratezero.com",
+    "public_url": "https://lasthumanceo.com",
+    "description": "In 2027, as corporate boards swap their CEOs for cheaper, scandal-proof AI, the last human chief executive in the Fortune 100 — Prescott 'Cope' Mercer IV, a charming, coke-addled fourth-generation Atlanta heir — wages a manic crusade to prove a person still belongs in the chair, right up until the machine taking his job quietly uncovers the thing he buried that got two people killed. A full-cast audiobook: Succession meets Flowers for Algernon by way of a Twilight Zone broadcast, transmitted to you by Space Pirate Zero. Contains strong language, drug use, sexual content, and depictions of suicide."
+  },
+  "gcp": {
+    "project": "stylelift",
+    "region": "us-central1",
+    "bucket": "spz-podcasts",
+    "prefix": "the-last-human-ceo",
+    "service": "spz-podcast-lhceo"
+  },
+  "schedule": {
+    "mode": "all_at_launch",
+    "spacing_hours": 24,
+    "start_time_utc": "14:00"
+  },
+  "source": {
+    "produced_dir": "books/the-last-human-ceo/audiobook/produced",
+    "intros_dir": "books/the-last-human-ceo/audiobook/intros",
+    "chapters_dir": "books/the-last-human-ceo/chapters",
+    "cover_master": "books/the-last-human-ceo/art/podcast_cover_src.png",
+    "episode_art_dir": "books/the-last-human-ceo/art/episodes"
+  }
+}
