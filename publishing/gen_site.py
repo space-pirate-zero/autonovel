@@ -167,13 +167,16 @@ h1{background-size:200% auto;animation:sheen 9s linear infinite}
 .js .ded p.in{opacity:1;transform:none}
 .ded h1{animation:none}
 /* ---- trailer card (hero) ---- */
-.trailer-card{position:relative;width:300px;height:300px;padding:0;border:0;background:none;cursor:pointer;display:block;border-radius:16px}
+.trailer-card{position:relative;width:300px;height:300px;padding:0;border:0;background:none;display:block;border-radius:16px}
 .trailer-card .cover{width:300px;height:300px}
-.tc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:var(--pink);color:#0a0208;display:flex;align-items:center;justify-content:center;font-size:1.5rem;padding-left:4px;box-shadow:0 8px 30px #ff149366;transition:transform .2s,box-shadow .2s}
+.trailer-card video.cover{object-fit:cover;background:#000;display:block;cursor:pointer}
+.tc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;border:0;background:var(--pink);color:#0a0208;display:flex;align-items:center;justify-content:center;font-size:1.5rem;padding-left:4px;cursor:pointer;box-shadow:0 8px 30px #ff149366;transition:transform .2s,box-shadow .2s,opacity .25s}
 .trailer-card:hover .tc-play{transform:translate(-50%,-50%) scale(1.09);box-shadow:0 10px 44px #ff1493aa}
-.tc-label{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 2px 10px #000c;pointer-events:none}
+.tc-label{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 2px 10px #000c;pointer-events:none;transition:opacity .25s}
 .tc-play{animation:tcpulse 2.2s ease-in-out infinite}
 @keyframes tcpulse{0%,100%{box-shadow:0 8px 30px #ff149355}50%{box-shadow:0 8px 44px #ff1493aa}}
+.trailer-card.playing .tc-play,.trailer-card.playing .tc-label{opacity:0;pointer-events:none}
+.trailer-card.playing .tc-play{animation:none}
 /* ---- chapter audiogram button ---- */
 .ag-btn{margin-top:10px;display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:999px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);background:#00f0ff10;border:1px solid #00f0ff33;cursor:pointer;transition:.15s}
 .ag-btn:hover{background:#00f0ff22;border-color:var(--cyan);transform:translateY(-1px)}
@@ -214,6 +217,19 @@ document.getElementById('p-toggle').addEventListener('click',()=>{player.classLi
 document.querySelectorAll('.ep').forEach(li=>li.addEventListener('click',e=>{if(e.target.closest('a')||e.target.closest('[data-video]'))return;load(+li.dataset.n);}));
 const pf=document.getElementById('play-first');if(pf)pf.addEventListener('click',()=>{load(1);location.hash='#episodes';});
 window.addEventListener('resize',sizeCanvas);
+"""
+
+
+HERO_TRAILER_JS = r"""
+(function(){
+  var v=document.getElementById('hero-vid'),card=document.getElementById('hero-trailer'),a=document.getElementById('p-audio');
+  if(!v)return;
+  function play(){if(a){try{a.pause();}catch(e){}}card.classList.add('playing');v.setAttribute('controls','');v.play().catch(function(){});}
+  var b=document.getElementById('hero-play');if(b)b.addEventListener('click',play);
+  var c=document.getElementById('hero-play-cta');if(c)c.addEventListener('click',function(){play();card.scrollIntoView({block:'center',behavior:'smooth'});});
+  v.addEventListener('play',function(){card.classList.add('playing');v.setAttribute('controls','');});
+  v.addEventListener('ended',function(){card.classList.remove('playing');v.removeAttribute('controls');v.load();});
+})();
 """
 
 
@@ -364,14 +380,14 @@ def build(site_url):
 <canvas id="matrix" aria-hidden="true"></canvas>
 {navbar("home")}
 <header class="hero"><div class="wrap hero-grid">
-  <button class="trailer-card reveal" type="button" data-video="{trailer_url}" aria-label="Watch the trailer">
-    <img class="cover" src="{cover}" alt="{A(SHOW['title'])} cover art" width="300" height="300">
-    <span class="tc-play" aria-hidden="true">&#9654;</span><span class="tc-label">Watch trailer</span></button>
+  <div class="trailer-card reveal" id="hero-trailer">
+    <video id="hero-vid" class="cover" poster="{cover}" preload="none" playsinline crossorigin="anonymous" width="300" height="300"><source src="{trailer_url}" type="video/mp4"></video>
+    <button class="tc-play" id="hero-play" type="button" aria-label="Play the trailer">&#9654;</button><span class="tc-label">Watch trailer</span></div>
   <div class="reveal" style="transition-delay:.1s"><div class="kicker">A Space Pirate Zero Transmission &middot; Full-Cast Audiobook</div>
   <h1>{A(SHOW['title'])}</h1><p class="logline">{A(LOGLINE)}</p>
   <div class="meta-row">29 EPISODES &middot; <b>~12.6 HOURS</b> &middot; FICTION &middot; EXPLICIT &middot; <b>SERIAL</b></div>
   <div class="cta"><button class="btn pink" id="play-first">&#9654;&nbsp; Play Episode 1</button>
-  <button class="btn" type="button" data-video="{trailer_url}">&#9654;&nbsp; Watch trailer</button>
+  <button class="btn" type="button" id="hero-play-cta">&#9654;&nbsp; Watch trailer</button>
   <a class="btn" href="{APPLE}" target="_blank" rel="noopener">Apple Podcasts</a>
   <a class="btn green" href="{SPOTIFY}" target="_blank" rel="noopener">Spotify</a>
   <a class="btn" href="{self_feed}">RSS</a></div></div>
@@ -417,6 +433,7 @@ production: written, scored, and voiced in-house. <a href="/about">Read the dedi
   <video class="lb-vid" id="lb-vid" controls playsinline preload="none" crossorigin="anonymous"></video>
 </div>
 <script>{js}
+{HERO_TRAILER_JS}
 {LIGHTBOX_JS}
 {MATRIX_JS}
 {REVEAL_JS}</script>

@@ -139,13 +139,16 @@ h1{background-size:200% auto;animation:sheen 9s linear infinite}
 .js .ded p.in{opacity:1;transform:none}
 .ded h1{animation:none}
 /* ---- trailer card (hero) ---- */
-.trailer-card{position:relative;width:300px;height:300px;padding:0;border:0;background:none;cursor:pointer;display:block;border-radius:16px}
+.trailer-card{position:relative;width:300px;height:300px;padding:0;border:0;background:none;display:block;border-radius:16px}
 .trailer-card .cover{width:300px;height:300px}
-.tc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:var(--pink);color:#0a0208;display:flex;align-items:center;justify-content:center;font-size:1.5rem;padding-left:4px;box-shadow:0 8px 30px #ff149366;transition:transform .2s,box-shadow .2s}
+.trailer-card video.cover{object-fit:cover;background:#000;display:block;cursor:pointer}
+.tc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;border:0;background:var(--pink);color:#0a0208;display:flex;align-items:center;justify-content:center;font-size:1.5rem;padding-left:4px;cursor:pointer;box-shadow:0 8px 30px #ff149366;transition:transform .2s,box-shadow .2s,opacity .25s}
 .trailer-card:hover .tc-play{transform:translate(-50%,-50%) scale(1.09);box-shadow:0 10px 44px #ff1493aa}
-.tc-label{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 2px 10px #000c;pointer-events:none}
+.tc-label{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 2px 10px #000c;pointer-events:none;transition:opacity .25s}
 .tc-play{animation:tcpulse 2.2s ease-in-out infinite}
 @keyframes tcpulse{0%,100%{box-shadow:0 8px 30px #ff149355}50%{box-shadow:0 8px 44px #ff1493aa}}
+.trailer-card.playing .tc-play,.trailer-card.playing .tc-label{opacity:0;pointer-events:none}
+.trailer-card.playing .tc-play{animation:none}
 /* ---- chapter audiogram button ---- */
 .ag-btn{margin-top:10px;display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:999px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);background:#00f0ff10;border:1px solid #00f0ff33;cursor:pointer;transition:.15s}
 .ag-btn:hover{background:#00f0ff22;border-color:var(--cyan);transform:translateY(-1px)}
