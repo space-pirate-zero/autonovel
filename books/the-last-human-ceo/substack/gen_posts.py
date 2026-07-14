@@ -119,12 +119,24 @@ def note_md(n, when):
 
 {hook}
 
-▶️ Free: Apple · Spotify · {SITE.replace('https://','')}/#ep{n}
+▶️ Apple: {APPLE}
+🎧 Spotify: {SPOTIFY}
+🌐 Web: {ep_web(n)}
 📕 Kindle: {KINDLE}
 📖 Paperback: {PAPERBACK}
 
 {NOTE_TAGS}
 """
+
+
+def weekday_dates(start, count):
+    """`count` consecutive weekdays (Mon–Fri) starting on/after `start`."""
+    out, d = [], start
+    while len(out) < count:
+        if d.weekday() < 5:          # Mon=0 … Fri=4  (skip Sat/Sun)
+            out.append(d)
+        d += timedelta(days=1)
+    return out
 
 
 def main():
@@ -137,9 +149,10 @@ def main():
 
     (SUB / "posts").mkdir(parents=True, exist_ok=True)
     (SUB / "notes").mkdir(parents=True, exist_ok=True)
+    dates = weekday_dates(d0, N_EPISODES)          # weekdays only — skip Sat/Sun
     rows = []
     for n in range(1, N_EPISODES + 1):
-        when = datetime.combine(d0 + timedelta(days=n - 1), datetime.min.time()).replace(hour=hh, minute=mm)
+        when = datetime.combine(dates[n - 1], datetime.min.time()).replace(hour=hh, minute=mm)
         (SUB / "posts" / f"day_{n:02d}_ep{n:02d}.md").write_text(post_md(n, when, n))
         (SUB / "notes" / f"note_{n:02d}.md").write_text(note_md(n, when))
         rows.append((when.date().isoformat(), args.time, n, f"EP {n:02d} — {clean_title(n)}",
@@ -151,8 +164,9 @@ def main():
         w.writerows(rows)
 
     lines = ["# The Last Human CEO — Substack Daily Drip\n",
-             f"One episode per day, {rows[0][0]} → {rows[-1][0]} at {args.time} local. "
-             "Every post + note carries the Kindle, paperback, and web links.\n",
+             f"One episode per **weekday** (Mon–Fri, skips weekends), {rows[0][0]} → {rows[-1][0]} "
+             f"at {args.time} local. Every post + note carries the Apple, Spotify, web, Kindle, "
+             "and paperback links.\n",
              "| Date | EP | Title | Post |", "|---|---|---|---|"]
     for r in rows:
         lines.append(f"| {r[0]} | {r[2]:02d} | {r[3]} | `{r[5]}` |")

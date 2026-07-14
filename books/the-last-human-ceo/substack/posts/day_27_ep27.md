@@ -1,7 +1,7 @@
 ---
 title: "EP 27 — Accountable Officer"
 subtitle: "No lilies, no band. Just a green check mark."
-scheduled: 2026-08-09T09:00:00
+scheduled: 2026-08-19T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep27.mp4
 ---
 

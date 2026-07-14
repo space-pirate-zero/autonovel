@@ -1,10 +1,12 @@
-[schedule: 2026-07-30T09:00:00]
+[schedule: 2026-08-05T09:00:00]
 
 🎙️ EP 17 — *The Names for It* is live
 
 Somebody sits him down who won't laugh, friend.
 
-▶️ Free: Apple · Spotify · lasthumanceo.com/#ep17
+▶️ Apple: https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408
+🎧 Spotify: https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M
+🌐 Web: https://lasthumanceo.com/#ep17
 📕 Kindle: https://www.amazon.com/dp/B0H5YVJY3Z
 📖 Paperback: https://www.amazon.com/dp/B0H6LCDJ9H
 

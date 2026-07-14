@@ -1,7 +1,7 @@
 ---
 title: "EP 21 — Dark Night"
 subtitle: "The engine cuts out. One hour, cold, no chemicals."
-scheduled: 2026-08-03T09:00:00
+scheduled: 2026-08-11T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep21.mp4
 ---
 

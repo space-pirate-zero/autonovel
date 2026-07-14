@@ -1,7 +1,7 @@
 ---
 title: "EP 12 — The Delay"
 subtitle: "The floor tilts one soft degree. That's the trick."
-scheduled: 2026-07-25T09:00:00
+scheduled: 2026-07-29T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep12.mp4
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "EP 22 — The Handover Begins"
 subtitle: "A slower guillotine that won't even hurt him."
-scheduled: 2026-08-04T09:00:00
+scheduled: 2026-08-12T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep22.mp4
 ---
 

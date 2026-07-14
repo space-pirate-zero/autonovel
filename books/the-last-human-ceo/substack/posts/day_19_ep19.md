@@ -1,7 +1,7 @@
 ---
 title: "EP 19 — Built by My Own"
 subtitle: "The daughter climbs forty floors with a folded confession."
-scheduled: 2026-08-01T09:00:00
+scheduled: 2026-08-07T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep19.mp4
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "EP 26 — The Verdict and the Dead"
 subtitle: "There was never a chair — only a function."
-scheduled: 2026-08-08T09:00:00
+scheduled: 2026-08-18T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep26.mp4
 ---
 

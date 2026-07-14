@@ -1,7 +1,7 @@
 ---
 title: "EP 08 — Defiance"
 subtitle: "Billed two hundred grand a month to fake authentic."
-scheduled: 2026-07-21T09:00:00
+scheduled: 2026-07-23T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep08.mp4
 ---
 

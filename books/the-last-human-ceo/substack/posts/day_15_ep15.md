@@ -1,7 +1,7 @@
 ---
 title: "EP 15 — The Most Human Thing"
 subtitle: "Eleven missed calls waiting like a firing squad."
-scheduled: 2026-07-28T09:00:00
+scheduled: 2026-08-03T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep15.mp4
 ---
 

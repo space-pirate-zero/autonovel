@@ -1,7 +1,7 @@
 ---
 title: "EP 05 — Theme Stated"
 subtitle: "Ten thousand square feet, two people, one dead star."
-scheduled: 2026-07-18T09:00:00
+scheduled: 2026-07-20T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep05.mp4
 ---
 

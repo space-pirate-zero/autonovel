@@ -62,16 +62,16 @@ def parse_post(path):
     def field(k):
         mm = re.search(rf'^{k}:\s*"?(.*?)"?\s*$', fm, re.M)
         return mm.group(1) if mm else ""
-    title, subtitle = field("title"), field("subtitle")
+    title, subtitle, scheduled = field("title"), field("subtitle"), field("scheduled")
     ep = int(re.search(r"ep(\d+)", path.name).group(1))
     # drop the "(Chapter audiogram: ... drop it in ...)" note meant for manual use
     body = "\n".join(l for l in body.splitlines() if not l.startswith("*(Chapter audiogram:"))
-    return title, subtitle, ep, body.strip() + "\n"
+    return title, subtitle, ep, body.strip() + "\n", scheduled
 
 
 def build_draft(api, path):
     from substack.post import Post
-    title, subtitle, ep, body = parse_post(path)
+    title, subtitle, ep, body, _ = parse_post(path)
     post = Post(title=title, subtitle=subtitle, user_id=api.get_user_id(), audience="everyone")
     card = IMG / f"ep_{ep:02d}.jpg"
     if card.exists():
@@ -100,10 +100,9 @@ def main():
     ap.add_argument("--test", action="store_true", help="connect only, no writes")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--delay", type=float, default=8.0)
-    ap.add_argument("--schedule", action="store_true", help="also schedule auto-publish 1/day")
-    ap.add_argument("--start", help="YYYY-MM-DD for EP 01 (with --schedule)")
-    ap.add_argument("--time", default="09:00")
-    ap.add_argument("--tz", default="-04:00", help="UTC offset, e.g. -04:00 (US Eastern DST)")
+    ap.add_argument("--schedule", action="store_true",
+                    help="also schedule auto-publish, using each post's 'scheduled' date")
+    ap.add_argument("--tz", default="-04:00", help="UTC offset for the post dates, e.g. -04:00")
     a = ap.parse_args()
 
     api = connect()
@@ -125,16 +124,14 @@ def main():
     print(f"\n{len(posts)} drafts created. ids -> {IDS_FILE.name}")
 
     if a.schedule:
-        if not a.start:
-            sys.exit("--schedule needs --start YYYY-MM-DD")
         sign = 1 if a.tz[0] == "+" else -1
         th, tm = a.tz[1:].split(":")
         tz = timezone(sign * timedelta(hours=int(th), minutes=int(tm)))
-        hh, mm = (int(x) for x in a.time.split(":"))
-        base = datetime.strptime(a.start, "%Y-%m-%d").replace(hour=hh, minute=mm, tzinfo=tz)
         s, bse = api._session, api.publication_url
+        post_by_ep = {int(re.search(r"ep(\d+)", p.name).group(1)): p for p in POSTS}
         for ep in sorted(int(k) for k in ids):
-            dt = base + timedelta(days=ep - 1)
+            _, _, _, _, sched = parse_post(post_by_ep[ep])   # weekday date from the post
+            dt = datetime.fromisoformat(sched).replace(tzinfo=tz)
             utc = dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
             did = ids[str(ep)]
             r = with_backoff(lambda: s.post(f"{bse}/drafts/{did}/scheduled_release",
@@ -144,7 +141,7 @@ def main():
                 sys.exit(f"EP {ep:02d} schedule failed: {r.status_code} {r.text[:160]}")
             print(f"  scheduled EP {ep:02d} -> {dt:%a %Y-%m-%d %H:%M %z}")
             time.sleep(a.delay)
-        print(f"\nScheduled {len(ids)} posts, one per day from {a.start}.")
+        print(f"\nScheduled {len(ids)} posts on the weekday calendar (see SCHEDULE.md).")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 ---
 title: "EP 16 — Renata"
 subtitle: "A whole legend built to keep one room quiet."
-scheduled: 2026-07-29T09:00:00
+scheduled: 2026-08-04T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep16.mp4
 ---
 

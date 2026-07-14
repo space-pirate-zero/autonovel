@@ -1,8 +1,9 @@
 # The Last Human CEO — Substack Daily Drip
 
-One episode per day for 29 days. Every post **and** every Note carries the
-**Kindle + paperback + web** links and hashtags — the whole point is to drive
-listens *and* book sales, daily.
+One episode per **weekday** (Mon–Fri — weekends are skipped), 29 episodes over
+~6 weeks. Every post **and** every Note carries **Apple + Spotify + web + Kindle +
+paperback** links and hashtags — the whole point is to drive listens *and* book
+sales, every day.
 
 ## What's here
 
@@ -57,12 +58,14 @@ Then:
 uv run --with python-substack python substack/push_and_schedule.py --test
 # 2. trial one draft
 uv run --with python-substack python substack/push_and_schedule.py --limit 1
-# 3. create all 29 drafts, then schedule one per day at 9am ET
-uv run --with python-substack python substack/push_and_schedule.py \
-      --schedule --start 2026-07-14 --time 09:00 --tz -04:00
+# 3. create all 29 drafts, then schedule them on the weekday calendar
+uv run --with python-substack python substack/push_and_schedule.py --schedule --tz -04:00
 ```
 
-Draft ids are saved to `draft_ids.json` so re-runs and scheduling line up.
+The publish dates come from each post's `scheduled:` line (the weekday calendar in
+`SCHEDULE.md`) — to shift the whole run, just re-run `gen_posts.py --start …` first.
+`--tz` is your local UTC offset (`-04:00` = US Eastern DST). Draft ids are saved to
+`draft_ids.json` so re-runs and scheduling line up.
 
 > ⚠️ This is an **unofficial** API. Substack can change or rate-limit it; the
 > script backs off on 429s. Session cookies are credentials — keep them in `.env`

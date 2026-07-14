@@ -1,7 +1,7 @@
 ---
 title: "EP 09 — The Last Human (Cover Story)"
 subtitle: "Famous the very minute the creature starts going extinct."
-scheduled: 2026-07-22T09:00:00
+scheduled: 2026-07-24T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep09.mp4
 ---
 

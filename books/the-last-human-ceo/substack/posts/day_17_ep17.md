@@ -1,7 +1,7 @@
 ---
 title: "EP 17 — The Names for It"
 subtitle: "Somebody sits him down who won't laugh, friend."
-scheduled: 2026-07-30T09:00:00
+scheduled: 2026-08-05T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep17.mp4
 ---
 

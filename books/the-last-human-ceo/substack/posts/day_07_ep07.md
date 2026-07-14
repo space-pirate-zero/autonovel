@@ -1,7 +1,7 @@
 ---
 title: "EP 07 — Authenticity, Quantified"
 subtitle: "Eleven million to measure a soul on camera."
-scheduled: 2026-07-20T09:00:00
+scheduled: 2026-07-22T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep07.mp4
 ---
 

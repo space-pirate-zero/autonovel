@@ -1,7 +1,7 @@
 ---
 title: "EP 28 — The Core"
 subtitle: "A badge that still works in a tower that forgot him."
-scheduled: 2026-08-10T09:00:00
+scheduled: 2026-08-20T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep28.mp4
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "EP 06 — The Human Premium"
 subtitle: "Dawn finds him powering down between cycles, not sleeping."
-scheduled: 2026-07-19T09:00:00
+scheduled: 2026-07-21T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep06.mp4
 ---
 

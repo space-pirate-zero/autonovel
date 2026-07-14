@@ -1,7 +1,7 @@
 ---
 title: "EP 20 — The Hearthstone"
 subtitle: "An email dull as dishwater lands at 6:42."
-scheduled: 2026-08-02T09:00:00
+scheduled: 2026-08-10T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep20.mp4
 ---
 

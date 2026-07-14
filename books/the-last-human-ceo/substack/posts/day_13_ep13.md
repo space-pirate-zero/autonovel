@@ -1,7 +1,7 @@
 ---
 title: "EP 13 — The Manifesto"
 subtitle: "The summit stage, three grams into a sleepless week."
-scheduled: 2026-07-26T09:00:00
+scheduled: 2026-07-30T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep13.mp4
 ---
 

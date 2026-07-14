@@ -1,7 +1,7 @@
 ---
 title: "EP 24 — Break into Three"
 subtitle: "Voted out in eleven minutes. Now he drives home."
-scheduled: 2026-08-06T09:00:00
+scheduled: 2026-08-14T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep24.mp4
 ---
 

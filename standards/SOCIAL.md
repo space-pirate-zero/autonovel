@@ -48,10 +48,10 @@ and swap the specifics).
 
 ## Substack daily drip (`books/<book>/substack/`)
 
-Turn the launch into a 29-day, one-episode-per-day Substack campaign. `gen_posts.py`
-builds a ready-to-publish **post** and short **Note** per episode — each carrying
-the Kindle + paperback + web links and hashtags *every day* — plus `SCHEDULE.md` /
-`schedule.csv`. Publish manually via Substack's scheduler, or use
+Turn the launch into a one-episode-per-**weekday** Substack campaign (Mon–Fri,
+skips weekends). `gen_posts.py` builds a ready-to-publish **post** and short **Note**
+per episode — each carrying the Apple + Spotify + web + Kindle + paperback links and
+hashtags *every day* — plus `SCHEDULE.md` / `schedule.csv`. Publish manually via Substack's scheduler, or use
 `push_and_schedule.py` (unofficial `python-substack` lib + a session cookie in the
 gitignored `.env`) to create drafts and auto-publish one per day. Post the email in
 the morning, drop the Note a couple hours later. See that folder's `README.md`.

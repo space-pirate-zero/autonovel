@@ -1,7 +1,7 @@
 ---
 title: "EP 14 — Pressure"
 subtitle: "A lit calendar he calls clarity before the fall."
-scheduled: 2026-07-27T09:00:00
+scheduled: 2026-07-31T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep14.mp4
 ---
 

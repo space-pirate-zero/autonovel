@@ -1,7 +1,7 @@
 ---
 title: "EP 29 — Carrier"
 subtitle: "He goes to the basement with a coil, friend."
-scheduled: 2026-08-11T09:00:00
+scheduled: 2026-08-21T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep29.mp4
 ---
 

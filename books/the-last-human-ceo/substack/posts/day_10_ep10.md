@@ -1,7 +1,7 @@
 ---
 title: "EP 10 — The Listening Tour"
 subtitle: "A tour so honest it took nine handlers."
-scheduled: 2026-07-23T09:00:00
+scheduled: 2026-07-27T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep10.mp4
 ---
 

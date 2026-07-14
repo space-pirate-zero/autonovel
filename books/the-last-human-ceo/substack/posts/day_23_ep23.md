@@ -1,7 +1,7 @@
 ---
 title: "EP 23 — No One to Punish"
 subtitle: "A man begs for a punishment nobody will give."
-scheduled: 2026-08-05T09:00:00
+scheduled: 2026-08-13T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep23.mp4
 ---
 

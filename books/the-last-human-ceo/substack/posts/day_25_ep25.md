@@ -1,7 +1,7 @@
 ---
 title: "EP 25 — Nothing to Sign"
 subtitle: "Sixty-one pages, four lawyers, nothing left to sign."
-scheduled: 2026-08-07T09:00:00
+scheduled: 2026-08-17T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep25.mp4
 ---
 
