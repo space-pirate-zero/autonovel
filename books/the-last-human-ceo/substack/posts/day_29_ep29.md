@@ -22,12 +22,15 @@ He couldn't out-argue it or out-work it or out-love it. There was exactly one ac
 ---
 
 ### Sources & links
+
 🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep29)
+
 📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+
 🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
 *THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO
+🏷️ #audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO

@@ -100,15 +100,18 @@ audiogram: {teaser(n)}
 ---
 
 ### Sources & links
+
 🎧 **Listen:** [Substack]({SUBSTACK}) · [Apple Podcasts]({APPLE}) · [Spotify]({SPOTIFY}) · [web player]({ep_web(n)})
+
 📖 **Read the book:** [Kindle]({KINDLE}) · [Paperback]({PAPERBACK})
+
 🌐 **More:** [{SITE.replace('https://','')}]({SITE}) · [press kit]({SITE}/press)
 
 *THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-{HASHTAGS}
+🏷️ {HASHTAGS}
 """
     return body
 
