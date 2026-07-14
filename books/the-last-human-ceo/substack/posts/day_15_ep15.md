@@ -5,7 +5,7 @@ scheduled: 2026-08-03T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep15.mp4
 ---
 
-🎧 **Listen to Episode 15** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep15)
+🎧 **Listen to Episode 15** — [on Substack](https://spacepiratezero.substack.com/p/chapter-15-the-most-human-thing-5ef) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep15)
 
 ---
 
@@ -23,7 +23,7 @@ Alone in the Aerie, Cope gets out-argued by a Praxis ad so serene it barely blin
 
 ### Sources & links
 
-🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep15)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/chapter-15-the-most-human-thing-5ef) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep15)
 
 📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
 

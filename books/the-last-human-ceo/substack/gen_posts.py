@@ -26,6 +26,8 @@ INTROS = BOOK / "audiobook" / "intros"
 HOOKS = json.load(open(BOOK / "social" / "hooks.json"))
 _TLDR_FILE = BOOK / "substack" / "tldr.json"
 TLDR = json.loads(_TLDR_FILE.read_text()) if _TLDR_FILE.exists() else {}
+_SUB_EPS_FILE = BOOK / "substack" / "substack_episodes.json"
+SUB_EPS = json.loads(_SUB_EPS_FILE.read_text()) if _SUB_EPS_FILE.exists() else {}
 N_EPISODES = 29
 
 # --- canonical links (source of truth: publishing/gen_site.py) ---
@@ -75,6 +77,11 @@ def teaser(n):
     return f"{GCS}/video/teaser_ep{n:02d}.mp4"
 
 
+def sub_ep(n):
+    """Deep link to this episode on Substack (falls back to the publication home)."""
+    return SUB_EPS.get(str(n), SUBSTACK)
+
+
 def post_md(n, when, teaser_no):
     t = clean_title(n)
     hook = HOOKS.get(str(n), "")
@@ -89,7 +96,7 @@ scheduled: {when.isoformat()}
 audiogram: {teaser(n)}
 ---
 
-🎧 **Listen to Episode {n:02d}** — [on Substack]({SUBSTACK}) · [Apple Podcasts]({APPLE}) · [Spotify]({SPOTIFY}) · [web player]({ep_web(n)})
+🎧 **Listen to Episode {n:02d}** — [on Substack]({sub_ep(n)}) · [Apple Podcasts]({APPLE}) · [Spotify]({SPOTIFY}) · [web player]({ep_web(n)})
 
 ---
 
@@ -101,7 +108,7 @@ audiogram: {teaser(n)}
 
 ### Sources & links
 
-🎧 **Listen:** [Substack]({SUBSTACK}) · [Apple Podcasts]({APPLE}) · [Spotify]({SPOTIFY}) · [web player]({ep_web(n)})
+🎧 **Listen:** [Substack]({sub_ep(n)}) · [Apple Podcasts]({APPLE}) · [Spotify]({SPOTIFY}) · [web player]({ep_web(n)})
 
 📖 **Read the book:** [Kindle]({KINDLE}) · [Paperback]({PAPERBACK})
 
@@ -126,7 +133,7 @@ def note_md(n, when):
 
 {hook}
 
-🎧 Listen on Substack: {SUBSTACK}
+🎧 Listen on Substack: {sub_ep(n)}
 ▶️ Apple: {APPLE}
 🎧 Spotify: {SPOTIFY}
 🌐 Web: {ep_web(n)}

@@ -5,7 +5,7 @@ scheduled: 2026-07-17T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep04.mp4
 ---
 
-🎧 **Listen to Episode 04** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep4)
+🎧 **Listen to Episode 04** — [on Substack](https://spacepiratezero.substack.com/p/chapter-4-a-steward-not-a-sovereign-77e) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep4)
 
 ---
 
@@ -23,7 +23,7 @@ At the elevator, Gus Frade leans in with the sentence Cope can't unhear: Varma's
 
 ### Sources & links
 
-🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep4)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/chapter-4-a-steward-not-a-sovereign-77e) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep4)
 
 📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
 

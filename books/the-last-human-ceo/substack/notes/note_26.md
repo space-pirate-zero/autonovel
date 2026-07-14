@@ -4,7 +4,7 @@
 
 There was never a chair — only a function.
 
-🎧 Listen on Substack: https://spacepiratezero.substack.com
+🎧 Listen on Substack: https://spacepiratezero.substack.com/p/chapter-26-the-verdict-and-the-dead-a34
 ▶️ Apple: https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408
 🎧 Spotify: https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M
 🌐 Web: https://lasthumanceo.com/#ep26

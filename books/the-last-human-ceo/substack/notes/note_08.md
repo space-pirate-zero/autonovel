@@ -4,7 +4,7 @@
 
 Billed two hundred grand a month to fake authentic.
 
-🎧 Listen on Substack: https://spacepiratezero.substack.com
+🎧 Listen on Substack: https://spacepiratezero.substack.com/p/chapter-8-defiance-1e9
 ▶️ Apple: https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408
 🎧 Spotify: https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M
 🌐 Web: https://lasthumanceo.com/#ep8

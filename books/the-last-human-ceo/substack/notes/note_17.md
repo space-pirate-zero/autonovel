@@ -4,7 +4,7 @@
 
 Somebody sits him down who won't laugh, friend.
 
-🎧 Listen on Substack: https://spacepiratezero.substack.com
+🎧 Listen on Substack: https://spacepiratezero.substack.com/p/chapter-17-the-names-for-it-7a8
 ▶️ Apple: https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408
 🎧 Spotify: https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M
 🌐 Web: https://lasthumanceo.com/#ep17
