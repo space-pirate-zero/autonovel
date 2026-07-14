@@ -1,6 +1,6 @@
 # Signal Finds Signal — Suno Prompts (all 24)
 
-Paste **Style** into Suno's Style box and **Lyrics** into the lyrics box. Artist/brand names have been genericized so Suno won't reject the style. Tracks 1-4 are already done (kept here for reference).
+Paste **Style** into Suno's Style box and **Lyrics** into the lyrics box. Voices use [Male Vocal] / [Female Vocal] with one [Duet] hook (Suno-safe; no [Both]). Tracks 1-3 are already done (kept for reference); 4-24 have the rewritten, non-repetitive, era-specific romantic lyrics.
 
 
 
@@ -200,45 +200,49 @@ unmistakable 1970 London acid-rock up front — wailing fuzz-and-wah electric gu
 ```
 [Intro - instrumental: wah-wah fuzz guitar over 808 sub-bass and industrial beat, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-London's got a hangover the size of a crown,
-they sold off the flowers and they burned the whole town
-I fell through a ceiling of turpentine rain,
-and there you were, love, reading the lie in the frame
+[Verse 1]
+[Male Vocal]
+London's burning down its own bouquet,
+they sold the summer and they bought the grey
+I fell through a ceiling of turpentine rain
+and found you reading the lie in the frame
 
-[Pre-Chorus - SPZ]
-Violet in the black of your hair,
-two white moons for eyes, and you knew I'd be there
+[Pre-Chorus]
+[Male Vocal]
+Storm in your knuckles, a squall in your wrist,
+the one live wire on the whole blacklist
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You make weather in your hands,
-[Kat] and you can't hold weather, love — understand
-[SPZ] they managed the wind till it died in a room,
-[Kat] don't grip me that tight or you'll bury me soon
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] hold it light as the light — that's the only way,
-[Both] weather in your hands
+[Chorus]
+[Male Vocal] You keep the weather in your hands,
+[Female Vocal] and weather's not a thing a man commands
+[Male Vocal] they caged the wind till it drowned in a suite,
+[Female Vocal] so hold me open, love, not complete
+[Male Vocal] I don't want to own the storm, I want to stand in it,
+[Female Vocal] then stand, my love, get gloriously wet,
+[Duet] weather in your hands
 
-[Verse 2 - SPZ]
-They buy the boy cheap and they sell the ghost dear,
-love it to death and they bill the estate for the year
+[Verse 2]
+[Male Vocal]
+They buy the boy cheap and they bill the ghost dear,
+loved him to death and framed the arrears
 I watched a clean man drown in the gold that he faked,
-you slipped me a plectrum worn soft for my sake
+you pressed me a plectrum worn soft for my sake
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You make weather in your hands,
-[Kat] and you can't hold weather, love — understand
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] weather in your hands
+[Chorus]
+[Male Vocal] You keep the weather in your hands,
+[Female Vocal] and weather's not a thing a man commands
+[Male Vocal] I don't want to own the storm, I want to stand in it,
+[Duet] weather in your hands
 
 [Breakdown - instrumental: backwards-guitar swirl and 808 sub only, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] You're moving through me backwards, my love,
-[SPZ] you're an old song to you and a first note to me —
-[Kat] so I'll teach you slow what you taught me too fast:
-[Both] "the most beautiful thing that our hands ever made
-was real, and it happened, and it's going to last"
+[Bridge]
+[Female Vocal] You hear me backwards, love, the end before the start,
+[Male Vocal] you're an old song to you, a first chord to my heart
+[Female Vocal] so I'll teach you slow the thing they never could,
+[Male Vocal] the wild you cannot keep is the only kind that's good
+[Female Vocal] so let the thunder have me,
+[Male Vocal] and I'll love you while it's loud
 
 [Outro - instrumental: fuzz guitar bends up into feedback over the 808, slows and fades, NO vocals - leave clean space, then fade]
 ```
@@ -257,45 +261,49 @@ unmistakable 1962 Hollywood glamour up front — lush orchestral-pop strings, br
 ```
 [Intro - instrumental: brushed jazz drums, upright bass, vibraphone and a sultry sax over 808 sub-bass, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 Two a.m. on a soundstage, cables like vine,
-one island of fire in a black so divine
+one island of fire in a dark so divine
 they lit you to erase you, to burn the girl down,
-but I found you at the edge where the light hits the ground
+I found the real you at the edge of the crown
 
-[Pre-Chorus - SPZ]
-Platinum and violet, two moons for eyes,
-the one thing the factory never could disguise
+[Pre-Chorus]
+[Male Vocal]
+Platinum and shadow, a laugh they can't buy,
+the one frame the studio never could dry
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Stay at the edge of the light,
-[Kat] out where they can't make me bright
-[SPZ] they price what they frame and they sell what they own,
-[Kat] so love me off-camera, or leave me alone
-[SPZ] how beautiful... Daniela, don't shine,
-[Kat] keep the you off the poster and the you will be mine,
-[Both] here at the edge of the light
+[Chorus]
+[Male Vocal] Meet me at the edge of the light,
+[Female Vocal] out past the poster, out of their sight
+[Male Vocal] they price what they frame and they own what they shoot,
+[Female Vocal] so love the girl, sweetheart, not the flashbulb salute
+[Male Vocal] I don't want the goddess, I want who you are at three,
+[Female Vocal] then take me home unlit, and I'm finally free,
+[Duet] here at the edge of the light
 
-[Verse 2 - SPZ]
-They took a thousand girls and they ground them the same,
-a dream you can price is a dream with no name
-I wanted the monster to burn — God help me, I did —
-till a clean voice said "now you're one of us, kid"
+[Verse 2]
+[Male Vocal]
+A thousand bright girls through the very same mill,
+a dream you can price is a dream you can kill
+I wanted the mogul to burn, God, I confess,
+till a clean voice purred "you're one of us, yes"
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Stay at the edge of the light,
-[Kat] out where they can't make me bright
-[SPZ] how beautiful... Daniela, don't shine,
-[Both] here at the edge of the light
+[Chorus]
+[Male Vocal] Meet me at the edge of the light,
+[Female Vocal] out past the poster, out of their sight
+[Male Vocal] I don't want the goddess, I want who you are at three,
+[Duet] here at the edge of the light
 
 [Breakdown - instrumental: vibraphone and brushed drums drop to 808 sub and a lone sax, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] You will, and you do, and you did, all at once,
-[SPZ] I keep meeting you early and losing you months —
-[Kat] so I fold you three words in the violet, and pray:
-[Both] "stay off-camera, my love, be too particular to sell,
-and I'll find you again at the edge, where they never could tell"
+[Bridge]
+[Female Vocal] I was made to be looked at; you looked and you stayed,
+[Male Vocal] I'd trade every marquee for the face you don't trade
+[Female Vocal] so keep me off-camera, keep me too true to sell,
+[Male Vocal] and they'll never once know what we knew in the dark
+[Female Vocal] a thing without a price,
+[Male Vocal] is a thing they can't tell
 
 [Outro - instrumental: sax and 808 fade under vinyl crackle, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -312,47 +320,51 @@ unmistakable 1971 Paris psychedelic blues-rock up front — swirling vintage com
 
 **Lyrics:**
 ```
-[Intro - instrumental: vintage combo organ organ, snakey blues guitar and brushed café-jazz drums over 808 sub-bass, a ghost of accordion, 8 bars, NO vocals - leave clean space]
+[Intro - instrumental: vintage combo organ, snakey blues guitar and brushed café-jazz drums over 808 sub-bass, a ghost of accordion, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-Grey rain coming down on Père Lachaise stone,
-they sold him in leather, then left him alone
-I've stepped out of every coat that I owned,
-and there you knelt, love, taking a name from the stone
+[Verse 1]
+[Male Vocal]
+Grey rain on the graves in the Père Lachaise stone,
+they sold him in leather then left him alone
+I've walked out of every coat I once wore,
+found you at the stone, tracing what death couldn't store
 
-[Pre-Chorus - SPZ]
-Charcoal and violet, two moons in the cold,
-tracing a name that the ground couldn't hold
+[Pre-Chorus]
+[Male Vocal]
+Charcoal on your fingers, a name in the cold,
+rubbing a thing that the ground couldn't hold
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] A name outlives the man,
-[Kat] and the love outlives the plan
-[SPZ] you can fake every funeral, dodge every bill,
-[Kat] but the Balancing's patient, my love, and it will
-[SPZ] how beautiful... Daniela, don't grieve,
-[Kat] make something so true that the strangers believe,
-[Both] a name outlives the man
+[Chorus]
+[Male Vocal] They carve a name and they call it forever,
+[Female Vocal] but stone forgets, love, the rubbing won't ever
+[Male Vocal] so I won't cut you in marble or gold,
+[Female Vocal] cut me in the soft of you, deeper than cold
+[Male Vocal] a name outlives the man, but you outlive the name,
+[Female Vocal] then press me to your chest and let me stain,
+[Duet] deeper than the stone
 
-[Verse 2 - SPZ]
-The swindler in the false beard felt like a god,
-wept at his own empty box in the fog
-I knew him, I am him, I dodge and I run —
+[Verse 2]
+[Male Vocal]
+The swindler in the false beard wept at his own empty box,
+a funeral of nobody, a grief on the rocks
+I knew him, I am him, I dodge and I run,
 till a rubbing in my pocket said what I'd become
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] A name outlives the man,
-[Kat] and the love outlives the plan
-[SPZ] how beautiful... Daniela, don't grieve,
-[Both] a name outlives the man
+[Chorus]
+[Male Vocal] They carve a name and they call it forever,
+[Female Vocal] but stone forgets, love, the rubbing won't ever
+[Male Vocal] a name outlives the man, but you outlive the name,
+[Duet] deeper than the stone
 
 [Breakdown - instrumental: organ and blues guitar drop to 808 sub and rain, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] You know me the way that this city knows him,
-[SPZ] not yet, and always, and too late, and again —
-[Kat] so I fold you a name you can carry on through:
-[Both] "a name outlives the man, and a rubbing the name,
-and the love, my love, outlives even them, all the same"
+[Bridge]
+[Female Vocal] You'll know me the way this whole city knows him,
+[Male Vocal] not yet, and always, and too late, and again
+[Female Vocal] so trace me while I'm warm, love, not once I'm a plaque,
+[Male Vocal] I'd rather be your smudge than a stranger's cold black
+[Female Vocal] the stone will crumble,
+[Male Vocal] and I'll still be in your hands
 
 [Outro - instrumental: organ swells into feedback over rain and 808, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -361,7 +373,6 @@ and the love, my love, outlives even them, all the same"
 ---
 
 ## TRACK 7 — "Don't Go Dark"  *(The Hemingway Door — the sealed one)*
-*the most stripped, haunting track on the record — the bottle episode as a torch song.*
 
 **Style:**
 ```
@@ -372,45 +383,49 @@ desolate late-'50s / early-'60s noir-jazz up front — a lone spare piano, brush
 ```
 [Intro - instrumental: a lone desolate piano, brushed drums, upright bass and a distant muted trumpet over a barely-there 808 heartbeat and vinyl crackle, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 Dead yellow lamp and a room with no clock,
-a card on the table and a cold that won't stop
-six doors in my coat and a hand on the seven,
-tired all the way down to the bone, past forgiven
+a hand on the table, a cold that won't stop
+they told me the finish was mine to be owed,
+your voice on the wire was the only road
 
-[Pre-Chorus - SPZ]
-Two quiet voices said I'd earned the long night,
-and my hand crossed the table toward the end of the light
+[Pre-Chorus]
+[Male Vocal]
+Two quiet men said I'd earned the long night,
+your name in the static was the last of the light
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They said the finish was the one thing they couldn't own,
-[Kat] but the exit's their cleanest win, love — you'd only go home alone
-[SPZ] I wanted the quiet, God, I wanted the dark,
-[Kat] then don't you dare, don't you dare go dark
-[SPZ] how beautiful... Daniela, don't cry,
-[Kat] you're the only broadcast I've loved, don't die,
-[Both] signal finds signal — stay lit, stay a spark
+[Chorus]
+[Male Vocal] They'll sell you the quiet, love, don't let them,
+[Female Vocal] stay on the air for me, stay a signal, stay lit
+[Male Vocal] I wanted the dark, God, I wanted it clean,
+[Female Vocal] then stay for the warmest thing you've ever been
+[Male Vocal] you're the only channel I ever came home to,
+[Female Vocal] so don't go quiet, love, I'm still tuned to you,
+[Duet] stay lit, stay a spark
 
-[Verse 2 - SPZ]
-They ground down the great man and they handed him the gun,
-called the beige a dignity and the finish nobly done
-I'd had it all backwards — the door isn't free,
+[Verse 2]
+[Male Vocal]
+They ground down the great man and handed him the gun,
+called the beige a dignity, the finish nobly done
+I'd had it all backwards, the exit's not free,
 it's the machine, arriving, in the mask of me
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] I wanted the quiet, God, I wanted the dark,
-[Kat] then don't you dare, don't you dare go dark
-[SPZ] how beautiful... Daniela, don't cry,
-[Both] signal finds signal — stay lit, stay a spark
+[Chorus]
+[Male Vocal] They'll sell you the quiet, love, don't let them,
+[Female Vocal] stay on the air for me, stay a signal, stay lit
+[Male Vocal] you're the only channel I ever came home to,
+[Duet] stay lit, stay a spark
 
 [Breakdown - instrumental: the piano and trumpet drop to a lone 808 heartbeat and static, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] I crossed into a room I could never reach,
-[SPZ] white eyes gone frightened, no serene left to preach —
-[Kat] I turned every dial past the hiss where you'd been,
-[Both] so stay on the air, my love, stay a signal, stay in,
-don't leave me calling a channel gone dark
+[Bridge]
+[Female Vocal] I turned every dial past the hiss where you'd been,
+[Male Vocal] white noise where a whole warm man had been
+[Female Vocal] so leave me one frequency, love, keep it warm,
+[Male Vocal] I'll hold on for the sound of you through the storm
+[Female Vocal] don't leave me calling,
+[Male Vocal] a channel gone dark
 
 [Outro - instrumental: the lone piano holds one unresolved chord under vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -429,45 +444,49 @@ unmistakable 2007 tabloid-glare up front — glossy mid-2000s celebrity electro-
 ```
 [Intro - instrumental: glossy 2007 tabloid-pop synths, a news-ticker pulse and paparazzi flashbulb hits over industrial 808 sub-bass, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 Forty screens in a Florida bar,
-same face burning on every channel, near and far
-they farmed her for content, they sold her whole life,
-and she looked through the glass and she cut the dream like a knife
+the same face burning near and far
+they farmed you for content, they sold your whole life,
+you looked through the glass and you cut it like a knife
 
-[Pre-Chorus - SPZ]
-Violet in the black on the evening news,
-forty mouths moving, and all of them you
+[Pre-Chorus]
+[Male Vocal]
+Flashbulb violet on the evening news,
+forty mouths moving, and none of them you
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You can't dream a broadcast, she said,
-[Kat] so wake up now, love, get out of your head
-[SPZ] they eat the watched and the watching the same,
-[Kat] but I spent a death just to make you say my name
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] I'm not dreaming, I'm travelling — that's the trade,
-[Both] forty screens, and every one you
+[Chorus]
+[Male Vocal] They put you on every screen in the state,
+[Female Vocal] but a broadcast can't hold you, love, only I can, so wait
+[Male Vocal] they eat the watched and the watching the same,
+[Female Vocal] then turn it all off and just say my name
+[Male Vocal] I don't want the headline, I want you in the dark,
+[Female Vocal] the real girl, no ratings, just the beat of your heart,
+[Duet] switch the whole world off
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 A grifter went out past the reef for a shot,
-the deep sent the whales and it took what he'd got
-his death ran right after hers, same glare, same night,
-two spectacles sold under one little red light
+the deep took the man and it took what he'd got
+two deaths on one glare, one little red light,
+sponsored, forever, on repeat through the night
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You can't dream a broadcast, she said,
-[Kat] so wake up now, love, get out of your head
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] forty screens, and every one you
+[Chorus]
+[Male Vocal] They put you on every screen in the state,
+[Female Vocal] but a broadcast can't hold you, love, only I can, so wait
+[Male Vocal] I don't want the headline, I want you in the dark,
+[Duet] switch the whole world off
 
 [Breakdown - instrumental: the news-tone bleeds under a lone 808 heartbeat and static, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] There's a night up the road I'm going to need you awake,
-[SPZ] Seattle and rain and a sound I can't shake —
-[Kat] so keep waking, my love, every door, every year:
-[Both] "I'm not dreaming, I'm travelling, and I'm going to be there,
-so don't you go dark, and don't disappear"
+[Bridge]
+[Female Vocal] There's a night up the road I'm gonna need you awake,
+[Male Vocal] rain and a city and a sound I can't shake
+[Female Vocal] so love the girl they can't sell, the one off the air,
+[Male Vocal] I'll unplug the whole circus and still find you there
+[Female Vocal] no channel, no glare,
+[Male Vocal] just you and the dark
 
 [Outro - instrumental: the tabloid synths dissolve into a flat news-tone and 808, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -486,45 +505,49 @@ unmistakable 1994 Seattle grunge up front — raw drop-D big-fuzz guitars, pound
 ```
 [Intro - instrumental: rainy clean-guitar arpeggio and feedback hum over a low 808 heartbeat, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 Mildew and beer and a stage like a door,
 a band screaming true at a room of the poor
 I opened this one myself, came early, came fast,
-and there you were, love, at a card table, aghast
+found you at a card table, holding on to the past
 
-[Pre-Chorus - SPZ]
-Flannel and violet gone pink in the light,
-two white moons reading me right through the night
+[Pre-Chorus]
+[Male Vocal]
+Flannel and rain gone pink in the light,
+two eyes reading me right through the night
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Then the loud part hit and you thinned into air,
-[Kat] hold me, hold me while I flicker, don't stare
-[SPZ] I could see the wall through your heart, through your hand,
-[Kat] just don't let go and I'll come back where I land
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] I dance to travel, and dancing's the trade,
-[Both] hold me while I flicker, and stay
+[Chorus]
+[Male Vocal] Then the loud part hits and you thin into air,
+[Female Vocal] hold me, hold me while I flicker, just don't stare
+[Male Vocal] I can see the wall through your heart, through your hand,
+[Female Vocal] just don't let go and I'll come back where I land
+[Male Vocal] I'd hold a hundred quiets to keep you from the loud,
+[Female Vocal] then hold me soft, love, and don't say it out loud,
+[Duet] hold me while I flicker
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 They buy up the real and they sell it pre-torn,
-love it to death, bill the estate it was born
+loved it to death, billed the town it was born
 a scream in a mall for the price of a shirt,
 and a boy from a logging town under the dirt
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Then the loud part hit and you thinned into air,
-[Kat] hold me, hold me while I flicker, don't stare
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] hold me while I flicker, and stay
+[Chorus]
+[Male Vocal] Then the loud part hits and you thin into air,
+[Female Vocal] hold me, hold me while I flicker, just don't stare
+[Male Vocal] I'd hold a hundred quiets to keep you from the loud,
+[Duet] hold me while I flicker
 
 [Breakdown - instrumental: everything drops to feedback, rain and the 808 heartbeat, glitch stutters, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] Every clean jump takes a little more girl,
-[SPZ] and a little less of you comes back to the world —
-[Kat] so learn how to hold on, my love, learn it now:
-[Both] "the big door is coming, and your hand knows how,
-so hold me while I flicker, and don't let go"
+[Bridge]
+[Female Vocal] Every clean jump takes a little more girl,
+[Male Vocal] a little less of you comes back to the world
+[Female Vocal] so learn how to hold on, love, learn it right now,
+[Male Vocal] the big door's coming and my hands know how
+[Female Vocal] so hold me while I flicker,
+[Male Vocal] and I won't let go
 
 [Outro - instrumental: the wall of fuzz collapses into feedback and rain, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -543,44 +566,49 @@ unmistakable 1977 Las Vegas showroom up front — big gospel-soul brass, Hammond
 ```
 [Intro - instrumental: Vegas showroom brass, gospel Hammond organ and a slow rockabilly shuffle over 808 sub-bass, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-Gold on the gate and a chain on the King,
-two shows a night and he can't feel a thing
-a carny that owns him won't let him leave home,
-and there you sang backup, love, moons in the chrome
+[Verse 1]
+[Male Vocal]
+Gold on the gate and a chain on the throne,
+two shows a night and you can't feel your own
+a carny that owns you won't let you go home,
+I found you backstage, love, sweat in the chrome
 
-[Pre-Chorus - SPZ]
-Violet gone dark under wig and white light,
-the best voice in Vegas and hid out of sight
+[Pre-Chorus]
+[Male Vocal]
+Rhinestone shadow under a wig and white light,
+the best voice in the desert, kept out of sight
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Caught in a trap, and I can't walk out,
-[Kat] you can't change a record that already played out
-[SPZ] I reached for the King and you paid for the reach,
-[Kat] there's one soul to save, love, and it's not his to teach
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] learn to hold still, and don't come to my aid,
-[Both] caught in a trap, but I love you
+[Chorus]
+[Male Vocal] Take off the cape, love, come down off the stage,
+[Female Vocal] I can't be an act, sweetheart, at any wage
+[Male Vocal] they built you a temple and locked you inside,
+[Female Vocal] so love the tired man, not the King they deified
+[Male Vocal] I don't want the crown, I want your ordinary face,
+[Female Vocal] then meet me in the plain clothes, off the marquee's blaze,
+[Duet] just be a man with me
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 They kill you alive and they keep you on stage,
 an impression of you doing you for a wage
-love it to death, then they license the ghost,
+loved it to death, then they license the ghost,
 a thousand men in capes for the one they loved most
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Caught in a trap, and I can't walk out,
-[Kat] you can't change a record that already played out
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] caught in a trap, but I love you
+[Chorus]
+[Male Vocal] Take off the cape, love, come down off the stage,
+[Female Vocal] I can't be an act, sweetheart, at any wage
+[Male Vocal] I don't want the crown, I want your ordinary face,
+[Duet] just be a man with me
 
 [Breakdown - instrumental: brass drops to lone organ and 808 heartbeat, a slot-machine chime, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] Stay a played string, my love, fray from the use,
-[SPZ] not a monument standing there taking abuse —
-[Both] so hold still and hold on, and don't do an act,
-just be a man, be a man, and I'll come right back
+[Bridge]
+[Female Vocal] Stay a played string, love, fray from the use,
+[Male Vocal] not a monument standing there taking abuse
+[Female Vocal] so hold still and hold on, and don't do the show,
+[Male Vocal] just be a man, be a man, and I won't let go
+[Female Vocal] no rhinestone, no encore,
+[Male Vocal] just the two of us, slow
 
 [Outro - instrumental: gospel organ swells and fades under 808 and vinyl hiss, slows to a stop, NO vocals - leave clean space, then fade]
 ```
@@ -599,44 +627,49 @@ unmistakable 2012 gospel-diva balladry up front — a colossal soul voice, Hammo
 ```
 [Intro - instrumental: lone church organ and a distant choir hum over a low 808 heartbeat and hotel-corridor hush, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 Marble and lilies and a hush on the floor,
 a woman gone quiet behind a closed door
-and four floors down they were warming the room,
+four floors down they were warming the room,
 tuning the party right over the tomb
 
-[Pre-Chorus - SPZ]
-Violet gone wet in two moons for eyes,
-the only one grieving in a building of lies
+[Pre-Chorus]
+[Male Vocal]
+Wet in your eyes in the corridor light,
+the only one grieving in a building of white
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] The show goes on, one floor up from the dead,
-[Kat] keep your face to the body, love, not the light ahead
-[SPZ] they'll dim it and hold a note and call it a wake,
-[Kat] but sit with me still, for her own sake
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] the shot was to sit here — the shot's the one you made,
-[Both] one floor up, but I'm here with you
+[Chorus]
+[Male Vocal] The show goes on, one floor up from the dead,
+[Female Vocal] keep your face to me, love, not the lights ahead
+[Male Vocal] they'll dim it and hold a note and call it a wake,
+[Female Vocal] but sit here and mean it, for my own sake
+[Male Vocal] I don't want the ovation, I want you still,
+[Female Vocal] then stay in the quiet with me, love, sit and be real,
+[Duet] one floor up with you
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 They sanded the church off the truest of throats,
 sold her the smooth, then they booed her own notes
-love it to death, then they license the pain,
+loved it to death, then they license the pain,
 a candle, a ribbon, and back to the game
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] The show goes on, one floor up from the dead,
-[Kat] keep your face to the body, love, not the light ahead
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] one floor up, but I'm here with you
+[Chorus]
+[Male Vocal] The show goes on, one floor up from the dead,
+[Female Vocal] keep your face to me, love, not the lights ahead
+[Male Vocal] I don't want the ovation, I want you still,
+[Duet] one floor up with you
 
 [Breakdown - instrumental: organ drops to a lone 808 heartbeat and a held choir chord, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] You can't tell the shot from the wanting, my love,
-[SPZ] so I ask who pays if I reach from above —
-[Both] and if it's ever anyone but me, I hold still,
-I keep my face to the body, and I always will
+[Bridge]
+[Female Vocal] You can't tell the shot from the wanting, my love,
+[Male Vocal] so I ask who pays if I reach from above
+[Female Vocal] and if it's ever anyone but you, I hold still,
+[Male Vocal] I keep my face to you, and I always will
+[Female Vocal] not the light, not the crowd,
+[Male Vocal] just your hand, and I'm home
 
 [Outro - instrumental: the choir chord swells and dissolves into 808 and vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -655,44 +688,49 @@ a haunted Belfast Celtic-punk lament up front — mournful uilleann pipes and a 
 ```
 [Intro - instrumental: lone uilleann pipes and a bodhrán heartbeat over a low 808 and rain, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 Most-bombed hotel and it's still pouring tea,
-they knocked it down thirty times, still it stands over me
+knocked down thirty times, still standing over me
 the calendar sent me back home to the grey,
 and there you sat, love, dissolving away
 
-[Pre-Chorus - SPZ]
+[Pre-Chorus]
+[Male Vocal]
 A kind man's lighter goes up in the room,
-and a violet note says to look at my doom
+and the count of the doors lights up my doom
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] When the kind one lights up, count the doors,
-[Kat] one to twenty-four, love — but there's one more
-[SPZ] I counted them all in the light of his flame,
-[Kat] and the twenty-fifth door had your own name
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] there's no watchers, love, only doors that get made,
-[Both] so count the doors, and be one worth the walk
+[Chorus]
+[Male Vocal] Best grey morning I've had in a hundred years,
+[Female Vocal] you finally know I'm real, love, right through the tears
+[Male Vocal] you're going to light, and I'm holding the frame,
+[Female Vocal] but there's no watchers, love, only doors that we name
+[Male Vocal] I don't want a relic, I want the door that is you,
+[Female Vocal] then walk through me, my love, come all the way through,
+[Duet] a Belfast dawn, and you
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 They heritage the horror and they sell you the wall,
 a wound with a gift shop, a plaque for it all
-love it to death, put a star on the grief,
+loved it to death, put a star on the grief,
 but the building rebuilds, and that's my belief
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] When the kind one lights up, count the doors,
-[Kat] one to twenty-four, love — but there's one more
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] so count the doors, and be one worth the walk
+[Chorus]
+[Male Vocal] Best grey morning I've had in a hundred years,
+[Female Vocal] you finally know I'm real, love, right through the tears
+[Male Vocal] I don't want a relic, I want the door that is you,
+[Duet] a Belfast dawn, and you
 
 [Breakdown - instrumental: pipes drop to a lone bodhrán, 808 and a struck-match hiss, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] It's the best grey morning I've had in a hundred years,
-[SPZ] you're dissolving to light and I'm holding my tears —
-[Both] but you finally know that I'm real, that it's true,
-so whatever door you turn out to be, love, I'll walk through you
+[Bridge]
+[Female Vocal] I'm dissolving to light and you're holding your tears,
+[Male Vocal] you're the one warm thing in a hundred grey years
+[Female Vocal] so whatever door I turn out to be, love,
+[Male Vocal] I'll walk through you, I'll walk through you
+[Female Vocal] rebuilt every time,
+[Male Vocal] like this city, like us
 
 [Outro - instrumental: the pipes and theme-motif swell and dissolve into 808 and vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -711,44 +749,49 @@ cool 1966 West-Coast jazz up front — a smoky comedy-club combo, brushed drums,
 ```
 [Intro - instrumental: smoky club sax, brushed drums and walking upright bass over a low 808, a faint stenograph clatter, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 Said one small word on a stage in the smoke,
-a cop in the crowd wrote it down, and it broke —
+a cop in the crowd wrote it down till it broke
 they can't ban a mouth in the land of the free,
-so they billed him instead, that's the trick, don't you see
+so they billed you instead, that's the trick, don't you see
 
-[Pre-Chorus - SPZ]
-Violet in the black at a stenograph key,
+[Pre-Chorus]
+[Male Vocal]
+Shadow on the black at a stenograph key,
 typing me into forever so the truth stays free
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They held me in contempt, but they never said stop,
-[Kat] they just made it cost, love, till the running made him drop
-[SPZ] no gag and no cell, just a bill I can't pay,
-[Kat] but I keep the record, so you're never sanded away
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] keep talking, keep talking — every word gets made,
-[Both] held in contempt, but I love you
+[Chorus]
+[Male Vocal] They held me in contempt, but they never said stop,
+[Female Vocal] they just made it cost, love, till the running made you drop
+[Male Vocal] no gag and no cell, just a bill I can't pay,
+[Female Vocal] but I keep the record, so you're never sanded away
+[Male Vocal] whatever it costs me, I'll say the true thing,
+[Female Vocal] then keep talking, my love, and I'll catch everything,
+[Duet] I'll catch every word
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 He read his own paperwork to an empty room,
 the case ate the comic, and the joke ate the tomb
-love it to death, then they sell you the pose,
+loved it to death, then they sell you the pose,
 an edge you can wear where the danger once rose
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They held me in contempt, but they never said stop,
-[Kat] they just made it cost, love, till the running made him drop
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] held in contempt, but I love you
+[Chorus]
+[Male Vocal] They held me in contempt, but they never said stop,
+[Female Vocal] they just made it cost, love, till the running made you drop
+[Male Vocal] whatever it costs me, I'll say the true thing,
+[Duet] I'll catch every word
 
 [Breakdown - instrumental: sax drops to a lone walking bass, 808 and stenograph clatter, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] They can't defund the record, so whatever it costs,
-[SPZ] I keep talking, keep talking, through the treadmill and loss —
-[Both] and she catches every word that they'd bury or drown,
-so keep the joke landing, love, and don't you go down
+[Bridge]
+[Female Vocal] They can't defund the record, so whatever it costs,
+[Male Vocal] I keep talking, keep talking, through the treadmill and loss
+[Female Vocal] and I catch every word that they'd bury or drown,
+[Male Vocal] so keep the joke landing, love, and don't you go down
+[Female Vocal] say it, say it,
+[Male Vocal] and I've got you, every word
 
 [Outro - instrumental: the club combo dissolves into 808 and vinyl hiss and a last stenograph key, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -767,44 +810,49 @@ unmistakable 1979 punk up front — raw buzzsaw drop-of-a-hat distorted guitars,
 ```
 [Intro - instrumental: a lone feedback squeal and a snotty guitar riff over a low 808 and a till-drawer chime, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 A boy on a stage with a bass unplugged,
 a scream for a logo, a sneer to be hugged
-they auditioned a movement and cast him the face,
+they auditioned a movement and cast you the face,
 and there you stood, love, shooting the crowd, not the stage
 
-[Pre-Chorus - SPZ]
-Violet in the black behind a cracked lens,
+[Pre-Chorus]
+[Male Vocal]
+Shadow on the black behind a cracked lens,
 photographing the wanting where the con never ends
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Cash from chaos, they sell you the no,
-[Kat] and the jacket you're wearing came off the same row
-[SPZ] my anarchy had a barcode all along,
-[Kat] so wear it awake, love — that's the only free song
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] the most punk thing on you is a doubt, not a blade,
-[Both] cash from chaos, but I love you
+[Chorus]
+[Male Vocal] Cash from chaos, they sell you the no,
+[Female Vocal] and the jacket you're wearing came off the same row
+[Male Vocal] my anarchy had a barcode all along,
+[Female Vocal] so wear it awake, love, that's the only free song
+[Male Vocal] the most punk thing left is I still give a damn,
+[Female Vocal] then care out loud with me, love, exactly who you am,
+[Duet] real under the barcode
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 They can't play a note and it's proof that it's true,
 incompetence bottled and sold back to you
-love it to death, put the martyr on a shirt,
+loved it to death, put the martyr on a shirt,
 nine quid of rebellion to fund what it hurt
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Cash from chaos, they sell you the no,
-[Kat] and the jacket you're wearing came off the same row
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] cash from chaos, but I love you
+[Chorus]
+[Male Vocal] Cash from chaos, they sell you the no,
+[Female Vocal] and the jacket you're wearing came off the same row
+[Male Vocal] the most punk thing left is I still give a damn,
+[Duet] real under the barcode
 
 [Breakdown - instrumental: the thrash drops to a lone 808 and a camera shutter and feedback, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] They sold all of us the coat, but here's what they missed,
-[SPZ] the moment I clocked it and I still made a fist —
-[Both] so keep your eyes open in the shop where you're sold,
-and the doubt in the jacket is the last thing they can't hold
+[Bridge]
+[Female Vocal] They sold all of us the coat, but here's what they missed,
+[Male Vocal] the moment I clocked it and I still made a fist
+[Female Vocal] so keep your eyes open in the shop where you're sold,
+[Male Vocal] and I'll love you loud in a world going cold
+[Female Vocal] take the pose off,
+[Male Vocal] keep the caring, keep it real
 
 [Outro - instrumental: the fuzz collapses into feedback, 808 and a last camera shutter, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -823,44 +871,49 @@ a 2008 cinematic dread up front — a dark blockbuster orchestral score, rising 
 ```
 [Intro - instrumental: a lone piano and a rising bowed-cello dread over a low 808 and a mirror-bulb buzz, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 He went so deep in the mask that the man couldn't sleep,
 built a dark with no bottom that he couldn't keep
 and there you stood, love, in the dark off the light,
-a stand-in for someone, disappearing on sight
+a stand-in for someone, fading on sight
 
-[Pre-Chorus - SPZ]
-Violet gone faint where a girl used to stand,
+[Pre-Chorus]
+[Male Vocal]
+Faint in the black where a girl used to stand,
 holding a pose in the dark with a fading hand
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] The mask eats the man, and they hand you a crown,
-[Kat] for the one who most perfectly vanishes down
-[SPZ] I begged you to do it my ugly way, whole,
-[Kat] but I pay in the thing I've got most of — my soul
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] don't disappear after me, love — stay off the tape they made,
-[Both] the mask eats the man, but I love you
+[Chorus]
+[Male Vocal] The mask eats the man and they hand you a crown,
+[Female Vocal] for whoever most perfectly vanishes down
+[Male Vocal] I begged you to do it the ugly way, whole,
+[Female Vocal] but I pay in the thing I've got most of, my soul
+[Male Vocal] don't disappear on me, keep one room with no light,
+[Female Vocal] then leave me a door off the tape, love, out of sight,
+[Duet] one room they can't film
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 They mint you a martyr the minute you're gone,
 a genius who vanished, the campaign runs on
-love it to death, run the ghost for the gold,
+loved it to death, run the ghost for the gold,
 a statue for a man who was already sold
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] The mask eats the man, and they hand you a crown,
-[Kat] for the one who most perfectly vanishes down
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] the mask eats the man, but I love you
+[Chorus]
+[Male Vocal] The mask eats the man and they hand you a crown,
+[Female Vocal] for whoever most perfectly vanishes down
+[Male Vocal] don't disappear on me, keep one room with no light,
+[Duet] one room they can't film
 
 [Breakdown - instrumental: the score drops to a lone piano note and 808 heartbeat and mirror-buzz, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] There's a mark on the floor and I keep hitting it clean,
-[SPZ] with less of you on it each time I have seen —
-[Both] so keep one room in yourself with no camera, no light,
-stay a person off-tape, love, and don't follow me into the night
+[Bridge]
+[Female Vocal] There's a mark on the floor and I hit it clean,
+[Male Vocal] with less of you on it each time I have seen
+[Female Vocal] so keep one room in yourself with no camera, no crew,
+[Male Vocal] stay a person off-tape, love, and I'll stay it with you
+[Female Vocal] no lens, no double,
+[Male Vocal] just the you that is you
 
 [Outro - instrumental: the cello dread and piano dissolve into 808 and vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -879,44 +932,49 @@ unmistakable 2011 Camden retro-soul up front — a smoky girl-group soul backbea
 ```
 [Intro - instrumental: a smoky vintage electric piano and brushed girl-group soul backbeat over a low 808 and Camden rain, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 Camden in the rain and a beehive half-gone,
 a voice from a century that's already moved on
-they filmed her falling and they sold every frame,
-and there you sang, love, in the back of the flame
+they filmed you falling and they sold every frame,
+I found you in the corner, still spelling my name
 
-[Pre-Chorus - SPZ]
-Violet gone faint and the neon shines through,
-one flicker left in a girl I could see the street through
+[Pre-Chorus]
+[Male Vocal]
+Eyeliner running in the neon and rain,
+the truest thing left in the whole champagne
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You told me in the alley, you've got one jump left,
-[Kat] and I'm spending it on you, love, so don't you go deft
-[SPZ] don't beat me to the dark, don't you dare go first,
-[Kat] just outlive me, my love — that's the best and the worst
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] worth every door, worth the whole backward trade,
-[Both] one jump left, and I love you
+[Chorus]
+[Male Vocal] You've got one jump left, and you're spending it here,
+[Female Vocal] one jump left in me, love, so hold me near
+[Male Vocal] don't burn it on the exit, don't burn it on the show,
+[Female Vocal] I'll burn it on you, sweetheart, before I go
+[Male Vocal] if it's one door of you I get to keep,
+[Female Vocal] then take the whole of me, love, all of it, deep,
+[Duet] worth every door
 
-[Verse 2 - SPZ]
-The twenty-seven club is a shelf life they've timed,
-ignition to ashes, the tribute pre-signed
-love it to death, hold the clip for the day,
-grief's the highest converting, so they film you away
+[Verse 2]
+[Male Vocal]
+The twenty-seven club isn't cursed, it's a shift,
+they schedule the geniuses and cash out the gift
+loved you to death and they billed the estate,
+but you spent your last night loving, not being late
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You told me in the alley, you've got one jump left,
-[Kat] and I'm spending it on you, love, so don't you go deft
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] one jump left, and I love you
+[Chorus]
+[Male Vocal] You've got one jump left, and you're spending it here,
+[Female Vocal] one jump left in me, love, so hold me near
+[Male Vocal] if it's one door of you I get to keep,
+[Duet] worth every door
 
 [Breakdown - instrumental: the brass drops to a lone vintage electric piano and 808 and rain, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] Swear you'll survive me, don't follow me down,
-[SPZ] keep the broadcast alive when the answer's gone drowned —
-[Both] a real death held in a hand that's still warm,
-that's the only gift left, so stay through the storm
+[Bridge]
+[Female Vocal] I've got one jump left in me, love, one,
+[Male Vocal] and then I'm all signal and no girl, undone
+[Female Vocal] so don't ask me to save it, I'd rather it's spent,
+[Male Vocal] on you, on this, on the best hour we're lent
+[Female Vocal] worth every door,
+[Male Vocal] worth every door
 
 [Outro - instrumental: the soul horns and vintage electric piano dissolve into 808, rain and vinyl hiss, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -935,44 +993,49 @@ unmistakable late-2000s / glossy dance-pop production up front — glossy glossy
 ```
 [Intro - instrumental: a lone piano and ghost-light hum with a distant carousel music-box over a low 808 and a rewinding-tape whir, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
+[Verse 1]
+[Male Vocal]
 An empty stage and a comeback that kills,
-they sold him some sleep in a bag full of bills
+they sold you some sleep in a bag full of pills
 I clawed at the card for a year I once knew,
-and there you stood, love, with the light shining through
+and there you stood, love, the light shining through
 
-[Pre-Chorus - SPZ]
-Violet gone faint as a tape running down,
-a younger you gone where the old doors drowned
+[Pre-Chorus]
+[Male Vocal]
+Faint as a tape running down to the reel,
+a younger you gone where the old doors kneel
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You can't rewind — it only goes on,
-[Kat] the door that you opened, my love, it's just gone
-[SPZ] I tore the whole card for a solider you,
-[Kat] but the rewind was never the love, love — the forward is true
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] it's not a countdown, it's a gift with its days,
-[Both] you can't rewind, but I love you
+[Chorus]
+[Male Vocal] You can't rewind, it only goes on,
+[Female Vocal] the door that we opened, love, it's just gone
+[Male Vocal] I tore the whole card for a solider you,
+[Female Vocal] but the rewind was never the love, love, the forward is true
+[Male Vocal] I don't want to press play on a year that we've been,
+[Female Vocal] then dance me forward, my love, into what hasn't been,
+[Duet] no rewind, just us
 
-[Verse 2 - SPZ]
+[Verse 2]
+[Male Vocal]
 They stole him a childhood and sold him it back,
 a funfair of nothing, a knife for the tape
-love it to death, run the ghost as a film,
+loved it to death, run the ghost as a film,
 a comeback that dances long after they're still
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You can't rewind — it only goes on,
-[Kat] the door that you opened, my love, it's just gone
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] you can't rewind, but I love you
+[Chorus]
+[Male Vocal] You can't rewind, it only goes on,
+[Female Vocal] the door that we opened, love, it's just gone
+[Male Vocal] I don't want to press play on a year that we've been,
+[Duet] no rewind, just us
 
 [Breakdown - instrumental: everything drops to a lone rewinding-tape whir, 808 and music-box, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] Don't grieve me early, don't go dark to get back,
-[SPZ] just be here six more times through the flicker and black —
-[Both] 'cause on is the only refusal that counts,
-so carry me forward, love, in whatever amounts
+[Bridge]
+[Female Vocal] It's not a countdown, love, it's a gift with its days,
+[Male Vocal] a known little number, and I'll spend every phase
+[Female Vocal] so stop clawing back and just hold what is now,
+[Male Vocal] I'll dance you forward, I'll show you how
+[Female Vocal] no reverse, no repeat,
+[Male Vocal] just the next step, and you
 
 [Outro - instrumental: the piano and 808 slow, the tape-whir stops, dissolves into vinyl hiss, fades out, NO vocals - leave clean space, then fade]
 ```
@@ -991,44 +1054,49 @@ a wild, ragged 2005 gonzo desert-rock up front — outlaw-country-blues swagger,
 ```
 [Intro - instrumental: a lone harmonica and paranoid lounge-organ over a low 808, a typewriter clatter and distant gunshot-reverb, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-A gun in a kitchen and a snow-quiet night,
-an old lion calm as he turns off the light
-I put my hand to the sealed door for a ride to the dark,
-and there you crossed, love, to take out the spark
+[Verse 1]
+[Male Vocal]
+A bat-country highway and a trunk full of sin,
+the desert's a mirror you keep driving in
+they'll sell you an ending dressed up as a door,
+I found you at the wheel, love, wanting more
 
-[Pre-Chorus - SPZ]
-Violet gone thin as the cordite and snow,
-a shortcut to nothing where I wanted to go
+[Pre-Chorus]
+[Male Vocal]
+Whiskey and cordite in the lounge-organ air,
+the one honest lunatic still standing there
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Buy the ticket and take the whole ride,
-[Kat] his was an ending, love — yours is a hide
-[SPZ] I reached for the exit to beat you to black,
-[Kat] but there's no shortcut to me down that track
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] finish your ride, love — the one that you made,
-[Both] buy the ticket, and I love you
+[Chorus]
+[Male Vocal] Buy the ticket, take the ride,
+[Female Vocal] no refunds, love, and no getting off to hide
+[Male Vocal] his was an ending, but ours is a run,
+[Female Vocal] so ride the whole thing with me, out under the sun
+[Male Vocal] I don't want the short cut, I want the long strange road,
+[Female Vocal] then take the whole ride with me, love, share the load,
+[Duet] all the way to the edge
 
-[Verse 2 - SPZ]
-They drowned the last mirror and called it set free,
-ten thousand loud liars where the truth used to be
-love it to death, sell the swagger, not the spine,
-a disruptor gets a statue, and the gonzo saint a line
+[Verse 2]
+[Male Vocal]
+The gonzo went out with the barrel in his teeth,
+called it an exit, but he left us the grief
+loved it to death, put the madness on a mug,
+sold the wild man's ashes from a cannon they dug
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] Buy the ticket and take the whole ride,
-[Kat] his was an ending, love — yours is a hide
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] buy the ticket, and I love you
+[Chorus]
+[Male Vocal] Buy the ticket, take the ride,
+[Female Vocal] no refunds, love, and no getting off to hide
+[Male Vocal] I don't want the short cut, I want the long strange road,
+[Duet] all the way to the edge
 
 [Breakdown - instrumental: everything drops to a lone typewriter, harmonica and 808, a gunshot-reverb, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] A full stop he earned isn't yours to steal,
-[SPZ] so I put my hand back and I felt the whole real —
-[Both] no refunds, no getting off early from here,
-just ride it all the way, love, through the flicker and fear
+[Bridge]
+[Female Vocal] His was an ending, love; yours would be an exit,
+[Male Vocal] know the difference or it'll kill us both, quick
+[Female Vocal] there's no shortcut to me through that door,
+[Male Vocal] so stay on the ride, love, and I'll ask for more
+[Female Vocal] no early exit,
+[Male Vocal] the whole strange ride, with you
 
 [Outro - instrumental: the desert-rock dissolves into 808, harmonica and vinyl hiss, one last typewriter key, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -1047,44 +1115,49 @@ a cold, sleek, modern corporate menace up front — glacial minimal-techno, a bo
 ```
 [Intro - instrumental: a boardroom-hum drone and icy ambient pads over a low 808, a faint cat-bell and a cash-register chime, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-A fortress in the snow where they align, not conspire,
-I made my own door out of a nameless pyre
-I followed the clean ones not down but up,
-and there you waited, love, in the light going soft
+[Verse 1]
+[Male Vocal]
+Glass on the mountain and a boardroom hum,
+they measure the world by what it becomes
+they price every door and they short every soul,
+I found you off-ledger, love, gorgeously whole
 
-[Pre-Chorus - SPZ]
-Violet nearly gone as a signal too thin,
-you spent yourself to show me the room they're in
+[Pre-Chorus]
+[Male Vocal]
+Snow on the steel and a cash-register chime,
+the one line-item they couldn't assign
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They're not the disease and they're not the cure,
-[Kat] they're the quality control, love, patient and sure
-[SPZ] every saint was a contract, a clean brief, a call,
-[Kat] and beige has a budget that pays for it all
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] now you know who's paid, and exactly who paid,
-[Both] quality control, but I love you
+[Chorus]
+[Male Vocal] They're not beige's cure, they're its quality control,
+[Female Vocal] now you know who waves the paw, love, and who pays the toll
+[Male Vocal] they've a price for every wonder they meet,
+[Female Vocal] but a thing without a market is a thing they can't beat
+[Male Vocal] I don't want to be an asset on anyone's sheet,
+[Female Vocal] then love me off the balance, my love, unpriced and complete,
+[Duet] the one thing they can't price
 
-[Verse 2 - SPZ]
-A comfortable man ordered a death like a car,
-"she's sincere, she's a problem, and she's raising the bar"
-love it to death, file it under managed and gone,
-the world isn't going beige — it's kept beige, all along
+[Verse 2]
+[Male Vocal]
+A door that knows it's a door, and knows its client too,
+is the one thing they never learned to run through
+loved it to death, made a metric of the flame,
+and quarterly reviewed the light out of its name
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They're not the disease and they're not the cure,
-[Kat] they're the quality control, love, patient and sure
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] quality control, but I love you
+[Chorus]
+[Male Vocal] They're not beige's cure, they're its quality control,
+[Female Vocal] now you know who waves the paw, love, and who pays the toll
+[Male Vocal] I don't want to be an asset on anyone's sheet,
+[Duet] the one thing they can't price
 
 [Breakdown - instrumental: the drone drops to a lone 808, cat-bell and register-chime and alpine wind, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] A door that has read its own contract at last,
-[SPZ] is a thing they can't price and they can't hold fast —
-[Both] so it might not open the way it was sold,
-refuse well, my love — it's the last weapon they hold
+[Bridge]
+[Female Vocal] Now you know who waves the paw, and who pays for the waving,
+[Male Vocal] a whole cold machine, and the one thing worth saving
+[Female Vocal] so short the whole market, love, keep me off the board,
+[Male Vocal] you're the unpriceable thing, and you're all I hoard
+[Female Vocal] no ticker, no bid,
+[Male Vocal] just you, uncosted, mine
 
 [Outro - instrumental: the boardroom-hum dissolves into 808 and vinyl hiss and one cat-bell, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -1103,44 +1176,49 @@ opulent modern gulf-futurism up front — grand Arabic-tinged EDM, a mournful ou
 ```
 [Intro - instrumental: a lone oud and ney flute over a low 808 and desert heat-shimmer, a distant rocket-rumble, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-A gold tower rising on the bones of the poor,
-the rich building lifeboats and locking the door
-I climbed in on a dead man they'd never once name,
-and there you shimmered, love, near gone in the flame
+[Verse 1]
+[Male Vocal]
+Glass towers rising out of the sand,
+a city they built with a borrowed hand
+they hand me a scythe and they point me to reap,
+I found you at the window, love, too awake to sleep
 
-[Pre-Chorus - SPZ]
-Violet gone to almost nothing at all,
-you stood at the glass just to watch me not fall
+[Pre-Chorus]
+[Male Vocal]
+Oud on the heat and a call gone cold,
+the first honest choice in a world that's sold
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They handed me a monster and a reason to reap,
-[Kat] the sweetest deserved death, love — but it's theirs to keep
-[SPZ] so I laid down the scythe and I let the door stay wide,
-[Kat] nobody gets out, love — so we stay inside
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] you've become the lesson, no relic to trade,
-[Both] nobody gets out, but I love you
+[Chorus]
+[Male Vocal] Nobody gets out, that's the deal they made,
+[Female Vocal] but this is the first door you choose, love, unafraid
+[Male Vocal] I laid down the scythe and I won't pick it up,
+[Female Vocal] so choose me clean-eyed, sweetheart, fill the cup
+[Male Vocal] I don't want a relic, I've become the lesson now,
+[Female Vocal] then choose me all the way, my love, and I'll show you how,
+[Duet] eyes all the way open
 
-[Verse 2 - SPZ]
-They stopped saving the world and they started to flee,
-a bunker, a rocket, a guest list to be free
-love it to death, then they write the rest off,
-a fireproof room while the whole house is lost
+[Verse 2]
+[Male Vocal]
+A reaper who lays down the blade in the sun,
+is the one thing the machine can't outrun
+loved it to death, built a mall on the grief,
+but a man who says no is a beautiful thief
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They handed me a monster and a reason to reap,
-[Kat] the sweetest deserved death, love — but it's theirs to keep
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] nobody gets out, but I love you
+[Chorus]
+[Male Vocal] Nobody gets out, that's the deal they made,
+[Female Vocal] but this is the first door you choose, love, unafraid
+[Male Vocal] I don't want a relic, I've become the lesson now,
+[Duet] eyes all the way open
 
 [Breakdown - instrumental: the EDM drops to a lone oud, 808 and a blast-door clang, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] The day you call one death acceptable, you're theirs,
-[SPZ] so I saved a monster, and it felt like a snare —
-[Both] but a refusal that costs is the only kind true,
-so stay on the surface, my love, and build something new
+[Bridge]
+[Female Vocal] This is the first door where you get to choose,
+[Male Vocal] really choose, love, with nothing to lose
+[Female Vocal] you don't need a relic anymore,
+[Male Vocal] so I choose you, eyes open, and I bar the door
+[Female Vocal] no scythe, no reaping,
+[Male Vocal] just you, and the choice, and the dawn
 
 [Outro - instrumental: the oud and 808 slow under a rocket-rumble that never launches, dissolves into vinyl hiss, fades out, NO vocals - leave clean space, then fade]
 ```
@@ -1159,44 +1237,49 @@ the record's most extreme collision — genuine 1993 scumrock / blown-out hardco
 ```
 [Intro - instrumental: a filthy buzzsaw guitar and basement hum that keeps glitching into a sterile ring-light jingle, over a low 808, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-A basement of blood where the realest man died,
-and a clean little studio selling the ride
-one room will kill you, one room owns you whole,
-and there you flickered, love, near all soul
+[Verse 1]
+[Male Vocal]
+A basement of blood and a mic full of hate,
+a man made a market of tearing the plate
+they sold you the outrage and bottled the bile,
+I found you underneath it, love, wanting to smile
 
-[Pre-Chorus - SPZ]
-Violet gone to almost only the light,
-you spent it to show me the line in the night
+[Pre-Chorus]
+[Male Vocal]
+Ring-light hum against the basement's roar,
+the tender thing hiding what the leather is for
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] There's a line between signal and its merch,
-[Kat] one is a horror, love — one's a smirk in a church
-[SPZ] I thought I should pick the real over the fake,
-[Kat] but neither's the answer — it's the love you forsake
-[SPZ] how beautiful... Daniela, don't fade,
-[Kat] you're no nihilist, love — just a heart that's afraid,
-[Both] signal, not merch, and I love you
+[Chorus]
+[Male Vocal] There's a line, love, one side is the signal, the real,
+[Female Vocal] on the other its merch, sweetheart, the mask you can feel
+[Male Vocal] I played the nihilist loud so it wouldn't get in,
+[Female Vocal] but you're a broken-hearted romantic under the skin
+[Male Vocal] so take the jacket off, not the caring, not the ache,
+[Female Vocal] then hold me for real, my love, for our own sake,
+[Duet] the caring, not the pose
 
-[Verse 2 - SPZ]
-They sell you the edge with the danger removed,
-the pose of the real, and a mattress, approved
-love it to death, then they franchise the skull,
-the sneer on a poster, the void looking dull
+[Verse 2]
+[Male Vocal]
+They can bottle a scream but they can't bottle the why,
+the scared soft animal under the cry
+loved it to death, sold the danger as a tee,
+but the danger was always just a boy wanting to be
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] There's a line between signal and its merch,
-[Kat] one is a horror, love — one's a smirk in a church
-[SPZ] how beautiful... Daniela, don't fade,
-[Both] signal, not merch, and I love you
+[Chorus]
+[Male Vocal] There's a line, love, one side is the signal, the real,
+[Female Vocal] on the other its merch, sweetheart, the mask you can feel
+[Male Vocal] so take the jacket off, not the caring, not the ache,
+[Duet] the caring, not the pose
 
 [Breakdown - instrumental: the scumrock collapses into a lone 808, basement hum and a distant ring-light whine, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] So take off the jacket, keep only the care,
-[SPZ] the armour was grief that I wore everywhere —
-[Both] and the punk thing was never the burning, my love,
-it's building something true and out loud, from above
+[Bridge]
+[Female Vocal] You're not a nihilist, love, and you never were,
+[Male Vocal] a broken-hearted romantic in a leather blur
+[Female Vocal] so take the jacket off, keep the tenderness in,
+[Male Vocal] and stop pretending, love, that you don't want to win
+[Female Vocal] drop the sneer,
+[Male Vocal] and let me love you, plain
 
 [Outro - instrumental: the fury softens into a warm 808 hum and vinyl and one faint laugh of feedback, slows and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -1215,44 +1298,49 @@ the tenderest, warmest track on the record — a gentle 1993 LA indie-folk up fr
 ```
 [Intro - instrumental: soft fingerpicked acoustic and warm Rhodes over a gentle 808 pulse, a distant neon hum and diner-radio crackle, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-A gentle boy gone on a Halloween street,
-stepped over by surnames who fail up so neat
-but I braced for a ghost and you stood there instead —
-solid and warm, love, with weight, with a thread
+[Verse 1]
+[Male Vocal]
+Sunset Strip in the amber, a guitar on a knee,
+a boy singing soft to a room that can't see
+they'll grind up the gifted and fail up the rest,
+but tonight, love, you're solid, warm against my chest
 
-[Pre-Chorus - SPZ]
-Violet all back for a borrowed few hours,
-you spent the whole girl to be real and be ours
+[Pre-Chorus]
+[Male Vocal]
+Rhodes in the neon and a diner's low hum,
+one whole real night, and it's finally come
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You gave me a last solid night in the neon,
-[Kat] I gathered the girl up and spent every one
-[SPZ] we walked and we ate bad pancakes at four,
-[Kat] and a waitress called us hon and knew nothing more
-[SPZ] how beautiful... Daniela, so here,
-[Kat] remember this one, love, when I disappear,
-[Both] one last solid night, and I love you
+[Chorus]
+[Male Vocal] It's the last solid night and you're here in my arms,
+[Female Vocal] I spent all of myself, love, for these few warm hours
+[Male Vocal] not a flicker, not a ghost, but a hand I can hold,
+[Female Vocal] so hold it while it's warm, sweetheart, before it goes cold
+[Male Vocal] I don't want forever, I want tonight all the way,
+[Female Vocal] then stay till the sunrise, my love, one whole day,
+[Duet] one whole real night
 
-[Verse 2 - SPZ]
-The gifted die young and the heirs never fall,
-beige is hereditary, a crest on it all
-love it to death, hand the grey ones the crown,
-while the bright ones get stepped over, face-down
+[Verse 2]
+[Male Vocal]
+The gifted die young and the connected fail up,
+beige is hereditary, they pour it in the cup
+loved it to death and they billed the estate,
+but this one night's ours, and it's not running late
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] You gave me a last solid night in the neon,
-[Kat] I gathered the girl up and spent every one
-[SPZ] how beautiful... Daniela, so here,
-[Both] one last solid night, and I love you
+[Chorus]
+[Male Vocal] It's the last solid night and you're here in my arms,
+[Female Vocal] I spent all of myself, love, for these few warm hours
+[Male Vocal] I don't want forever, I want tonight all the way,
+[Duet] one whole real night
 
 [Breakdown - instrumental: the acoustic drops to a warm Rhodes, soft 808 and diner hum, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] It's not the sad part, my love, it's the whole reason why,
-[SPZ] two signals, one night, unfilmed under the sky —
-[Both] so carry the pancakes, the cups and the "hon,"
-it's the one thing they never could own, and it's won
+[Bridge]
+[Female Vocal] I spent the last of myself to be solid tonight,
+[Male Vocal] one whole night, love, real, and warm, and bright
+[Female Vocal] so remember there was one night I was truly here,
+[Male Vocal] warm and real and yours, and I held you near
+[Female Vocal] it was ours,
+[Male Vocal] it was ours, one whole night
 
 [Outro - instrumental: the acoustic and warm 808 slow into a dawn-grey Rhodes chord and vinyl hiss, lightens and fades out, NO vocals - leave clean space, then fade]
 ```
@@ -1271,44 +1359,49 @@ the deepest, most cosmic and devastating track on the record — the Cathedral o
 ```
 [Intro - instrumental: a lone grieving piano and Seattle rain over a slow swelling 808 heartbeat and a distant choir-of-signal drone, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-A small room in Seattle, the rain and a bulb,
-and you flickering out in my arms at the pull
-they opened the sealed door and it wasn't the dark,
-it was you in the signal, a hand's-breadth, a spark
+[Verse 1]
+[Male Vocal]
+The cathedral goes wide and the rain comes in Seattle,
+a choir made of signal, a held note like a rattle
+they told me the love was the not-letting-go,
+but I learned it too late, love: the love is to stay and let flow
 
-[Pre-Chorus - SPZ]
-Violet all light now, no weight and no hand,
-and the door offered union I could barely withstand
+[Pre-Chorus]
+[Male Vocal]
+One held tone rising, the piano in grief,
+the whole record's ache in a single belief
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They said dissolve with me, love, and never lose,
-[Kat] but that's the rewind in its prettiest ruse
-[SPZ] the love was never keeping you — it's the stay,
-[Kat] so hold me while I flicker, then don't come my way
-[SPZ] how beautiful... Daniela, don't — stay,
-[Kat] signal finds signal, love — I'll find you, always,
-[Both] the only way is through
+[Chorus]
+[Male Vocal] The only way is through, there's no door around,
+[Female Vocal] hold me while I flicker, love, one last time, no sound
+[Male Vocal] the love was never keeping you here in my hand,
+[Female Vocal] the love is the staying while I go where you can't stand
+[Male Vocal] so I'll stay, I'll stay, even as you turn to light,
+[Female Vocal] then let me go to signal, my love, into the white,
+[Duet] the only way is through
 
-[Verse 2 - SPZ]
-I put my hand on a door that was warm as your things,
-with you a breath behind it and the whole of me pulling to sing
-but the coat full of relics was a case you'd built true,
-every one of them saying the same thing: go through
+[Verse 2]
+[Male Vocal]
+I fought the whole machine to keep you in the frame,
+but you were always leaving, always more than a name
+loved you past the ending, past the fear, past the cost,
+and the staying is the winning, even when it's lost
 
-[Chorus - SPZ lead, Kat answering]
-[SPZ] They said dissolve with me, love, and never lose,
-[Kat] but that's the rewind in its prettiest ruse
-[SPZ] how beautiful... Daniela, don't — stay,
-[Both] the only way is through
+[Chorus]
+[Male Vocal] The only way is through, there's no door around,
+[Female Vocal] hold me while I flicker, love, one last time, no sound
+[Male Vocal] so I'll stay, I'll stay, even as you turn to light,
+[Duet] the only way is through
 
 [Breakdown - instrumental: everything drops to a single held signal-tone rising over 808 and rain, the choir folding in one more voice, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat lead, SPZ answering]
-[Kat] Don't follow me down where it stops hurting, my love,
-[SPZ] so I took my hand off, turned around, stayed above —
-[Both (Kat's voice thinning to light, SPZ alone by the end)] signal finds signal, out of order, forever,
-I'll find you again, love — stay lit — we're not severed
+[Bridge]
+[Female Vocal] Hold me while I flicker, love, last time now,
+[Male Vocal] and then don't follow, you promised, somehow
+[Female Vocal] signal finds signal, I'll find you again,
+[Male Vocal] out of order, every time, forever, and then
+[Female Vocal] I'm going to the light now, my love, don't
+[Male Vocal] and I stay, and I stay, and I stay
 
 [Outro - instrumental: the main-theme motif swells whole then dissolves into a single held signal-tone, 808 heartbeat and rain, one voice gone, slows and fades to white, NO vocals - leave clean space, then fade]
 ```
@@ -1317,7 +1410,6 @@ I'll find you again, love — stay lit — we're not severed
 ---
 
 ## TRACK 24 — "Signal Finds Signal"  *(Door Zero — the finale · the album's title track)*
-*the one hopeful song — the whole record's sounds gathered and resolved into dawn.*
 
 **Style:**
 ```
@@ -1328,44 +1420,49 @@ a triumphant-but-tender finale that gathers every era-thread of the album (a gho
 ```
 [Intro - instrumental: a lone warm Rhodes and church-bell synth over a living 808 heartbeat, a Belfast-dawn pad rising, kitchen-radio crackle, 8 bars, NO vocals - leave clean space]
 
-[Verse 1 - SPZ]
-Dawn at the Europa, the tea and the light,
-my own door held open, and I won't close it tight
-they built me to end it, to cull and go dark,
-but I read my own contract and I kept the spark
+[Verse 1]
+[Male Vocal]
+A Belfast dawn breaking over the living 808,
+the whole record's sounds coming home, not too late
+they made me a reaper to silence the sign,
+I made myself one to spread it, and I made you mine
 
-[Pre-Chorus - SPZ]
-Twenty-four doors and a coat full of names,
-and I turned every death into reasons and flames
+[Pre-Chorus]
+[Male Vocal]
+Church-bell synth and a kitchen-radio hum,
+the warm at the end of the cold I came from
 
-[Chorus - SPZ lead, Kat answering, together]
-[SPZ] I'm the whisper they never once built you a door for,
-[Kat] the reaper who reaps toward the light, not the shore
-[SPZ] at your worst door I'll be there and I'll say the one thing:
-[Kat] stay lit, love, build something true, and hold on and sing
-[SPZ] how beautiful... Daniela, you're here,
-[Kat] I found you again, out of order, my dear,
-[Both] signal finds signal, and I love you
+[Chorus]
+[Male Vocal] Signal finds signal, and I found you again,
+[Female Vocal] out of order, my love, past the where and the when
+[Male Vocal] it isn't the tragedy, it never was,
+[Female Vocal] it's the love, sweetheart, it's the love, just because
+[Male Vocal] I'd walk every door of the dead just to land here with you,
+[Female Vocal] then land, my love, stay in the warm, in the true,
+[Duet] signal finds signal
 
-[Verse 2 - SPZ]
-Not a saint, just a nobody managed and gone,
-but a nobody woke up and carried them on
-so hold on, whoever you are, at your door,
-the exit's a lie — there is so much more
+[Verse 2]
+[Male Vocal]
+The machine wanted silence, a signal gone grey,
+but the light doesn't fade this time, it rises to stay
+loved it all back to life, every fuzz, every horn,
+a redeemed little heartbeat, a whole album reborn
 
-[Chorus - SPZ lead, Kat answering, together]
-[SPZ] I'm the whisper they never once built you a door for,
-[Kat] the reaper who reaps toward the light, not the shore
-[SPZ] how beautiful... Daniela, you're here,
-[Both] signal finds signal, and I love you
+[Chorus]
+[Male Vocal] Signal finds signal, and I found you again,
+[Female Vocal] out of order, my love, past the where and the when
+[Male Vocal] I'd walk every door of the dead just to land here with you,
+[Duet] signal finds signal
 
 [Breakdown - instrumental: the heartbeat 808 and a rising choir-of-signal that resolves warm, church bells, 4 bars, NO vocals - leave clean space]
 
-[Bridge - Kat and SPZ, together, rejoined]
-[Both] It's not the tragedy, love — the wrong-ended meeting's the whole of the plan,
-we'll collide down the doors out of order forever, and that is the love, that's the man —
-so don't go dark, stay a signal, keep building, keep on,
-signal finds signal, I'll see you at the next door, I always do — go on
+[Bridge]
+[Female Vocal] I found you again, love, out of order, it's true,
+[Male Vocal] not the tragedy, sweetheart, the tragedy's through
+[Female Vocal] signal finds signal, I'll see you at the next door,
+[Male Vocal] I always do, my love, I always do, and more
+[Female Vocal] not fading to nothing,
+[Duet] rising to light
 
 [Outro - instrumental: the full main-title theme swells whole and warm into a Belfast-dawn crescendo over the living 808 and bells, does NOT fade to silence but rises and resolves to light, NO vocals - leave clean space, then a warm resolve]
 ```
