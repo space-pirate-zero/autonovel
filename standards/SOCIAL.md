@@ -46,6 +46,16 @@ and swap the specifics).
 - Verify motion by extracting frames (`ffmpeg -ss <t> -i out.mp4 -frames:v 1`) at a
   mid-animation and a settled timestamp before declaring a render good.
 
+## Substack daily drip (`books/<book>/substack/`)
+
+Turn the launch into a 29-day, one-episode-per-day Substack campaign. `gen_posts.py`
+builds a ready-to-publish **post** and short **Note** per episode — each carrying
+the Kindle + paperback + web links and hashtags *every day* — plus `SCHEDULE.md` /
+`schedule.csv`. Publish manually via Substack's scheduler, or use
+`push_and_schedule.py` (unofficial `python-substack` lib + a session cookie in the
+gitignored `.env`) to create drafts and auto-publish one per day. Post the email in
+the morning, drop the Note a couple hours later. See that folder's `README.md`.
+
 ## The full library (per book)
 
 3 hero videos (trailer + 2 audiograms) + **29 episode teasers** = 32 videos, plus

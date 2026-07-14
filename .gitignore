@@ -40,3 +40,7 @@ books/*/audiobook/*.log
 
 # --- Regenerable social video (bundled into press-kit.zip on GCS) ---
 books/*/social/video/
+
+# --- Substack automation runtime state / credentials (never commit) ---
+books/*/substack/draft_ids.json
+**/substack_cookies.json
