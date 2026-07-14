@@ -24,10 +24,13 @@ SUB = BOOK / "substack"
 CH = BOOK / "chapters"
 INTROS = BOOK / "audiobook" / "intros"
 HOOKS = json.load(open(BOOK / "social" / "hooks.json"))
+_TLDR_FILE = BOOK / "substack" / "tldr.json"
+TLDR = json.loads(_TLDR_FILE.read_text()) if _TLDR_FILE.exists() else {}
 N_EPISODES = 29
 
 # --- canonical links (source of truth: publishing/gen_site.py) ---
 SITE = "https://lasthumanceo.com"
+SUBSTACK = "https://spacepiratezero.substack.com"     # the Substack podcast (native listen)
 APPLE = "https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408"
 SPOTIFY = "https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M"
 KINDLE = "https://www.amazon.com/dp/B0H5YVJY3Z"      # Kindle e-book
@@ -75,6 +78,10 @@ def teaser(n):
 def post_md(n, when, teaser_no):
     t = clean_title(n)
     hook = HOOKS.get(str(n), "")
+    entry = TLDR.get(str(n), {})
+    tldr = entry.get("tldr") or recap(n)
+    moral = entry.get("moral", "")
+    moral_block = f"\n**The moral of the story:** {moral}\n" if moral else ""
     body = f"""---
 title: "EP {n:02d} — {t}"
 subtitle: "{hook}"
@@ -82,25 +89,22 @@ scheduled: {when.isoformat()}
 audiogram: {teaser(n)}
 ---
 
-▶️ **Listen free** — [Apple Podcasts]({APPLE}) · [Spotify]({SPOTIFY}) · [lasthumanceo.com]({ep_web(n)})
-📕 **Read it** — [Kindle]({KINDLE}) · [Paperback]({PAPERBACK})
+🎧 **Listen to Episode {n:02d}** — [on Substack]({SUBSTACK}) · [Apple Podcasts]({APPLE}) · [Spotify]({SPOTIFY}) · [web player]({ep_web(n)})
 
 ---
 
-**{hook}**
+## TLDR
 
-{recap(n)}
-
-> ▶️ **Press play — Episode {n:02d} is live.** [Apple]({APPLE}) · [Spotify]({SPOTIFY}) · [Web]({ep_web(n)})
-
-*(Chapter audiogram: {teaser(n)} — drop it in as the post's video/thumbnail.)*
-
+{tldr}
+{moral_block}
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack]({SUBSTACK}) · [Apple Podcasts]({APPLE}) · [Spotify]({SPOTIFY}) · [web player]({ep_web(n)})
+📖 **Read the book:** [Kindle]({KINDLE}) · [Paperback]({PAPERBACK})
+🌐 **More:** [{SITE.replace('https://','')}]({SITE}) · [press kit]({SITE}/press)
 
-🎧 **Listen:** [Apple]({APPLE}) · [Spotify]({SPOTIFY}) · [{SITE.replace('https://','')}]({SITE})
-📖 **Read:** [Kindle]({KINDLE}) · [Paperback]({PAPERBACK})
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
@@ -119,6 +123,7 @@ def note_md(n, when):
 
 {hook}
 
+🎧 Listen on Substack: {SUBSTACK}
 ▶️ Apple: {APPLE}
 🎧 Spotify: {SPOTIFY}
 🌐 Web: {ep_web(n)}

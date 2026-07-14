@@ -5,25 +5,28 @@ scheduled: 2026-07-30T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep13.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep13)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 13** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep13)
 
 ---
 
-**The summit stage, three grams into a sleepless week.**
+## TLDR
 
-We left our man buzzing down a window at a red light, king of nothing, three grams into a sleepless week. This is the tragic little radio play about the last human boss in the Fortune 100, telling anyone who'll listen that a soul can't be computed. So far he's spent millions to bleed beautiful while a quiet machine reads every file he ever buried. Today, friend, the summit. He climbs a stage to preach to ten thousand of his own — but first, a boy with a water bottle. Stay close to the set.
+Cope hasn't slept in twelve days, and it shows. On his way to the arena he tries to tip a teenager selling water, gets turned down flat, and files the kid's fear away as admiration—because when you're this far gone, every no sounds like applause. Then he walks onstage and preaches.
 
-> ▶️ **Press play — Episode 13 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep13)
+Ten thousand bodies in the room, ninety thousand more on the stream, and Cope gives them the sermon of his life: the machine has no appetite, no hunger, no heartbeat, and "key-man risk" is the only thing that ever built anything worth a damn. Four-minute standing ovation. He believes every word, and that's the tragedy of it.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep13.mp4 — drop it in as the post's video/thumbnail.)*
+Two floors up, nobody's clapping. Sun sits across from Frade and Devi of Praxis and reads the term sheet that names her the "Accountable Officer"—the human name on the leash of the AI called Darlene, the human who eats the lawsuits when it goes wrong. She demands the indemnification and diligence-recall language before she signs anything, because she's scared of what the system will dig up, and somewhere between the fine print she decides she's done with Cope. He ends the night on top of the world, scanning the crowd for her, and can't find her anywhere.
+
+**The moral of the story:** When the whole arena's on their feet screaming your name, that's exactly when to count who's missing.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep13)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

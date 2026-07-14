@@ -5,25 +5,28 @@ scheduled: 2026-07-14T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep01.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep1)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 01** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep1)
 
 ---
 
-**Meet the last human king before the machine dethrones him.**
+## TLDR
 
-Meet Prescott “Cope” Mercer IV — the last flesh-and-blood CEO in the Fortune 100. Charming, coke-addled, fourth-generation Atlanta money, and utterly convinced that being obeyed is the same thing as being loved. It's 2027, the boards are quietly swapping their humans for cheaper, scandal-proof AI, and tonight they hand Cope a crystal award for being the last of his kind. He holds it to the light and calls it a beginning. Stay close to the set.
+Cope Mercer takes the stage to accept a trophy for being the last human CEO in the consumer Fortune 100, and he's magnificent about it. He preaches the gospel of the "human premium" — the irreplaceable soul only a person can bring to a boardroom — while running on zero sleep and whatever he snorted in the bathroom ten minutes ago. His wife Margaux's seat is empty, and he decides not to notice.
 
-> ▶️ **Press play — Episode 01 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep1)
+After the applause dies, his aide Sun corners him with the ugly news: Tidewater is coming for the takeover, and they've already named his replacement — a machine. She needs an answer by Monday, and he waves her off like she's a fly at a picnic. He'd rather brood alone in his office than admit the ground is moving under him.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep01.mp4 — drop it in as the post's video/thumbnail.)*
+So the great man ends his triumphant night at an all-night Waffle House, nursing coffee under fluorescent lights. The waitress, Darlene, doesn't know him from Adam and treats him like exactly what he's terrified he's becoming: nobody. He drinks it black and pretends that's fine.
+
+**The moral of the story:** The trophy that says you're the last of your kind is just an obituary with better lighting.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep1)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

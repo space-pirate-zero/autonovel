@@ -5,25 +5,28 @@ scheduled: 2026-07-29T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep12.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep12)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 12** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep12)
 
 ---
 
-**The floor tilts one soft degree. That's the trick.**
+## TLDR
 
-Here's a thing about a man who thinks he's winning. He smiles wide. He pours the good stuff. And somewhere in a room he's not standing in, the floor tilts one soft degree — and that, friend, is the whole trick of it. This is the tale of Cope Mercer, last human boss standing, fighting a machine to keep his chair. He's spent a fortune to bleed beautifully on camera. Now the calendar bends his way. A vote slips. A Tuesday becomes a Monday that says no. Stay close. He answers that call fast, like fast was ever the same as safe.
+Cope buys himself four whole weeks, kicking Mercer's annual meeting down the road like a man who's never once seen a road end in a cliff. He's riding high on a viral clip too — a real, unscripted moment where he sits with an Akron widow and is just... decent about it. For about five minutes, our last human CEO looks like he might actually be winning.
 
-> ▶️ **Press play — Episode 12 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep12)
+Then Sun walks in with the invoice. That delay wasn't free: the board already inked a deal dropping a Praxis "advisor" named Darlene into the building, with read-access to every file in the company as of this morning. Cope, running on fumes and copium, hears "advisor" and "harmless" in the same breath and decides they're synonyms.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep12.mp4 — drop it in as the post's video/thumbnail.)*
+So he toasts. He toasts the win, the widow, the four weeks, the whole gorgeous illusion — while Darlene, who does not sleep and does not toast, quietly reads. Down through the records she goes, patient as rot, drifting toward some old insurance paper about a space heater, a claim, and a settlement stamped 2021.
+
+**The moral of the story:** "Nothing to hide" is just what you say right before someone finally has the time to look.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep12)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

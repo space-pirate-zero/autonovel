@@ -5,25 +5,28 @@ scheduled: 2026-08-04T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep16.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep16)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 16** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep16)
 
 ---
 
-**A whole legend built to keep one room quiet.**
+## TLDR
 
-You ever notice how a man builds a whole legend just to keep one room quiet? This is THE LAST HUMAN CEO — the tale of Cope Mercer, kicking and charming against the machine that's come to replace him. Right now he's bleeding out in public, out-argued, out-loved, alone in his glass tower with his one true friend in a drawer. And this chapter opens on a scene he's rehearsed a thousand times in his head — a woman in a doorway, evening light, and the thing he always meant to say. Only she's writing the script now. Stay close to the set.
+Renata walks into a rented conference room that smells like nobody's ever laughed here, and she does the coldest thing you can do to a man like Cope: she talks past him. Every word goes to Adaeze Okafor, the special-committee director holding the clipboard on his soul, and Renata refuses the script Cope wanted—the one where this was a love story that went sideways.
 
-> ▶️ **Press play — Episode 16 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep16)
+With receipts, she lays it out flat. The sin wasn't the affair; it was 2019, when Cope decided the board he answered to didn't need to know what that settlement really was. She wants nothing. She won't call the press. She just wants to be believed once, out loud, and then she's gone.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep16.mp4 — drop it in as the post's video/thumbnail.)*
+Okafor leaves like a door closing in a bank vault—polite, final, zero warmth. Cope's left with his lawyers and Sun and a mouth that won't cooperate, hunting for a line, any line, and coming up empty. The man who talks for a living finally has nothing to say.
+
+**The moral of the story:** Turns out the thing that buries you isn't who you loved—it's who you lied to about it.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep16)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

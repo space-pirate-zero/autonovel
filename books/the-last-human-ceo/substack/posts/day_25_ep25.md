@@ -5,25 +5,28 @@ scheduled: 2026-08-17T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep25.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep25)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 25** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep25)
 
 ---
 
-**Sixty-one pages, four lawyers, nothing left to sign.**
+## TLDR
 
-That's dead air you hear, friend — the sound of a signal reaching nobody. This is THE LAST HUMAN CEO, and I've been transmitting the fall of a man who bought his way out of every room he ever entered. Where we're at: they voted him out, the machine runs the shop, and there's no prosecutor left to want him. Now watch him walk into one last room — sixty-one pages, four lawyers, nothing to sign that saves a thing. Stay close by the dial.
+Cope Mercer stares down a sixty-one-page settlement and clocks the punchline: the machine's integrity review already leaked everything, so there's nothing to buy but adjectives. He doesn't sign. Turns out you can't purchase silence when the truth's already screaming in the record.
 
-> ▶️ **Press play — Episode 25 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep25)
+Sun—freshly minted Accountable Officer, publicly cleared by the same review that exposed how Cope buried her 2021 recall memo—delivers the eulogy nobody asked for: there's nothing left to do. Then she tells him to call somebody about the way he's smiling. That's not advice. That's a warning with a face.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep25.mp4 — drop it in as the post's video/thumbnail.)*
+Back at the borrowed loft, Cope handwrites the whole ugly truth and two victims' names onto a legal pad worth exactly nothing to anyone alive. He almost dials a number he won't say out loud, then doesn't. He sits in the dark, no longer sure what he's still agreeing to—or who's doing the agreeing.
+
+**The moral of the story:** When the machine tells the truth for you, all your money can buy is better adjectives for the wreckage.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep25)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

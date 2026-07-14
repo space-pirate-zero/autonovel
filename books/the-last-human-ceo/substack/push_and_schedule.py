@@ -116,6 +116,7 @@ def main():
     ap.add_argument("--test", action="store_true", help="connect only, no writes")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--force", action="store_true", help="recreate drafts even if already in draft_ids.json")
+    ap.add_argument("--purge", action="store_true", help="delete every draft in draft_ids.json, clear the file, and exit")
     ap.add_argument("--delay", type=float, default=8.0)
     ap.add_argument("--schedule", action="store_true",
                     help="also schedule auto-publish, using each post's 'scheduled' date")
@@ -126,6 +127,19 @@ def main():
     print("Connected. user_id =", api.get_user_id(), "| pub =", os.environ.get("SUBSTACK_PUBLICATION_URL"))
     if a.test:
         print("Test OK — no drafts created."); return
+
+    if a.purge:
+        ids = json.loads(IDS_FILE.read_text()) if IDS_FILE.exists() else {}
+        for ep in sorted(int(k) for k in ids):
+            did = ids[str(ep)]
+            try:
+                with_backoff(lambda: api.delete_draft(did), a.delay)
+                print(f"  deleted draft EP {ep:02d} (id {did})")
+            except Exception as e:
+                print(f"  EP {ep:02d} (id {did}) delete failed: {e}")
+            time.sleep(a.delay)
+        IDS_FILE.write_text("{}")
+        print(f"purged {len(ids)} drafts; {IDS_FILE.name} cleared."); return
 
     posts = POSTS[:a.limit] if a.limit else POSTS
     ids = json.loads(IDS_FILE.read_text()) if IDS_FILE.exists() else {}

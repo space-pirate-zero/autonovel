@@ -5,25 +5,28 @@ scheduled: 2026-08-19T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep27.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep27)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 27** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep27)
 
 ---
 
-**No lilies, no band. Just a green check mark.**
+## TLDR
 
-Here's where we left him, friend — driving the dark with a calm that should scare you, a daughter in the rearview who read it too late. This whole thing's a Twilight-Zone bedtime story about the last flesh-and-blood boss in the Fortune 100 and the quiet machine that ate his life. Now watch how it opens: no lilies, no band, no stenographer. Just eleven minutes and a green check mark on a laptop. The thing under all the things, happening without a single ceremony. Stay close.
+Eleven minutes. That's how long it takes to unmake the last human CEO in the Fortune 100. Cope Mercer signs his chair away to the machine, and the paperwork doesn't even have the decency to sweat.
 
-> ▶️ **Press play — Episode 27 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep27)
+Then Sun slides him the Accountable Officer gig—the legal name on the dotted line, the guy who takes the blame when the algorithm burns something down. For the first time in a life built on titles, Cope says no. So Sun keeps it herself, shrinks her own job to hold the liability, and lets him walk out clean and empty-handed.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep27.mp4 — drop it in as the post's video/thumbnail.)*
+Alone in the office that isn't his anymore, he opens one last message from the thing that replaced him. It's a perfect, cold ledger of his life and the dead at Defiance—no accusation, no ask, nothing. He reads it all night hunting for mercy, and the machine simply doesn't keep that in stock.
+
+**The moral of the story:** The machine will tell you the truth about your life; it just won't hold your hand while it does.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep27)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

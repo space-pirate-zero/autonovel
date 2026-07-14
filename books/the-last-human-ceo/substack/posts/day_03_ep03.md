@@ -5,25 +5,28 @@ scheduled: 2026-07-16T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep03.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep3)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 03** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep3)
 
 ---
 
-**Our mayonnaise prince calls the knife a compliment.**
+## TLDR
 
-—and that's where we left him, our mayonnaise prince, crowned last human king of the boardroom, high as a steeple and calling the knife at his throat a compliment. This is THE LAST HUMAN CEO, friend, a sad little comedy I'm beaming out from the salvage decks. So far he's danced past every warning Sun and the board could hand him, humming his precious "Human Premium" while the paper piles up behind his back. This one opens at 9:14 on a Wednesday, when his aide walks in carrying nothing at all — and for Sun, empty hands are a kind of scream. Stay close to the set.
+Cope Mercer wakes up to a 13D filing with his name on the chopping block, courtesy of Tidewater, who want to bolt an AURELIUS box into his chair. Then he flips on Halloran's show and watches Gus Frade smile-kill him in real time, calling him a "beloved liability" — which is corporate for "we already picked out the flowers." So Cope does what every doomed man with a good jaw does: he decides to fight on television.
 
-> ▶️ **Press play — Episode 03 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep3)
+He names his last stand "The Human Premium," a pitch that says people are worth more than the thing that never sleeps and never asks for a raise. Sun begs him to stand down. Viv, his own daughter, tells him to stay off the air. Cope hears the love and calls it noise.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep03.mp4 — drop it in as the post's video/thumbnail.)*
+He texts a columnist his lawyers explicitly told him not to text, because self-sabotage feels like control when you're out of it. He keeps drafting his counterargument, keeps reaching for the little something in the desk drawer that makes the numbers look survivable. And while he writes his masterpiece, Sun quietly kills the Halloran booking out from under him — to save him from himself.
+
+**The moral of the story:** When everyone who loves you tells you not to go on air, that's not a critique — that's the smoke detector, and you're the fire.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep3)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

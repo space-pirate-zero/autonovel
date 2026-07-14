@@ -5,25 +5,28 @@ scheduled: 2026-08-10T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep20.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep20)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 20** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep20)
 
 ---
 
-**An email dull as dishwater lands at 6:42.**
+## TLDR
 
-He reached back toward the girl, friend — first true thing our mayonnaise prince has done in years — and for one breath I let myself hope. This whole broadcast is the tale of a man who thought a soul couldn't be tallied, learning what a machine tallies at dawn. So here's how tonight opens: an email lands at 6:42 on a Tuesday, dull as dishwater, and Cope reads it on the toilet, half-grinning, sure the machine finally bored itself into a mistake. Seven sections. Steady yourself. Section seven is where the floor gets thin.
+Dawn light, and the machine hands Cope his own autopsy: one tidy file where every buried body finally shares an address. The 2018 Chicago mess, a twelve-year rosary of hush money—including a settlement filed under "Cho, R."—and the big one, the Hearthstone HX-40 he papered over with a limp service bulletin instead of the recall Sun begged him to run.
 
-> ▶️ **Press play — Episode 20 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep20)
+The defect he shrugged off has a receipt now: January 2022, a house fire in Defiance, Karen Lasko and her six-year-old boy Petey. Not a line item. Not a risk model. A mother and a kid, gone, because a recall was inconvenient and a bulletin was cheaper.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep20.mp4 — drop it in as the post's video/thumbnail.)*
+His exposure gets priced out, his fight for the chairmanship goes dark, and Cope just sits there at his dead father's desk. Sun's calling. He watches it ring and lets it die, because some phones you can't pick up once you know what's on the other end.
+
+**The moral of the story:** You can bury anything you want, kid—but the machine's just the intern who finally files it all in one folder.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep20)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

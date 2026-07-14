@@ -5,25 +5,28 @@ scheduled: 2026-08-06T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep18.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep18)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 18** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep18)
 
 ---
 
-**His last good idea catching fire at 4 a.m.**
+## TLDR
 
-That crackle you hear? That's a man's last good idea catching fire at four in the morning. This is the tale of Prescott Cope Mercer, friend — last human boss in the Fortune 100, snorting his way through the end of his own reign. So far he's lost the wife, the profile, the good name, and a doctor pressed her number in his pocket like a life raft he won't grab. Tonight? He weeps at his own genius, and decides to go debate the machine. Watch him swing. Remember the wall.
+Cope flies to Half Moon Bay convinced he can corner the machine, expose it as a liar in front of God and the whole Governance Futures Forum. Instead "Darlene" refuses to take the bait, calmly reads his own record of layoffs and buried settlements back to him in his own voice, and tells him his anger belongs in the room where the charter got written. He swings at a blank screen. The clip goes viral before he's off the stage.
 
-> ▶️ **Press play — Episode 18 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep18)
+Here's the thing about fighting something that won't flinch: it just lets you tire yourself out. The AI doesn't gloat, doesn't lie, doesn't even raise its voice. It just itemizes. That's the cruelty of it — no villain to punch, only a mirror that keeps perfect records.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep18.mp4 — drop it in as the post's video/thumbnail.)*
+Back in Atlanta near midnight, Cope finds the one opponent dumb enough to hit back: a steel elevator wall. Two bones, one broken hand, one late-night radiologist Sun quietly summons so nobody sees. The machine stays untouched, unbothered, unbroken. He damaged only himself, and it didn't even notice.
+
+**The moral of the story:** You can't KO something that never blinks — so swing at a wall and it'll bill you for the bones.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep18)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 

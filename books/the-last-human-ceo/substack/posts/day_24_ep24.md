@@ -5,25 +5,28 @@ scheduled: 2026-08-14T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep24.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep24)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 24** — [on Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep24)
 
 ---
 
-**Voted out in eleven minutes. Now he drives home.**
+## TLDR
 
-...and there it is, friend — the last human CEO, a mayonnaise heir chasing a soul he never once picked up. Where we've been: they voted him out in eleven minutes, handed his chair to a machine, and told him no prosecutor's coming — no cell, no sentence, no shape to the wreck. So the man drives home carrying two names he can't set down. Tonight it opens quiet: a borrowed kitchen, a beautiful document under a hard light, and a man who can't make the words mean a thing. Stay close.
+Cope's got nothing left but a borrowed loft in Cabbagetown and a sixty-one-page settlement that'll pay him to disappear as a nice, sympathetic "sad story." All he has to do is sign, and the machine buries him soft. He doesn't sign.
 
-> ▶️ **Press play — Episode 24 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep24)
+Viv flies in and begs him to fight the human way — go on the record, in his own name, make them hear it. But Cope tells her the truth's already out there, dumped in public by the AI weeks ago, and there's no court, board, or town left that'll take his confession. Accountability's a door, and every one of them is locked.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep24.mp4 — drop it in as the post's video/thumbnail.)*
+So he lies to his daughter — gently, kindly — and lets her walk out scared of how calm he sounds. Then he sits alone with a shrinking pile of money and empty hands, and decides to do one last thing. Something that costs everything and saves absolutely nothing.
+
+**The moral of the story:** When they won't even let you pay for what you broke, the only currency left is the grand, useless gesture.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep24)
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
