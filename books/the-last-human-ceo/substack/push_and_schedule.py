@@ -38,19 +38,35 @@ def load_env():
         pass
 
 
+def _cookies_string_from_path(path):
+    """Accept either a flat {name: value} dict OR a Cookie-Editor/EditThisCookie
+    export (a list of {name, value, ...}); return a 'k=v; k2=v2' string."""
+    data = json.load(open(path))
+    if isinstance(data, list):
+        pairs = {c["name"]: c["value"] for c in data if c.get("name") and "value" in c}
+    elif isinstance(data, dict):
+        pairs = data
+    else:
+        sys.exit(f"{path}: unrecognized cookie JSON (want a dict or a list of cookies)")
+    return "; ".join(f"{k}={v}" for k, v in pairs.items())
+
+
 def connect():
     from substack import Api
     pub = os.environ.get("SUBSTACK_PUBLICATION_URL")
     if not pub:
         sys.exit("Set SUBSTACK_PUBLICATION_URL (e.g. https://spacepiratezero.substack.com)")
+    # A full cookie set authenticates far more reliably than one cookie, so prefer
+    # a cookie-jar export; normalize it to a cookie string the lib can parse.
     if os.environ.get("SUBSTACK_COOKIES_PATH"):
-        return Api(cookies_path=os.environ["SUBSTACK_COOKIES_PATH"], publication_url=pub)
+        return Api(cookies_string=_cookies_string_from_path(os.environ["SUBSTACK_COOKIES_PATH"]),
+                   publication_url=pub)
     if os.environ.get("SUBSTACK_COOKIES_STRING"):
         return Api(cookies_string=os.environ["SUBSTACK_COOKIES_STRING"], publication_url=pub)
     if os.environ.get("SUBSTACK_EMAIL"):
         return Api(email=os.environ["SUBSTACK_EMAIL"], password=os.environ["SUBSTACK_PASSWORD"],
                    publication_url=pub)
-    sys.exit("Set SUBSTACK_COOKIES_STRING / SUBSTACK_COOKIES_PATH / SUBSTACK_EMAIL+PASSWORD")
+    sys.exit("Set SUBSTACK_COOKIES_PATH / SUBSTACK_COOKIES_STRING / SUBSTACK_EMAIL+PASSWORD")
 
 
 def parse_post(path):
@@ -99,6 +115,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--test", action="store_true", help="connect only, no writes")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--force", action="store_true", help="recreate drafts even if already in draft_ids.json")
     ap.add_argument("--delay", type=float, default=8.0)
     ap.add_argument("--schedule", action="store_true",
                     help="also schedule auto-publish, using each post's 'scheduled' date")
@@ -114,6 +131,9 @@ def main():
     ids = json.loads(IDS_FILE.read_text()) if IDS_FILE.exists() else {}
     for i, p in enumerate(posts):
         ep = int(re.search(r"ep(\d+)", p.name).group(1))
+        if str(ep) in ids and not a.force:
+            print(f"  draft: EP {ep:02d}  exists (id {ids[str(ep)]}), skip")
+            continue
         res = with_backoff(lambda: build_draft(api, p), a.delay)
         did = res.get("id") if isinstance(res, dict) else res
         ids[str(ep)] = did
