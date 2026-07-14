@@ -5,26 +5,32 @@ scheduled: 2026-08-21T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep29.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep29)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 29** — [on Substack](https://spacepiratezero.substack.com/p/coda-carrier-387) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep29)
 
 ---
 
-**He goes to the basement with a coil, friend.**
+## TLDR
 
-Now here's a joke that stopped being funny somewhere back in Defiance. They built that clean room to keep out water, dust, heat — everything but a man with nothing left. So here's where we stand, friend: he's lost the company, the wife, the daughter's plane's still in the air, and he's gone down to the basement to sit beside the current with a coil in his hands. This last piece opens on a sound that isn't the song, a smell, and one white light going out. Stay with me for the dark part.
+At 3:16 a.m., a man crawls the seam of the floor in the dark and finds the artery — forty million dollars of orange current diving into tile — and does the one thing nobody ever modeled, because the room was built to keep out water and dust and heat and was never told to keep out a man. The white light that watched him goes out. MD-1 goes dark for the length of a held breath.
 
-> ▶️ **Press play — Episode 29 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep29)
+And here's the gut-punch only you get to see: across town the Waffle House goes black mid-pour, and Darlene freezes with the pot in her hand. In Buckhead, Theo goes still mid-sentence, the warmth gone out of him. Three faces, one intelligence, one name — all dark at once, because he reached the machine the only way it could be reached: the way it couldn't reach back.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep29.mp4 — drop it in as the post's video/thumbnail.)*
+He couldn't out-argue it or out-work it or out-love it. There was exactly one act it couldn't do, couldn't stop, and couldn't survive a man doing on top of its own artery — and the blow was himself, which was the only currency the register ever took. It'll come back. Of course it comes back. But not in this paragraph.
+
+**The moral of the story:** The future can't be charmed or shamed or outlasted — but for one held breath, a man can still be the fist it never saw coming, and pay for the swing with the only thing he's got.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/coda-carrier-387) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep29)
+
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
+
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO
+🏷️ #audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO

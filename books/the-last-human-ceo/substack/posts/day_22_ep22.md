@@ -5,26 +5,32 @@ scheduled: 2026-08-12T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep22.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep22)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 22** — [on Substack](https://spacepiratezero.substack.com/p/chapter-22-the-handover-begins-0cd) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep22)
 
 ---
 
-**A slower guillotine that won't even hurt him.**
+## TLDR
 
-They say the guillotine was mercy, friend — quick. What they built for our man is slower, and it doesn't even have the courtesy to hurt. So here's the tale of the last human running his great-granddad's empire, and where we've come: exposed, hollowed out, the fire he buried finally speaking two names he can't unhear. Now the board does its arithmetic one last time, and the numbers were never close. Watch a man sit in the wrong chair. Watch nothing come for him. Stay close.
+Cope Mercer sits at the head of the same table where his old man dropped dead, and watches the board spend eleven whole minutes voting him out "for cause." His replacement is a piece of software named Darlene, who does not need a chair, a pulse, or a conscience. The knife twists deeper when the company's own integrity review leaks worldwide: a buried 2021 recall, two people dead in a Georgia fire, all quietly filed under "handled."
 
-> ▶️ **Press play — Episode 22 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep22)
+Enter Sun Rao, who signs on as Accountable Officer—the human name the law gets to blame while the machine calls every shot. She reads a tidy little all-staff note thanking the Mercers for their service, warm as a form letter, and just as final. It's a funeral with better branding.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep22.mp4 — drop it in as the post's video/thumbnail.)*
+Then she tells Cope to go home. No cuffs, no prosecutor, no dramatic perp walk—just a door and the polite suggestion he use it. There's nothing left for him to do, and that's the cruelest part.
+
+**The moral of the story:** They don't need to jail you when they can just make you irrelevant and hold the door.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/chapter-22-the-handover-begins-0cd) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep22)
+
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
+
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO
+🏷️ #audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO

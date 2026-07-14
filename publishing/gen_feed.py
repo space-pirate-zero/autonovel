@@ -28,6 +28,41 @@ def public_base(cfg):
     return f"https://storage.googleapis.com/{g['bucket']}/{g['prefix']}"
 
 
+# canonical promo links (source of truth: publishing/gen_site.py) — embedded in
+# each episode's rich body so a Substack RSS-import gets audio + text + links + art.
+SITE = "https://lasthumanceo.com"
+APPLE = "https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408"
+SPOTIFY = "https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M"
+KINDLE = "https://www.amazon.com/dp/B0H5YVJY3Z"
+PAPERBACK = "https://www.amazon.com/dp/B0H6LCDJ9H"
+HASHTAGS = ("#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy "
+            "#SpacePirateZero #TheLastHumanCEO")
+
+
+def load_hooks(cfg):
+    try:
+        book = (ROOT / cfg["source"]["produced_dir"]).resolve().parents[1]
+        return json.loads((book / "social" / "hooks.json").read_text())
+    except Exception:
+        return {}
+
+
+def rich_html(it, hook, A):
+    """Per-episode HTML body (used by Substack's RSS import as the post content)."""
+    P = []
+    if hook:
+        P.append(f"<p><strong>{A(hook)}</strong></p>")
+    P.append(f"<p>{A(it['notes'])}</p>")
+    P.append(f'<p>🎧 <strong>Listen free:</strong> <a href="{A(APPLE)}">Apple Podcasts</a> · '
+             f'<a href="{A(SPOTIFY)}">Spotify</a> · <a href="{A(SITE)}/#ep{it["ep"]}">lasthumanceo.com</a></p>')
+    P.append(f'<p>📖 <strong>Read it:</strong> <a href="{A(KINDLE)}">Kindle</a> · '
+             f'<a href="{A(PAPERBACK)}">Paperback</a></p>')
+    P.append("<p><em>The Last Human CEO — a full-cast audiobook by Space Pirate Zero. "
+             "Signal finds signal.</em></p>")
+    P.append(f"<p>{A(HASHTAGS)}</p>")
+    return "".join(P)
+
+
 def probe_dur(p):
     r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                         "-of", "csv=p=0", str(p)], capture_output=True, text=True)
@@ -133,6 +168,7 @@ def render(cfg, base, items, self_url):
     out.append(f'<atom:link href="{A(self_url)}" rel="self" type="application/rss+xml"/>')
     if items:
         out.append(f'<lastBuildDate>{rfc2822(max(i["pub"] for i in items))}</lastBuildDate>')
+    hooks = load_hooks(cfg)
     for it in items:
         out.append('<item>')
         out.append(f'<title>{A(it["title"])}</title>')
@@ -144,7 +180,7 @@ def render(cfg, base, items, self_url):
         out.append(f'<pubDate>{rfc2822(it["pub"])}</pubDate>')
         out.append(f'<description>{A(it["notes"])}</description>')
         out.append(f'<itunes:summary>{A(it["notes"])}</itunes:summary>')
-        out.append(f'<content:encoded><![CDATA[<p>{it["notes"]}</p>]]></content:encoded>')
+        out.append(f'<content:encoded><![CDATA[{rich_html(it, hooks.get(str(it["ep"]), ""), A)}]]></content:encoded>')
         out.append(f'<enclosure url="{A(it["url"])}" length="{it["size"]}" type="audio/mpeg"/>')
         out.append(f'<itunes:duration>{hms(it["dur"])}</itunes:duration>')
         out.append(f'<itunes:image href="{A(it.get("art", cover))}"/>')

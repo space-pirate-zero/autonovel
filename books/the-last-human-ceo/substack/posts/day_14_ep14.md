@@ -5,26 +5,32 @@ scheduled: 2026-07-31T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep14.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep14)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 14** — [on Substack](https://spacepiratezero.substack.com/p/chapter-14-pressure-e6a) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep14)
 
 ---
 
-**A lit calendar he calls clarity before the fall.**
+## TLDR
 
-A full calendar glowing like a lit grid, every meeting a window, a man calling that clarity when it's really just the noise before the fall — that's where we are in THE LAST HUMAN CEO. He's just preached to ten thousand and gotten his four minutes standing. Now watch him, friend, at the glass with coffee he won't drink, certain this is the best week of his life. Everyone around him already smells the smoke. He doesn't. Stay close.
+Cope Mercer struts through the week like a man who's already won, deaf to every alarm bell in the building. Delia March keeps calling with facts he doesn't want checked, Hal Brennan keeps mumbling stay-away-from-the-press riddles, and Frade keeps carving him up on live TV for sport. Meanwhile Margaux tells him she's stopped counting his affairs—she's counting something else now, something she won't name before she walks upstairs and out of the frame.
 
-> ▶️ **Press play — Episode 14 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep14)
+So naturally he does what winners do: flies a young staffer named Mara out at dawn and goes hunting for the kind of anonymous nowhere at the city's edge where a man can pretend he's nobody. The predawn is quiet. Too quiet. The kind of quiet that's just the world holding its breath before it hits you.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep14.mp4 — drop it in as the post's video/thumbnail.)*
+He drives in with his phone gone dark, eleven silent calls stacking up behind the black glass while he coasts on borrowed confidence. Then he reaches the office, the screen wakes up, and there they are. Eleven missed calls, all waiting, all patient, all bad.
+
+**The moral of the story:** You can outrun the warning signs all week, but the phone always catches up.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/chapter-14-pressure-e6a) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep14)
+
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
+
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO
+🏷️ #audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO

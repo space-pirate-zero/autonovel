@@ -5,26 +5,32 @@ scheduled: 2026-07-20T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep05.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep5)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 05** — [on Substack](https://spacepiratezero.substack.com/p/chapter-5-theme-stated-2af) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep5)
 
 ---
 
-**Ten thousand square feet, two people, one dead star.**
+## TLDR
 
-There's a house I want to show you first. Ten thousand square feet, two people, one dead star between them, and not a single hand ever reaching across the dark to touch the other. This is the tragedy of the last human king in the machine age, friend, and here's where the floor goes soft under him. Saturday morning. Manifesto in his skull, a gram in the console, radio off so he can hear himself think — and up the driveway comes the one person who loves him enough to hand him the truth. Watch him mistake it for a knife. Stay close to the set.
+Cope drives home to Buckhead, that beautiful mausoleum where he and Margaux sleep behind separate doors and call it a marriage. He does a quiet little bump of cocaine before his daughter shows up, because nothing says loving father like chemical courage.
 
-> ▶️ **Press play — Episode 05 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep5)
+Viv comes to fight about his speech trashing the AURELIUS AI, and she nails him to the wall: he doesn't hate the machine running his company, he just wants the chair for himself. Margaux confirms the diagnosis, Cope charms his way sideways out of it, and Viv leaves with that specific kind of disappointment that only your own kid can hand you.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep05.mp4 — drop it in as the post's video/thumbnail.)*
+He can't stomach the house after that, so he ends up at the Waffle House on Ponce where Darlene brings his usual and a little grace he didn't earn. He sits in the fluorescent hum scribbling campaign notes, and somehow that greasy booth is the closest thing to home he's got.
+
+**The moral of the story:** You can't outrun a machine when the thing you're really fighting for is the throne, kid.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/chapter-5-theme-stated-2af) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep5)
+
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
+
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO
+🏷️ #audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO

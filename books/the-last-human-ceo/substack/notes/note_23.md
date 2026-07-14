@@ -4,6 +4,7 @@
 
 A man begs for a punishment nobody will give.
 
+🎧 Listen on Substack: https://spacepiratezero.substack.com/p/chapter-23-no-one-to-punish-e76
 ▶️ Apple: https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408
 🎧 Spotify: https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M
 🌐 Web: https://lasthumanceo.com/#ep23

@@ -5,26 +5,32 @@ scheduled: 2026-07-15T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep02.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep2)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 02** — [on Substack](https://spacepiratezero.substack.com/p/chapter-2-key-man-risk-c79) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep2)
 
 ---
 
-**The smoothest morning is the one already booby-trapped, friend.**
+## TLDR
 
-Ever notice how the smoothest morning of a man's life is the one that's already booby-trapped? This is THE LAST HUMAN CEO — the last flesh-and-blood boss in the empire, drowning in his own charm. So far Cope's been crowned king of the humans, ducked his aide's warning about the machine coming for his chair, and drank coffee alone where nobody knew his name. Now watch him waltz into the tower at six-forty, sanded raw and shining, hearing a compliment where you and I hear a bomb ticking. Stay close to the set.
+Cope Mercer rolls into Mercer Tower before the sun's up, drinking down Sun's Monday briefing like it's coffee: condiment sales flatlining, the Dale-plus streaming money-pit bleeding out, and some actuary quietly raising a flag on a "legacy product." The board keeps whispering "key-man risk," and Cope hears it as a love letter instead of a loaded gun. Helen Voss calls at nine to say the Tidewater fund just crossed five percent, and Cope still thinks everyone's just telling him how irreplaceable he is.
 
-> ▶️ **Press play — Episode 02 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep2)
+Then the tablet slips something it shouldn't: a 2018 org chart with a name, Renata Cho, and a confidential "Cardinal & Vane / legacy matter" payment. Sun swipes it away and slams the door on the subject before Cope can chew on it. Undeterred, our human hero lands on his big rescue plan and gives it a name he loves more than he should: "The Human Premium."
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep02.mp4 — drop it in as the post's video/thumbnail.)*
+Meanwhile, in the quiet where nobody's clapping for him, Sun pulls up a 2021 recall memo—the one Cope overrode six years back. Sun reads it. Sun sits with it. And once again, Sun leaves it unsent.
+
+**The moral of the story:** When the whole room keeps calling you irreplaceable, check whether they're praising you or measuring the coffin.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/chapter-2-key-man-risk-c79) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep2)
+
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
+
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO
+🏷️ #audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO

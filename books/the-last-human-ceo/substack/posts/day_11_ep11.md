@@ -5,26 +5,32 @@ scheduled: 2026-07-28T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep11.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep11)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 11** — [on Substack](https://spacepiratezero.substack.com/p/chapter-11-hollow-wins-5b8) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep11)
 
 ---
 
-**One lovely number at dawn, and he calls it love.**
+## TLDR
 
-That hiss you hear? That's me, bending the signal down to you from the salvage decks — Zero, with a story about the last man wearing a crown in a world that quit believing in kings. Our boy Cope's been bleeding beautiful for the cameras, buying his own magazine cover, mistaking applause for love. Tonight a poll lands at 6:40 in the morning, and a drowning man reads one lovely number and calls it dry land. Two rooms tonight, friend. Keep both eyes open.
+Cope's clutching a 41% poll and a shiny "Made By People" nod from Kestrel like they're a life raft, ignoring the part where investors already voted 63-37 for the machines. Viv tells him straight. Frade sends a mocking little note just to twist it. He waves them both off.
 
-> ▶️ **Press play — Episode 11 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep11)
+So he does what a man does when the numbers hurt: he stares at his account balance at 3 a.m. and lets a Waffle House booth pretend to be therapy. Wins on paper. Sleep nowhere. He's celebrating a scoreboard nobody else is looking at.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep11.mp4 — drop it in as the post's video/thumbnail.)*
+Across town in Buckhead, Margaux isn't waiting for a poll. She signs the divorce papers, backdates the split to gala night, mails them, and kills the lights. An envelope sits by the door, a quiet system logs her sealed filing, and Cope has no idea any of it happened.
+
+**The moral of the story:** A win you have to explain to yourself at 3 a.m. isn't a win — it's a receipt for everything you weren't watching.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/chapter-11-hollow-wins-5b8) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep11)
+
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
+
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO
+🏷️ #audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO

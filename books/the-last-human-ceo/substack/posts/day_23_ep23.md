@@ -5,26 +5,32 @@ scheduled: 2026-08-13T09:00:00
 audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep23.mp4
 ---
 
-▶️ **Listen free** — [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com/#ep23)
-📕 **Read it** — [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen to Episode 23** — [on Substack](https://spacepiratezero.substack.com/p/chapter-23-no-one-to-punish-e76) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep23)
 
 ---
 
-**A man begs for a punishment nobody will give.**
+## TLDR
 
-Ever wanted to see a man beg for a punishment the world won't give him? That's where we've landed, friend. This is THE LAST HUMAN CEO, my tragic little broadcast about the last flesh-and-blood boss in the Fortune 100. And oh, he's lost it all now — the chair, the wife, the daughter, the empire — voted out for concealing a recall that burned two people alive. So he waits for the cuffs, the cell, the bill come due. Watch the world decline to hand him even that. Stay close.
+Cope Mercer drives to Augusta to hear two lawyers say the same thing from opposite chairs: he walks. Okonjo the defense attorney calls it good news; Reyes the prosecutor calls it reality. A sealed settlement, a dead clock, and an AI that already paid out, recalled the product, and said sorry have scrubbed the Hearthstone fire clean.
 
-> ▶️ **Press play — Episode 23 is live.** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [Web](https://lasthumanceo.com/#ep23)
+Karen and Petey Lasko are still dead, and nobody's going to answer for it — because the machine that runs the company handled the wreckage faster and colder than any human ever could. There's no trial, no headline, no cell. The system didn't forgive Cope; it just decided he wasn't even worth the paperwork.
 
-*(Chapter audiogram: https://storage.googleapis.com/spz-podcasts/the-last-human-ceo/video/teaser_ep23.mp4 — drop it in as the post's video/thumbnail.)*
+Driving home alone, Cope does the math and hates the answer: the structure made him unnecessary, and it left no one standing to be punished. No court will take the case. So somewhere on that dark highway, he quietly appoints himself the last court left — and starts thinking about the sentence.
+
+**The moral of the story:** When the machine forgives you faster than you can confess, guilt stops being a verdict and starts being a job you have to do yourself.
 
 ---
 
-*THE LAST HUMAN CEO is a full-cast audiobook by **Space Pirate Zero** — 29 chapters, ~12.6 hours, written, scored, and voiced in-house at Spaceship Alpha 9. A new episode drops every day.*
+### Sources & links
 
-🎧 **Listen:** [Apple](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [lasthumanceo.com](https://lasthumanceo.com)
-📖 **Read:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+🎧 **Listen:** [Substack](https://spacepiratezero.substack.com/p/chapter-23-no-one-to-punish-e76) · [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408) · [Spotify](https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M) · [web player](https://lasthumanceo.com/#ep23)
+
+📖 **Read the book:** [Kindle](https://www.amazon.com/dp/B0H5YVJY3Z) · [Paperback](https://www.amazon.com/dp/B0H6LCDJ9H)
+
+🌐 **More:** [lasthumanceo.com](https://lasthumanceo.com) · [press kit](https://lasthumanceo.com/press)
+
+*THE LAST HUMAN CEO — a full-cast audiobook by **Space Pirate Zero**, made at Spaceship Alpha 9. New episode every weekday.*
 
 *Signal finds signal.*
 
-#audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO
+🏷️ #audiobook #podcast #audiodrama #scifi #AI #cyberpunk #darkcomedy #fiction #SpacePirateZero #TheLastHumanCEO

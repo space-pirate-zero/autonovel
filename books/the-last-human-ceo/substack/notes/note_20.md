@@ -4,6 +4,7 @@
 
 An email dull as dishwater lands at 6:42.
 
+🎧 Listen on Substack: https://spacepiratezero.substack.com/p/chapter-20-the-hearthstone-c85
 ▶️ Apple: https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408
 🎧 Spotify: https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M
 🌐 Web: https://lasthumanceo.com/#ep20
