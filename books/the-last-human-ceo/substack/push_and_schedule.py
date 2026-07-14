@@ -105,8 +105,13 @@ def with_backoff(fn, delay):
         try:
             return fn()
         except Exception as e:
-            if "429" in str(e) and attempt < 5:
-                w = delay * (2 ** attempt); print(f"    429; backing off {w}s ..."); time.sleep(w); continue
+            s = str(e).lower()
+            transient = any(t in s for t in ("429", "connection", "remotedisconnected",
+                                             "timed out", "timeout", "502", "503", "reset"))
+            if transient and attempt < 5:
+                w = delay * (2 ** attempt)
+                print(f"    transient ({str(e)[:50]}); backing off {w}s ...")
+                time.sleep(w); continue
             raise
 
 
