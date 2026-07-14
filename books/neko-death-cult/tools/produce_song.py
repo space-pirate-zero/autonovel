@@ -28,6 +28,11 @@ WORK = pathlib.Path("/tmp/neko_produce"); WORK.mkdir(exist_ok=True)
 DL = pathlib.Path.home()/"Downloads"
 REVIEW = pathlib.Path.home()/"Library"/"Mobile Documents"/"com~apple~CloudDocs"/"a+_neko"/"review"
 REVIEW.mkdir(parents=True, exist_ok=True)
+SUNO = pathlib.Path.home()/"Downloads"/"suno_raw"   # Suno vocal downloads (trackNN_vV.mp3)
+try:
+    from compose_songs import DOORS as _DOORS       # for door -> slug lookup
+except Exception:
+    _DOORS = {}
 
 def run(a): subprocess.run(a, check=True)
 def ff(*a): run(["ffmpeg","-y","-v","error",*a])
@@ -96,8 +101,11 @@ CLEAN="highpass=f=90,acompressor=threshold=-20dB:ratio=3:attack=6:release=140,vo
 HAUNT=("aformat=sample_rates=44100,asetrate=41000,aresample=44100,aecho=0.6:0.5:55:0.3,volume=1.9")
 INTRO_LEN=7.0; XF=0.5
 
-def produce(n):
-    song=vox_song(n); slug=song.stem.split("_",1)[1].rsplit("_VOX",1)[0]
+def produce(n, src=None):
+    if src is not None:                              # Suno (or any explicit) sung song
+        song=pathlib.Path(src); slug=(_DOORS[n][0] if n in _DOORS else song.stem); tag="SAMPLED"
+    else:                                            # ElevenLabs VOX
+        song=vox_song(n); slug=song.stem.split("_",1)[1].rsplit("_VOX",1)[0]; tag="FINAL"
     voc,nov=separate(song)
     G=gaps(voc)
     print(f"door {n} '{slug}': vocal-free pockets: "+", ".join(f"{a:.1f}-{b:.1f}" for a,b in G))
@@ -114,23 +122,23 @@ def produce(n):
     # Use the take's own vocal-free pockets. Spread the samples: intro -> first
     # pocket, haunt -> last pocket, middles -> spaced pockets in between.
     def eff(d, h): return d*(44100/41000)+1.6 if h else d
-    usable=[(a,b) for (a,b) in G if b-a >= 1.8] or [(0.5, D)]
-    plan=[]  # (path, dur, start, chain)
-    ns=len(S)
-    a0,b0=usable[0]; plan.append((S[0][0], S[0][1], a0+0.5, CLEAN))          # intro
-    haunt_plan=None
-    if ns>=2:
-        hp,hd=S[-1]; hlen=eff(hd,True); oa,ob=usable[-1]
-        hstart=max(oa+0.3, min((ob-hlen-0.3) if (ob-oa)>hlen else oa+0.3, D-hlen-2))
-        haunt_plan=(hp,hd,hstart,HAUNT)
-    mids=usable[1:-1] or usable[1:] or usable                                 # candidate middle pockets
+    usable=[(a,b) for (a,b) in G if b-a >= 1.5] or [(0.5, D)]
+    used=set()
+    def place(path, d, target, haunt=False, prefer_fit=True):
+        need=eff(d,haunt)
+        pool=[(i,g) for i,g in enumerate(usable) if i not in used]
+        cand=[ig for ig in pool if (ig[1][1]-ig[1][0])>=need+0.4] if prefer_fit else []
+        if not cand: cand=pool                                               # fall back to any free gap (ducking covers overlap)
+        i,g=min(cand, key=lambda ig: abs((ig[1][0]+ig[1][1])/2 - target))
+        used.add(i)
+        start=max(g[0]+0.3, min((g[0]+g[1])/2 - need/2, g[1]-need-0.3))
+        return (path,d,start, HAUNT if haunt else CLEAN)
+    plan=[]; ns=len(S)
+    plan.append(place(S[0][0], S[0][1], target=0.0, prefer_fit=False))       # intro thesis: earliest gap (ducked)
     for k,(mp,md) in enumerate(S[1:-1] if ns>=3 else []):
-        target=D*(k+1)/((ns-2)+1)                                             # even spread across the track
-        cand=[g for g in mids if (g[1]-g[0])>=min(md,2.0)] or mids
-        ga,gb=min(cand, key=lambda g:abs((g[0]+g[1])/2 - target))
-        start=max(ga+0.3, min((ga+gb)/2 - md/2, gb-md-0.3))
-        plan.append((mp,md,start,CLEAN))
-    if haunt_plan: plan.append(haunt_plan)
+        plan.append(place(mp, md, target=D*(k+1)/((ns-2)+1)))                # mids: fitting pocket nearest even-spread target
+    if ns>=2:
+        plan.append(place(S[-1][0], S[-1][1], target=D, haunt=True))        # haunt: fitting pocket near the end
 
     # build sample tracks, then duck the music under them (sidechain) so the
     # spoken word is clearly audible over the full-band instrumental
@@ -200,17 +208,25 @@ def produce_pro(n):
     fc=";".join(parts)
     out=PROD/f"ep{n:02d}_song_FINAL.mp3"
     ff(*inputs,"-filter_complex",fc,"-map","[out]","-ar","44100","-b:a","192k",str(out))
-    fn=f"track{n:02d}_{slug}_FINAL.mp3"
+    fn=f"track{n:02d}_{slug}_{tag}.mp3"
     (DL/fn).write_bytes(out.read_bytes())
     (REVIEW/fn).write_bytes(out.read_bytes())
     print("  placements: "+", ".join(f"{order[i].stem}@{s:.1f}s{' [haunt]' if c is HAUNT else ''}"
                                       for i,(_,_,s,c) in enumerate(plan)))
-    print(f"  -> {out.name} ({out.stat().st_size//1024} KB, {dur(out):.0f}s) + ~/Downloads")
+    print(f"  -> {fn} ({out.stat().st_size//1024} KB, {dur(out):.0f}s)")
 
 if __name__=="__main__":
     args=sys.argv[1:]
     pro = "--pro" in args
     if pro: args.remove("--pro")
+    variant = "v1"
+    if "--v2" in args: variant="v2"; args.remove("--v2")
+    suno = "--suno" in args
+    if suno: args.remove("--suno")
     if not args: sys.exit(__doc__)
     for a in args:
-        (produce_pro if pro else produce)(int(a))
+        n=int(a)
+        if suno:
+            produce(n, src=str(SUNO/f"track{n:02d}_{variant}.mp3"))
+        else:
+            (produce_pro if pro else produce)(n)
