@@ -307,7 +307,7 @@ and I'll find you again at the edge, where they never could tell"
 
 **Style:**
 ```
-unmistakable 1971 Paris psychedelic blues-rock up front — swirling vintage combo organ, snake-charming bluesy lead guitar, a baritone baritone croon, brushed café-noir jazz drums, a ghost of French accordion and chanson, spoken-word poet cadence — fused over an industrial-goth engine: enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, rain and strobe-hum drone; a ghost of sultry cabaret in the muted horn; intimate male goth crooner answered by a breathy female, call-and-response torch duet; ~70 BPM, hypnotic, romantic, doomed
+unmistakable 1971 Paris psychedelic blues-rock up front — swirling vintage combo organ, snake-charming bluesy lead guitar, a baritone lizard-king-style croon, brushed café-noir jazz drums, a ghost of French accordion and chanson, spoken-word poet cadence — fused over an industrial-goth engine: enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, rain and strobe-hum drone; a ghost of sultry cabaret in the muted horn; intimate male goth crooner answered by a breathy female, call-and-response torch duet; ~70 BPM, hypnotic, romantic, doomed
 ```
 
 **Lyrics:**
@@ -536,7 +536,7 @@ so hold me while I flicker, and don't let go"
 
 **Style:**
 ```
-unmistakable 1977 Las Vegas showroom Elvis up front — big gospel-soul brass, Hammond organ, a slow rockabilly shuffle, orchestral supper-club grandeur gone to seed, a jumpsuit-cape sweat and a cracked baritone croon — fused over an industrial-goth engine: enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a slot-machine chime buried low; a ghost of sultry cabaret brass; intimate male goth crooner answered by a breathy gospel-backup female, call-and-response torch duet; ~70 BPM, grand, doomed, romantic
+unmistakable 1977 Las Vegas showroom up front — big gospel-soul brass, Hammond organ, a slow rockabilly shuffle, orchestral supper-club grandeur gone to seed, a rhinestone-jumpsuit sweat and a cracked baritone croon — fused over an industrial-goth engine: enormous distorted 808 sub-bass, cold cyberpunk neon pads, tape saturation, vinyl/VHS crackle, a slot-machine chime buried low; a ghost of sultry cabaret brass; intimate male goth crooner answered by a breathy gospel-backup female, call-and-response torch duet; ~70 BPM, grand, doomed, romantic
 ```
 
 **Lyrics:**
