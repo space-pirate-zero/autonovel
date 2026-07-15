@@ -1,0 +1,8 @@
+# Studio web — never commit build artifacts or deps
+**/node_modules/
+**/.next/
+**/dist/
+**/.turbo/
+*.log
+*.bak
+.DS_Store

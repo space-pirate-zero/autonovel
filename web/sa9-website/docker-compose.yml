@@ -1,0 +1,30 @@
+# ══════════════════════════════════════════════════════════
+# SA9 WEBSITE — Lightweight Docker Stack
+# Usage: docker compose up -d
+# Site: http://localhost:3000 (or SA9_WEB_PORT)
+# Form data → Google Sheets (no database needed)
+# ══════════════════════════════════════════════════════════
+
+services:
+  # ── WEBSITE: Next.js 15 (Dev Mode) ──
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: sa9-website
+    ports:
+      - "${SA9_WEB_PORT:-3000}:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - BASE_DOMAIN=localhost
+      - NEXT_TELEMETRY_DISABLED=1
+      - GOOGLE_SHEETS_WEBHOOK_URL=${GOOGLE_SHEETS_WEBHOOK_URL:-}
+    restart: unless-stopped
+    labels:
+      sa9.service: "website"
+      sa9.role: "frontend"

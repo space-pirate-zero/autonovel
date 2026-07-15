@@ -1,0 +1,62 @@
+[
+  {
+    "id": "social-instagram",
+    "content_type": "social",
+    "title": "Instagram",
+    "slug": "instagram",
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/space_pirate_zero/",
+    "publication_date": "2024-01-01T00:00:00Z",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png",
+    "description": "Follow Space Pirate Zero on Instagram for visuals, updates, and transmissions from the outer edge.",
+    "tags": ["Instagram", "Social"]
+  },
+  {
+    "id": "social-linkedin",
+    "content_type": "social",
+    "title": "LinkedIn",
+    "slug": "linkedin",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/gregchambers/",
+    "publication_date": "2024-01-01T00:00:00Z",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
+    "description": "Connect with Greg Chambers on LinkedIn — writer, technologist, and space pirate.",
+    "tags": ["LinkedIn", "Social"]
+  },
+  {
+    "id": "social-github",
+    "content_type": "social",
+    "title": "GitHub",
+    "slug": "github",
+    "platform": "GitHub",
+    "url": "https://github.com/space-pirate-zero",
+    "publication_date": "2024-01-01T00:00:00Z",
+    "image_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    "description": "Follow Space Pirate Zero on GitHub — open source transmissions, experiments, and code from the outer edge.",
+    "tags": ["GitHub", "Social"]
+  },
+  {
+    "id": "social-facebook",
+    "content_type": "social",
+    "title": "Facebook",
+    "slug": "facebook",
+    "platform": "Facebook",
+    "url": "https://www.facebook.com/profile.php?id=61567468867288",
+    "publication_date": "2024-01-01T00:00:00Z",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+    "description": "Follow Space Pirate Zero on Facebook for updates, transmissions, and dispatches from the outer edge.",
+    "tags": ["Facebook", "Social"]
+  },
+  {
+    "id": "social-substack",
+    "content_type": "social",
+    "title": "Substack",
+    "slug": "substack",
+    "platform": "Substack",
+    "url": "https://spacepiratezero.substack.com",
+    "publication_date": "2024-01-01T00:00:00Z",
+    "image_url": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fsubstack-dark.png",
+    "description": "Subscribe to Space Pirate Zero on Substack for transmissions on AI, technology, and the future.",
+    "tags": ["Substack", "Social"]
+  }
+]
