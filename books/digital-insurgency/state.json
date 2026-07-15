@@ -1,8 +1,10 @@
 {
   "title": "Digital Insurgency",
-  "branch": "autonovel/digital-insurgency",
-  "phase": "complete",
-  "current_focus": "done",
+  "edition": 2,
+  "edition_name": "The Recording Edition",
+  "branch": "spz/digital-insurgency-2nd-edition",
+  "phase": "2e_podcast_setup",
+  "current_focus": "recording scripts drafted 14/14 (Ep 01 locked reference; Ep 02-14 agent first-pass, REVIEW pending) + section-score cues stamped (87 sections) — NO AUDIO YET",
   "iteration": 0,
   "foundation_score": 8.0,
   "lore_score": 8.0,
@@ -15,7 +17,9 @@
     "Prologue is front matter at chapters/ch_00.md (not in the 1..16 drafting loop). Numbered chapters = ch_01..ch_16.",
     "ch_04 and ch_05 hold full v0 drafts imported from the seed. ch_00-03 and ch_06-16 are scaffolds (beats + format + equations + boss + influences); full v0 prose for 6-16 lives in the seed/original brief and can be bulk-imported on request.",
     "Two run paths: (A) full rebuild -> `uv run python run_pipeline.py --phase drafting` (drafts ch_01..ch_16 fresh from the foundation; v0 preserved in git). (B) revise-in-place -> set chapters_drafted=16 and run `--phase revision`.",
-    "Requires ANTHROPIC_API_KEY in .env. Get one at https://console.anthropic.com/settings/keys"
+    "Requires ANTHROPIC_API_KEY in .env. Get one at https://console.anthropic.com/settings/keys",
+    "2E (Recording Edition): re-cut into a 14-episode audio field course (Defense pattern). Charter=2ND_EDITION.md; episode map=podcast/episodes.md; revision plan=REVISION_MAP_2E.md; standalone SPZ-network podcast=podcast/config.json (service spz-podcast-insurgency). Recording scaffolding in audiobook/ (scripts/intros/produced+voices). NO AUDIO PRODUCED YET — produced/ is empty by design; do not deploy until scripts are recorded + greenlit.",
+    "2E episode->chapter map: Ep01=Prologue, 02=Ch1, 03=Ch2, 04=Ch3-4, 05=Ch5, 06=Ch6, 07=Ch7, 08=Ch8, 09=Ch9-10, 10=Ch11, 11=Ch12, 12=Ch13-15, 13=Ch16, 14=AppendixA-B."
   ],
   "revision_cycle": 5
 }

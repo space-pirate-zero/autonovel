@@ -1,0 +1,7 @@
+node_modules/
+.next/
+content/
+next-env.d.ts
+public/art/
+public/audio/
+.DS_Store

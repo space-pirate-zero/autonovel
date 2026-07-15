@@ -133,3 +133,159 @@
   -> equation ($$) -> "The moral of the story is" -> CTA. Verified via preview.
 - Still pending: live Substack push needs auth (cookies; email/pw 403'd = magic-link
   account). push_substack.py ready; reads .env.
+
+## 2E "Recording Edition" — podcast setup (2026-07-15)
+- Prepped Digital Insurgency for a 2nd Edition = a 14-episode AUDIO FIELD COURSE
+  (the "Defense Against the Dark Arts" episodic-podcast pattern). NO AUDIO YET.
+- Worktree branch was based on stale PRE-monorepo history; hard-reset onto `master`
+  to get the real `books/` monorepo (all 4 books). Worked in place in books/digital-insurgency/.
+- The book already has the perfect episodic spine: each chapter = BROADCAST (scene)
+  -> LESSON (equations + field reports) -> SPZ CLOSER -> "Next:" hook. 2E formalizes it.
+- Built: 2ND_EDITION.md (charter), podcast/{episodes.md,config.json,README.md},
+  audiobook/{README.md,audiobook_voices.json,scripts/,intros/,produced/}, REVISION_MAP_2E.md,
+  updated state.json (edition=2, phase=2e_podcast_setup) + .wolf/anatomy.md.
+- ep_01.md written by hand as the LOCKED reference script (Orientation/Mirror Test,
+  from the Prologue + Five Claims). ep_02-14 scripts + 14 intros drafted by 4 parallel
+  subagents against that template — REVIEW those first-pass drafts before recording.
+- Standalone SPZ-network show: service spz-podcast-insurgency, bucket spz-podcasts,
+  prefix digital-insurgency. Publishes via repo-root publishing/ (cp config.json -> publishing/).
+- NOTE on the "Defense" reference: the real book "Defense Against the Dark Arts:
+  A Field Course for the Zero-Trust Reality" (14 eps = Prologue + 13 modules; live
+  feed spz-podcast-defense) lives on WORKTREE BRANCH spz/zero-trust-research-analysis-24ce8e,
+  NOT on master. On master, books/zero-trust-reality/ is a stale TLHC duplicate.
+  Defense's pattern: fixed per-module anatomy, per-episode host-intros, config-driven
+  publish (publishing/config.<slug>.json), separate Cloud Run service/prefix. DI 2E
+  mirrors this with DI's own native spine (BROADCAST->LESSON->SPZ CLOSER).
+
+## 2E scripts drafted + section score (2026-07-15, cont.)
+- All 14 recording scripts drafted: ep_01 hand-written (locked reference), ep_02-14
+  by 4 parallel subagents against it. QA: banned-word clean, ~2.1k-4.2k spoken words
+  each (ep_12 three-dispatch longest, ep_09 merged Ch9-10 next). FIRST-PASS — review before recording.
+- Section SCORE (sonic signposting) added so listeners hear each new section:
+  audiobook/SCORE.md (design: palette, per-section cue table, transition rules, asset list)
+  + audiobook/apply_score.py (idempotent stamper: inserts `> ♪ **SCORE — LABEL** ...`
+  blockquote under every `## [SECTION]` header; prefix-mapped incl. DISPATCH/BRIEFING;
+  `--check` = CI gate). 87 sections scored across all 14 scripts. Cues are mix markers,
+  NOT read aloud. Re-run apply_score.py after any script edit. Audio still deferred.
+- Nothing committed yet (working tree on branch spz/digital-insurgency-2nd-edition-09052d).
+
+## 2E website experience — PLAN (2026-07-15)
+- website/PLAN.md: complete blueprint (PLAN ONLY, nothing built) for a world-class
+  interactive companion site "the Glass House". User reads/listens the 14-module field
+  course + runs every exercise graphically (Mirror Tests = flip-the-product/find-the-rot;
+  24 physics calculators from canon.md benchmarks; 14 Field Assignments; the 8-panel
+  Infiltration Canvas from Appendix B; the Insurgent's Oath) → healing Dorian-Gray portrait
+  + rank ladder (Decorator→Wedge→Curator→Insurgent→Ghost) + Insurgent Index → auto-generated
+  LinkedIn credential (mint certId + dynamic badge image + one-click LinkedIn add-to-profile
+  cert URL + /verify page + Open Badge). Cast as UI: GHOST=guide, REAPER=fail state, portrait=progress.
+- Stack rec: Next.js/TS, INSURGENT design tokens (design/ + fonts/), KaTeX, PostHog analytics
+  (already in SPZ stack), Cloud Run+GCS (or Vercel), guest-first + email-at-badge.
+- Big head start: interactive content already structured in repo (canon 24 eqs w/ benchmarks,
+  ch_18 8 Canvas panels, episodes.md 14 assignments, Ep13 5 Oath lines).
+- DECISIONS TO CONFIRM before build (PLAN §12): domain (digitalinsurgency.show?), hosting,
+  identity model, LinkedIn Company Page + organizationId (REQUIRED for 1-click add), audio timing, v1 scope.
+
+## Domain decided (2026-07-15)
+- Canonical domain for the Digital Insurgency experience (website + podcast landing)
+  = digital-insurgency.com. Updated podcast/config.json public_url, podcast/README.md,
+  website/PLAN.md (§12.1 resolved + LinkedIn certUrl example). Still to do: register
+  the domain + point DNS at the host (Cloud Run/Vercel, TBD).
+
+## LinkedIn issuer decided (2026-07-15)
+- LinkedIn Company Page exists for the badge issuer: organizationId=112670022.
+  Wired into website/PLAN.md §9 add-to-profile cert URL + §12.4 marked decided.
+  TODO before launch: confirm the Page's public title reads as intended on the credential.
+
+## Hosting decided (2026-07-15)
+- Website hosting = Cloud Run + GCS on GCP project stylelift (same footprint as the
+  spz-podcast-insurgency service). Containerized Next.js (min-instances 1), GCS for
+  badge images/Canvas PDFs, GCP-native credential store (Cloud SQL/Firestore),
+  digital-insurgency.com mapped to the service. PLAN.md §10 + §12.2 updated.
+
+## Identity decided + killer-features brainstorm + v1 scope rec (2026-07-15)
+- Identity = guest + email-at-badge (localStorage progress; email only at badge time). PLAN §12.3.
+- website/IDEAS.md: killer-features brainstorm. Tier-1 killers: (1) GHOST as real
+  Claude-backed guide, (2) Boss-Fight pitch simulator vs boss archetypes, (3) BYO-URL
+  Mirror Test → shareable Teardown Cards (viral), (4) Insurgent Index score on résumé,
+  (5) personalized "your" healing portrait, (6) business-case PDF generator (real work artifact).
+  Plus anti-features: no streaks/dark patterns, radical-transparency panel.
+- v1 scope RECOMMENDED (confirm): complete loop = read + 24 calculators + Mirror Tests
+  + 2D/SVG healing portrait + the Oath (KEEP, cheap gate) + Insurgent Index + badge +
+  LinkedIn + /verify, GHOST scripted. Defer to v1.1: full Infiltration Canvas+PDF,
+  Claude-backed GHOST + Boss-Fight, BYO-URL Mirror Test/Teardown, WebGL portrait,
+  audio read-along, accounts/sync. PLAN §12.6 + phases.
+
+## Credential + audio timing decided (2026-07-15)
+- Credential rigor = verifiable Open Badge (2.0/3.0) from DAY ONE (baked PNG + hosted
+  assertion at /verify/[certId], portable beyond LinkedIn). PLAN §9 + §12.7.
+- Audio timing = LAST. Build/launch everything text-first; podcast player + section-score
+  visuals + read-along are the final phase (Phase 6), after v1+v1.1 and once 2E audio is
+  produced. /listen scaffolded-but-dark until then. PLAN §12.5.
+- Roadmap reordered: Phases 0-4 = v1 (text-only complete loop, launch), Phase 5 = v1.1
+  growth killers (Claude GHOST, Boss-Fight, full Canvas+PDF, BYO-URL teardowns, WebGL),
+  Phase 6 = audio last. All §12 decisions now resolved except nothing — plan is build-ready.
+
+## v1 scope changed: EVERYTHING in v1 (2026-07-15)
+- User decision: add ALL ideas to v1 — no v1.1 hold-back. v1 now = complete loop +
+  every killer (Claude-backed GHOST, Boss-Fight simulator, full Infiltration Canvas+PDF,
+  BYO-URL Mirror Test→Teardown Cards, WebGL portrait) + all Tier-2/3 + anti-features.
+  Only AUDIO stays out of v1 (final phase). PLAN §12.6 + roadmap + IDEAS.md updated.
+- Roadmap now: Phase 0 Foundations, 1 the Book, 2 Glass House (calcs+mirror+full Canvas),
+  3 GHOST live + Boss Fight, 4 Identity & Credential (WebGL portrait, Oath, Open Badge,
+  LinkedIn), 5 Teardowns/Growth/Launch, 6 Audio LAST. Phases 0-5 = v1. Trade-off (bigger/later
+  launch) noted+accepted.
+
+## Spaceship Alpha 9 art series generated (2026-07-15)
+- 15 "Spaceship Alpha 9" saucer images, one per major DI moment, in art/spaceships/
+  (01_mirror-test … 15_insurgents-oath.png). House style locked in art/spaceships/
+  gen_spaceships.py (STYLE const) + per-scene prompts in prompts.json.
+- Backend: GEMINI Nano Banana (gemini-2.5-flash-image). FAL_KEY is NOT provisioned
+  (load-secrets.sh note: placeholder, not in Secret Manager). GEMINI_API_KEY IS in
+  Secret Manager (project stylelift); pull via:
+  export GEMINI_API_KEY=$(gcloud secrets versions access latest --secret=GEMINI_API_KEY --project=stylelift)
+  then: python3 art/spaceships/gen_spaceships.py [--only N|--from N|--list]
+- GHOST rendered as cyan mesh entity + REAPER as red wireframe environment (canon HARD
+  RULES) both correct. Minor AI-gen garbled micro-text on some (e.g. scene 14 billboard
+  "WEIRD" dropped) — regenerate individual scenes with --only N if needed.
+
+## Website build STARTED — running foundation (2026-07-15)
+- Real Next.js 15 app at books/digital-insurgency/website/ (App Router, TS, Tailwind,
+  INSURGENT tokens, vendored fonts, next/font/local). RUNS: pnpm dev on :4311 (launch.json
+  in worktree .claude points --dir at the absolute website path).
+- Content pipeline (scripts/build-content.mjs, runs pre-dev/build): parses canon.md 24-eq
+  table + podcast/config.json 14 modules → content/{equations,modules,show}.json. Single
+  source of truth = the book.
+- Pages LIVE: / (hero art + 5 claims + module grid + credential CTA), /read (module index),
+  /read/[slug] (loads REAL chapter prose via lib/chapters.ts EP_TO_FILES), /glasshouse
+  (6 interactive calculators from lib/calculators.ts + full 24-eq table + Mirror Test entry),
+  /glasshouse/mirror-test (interactive flip→tag→pass/fail, GHOST pass / REAPER fail),
+  /badge (credential showcase + LinkedIn add-to-profile org 112670022 + portrait heal).
+- Art wired into public/art/{spaceships,site}. Gotcha fixed: server component can't pass
+  fn props to client comp → wrapped calculators in components/Calculators.tsx ("use client").
+- NOT yet built (remaining phases): all 24 calculators, 14 Mirror Tests, full Canvas + PDF,
+  Oath ceremony, Claude-backed GHOST, Boss-Fight sim, WebGL portrait, badge MINTING +
+  Open Badge + /verify, email-at-badge, PostHog, Cloud Run deploy. Audio: sample render pending.
+- NB: all work is in the MAIN repo tree (/Users/gregchambers/autonovel/books/digital-insurgency),
+  not the worktree; nothing committed yet.
+
+## Big build push — completion loop + audio + graphics + animations (2026-07-15)
+- Audiobook SAMPLE rendered: audiobook/produced/ep_01_SAMPLE.mp3 — 9m27s, 8.7MB, MULTI-VOICE
+  (NARRATOR/SPZ custom voice 8bOIcU4hJx9LYJV4NS1I + ZERO=Sarah EXAVITQu4vr4xnSDxMaL, real IDs now
+  in audiobook_voices.json). Wired into site (public/audio + AudioPlayer on Ep 01 read page).
+  Render via ElevenLabs (key in Secret Manager). Full 14-ep render still pending.
+- 12 more Gemini emblems generated (art/site-assets/extra → public/art/extra): 5 rank badges
+  (Decorator→Ghost), 5 module crests, ghost-avatar + reaper-sigil.
+- Micro-animations added (framer-motion + CSS): template.tsx page transitions, hover-lift/tap,
+  stagger, gauge needle, scanline, neon flicker, float, button sheen, oath check-in, portrait
+  crossfade, progress bars. globals.css keyframes + components/motion.tsx.
+- COMPLETION LOOP built + VERIFIED end-to-end in browser: lib/progress.ts (localStorage store,
+  rank ladder Decorator→Wedge→Curator→Insurgent→Ghost, Insurgent Index 0-100), ModuleComplete
+  toggle on reader, /glasshouse/oath (5-commitment ceremony), MintPanel (gated 0/14 → complete →
+  generate badge w/ name+rank+index overlay), lib/cred.ts (base64url self-describing token),
+  /verify/[certId] (decodes+displays credential), /dossier (rank + portrait heal + checklist),
+  LinkedIn add-to-profile org 112670022 with certId+certUrl. Tested: complete→mint→/verify shows
+  "VERIFIED CREDENTIAL Greg Chambers · Insurgent · Index 100". Course is completable end-to-end.
+- Gotcha (fixed): server comps can't pass fn props to client comps → Calculators.tsx client wrapper.
+- STILL TODO: Claude-backed GHOST, Boss-Fight sim, full Infiltration Canvas+PDF, all 24 calcs + 14
+  Mirror Tests, SERVER-SIDE Open Badge mint + DB (current token is client-side v1, not tamper-proof),
+  PostHog, Cloud Run deploy, full 14-ep audiobook render. Dev server: pnpm dev :4311.
