@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Die-cut sticker for The Last Human CEO — SA9 ship + QR to the site + tagline.
-Outputs a transparent-background die-cut PNG (+ a white-bg proof).
+Circular emblem die-cut sticker for The Last Human CEO — SA9 ship + curved
+lettering + QR to the site + tagline. Transparent-background die-cut PNG + proof.
 Run: uv run --with pillow --with qrcode python3 art/cover/2nd/build_sticker.py
 """
+import math
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 import qrcode
@@ -13,7 +14,7 @@ HERE = Path(__file__).resolve().parent
 BOOK = HERE.parents[2]
 F = BOOK.parent.parent / "fonts"
 VOID = (3, 3, 3); PINK = (255, 20, 147); CYAN = (0, 240, 255); PAPER = (232, 232, 232); MUTED = (150, 156, 172)
-SZ = 1500; R = 120
+SZ = 1500; CX = CY = SZ // 2; RED = SZ // 2 - 8
 URL = "https://lasthumanceo.com"
 
 
@@ -21,74 +22,102 @@ def fnt(n, s): return ImageFont.truetype(str(F / n), s)
 def fit(d, t, n, s, mw):
     while s > 14 and d.textlength(t, font=fnt(n, s)) > mw: s -= 2
     return fnt(n, s)
-def ctext(d, y, t, font, fill):
-    d.text(((SZ - d.textlength(t, font=font)) / 2, y), t, font=font, fill=fill + (255,))
 
 
-def qr_panel(px):
+def arc_text(base, text, font, fill, radius, center_deg, bottom=False, spacing=1.0):
+    if bottom:
+        text = text[::-1]                            # reverse so it still reads L->R along the bottom
+    sc = ImageDraw.Draw(base)
+    ws = [sc.textlength(c, font=font) for c in text]
+    total_ang = sum(math.degrees(w * spacing / radius) for w in ws)
+    bb = font.getbbox("AWy"); ch = bb[3] - bb[1]; pad = 10
+    ang = center_deg - total_ang / 2
+    for c, w in zip(text, ws):
+        seg = math.degrees(w * spacing / radius)
+        a = ang + seg / 2
+        r = math.radians(a)
+        x = CX + radius * math.cos(r); y = CY + radius * math.sin(r)
+        tile = Image.new("RGBA", (int(w) + 2 * pad, ch + 2 * pad), (0, 0, 0, 0))
+        ImageDraw.Draw(tile).text((pad, pad - bb[1]), c, font=font, fill=fill + (255,))
+        rot = -(a - 90) if bottom else -(a + 90)     # bottom glyphs flip 180 to stay upright
+        tile = tile.rotate(rot, expand=True, resample=Image.BICUBIC)
+        base.alpha_composite(tile, (int(x - tile.width / 2), int(y - tile.height / 2)))
+        ang += seg
+
+
+def qr_img(px):
     qr = qrcode.QRCode(error_correction=ERROR_CORRECT_H, box_size=12, border=2)
     qr.add_data(URL); qr.make(fit=True)
     q = qr.make_image(fill_color=(6, 6, 8), back_color=(255, 255, 255)).convert("RGBA").resize((px, px))
-    pad = 34; panel = Image.new("RGBA", (px + 2*pad, px + 2*pad), (0, 0, 0, 0)); pd = ImageDraw.Draw(panel)
-    pd.rounded_rectangle((0, 0, px + 2*pad, px + 2*pad), radius=40, fill=PAPER + (255,))
-    pd.rounded_rectangle((0, 0, px + 2*pad, px + 2*pad), radius=40, outline=CYAN + (255,), width=8)
+    pad = 26; panel = Image.new("RGBA", (px + 2 * pad, px + 2 * pad), (0, 0, 0, 0)); pd = ImageDraw.Draw(panel)
+    pd.rounded_rectangle((0, 0, px + 2*pad, px + 2*pad), radius=32, fill=PAPER + (255,))
+    pd.rounded_rectangle((0, 0, px + 2*pad, px + 2*pad), radius=32, outline=CYAN + (255,), width=8)
     panel.alpha_composite(q, (pad, pad))
     return panel
 
 
 def main():
     img = Image.new("RGBA", (SZ, SZ), (0, 0, 0, 0))
-    # rounded body + glow
-    body = Image.new("RGBA", (SZ, SZ), VOID + (255,))
+    disc = Image.new("RGBA", (SZ, SZ), VOID + (255,))
     ov = Image.new("RGBA", (SZ, SZ), (0, 0, 0, 0)); od = ImageDraw.Draw(ov)
-    od.ellipse((-SZ*0.2, -SZ*0.15, SZ*0.6, SZ*0.35), fill=(255, 20, 147, 70))
-    od.ellipse((SZ*0.45, SZ*0.6, SZ*1.2, SZ*1.2), fill=(0, 240, 255, 60))
-    body = Image.alpha_composite(body, ov.filter(ImageFilter.GaussianBlur(120)))
-    mask = Image.new("L", (SZ, SZ), 0); ImageDraw.Draw(mask).rounded_rectangle((0, 0, SZ-1, SZ-1), radius=R, fill=255)
-    img.paste(body, (0, 0), mask)
+    od.ellipse((-SZ*0.15, -SZ*0.2, SZ*0.75, SZ*0.5), fill=(255, 20, 147, 80))
+    od.ellipse((SZ*0.3, SZ*0.55, SZ*1.2, SZ*1.25), fill=(0, 240, 255, 70))
+    disc = Image.alpha_composite(disc, ov.filter(ImageFilter.GaussianBlur(150)))
+    mask = Image.new("L", (SZ, SZ), 0); ImageDraw.Draw(mask).ellipse((0, 0, SZ-1, SZ-1), fill=255)
+    img.paste(disc, (0, 0), mask)
 
-    # ship (lighten onto void — crush its near-black bg to pure 0 so no box shows)
-    ship = Image.open(HERE / "ship.png").convert("RGB").resize((940, 940)).point(lambda p: 0 if p < 28 else p)
-    layer = Image.new("RGB", (SZ, SZ), (0, 0, 0)); layer.paste(ship, (280, 120))
+    # ship glow + ship (lighten, black crushed)
+    glow = Image.new("RGBA", (SZ, SZ), (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse((CX-360, 360, CX+360, 820), fill=(255, 20, 147, 60))
+    ImageDraw.Draw(glow).ellipse((CX-300, 420, CX+380, 760), fill=(0, 240, 255, 45))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(90)))
+    ship = Image.open(HERE / "ship.png").convert("RGB").resize((820, 820)).point(lambda p: 0 if p < 28 else p)
+    ship = ship.rotate(8, expand=True, resample=Image.BICUBIC)
+    layer = Image.new("RGB", (SZ, SZ), (0, 0, 0)); layer.paste(ship, (CX - ship.width//2, 180))
     lit = ImageChops.lighter(img.convert("RGB"), layer).convert("RGBA"); lit.putalpha(img.split()[3]); img = lit
 
     d = ImageDraw.Draw(img)
-    ctext(d, 96, "SPACESHIP ALPHA 9  ·  TRANSMITTING", fnt("JetBrainsMono-700.ttf", 34), CYAN)
+    # center hook = the tagline (title lives in the top arc, so no duplicate)
+    def cline(text, y, font, fill, glow=None):
+        tw = d.textlength(text, font=font)
+        if glow:
+            h = Image.new("RGBA", img.size, (0, 0, 0, 0))
+            ImageDraw.Draw(h).text(((SZ - tw)/2, y), text, font=font, fill=glow + (220,))
+            img.alpha_composite(h.filter(ImageFilter.GaussianBlur(14)))
+        ImageDraw.Draw(img).text(((SZ - tw)/2, y), text, font=font, fill=fill + (255,))
+    g1 = fit(d, "THE MACHINE", "Orbitron-900.ttf", 96, SZ - 360)
+    cline("THE MACHINE", 700, g1, PAPER, PINK)
+    cline("WANTS YOUR CHAIR", 806, fit(d, "WANTS YOUR CHAIR", "Orbitron-700.ttf", 62, SZ - 380), PINK)
 
-    # title + tagline
-    tf = fit(d, "THE LAST HUMAN CEO", "Orbitron-900.ttf", 108, SZ - 220)
-    halo = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    ImageDraw.Draw(halo).text(((SZ - d.textlength("THE LAST HUMAN CEO", font=tf)) / 2, 680),
-                              "THE LAST HUMAN CEO", font=tf, fill=PINK + (220,))
-    img.alpha_composite(halo.filter(ImageFilter.GaussianBlur(16))); d = ImageDraw.Draw(img)
-    ctext(d, 680, "THE LAST HUMAN CEO", tf, PAPER)
-    gf = fit(d, "THE MACHINE WANTS YOUR CHAIR.", "Orbitron-700.ttf", 52, SZ - 240)
-    ctext(d, 806, "THE MACHINE WANTS YOUR CHAIR.", gf, PINK)
+    # QR centre-low + label
+    panel = qr_img(288)
+    img.alpha_composite(panel, (CX - panel.width // 2, 902))
+    cline("SCAN  &  LISTEN  FREE", 1258, fnt("Orbitron-700.ttf", 36), CYAN)
 
-    # scan CTA + QR
-    ctext(d, 906, "SCAN  &  LISTEN  FREE", fnt("Orbitron-700.ttf", 42), CYAN)
-    panel = qr_panel(300)
-    px = (SZ - panel.width) // 2
-    img.alpha_composite(panel, (px, 984))
-    # arrow chevrons pointing at the QR
-    ad = ImageDraw.Draw(img)
-    for cxp in (px - 70, px + panel.width + 70):
-        ad.polygon([(cxp - 22, 1120), (cxp + 22, 1120), (cxp, 1156)], fill=CYAN + (255,))
+    # curved lettering
+    arc_text(img, "THE LAST HUMAN CEO", fnt("Orbitron-900.ttf", 74), PAPER, RED - 96, -90)
+    arc_text(img, "LASTHUMANCEO.COM   ·   SIGNAL FINDS SIGNAL", fnt("JetBrainsMono-700.ttf", 40), CYAN, RED - 92, 90, bottom=True)
+    # side star separators (3 & 9 o'clock)
+    for a in (0, 180):
+        r = math.radians(a); x = CX + (RED-92)*math.cos(r); y = CY + (RED-92)*math.sin(r)
+        ImageDraw.Draw(img).regular_polygon((x, y, 16), 4, rotation=45, fill=PINK+(255,))
+
+    # rings + tick dial
     d = ImageDraw.Draw(img)
-    ctext(d, 1372, "lasthumanceo.com", fnt("JetBrainsMono-700.ttf", 40), PINK)
+    d.ellipse((14, 14, SZ-15, SZ-15), outline=CYAN + (255,), width=12)
+    d.ellipse((44, 44, SZ-45, SZ-45), outline=PINK + (200,), width=5)
+    for deg in range(0, 360, 5):
+        r = math.radians(deg)
+        r1, r2 = RED - 30, RED - 46
+        d.line((CX + r1*math.cos(r), CY + r1*math.sin(r), CX + r2*math.cos(r), CY + r2*math.sin(r)),
+               fill=(CYAN if deg % 15 == 0 else MUTED) + (200,), width=3 if deg % 15 == 0 else 2)
 
-    # die-cut kiss border ring
-    ImageDraw.Draw(img).rounded_rectangle((26, 26, SZ-27, SZ-27), radius=R-16, outline=CYAN + (255,), width=10)
-    ImageDraw.Draw(img).rounded_rectangle((44, 44, SZ-45, SZ-45), radius=R-30, outline=PINK + (160,), width=4)
-
-    # ensure fully transparent outside the die shape
     img.putalpha(ImageChops.multiply(img.split()[3], mask))
-
     out = HERE / "the_last_human_ceo_sticker_diecut.png"
     img.save(out)
-    proof = Image.new("RGBA", (SZ, SZ), (255, 255, 255, 255)); proof.alpha_composite(img)
+    proof = Image.new("RGBA", (SZ, SZ), (245, 245, 248, 255)); proof.alpha_composite(img)
     proof.convert("RGB").save(HERE / "the_last_human_ceo_sticker_proof.jpg", quality=92)
-    print(f"saved {out.name} (transparent die-cut) + proof.jpg  ·  {SZ}x{SZ}  ·  QR -> {URL}")
+    print(f"saved circular {out.name} + proof  ·  {SZ}px  ·  QR -> {URL}")
 
 
 if __name__ == "__main__":
