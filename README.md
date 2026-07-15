@@ -13,6 +13,35 @@ See the `autonovel/bells` branch.
 
 ---
 
+## 🛸 Digital Insurgency — 2nd Edition · "The Recording Edition" (LIVE)
+
+The most fully-realized title in this repo: a business × cyberpunk **field manual**
+re-cut into a **14-episode audio field course** *and* a **live interactive course
+website** where readers run the physics, pass the Mirror Test, and earn a LinkedIn
+credential.
+
+- **▶ Live site:** <https://digital-insurgency-373293565001.us-central1.run.app>
+  (custom domain `digital-insurgency.com` pending) — read the course, run the 24
+  "enterprise physics" equation calculators, take the Mirror Test, sign the
+  Insurgent's Oath, and mint a verifiable credential you add to LinkedIn.
+- **Everything lives under** [`books/digital-insurgency/`](books/digital-insurgency/):
+  - Charter → [`2ND_EDITION.md`](books/digital-insurgency/2ND_EDITION.md)
+  - Field-course podcast (14-ep map, standalone Cloud Run show `spz-podcast-insurgency`)
+    → [`podcast/`](books/digital-insurgency/podcast/)
+  - Recording scripts + intros + the section score → [`audiobook/`](books/digital-insurgency/audiobook/)
+    (Ep 01 multi-voice sample rendered)
+  - Interactive website (Next.js 15 → Cloud Run) → [`website/`](books/digital-insurgency/website/)
+    · plan [`website/PLAN.md`](books/digital-insurgency/website/PLAN.md)
+    · ideas [`website/IDEAS.md`](books/digital-insurgency/website/IDEAS.md)
+  - "Spaceship Alpha 9" art → [`art/spaceships/`](books/digital-insurgency/art/spaceships/)
+    + [`art/site-assets/`](books/digital-insurgency/art/site-assets/)
+- **Status:** 1st-edition manuscript complete (16 ch, score 8.0). 2E podcast scripts
+  drafted + section-scored; website **live** with the full read → exercise →
+  credential loop. Remaining: Claude-backed GHOST, Boss-Fight simulator, server-side
+  Open Badge, full 14-episode audiobook render, custom domain.
+
+---
+
 ## One universe, one brand
 
 Every book here is a transmission from a single shared reality — **Spaceship
