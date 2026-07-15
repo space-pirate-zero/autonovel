@@ -198,7 +198,14 @@ def draw_back(img):
              "himself off the edge of the world, one honest machine at a time.”",
              qf, CYAN, mw, qf.size + 18); y += 40
     d.line((x, y, x + mw, y), fill=PINK + (200,), width=3); y += 40
-    d.text((x, y), "ABOUT SPACE PIRATE ZERO", font=fnt("Orbitron-700.ttf", 36), fill=PINK + (255,)); y += 66
+    d.text((x, y), "ABOUT SPACE PIRATE ZERO", font=fnt("Orbitron-700.ttf", 36), fill=PINK + (255,))
+    about_top = y; y += 66
+    # SPZ 'WANTED' poster pinned to the right of the bio
+    wp = Image.open(HERE / "wanted_poster.png").convert("RGBA")
+    pw = 500; wp = wp.resize((pw, int(wp.height * pw / wp.width)))
+    px_pos = BACK_X + PANEL - MARGIN - pw
+    img.alpha_composite(wp, (px_pos, about_top - 6)); d = ImageDraw.Draw(img)
+    bio_mw = px_pos - x - 60          # left column, clear of the poster
     bio = ("SPACE PIRATE ZERO is the transmission handle of Greg Chambers — engineer, corporate defector, "
            "and co-founder of Spaceship Alpha 9, the pirate studio he runs with Daniela out of Atlanta. He "
            "spent twenty-five years building the machine from the inside: AI across fifteen thousand storefronts, "
@@ -206,7 +213,7 @@ def draw_back(img):
            "a lamp at noon, and started defacing the currency.\n\n"
            "He writes, scores, and voices every word himself. No algorithm. No venture capital. No permission. If "
            "that rattles the people selling you synergy — good. This one was never for them.")
-    y = para(d, x, y, bio, fnt("SpaceGrotesk-400.ttf", 37), MUTED, mw, 54)
+    y = para(d, x, y, bio, fnt("SpaceGrotesk-400.ttf", 35), MUTED, bio_mw, 51)
     # footer (kept above the barcode keep-out at bottom-right)
     ff = fnt("Orbitron-700.ttf", 34)
     d.text((x, H - BLEED - MARGIN - 20), "SIGNAL FINDS SIGNAL", font=ff, fill=PINK + (255,))
