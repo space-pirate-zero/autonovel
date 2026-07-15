@@ -1,0 +1,12 @@
+{
+  "id": "hero",
+  "model": "gemini-2.5-flash-image",
+  "timestamp": "2026-07-15T15:32:53.774476",
+  "path": "art/cover/2nd/hero.png",
+  "width": 1024,
+  "height": 1024,
+  "prompt_hash": "ffdfc468fcbc3c3c",
+  "prompt_length": 2092,
+  "model_text": null,
+  "attempt": 1
+}
