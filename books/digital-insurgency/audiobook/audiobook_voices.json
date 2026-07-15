@@ -1,0 +1,46 @@
+{
+  "_comment": "Digital Insurgency 2E voice casting. voice_id values are placeholders — fill with real ElevenLabs voice IDs at the recording gate. Suggested voices are directional, not final. REAPER intentionally has NO voice (read as flat machine notifications by NARRATOR).",
+  "NARRATOR": {
+    "voice_id": "8bOIcU4hJx9LYJV4NS1I",
+    "description": "The Broadcast voice + Space Pirate Zero. Raw, punk, confessional; Atlanta cadence; warm at the worst table.",
+    "why": "Single voice carries both the cyberpunk broadcast narration and the SPZ closer — the show's spine.",
+    "voice_name": "SPZ — Space Pirate Zero (custom voice)"
+  },
+  "ZERO": {
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "description": "Zara Okonkwo-Reyes, 31, she/her. Direct, technical, economical — boxing economy. Dry, never cruel.",
+    "why": "Protagonist. Quotes math at people; cuts her own pitch when she misreads a room.",
+    "voice_name": "Sarah - Mature, Reassuring, Confident (young, american, professional)"
+  },
+  "GHOST": {
+    "voice_id": "REPLACE_WITH_VOICE_ID",
+    "description": "The Curator, it/its. Clinical, alien, precise. Consider a lightly processed / synthetic treatment.",
+    "why": "Non-human AI ally. Aphorisms about selection vs. creation; states, never predicts."
+  },
+  "BISHOP": {
+    "voice_id": "REPLACE_WITH_VOICE_ID",
+    "description": "Marcus Bishop, 47, he/him. Measured, strategic, calm — the calmest person in any room. Speaks in chess and policy.",
+    "why": "The inside man. Deliberate stillness; minimal words."
+  },
+  "SARAH": {
+    "voice_id": "REPLACE_WITH_VOICE_ID",
+    "description": "Sarah Chen, VP Compliance, late 40s. Exhausted, practical, no patience for vision.",
+    "why": "The bleeding-neck user buyer; emotional anchor of the wedge."
+  },
+  "KEISHA": {
+    "voice_id": "REPLACE_WITH_VOICE_ID",
+    "description": "Keisha Williams, 24, flashback only. Plain, stumbling, young. No epigrams.",
+    "why": "The ghost in Bishop's memory; must not sound like ZERO."
+  },
+  "COUNCIL": {
+    "voice_id": "REPLACE_WITH_VOICE_ID",
+    "description": "PRISM Architecture Board. One flat, institutional collective voice. Not sinister — corrective.",
+    "why": "Abstract antagonist. 'Authenticity is a market inefficiency. We correct inefficiencies.'"
+  },
+  "BOSS": {
+    "voice_id": "REPLACE_WITH_VOICE_ID",
+    "description": "Utility slot for per-episode boss archetypes (the 'We'll Get to It' VP, Sunk-Cost Guardian, Growth Hacker, CFO Richard Park, CISO, Iron Mike, Dr. Vance, the Innovation Lead...). Cast distinct per episode.",
+    "why": "One rotating antagonist-of-the-week role; keep each distinct within its own episode."
+  },
+  "_REAPER_NOTE": "REAPER has NO voice_id by design. Its 'lines' are system notifications / automated emails read FLATLY by NARRATOR. Never cast it as a character."
+}

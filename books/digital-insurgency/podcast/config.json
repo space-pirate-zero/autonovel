@@ -1,0 +1,57 @@
+{
+  "_comment": "Digital Insurgency — standalone SPZ-network podcast. Consumed by the shared repo-root publishing/ pipeline (gen_feed.py / gen_site.py / deploy.sh). Paths are relative to the REPO ROOT. To publish, copy this to publishing/config.json (see podcast/README.md). NO AUDIO PRODUCED YET — produced_dir is intentionally empty; do not deploy until scripts are recorded.",
+  "show": {
+    "title": "Digital Insurgency",
+    "subtitle": "Smuggle the future past the corporate immune system — a field course narrated by Space Pirate Zero",
+    "author": "Space Pirate Zero",
+    "owner_name": "Space Pirate Zero",
+    "owner_email": "zero@spacepiratezero.com",
+    "language": "en-us",
+    "category": "Technology",
+    "secondary_category": "Business",
+    "explicit": false,
+    "type": "serial",
+    "copyright": "© 2027 Space Pirate Zero",
+    "link": "https://spacepiratezero.com",
+    "public_url": "https://digital-insurgency.com",
+    "public_url_note": "Canonical domain for the Digital Insurgency experience (site + podcast landing). Register + point DNS at the Cloud Run service before promoting the show.",
+    "description": "The corporation has an immune system. It kills anything new on contact — with forms, committees, sunk cost, and a fear reflex older than the org chart. Digital Insurgency is the field manual for getting the future past it anyway. Fourteen episodes of applied physics — extinction rates, vendor gravity, the entropy tax, the Dorian Gray Index — wrapped in a cyberpunk broadcast: ZERO, a burned-out platform engineer who walked out of a company optimizing loneliness, learns to smuggle authenticity into the belly of the machine. Not by burning it down. Four percent at a time. Transmitted to you by Space Pirate Zero, from Spaceship Alpha 9. Signal finds signal."
+  },
+  "gcp": {
+    "project": "stylelift",
+    "region": "us-central1",
+    "bucket": "spz-podcasts",
+    "prefix": "digital-insurgency",
+    "service": "spz-podcast-insurgency"
+  },
+  "schedule": {
+    "mode": "weekly_drip",
+    "spacing_hours": 168,
+    "start_time_utc": "14:00",
+    "note": "Field course: one module a week keeps the assignments doable. Switch mode to 'all_at_launch' for a binge drop."
+  },
+  "source": {
+    "produced_dir": "books/digital-insurgency/audiobook/produced",
+    "intros_dir": "books/digital-insurgency/audiobook/intros",
+    "scripts_dir": "books/digital-insurgency/audiobook/scripts",
+    "chapters_dir": "books/digital-insurgency/chapters",
+    "cover_master": "books/digital-insurgency/art/podcast_cover_src.png",
+    "episode_art_dir": "books/digital-insurgency/art/episodes"
+  },
+  "episodes": [
+    { "ep": 1,  "title": "Orientation: The Mirror Test",                          "module": "Orientation", "source": "Prologue" },
+    { "ep": 2,  "title": "The Rewrite",                                           "module": "I — The Physics", "source": "Ch 1" },
+    { "ep": 3,  "title": "The Physics of Stagnation",                             "module": "I — The Physics", "source": "Ch 2" },
+    { "ep": 4,  "title": "The Curator's Edge & the Psychology of the Blockade",   "module": "I — The Physics", "source": "Ch 3-4" },
+    { "ep": 5,  "title": "The Portrait of Dorian App",                            "module": "I — The Physics", "source": "Ch 5" },
+    { "ep": 6,  "title": "Architecture as Camouflage",                            "module": "II — The Protocol", "source": "Ch 6" },
+    { "ep": 7,  "title": "The Art of the Wedge",                                  "module": "II — The Protocol", "source": "Ch 7" },
+    { "ep": 8,  "title": "Good Trouble",                                          "module": "II — The Protocol", "source": "Ch 8" },
+    { "ep": 9,  "title": "Calculus for Cowards & The Qualification Protocol",     "module": "II — The Protocol", "source": "Ch 9-10" },
+    { "ep": 10, "title": "Weaponizing Bureaucracy",                              "module": "II — The Protocol", "source": "Ch 11" },
+    { "ep": 11, "title": "The Invasion Plan",                                     "module": "III — The Invasion", "source": "Ch 12" },
+    { "ep": 12, "title": "Field Dispatches: Three Runs in the Wild",              "module": "III — The Invasion", "source": "Ch 13-15" },
+    { "ep": 13, "title": "Victory Without Fire & The Insurgent's Oath",           "module": "III — The Invasion", "source": "Ch 16" },
+    { "ep": 14, "title": "The Field Kit",                                         "module": "IV — The Field Kit", "source": "Appendix A-B" }
+  ]
+}
