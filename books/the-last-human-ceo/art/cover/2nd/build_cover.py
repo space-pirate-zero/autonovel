@@ -122,8 +122,8 @@ def main():
     # author + tagline
     af = fnt("Orbitron-700.ttf", 62)
     d.text(((W - d.textlength("SPACE PIRATE ZERO", font=af)) / 2, 2250), "SPACE PIRATE ZERO", font=af, fill=PAPER + (255,))
-    tag = "A CHARMING MAN  ·  A QUIET MACHINE  ·  ONE LONG UNRAVELING"
-    tf = fit(d, tag, "JetBrainsMono-400.ttf", 30, W - 120)
+    tag = "SLEEPLESS  ·  COKE-BRIGHT  ·  MAGNIFICENT  ·  DOOMED"
+    tf = fit(d, tag, "JetBrainsMono-400.ttf", 32, W - 120)
     d.text(((W - d.textlength(tag, font=tf)) / 2, 2330), tag, font=tf, fill=CYAN + (255,))
 
     # SECOND EDITION badge — centered pill in the gap below the title

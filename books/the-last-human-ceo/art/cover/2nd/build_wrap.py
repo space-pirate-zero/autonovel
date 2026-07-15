@@ -159,8 +159,8 @@ def draw_front(img):
     img.alpha_composite(scrim, (FRONT_X, H - 340)); d = ImageDraw.Draw(img)
     af = fnt("Orbitron-700.ttf", 70)
     d.text((cx - d.textlength("SPACE PIRATE ZERO", font=af)/2, H - 210), "SPACE PIRATE ZERO", font=af, fill=PAPER+(255,))
-    tt = "A CHARMING MAN  ·  A QUIET MACHINE  ·  ONE LONG UNRAVELING"
-    tg = fit(d, tt, "JetBrainsMono-400.ttf", 34, FW - 120)
+    tt = "SLEEPLESS  ·  COKE-BRIGHT  ·  MAGNIFICENT  ·  DOOMED"
+    tg = fit(d, tt, "JetBrainsMono-400.ttf", 36, FW - 120)
     d.text((cx - d.textlength(tt, font=tg)/2, H - 120), tt, font=tg, fill=CYAN+(255,))
 
 
