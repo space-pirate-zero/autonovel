@@ -1,11 +1,13 @@
-A custom anime SPACESHIP emblem — the pirate broadcast vessel "Spaceship Alpha 9," designed for The Last Human CEO.
+A sleek cartoon FLYING SAUCER UFO in front 3/4 view — the pirate broadcast vessel SPACESHIP ALPHA 9, in the exact style of a neon retro-cartoon flying saucer.
 
-SHIP: a sleek but battle-scarred salvage starship. Matte near-black hull with sharp, aggressive angular lines; a long forward prow like a blade; swept-back delta wings; twin glowing engine nacelles trailing light. Neon running lights and hull-seam accents in hot magenta and cold cyan. On top, a prominent BROADCAST ARRAY — a satellite dish and thin antenna spines emitting a faint concentric signal-wave. A single glowing circular "0" porthole emblem on the flank (Space Pirate Zero). Corporate-dystopian space-pirate aesthetic — part yacht, part warship, part pirate radio station.
+SHIP: a wide smooth saucer/disc hull in dark charcoal near-black, with glowing HOT-MAGENTA panel grid-lines and seams radiating across the disc. A large clear GLASS DOME cockpit sits on top, revealing a single pilot chair and a small dashboard with tiny pink and cyan indicator lights. A thin ANTENNA rises from the top of the dome, ending in a glowing pink-and-red ORB with soft concentric glow rings. Wrapping the saucer's rim is a bright CYAN NEON SIGN BAND that reads "SPACESHIP ALPHA 9". From the underside, a glowing translucent CYAN TRACTOR BEAM projects straight down.
 
-COMPOSITION: dramatic 3/4 hero angle, dynamic as if banking mid-flight, faint motion streaks and a thin ion trail. Strong clear silhouette. Centered, isolated on a PURE FLAT solid black background (#030303) — an emblem/sticker subject with empty margins around it.
+BOOK MOTIF: floating up inside the tractor beam are the trappings of a deposed executive — a corner-office swivel chair, a briefcase, and a few loose papers, tumbling weightlessly in the beam.
 
-STYLE: premium cel-shaded anime, clean bold confident linework, flat cel shading with hard-edged neon rim lighting, subtle film-grain and faint chromatic aberration on neon edges. Industrial-goth cyberpunk noir. Square 1:1.
+COMPOSITION: the whole saucer centered, isolated on a PURE FLAT SOLID BLACK background (#030303), generous empty margins — an emblem/sticker subject.
 
-COLOR (strict): void #030303 background and hull shadow; only two neon accents — hot magenta #FF1493 and cold cyan #00F0FF — as rim light, running lights and glow, always separated by black, never blended; dirty off-white #E8E8E8 highlights; muted slate #8A90A0 midtones.
+STYLE: clean bold cel-shaded anime CARTOON linework, flat shading, thick confident outlines, bright neon glow, subtle chromatic aberration on the neon. Friendly-but-menacing pirate-tech vibe.
 
-EXCLUDE (critical): ZERO text, letters, numbers, words, logos, signage, watermark or signature (the "0" is a glowing round porthole shape only, not a typed character). No border or frame. Anime illustration, not photoreal.
+COLOR (strict): void black #030303; only two neon accents, hot magenta #FF1493 and cyan #00F0FF, always separated by black, never blended; dirty off-white #E8E8E8 glass highlights.
+
+EXCLUDE: no text anywhere EXCEPT the cyan "SPACESHIP ALPHA 9" sign on the rim. No other letters, numbers, logos, watermark, signature, border or frame. Cartoon illustration, not photoreal.

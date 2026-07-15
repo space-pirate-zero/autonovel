@@ -3,6 +3,8 @@
 import math
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
+import qrcode
+from qrcode.constants import ERROR_CORRECT_H
 
 HERE = Path(__file__).resolve().parent
 BOOK = HERE.parents[2]          # .../the-last-human-ceo (2nd -> cover -> art -> book)
@@ -49,11 +51,31 @@ def neon_text(base, text, font, y, fill, glow, cx=None, chroma=6):
 
 
 def shard(path, size, angle):
+    """Softly-blended holographic panel: feathered edges + neon glow."""
     im = Image.open(path).convert("RGBA").resize((size, size))
-    b = Image.new("RGBA", (size + 12, size + 12), (0, 0, 0, 0))
-    ImageDraw.Draw(b).rectangle((0, 0, size + 11, size + 11), fill=CYAN + (255,))
-    b.alpha_composite(im, (6, 6))
-    return b.rotate(angle, expand=True, resample=Image.BICUBIC)
+    m = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(m).rounded_rectangle((0, 0, size-1, size-1), radius=26, fill=255)
+    m = m.filter(ImageFilter.GaussianBlur(7))
+    im.putalpha(ImageChops.multiply(im.split()[3], m))
+    pad = 46
+    c = Image.new("RGBA", (size + 2*pad, size + 2*pad), (0, 0, 0, 0))
+    g = Image.new("RGBA", c.size, (0, 0, 0, 0))
+    ImageDraw.Draw(g).rounded_rectangle((pad-6, pad-6, pad+size+6, pad+size+6), radius=32, outline=CYAN+(255,), width=10)
+    c.alpha_composite(g.filter(ImageFilter.GaussianBlur(16)))
+    c.alpha_composite(im, (pad, pad))
+    ImageDraw.Draw(c).rounded_rectangle((pad, pad, pad+size-1, pad+size-1), radius=26, outline=CYAN+(190,), width=3)
+    return c.rotate(angle, expand=True, resample=Image.BICUBIC)
+
+
+def qr_panel(px):
+    qr = qrcode.QRCode(error_correction=ERROR_CORRECT_H, box_size=10, border=2)
+    qr.add_data("https://lasthumanceo.com"); qr.make(fit=True)
+    q = qr.make_image(fill_color=(6, 6, 8), back_color=(255, 255, 255)).convert("RGBA").resize((px, px))
+    pad = 20; panel = Image.new("RGBA", (px+2*pad, px+2*pad), (0, 0, 0, 0)); pd = ImageDraw.Draw(panel)
+    pd.rounded_rectangle((0, 0, px+2*pad, px+2*pad), radius=24, fill=PAPER + (255,))
+    pd.rounded_rectangle((0, 0, px+2*pad, px+2*pad), radius=24, outline=CYAN + (255,), width=6)
+    panel.alpha_composite(q, (pad, pad))
+    return panel
 
 
 def main():
@@ -68,10 +90,15 @@ def main():
     hero.putalpha(Image.composite(hero.split()[3], Image.new("L", (hw, hw), 0), fade))
     img.alpha_composite(hero, ((W - hw) // 2, 700))
 
-    # episode-art shards (dynamic "transmission fragments")
-    img.alpha_composite(shard(EP / "ep08.jpg", 250, 11), (40, 1760))
-    img.alpha_composite(shard(EP / "ep16.jpg", 250, -9), (1290, 1720))
-    img.alpha_composite(shard(EP / "ep28.jpg", 220, 7), (60, 2050))
+    # softly-blended holographic panels + a QR to the site
+    img.alpha_composite(shard(EP / "ep01.jpg", 250, 10), (26, 1120))
+    img.alpha_composite(shard(EP / "ep13.jpg", 250, -9), (1300, 1760))
+    qp = qr_panel(190)
+    qx, qy = 40, 1980
+    img.alpha_composite(qp, (qx, qy))
+    dq = ImageDraw.Draw(img); scf = fnt("JetBrainsMono-700.ttf", 22)
+    sc = "SCAN — LISTEN"
+    dq.text((qx + (qp.width - dq.textlength(sc, font=scf)) / 2, qy + qp.height + 2), sc, font=scf, fill=CYAN + (255,))
 
     d = ImageDraw.Draw(img)
     # kicker
@@ -87,11 +114,15 @@ def main():
     neon_text(img, "CEO", t2f, 300, PAPER, PINK, chroma=9)
     d = ImageDraw.Draw(img)
 
+    # dark scrim so author + tagline read over the figure
+    scrim = Image.new("RGBA", (W, 300), (0, 0, 0, 0)); sdr = ImageDraw.Draw(scrim)
+    for i in range(300):
+        sdr.line((0, i, W, i), fill=(3, 3, 3, int(240 * (i / 300))))
+    img.alpha_composite(scrim, (0, H - 300)); d = ImageDraw.Draw(img)
     # author + tagline
     af = fnt("Orbitron-700.ttf", 62)
     d.text(((W - d.textlength("SPACE PIRATE ZERO", font=af)) / 2, 2250), "SPACE PIRATE ZERO", font=af, fill=PAPER + (255,))
-    tf = fnt("JetBrainsMono-400.ttf", 30)
-    tag = "SUCCESSION  ×  FLOWERS FOR ALGERNON  ·  SIGNAL FINDS SIGNAL"
+    tag = "A CHARMING MAN  ·  A QUIET MACHINE  ·  ONE LONG UNRAVELING"
     tf = fit(d, tag, "JetBrainsMono-400.ttf", 30, W - 120)
     d.text(((W - d.textlength(tag, font=tf)) / 2, 2330), tag, font=tf, fill=CYAN + (255,))
 
@@ -110,9 +141,9 @@ def main():
     badge = badge.rotate(-2.5, expand=True, resample=Image.BICUBIC)
     img.alpha_composite(badge, ((W - badge.width) // 2, 560))
 
-    # SA9 ship transmitting in the upper-left void
-    ship = Image.open(HERE / "ship.png").convert("RGB").resize((520, 520)).point(lambda p: 0 if p < 28 else p)
-    layer = Image.new("RGB", img.size, (0, 0, 0)); layer.paste(ship, (60, 610))
+    # SA9 saucer beaming down in the upper-left void
+    ship = Image.open(HERE / "ship.png").convert("RGB").resize((560, 560)).point(lambda p: 0 if p < 26 else p)
+    layer = Image.new("RGB", img.size, (0, 0, 0)); layer.paste(ship, (30, 560))
     lit = ImageChops.lighter(img.convert("RGB"), layer).convert("RGBA"); lit.putalpha(img.split()[3]); img = lit
 
     out = HERE / "the_last_human_ceo_2nd_edition_cover.png"

@@ -7,6 +7,8 @@ Back (blurb + punk SPZ author bio) | spine | front (dynamic anime hero).
 import math
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
+import qrcode
+from qrcode.constants import ERROR_CORRECT_H
 
 HERE = Path(__file__).resolve().parent
 BOOK = HERE.parents[2]
@@ -83,11 +85,31 @@ def neon(base, text, font, cx, y, fill=PAPER, glow=PINK, chroma=8):
 
 
 def shard(path, size, angle):
+    """A softly-blended holographic panel: feathered edges + neon glow, not a hard box."""
     im = Image.open(path).convert("RGBA").resize((size, size))
-    b = Image.new("RGBA", (size + 14, size + 14), (0, 0, 0, 0))
-    ImageDraw.Draw(b).rectangle((0, 0, size + 13, size + 13), fill=CYAN + (255,))
-    b.alpha_composite(im, (7, 7))
-    return b.rotate(angle, expand=True, resample=Image.BICUBIC)
+    m = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(m).rounded_rectangle((0, 0, size-1, size-1), radius=30, fill=255)
+    m = m.filter(ImageFilter.GaussianBlur(8))
+    im.putalpha(ImageChops.multiply(im.split()[3], m))
+    pad = 52
+    c = Image.new("RGBA", (size + 2*pad, size + 2*pad), (0, 0, 0, 0))
+    g = Image.new("RGBA", c.size, (0, 0, 0, 0))
+    ImageDraw.Draw(g).rounded_rectangle((pad-8, pad-8, pad+size+8, pad+size+8), radius=38, outline=CYAN+(255,), width=12)
+    c.alpha_composite(g.filter(ImageFilter.GaussianBlur(20)))
+    c.alpha_composite(im, (pad, pad))
+    ImageDraw.Draw(c).rounded_rectangle((pad, pad, pad+size-1, pad+size-1), radius=30, outline=CYAN+(190,), width=3)
+    return c.rotate(angle, expand=True, resample=Image.BICUBIC)
+
+
+def qr_panel(px):
+    qr = qrcode.QRCode(error_correction=ERROR_CORRECT_H, box_size=10, border=2)
+    qr.add_data("https://lasthumanceo.com"); qr.make(fit=True)
+    q = qr.make_image(fill_color=(6, 6, 8), back_color=(255, 255, 255)).convert("RGBA").resize((px, px))
+    pad = 22; panel = Image.new("RGBA", (px + 2*pad, px + 2*pad), (0, 0, 0, 0)); pd = ImageDraw.Draw(panel)
+    pd.rounded_rectangle((0, 0, px+2*pad, px+2*pad), radius=26, fill=PAPER + (255,))
+    pd.rounded_rectangle((0, 0, px+2*pad, px+2*pad), radius=26, outline=CYAN + (255,), width=6)
+    panel.alpha_composite(q, (pad, pad))
+    return panel
 
 
 def draw_front(img):
@@ -100,10 +122,15 @@ def draw_front(img):
         fd.line((0, yy, hw, yy), fill=int(255 * (yy / 360)))
     hero.putalpha(Image.composite(hero.split()[3], Image.new("L", (hw, hw), 0), fade))
     img.alpha_composite(hero, (FRONT_X + PANEL - hw + 60, 780))
-    # swapped shards: the trophy(ep01), the manifesto car(ep13), the machine coda(ep28)
-    img.alpha_composite(shard(EP / "ep01.jpg", 300, 10), (FRONT_X + 30, 1930))
-    img.alpha_composite(shard(EP / "ep13.jpg", 300, -8), (FRONT_X + PANEL - 330, 1880))
-    img.alpha_composite(shard(EP / "ep28.jpg", 260, 6), (FRONT_X + 80, 2260))
+    # softly-blended holographic panels + a QR to the site (clear lower-left corner)
+    img.alpha_composite(shard(EP / "ep01.jpg", 276, 9), (FRONT_X - 26, 1070))
+    img.alpha_composite(shard(EP / "ep13.jpg", 300, -7), (FRONT_X + PANEL - 360, 1810))
+    qp = qr_panel(226)
+    qx, qy = FRONT_X + 48, H - 656
+    img.alpha_composite(qp, (qx, qy))
+    dq = ImageDraw.Draw(img); scf = fnt("JetBrainsMono-700.ttf", 25)
+    sc = "SCAN — LISTEN FREE"
+    dq.text((qx + (qp.width - dq.textlength(sc, font=scf)) / 2, qy + qp.height + 2), sc, font=scf, fill=CYAN + (255,))
     d = ImageDraw.Draw(img)
     kf = fnt("JetBrainsMono-700.ttf", 34)
     kt = "A FULL-CAST AUDIO DRAMA"
@@ -125,10 +152,15 @@ def draw_front(img):
     bb = ef.getbbox(et); bd.text((45+pad, 45+(bh-(bb[3]-bb[1]))//2 - bb[1]), et, font=ef, fill=(10,2,8,255))
     badge = badge.rotate(-2.5, expand=True, resample=Image.BICUBIC)
     img.alpha_composite(badge, (cx - badge.width//2, 720))
+    # dark scrim so the author + tagline read over the figure
+    scrim = Image.new("RGBA", (FW, 340), (0, 0, 0, 0)); sdr = ImageDraw.Draw(scrim)
+    for i in range(340):
+        sdr.line((0, i, FW, i), fill=(3, 3, 3, int(240 * (i / 340))))
+    img.alpha_composite(scrim, (FRONT_X, H - 340)); d = ImageDraw.Draw(img)
     af = fnt("Orbitron-700.ttf", 70)
     d.text((cx - d.textlength("SPACE PIRATE ZERO", font=af)/2, H - 210), "SPACE PIRATE ZERO", font=af, fill=PAPER+(255,))
-    tg = fit(d, "SUCCESSION  ×  FLOWERS FOR ALGERNON  ·  SIGNAL FINDS SIGNAL", "JetBrainsMono-400.ttf", 32, FW-120)
-    tt = "SUCCESSION  ×  FLOWERS FOR ALGERNON  ·  SIGNAL FINDS SIGNAL"
+    tt = "A CHARMING MAN  ·  A QUIET MACHINE  ·  ONE LONG UNRAVELING"
+    tg = fit(d, tt, "JetBrainsMono-400.ttf", 34, FW - 120)
     d.text((cx - d.textlength(tt, font=tg)/2, H - 120), tt, font=tg, fill=CYAN+(255,))
 
 
@@ -162,7 +194,8 @@ def draw_back(img):
              "people killed.")
     y = para(d, x, y, blurb, bf, PAPER, mw, lh); y += 22
     qf = fnt("EBGaramond-Italic.ttf", 44) if (F / "EBGaramond-Italic.ttf").exists() else fnt("SpaceGrotesk-500.ttf", 40)
-    y = para(d, x, y, "“Succession meets Flowers for Algernon, broadcast from a pirate radio at the end of the world.”",
+    y = para(d, x, y, "“The manic, coke-lit unraveling of the last human boss — a charming man talking "
+             "himself off the edge of the world, one honest machine at a time.”",
              qf, CYAN, mw, qf.size + 18); y += 40
     d.line((x, y, x + mw, y), fill=PINK + (200,), width=3); y += 40
     d.text((x, y), "ABOUT SPACE PIRATE ZERO", font=fnt("Orbitron-700.ttf", 36), fill=PINK + (255,)); y += 66
@@ -198,8 +231,8 @@ def main():
     draw_back(img)
     draw_spine(img)
     draw_front(img)
-    # SA9 ship transmitting in the upper-left void of the front panel
-    img = add_ship(img, 660, FRONT_X + 10, 780)
+    # SA9 saucer beaming down into the upper-left void of the front panel
+    img = add_ship(img, 660, FRONT_X + 30, 690)
     out = HERE / "the_last_human_ceo_2nd_edition_WRAP.png"
     img.convert("RGB").save(out)
     img.convert("RGB").save(out.with_suffix(".jpg"), quality=92)
