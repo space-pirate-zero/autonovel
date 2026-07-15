@@ -2,7 +2,7 @@
 """Dynamic 2nd-edition cover for The Last Human CEO — anime hero + SPZ brand type."""
 import math
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 
 HERE = Path(__file__).resolve().parent
 BOOK = HERE.parents[2]          # .../the-last-human-ceo (2nd -> cover -> art -> book)
@@ -109,6 +109,11 @@ def main():
             et, font=ef, fill=(10, 2, 8, 255))
     badge = badge.rotate(-2.5, expand=True, resample=Image.BICUBIC)
     img.alpha_composite(badge, ((W - badge.width) // 2, 560))
+
+    # SA9 ship transmitting in the upper-left void
+    ship = Image.open(HERE / "ship.png").convert("RGB").resize((520, 520)).point(lambda p: 0 if p < 28 else p)
+    layer = Image.new("RGB", img.size, (0, 0, 0)); layer.paste(ship, (60, 610))
+    lit = ImageChops.lighter(img.convert("RGB"), layer).convert("RGBA"); lit.putalpha(img.split()[3]); img = lit
 
     out = HERE / "the_last_human_ceo_2nd_edition_cover.png"
     img.convert("RGB").save(out, quality=95)

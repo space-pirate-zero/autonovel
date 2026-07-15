@@ -1,0 +1,11 @@
+A custom anime SPACESHIP emblem — the pirate broadcast vessel "Spaceship Alpha 9," designed for The Last Human CEO.
+
+SHIP: a sleek but battle-scarred salvage starship. Matte near-black hull with sharp, aggressive angular lines; a long forward prow like a blade; swept-back delta wings; twin glowing engine nacelles trailing light. Neon running lights and hull-seam accents in hot magenta and cold cyan. On top, a prominent BROADCAST ARRAY — a satellite dish and thin antenna spines emitting a faint concentric signal-wave. A single glowing circular "0" porthole emblem on the flank (Space Pirate Zero). Corporate-dystopian space-pirate aesthetic — part yacht, part warship, part pirate radio station.
+
+COMPOSITION: dramatic 3/4 hero angle, dynamic as if banking mid-flight, faint motion streaks and a thin ion trail. Strong clear silhouette. Centered, isolated on a PURE FLAT solid black background (#030303) — an emblem/sticker subject with empty margins around it.
+
+STYLE: premium cel-shaded anime, clean bold confident linework, flat cel shading with hard-edged neon rim lighting, subtle film-grain and faint chromatic aberration on neon edges. Industrial-goth cyberpunk noir. Square 1:1.
+
+COLOR (strict): void #030303 background and hull shadow; only two neon accents — hot magenta #FF1493 and cold cyan #00F0FF — as rim light, running lights and glow, always separated by black, never blended; dirty off-white #E8E8E8 highlights; muted slate #8A90A0 midtones.
+
+EXCLUDE (critical): ZERO text, letters, numbers, words, logos, signage, watermark or signature (the "0" is a glowing round porthole shape only, not a typed character). No border or frame. Anime illustration, not photoreal.

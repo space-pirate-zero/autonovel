@@ -6,7 +6,7 @@ Back (blurb + punk SPZ author bio) | spine | front (dynamic anime hero).
 """
 import math
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 
 HERE = Path(__file__).resolve().parent
 BOOK = HERE.parents[2]
@@ -183,11 +183,23 @@ def draw_back(img):
     d.rectangle((bx2 - 600, by2 - 360, bx2, by2), fill=(232, 232, 232, 255))
 
 
+def add_ship(img, size, x, y):
+    """Composite the SA9 ship into the void via lighten — its black bg vanishes."""
+    ship = Image.open(HERE / "ship.png").convert("RGB").resize((size, size)).point(lambda p: 0 if p < 28 else p)
+    layer = Image.new("RGB", img.size, (0, 0, 0))
+    layer.paste(ship, (x, y))
+    lit = ImageChops.lighter(img.convert("RGB"), layer).convert("RGBA")
+    lit.putalpha(img.split()[3])
+    return lit
+
+
 def main():
     img = base_canvas()
     draw_back(img)
     draw_spine(img)
     draw_front(img)
+    # SA9 ship transmitting in the upper-left void of the front panel
+    img = add_ship(img, 660, FRONT_X + 10, 780)
     out = HERE / "the_last_human_ceo_2nd_edition_WRAP.png"
     img.convert("RGB").save(out)
     img.convert("RGB").save(out.with_suffix(".jpg"), quality=92)

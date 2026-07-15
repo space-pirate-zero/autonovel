@@ -1,0 +1,12 @@
+{
+  "id": "ship",
+  "model": "gemini-2.5-flash-image",
+  "timestamp": "2026-07-15T16:17:18.467686",
+  "path": "art/cover/2nd/ship.png",
+  "width": 1024,
+  "height": 1024,
+  "prompt_hash": "aee9d07c9a683572",
+  "prompt_length": 1688,
+  "model_text": null,
+  "attempt": 1
+}
