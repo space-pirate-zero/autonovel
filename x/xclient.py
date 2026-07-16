@@ -383,10 +383,12 @@ class XClient:
         return bool(r.data.get("retweeted", not on) if on else not r.data.get("retweeted", False))
 
     def follow(self, username: str, on: bool = True) -> bool:
-        target = self.resolve_user(username)
         if self.dry_run:
-            print(f"    [dry-run] would {'follow' if on else 'unfollow'} @{target['username']}")
+            # Stay creds/network-free like every other dry-run write: don't
+            # resolve the handle to an id, just echo it back.
+            print(f"    [dry-run] would {'follow' if on else 'unfollow'} @{username.lstrip('@')}")
             return True
+        target = self.resolve_user(username)
         r = (self.v2.follow_user(target["id"]) if on
              else self.v2.unfollow_user(target["id"]))
         return bool(r.data.get("following", not on) if on else not r.data.get("following", False))

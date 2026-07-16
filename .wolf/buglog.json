@@ -101,6 +101,19 @@
         "import",
         "error-handling"
       ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "`xcli.py --dry-run follow @user` failed with 'Missing X credentials' and made a network call, unlike every other dry-run write which is creds/network-free.",
+      "root_cause": "XClient.follow() called resolve_user() (which hits get_user, needing creds+network) BEFORE the dry_run guard.",
+      "fix": "Moved the dry_run branch above resolve_user(); in dry-run just echo username.lstrip('@') instead of resolving it to an id.",
+      "tags": [
+        "x",
+        "xclient",
+        "follow",
+        "dry-run",
+        "code-review"
+      ]
     }
   ]
 }
