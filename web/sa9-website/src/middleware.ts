@@ -73,6 +73,16 @@ const authMiddleware = createAuthMiddleware({
     "/privacy",
     "/terms",
     "/blog(.*)",
+    // Public marketing pages — must be reachable anonymously; without these,
+    // Clerk 404s signed-out visitors once a real publishable key is present.
+    "/consulting",
+    "/studio",
+    "/manifesto",
+    "/press",
+    "/music(.*)",
+    "/dispatches(.*)",
+    "/faq",
+    "/connect",
     "/api/webhooks(.*)",
     "/api/health(.*)",
     // Public marketing endpoints: the contact form, newsletter signup, and OG

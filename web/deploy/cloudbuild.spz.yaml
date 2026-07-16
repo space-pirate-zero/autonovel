@@ -1,0 +1,22 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -f
+      - infra/sa9-sites/docker/Dockerfile.spz
+      - --build-arg
+      - NEXT_PUBLIC_POSTHOG_KEY=${_PHK}
+      - --build-arg
+      - NEXT_PUBLIC_POSTHOG_HOST=${_PHH}
+      - --build-arg
+      - NEXT_PUBLIC_STORE_OPEN=false
+      - --build-arg
+      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${_CKPK}
+      - -t
+      - us-central1-docker.pkg.dev/stylelift/sa9-sites/spz:${_TAG}
+      - .
+images:
+  - us-central1-docker.pkg.dev/stylelift/sa9-sites/spz:${_TAG}
+options:
+  machineType: E2_HIGHCPU_8
+timeout: 2400s
