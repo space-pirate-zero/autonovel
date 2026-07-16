@@ -1,0 +1,22 @@
+{
+  "_comment": "Register these local MCP servers with Claude Code. Copy into your project/user .mcp.json, or run the `claude mcp add` commands in publishing/README.md. Paths are relative to the repo root; adjust `cwd` to your absolute repo path.",
+  "mcpServers": {
+    "sa9-publish": {
+      "command": "uv",
+      "args": ["run", "python", "publishing/servers/publish_server.py"],
+      "cwd": "/Users/gregchambers/autonovel"
+    },
+    "sa9-substack": {
+      "command": "uv",
+      "args": ["run", "python", "publishing/servers/substack_server.py"],
+      "cwd": "/Users/gregchambers/autonovel",
+      "_status": "Phase 2 — not built yet"
+    },
+    "sa9-analytics": {
+      "command": "uv",
+      "args": ["run", "python", "publishing/servers/analytics_server.py"],
+      "cwd": "/Users/gregchambers/autonovel",
+      "_status": "Phase 3 — not built yet"
+    }
+  }
+}

@@ -7,4 +7,21 @@ dependencies = [
     "httpx>=0.28.1",
     "python-dotenv>=1.2.2",
     "python-substack>=0.1.22",
+    # --- publishing pipeline (publishing/) ---
+    "feedgen>=1.0.0",                # RSS + iTunes/podcast namespaces
+    "google-cloud-storage>=2.18.0",  # self-host audio + feed on GCS
+    "mutagen>=1.47.0",               # read mp3 duration
+    "pyyaml>=6.0.2",                 # publishing/config.yaml
+    "mcp>=1.2.0",                    # FastMCP servers
+]
+
+[project.optional-dependencies]
+# Phase 3 (analytics) + Phase 4 (dashboard). Install with:
+#   uv sync --extra publishing-extras
+publishing-extras = [
+    "substack-api>=0.1.0",           # read Substack stats
+    "pyjwt>=2.9.0",                  # Apple Podcasts Connect ES256 JWT
+    "cryptography>=43.0.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
 ]

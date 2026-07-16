@@ -21,5 +21,9 @@ substack/cards/*.png
 substack_cookies.json
 substack/preview/
 
+# publishing pipeline local state (manifests, generated feeds, analytics db)
+publishing/.state/
+publishing/**/*.sqlite
+
 # macOS
 .DS_Store

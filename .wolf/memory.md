@@ -168,3 +168,25 @@ Active worktree now .claude/worktrees/mystifying-hertz-fe888c (branch master).
   had diverged 66/69 w/ its own Substack history, so used a new branch to avoid clobbering it).
 - Season One "The Fog" (Eps 1-8) all produced: branded open + scene scoring + album song + samples.
 - Ep8 NOT yet committed (prior batch committed as 188881d). Act Two = Eps 9-24 (Ep9 = Cobain/Seattle).
+
+## 2026-07-07 — publishing/ pipeline (Phase 1)
+- Built `publishing/` — single local publish+analytics pipeline for the SA9 books/podcasts.
+- Phase 1 (podcast publish) DONE & verified offline: config.yaml + core/{config,manifest,feed,gcs,
+  publisher}.py + servers/publish_server.py (FastMCP, 6 tools) + cli.py.
+- Dry-run published all 8 neko eps to a valid iTunes RSS via feedgen; durations/sizes read from
+  mp3s (mutagen), stable uuid5 GUIDs, Fiction>Drama, explicit=yes, seasons/episodes tagged.
+- KEY MODEL: Apple/Spotify are directories that SUBSCRIBE to one GCS-hosted RSS feed — never
+  upload targets. "Publish" = push mp3 to gs://sa9-podcasts + rebuild feed.xml.
+- Phases 2 (Substack unofficial API), 3 (analytics→SQLite), 4 (dashboard), 5 (download-counting)
+  planned in publishing/README.md but unbuilt.
+- User must still do Phase 0: create gs://sa9-podcasts in `stylelift`, ADC login, upload 3000²
+  cover, submit feed URL once to Apple Podcasts Connect + Spotify for Creators.
+- 2026-07-07 (cont.): Phases 2-4 also built & verified. Phase 2 Substack: core/substack_client.py
+  (python-substack — real API introspected: Api/Post, from_markdown, post_draft/prepublish/publish,
+  get_publication_subscriber_count) + servers/substack_server.py (create_draft/publish_post/stats).
+  Phase 3: core/db.py (SQLite show_stats+episode_stats daily snapshots), analytics/apple.py (ES256
+  JWT for Apple Podcasts Connect), analytics/collect.py (shared refresh), servers/analytics_server.py.
+  Phase 4: dashboard/app.py (FastAPI :8777) + static/index.html (dark NEON theme). Live-tested:
+  overview shows 8 eps/219min, detail table lists doors + weekly-cadence dates, refresh degrades
+  gracefully w/o creds. .claude/launch.json added for the "dashboard" preview server. Only Phase 5
+  (Cloud Run download-counter) left. Creds go in repo-root .env (Substack cookies/email, Apple .p8).

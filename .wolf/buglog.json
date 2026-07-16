@@ -1,6 +1,20 @@
 {
   "bugs": [
     {
+      "date": "2026-07-07",
+      "error_message": "ModuleNotFoundError: No module named 'mcp.server' when launching publishing/mcp/publish_server.py (from mcp.server.fastmcp import FastMCP).",
+      "root_cause": "The local package dir was named publishing/mcp/, and the server bootstrap inserts publishing/ at sys.path[0]. So `import mcp` resolved to the local publishing/mcp package, shadowing the installed `mcp` (FastMCP) package.",
+      "fix": "Renamed publishing/mcp/ to publishing/servers/. Never name a local package `mcp` (or any installed top-level package) when its parent dir is on sys.path. Updated mcp.json, README, and docstring paths.",
+      "tags": [
+        "mcp",
+        "fastmcp",
+        "python",
+        "import-shadowing",
+        "sys-path",
+        "publishing"
+      ]
+    },
+    {
       "date": "2026-06-05",
       "error_message": "API 400 invalid_request_error: '`temperature` is deprecated for this model.' (claude-opus-4-8). Every draft_chapter/evaluate/review call exit 1.",
       "root_cause": "autonovel scripts were written for Sonnet and pass a 'temperature' field in the /v1/messages payload. Opus 4.8 rejects 'temperature'. After switching all models to claude-opus-4-8, every API call 400'd.",

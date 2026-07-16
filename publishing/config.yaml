@@ -1,0 +1,50 @@
+# SA9 publishing pipeline — show config.
+# One entry per show. Podcast apps (Apple, Spotify, Overcast, ...) never receive
+# uploads; they subscribe to `feed_url`. Publishing = push audio to GCS + rebuild
+# that one feed. See publishing/README.md for the one-time Phase 0 setup.
+
+defaults:
+  gcs:
+    bucket: sa9-podcasts          # gs://sa9-podcasts in the `stylelift` GCP project
+    public_base: https://storage.googleapis.com/sa9-podcasts
+  language: en
+  explicit: true                  # SA9 fiction is gonzo/reckless — mark explicit
+  owner_name: Space Pirate Zero
+  owner_email: zero@spacepiratezero.com
+
+shows:
+  neko-death-cult:
+    title: The Maneki Neko Death Cult
+    subtitle: One door, one dead saint at a time.
+    author: Space Pirate Zero
+    description: >-
+      A gonzo, time-slipping cyberpunk serial. Space Pirate Zero dies for a
+      living — one door, one dead saint at a time — then wakes somewhere new,
+      chasing a girl made of light and running from a cult of polite monsters.
+      Twenty-four doors. A Twilight Zone fable and one accumulating story.
+      Mind the beige.
+    category: Fiction
+    subcategory: Drama          # iTunes sub-category under Fiction
+    type: serial                # itunes:type — serial: apps play from Episode 1
+    site_url: https://spacepiratezero.com
+    substack_url: ""            # fill in Phase 2
+    # Where the produced episodes live and how they're named (paths are repo-relative).
+    audio_dir: books/neko-death-cult/audio/produced
+    audio_pattern: "ep{n:02d}_FINAL.mp3"
+    cover_art: books/neko-death-cult/audio/assets/cover.jpg   # MUST be 3000x3000 for Apple
+    gcs_prefix: neko-death-cult
+    # Release schedule used only to assign a stable pubDate on first publish
+    # (persisted in the manifest afterward, so re-runs don't shuffle dates).
+    start_date: "2026-01-06"    # Ep1 date; Mondays
+    cadence_days: 7
+    seasons:
+      1: The Fog
+    episodes:
+      - { n: 1, season: 1, title: "Episode 1 — The Belushi Door" }
+      - { n: 2, season: 1, title: "Episode 2 — The Joplin Door" }
+      - { n: 3, season: 1, title: "Episode 3 — The Pimp C Door" }
+      - { n: 4, season: 1, title: "Episode 4 — The Hendrix Door" }
+      - { n: 5, season: 1, title: "Episode 5 — The Marilyn Door" }
+      - { n: 6, season: 1, title: "Episode 6 — The Morrison Door" }
+      - { n: 7, season: 1, title: "Episode 7 — The Hemingway Door" }
+      - { n: 8, season: 1, title: "Episode 8 — The Anna Nicole Door" }

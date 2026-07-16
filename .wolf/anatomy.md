@@ -34,6 +34,22 @@ Python tooling (`run_pipeline.py`, `draft_chapter.py`, `evaluate.py`, `gen_*.py`
 - `pyproject.toml`, `uv.lock`, `.python-version` — Python env (uv).
 - `.wolf/` — OpenWolf context.
 - `README.md` — monorepo overview + shared pipeline design.
+- `publishing/` — **book-agnostic distribution pipeline** (added 2026-07-07). One
+  local pipeline: push audio to GCS (`gs://sa9-podcasts`, project `stylelift`) and
+  regenerate one RSS feed per show; Apple/Spotify/etc. subscribe to that feed (they
+  are directories, not upload targets). Layout: `config.yaml` (per-show metadata +
+  episode titles), `core/` (config, manifest, feed via `feedgen`, gcs, publisher),
+  `core/substack_client.py` (unofficial python-substack), `core/db.py` (SQLite),
+  `analytics/{apple,collect}.py` (Apple Podcasts Connect ES256 JWT + collectors),
+  `servers/{publish,substack,analytics}_server.py` (3 FastMCP servers),
+  `cli.py` (same ops on the terminal, `--dry-run` aware),
+  `dashboard/{app.py,static/index.html}` (FastAPI on :8777, dark SA9 theme),
+  `README.md` (Phase 0 setup + manual directory-submission checklist + .env keys).
+  State (manifests, feeds, analytics.sqlite) in gitignored `publishing/.state/`.
+  Phases 1–4 built & verified offline; Phase 5 (Cloud Run download-counter) unbuilt.
+  Substack/Apple need creds in .env to actually run; everything degrades gracefully.
+  NOTE: the MCP-server dir is `servers/` NOT `mcp/` — a dir named `mcp` shadows the
+  installed `mcp` package and breaks `from mcp.server.fastmcp import FastMCP`.
 
 ## Branch archives
 Original per-book branches are retained as full-history archives:

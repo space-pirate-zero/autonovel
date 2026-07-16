@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SA9 Publishing Dashboard</title>
+<style>
+  :root {
+    --bg:#0a0a0f; --panel:#14141f; --panel2:#1c1c2b; --line:#2a2a3d;
+    --ink:#e8e8f0; --dim:#8a8aa0; --neon:#ff2d78; --cyan:#25e6d0; --amber:#ffb020;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  header { padding:24px 28px; border-bottom:1px solid var(--line);
+    display:flex; align-items:baseline; gap:14px; }
+  header h1 { margin:0; font-size:20px; letter-spacing:.5px; }
+  header .sub { color:var(--dim); font-size:13px; }
+  main { padding:24px 28px; max-width:1100px; margin:0 auto; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:14px;
+    padding:18px 20px; cursor:pointer; transition:border-color .15s, transform .15s; }
+  .card:hover { border-color:var(--neon); transform:translateY(-2px); }
+  .card h2 { margin:0 0 12px; font-size:16px; }
+  .kpis { display:flex; flex-wrap:wrap; gap:14px 22px; }
+  .kpi .n { font-size:22px; font-weight:700; }
+  .kpi .l { font-size:11px; color:var(--dim); text-transform:uppercase; letter-spacing:.6px; }
+  .kpi .n.cyan{color:var(--cyan)} .kpi .n.neon{color:var(--neon)} .kpi .n.amber{color:var(--amber)}
+  .card .feed { margin-top:12px; font-size:12px; color:var(--dim); word-break:break-all; }
+  .detail { margin-top:8px; }
+  .detail-head { display:flex; align-items:center; gap:14px; margin:8px 0 16px; }
+  button { background:var(--panel2); color:var(--ink); border:1px solid var(--line);
+    border-radius:8px; padding:8px 14px; font-size:13px; cursor:pointer; }
+  button:hover { border-color:var(--cyan); }
+  .back { background:none; border:none; color:var(--cyan); padding:0; cursor:pointer; font-size:14px; }
+  table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+  th,td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); }
+  th { color:var(--dim); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.6px; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .muted { color:var(--dim); }
+  .hidden { display:none; }
+  .toast { position:fixed; bottom:20px; right:20px; background:var(--panel2);
+    border:1px solid var(--cyan); border-radius:10px; padding:12px 16px; font-size:13px; max-width:360px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SA9 · Publishing</h1>
+  <span class="sub">how the books are doing</span>
+</header>
+<main>
+  <section id="overview"><div class="cards" id="cards"></div></section>
+  <section id="detail" class="detail hidden"></section>
+</main>
+<div id="toast" class="toast hidden"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const fmt = n => (n===null||n===undefined) ? "—" : n.toLocaleString();
+
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.remove("hidden");
+  clearTimeout(window._tt); window._tt=setTimeout(()=>t.classList.add("hidden"),4000); }
+
+async function loadOverview(){
+  const cards = await (await fetch("/api/overview")).json();
+  $("#detail").classList.add("hidden"); $("#overview").classList.remove("hidden");
+  $("#cards").innerHTML = cards.map(c => `
+    <div class="card" onclick="loadShow('${c.slug}')">
+      <h2>${c.title}</h2>
+      <div class="kpis">
+        <div class="kpi"><div class="n cyan">${fmt(c.episodes_published)}</div><div class="l">Episodes</div></div>
+        <div class="kpi"><div class="n">${fmt(c.total_minutes)}</div><div class="l">Minutes</div></div>
+        <div class="kpi"><div class="n neon">${fmt(c.subscribers)}</div><div class="l">Substack subs</div></div>
+        <div class="kpi"><div class="n amber">${fmt(c.apple_followers)}</div><div class="l">Apple followers</div></div>
+        <div class="kpi"><div class="n">${fmt(c.downloads)}</div><div class="l">Downloads</div></div>
+      </div>
+      <div class="feed">${c.feed_url}</div>
+    </div>`).join("");
+}
+
+async function loadShow(slug){
+  const d = await (await fetch(`/api/show/${slug}`)).json();
+  $("#overview").classList.add("hidden");
+  const el = $("#detail"); el.classList.remove("hidden");
+  el.innerHTML = `
+    <button class="back" onclick="loadOverview()">← all shows</button>
+    <div class="detail-head">
+      <h2 style="margin:0">${d.title}</h2>
+      <button onclick="refresh('${slug}')">↻ Refresh stats</button>
+    </div>
+    <table>
+      <thead><tr><th>#</th><th>Title</th><th>Published</th><th class="num">Min</th><th class="num">Downloads</th></tr></thead>
+      <tbody>${d.episodes.map(e=>`
+        <tr><td class="num">${e.n}</td><td>${e.title}</td>
+        <td class="muted">${(e.pubdate||"").slice(0,10)}</td>
+        <td class="num">${e.minutes}</td>
+        <td class="num">${fmt(e.downloads)}</td></tr>`).join("")}
+      </tbody>
+    </table>
+    ${d.episodes.length ? "" : '<p class="muted">No episodes in the manifest yet — run <code>publish</code>.</p>'}`;
+}
+
+async function refresh(slug){
+  toast("Refreshing…");
+  const r = await (await fetch(`/api/refresh/${slug}`, {method:"POST"})).json();
+  toast((r.notes||[]).join(" · ") || "Done");
+  loadShow(slug);
+}
+
+loadOverview();
+</script>
+</body>
+</html>
