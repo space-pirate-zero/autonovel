@@ -360,3 +360,26 @@ Consolidated all TLHC launch work into reusable, cross-book form:
 - Social motion upgrade also shipped: glow-pulse audiograms, title-reveal trailer
   intro, 29 per-episode teaser Reels (`social/gen_teasers.py`), reproducible
   `social/make_presskit.sh` (press-kit.zip → GCS, git-ignored).
+
+## 2026-07-15 — Studio repo docs set (branch spz/studio-repo-docs-setup-efc7a9)
+Made the repo formally THE studio repo. New documentation set:
+- `README.md` rewritten as studio front page; `CLAUDE.md` (new, AI entry point);
+  `RULES.md` (new, enforceable studio rules with gates).
+- `docs/` (new): CATALOG.md (all properties + status), OPERATIONS.md (ops
+  runbook), INFRASTRUCTURE.md (GCP/Cloud Run/buckets/domains),
+  BRANCHES.md (branch & worktree ledger + studio debt).
+- `brand/spz/ENFORCEMENT.md` (new): pass/fail brand gate (hex/font/voice/sonic
+  audits) — flagged build_brand_kit.py hardcoded stale paths.
+- Per-book READMEs replaced (were generic autonovel boilerplate):
+  digital-insurgency, the-last-human-ceo, zero-trust-reality (marked as stale
+  TLHC clone → real Defense book on spz/zero-trust-research-analysis-24ce8e),
+  neko-death-cult (new — had none).
+- `.claude/commands/` (new): /studio-status, /new-book, /publish-book,
+  /brand-check, /social-kit. `.wolf/OPENWOLF.md` created (was referenced by
+  ~/CLAUDE.md but missing). `.wolf/anatomy.md` rewritten to current truth.
+- **asset-mcp integrated**: code was UNCOMMITTED in the cloud-run-mcp-assets
+  worktree (branch tip == master); copied into this branch (108K, .venv
+  stripped) and documented as the studio's MAIN MCP ENDPOINT everywhere.
+Key discoveries: books/zero-trust-reality on master is a byte-identical TLHC
+clone; root book files are a byte-identical DI duplicate; main checkout sits
+on the autonovel/the-last-human-ceo archive branch.
