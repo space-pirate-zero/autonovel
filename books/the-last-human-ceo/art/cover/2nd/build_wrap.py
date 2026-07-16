@@ -200,9 +200,9 @@ def draw_back(img):
     d.line((x, y, x + mw, y), fill=PINK + (200,), width=3); y += 40
     d.text((x, y), "ABOUT SPACE PIRATE ZERO", font=fnt("Orbitron-700.ttf", 36), fill=PINK + (255,))
     about_top = y; y += 66
-    # SPZ 'WANTED' poster pinned to the right of the bio
+    # SPZ 'WANTED' poster pinned to the right of the bio (bigger)
     wp = Image.open(HERE / "wanted_poster.png").convert("RGBA")
-    pw = 500; wp = wp.resize((pw, int(wp.height * pw / wp.width)))
+    pw = 660; wp = wp.resize((pw, int(wp.height * pw / wp.width)))
     px_pos = BACK_X + PANEL - MARGIN - pw
     img.alpha_composite(wp, (px_pos, about_top - 6)); d = ImageDraw.Draw(img)
     bio_mw = px_pos - x - 60          # left column, clear of the poster
