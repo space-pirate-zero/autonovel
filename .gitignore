@@ -44,3 +44,6 @@ books/*/social/video/
 # --- Substack automation runtime state / credentials (never commit) ---
 books/*/substack/draft_ids.json
 **/substack_cookies.json
+
+# --- X (@spaceshipalpha9) runtime state / backups (regenerable) ---
+x/export/

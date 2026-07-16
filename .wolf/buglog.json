@@ -1,105 +1,132 @@
 {
- "bugs": [
-  {
-   "date": "2026-06-05",
-   "error_message": "API 400 invalid_request_error: '`temperature` is deprecated for this model.' (claude-opus-4-8). Every draft_chapter/evaluate/review call exit 1.",
-   "root_cause": "autonovel scripts were written for Sonnet and pass a 'temperature' field in the /v1/messages payload. Opus 4.8 rejects 'temperature'. After switching all models to claude-opus-4-8, every API call 400'd.",
-   "fix": "Removed the 'temperature' line from every script payload (sed over *.py). Also made draft_chapter.call_writer raise resp.text on non-200 so the real API error is visible instead of a bare raise_for_status.",
-   "tags": [
-    "anthropic-api",
-    "opus-4-8",
-    "temperature",
-    "400",
-    "autonovel",
-    "model-migration"
-   ]
-  },
-  {
-   "date": "2026-06-05",
-   "error_message": "Polish pass damaged prose: ch_16 left with an orphaned em-dash line (' \u2014 *none but ourselves can free our minds.*'), dropped GHOST dialogue, and empty '**' markers; novel_score regressed 8.0 -> 7.0 in revision cycle 5.",
-   "root_cause": "apply_cuts.py (mechanical OVER-EXPLAIN/REDUNDANT span deletion) and the per-cycle/per-review 'mechanical cleanup' step are NOT gated by per-chapter re-eval and are tuned for prose fiction. On this format-heavy book they delete spans, leaving dangling markdown and incoherent fragments. The full-novel judge score is too coarse to catch single-chapter breakage, so damage was committed under a passing cycle score.",
-   "fix": "Killed the pass; reset prose chapters to the cycle-4 peak commit 7c9a2f8 (novel_score 8.0); hand-repaired ch_16's two cut passages; ran a precise odd-'**'/orphan scan (0 flags); rebuilt all formats. For future polish runs: exclude the appendices and skip apply_cuts, or gate every mechanical edit with a per-chapter re-eval+revert.",
-   "tags": [
-    "autonovel",
-    "apply_cuts",
-    "revision",
-    "prose-damage",
-    "opus-4-8",
-    "regression"
-   ]
-  },
-  {
-   "date": "2026-06-05",
-   "error_message": "KDP paperback rejected: 'This text is outside the margins' (p13) + 'Insufficient gutter ... require at least 0.5\"' (p118,140).",
-   "root_cause": "convert_equations.py rewrote some formula lines to $$...$$ but several were INSIDE ``` code fences (ch_10 Score/I_v, ch_11 D_audit, ch_12 T_r, ch_01 R_ext/A_hl). pandoc rendered them as verbatim -> literal '$$' text that can't wrap -> ran past the 6in text block into the gutter/margin. (Also affected designed PDF + epub.)",
-   "fix": "Unwrap-script removed the code fences around single-equation blocks -> real display math. eqbox redefined to scale wide equations with adjustbox(max width). Print preamble hardened: fvextra breaklines, ragged headings, small longtables, emergencystretch, hidelinks. Result: 0 overfull hboxes; epubcheck clean.",
-   "tags": [
-    "kdp",
-    "paperback",
-    "pandoc",
-    "code-fence",
-    "display-math",
-    "overfull",
-    "margins"
-   ]
-  },
-  {
-   "error_message": "Album songs all start with quiet static and sound generic/samey",
-   "root_cause": "Songs were generated via elevenlabs music.compose with a single prose prompt + force_instrumental=True. The prose prompt collapsed each track to the shared 'industrial-goth 808 ~70BPM' denominator (era washed out), and the model prepended a quiet vinyl-crackle/ambient lead-in (~-56dB head) identical on every track = 'static intro'.",
-   "fix": "New tools/compose_songs.py uses composition_plan (MusicPrompt) instead: era instruments woven into positive_global_styles AND every SongSection's positive_local_styles; negative_global_styles bans 'long ambient intro/slow fade-in/static intro/vinyl-crackle intro/white-noise wash'; an Intro section forces 'cold start on the downbeat, beat from bar one'; output mp3_44100_192; master = silenceremove head + loudnorm I=-10 TP=-1 + alimiter. API constraints learned: (a) must NOT pass music_length_ms with composition_plan (length = sum of section durations); (b) force_instrumental only works with prompt, not composition_plan (use empty section lines + 'no vocals' negative styles).",
-   "tags": [
-    "elevenlabs",
-    "music",
-    "composition_plan",
-    "audio",
-    "mastering",
-    "neko-death-cult"
-   ]
-  },
-  {
-   "date": "2026-07-11",
-   "error_message": "gen_audiobook_script.py: API 400 '`temperature` is deprecated for this model.' then, after removing it, httpx.ReadTimeout on longer chapters ('The read operation timed out') killing the parse mid-run (died at ch_04, ch_08).",
-   "root_cause": "(1) call_claude posted a 'temperature' field, rejected by claude-opus-4-8 (same class as the 2026-06-05 temperature bug, different script). (2) Non-streaming httpx.post with timeout=300 can't cover Opus generating a large speaker-attributed JSON for a 4-5k-word chapter (100-175 segments), so the single read times out.",
-   "fix": "Removed 'temperature'. Rewrote call_claude to STREAM (stream:true, parse SSE content_block_delta text deltas) with a per-read Timeout(read=180) that resets on every chunk + 4 retries with backoff. Also made parse (skip existing ch{NN}_script.json unless FORCE_PARSE=1) and render (skip existing ch_NN.mp3 unless FORCE_RENDER=1) resume-safe so a mid-run failure or session teardown never re-bills completed work. Long background renders launched detached via nohup+disown so a session restart doesn't kill them.",
-   "tags": [
-    "anthropic-api",
-    "opus-4-8",
-    "temperature",
-    "streaming",
-    "read-timeout",
-    "audiobook",
-    "the-last-human-ceo",
-    "resume"
-   ]
-  },
-  {
-   "date": "2026-07-13",
-   "error_message": "Apple Podcasts Connect: 'An error has occurred. Try again later.' when submitting the podcast RSS feed; show got created (name pulled from feed) but Episodes tab stayed empty.",
-   "root_cause": "The Cloud Run feed service (publishing/app/main.py) declared /feed.xml with FastAPI @app.get only. Apple's iTMS crawler issues HEAD requests to validate the feed; HEAD returned 405 Method Not Allowed, so Apple treated the feed as unreachable/invalid and did not ingest episodes. (Confirmed via Cloud Run request logs: userAgent 'iTMS' HEAD /feed.xml -> 405.)",
-   "fix": "Changed the route to @app.api_route('/feed.xml', methods=['GET','HEAD']) (and '/' likewise) so HEAD returns 200. Redeployed. Verified HEAD and GET both 200, incl. with -A iTMS. Also pinned Cloud Run --min-instances 1 (in deploy.sh) so Apple's fetch never hits a cold start. Debug tip: `gcloud logging read 'resource.labels.service_name=... httpRequest.requestUrl:feed.xml' --format='value(httpRequest.requestMethod,httpRequest.status,httpRequest.userAgent)'` to see the crawler.",
-   "tags": [
-    "apple-podcasts",
-    "rss",
-    "cloud-run",
-    "fastapi",
-    "http-head",
-    "405",
-    "publishing",
-    "the-last-human-ceo"
-   ]
-  },
-  {
-   "date": "2026-07-15",
-   "error_message": "brand/spz/build_brand_kit.py failed to run outside its original session: FONTS pointed at a stale worktree (.claude/worktrees/mystifying-hertz-fe888c/fonts) and CLIPS/OUT pointed at a wiped /private/tmp claude scratchpad, so font/clip reads raised FileNotFoundError.",
-   "root_cause": "Absolute machine/session-specific paths were hard-coded when the kit was first built in a worktree session; the scratchpad (holding the 4 audio clips and the output path) is ephemeral and the worktree was later removed.",
-   "fix": "Made paths repo-relative resolved from __file__: FONTS defaults to <repo>/fonts, CLIPS to brand/spz/clips, OUT to brand/spz/brand_kit.html; each overridable via BRAND_KIT_FONTS/BRAND_KIT_CLIPS/BRAND_KIT_OUT env vars. Recovered the 4 lost clips (sting/theme/vault/sid.mp3) by decoding the base64 data URIs embedded in the canonical brand_kit.html into brand/spz/clips/. Regenerated kit is byte-identical to the canonical file.",
-   "tags": [
-    "brand-kit",
-    "hardcoded-paths",
-    "worktree",
-    "scratchpad",
-    "reproducibility"
-   ]
-  }
- ]
+  "bugs": [
+    {
+      "date": "2026-06-05",
+      "error_message": "API 400 invalid_request_error: '`temperature` is deprecated for this model.' (claude-opus-4-8). Every draft_chapter/evaluate/review call exit 1.",
+      "root_cause": "autonovel scripts were written for Sonnet and pass a 'temperature' field in the /v1/messages payload. Opus 4.8 rejects 'temperature'. After switching all models to claude-opus-4-8, every API call 400'd.",
+      "fix": "Removed the 'temperature' line from every script payload (sed over *.py). Also made draft_chapter.call_writer raise resp.text on non-200 so the real API error is visible instead of a bare raise_for_status.",
+      "tags": [
+        "anthropic-api",
+        "opus-4-8",
+        "temperature",
+        "400",
+        "autonovel",
+        "model-migration"
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "error_message": "Polish pass damaged prose: ch_16 left with an orphaned em-dash line (' \u2014 *none but ourselves can free our minds.*'), dropped GHOST dialogue, and empty '**' markers; novel_score regressed 8.0 -> 7.0 in revision cycle 5.",
+      "root_cause": "apply_cuts.py (mechanical OVER-EXPLAIN/REDUNDANT span deletion) and the per-cycle/per-review 'mechanical cleanup' step are NOT gated by per-chapter re-eval and are tuned for prose fiction. On this format-heavy book they delete spans, leaving dangling markdown and incoherent fragments. The full-novel judge score is too coarse to catch single-chapter breakage, so damage was committed under a passing cycle score.",
+      "fix": "Killed the pass; reset prose chapters to the cycle-4 peak commit 7c9a2f8 (novel_score 8.0); hand-repaired ch_16's two cut passages; ran a precise odd-'**'/orphan scan (0 flags); rebuilt all formats. For future polish runs: exclude the appendices and skip apply_cuts, or gate every mechanical edit with a per-chapter re-eval+revert.",
+      "tags": [
+        "autonovel",
+        "apply_cuts",
+        "revision",
+        "prose-damage",
+        "opus-4-8",
+        "regression"
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "error_message": "KDP paperback rejected: 'This text is outside the margins' (p13) + 'Insufficient gutter ... require at least 0.5\"' (p118,140).",
+      "root_cause": "convert_equations.py rewrote some formula lines to $$...$$ but several were INSIDE ``` code fences (ch_10 Score/I_v, ch_11 D_audit, ch_12 T_r, ch_01 R_ext/A_hl). pandoc rendered them as verbatim -> literal '$$' text that can't wrap -> ran past the 6in text block into the gutter/margin. (Also affected designed PDF + epub.)",
+      "fix": "Unwrap-script removed the code fences around single-equation blocks -> real display math. eqbox redefined to scale wide equations with adjustbox(max width). Print preamble hardened: fvextra breaklines, ragged headings, small longtables, emergencystretch, hidelinks. Result: 0 overfull hboxes; epubcheck clean.",
+      "tags": [
+        "kdp",
+        "paperback",
+        "pandoc",
+        "code-fence",
+        "display-math",
+        "overfull",
+        "margins"
+      ]
+    },
+    {
+      "error_message": "Album songs all start with quiet static and sound generic/samey",
+      "root_cause": "Songs were generated via elevenlabs music.compose with a single prose prompt + force_instrumental=True. The prose prompt collapsed each track to the shared 'industrial-goth 808 ~70BPM' denominator (era washed out), and the model prepended a quiet vinyl-crackle/ambient lead-in (~-56dB head) identical on every track = 'static intro'.",
+      "fix": "New tools/compose_songs.py uses composition_plan (MusicPrompt) instead: era instruments woven into positive_global_styles AND every SongSection's positive_local_styles; negative_global_styles bans 'long ambient intro/slow fade-in/static intro/vinyl-crackle intro/white-noise wash'; an Intro section forces 'cold start on the downbeat, beat from bar one'; output mp3_44100_192; master = silenceremove head + loudnorm I=-10 TP=-1 + alimiter. API constraints learned: (a) must NOT pass music_length_ms with composition_plan (length = sum of section durations); (b) force_instrumental only works with prompt, not composition_plan (use empty section lines + 'no vocals' negative styles).",
+      "tags": [
+        "elevenlabs",
+        "music",
+        "composition_plan",
+        "audio",
+        "mastering",
+        "neko-death-cult"
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "error_message": "gen_audiobook_script.py: API 400 '`temperature` is deprecated for this model.' then, after removing it, httpx.ReadTimeout on longer chapters ('The read operation timed out') killing the parse mid-run (died at ch_04, ch_08).",
+      "root_cause": "(1) call_claude posted a 'temperature' field, rejected by claude-opus-4-8 (same class as the 2026-06-05 temperature bug, different script). (2) Non-streaming httpx.post with timeout=300 can't cover Opus generating a large speaker-attributed JSON for a 4-5k-word chapter (100-175 segments), so the single read times out.",
+      "fix": "Removed 'temperature'. Rewrote call_claude to STREAM (stream:true, parse SSE content_block_delta text deltas) with a per-read Timeout(read=180) that resets on every chunk + 4 retries with backoff. Also made parse (skip existing ch{NN}_script.json unless FORCE_PARSE=1) and render (skip existing ch_NN.mp3 unless FORCE_RENDER=1) resume-safe so a mid-run failure or session teardown never re-bills completed work. Long background renders launched detached via nohup+disown so a session restart doesn't kill them.",
+      "tags": [
+        "anthropic-api",
+        "opus-4-8",
+        "temperature",
+        "streaming",
+        "read-timeout",
+        "audiobook",
+        "the-last-human-ceo",
+        "resume"
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "error_message": "Apple Podcasts Connect: 'An error has occurred. Try again later.' when submitting the podcast RSS feed; show got created (name pulled from feed) but Episodes tab stayed empty.",
+      "root_cause": "The Cloud Run feed service (publishing/app/main.py) declared /feed.xml with FastAPI @app.get only. Apple's iTMS crawler issues HEAD requests to validate the feed; HEAD returned 405 Method Not Allowed, so Apple treated the feed as unreachable/invalid and did not ingest episodes. (Confirmed via Cloud Run request logs: userAgent 'iTMS' HEAD /feed.xml -> 405.)",
+      "fix": "Changed the route to @app.api_route('/feed.xml', methods=['GET','HEAD']) (and '/' likewise) so HEAD returns 200. Redeployed. Verified HEAD and GET both 200, incl. with -A iTMS. Also pinned Cloud Run --min-instances 1 (in deploy.sh) so Apple's fetch never hits a cold start. Debug tip: `gcloud logging read 'resource.labels.service_name=... httpRequest.requestUrl:feed.xml' --format='value(httpRequest.requestMethod,httpRequest.status,httpRequest.userAgent)'` to see the crawler.",
+      "tags": [
+        "apple-podcasts",
+        "rss",
+        "cloud-run",
+        "fastapi",
+        "http-head",
+        "405",
+        "publishing",
+        "the-last-human-ceo"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "xcli.py raised an uncaught traceback instead of a clean message when X credentials (or tweepy) were absent: 'ModuleNotFoundError: No module named tweepy' and bare XError on whoami.",
+      "root_cause": "tweepy was imported inline and not a declared dependency, and the import wasn't wrapped, so ImportError escaped the XError handler in main(); creds were also only checked deep in a property.",
+      "fix": "Added tweepy>=4.14 to pyproject deps; wrapped imports in _import_tweepy() that raises XError with a uv/pip hint; kept _require() raising XError for missing X_* keys. main() catches XError -> 'error: ...' with exit code, no traceback.",
+      "tags": [
+        "x",
+        "tweepy",
+        "xcli",
+        "credentials",
+        "import",
+        "error-handling"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "`xcli.py --dry-run follow @user` failed with 'Missing X credentials' and made a network call, unlike every other dry-run write which is creds/network-free.",
+      "root_cause": "XClient.follow() called resolve_user() (which hits get_user, needing creds+network) BEFORE the dry_run guard.",
+      "fix": "Moved the dry_run branch above resolve_user(); in dry-run just echo username.lstrip('@') instead of resolving it to an id.",
+      "tags": [
+        "x",
+        "xclient",
+        "follow",
+        "dry-run",
+        "code-review"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "brand/spz/build_brand_kit.py failed to run outside its original session: FONTS pointed at a stale worktree (.claude/worktrees/mystifying-hertz-fe888c/fonts) and CLIPS/OUT pointed at a wiped /private/tmp claude scratchpad, so font/clip reads raised FileNotFoundError.",
+      "root_cause": "Absolute machine/session-specific paths were hard-coded when the kit was first built in a worktree session; the scratchpad (holding the 4 audio clips and the output path) is ephemeral and the worktree was later removed.",
+      "fix": "Made paths repo-relative resolved from __file__: FONTS defaults to <repo>/fonts, CLIPS to brand/spz/clips, OUT to brand/spz/brand_kit.html; each overridable via BRAND_KIT_FONTS/BRAND_KIT_CLIPS/BRAND_KIT_OUT env vars. Recovered the 4 lost clips (sting/theme/vault/sid.mp3) by decoding the base64 data URIs embedded in the canonical brand_kit.html into brand/spz/clips/. Regenerated kit is byte-identical to the canonical file.",
+      "tags": [
+        "brand-kit",
+        "hardcoded-paths",
+        "worktree",
+        "scratchpad",
+        "reproducibility"
+      ]
+    }
+  ]
 }

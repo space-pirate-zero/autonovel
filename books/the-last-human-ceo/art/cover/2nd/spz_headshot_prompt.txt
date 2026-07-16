@@ -1,0 +1,13 @@
+Anime cel-shaded front-facing MUGSHOT / booking-photo headshot of SPACE PIRATE ZERO — a lean, defiant punk hacker-pirate anti-hero.
+
+SUBJECT: a man in his late 30s to 40s, sharp angular features, a knowing crooked SMIRK — completely unbothered, faintly amused at being arrested (Diogenes-with-a-laptop energy). Messy dark tousled hair, a few days of stubble, a small glowing cyan cyber-comm implant on one ear, the collar of a battered pilot/pirate jacket turned up. Pink-tinted shades pushed up onto his forehead. He stares dead-straight into the camera, chin slightly raised, defiant.
+
+FRAMING: symmetrical head-and-shoulders BOOKING PHOTO — face centered, looking directly at the viewer, flat frontal lighting like a mugshot, plus a subtle hot-magenta rim on the left and cold cyan rim on the right.
+
+BACKGROUND: flat near-black void #030303 with faint horizontal height-chart lines behind him (like a police lineup wall), very subtle, dark.
+
+STYLE: premium cel-shaded anime, clean bold confident linework, flat cel shading, industrial-goth cyberpunk noir, subtle film grain and faint chromatic aberration on the neon edges. Square 1:1, portrait centered.
+
+COLOR (strict): void #030303; only two neon accents, hot magenta #FF1493 and cyan #00F0FF, separated by black; dirty off-white #E8E8E8 skin highlights; muted slate midtones.
+
+EXCLUDE (critical): render ZERO text, numbers, letters, placards, signs, logos, watermark or signature — no mugshot number board, no writing anywhere. No border. Correct anatomy. Anime illustration, not photoreal. Tasteful.

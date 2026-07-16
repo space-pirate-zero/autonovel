@@ -47,8 +47,18 @@ Python tooling (`run_pipeline.py`, `draft_chapter.py`, `evaluate.py`, `gen_*.py`
   JSON + `build_brand_kit.py` + `brand_kit.html` + `clips/` audio embedded in the
   kit). Do not fork. Build is repo-relative: fonts from `<repo>/fonts`, clips from
   `brand/spz/clips/`, output in place; override via `BRAND_KIT_FONTS`/`_CLIPS`/`_OUT`.
+- **`SPZ-HEADSHOT.png`** (repo root; mirror `brand/spz/spz-headshot.png`) — THE one
+  canonical Space Pirate Zero headshot (blue-haired painterly portrait). Use it for
+  every SPZ likeness (bios, wanted posters, avatars); never regenerate or swap it.
 - `publishing/` — book-agnostic podcast+site publisher, driven by `config.json`
   (per-book show metadata, GCP target, `public_url` canonical domain).
+- `x/` — the **@spaceshipalpha9 X (Twitter) channel**: publish/read/manage the
+  studio's X profile. `xclient.py` (Tweepy-based `XClient`, X API v2 + v1.1),
+  `xcli.py` (CLI: post/thread/reply/read/mentions/export/delete/like/retweet/
+  follow/set-profile, all with `--dry-run`), `README.md` (setup/auth/usage),
+  `PROFILE.md` (the account reference: voice, pillars, cross-channel map, API
+  tiers). Creds are `X_*` in the gitignored `.env`; `x/export/` is gitignored.
+  `tweepy` is a core dep (pyproject). Sibling to `linkedin/` + `substack/`.
 
 ## Branch archives
 Original per-book branches are retained as full-history archives:
