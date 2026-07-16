@@ -87,10 +87,33 @@ def list_properties() -> dict[str, Any]:
 
 @mcp.tool
 def get_asset(asset_id: str) -> dict[str, Any]:
-    """Fetch full metadata (incl. public_url and stored text_content) for one
-    asset by its id (the sha256 shown in search/list results)."""
+    """Fetch full metadata for one asset by its id (the sha256 in search/list
+    results), including a fresh time-limited `download_url` (the bucket is
+    private) and the stored text_content."""
     doc = store.get_asset(asset_id)
-    return doc or {"error": "not found", "asset_id": asset_id}
+    if not doc:
+        return {"error": "not found", "asset_id": asset_id}
+    url = store.signed_url(asset_id, minutes=60)
+    if url:
+        doc["download_url"] = url
+    return doc
+
+
+@mcp.tool
+def get_download_url(asset_id: str, expires_minutes: int = 60) -> dict[str, Any]:
+    """Mint a time-limited, shareable download URL for a private-bucket asset.
+    Use this to hand the user (or a browser) a working link to any asset from a
+    search/list result. Defaults to 60 minutes.
+
+    Args:
+        asset_id: The asset id (sha256) from a search/list/get result.
+        expires_minutes: Link lifetime in minutes (default 60).
+    """
+    url = store.signed_url(asset_id, minutes=expires_minutes)
+    if not url:
+        return {"error": "could not sign url (asset missing or signing unavailable)",
+                "asset_id": asset_id}
+    return {"asset_id": asset_id, "download_url": url, "expires_minutes": expires_minutes}
 
 
 @mcp.tool
@@ -176,15 +199,41 @@ def list_brand_styles() -> dict[str, Any]:
             "aspects": pack["aspects"], "default_style": pack["default_style"]}
 
 
+def _is_safe_public_host(host: str | None) -> bool:
+    """Reject hosts that resolve to loopback/private/link-local/reserved ranges,
+    so a caller-supplied URL can't turn ingest into an SSRF against the Cloud Run
+    metadata server (169.254.169.254) or internal services."""
+    import ipaddress
+    import socket
+    if not host:
+        return False
+    try:
+        infos = socket.getaddrinfo(host, None)
+    except socket.gaierror:
+        return False
+    for info in infos:
+        try:
+            ip = ipaddress.ip_address(info[4][0])
+        except ValueError:
+            return False
+        if ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_reserved \
+                or ip.is_multicast or ip.is_unspecified:
+            return False
+    return True
+
+
 def _ingest_url(url: str, property: str | None, type: str | None, force: bool) -> dict[str, Any]:
+    import urllib.parse
     import urllib.request
+    host = urllib.parse.urlparse(url).hostname
+    if not _is_safe_public_host(host):
+        return {"error": f"refusing to fetch non-public/unresolvable host: {host}"}
     suffix = os.path.splitext(url.split("?")[0])[1] or ""
     fd, tmp = tempfile.mkstemp(suffix=suffix)
     os.close(fd)
     try:
-        urllib.request.urlretrieve(url, tmp)  # noqa: S310 - operator-supplied URL
-        prop = property
-        return store.index_local_file(tmp, prop, type, force=force)
+        urllib.request.urlretrieve(url, tmp)  # noqa: S310 - host validated above
+        return store.index_local_file(tmp, property, type, force=force)
     finally:
         try:
             os.unlink(tmp)

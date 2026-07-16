@@ -168,6 +168,42 @@ def index_local_file(path: str, property_: str | None = None,
     return {"status": "indexed", **(_clean(doc) or {})}
 
 
+def signed_url(asset_id: str, minutes: int = 60) -> str | None:
+    """Mint a time-limited V4 signed GET URL for a private-bucket asset.
+
+    Works on Cloud Run via the runtime service account's IAM signBlob (the SA
+    needs roles/iam.serviceAccountTokenCreator on itself). Returns None if the
+    asset is missing or the current credentials can't sign (e.g. plain user ADC
+    locally, which has no service-account signer)."""
+    doc = get_asset(asset_id)
+    if not doc or not doc.get("gcs_uri"):
+        return None
+    from datetime import timedelta
+    from google.cloud import storage
+    uri = doc["gcs_uri"]
+    bkt, _, obj = uri[5:].partition("/")
+    client = storage.Client(project=os.environ.get("GCP_PROJECT", _cfg()["gcp"]["project"]))
+    blob = client.bucket(bkt).blob(obj)
+    exp = timedelta(minutes=max(1, int(minutes)))
+    try:
+        # works if the client already holds a signing key
+        return blob.generate_signed_url(version="v4", expiration=exp, method="GET")
+    except Exception:  # noqa: BLE001 - fall back to IAM signBlob (no private key)
+        try:
+            import google.auth
+            from google.auth.transport import requests as garequests
+            creds, _ = google.auth.default()
+            creds.refresh(garequests.Request())
+            email = getattr(creds, "service_account_email", None)
+            if not email:
+                return None
+            return blob.generate_signed_url(version="v4", expiration=exp, method="GET",
+                                            service_account_email=email,
+                                            access_token=creds.token)
+        except Exception:  # noqa: BLE001
+            return None
+
+
 def download_bytes(asset_id: str) -> tuple[bytes, str] | None:
     """Fetch an indexed asset's raw bytes + mime from GCS (for reference-image
     conditioning). Returns None if the asset or object is missing."""

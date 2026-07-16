@@ -178,6 +178,8 @@ def generate(topic: str, property_: str = "brand-spz", style: str | None = None,
         if i:
             contents[0] = f"{prompt} (variation {i + 1}, distinct composition)"
         img = None
+        resp = None
+        last_err = None
         for cfg in (_make_config(), None):  # retry without image_config if it fails
             try:
                 resp = client.models.generate_content(model=model, contents=contents,
@@ -187,10 +189,11 @@ def generate(topic: str, property_: str = "brand-spz", style: str | None = None,
                     break
             except Exception as exc:  # noqa: BLE001
                 last_err = str(exc).splitlines()[0][:200]
+                resp = None
                 continue
         if not img:
-            reason = _refusal_text(resp) if "resp" in dir() else locals().get("last_err", "no image returned")
-            results.append({"status": "failed", "topic": topic, "reason": reason or "no image returned"})
+            reason = (_refusal_text(resp) if resp is not None else None) or last_err or "no image returned"
+            results.append({"status": "failed", "topic": topic, "reason": reason})
             continue
 
         data, mime = img

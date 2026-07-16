@@ -73,19 +73,19 @@ cat <<EOF
 ────────────────────────────────────────────────────────────────────────
 ✅ SPZ Asset MCP deployed.
 
-   MCP endpoint : ${URL}/mcp/
+   MCP endpoint : ${URL}/mcp
    Health       : ${URL}/healthz
    Bearer token : ${TOKEN}
 
 Add it to Claude Code:
-   claude mcp add --transport http spz-assets ${URL}/mcp/ \\
+   claude mcp add --transport http spz-assets ${URL}/mcp \\
      --header "Authorization: Bearer ${TOKEN}"
 
 Or paste into an MCP client config:
    {
      "mcpServers": {
        "spz-assets": {
-         "url": "${URL}/mcp/",
+         "url": "${URL}/mcp",
          "headers": { "Authorization": "Bearer ${TOKEN}" }
        }
      }
