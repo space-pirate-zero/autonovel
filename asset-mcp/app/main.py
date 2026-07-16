@@ -199,15 +199,41 @@ def list_brand_styles() -> dict[str, Any]:
             "aspects": pack["aspects"], "default_style": pack["default_style"]}
 
 
+def _is_safe_public_host(host: str | None) -> bool:
+    """Reject hosts that resolve to loopback/private/link-local/reserved ranges,
+    so a caller-supplied URL can't turn ingest into an SSRF against the Cloud Run
+    metadata server (169.254.169.254) or internal services."""
+    import ipaddress
+    import socket
+    if not host:
+        return False
+    try:
+        infos = socket.getaddrinfo(host, None)
+    except socket.gaierror:
+        return False
+    for info in infos:
+        try:
+            ip = ipaddress.ip_address(info[4][0])
+        except ValueError:
+            return False
+        if ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_reserved \
+                or ip.is_multicast or ip.is_unspecified:
+            return False
+    return True
+
+
 def _ingest_url(url: str, property: str | None, type: str | None, force: bool) -> dict[str, Any]:
+    import urllib.parse
     import urllib.request
+    host = urllib.parse.urlparse(url).hostname
+    if not _is_safe_public_host(host):
+        return {"error": f"refusing to fetch non-public/unresolvable host: {host}"}
     suffix = os.path.splitext(url.split("?")[0])[1] or ""
     fd, tmp = tempfile.mkstemp(suffix=suffix)
     os.close(fd)
     try:
-        urllib.request.urlretrieve(url, tmp)  # noqa: S310 - operator-supplied URL
-        prop = property
-        return store.index_local_file(tmp, prop, type, force=force)
+        urllib.request.urlretrieve(url, tmp)  # noqa: S310 - host validated above
+        return store.index_local_file(tmp, property, type, force=force)
     finally:
         try:
             os.unlink(tmp)
