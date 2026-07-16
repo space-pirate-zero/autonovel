@@ -44,7 +44,9 @@ Python tooling (`run_pipeline.py`, `draft_chapter.py`, `evaluate.py`, `gen_*.py`
   `SOCIAL.md` (images/video/teasers/press kit/copy) + `BRAND.md` (SPZ tokens).
   Reference implementation for all four: `books/the-last-human-ceo/` + `publishing/`.
 - `brand/spz/` — the CANONICAL SPZ brand kit (palette/type/voice/sonic/storytelling
-  JSON + `build_brand_kit.py` + `brand_kit.html`). Do not fork.
+  JSON + `build_brand_kit.py` + `brand_kit.html` + `clips/` audio embedded in the
+  kit). Do not fork. Build is repo-relative: fonts from `<repo>/fonts`, clips from
+  `brand/spz/clips/`, output in place; override via `BRAND_KIT_FONTS`/`_CLIPS`/`_OUT`.
 - **`SPZ-HEADSHOT.png`** (repo root; mirror `brand/spz/spz-headshot.png`) — THE one
   canonical Space Pirate Zero headshot (blue-haired painterly portrait). Use it for
   every SPZ likeness (bios, wanted posters, avatars); never regenerate or swap it.

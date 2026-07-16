@@ -114,6 +114,19 @@
         "dry-run",
         "code-review"
       ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "brand/spz/build_brand_kit.py failed to run outside its original session: FONTS pointed at a stale worktree (.claude/worktrees/mystifying-hertz-fe888c/fonts) and CLIPS/OUT pointed at a wiped /private/tmp claude scratchpad, so font/clip reads raised FileNotFoundError.",
+      "root_cause": "Absolute machine/session-specific paths were hard-coded when the kit was first built in a worktree session; the scratchpad (holding the 4 audio clips and the output path) is ephemeral and the worktree was later removed.",
+      "fix": "Made paths repo-relative resolved from __file__: FONTS defaults to <repo>/fonts, CLIPS to brand/spz/clips, OUT to brand/spz/brand_kit.html; each overridable via BRAND_KIT_FONTS/BRAND_KIT_CLIPS/BRAND_KIT_OUT env vars. Recovered the 4 lost clips (sting/theme/vault/sid.mp3) by decoding the base64 data URIs embedded in the canonical brand_kit.html into brand/spz/clips/. Regenerated kit is byte-identical to the canonical file.",
+      "tags": [
+        "brand-kit",
+        "hardcoded-paths",
+        "worktree",
+        "scratchpad",
+        "reproducibility"
+      ]
     }
   ]
 }
