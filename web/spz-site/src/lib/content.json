@@ -1,0 +1,7 @@
+{
+  "article": "/data/articles.json",
+  "patent": "/data/patents.json",
+  "video-press": "/data/video-press.json",
+  "press": "/data/press.json",
+  "book": "/data/book.json"
+}

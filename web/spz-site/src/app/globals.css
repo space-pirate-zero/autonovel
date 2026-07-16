@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════
+   NEON DESIGN SYSTEM — Space Pirate Zero
+   Cel-shaded, anime-cyberpunk-hacker aesthetic
+   Zero border-radius. Hard shadows. Film grain. CRT scanlines.
+   ═══════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* ── SA9 Primitive Tokens ── */
+    --sa9-pink: #ff1493;
+    --sa9-magenta: #ff00aa;
+    --sa9-hotpink: #ff69b4;
+    --sa9-blush: #ff85c8;
+    --sa9-cyan: #00f0ff;
+    --sa9-red: #ff1744;
+    --sa9-acid: #c6ff00;
+    --sa9-orange: #ff6a00;
+    --sa9-purple: #bf5fff;
+    --sa9-green: #39ff14;
+    --sa9-yellow: #faff00;
+    --sa9-surface: #030303;
+    --sa9-surface-raised: #0a0a0a;
+    --sa9-surface-overlay: #111111;
+    --sa9-border: #222222;
+    --sa9-text: #f0f0f0;
+    --sa9-text-muted: #888888;
+    --sa9-text-dim: #555555;
+
+    /* ── Cel-shading Pairs ── */
+    --sa9-pink-shadow: #990044;
+    --sa9-cyan-shadow: #005566;
+
+    /* ── Shadows (hard-offset only, zero blur) ── */
+    --shadow-sm: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    --shadow-md: 4px 4px 0 rgba(0, 0, 0, 0.5);
+    --shadow-lg: 6px 6px 0 rgba(0, 0, 0, 0.5);
+    --shadow-xl: 8px 8px 0 rgba(0, 0, 0, 0.5);
+    --shadow-pink: 4px 4px 0 #990044;
+    --shadow-cyan: 4px 4px 0 #005566;
+
+    /* ── Radix UI compatibility ── */
+    --background: 0 0% 1%;
+    --foreground: 0 0% 94%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 94%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 94%;
+    --primary: 328 100% 54%;
+    --primary-foreground: 0 0% 1%;
+    --secondary: 186 100% 47%;
+    --secondary-foreground: 0 0% 1%;
+    --muted: 0 0% 7%;
+    --muted-foreground: 0 0% 53%;
+    --accent: 186 100% 47%;
+    --accent-foreground: 0 0% 1%;
+    --destructive: 348 100% 55%;
+    --destructive-foreground: 0 0% 94%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 328 100% 54%;
+    --radius: 0rem;
+  }
+
+  * {
+    border-radius: 0 !important;
+    border-color: hsl(var(--border));
+  }
+  .captain-circle,
+  .captain-circle * {
+    border-radius: 50% !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--sa9-surface);
+    color: var(--sa9-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--sa9-pink);
+    color: var(--sa9-surface);
+  }
+}
+
+/* ── Glass HUD (content detail pages) ── */
+.glass-hud {
+  background: rgba(3, 3, 3, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Film Grain Overlay ── */
+.film-grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ── CRT Scanlines ── */
+.scanlines::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+}
+
+/* ── Warning Stripes ── */
+.warning-stripes {
+  height: 8px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--sa9-pink),
+    var(--sa9-pink) 10px,
+    var(--sa9-surface) 10px,
+    var(--sa9-surface) 20px
+  );
+  border-top: 2px solid var(--sa9-magenta);
+  border-bottom: 2px solid var(--sa9-magenta);
+}
+
+/* ── Border Utilities ── */
+.border-3 {
+  border-width: 3px;
+}
+.border-b-3 {
+  border-bottom-width: 3px;
+}
+.border-t-3 {
+  border-top-width: 3px;
+}
+.border-y-3 {
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+}
+.border-x-3 {
+  border-left-width: 3px;
+  border-right-width: 3px;
+}
+.divide-x-3 > * + * {
+  border-left-width: 3px;
+}
+
+/* ── Animations ── */
+@keyframes neonPulseHard {
+  0%, 100% {
+    text-shadow: 0 0 4px var(--sa9-pink), 0 0 8px var(--sa9-pink);
+  }
+  50% {
+    text-shadow: 0 0 8px var(--sa9-pink), 0 0 16px var(--sa9-magenta), 0 0 24px var(--sa9-pink);
+  }
+}
+
+@keyframes glitchHard {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 3px); }
+  40% { transform: translate(3px, -3px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes textRevealCorrupt {
+  0% { opacity: 0; transform: translateY(10px) skewX(-5deg); filter: blur(4px); }
+  50% { opacity: 0.7; filter: blur(1px); }
+  100% { opacity: 1; transform: translateY(0) skewX(0); filter: blur(0); }
+}
+
+@keyframes floatUneasy {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-6px) rotate(0.5deg); }
+  75% { transform: translateY(4px) rotate(-0.5deg); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: var(--sa9-pink); box-shadow: 0 0 4px var(--sa9-pink); }
+  50% { border-color: var(--sa9-cyan); box-shadow: 0 0 8px var(--sa9-cyan); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-neon-pulse {
+  animation: neonPulseHard 2s ease-in-out infinite;
+}
+.animate-glitch {
+  animation: glitchHard 0.3s ease-in-out;
+}
+.animate-text-reveal {
+  animation: textRevealCorrupt 0.8s ease-out forwards;
+}
+.animate-float {
+  animation: floatUneasy 4s ease-in-out infinite;
+}
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+  background-size: 200% 100%;
+}
+@keyframes spinOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+.animate-spin-orbit {
+  animation: spinOrbit 8s linear infinite;
+}
+
+@keyframes spinOrbitReverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+.animate-spin-orbit-reverse {
+  animation: spinOrbitReverse 8s linear infinite;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sa9-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sa9-pink);
+  border: 2px solid var(--sa9-surface);
+}
+
+/* ── Batman 1966 Spiral Transition ── */
+
+/* Wedge background spins continuously */
+@keyframes batmanWedgeSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes batmanWedgeSpinReverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Face spins in from tiny + rotated to full size at center */
+@keyframes batmanFaceSpinIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.01) rotate(-1080deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Face settles with a slight bounce */
+@keyframes batmanFaceArrive {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(1.15) rotate(10deg);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(0.95) rotate(-3deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Concentric ring pulse */
+@keyframes batmanRingSpin {
+  0% { transform: translate(-50%, -50%) scale(0.1); opacity: 0; }
+  30% { opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); opacity: 0.15; }
+}
+
+/* Whole overlay fades + zooms out */
+@keyframes batmanFadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: scale(2.5); }
+}
+
+.animate-batman-wedge-spin {
+  animation: batmanWedgeSpin 3s linear infinite;
+}
+.animate-batman-wedge-spin-reverse {
+  animation: batmanWedgeSpinReverse 4.5s linear infinite;
+}
+.animate-batman-face-spin-in {
+  animation: batmanFaceSpinIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-batman-face-arrive {
+  animation: batmanFaceArrive 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.animate-batman-ring {
+  animation: batmanRingSpin 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.animate-batman-fade-out {
+  animation: batmanFadeOut 0.8s ease-in forwards;
+}
+
+/* ── Scanline (content detail pages) ── */
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+.animate-scanline {
+  animation: scanline 4s linear infinite;
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-neon-pulse,
+  .animate-glitch,
+  .animate-text-reveal,
+  .animate-float,
+  .animate-batman-ring,
+  .animate-batman-wedge-spin,
+  .animate-batman-wedge-spin-reverse,
+  .animate-batman-face-spin-in,
+  .animate-batman-face-arrive,
+  .animate-batman-fade-out,
+  .animate-spin-orbit,
+  .animate-spin-orbit-reverse,
+  .animate-scanline {
+    animation: none !important;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

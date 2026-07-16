@@ -1,0 +1,58 @@
+[
+  {
+    "id": "book-insurgency",
+    "content_type": "book",
+    "author": "Space Pirate Zero",
+    "alias": "Greg Chambers",
+    "title": "Digital Insurgency",
+    "url": "https://www.amazon.com/Digital-Insurgency-Smuggling-Authenticity-Corporate/dp/B0H4D92BSF",
+    "publication_date": "2026-03-01T00:00:00Z",
+    "status": "On Amazon",
+    "description": "Business × cyberpunk × spec-ops. A survival guide for digital insurgents operating behind enterprise lines — The Trojan Horse Protocol, the MBA Efficiency Paradox, and how to smuggle the future past the corporate immune system. A companion 30-day dispatch series runs on Substack.",
+    "summary": "The counterfeit world, mapped as a field manual for the ones fighting it. Case studies in banking and healthcare; the Theater Ratio and Vendor Gravity Force made concrete.",
+    "tags": ["Field Manual", "Trojan Horse Protocol", "Enterprise AI", "Change Management", "Architecture"],
+    "image_url": "/images/covers/digital-insurgency.jpg"
+  },
+  {
+    "id": "book-tlhc",
+    "content_type": "book",
+    "author": "Space Pirate Zero",
+    "alias": "Greg Chambers",
+    "title": "The Last Human CEO",
+    "url": "https://lasthumanceo.com",
+    "publication_date": "2026-07-14T00:00:00Z",
+    "status": "Now Streaming",
+    "description": "A tragic dark comedy, narrated by Space Pirate Zero. In 2027, as corporate boards swap their CEOs for cheaper, scandal-proof AI, the last human chief executive in the Fortune 100 wages a manic crusade to prove a person still belongs in the chair — right up until the machine taking his job quietly uncovers the thing he buried that got two people killed.",
+    "summary": "A full-cast audiobook in 29 episodes (~12.6h). Succession meets Flowers for Algernon, by way of a Twilight Zone broadcast. Streaming now on Apple Podcasts and Spotify; on Kindle and Amazon.",
+    "tags": ["Audiobook", "Full-Cast", "Dark Comedy", "Corporate Satire", "AI"],
+    "image_url": "/images/covers/the-last-human-ceo-anime.jpg"
+  },
+  {
+    "id": "book-defense",
+    "content_type": "book",
+    "author": "Space Pirate Zero",
+    "alias": "Greg Chambers",
+    "title": "Defense Against the Dark Arts",
+    "url": "https://spacepiratezero.com",
+    "publication_date": "2026-07-14T00:00:00Z",
+    "status": "Coming Soon",
+    "description": "A training class for the general public in the dark arts of influence. Thirteen modules teach how manipulation actually works — cold reading, gaslighting and DARVO, the liar's dividend, radicalization funnels, astroturf, deepfakes — how to see each move coming, how to defuse it, and how to stay free.",
+    "summary": "Nonfiction field course in 14 episodes, narrated by Space Pirate Zero. Coming soon.",
+    "tags": ["Nonfiction", "Field Course", "Influence", "Media Literacy", "Podcast"],
+    "image_url": "/images/covers/defense-dark-arts.jpg"
+  },
+  {
+    "id": "book-neko",
+    "content_type": "book",
+    "author": "Space Pirate Zero",
+    "alias": "Greg Chambers",
+    "title": "The Maneki Neko Death Cult",
+    "url": "https://spacepiratezero.com",
+    "publication_date": "2026-07-08T00:00:00Z",
+    "status": "Coming Soon",
+    "description": "Twenty-four doors of an Advent calendar of death — each a dead-artist 'saint,' each a jump to another era and city, each a Twilight-Zone fable. A scored, serialized audio drama in three acts: The Fog, The Mastery, The Refusal. Space Pirate Zero is the time-slipper who burns himself down to jump.",
+    "summary": "A fully produced 24-episode scored audio drama (~10.5h). Coming soon.",
+    "tags": ["Audio Drama", "Scored", "Cyberpunk", "Time-Slip", "Concept"],
+    "image_url": "/images/covers/maneki-neko-death-cult.jpg"
+  }
+]
