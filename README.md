@@ -57,6 +57,12 @@ title, read:
   **[SPZ brand](standards/BRAND.md)**. Reference implementation:
   `books/the-last-human-ceo/`.
 
+**THE SPZ HEADSHOT.** [`SPZ-HEADSHOT.png`](SPZ-HEADSHOT.png) (repo root; mirror in
+`brand/spz/spz-headshot.png`) is the **one canonical** Space Pirate Zero portrait —
+the blue-haired painterly headshot. Use it for author bios, wanted posters, avatars,
+and any SPZ likeness across every book and asset. **Do not regenerate, restyle, or
+swap it** for an AI-made face.
+
 ---
 
 ## Quick Start
