@@ -94,7 +94,7 @@ cd asset-mcp
 bash deploy.sh            # enables APIs, makes bucket + Firestore + index, deploys
 ```
 
-It prints the MCP endpoint (`…/mcp/`), the bearer token, and the exact
+It prints the MCP endpoint (`…/mcp`), the bearer token, and the exact
 `claude mcp add` command. Vector indexes build in the background — search may be
 empty for a few minutes after the first deploy.
 
@@ -116,7 +116,7 @@ Idempotent — re-running skips unchanged files (content-addressed by sha256).
 ```bash
 pip install -r requirements.txt   # or: uv pip install -e .
 # no SPZ_ASSET_MCP_TOKEN => auth disabled (dev only)
-python app/main.py                # serves on :8080, MCP at /mcp/
+python app/main.py                # serves on :8080, MCP at /mcp (no trailing slash)
 curl localhost:8080/healthz       # -> ok
 ```
 
