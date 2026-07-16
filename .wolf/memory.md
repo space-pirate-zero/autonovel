@@ -449,3 +449,8 @@ to the plan's division table: studio side (books/web/marketing/SEO/brand) =
 autonovel; hardcore products = SpaceShipAlpha9 repo. RULES §8.0, CLAUDE.md,
 README, anatomy, CATALOG, BRANCHES all reflect it. Phase 2 (workspace wiring:
 pnpm-workspace + workspace:* deps) still pending.
+
+## 2026-07-15 — PR protocol rule added
+RULES.md §8.5: PRs never mention Claude/AI (title/body/comments, no generated-
+with footers); lifecycle fixed: open → review → resolve ALL issues → merge.
+Echoed in CLAUDE.md non-negotiables + cerebrum Preferences.

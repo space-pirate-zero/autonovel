@@ -60,3 +60,6 @@ Slash commands in `.claude/commands/`:
 - Never commit secrets (`.env`, Apple `.p8`/`.pem`), `.venv/`, or multi-GB
   audio that belongs in GCS.
 - Every public artifact passes `brand/spz/ENFORCEMENT.md` before shipping.
+- **PRs never mention Claude or AI assistance** (title, body, or comments — no
+  "Generated with Claude Code" footers on PRs). Lifecycle: open → review →
+  resolve ALL issues → merge. Never merge with open findings (RULES.md §8.5).

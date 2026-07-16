@@ -148,6 +148,18 @@ Source of truth: `brand/spz/*.json`. Checklist form: `brand/spz/ENFORCEMENT.md`.
     `.wolf/cerebrum.md` first; log fixes to `.wolf/buglog.json`; append
     sessions to `.wolf/memory.md`; keep `anatomy.md` current.
 
+8.5 **PR protocol.**
+    - **Never say "Claude"** — or otherwise reference AI assistance — anywhere
+      in a PR: not in the title, not in the description, not in comments. No
+      "Generated with Claude Code" footers, no AI co-author credits in the PR
+      body. PRs read as studio work, full stop.
+    - **Lifecycle is fixed:** open → review → resolve **all** issues → merge.
+      Every PR gets a code review after opening; every finding is resolved
+      (fixed, or explicitly rejected with a reason on the PR) before merge.
+      Never merge with open findings, and never skip the review.
+    *Gate: check the PR body for the string "laude" before opening; check the
+    review thread is fully resolved before merging.*
+
 ## 9. Content lines (never cross)
 
 9.1 Never punch down at workers — only up at the system.

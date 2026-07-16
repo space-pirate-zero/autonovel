@@ -1,6 +1,9 @@
 # Cerebrum — autonovel
 
 ## Preferences (user)
+- PRs: NEVER say "Claude" or mention AI assistance in a PR (title/body/
+  comments; no "Generated with Claude Code" footers on PRs). Workflow is
+  always: open → review → resolve ALL issues → merge. (2026-07-15)
 - Voice = Space Pirate Zero: snarky, punk, Atlanta-trap, hacker, active voice only.
   Banned: leverage, synergy, ecosystem, transform (use "refinance"), etc. See
   voice.md Part 2.
