@@ -15,8 +15,10 @@ shared framework at the repo root — the root holds only book-agnostic config.
 - `books/the-last-human-ceo/` — **The Last Human CEO**. Was
   `autonovel/the-last-human-ceo`. (A film/script `studio` treatment lives on the
   `autonovel/studio` branch, derived from this book.)
-- `books/zero-trust-reality/` — **Zero Trust Reality**: nonfiction. Was
-  `autonovel/zero-trust-reality`.
+- `books/zero-trust-reality/` — **MISLABELED: contains a duplicate of The
+  Last Human CEO**, not the planned nonfiction "Zero Trust Reality" (whose
+  `book/` doc spine was never committed anywhere in git history; the
+  `autonovel/zero-trust-reality` branch also holds LHCEO KDP work).
 - `books/neko-death-cult/` — **Neko Death Cult**: gonzo time-slip cyberpunk;
   audio/album project (~377 MB of mp3/wav under `audio/`). Was previously only
   uncommitted work in a worktree; now committed here.

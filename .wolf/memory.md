@@ -250,3 +250,16 @@ paper #E8E8E8 / muted #8A90A0), typography.json (Orbitron display / Space Grotes
 JetBrains Mono code / EB Garamond alt), sonic.json (industrial-goth ~70 BPM engine,
 theme + logo sting + 6 scene beds + mix/mastering chain). All values extracted from the
 real production system (cover/design scripts, fonts/, scoring.md, tools/), not invented.
+
+## 2026-07-08 — Website copy decks
+- Added `web/` at repo root: README.md (index + link status), site-shared.md
+  (SPZ author bios, lockup, design tokens, nav/footer, master link table), and
+  per-book copy decks: digital-insurgency.md, the-last-human-ceo.md,
+  maneki-neko-death-cult.md. All copy sourced verbatim from KDP metadata,
+  pitch docs, and manuscripts; SPZ voice enforced.
+- DISCOVERY: `books/zero-trust-reality/` is a duplicate of The Last Human CEO.
+  No "Zero Trust Reality" prose or doc spine exists in any branch — only
+  mentions in README/anatomy. Anatomy.md updated accordingly.
+- Live links: substack spacepiratezero.substack.com (DI 30-day run published).
+  Pending: podcast RSS gs://sa9-podcasts feed (publishing/ Phase 0), Amazon
+  ASIN links, spacepiratezero.com site itself.
