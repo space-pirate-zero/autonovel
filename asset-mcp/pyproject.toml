@@ -1,0 +1,19 @@
+[project]
+name = "spz-asset-mcp"
+version = "0.1.0"
+description = "Vector-searchable asset catalog MCP server for SPZ properties (Cloud Run + Firestore + Vertex AI)."
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=2.9",
+    "uvicorn[standard]>=0.30",
+    "google-cloud-firestore>=2.21",
+    "google-cloud-storage>=2.18",
+    "google-cloud-aiplatform>=1.71",
+    "google-genai>=1.0",
+    "google-cloud-secret-manager>=2.20",
+    "pillow>=10.4",
+    "python-dotenv>=1.0",
+]
+
+[tool.setuptools]
+py-modules = []

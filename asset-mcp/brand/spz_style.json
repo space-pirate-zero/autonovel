@@ -1,0 +1,56 @@
+{
+  "_comment": "Self-contained SPZ brand grounding for on-brand image generation. Distilled from brand/spz/brand.json + palette.json (CANONICAL kit v1.5.0). Baked into the container so Cloud Run needs no repo access. Edit here to tune the house style.",
+  "brand": "Space Pirate Zero",
+  "tagline": "Signal finds signal.",
+  "essence": "Diogenes with a laptop — deface the counterfeit, live honest. Snarky, punk, Atlanta-trap, hacker. Cyberpunk-noir in look, industrial-goth in mood.",
+
+  "styles": {
+    "spz": {
+      "label": "SPZ house style — cyberpunk-noir",
+      "master_prompt": "Cyberpunk-noir illustration in the Space Pirate Zero house style: industrial-goth, defiant, punk. Set on a deep near-black void field. High-contrast neon linework and cinematic rim lighting in hot magenta and signal cyan. Overlaid with VHS grain, halftone dots, and gritty newsprint/tabloid texture (the SPZ tabloid-cover lineage). Bold, confident negative space. Analog, hand-made, anti-corporate — never glossy stock-photo or clean 3D-render clichés.",
+      "palette": {
+        "void":  {"hex": "#030303", "role": "background field — near-black, NEVER pure #000000"},
+        "pink":  {"hex": "#FF1493", "role": "primary neon accent — hot magenta, the punk shout"},
+        "cyan":  {"hex": "#00F0FF", "role": "secondary neon accent — cold signal cyan"},
+        "paper": {"hex": "#E8E8E8", "role": "dirty off-white — text/highlights, newsprint not white"},
+        "muted": {"hex": "#8A90A0", "role": "muted slate — de-emphasis, metadata"}
+      },
+      "rules": [
+        "Two neons, one void: hot pink vs cold cyan tension IS the brand. Separate them with generous void or paper.",
+        "NEVER place pink directly on cyan or cyan on pink — max-chroma neons vibrate; buffer with void.",
+        "Backgrounds are #030303 near-black, never pure black — keep a hair of warmth so true-black shadows read.",
+        "Newsprint/VHS/halftone grit over the void is on-brand. Analog imperfection > clean polish.",
+        "Punch up, never down. Defiant, insurgent energy — not corporate, not cheerful-brand-mascot."
+      ],
+      "negative": "no clean corporate stock look, no glossy Pixar/3D-render, no rainbow or off-palette colors dominating, no busy clutter, no watermarks, no lens-flare kitsch, no beige/pastel, no pure-white backgrounds",
+      "typography_note": "If text is rendered, favor Orbitron (display) / Space Grotesk (body) / JetBrains Mono (code) forms — condensed, technical, glowing."
+    },
+    "spz-clean": {
+      "label": "SPZ minimal — logo/icon on void",
+      "master_prompt": "Minimal Space Pirate Zero mark on a deep near-black void field. A single hot-magenta or signal-cyan neon subject, lots of negative space, subtle grain. Clean, iconic, poster-like — cyberpunk-noir but restrained.",
+      "palette_ref": "spz",
+      "negative": "no clutter, no busy background, no off-palette colors, no gradients beyond neon glow"
+    }
+  },
+
+  "motifs": {
+    "spaceship": "The SPZ starship: a lean cyberpunk-noir vessel rendered as glowing neon wireframe / holographic linework — hot-magenta hull edges, signal-cyan underglow — adrift over a grainy near-black starfield with a faint nebula. Battle-worn, insurgent, not a clean military cruiser.",
+    "signal": "Signal-finds-signal motif: two neon waveforms/transmissions — one pink, one cyan — reaching toward each other across the void.",
+    "portrait": "Space Pirate Zero the character: a defiant figure with electric-blue hair and neon rim light, cyberpunk-noir, half in shadow.",
+    "tabloid": "SPZ tabloid-cover treatment: halftone newsprint, screaming condensed headline type, high-contrast photo torn and taped, punk zine energy."
+  },
+
+  "aspects": {
+    "square": "1:1",
+    "story": "9:16",
+    "reel": "9:16",
+    "portrait": "4:5",
+    "landscape": "16:9",
+    "wide": "16:9",
+    "twitter": "16:9",
+    "og": "1.91:1"
+  },
+
+  "default_style": "spz",
+  "default_aspect": "1:1"
+}

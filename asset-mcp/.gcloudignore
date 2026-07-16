@@ -1,0 +1,8 @@
+# Keep the Cloud Build upload context lean — the container installs deps from
+# requirements.txt and only COPYs config.json, brand/, and app/.
+.venv/
+.venv-test/
+__pycache__/
+*.pyc
+*.log
+.DS_Store

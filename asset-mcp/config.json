@@ -1,0 +1,70 @@
+{
+  "gcp": {
+    "project": "stylelift",
+    "region": "us-central1",
+    "bucket": "spz-assets",
+    "firestore_db": "spz-assets",
+    "collection": "assets",
+    "service": "spz-asset-mcp"
+  },
+  "models": {
+    "embedding": "multimodalembedding@001",
+    "embedding_dim": 1408,
+    "gemini": "gemini-2.5-flash-lite",
+    "image": "gemini-2.5-flash-image"
+  },
+  "public_read": false,
+
+  "_comment_types": "Extension -> asset type. Longer video vs short animation is decided at ingest by duration (see enrich.ANIMATION_MAX_SECONDS).",
+  "types": {
+    "image": [".png", ".jpg", ".jpeg", ".webp", ".tif", ".tiff", ".bmp"],
+    "animation": [".gif", ".lottie", ".json.lottie", ".apng"],
+    "video": [".mp4", ".mov", ".webm", ".m4v", ".mkv"],
+    "vector": [".svg"],
+    "brand-kit": [".brandkit"],
+    "copy": [".md", ".txt"],
+    "audio": [".mp3", ".wav", ".m4a", ".aac", ".flac", ".ogg"],
+    "doc": [".pdf", ".epub", ".docx"]
+  },
+
+  "_comment_property": "First matching prefix (relative to repo root) wins. `brand/spz` before `art` etc. Overridable per-ingest with --property.",
+  "property_map": [
+    ["books/the-last-human-ceo", "the-last-human-ceo"],
+    ["books/neko-death-cult", "neko-death-cult"],
+    ["books/digital-insurgency", "digital-insurgency"],
+    ["books/zero-trust-reality", "zero-trust-reality"],
+    ["brand/spz", "brand-spz"],
+    ["spz-brand-machine", "brand-spz"],
+    ["publishing", "publishing"],
+    ["substack", "digital-insurgency"],
+    ["linkedin", "digital-insurgency"],
+    ["studio", "the-last-human-ceo"],
+    ["art", "digital-insurgency"],
+    ["design", "digital-insurgency"],
+    ["kdp", "digital-insurgency"],
+    ["typeset", "digital-insurgency"],
+    ["chapters", "digital-insurgency"]
+  ],
+
+  "_comment_brandkit": "Specific filenames/globs that are brand kits regardless of extension.",
+  "brand_kit_files": ["brand_kit.html", "brand_kit.json", "palette.json", "type.json", "voice.json", "sonic.json", "storytelling.json"],
+
+  "_comment_roots": "Backfill roots for ingest.py. Local dirs are relative to repo root; gcs:// entries pull existing objects.",
+  "backfill_roots": [
+    "art",
+    "design",
+    "brand/spz",
+    "books/the-last-human-ceo/art",
+    "books/neko-death-cult/art",
+    "books/digital-insurgency/art",
+    "books/zero-trust-reality/art",
+    "books/the-last-human-ceo/social/video",
+    "books/neko-death-cult/audio",
+    "gs://spz-podcasts"
+  ],
+
+  "_comment_skip": "Substrings that exclude a path from ingest (junk, intermediates, deps).",
+  "skip_substrings": [".DS_Store", "/variants/", "__pycache__", "/build/", ".pyc", "/.git/",
+                      "/.venv/", "/venv/", "/site-packages/", "/node_modules/",
+                      ".dist-info", ".egg-info", "/.work/", "/voicetest/", "/.cache/"]
+}
