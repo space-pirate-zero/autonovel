@@ -19,6 +19,12 @@ Run this before shipping. Any ✗ means the artifact goes back.
       with Pillow — never ffmpeg drawtext.
 - [ ] Mood: industrial-goth cyberpunk noir; newsprint/VHS grit acceptable;
       no gradients outside the palette, no stock-photo look.
+- [ ] **The vessel:** if a spaceship appears, it is THE canonical Spaceship
+      Alpha 9 saucer (UNIVERSE.md §1a — glass dome + empty twin seats, pink
+      circuit-grid hull, pink "SPACESHIP ALPHA 9" nameplate, red-tipped
+      antenna, cyan rim light, teal tractor beam). No other ship design,
+      ever. Generation must condition on the `brand-spz` reference renders
+      (`reference_asset_ids` in asset-mcp `generate_asset`).
 
 ## Motion / social
 

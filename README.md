@@ -5,6 +5,10 @@ album, the publishing pipelines, the socials, the marketing, the brand, and the
 book-related experiences on the web — all shipped as transmissions from
 **Spaceship Alpha 9**, narrated by **Space Pirate Zero**.
 
+> **Boundary:** studio stuff lives HERE and only here. The private
+> `SpaceShipAlpha9` repo is product/company site code only (spaceshipalpha9.co,
+> StyleLift, GhostDeck, …) — never put studio content there (RULES.md §8.0).
+
 > *Signal finds signal.*
 
 ## Start here

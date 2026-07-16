@@ -383,3 +383,20 @@ Made the repo formally THE studio repo. New documentation set:
 Key discoveries: books/zero-trust-reality on master is a byte-identical TLHC
 clone; root book files are a byte-identical DI duplicate; main checkout sits
 on the autonovel/the-last-human-ceo archive branch.
+
+## 2026-07-15 (later) — Worktree sweep + vessel canon + repo boundary
+- Swept all 13 worktrees for uncommitted work. Finds recorded in
+  docs/BRANCHES.md §Uncommitted work: spz-brand-machine (32M, main checkout),
+  SA9 Publishing Pipeline vNext Phases 2-4 BUILT (jovial-hodgkin publishing/),
+  SPZ Site Kit specs (zen-heyrovsky web/), DI website source + art/ (main
+  checkout). load-secrets.sh rescued + committed here.
+- Queried LIVE asset-mcp: 551 assets. the-last-human-ceo = 0 indexed (biggest
+  gap); zero-trust backfill (1192) pending; brand-spz only 8. Gaps in
+  docs/BRANCHES.md.
+- Canon: UNIVERSE.md §1a "The vessel" — ONE canonical SA9 saucer (dome cockpit
+  w/ empty twin seats, pink circuit-grid hull, SPACESHIP ALPHA 9 nameplate,
+  red beacon, teal tractor beam). RULES.md §3.5 + ENFORCEMENT vessel check +
+  asset-mcp spz_style.json spaceship motif rewritten (was a drifted wireframe
+  ship — container needs redeploy to pick it up).
+- Boundary: RULES.md §8.0 + CLAUDE.md + README — studio stuff lives HERE,
+  never in the SpaceShipAlpha9 repo (product/site code only).

@@ -71,6 +71,13 @@ TRANSMISSION"; all text baked with Pillow (no ffmpeg drawtext here).
   into the catalog automatically.
 - **Maintain:** new finished assets get ingested (`ingest_asset` or
   `python ingest.py` backfill). Deploy/refresh: `cd asset-mcp && bash deploy.sh`.
+  Current ingest gaps (TLHC = 0 assets!) tracked in
+  [BRANCHES.md](BRANCHES.md) §Asset-MCP ingest gaps.
+- **Vessel canon:** any generated image containing the ship must condition on
+  the canonical `brand-spz` renders via `reference_asset_ids` (RULES.md §3.5).
+  Note: `asset-mcp/brand/spz_style.json` is baked into the container — the
+  motif update of 2026-07-15 needs a `deploy.sh` redeploy to reach the live
+  endpoint.
 
 ## 6. Secrets & credentials
 

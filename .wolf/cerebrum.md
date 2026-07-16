@@ -32,6 +32,12 @@
   assets). Prefer generate_asset over raw image prompts for social art.
 - Brand gate for ANY public artifact: brand/spz/ENFORCEMENT.md (5 hexes only,
   3 fonts, banned words, −16 LUFS, punch up never down).
+- ONE spaceship: the canonical SA9 saucer (UNIVERSE.md §1a / RULES.md §3.5) —
+  dome cockpit w/ empty seats, pink circuit-grid hull, "SPACESHIP ALPHA 9"
+  nameplate, red beacon, teal tractor beam. Never redesign it; vary only the
+  scene under the beam.
+- Repo boundary: studio content NEVER goes in the SpaceShipAlpha9 repo — that
+  repo is product/company site code only (RULES.md §8.0).
 
 ## Do-Not-Repeat
 - Don't point draft_chapter.py at the fantasy book ("Second Son of the House of

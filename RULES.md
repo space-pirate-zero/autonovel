@@ -56,6 +56,15 @@ Source of truth: `brand/spz/*.json`. Checklist form: `brand/spz/ENFORCEMENT.md`.
     style files (e.g. `asset-mcp/brand/spz_style.json`) derive from these
     tokens and must not drift.
 
+3.5 **One spaceship.** The Spaceship Alpha 9 vessel has exactly one canonical
+    design (UNIVERSE.md §1a): cel-shaded saucer, glass dome cockpit with empty
+    twin seats, neon-pink circuit-grid hull, pink "SPACESHIP ALPHA 9"
+    nameplate, red-tipped antenna beacon, cyan rim light, mint-teal tractor
+    beam on the subject below. It is the ONLY ship allowed in any art, for any
+    property or product. Scenes vary under the beam; the ship never does.
+    *Gate: `brand/spz/ENFORCEMENT.md` vessel check; generation conditions on
+    the `brand-spz` reference renders in asset-mcp (`reference_asset_ids`).*
+
 ## 4. Sonic
 
 4.1 Industrial-goth engine ~**70 BPM**; the maneki-neko bell is the sonic
@@ -111,6 +120,15 @@ Source of truth: `brand/spz/*.json`. Checklist form: `brand/spz/ENFORCEMENT.md`.
     prompts, whenever the endpoint is available.
 
 ## 8. Repo hygiene
+
+8.0 **Repo boundary — this repo IS the studio.** ALL studio content and
+    content ops live HERE: books, podcasts, the album, brand, publishing,
+    socials, marketing, and book-related web experiences. The private
+    `space-pirate-zero/SpaceShipAlpha9` repo is **product/company site code
+    only** (spaceshipalpha9.co, spacepiratezero.com, StyleLift, GhostDeck,
+    DARKWAVE, etc.). **Never put studio stuff in the SpaceShipAlpha9 repo** —
+    if a piece of work is about a story, a launch, brand content, or a book
+    site, it belongs in this repo, full stop.
 
 8.1 Books are self-contained under `books/<name>/`. No new work at repo root;
     the root pipeline files are a frozen duplicate of Digital Insurgency.

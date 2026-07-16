@@ -51,6 +51,41 @@ Snapshot: 2026-07-15.
 | `osmix` | github.com/osmix/autonovel | secondary mirror |
 | `upstream` | github.com/NousResearch/autonovel | original fork source (read-only) |
 
+## ⚠ Uncommitted work found (sweep 2026-07-15)
+
+Untracked/modified files sitting in worktrees, committed nowhere. Rescue or
+commit these on their branches before pruning anything.
+
+| Where | What | Size | Assessment |
+|---|---|---|---|
+| main checkout (`/Users/gregchambers/autonovel`, on archive branch!) | `spz-brand-machine/` — Python service (connectors/, launchd logs → runs as a scheduled launchd job) | 32M | **real project, committed nowhere** |
+| main checkout | `books/digital-insurgency/website/` — Next.js course site source (content/{modules,equations,prose,show}.json) | 601M (mostly node_modules) | source likely duplicated on the 2E branch — verify, then commit source (never node_modules) |
+| main checkout | `art/` (cover + tabloids) | 101M | TLHC art; ingest to asset-mcp + commit or move to GCS |
+| main checkout | `kdp/ebook-cover.jpg`, `load-secrets.sh` | ~1M | load-secrets.sh rescued into this branch 2026-07-15 |
+| `jovial-hodgkin-726069` | `publishing/` — **SA9 Publishing Pipeline vNext**: Phases 2–4 BUILT (Substack publish, analytics store → SQLite, local dashboard, cli.py, mcp.json) + modified pyproject/uv.lock | — | **major uncommitted work**; supersedes memory's "planned" status |
+| `zen-heyrovsky-aacee1` | `web/` — SPZ Site Kit: shared copy/tokens + per-book site specs (DI, TLHC, Neko) | small | valuable specs; commit on that branch or fold into `standards/` |
+| `sitemap-problem-972312` | `DNS.md` (untracked copy) | small | superseded — DNS.md landed on master (8e1e722); delete |
+| `fervent-driscoll-47742e` | `.claude/` settings only | — | ignorable |
+| `cloud-run-mcp-assets-578774` | `asset-mcp/` | 108K code | ✅ rescued into this branch |
+
+## Asset-MCP ingest gaps (live catalog vs. disk, 2026-07-15)
+
+Live catalog: **551 assets** (neko 332, DI 152, zero-trust 34 partial,
+misc 18, brand-spz 8, publishing 4, socials 1, stylelift 2). Missing:
+
+1. **the-last-human-ceo: 0 assets indexed** — the entire property (art/,
+   audiobook covers/intros, ~70 social stills + 32 videos, fb/ kit,
+   `gs://spz-podcasts/the-last-human-ceo`) is un-ingested. Biggest gap.
+2. Zero-trust worktree backfill: 1,192 assets / 3.86 GB — pending.
+3. Main-checkout `art/` (101M) + `kdp/ebook-cover.jpg` — un-ingested.
+4. DI `build/` PDFs/ePubs (doc type ≈ 0 for DI) — un-ingested.
+5. brand-spz holds only 8 assets — brand_kit.html, fonts, and the full
+   canonical vessel render set should be ingested (they anchor
+   `reference_asset_ids` for on-brand generation, RULES.md §3.5).
+
+Ingestion costs real Gemini/embedding calls per asset (RULES.md §5.4) — run
+`python asset-mcp/ingest.py` per property deliberately, not as a blanket job.
+
 ## Debt / follow-ups
 
 1. **Merge Defense Against the Dark Arts** over `books/zero-trust-reality/`.

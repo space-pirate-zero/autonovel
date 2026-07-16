@@ -3,17 +3,31 @@
   "brand": "Space Pirate Zero",
   "tagline": "Signal finds signal.",
   "essence": "Diogenes with a laptop — deface the counterfeit, live honest. Snarky, punk, Atlanta-trap, hacker. Cyberpunk-noir in look, industrial-goth in mood.",
-
   "styles": {
     "spz": {
       "label": "SPZ house style — cyberpunk-noir",
       "master_prompt": "Cyberpunk-noir illustration in the Space Pirate Zero house style: industrial-goth, defiant, punk. Set on a deep near-black void field. High-contrast neon linework and cinematic rim lighting in hot magenta and signal cyan. Overlaid with VHS grain, halftone dots, and gritty newsprint/tabloid texture (the SPZ tabloid-cover lineage). Bold, confident negative space. Analog, hand-made, anti-corporate — never glossy stock-photo or clean 3D-render clichés.",
       "palette": {
-        "void":  {"hex": "#030303", "role": "background field — near-black, NEVER pure #000000"},
-        "pink":  {"hex": "#FF1493", "role": "primary neon accent — hot magenta, the punk shout"},
-        "cyan":  {"hex": "#00F0FF", "role": "secondary neon accent — cold signal cyan"},
-        "paper": {"hex": "#E8E8E8", "role": "dirty off-white — text/highlights, newsprint not white"},
-        "muted": {"hex": "#8A90A0", "role": "muted slate — de-emphasis, metadata"}
+        "void": {
+          "hex": "#030303",
+          "role": "background field — near-black, NEVER pure #000000"
+        },
+        "pink": {
+          "hex": "#FF1493",
+          "role": "primary neon accent — hot magenta, the punk shout"
+        },
+        "cyan": {
+          "hex": "#00F0FF",
+          "role": "secondary neon accent — cold signal cyan"
+        },
+        "paper": {
+          "hex": "#E8E8E8",
+          "role": "dirty off-white — text/highlights, newsprint not white"
+        },
+        "muted": {
+          "hex": "#8A90A0",
+          "role": "muted slate — de-emphasis, metadata"
+        }
       },
       "rules": [
         "Two neons, one void: hot pink vs cold cyan tension IS the brand. Separate them with generous void or paper.",
@@ -32,14 +46,12 @@
       "negative": "no clutter, no busy background, no off-palette colors, no gradients beyond neon glow"
     }
   },
-
   "motifs": {
-    "spaceship": "The SPZ starship: a lean cyberpunk-noir vessel rendered as glowing neon wireframe / holographic linework — hot-magenta hull edges, signal-cyan underglow — adrift over a grainy near-black starfield with a faint nebula. Battle-worn, insurgent, not a clean military cruiser.",
+    "spaceship": "THE canonical Spaceship Alpha 9 vessel — the only spaceship in the universe, identical in every render: a classic cel-shaded flying saucer with a wide dark gunmetal hull etched with a glowing neon-pink circuit grid; a large glass dome cockpit showing EMPTY twin seats and a console (no pilot visible); a glowing hot-pink nameplate reading 'SPACESHIP ALPHA 9' across the hull band; a red-tipped antenna beacon on top of the dome; signal-cyan rim-light accents; and a mint-teal tractor beam cone projecting straight down onto the subject below (a book, product, character, or city). Sticker/comic cel-shading on void-black. NEVER redesign the ship — only the scene under the beam changes.",
     "signal": "Signal-finds-signal motif: two neon waveforms/transmissions — one pink, one cyan — reaching toward each other across the void.",
     "portrait": "Space Pirate Zero the character: a defiant figure with electric-blue hair and neon rim light, cyberpunk-noir, half in shadow.",
     "tabloid": "SPZ tabloid-cover treatment: halftone newsprint, screaming condensed headline type, high-contrast photo torn and taped, punk zine energy."
   },
-
   "aspects": {
     "square": "1:1",
     "story": "9:16",
@@ -50,7 +62,6 @@
     "twitter": "16:9",
     "og": "1.91:1"
   },
-
   "default_style": "spz",
   "default_aspect": "1:1"
 }

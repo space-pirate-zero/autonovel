@@ -16,6 +16,14 @@ marketing, brand, and web experiences for **Spaceship Alpha 9** /
 
 ## Ground truth (do not re-derive)
 
+- **Repo boundary:** THIS repo is the studio — all books, podcasts, album,
+  brand, publishing, socials, marketing, and book web experiences live here.
+  The private `SpaceShipAlpha9` repo is product/company site code ONLY.
+  **Never put studio stuff in the SpaceShipAlpha9 repo** (RULES.md §8.0).
+- **One spaceship:** the SA9 vessel has a single canonical design
+  (UNIVERSE.md §1a; RULES.md §3.5) — dome-cockpit saucer, pink circuit-grid
+  hull, "SPACESHIP ALPHA 9" nameplate, red beacon, teal tractor beam. No
+  alternate ship designs in any art.
 - **Monorepo:** every book is self-contained under `books/<name>/` with its own
   pipeline copy. The root-level book files (manuscript.md, chapters/, *.py) are
   a historical duplicate of `books/digital-insurgency/` — never work at root.
