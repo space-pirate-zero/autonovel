@@ -87,6 +87,20 @@
         "publishing",
         "the-last-human-ceo"
       ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "xcli.py raised an uncaught traceback instead of a clean message when X credentials (or tweepy) were absent: 'ModuleNotFoundError: No module named tweepy' and bare XError on whoami.",
+      "root_cause": "tweepy was imported inline and not a declared dependency, and the import wasn't wrapped, so ImportError escaped the XError handler in main(); creds were also only checked deep in a property.",
+      "fix": "Added tweepy>=4.14 to pyproject deps; wrapped imports in _import_tweepy() that raises XError with a uv/pip hint; kept _require() raising XError for missing X_* keys. main() catches XError -> 'error: ...' with exit code, no traceback.",
+      "tags": [
+        "x",
+        "tweepy",
+        "xcli",
+        "credentials",
+        "import",
+        "error-handling"
+      ]
     }
   ]
 }
