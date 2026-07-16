@@ -1,0 +1,77 @@
+# ══════════════════════════════════════════════════════════════
+# SA9 Website — Per-Site Container
+# spaceshipalpha9.co
+# Build from monorepo root: docker build -f infra/sa9-sites/docker/Dockerfile.sa9-website .
+# ══════════════════════════════════════════════════════════════
+
+FROM node:20-alpine AS base
+RUN apk add --no-cache libc6-compat
+RUN corepack enable pnpm && corepack prepare pnpm@10.15.1 --activate
+WORKDIR /build
+
+# ── Dependencies ──
+FROM base AS deps
+WORKDIR /build/website
+# Shared packages — file: links resolve relative to package.json location
+# pnpm hard-copies file: deps at install time, so dist/ must exist BEFORE pnpm install.
+# @sa9/signal-corps has main=./dist/index.js → build it first inside this stage.
+COPY packages/auth/ /build/packages/auth/
+COPY packages/analytics/ /build/packages/analytics/
+COPY packages/marketing/ /build/packages/marketing/
+COPY platform/signal-corps/ /build/platform/signal-corps/
+RUN cd /build/platform/signal-corps && \
+    npm install --no-audit --no-fund && \
+    npm run build
+COPY website/package.json website/pnpm-lock.yaml* ./
+RUN pnpm config set manage-package-manager-versions false && \
+    pnpm approve-builds esbuild sharp unrs-resolver 2>/dev/null; \
+    pnpm install --frozen-lockfile || pnpm install
+
+# ── Build ──
+FROM base AS builder
+WORKDIR /build/website
+COPY --from=deps /build/website/node_modules ./node_modules
+COPY --from=deps /build/packages/ /build/packages/
+COPY --from=deps /build/platform/ /build/platform/
+COPY website/ .
+
+ENV NEXT_TELEMETRY_DISABLED=1
+
+ARG NEXT_PUBLIC_POSTHOG_KEY=""
+ARG NEXT_PUBLIC_POSTHOG_HOST="https://us.i.posthog.com"
+ARG NEXT_PUBLIC_STORE_OPEN=false
+ARG NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
+
+ENV NEXT_PUBLIC_POSTHOG_KEY=$NEXT_PUBLIC_POSTHOG_KEY
+ENV NEXT_PUBLIC_POSTHOG_HOST=$NEXT_PUBLIC_POSTHOG_HOST
+ENV NEXT_PUBLIC_STORE_OPEN=$NEXT_PUBLIC_STORE_OPEN
+ENV NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+
+RUN pnpm build
+
+# ── Runner ──
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+RUN addgroup --system --gid 1001 sa9 && \
+    adduser --system --uid 1001 sa9
+
+COPY --from=builder --chown=sa9:sa9 /build/website/.next/standalone ./
+COPY --from=builder --chown=sa9:sa9 /build/website/.next/static ./.next/static
+COPY --from=builder --chown=sa9:sa9 /build/website/public ./public
+RUN sed -i '/"packageManager"/d' package.json 2>/dev/null || true
+
+USER sa9
+
+EXPOSE 3000
+
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+  CMD wget -qO- http://localhost:3000/api/health || exit 1
+
+CMD ["node", "server.js"]

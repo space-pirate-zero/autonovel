@@ -360,3 +360,92 @@ Consolidated all TLHC launch work into reusable, cross-book form:
 - Social motion upgrade also shipped: glow-pulse audiograms, title-reveal trailer
   intro, 29 per-episode teaser Reels (`social/gen_teasers.py`), reproducible
   `social/make_presskit.sh` (press-kit.zip → GCS, git-ignored).
+
+## 2026-07-15 — brand kit build made reproducible (dreamy-leakey worktree)
+- `brand/spz/build_brand_kit.py` had hard-coded absolute paths: FONTS into the
+  removed mystifying-hertz worktree, CLIPS/OUT into a wiped /private/tmp scratchpad.
+- Repointed to repo-relative defaults resolved from `__file__` (FONTS=`<repo>/fonts`,
+  CLIPS=`brand/spz/clips/`, OUT=`brand/spz/brand_kit.html`), each overridable via
+  `BRAND_KIT_FONTS`/`BRAND_KIT_CLIPS`/`BRAND_KIT_OUT` env vars.
+- The 4 audio clips (sting/theme/vault/sid.mp3) no longer existed anywhere on disk;
+  recovered them by decoding the base64 data URIs embedded in the canonical
+  `brand_kit.html` into `brand/spz/clips/`.
+- Verified: rebuild (defaults and env overrides) produces byte-identical
+  `brand_kit.html` (1,551,042 bytes). Logged in `.wolf/buglog.json`.
+
+## X (@spaceshipalpha9) channel added (2026-07-15)
+- New `x/` folder at repo root — sibling to `linkedin/` + `substack/` — to publish,
+  read, and manage the studio's X profile @spaceshipalpha9.
+- `x/xclient.py`: `XClient`, a lazy Tweepy wrapper over X API v2 (+ v1.1 for media
+  upload & profile edit). Offline-safe helpers: `weighted_len()` (X weighted chars,
+  URL=23/CJK=2), `split_thread()` (paragraph→sentence→word packing, numbered i/n).
+  Connections built on first use; `dry_run=True` prints writes, no network/creds.
+- `x/xcli.py`: CLI — post/thread/reply, whoami/profile/read/tweet/mentions/export,
+  delete/like/retweet/follow/set-profile. Every write honors `--dry-run`.
+- Creds: `X_API_KEY/X_API_SECRET/X_ACCESS_TOKEN/X_ACCESS_TOKEN_SECRET` (+ optional
+  `X_BEARER_TOKEN`, `X_HANDLE`) in gitignored `.env` (template in `.env.example`).
+  `tweepy>=4.14` added to pyproject deps. `x/export/` gitignored.
+- Docs: `x/README.md` (setup/auth/usage + Free-tier can write but not read) and
+  `x/PROFILE.md` (the social-network reference: voice, content pillars, cross-channel
+  map, API tiers/limits). Recorded in `.wolf/anatomy.md`.
+- Verified offline: thread-split stays ≤280, dry-run post/thread/set-profile, and
+  the missing-credential path is a clean error (no traceback). Live posting needs
+  the four X_* keys in `.env`.
+- Next-build hook (not done): `x/build_x.py` mirroring `linkedin/build_li.py` —
+  read `substack/series_data.py` → emit per-day X posts/threads → `xcli.py thread`.
+
+## 2026-07-15 — Studio repo docs set (branch spz/studio-repo-docs-setup-efc7a9)
+Made the repo formally THE studio repo. New documentation set:
+- `README.md` rewritten as studio front page; `CLAUDE.md` (new, AI entry point);
+  `RULES.md` (new, enforceable studio rules with gates).
+- `docs/` (new): CATALOG.md (all properties + status), OPERATIONS.md (ops
+  runbook), INFRASTRUCTURE.md (GCP/Cloud Run/buckets/domains),
+  BRANCHES.md (branch & worktree ledger + studio debt).
+- `brand/spz/ENFORCEMENT.md` (new): pass/fail brand gate (hex/font/voice/sonic
+  audits) — flagged build_brand_kit.py hardcoded stale paths.
+- Per-book READMEs replaced (were generic autonovel boilerplate):
+  digital-insurgency, the-last-human-ceo, zero-trust-reality (marked as stale
+  TLHC clone → real Defense book on spz/zero-trust-research-analysis-24ce8e),
+  neko-death-cult (new — had none).
+- `.claude/commands/` (new): /studio-status, /new-book, /publish-book,
+  /brand-check, /social-kit. `.wolf/OPENWOLF.md` created (was referenced by
+  ~/CLAUDE.md but missing). `.wolf/anatomy.md` rewritten to current truth.
+- **asset-mcp integrated**: code was UNCOMMITTED in the cloud-run-mcp-assets
+  worktree (branch tip == master); copied into this branch (108K, .venv
+  stripped) and documented as the studio's MAIN MCP ENDPOINT everywhere.
+Key discoveries: books/zero-trust-reality on master is a byte-identical TLHC
+clone; root book files are a byte-identical DI duplicate; main checkout sits
+on the autonovel/the-last-human-ceo archive branch.
+
+## 2026-07-15 (later) — Worktree sweep + vessel canon + repo boundary
+- Swept all 13 worktrees for uncommitted work. Finds recorded in
+  docs/BRANCHES.md §Uncommitted work: spz-brand-machine (32M, main checkout),
+  SA9 Publishing Pipeline vNext Phases 2-4 BUILT (jovial-hodgkin publishing/),
+  SPZ Site Kit specs (zen-heyrovsky web/), DI website source + art/ (main
+  checkout). load-secrets.sh rescued + committed here.
+- Queried LIVE asset-mcp: 551 assets. the-last-human-ceo = 0 indexed (biggest
+  gap); zero-trust backfill (1192) pending; brand-spz only 8. Gaps in
+  docs/BRANCHES.md.
+- Canon: UNIVERSE.md §1a "The vessel" — ONE canonical SA9 saucer (dome cockpit
+  w/ empty twin seats, pink circuit-grid hull, SPACESHIP ALPHA 9 nameplate,
+  red beacon, teal tractor beam). RULES.md §3.5 + ENFORCEMENT vessel check +
+  asset-mcp spz_style.json spaceship motif rewritten (was a drifted wireframe
+  ship — container needs redeploy to pick it up).
+- Boundary: RULES.md §8.0 + CLAUDE.md + README — studio stuff lives HERE,
+  never in the SpaceShipAlpha9 repo (product/site code only).
+
+## 2026-07-15 — Merged studio-docs branch with master
+Merged origin/master (brand-kit reproducible build PR #6, x/ channel PR #5,
+DI 2E merge PRs #3/#4, album release packaging, SPZ headshot canon) into
+spz/studio-repo-docs-setup-efc7a9. Docs updated to match: 2E + x/ now on
+master; brand-kit path issue RESOLVED; DI art/spaceships/ holds the canonical
+vessel renders.
+
+## 2026-07-15 — Studio web merged; boundary finalized
+PR #7 brought the SA9 + SPZ marketing sites INTO autonovel at web/
+(sa9-website = spaceshipalpha9.co, spz-site = spacepiratezero.com, shared
+@sa9/* packages, links.json, STUDIO-MIGRATION-PLAN.md). Boundary docs updated
+to the plan's division table: studio side (books/web/marketing/SEO/brand) =
+autonovel; hardcore products = SpaceShipAlpha9 repo. RULES §8.0, CLAUDE.md,
+README, anatomy, CATALOG, BRANCHES all reflect it. Phase 2 (workspace wiring:
+pnpm-workspace + workspace:* deps) still pending.

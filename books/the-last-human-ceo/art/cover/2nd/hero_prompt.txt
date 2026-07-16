@@ -1,0 +1,13 @@
+DYNAMIC BOOK-COVER KEY VISUAL — vertical 2:3 portrait composition, tall.
+
+Premium anime key visual, cel-shaded, high-end anime Blu-ray cover style. A single explosive focal subject with kinetic, cinematic energy — NOT a static portrait.
+
+CHARACTER — Prescott "Cope" Mercer IV: a tall American corporate patriarch, mid-50s, golf-tanned, strong sharp jaw, swept-back silver-and-charcoal hair, piercing pale eyes, a charismatic showman's smile turning to a snarl. Dark tailored suit, tie caught in motion.
+
+SCENE: Cope in a dramatic low-angle HERO SHOT, captured mid-motion — turning hard toward the viewer, one arm thrown outward, coat and tie whipping with movement. His RIGHT half is magnificent living flesh, sculpted by hot magenta rim light. His LEFT half is DISSOLVING and shattering into a cascade of cold cyan circuitry, glowing data-shards, hexagons and pixels tearing away into the black void — the last human becoming the machine. Explosive diagonal composition, strong motion streaks, floating neon shards and glass fragments, a sense of speed, power and collapse at once. Dramatic depth, blur of speed at the edges. Leave darker negative space in the TOP THIRD for a title.
+
+COLOR PALETTE (strict): near-black void background #030303. Only two neon accents — hot magenta #FF1493 and cold cyan #00F0FF — used as rim light, glow, shards and reflections, ALWAYS separated by black void, never blended into each other. Dirty off-white #E8E8E8 for skin highlights; muted slate #8A90A0 for midtones.
+
+STYLE: industrial-goth cyberpunk noir; clean bold confident linework; flat cel shading with hard-edged neon rim lighting; subtle VHS scanline and newsprint grain; faint chromatic aberration on neon edges; moody, glamorous, corporate dread; kinetic and dynamic.
+
+EXCLUDE (critical): render ZERO text of any kind — no signage, logos, brand names, headlines, labels, letters, numbers, words, watermark or signature. Screens/holograms must be BLANK or abstract glow only. No border or frame. Correct anatomy, five fingers per hand. Anime illustration, not photorealistic. Tasteful; no gore.

@@ -1,0 +1,64 @@
+{
+  "_comment": "Canonical link registry for Spaceship Alpha 9 / Space Pirate Zero. Single source of truth — reuse across sites, marketing, press kits, and bios. Keep this current.",
+  "updated": "2026-07-15",
+  "operator": {
+    "name": "Greg Chambers",
+    "alias": "Space Pirate Zero",
+    "studio": "Spaceship Alpha 9",
+    "cofounder": "Daniela Chambers",
+    "location": "Atlanta, GA",
+    "email": "zero@spacepiratezero.com",
+    "booking": "https://calendar.app.google/1J6UnuYJYhrd8Vc87",
+    "roles": ["enterprise AI strategist", "multi-patent inventor", "AI consultant", "musician", "investigative writer"],
+    "patents": ["US 11432994 — Intelligence Engine", "US 11600383 — Networked Theft-Prevention System"]
+  },
+  "sites": {
+    "spaceshipAlpha9": "https://spaceshipalpha9.co",
+    "spacePirateZero": "https://spacepiratezero.com",
+    "styleLift": "https://stylelift.fashion",
+    "lastHumanCEO": "https://lasthumanceo.com",
+    "danielaChambers": "https://danielachambers.com",
+    "substack": "https://spacepiratezero.substack.com"
+  },
+  "social": {
+    "substack": "https://spacepiratezero.substack.com",
+    "github": "https://github.com/space-pirate-zero",
+    "linkedin_greg": "https://www.linkedin.com/in/gregchambers/",
+    "linkedin_company": "https://linkedin.com/company/spaceship-alpha-9",
+    "instagram": "https://www.instagram.com/space_pirate_zero/",
+    "bluesky": "https://bsky.app/profile/spacepiratezero.bsky.social",
+    "x": "https://x.com/SpacePirateZero"
+  },
+  "music": {
+    "spotifyArtist": "https://open.spotify.com/artist/5hsu0KPjwVKMCx1hAMFvI4",
+    "appleMusicArtist": "https://music.apple.com/us/artist/space-pirate-zero/1751347344"
+  },
+  "books": {
+    "digitalInsurgency": {
+      "title": "Digital Insurgency",
+      "status": "on-amazon",
+      "kindle": "https://www.amazon.com/Digital-Insurgency-Smuggling-Authenticity-Corporate-ebook/dp/B0H4DLX478",
+      "paperback": "https://www.amazon.com/Digital-Insurgency-Smuggling-Authenticity-Corporate/dp/B0H4D92BSF",
+      "substack": "https://spacepiratezero.substack.com"
+    },
+    "theLastHumanCEO": {
+      "title": "The Last Human CEO",
+      "status": "streaming",
+      "site": "https://lasthumanceo.com",
+      "applePodcasts": "https://podcasts.apple.com/us/podcast/the-last-human-ceo/id6790448408",
+      "spotify": "https://open.spotify.com/show/033OSpl5KjvWx07upDLZ8M",
+      "kindle": "https://www.amazon.com/dp/B0H5YVJY3Z",
+      "amazon": "https://www.amazon.com/dp/B0H6LCDJ9H",
+      "rss": "https://spz-podcast-lhceo-373293565001.us-central1.run.app/feed.xml"
+    },
+    "defenseAgainstTheDarkArts": {
+      "title": "Defense Against the Dark Arts",
+      "status": "coming-soon",
+      "rss": "https://spz-podcast-defense-mzbi2syoxa-uc.a.run.app/feed.xml"
+    },
+    "manekiNekoDeathCult": {
+      "title": "The Maneki Neko Death Cult",
+      "status": "coming-soon"
+    }
+  }
+}

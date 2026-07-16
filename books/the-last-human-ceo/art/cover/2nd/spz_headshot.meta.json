@@ -1,0 +1,12 @@
+{
+  "id": "spz_headshot",
+  "model": "gemini-2.5-flash-image",
+  "timestamp": "2026-07-15T18:33:32.862263",
+  "path": "art/cover/2nd/spz_headshot.png",
+  "width": 1024,
+  "height": 1024,
+  "prompt_hash": "60e68b3a47f98a2f",
+  "prompt_length": 1558,
+  "model_text": null,
+  "attempt": 1
+}

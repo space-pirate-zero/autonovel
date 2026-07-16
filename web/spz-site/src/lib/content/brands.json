@@ -1,0 +1,156 @@
+[
+  {
+    "id": "brand-spaceship-alpha-9",
+    "content_type": "brand",
+    "title": "Spaceship Alpha 9",
+    "slug": "spaceship-alpha-9",
+    "client": "Spaceship Alpha 9",
+    "role": "Founder / Principal Architect / Product Manager",
+    "period": "2018 – Present",
+    "location": "Atlanta, GA / Santa Monica, CA",
+    "publication_date": "2018-05-01T00:00:00Z",
+    "image_url": "https://picsum.photos/seed/spaceship-alpha-9-tech/800/600",
+    "description": "Founder-operated technology consultancy and creative studio. Fractional CTO to Fortune 500 enterprises — smuggling modern AI and infrastructure inside legacy ecosystems. Clients include Apple, Epic Games, OpenAI, Eaton, and more.",
+    "tags": ["AI/ML", "Kubernetes", "iOS", "Enterprise Architecture", "Cybersecurity", "LangChain", "IoT"],
+    "phases": [
+      {
+        "name": "Enterprise Cloud — Apple Silicon AI Clusters",
+        "period": "2024–2025",
+        "content": "Engineered high-performance, Apple Silicon-based Kubernetes clusters tailored for AI workloads at scale. Architected bare-metal infrastructure capable of running large-scale LLM inference for major clients including Apple Intelligence, Epic Games, and OpenAI. Designed cluster provisioning pipelines, GPU scheduling, and model-serving infrastructure for production AI systems.",
+        "media": []
+      },
+      {
+        "name": "Eaton — Brightlayer Home Automation Platform",
+        "period": "2023–2024",
+        "content": "Architected the real-time IoT 'Brightlayer' Home Automation Platform for Eaton Corporation. Served as Lead Swift Developer for iOS Home & EV Charging Apps and Scrum Master for cross-functional sprint teams. Delivered event-driven MQTT architecture enabling real-time device control across residential and commercial deployments.",
+        "media": []
+      },
+      {
+        "name": "Black & Veatch — Solar IoT & EV Charging",
+        "period": "2021–2022",
+        "content": "Designed real-time Solar Power Plant Controllers and Tesla/Amazon EV Charging IoT systems on Azure Event Hubs. Architected event-driven data pipelines for distributed energy asset management at grid scale — millisecond-latency telemetry from thousands of concurrent field devices.",
+        "media": []
+      },
+      {
+        "name": "Theragun / Therabody — Intelligence Engine",
+        "period": "2019–2020",
+        "content": "Led technical strategy for the 4th generation smart percussive therapy product line. Engineered the 'Intelligence Engine' — integrating consumer retail systems with HIPAA-compliant health and biometric data. Designed the secure data bridge between Theragun devices, the Therabody iOS app, and sensitive PHI stores. Named Fast Company Most Innovative Company 2020.",
+        "media": []
+      },
+      {
+        "name": "StyleLift — Agentic AI Fashion Platform",
+        "period": "2020–2022",
+        "content": "Co-Founded and served as CTO. Architected the 'Style DNA' Agentic AI engine using LangChain and open-source models to deliver hyper-personalized fashion recommendations. Built end-to-end cloud-native iOS and Shopify integrations for a fashion-tech platform operating at the intersection of AI and personal identity.",
+        "media": []
+      },
+      {
+        "name": "dosist — High-Risk eCommerce & IoT",
+        "period": "2018–2019",
+        "content": "Built an end-to-end ecommerce platform for high-risk transactions on Magento for dosist (a precision wellness brand). Developed '1-Click' reorder IoT solutions on AWS IoT, enabling seamless device-triggered replenishment. Named Fast Company Most Innovative Company 2018.",
+        "media": []
+      }
+    ]
+  },
+  {
+    "id": "brand-coca-cola",
+    "content_type": "brand",
+    "title": "The Coca-Cola Company",
+    "slug": "coca-cola",
+    "client": "The Coca-Cola Company",
+    "role": "Global Group Director, Digital Innovation",
+    "period": "2013 – 2018",
+    "location": "Atlanta, GA",
+    "publication_date": "2015-01-01T00:00:00Z",
+    "image_url": "https://picsum.photos/seed/coca-cola-innovation/800/600",
+    "description": "Global Group Director of Digital Innovation. Deployed AI-powered retail intelligence to 15,000+ locations worldwide. Set a Guinness World Record. Drove ~$600M/year in measurable incremental revenue.",
+    "tags": ["Computer Vision", "AI", "Digital Signage", "IoT", "Retail", "Innovation", "GCP", "TensorFlow"],
+    "phases": [
+      {
+        "name": "Times Square 3D Robotic Billboard",
+        "period": "2017",
+        "content": "Designed and deployed the world's first and largest 3D Robotic Billboard in Times Square — a Guinness World Record-holding kinetic sculpture featuring 1,760 independently moving LED cubes that created a 'living' 3D wave effect visible from blocks away. Engineered the real-time motor control system, distributed LED rendering pipeline, and synchronization architecture. Winner of Design of the Times Gold Award (Path to Purchase Institute) and Cinema Innovation of the Year (CinemaCon 2017).",
+        "media": []
+      },
+      {
+        "name": "Connected Retail Platform — 15,000+ Stores",
+        "period": "2015–2018",
+        "content": "Engineered the enterprise architecture for a connected retail platform deploying AI-driven personalization to 15,000+ stores globally. Drove an 8% sales increase (~$50M/month). Architected event-driven data pipelines integrating real-time POS data, inventory signals, and consumer behavior streams — delivering personalized shelf strategies at global scale.",
+        "media": []
+      },
+      {
+        "name": "Project Neko — AI Digital Signage",
+        "period": "2016–2017",
+        "content": "Partnered with Google to deploy a network of AI-powered digital signage across 2,100 Albertsons locations using 'smart endcaps' equipped with proximity beacons and computer vision modules. Real-time audience detection delivered personalized content to shoppers based on dwell time and engagement signals. Winner of Cinema Innovation of the Year at CinemaCon (2017).",
+        "media": []
+      },
+      {
+        "name": "Digital Shelf Computer Vision",
+        "period": "2016",
+        "content": "Architected a 'Digital Shelf' Computer Vision algorithm that increased Amazon e-commerce conversions by 8%. Built on TensorFlow and GCP with real-time shelf-state detection, out-of-stock prediction, and automated merchandising compliance scoring — enabling category managers to optimize virtual shelf presence at scale.",
+        "media": []
+      },
+      {
+        "name": "Next Generation Vending — Social Commerce",
+        "period": "2014–2015",
+        "content": "Launched 'Next Generation Vending' (NGV), a mobile app allowing remote vending machine ordering and social gifting — enabling consumers to send a Coke to a friend anywhere in the network. Increased sales by 89% in pilot markets. Designed the IoT vending hardware integration layer and real-time inventory management backend.",
+        "media": []
+      }
+    ]
+  },
+  {
+    "id": "brand-e3-greentech",
+    "content_type": "brand",
+    "title": "E3 Greentech Enterprises",
+    "slug": "e3-greentech",
+    "client": "E3 Greentech (Acquired by Berkshire Hathaway)",
+    "role": "Founder & Chief Innovation Officer",
+    "period": "2007 – 2011",
+    "location": "Atlanta, GA",
+    "publication_date": "2007-11-01T00:00:00Z",
+    "image_url": "https://picsum.photos/seed/e3-greentech-energy/800/600",
+    "description": "Founded and exited a consumer smart-grid technology startup to Berkshire Hathaway. Cleantech Design Award: Product of the Year 2011. Full-stack architecture from embedded hardware to cloud SaaS.",
+    "tags": ["Smart Grid", "IoT", "Embedded Systems", "SaaS", "Clean Tech", "AWS", "Hardware"],
+    "phases": [
+      {
+        "name": "Smart Home IoT Platform",
+        "period": "2007–2010",
+        "content": "Designed full-stack enterprise architecture for utility-based Smart Home IoT products encompassing hardware design, embedded firmware, and cloud SaaS platforms. Architected real-time energy management systems with sub-second device response time, integrating with utility demand-response networks and smart meter infrastructure. The platform enabled automated load-shedding, real-time usage dashboards, and programmable energy schedules.",
+        "media": []
+      },
+      {
+        "name": "Acquisition by Berkshire Hathaway",
+        "period": "2011",
+        "content": "Scaled E3 Greentech from concept to successful acquisition by a Berkshire Hathaway subsidiary. Winner of Cleantech Design Award: Product of the Year (2011). The proprietary energy optimization algorithms and IP portfolio were integrated into Berkshire's utility-scale smart grid initiatives.",
+        "media": []
+      }
+    ]
+  },
+  {
+    "id": "brand-prenova",
+    "content_type": "brand",
+    "title": "Prenova",
+    "slug": "prenova",
+    "client": "Prenova (Acquired by Ecova)",
+    "role": "Director of Solution Design",
+    "period": "2002 – 2007",
+    "location": "Atlanta, GA",
+    "publication_date": "2002-10-01T00:00:00Z",
+    "image_url": "https://picsum.photos/seed/prenova-enterprise/800/600",
+    "description": "Scaled a commercial smart-grid technology startup from early-stage to acquisition. Architected the enterprise energy management SaaS platform controlling $3B in energy spend across 10,000+ commercial buildings.",
+    "tags": ["Enterprise SaaS", "Energy Management", "Architecture", "Smart Grid", "SCADA", "BMS"],
+    "phases": [
+      {
+        "name": "Enterprise Energy Management Platform",
+        "period": "2002–2006",
+        "content": "Architected a disruptive enterprise energy management SaaS platform controlling $3B in energy spend across 10,000 commercial buildings. Designed event-driven data ingestion from utility AMI meters, Building Management Systems (BMS), and SCADA networks — delivering real-time energy intelligence and automated optimization to Fortune 500 facilities managers at continental scale.",
+        "media": []
+      },
+      {
+        "name": "Acquisition by Ecova",
+        "period": "2007",
+        "content": "Scaled the platform, architecture, and commercial organization from early-stage startup to successful acquisition by Ecova. Prenova's technology became the core of Ecova's enterprise energy and sustainability platform — ultimately serving some of the largest commercial real estate portfolios in North America.",
+        "media": []
+      }
+    ]
+  }
+]

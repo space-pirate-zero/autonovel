@@ -25,6 +25,30 @@ scoring, illustrating, or marketing any title, and register every new work here.
 That doubling is canonical, not a marketing accident. The studio *is* the ship.
 The founder *is* the pirate. Every release is *"a Space Pirate Zero transmission."*
 
+### 1a. The vessel (canonical — the ONLY spaceship)
+
+There is exactly **one** Spaceship Alpha 9, and it looks exactly one way, in
+every property, product graphic, cover, social still, and animation:
+
+- A classic **flying saucer**: wide dark gunmetal hull etched with a glowing
+  **neon-pink circuit grid**.
+- A large **glass dome cockpit** — empty twin seats and console visible inside
+  (the pirate transmits; you never see him fly it).
+- The glowing pink nameplate **"SPACESHIP ALPHA 9"** across the hull band.
+- A **red-tipped antenna beacon** on top of the dome.
+- Cyan rim-light accents; and when the ship interacts with the world below, a
+  **mint-teal tractor beam** cone projecting downward onto the subject
+  (a book, a product, a character, a city).
+- Cel-shaded sticker/comic style on void-black, brand palette only.
+
+**No alternate ship designs, ever** — no wireframe ships, no cruisers, no
+fighters, no redesigns per property. Products (StyleLift, GhostDeck, DARKWAVE,
+TradeCraft, OSMIX…) and books vary the *scene under the beam*, never the ship.
+Reference renders live in-repo at `books/digital-insurgency/art/spaceships/`
+(and in the asset-mcp catalog under property `brand-spz` once ingested); when
+generating, condition on them (`reference_asset_ids`). Enforcement:
+`RULES.md` §3.5 + `brand/spz/ENFORCEMENT.md`.
+
 ## 2. Space Pirate Zero (SPZ) — the through-line
 
 SPZ is the one constant across the whole reality. His role shifts by work:

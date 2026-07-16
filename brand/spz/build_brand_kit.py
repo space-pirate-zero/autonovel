@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-import base64, pathlib
+import base64, os, pathlib
 
-FONTS = pathlib.Path("/Users/gregchambers/autonovel/.claude/worktrees/mystifying-hertz-fe888c/fonts")
-CLIPS = pathlib.Path("/private/tmp/claude-501/-Users-gregchambers-autonovel/fad78438-262c-4c90-8699-979701fdb8d9/scratchpad/clips")
-OUT = pathlib.Path("/private/tmp/claude-501/-Users-gregchambers-autonovel/fad78438-262c-4c90-8699-979701fdb8d9/scratchpad/spz_brand_kit.html")
+HERE = pathlib.Path(__file__).resolve().parent          # brand/spz/
+REPO = HERE.parent.parent                               # repo root
+FONTS = pathlib.Path(os.environ.get("BRAND_KIT_FONTS", REPO / "fonts"))
+CLIPS = pathlib.Path(os.environ.get("BRAND_KIT_CLIPS", HERE / "clips"))
+OUT = pathlib.Path(os.environ.get("BRAND_KIT_OUT", HERE / "brand_kit.html"))
 
 def face(family, weight, fname):
     b = base64.b64encode((FONTS / fname).read_bytes()).decode()

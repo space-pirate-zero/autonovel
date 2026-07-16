@@ -1,0 +1,33 @@
+{
+  "name": "digital-insurgency-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Digital Insurgency — the interactive field course (the Glass House). SPZ network.",
+  "scripts": {
+    "content": "node scripts/build-content.mjs",
+    "predev": "node scripts/copy-assets.mjs && node scripts/build-content.mjs",
+    "dev": "next dev -p 4311",
+    "prebuild": "node scripts/copy-assets.mjs && node scripts/build-content.mjs",
+    "build": "next build",
+    "start": "next start -p 4311",
+    "lint": "next lint",
+    "assets": "node scripts/copy-assets.mjs"
+  },
+  "dependencies": {
+    "framer-motion": "^12.42.2",
+    "katex": "0.16.11",
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.5",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.5.1",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.7.3"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

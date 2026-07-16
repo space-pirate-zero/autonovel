@@ -20,6 +20,25 @@
 - `run_pipeline --from-scratch` / `--phase foundation` will regenerate and
   overwrite the hand-authored foundation. Start at drafting or revision instead.
 
+- This is THE studio repo (books+podcasts+socials+marketing+web). Studio docs:
+  README → docs/{CATALOG,OPERATIONS,INFRASTRUCTURE,BRANCHES} → RULES.md.
+  Check docs/BRANCHES.md before assuming work is missing from master —
+  live work sits on spz/* worktree branches (sometimes UNCOMMITTED, like
+  asset-mcp was).
+- `books/zero-trust-reality/` on master = stale byte-clone of the-last-human-ceo;
+  real book (*Defense Against the Dark Arts*) is on
+  spz/zero-trust-research-analysis-24ce8e. Merge before touching that folder.
+- asset-mcp/ is the studio's main MCP endpoint (find + generate on-brand
+  assets). Prefer generate_asset over raw image prompts for social art.
+- Brand gate for ANY public artifact: brand/spz/ENFORCEMENT.md (5 hexes only,
+  3 fonts, banned words, −16 LUFS, punch up never down).
+- ONE spaceship: the canonical SA9 saucer (UNIVERSE.md §1a / RULES.md §3.5) —
+  dome cockpit w/ empty seats, pink circuit-grid hull, "SPACESHIP ALPHA 9"
+  nameplate, red beacon, teal tractor beam. Never redesign it; vary only the
+  scene under the beam.
+- Repo boundary: studio content NEVER goes in the SpaceShipAlpha9 repo — that
+  repo is product/company site code only (RULES.md §8.0).
+
 ## Do-Not-Repeat
 - Don't point draft_chapter.py at the fantasy book ("Second Son of the House of
   Bells") — it's been retargeted to "Digital Insurgency".

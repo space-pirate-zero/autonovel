@@ -1,0 +1,12 @@
+{
+  "id": "ship",
+  "model": "gemini-2.5-flash-image",
+  "timestamp": "2026-07-15T17:37:17.886778",
+  "path": "art/cover/2nd/ship.png",
+  "width": 1024,
+  "height": 1024,
+  "prompt_hash": "99c9e4ead8b447c8",
+  "prompt_length": 1646,
+  "model_text": "Absolutely, I can create that for you! Here is the Spaceship Alpha 9:\n ",
+  "attempt": 1
+}
