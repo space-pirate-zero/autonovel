@@ -454,3 +454,15 @@ pnpm-workspace + workspace:* deps) still pending.
 RULES.md §8.5: PRs never mention Claude/AI (title/body/comments, no generated-
 with footers); lifecycle fixed: open → review → resolve ALL issues → merge.
 Echoed in CLAUDE.md non-negotiables + cerebrum Preferences.
+
+## 2026-07-15 — Orphaned-work rescue round
+- spz-brand-machine: source .py files were DELETED (only __pycache__ .pyc,
+  venv, launchd logs left). Bytecode archived to recovery/spz-brand-machine/
+  on master (40a62d3) with recovery README; secrets-scanned clean. Its launchd
+  agent com.spacepiratezero.brandmachine.plist still fires and fails every
+  tick ("No module named spz_brand_machine.tick") — restore or bootout.
+- Publishing vNext (phases 2-4: Substack publish + analytics SQLite + local
+  dashboard) committed + pushed on spz/jovial-hodgkin-726069.
+- SPZ Site Kit specs committed + pushed on spz/zen-heyrovsky-aacee1.
+- Main-checkout DI website/ + art/ confirmed stale duplicates of PR #3 content.
+- Local master checkout (dreamy-leakey worktree) synced to origin/master.

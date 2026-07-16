@@ -59,12 +59,11 @@ commit these on their branches before pruning anything.
 
 | Where | What | Size | Assessment |
 |---|---|---|---|
-| main checkout (`/Users/gregchambers/autonovel`, on archive branch!) | `spz-brand-machine/` — Python service (connectors/, launchd logs → runs as a scheduled launchd job) | 32M | **real project, committed nowhere** |
-| main checkout | `books/digital-insurgency/website/` — Next.js course site source (content/{modules,equations,prose,show}.json) | 601M (mostly node_modules) | source likely duplicated on the 2E branch — verify, then commit source (never node_modules) |
-| main checkout | `art/` (cover + tabloids) | 101M | TLHC art; ingest to asset-mcp + commit or move to GCS |
-| main checkout | `kdp/ebook-cover.jpg`, `load-secrets.sh` | ~1M | load-secrets.sh rescued into this branch 2026-07-15 |
-| `jovial-hodgkin-726069` | `publishing/` — **SA9 Publishing Pipeline vNext**: Phases 2–4 BUILT (Substack publish, analytics store → SQLite, local dashboard, cli.py, mcp.json) + modified pyproject/uv.lock | — | **major uncommitted work**; supersedes memory's "planned" status |
-| `zen-heyrovsky-aacee1` | `web/` — SPZ Site Kit: shared copy/tokens + per-book site specs (DI, TLHC, Neko) | small | valuable specs; commit on that branch or fold into `standards/` |
+| main checkout (`/Users/gregchambers/autonovel`, on archive branch!) | `spz-brand-machine/` — brand automation launchd service | 32M | ⚠ **source DELETED** — only `.pyc` bytecode survived; rescued to `recovery/spz-brand-machine/` on master (40a62d3). Its launchd agent `com.spacepiratezero.brandmachine.plist` is still registered and failing every tick — restore or `launchctl bootout`. |
+| main checkout | `books/digital-insurgency/website/`, `art/` | 601M + 101M | stale duplicates — 2E website/art landed on master via PR #3; wrap candidates are intermediates. No action; delete locally when convenient. |
+| main checkout | `kdp/ebook-cover.jpg`, `load-secrets.sh` | ~1M | load-secrets.sh rescued into master 2026-07-15; cover jpg is a KDP upload artifact |
+| `jovial-hodgkin-726069` | `publishing/` — **Publishing Pipeline vNext**: Phases 2–4 BUILT (Substack publish, analytics store → SQLite, local dashboard, cli.py, mcp.json) | — | ✅ committed + pushed on `spz/jovial-hodgkin-726069` (2026-07-15); needs review → merge decision vs. current `publishing/` |
+| `zen-heyrovsky-aacee1` | `web/` — SPZ Site Kit: shared copy/tokens + per-book site specs (DI, TLHC, Neko) | small | ✅ committed + pushed on `spz/zen-heyrovsky-aacee1` (2026-07-15); fold into `web/` or `standards/` via reviewed PR |
 | `sitemap-problem-972312` | `DNS.md` (untracked copy) | small | superseded — DNS.md landed on master (8e1e722); delete |
 | `fervent-driscoll-47742e` | `.claude/` settings only | — | ignorable |
 | `cloud-run-mcp-assets-578774` | `asset-mcp/` | 108K code | ✅ rescued into this branch |
