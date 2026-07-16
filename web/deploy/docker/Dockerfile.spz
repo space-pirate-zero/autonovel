@@ -1,0 +1,96 @@
+# ══════════════════════════════════════════════════════════════
+# SPZ (Space Pirate Zero) — Per-Site Container
+# spacepiratezero.com
+# Build from monorepo root: docker build -f infra/sa9-sites/docker/Dockerfile.spz .
+#
+# SPZ lives inside the StyleLift pnpm workspace. The deps stage copies
+# all workspace member package.json files so the lockfile resolves correctly.
+# ══════════════════════════════════════════════════════════════
+
+FROM node:20-alpine AS base
+RUN apk add --no-cache libc6-compat
+RUN corepack enable pnpm && corepack prepare pnpm@10.15.1 --activate
+WORKDIR /build
+
+# ── Dependencies ──
+# SPZ is a workspace member of apps/stylelift. We need the full workspace
+# structure for pnpm lockfile resolution.
+FROM base AS deps
+WORKDIR /build/apps/stylelift
+# Workspace root config
+COPY apps/stylelift/package.json apps/stylelift/pnpm-lock.yaml apps/stylelift/pnpm-workspace.yaml apps/stylelift/turbo.json ./
+# All workspace members (package.json only — needed for lockfile)
+COPY apps/stylelift/apps/admin/package.json ./apps/admin/
+COPY apps/stylelift/apps/creator-portal/package.json ./apps/creator-portal/
+COPY apps/stylelift/apps/extension/package.json ./apps/extension/
+COPY apps/stylelift/apps/shopify-app/package.json ./apps/shopify-app/
+COPY apps/stylelift/apps/spz/package.json ./apps/spz/
+COPY apps/stylelift/apps/web/package.json ./apps/web/
+COPY apps/stylelift/packages/api-client/package.json ./packages/api-client/
+COPY apps/stylelift/packages/config/package.json ./packages/config/
+COPY apps/stylelift/packages/db/package.json ./packages/db/
+COPY apps/stylelift/packages/space-tokens-sdk/package.json ./packages/space-tokens-sdk/
+COPY apps/stylelift/packages/types/package.json ./packages/types/
+COPY apps/stylelift/packages/ui/package.json ./packages/ui/
+COPY apps/stylelift/services/api/package.json ./services/api/
+COPY apps/stylelift/services/mcp/package.json ./services/mcp/
+COPY apps/stylelift/services/webhooks/package.json ./services/webhooks/
+COPY apps/stylelift/services/workers/package.json ./services/workers/
+# @sa9/* packages — file: links from SPZ resolve to /build/packages/*
+COPY packages/auth/ /build/packages/auth/
+COPY packages/analytics/ /build/packages/analytics/
+COPY packages/marketing/ /build/packages/marketing/
+RUN pnpm install --frozen-lockfile
+
+# ── Build ──
+FROM base AS builder
+WORKDIR /build/apps/stylelift
+COPY --from=deps /build/apps/stylelift/node_modules ./node_modules
+COPY --from=deps /build/apps/stylelift/apps/spz/node_modules ./apps/spz/node_modules
+COPY --from=deps /build/packages/ /build/packages/
+# Copy only SPZ source (not the entire StyleLift monorepo)
+COPY apps/stylelift/apps/spz/src ./apps/spz/src
+COPY apps/stylelift/apps/spz/public ./apps/spz/public
+COPY apps/stylelift/apps/spz/package.json apps/stylelift/apps/spz/tsconfig.json apps/stylelift/apps/spz/next.config.ts apps/stylelift/apps/spz/postcss.config.js ./apps/spz/
+COPY apps/stylelift/apps/spz/tailwind.config.ts apps/stylelift/apps/spz/components.json ./apps/spz/
+
+ENV NEXT_TELEMETRY_DISABLED=1
+
+ARG NEXT_PUBLIC_POSTHOG_KEY=""
+ARG NEXT_PUBLIC_POSTHOG_HOST="https://us.i.posthog.com"
+ARG NEXT_PUBLIC_STORE_OPEN=false
+ARG NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
+
+ENV NEXT_PUBLIC_POSTHOG_KEY=$NEXT_PUBLIC_POSTHOG_KEY
+ENV NEXT_PUBLIC_POSTHOG_HOST=$NEXT_PUBLIC_POSTHOG_HOST
+ENV NEXT_PUBLIC_STORE_OPEN=$NEXT_PUBLIC_STORE_OPEN
+ENV NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+
+RUN cd apps/spz && npx next build
+
+# ── Runner ──
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+RUN addgroup --system --gid 1001 sa9 && \
+    adduser --system --uid 1001 sa9
+
+# outputFileTracingRoot is the stylelift monorepo root — standalone has apps/spz/ path
+COPY --from=builder --chown=sa9:sa9 /build/apps/stylelift/apps/spz/.next/standalone ./
+COPY --from=builder --chown=sa9:sa9 /build/apps/stylelift/apps/spz/.next/static ./apps/spz/.next/static
+COPY --from=builder /build/apps/stylelift/apps/spz/public ./apps/spz/public
+
+USER sa9
+
+EXPOSE 3000
+
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+  CMD wget -qO- http://localhost:3000/api/health || exit 1
+
+CMD ["node", "apps/spz/server.js"]

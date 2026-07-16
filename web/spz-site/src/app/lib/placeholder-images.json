@@ -1,0 +1,20 @@
+
+{
+  "fallbacks": [
+    {
+      "id": "default-cyan",
+      "url": "https://picsum.photos/seed/cyan/600/400",
+      "description": "Default cyan terminal fallback"
+    },
+    {
+      "id": "default-magenta",
+      "url": "https://picsum.photos/seed/magenta/600/400",
+      "description": "Default magenta transmission fallback"
+    }
+  ],
+  "categories": {
+    "music": "https://picsum.photos/seed/audio/600/600",
+    "article": "https://picsum.photos/seed/text/800/600",
+    "brand": "https://picsum.photos/seed/design/800/600"
+  }
+}
