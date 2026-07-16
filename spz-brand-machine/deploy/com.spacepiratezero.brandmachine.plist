@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  SPZ Brand Machine — daily autopilot tick (macOS LaunchAgent).
+  Install:
+    cp deploy/com.spacepiratezero.brandmachine.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.spacepiratezero.brandmachine.plist
+  Change cadence: edit StartCalendarInterval, then unload+load again.
+  Runs in dry-run until SPZ_AUTOPILOT_DRY_RUN=false in .env.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.spacepiratezero.brandmachine</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/gregchambers/autonovel/.venv/bin/python</string>
+    <string>-m</string>
+    <string>spz_brand_machine.tick</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/gregchambers/autonovel/spz-brand-machine</string>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>8</integer>
+    <key>Minute</key><integer>37</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/gregchambers/autonovel/spz-brand-machine/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/gregchambers/autonovel/spz-brand-machine/launchd.err.log</string>
+</dict>
+</plist>
