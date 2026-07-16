@@ -32,9 +32,25 @@ original brief, importable on request). Prologue + Ch1-3 originals in an externa
 - art: `gen_art*.py`, `gen_cover*.py`; audiobook: `gen_audiobook*.py`; export:
   `build_outline.py`, `build_arc_summary.py`, `typeset/`.
 
+## 2nd Edition — "The Recording Edition" (audio field course)
+Re-cut of the finished 1E into a 14-episode audio podcast (the "Defense" pattern).
+Setup complete; NO AUDIO produced yet. Key files:
+- `2ND_EDITION.md` — charter (what changes, where things live, build order).
+- `podcast/episodes.md` — the 14-episode map (3 modules; ep→chapter index; foreshadow ledger).
+- `podcast/config.json` — standalone SPZ-network show config (service `spz-podcast-insurgency`,
+  bucket `spz-podcasts`, prefix `digital-insurgency`). Consumed by repo-root `publishing/`.
+- `podcast/README.md` — production/deploy guide; flags 2 LHCEO-specific lines in
+  `publishing/deploy.sh` to generalize before first deploy (audio-glob + hardcoded VID path).
+- `REVISION_MAP_2E.md` — per-episode adaptation plan; flags Ch 11/13/14/15 for expansion.
+- `audiobook/` — recording scaffolding: `scripts/ep_NN.md` (ep_01 = LOCKED reference template),
+  `intros/ep_NN.md` (feed show-notes), `produced/` (EMPTY by design), `README.md` (cast+tags),
+  `audiobook_voices.json` (DI casting; the book-root `audiobook_voices.json` is STALE Bells content).
+- Episode↔chapter map: 01=Prologue,02=Ch1,03=Ch2,04=Ch3-4,05=Ch5,06=Ch6,07=Ch7,08=Ch8,
+  09=Ch9-10,10=Ch11,11=Ch12,12=Ch13-15,13=Ch16,14=AppendixA-B.
+
 ## State
-`state.json` — phase=drafting, chapters_total=16, chapters_drafted=0. See its
-`notes` array for the two run paths and the DO-NOT-regenerate-foundation warning.
+`state.json` — edition=2, phase=2e_podcast_setup. (1E was complete: 16 ch, score 8.0.)
+See its `notes` array for the two run paths and the DO-NOT-regenerate-foundation warning.
 
 ## Config
 `.env` (gitignored) needs `ANTHROPIC_API_KEY`

@@ -16,10 +16,13 @@ Updated: 2026-07-15.
 - **Marketing shipped:** Amazon KDP (`kdp/`), 30-day LinkedIn campaign — posts
   live, ids in `linkedin_slugs.json`; Substack serialization (~24 posts +
   cards + fables, `substack/`); landing page (`landing/`).
-- **In flight:** 2nd Edition — 14-episode audio field course + interactive
-  course site, LIVE on Cloud Run
-  (`digital-insurgency-373293565001.us-central1.run.app`), on branch
-  `spz/digital-insurgency-2nd-edition-09052d`.
+- **2nd Edition ("The Recording Edition") — MERGED + LIVE:** 14-episode audio
+  field course (`podcast/`, show `spz-podcast-insurgency`) + interactive
+  course site (`website/`, Next.js, LIVE at
+  `digital-insurgency-373293565001.us-central1.run.app`; custom domain
+  pending) + `art/spaceships/` (the canonical vessel renders, UNIVERSE.md
+  §1a). Charter: `2ND_EDITION.md`. Remaining: GHOST, Boss-Fight sim,
+  Open Badge, full 14-ep render.
 
 ## The Last Human CEO
 
@@ -81,6 +84,6 @@ Updated: 2026-07-15.
 | Property | Where |
 |---|---|
 | SA9 + SPZ websites | private `space-pirate-zero/SpaceShipAlpha9` repo (spaceshipalpha9.co, spacepiratezero.com); 2026-07 reimagining on its `spz/site-reimagine-2026-07` branch |
-| X channel @spaceshipalpha9 | `x/` on branch `spz/x-profile-integration-c32b12` (Tweepy client + CLI) |
+| X channel @spaceshipalpha9 | `x/` on master (Tweepy client + CLI; see `x/PROFILE.md`) |
 | Asset MCP (studio endpoint) | `asset-mcp/` — on this branch, see [../asset-mcp/README.md](../asset-mcp/README.md) |
 | Six released music albums | catalog in `brand/spz/catalog.json` |

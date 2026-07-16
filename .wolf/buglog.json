@@ -87,6 +87,46 @@
         "publishing",
         "the-last-human-ceo"
       ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "xcli.py raised an uncaught traceback instead of a clean message when X credentials (or tweepy) were absent: 'ModuleNotFoundError: No module named tweepy' and bare XError on whoami.",
+      "root_cause": "tweepy was imported inline and not a declared dependency, and the import wasn't wrapped, so ImportError escaped the XError handler in main(); creds were also only checked deep in a property.",
+      "fix": "Added tweepy>=4.14 to pyproject deps; wrapped imports in _import_tweepy() that raises XError with a uv/pip hint; kept _require() raising XError for missing X_* keys. main() catches XError -> 'error: ...' with exit code, no traceback.",
+      "tags": [
+        "x",
+        "tweepy",
+        "xcli",
+        "credentials",
+        "import",
+        "error-handling"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "`xcli.py --dry-run follow @user` failed with 'Missing X credentials' and made a network call, unlike every other dry-run write which is creds/network-free.",
+      "root_cause": "XClient.follow() called resolve_user() (which hits get_user, needing creds+network) BEFORE the dry_run guard.",
+      "fix": "Moved the dry_run branch above resolve_user(); in dry-run just echo username.lstrip('@') instead of resolving it to an id.",
+      "tags": [
+        "x",
+        "xclient",
+        "follow",
+        "dry-run",
+        "code-review"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "brand/spz/build_brand_kit.py failed to run outside its original session: FONTS pointed at a stale worktree (.claude/worktrees/mystifying-hertz-fe888c/fonts) and CLIPS/OUT pointed at a wiped /private/tmp claude scratchpad, so font/clip reads raised FileNotFoundError.",
+      "root_cause": "Absolute machine/session-specific paths were hard-coded when the kit was first built in a worktree session; the scratchpad (holding the 4 audio clips and the output path) is ephemeral and the worktree was later removed.",
+      "fix": "Made paths repo-relative resolved from __file__: FONTS defaults to <repo>/fonts, CLIPS to brand/spz/clips, OUT to brand/spz/brand_kit.html; each overridable via BRAND_KIT_FONTS/BRAND_KIT_CLIPS/BRAND_KIT_OUT env vars. Recovered the 4 lost clips (sting/theme/vault/sid.mp3) by decoding the base64 data URIs embedded in the canonical brand_kit.html into brand/spz/clips/. Regenerated kit is byte-identical to the canonical file.",
+      "tags": [
+        "brand-kit",
+        "hardcoded-paths",
+        "worktree",
+        "scratchpad",
+        "reproducibility"
+      ]
     }
   ]
 }

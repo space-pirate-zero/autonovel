@@ -19,14 +19,15 @@ Snapshot: 2026-07-15.
 
 | Branch | Worktree | Carries | Status |
 |---|---|---|---|
-| `spz/studio-repo-docs-setup-efc7a9` | `studio-repo-docs-setup-efc7a9` | **this** — studio docs set, rules, asset-mcp integration | in progress |
+| `spz/studio-repo-docs-setup-efc7a9` | `studio-repo-docs-setup-efc7a9` | **this** — studio docs set, rules, asset-mcp integration | merged to master 2026-07-15 |
 | `spz/zero-trust-research-analysis-24ce8e` | `zero-trust-research-analysis-24ce8e` | *Defense Against the Dark Arts* full draft (13 modules, ~57k words) + audiobook readiness | book LIVE as podcast; **merge to master needed** |
-| `spz/digital-insurgency-2nd-edition-09052d` | `digital-insurgency-2nd-edition-09052d` | DI 2E: 14-ep audio field course + interactive Next.js course site (deployed to Cloud Run) | future 2E work continues here |
-| `spz/x-profile-integration-c32b12` | `x-profile-integration-c32b12` | `x/` — X @spaceshipalpha9 client (`xclient.py`/`xcli.py`, Tweepy v2) | working; unmerged |
-| `spz/cloud-run-mcp-assets-578774` | `cloud-run-mcp-assets-578774` | asset-mcp (was **uncommitted** there — branch tip equals master) | code copied into this branch 2026-07-15; original worktree can be retired after merge |
+| `spz/digital-insurgency-2nd-edition-09052d` | `digital-insurgency-2nd-edition-09052d` | DI 2E: audio field course + interactive site | ✅ MERGED (PRs #3/#4); site LIVE; branch stays for future 2E work |
+| `spz/x-profile-integration-c32b12` | `x-profile-integration-c32b12` | `x/` — X @spaceshipalpha9 client | ✅ MERGED (PR #5); worktree can be pruned |
+| `spz/dreamy-leakey-46aa02` | `dreamy-leakey-46aa02` | brand-kit reproducible build (repo-relative paths + recovered clips) | ✅ MERGED (PR #6); worktree can be pruned |
+| `spz/cloud-run-mcp-assets-578774` | `cloud-run-mcp-assets-578774` | asset-mcp (was **uncommitted** there — branch tip equals master) | ✅ code rescued via this branch; worktree can be retired |
 | `spz/last-human-ceo-audiobook-7bb567` | `last-human-ceo-audiobook-7bb567` | TLHC audiobook production (Act 1 done; slots 10–29 pending greenlight) | paused for greenlight |
 | `spz/suno-zero-kat-voices-734e42` | `fervent-driscoll-47742e` | Suno voice work (ZERO/KAT) | — |
-| `album-release-tmp` | `mystifying-hertz-fe888c` | *Signal Finds Signal* album release prep | lyrics rewrite already recovered to master (1754e5d) |
+| `album-release-tmp` | `mystifying-hertz-fe888c` | *Signal Finds Signal* album release prep | album packaged on master (dd107d2); verify then prune |
 | `spz/sa9-studio-web-2026-07` | — (pushed to origin) | SA9 studio web work | — |
 | `spz/spaceship-spacepirate-refresh-517692` | — | site refresh | — |
 | `spz/relaxed-panini-37ed19` | `sitemap-problem-972312` | sitemap fix work | tip == master parent, likely done/stale |

@@ -7,4 +7,5 @@ dependencies = [
     "httpx>=0.28.1",
     "python-dotenv>=1.2.2",
     "python-substack>=0.1.22",
+    "tweepy>=4.14.0",
 ]

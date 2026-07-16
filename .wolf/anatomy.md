@@ -27,9 +27,11 @@ pipeline. Front door: `README.md` → `docs/` → `RULES.md` → `CLAUDE.md`.
   /brand-check, /social-kit.
 
 ## Books (under `books/`)
-- `digital-insurgency/` — COMPLETE + shipped (KDP/LinkedIn/Substack; build/
-  artifacts). 2E (audio course + site) on branch
-  `spz/digital-insurgency-2nd-edition-09052d`.
+- `digital-insurgency/` — 1E COMPLETE + shipped (KDP/LinkedIn/Substack; build/
+  artifacts). **2E "Recording Edition" MERGED here**: `2ND_EDITION.md`,
+  `podcast/` (show `spz-podcast-insurgency`), `audiobook/` (scripts + score),
+  `website/` (Next.js, LIVE on Cloud Run), `art/spaceships/` (canonical
+  vessel renders).
 - `the-last-human-ceo/` — drafted (28 ch); audiobook Act 1 produced (rest on
   branch `spz/last-human-ceo-audiobook-7bb567`); podcast LIVE at
   lasthumanceo.com. REFERENCE IMPLEMENTATION for standards/ pipelines.
@@ -46,19 +48,35 @@ per-book README (book-specific) + PIPELINE.md/WORKFLOW.md.
 
 ## Studio infrastructure (root)
 - `brand/spz/` — THE canonical SPZ brand kit: token JSONs (palette/typography/
-  sonic/voices/verbal/…), `build_brand_kit.py` → `brand_kit.html`, and
-  `ENFORCEMENT.md` (the pass/fail brand gate). Never fork.
+  sonic/voices/verbal/…), `build_brand_kit.py` → `brand_kit.html` (+ `clips/`
+  audio embedded in the kit), and `ENFORCEMENT.md` (the pass/fail brand gate).
+  Never fork. Build is repo-relative: fonts from `<repo>/fonts`, clips from
+  `brand/spz/clips/`, output in place; override via
+  `BRAND_KIT_FONTS`/`_CLIPS`/`_OUT`.
+- **`SPZ-HEADSHOT.png`** (repo root; mirror `brand/spz/spz-headshot.png`) — THE
+  one canonical Space Pirate Zero headshot (blue-haired painterly portrait).
+  Use it for every SPZ likeness (bios, wanted posters, avatars); never
+  regenerate or swap it. Canonical vessel renders:
+  `books/digital-insurgency/art/spaceships/` (UNIVERSE.md §1a).
 - `standards/` — production playbooks: README (launch checklist), AUDIOBOOK,
-  PUBLISHING, BRAND, SOCIAL.
+  PUBLISHING, BRAND, SOCIAL. Reference implementation:
+  `books/the-last-human-ceo/` + `publishing/`.
 - `publishing/` — book-agnostic podcast+site publisher (FastAPI on Cloud Run,
   GCS media, RSS): `config.json` (only per-book file), `deploy.sh`,
   `gen_feed.py`, `gen_site.py`, `make_cover.py`, `app/`.
 - `asset-mcp/` — **studio main MCP endpoint**: Cloud Run FastMCP server,
   vector search over all assets (Firestore + Vertex multimodal embeddings +
   `gs://spz-assets`) + on-brand image generation (`generate_asset`).
-  `config.json`, `ingest.py`, `deploy.sh`, `app/`. Built; deploy pending.
-- `.env.example`, `pyproject.toml`, `uv.lock` — Python env (uv). Secrets in
-  Google Secret Manager (project `stylelift`).
+  `config.json`, `ingest.py`, `deploy.sh`, `app/`. DEPLOYED + LIVE
+  (`spz-asset-mcp-mzbi2syoxa-uc.a.run.app/mcp`, bearer-gated).
+- `x/` — the **@spaceshipalpha9 X (Twitter) channel**: `xclient.py` (Tweepy,
+  X API v2 + v1.1), `xcli.py` (post/thread/reply/read/mentions/export/…, all
+  with `--dry-run`), `README.md`, `PROFILE.md` (voice, pillars, cross-channel
+  map, API tiers). Creds `X_*` in gitignored `.env`; `x/export/` gitignored.
+  Sibling to `linkedin/` + `substack/`.
+- `.env.example`, `pyproject.toml`, `uv.lock` — Python env (uv; `tweepy` is a
+  core dep). Secrets in Google Secret Manager (project `stylelift`);
+  `load-secrets.sh` regenerates `.env`.
 - `.wolf/` — OpenWolf context (see OPENWOLF.md protocol).
 
 ## Root legacy (frozen — do not work here)

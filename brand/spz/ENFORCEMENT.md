@@ -67,9 +67,14 @@ Run this before shipping. Any ✗ means the artifact goes back.
 - Hex audit: `grep -roiE '#[0-9a-f]{6}' <artifact source> | sort -u` →
   subtract the five brand hexes → remainder must be empty.
 
-## Known issue (2026-07-15)
+## Build notes
 
-`build_brand_kit.py` hard-codes absolute paths: `FONTS` points into the stale
-worktree `.claude/worktrees/mystifying-hertz-fe888c/fonts`, and `CLIPS`/`OUT`
-point into a `/private/tmp` scratchpad. Before the next kit regeneration,
-repoint them at repo-relative paths (`fonts/` at repo root) or env overrides.
+`build_brand_kit.py` is repo-relative (fixed 2026-07-15): fonts from
+`<repo>/fonts`, clips from `brand/spz/clips/`, output in place — overridable
+via `BRAND_KIT_FONTS`/`_CLIPS`/`_OUT`. Rebuild verified byte-identical.
+
+Canonical likenesses (same law as the palette — never redesign):
+- **The vessel** — renders in `books/digital-insurgency/art/spaceships/`
+  (UNIVERSE.md §1a).
+- **SPZ himself** — `SPZ-HEADSHOT.png` at repo root (mirror
+  `brand/spz/spz-headshot.png`). Never regenerate or swap his face.

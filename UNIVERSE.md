@@ -44,8 +44,9 @@ every property, product graphic, cover, social still, and animation:
 **No alternate ship designs, ever** — no wireframe ships, no cruisers, no
 fighters, no redesigns per property. Products (StyleLift, GhostDeck, DARKWAVE,
 TradeCraft, OSMIX…) and books vary the *scene under the beam*, never the ship.
-Reference renders live in the asset-mcp catalog under property `brand-spz`;
-when generating, condition on them (`reference_asset_ids`). Enforcement:
+Reference renders live in-repo at `books/digital-insurgency/art/spaceships/`
+(and in the asset-mcp catalog under property `brand-spz` once ingested); when
+generating, condition on them (`reference_asset_ids`). Enforcement:
 `RULES.md` §3.5 + `brand/spz/ENFORCEMENT.md`.
 
 ## 2. Space Pirate Zero (SPZ) — the through-line

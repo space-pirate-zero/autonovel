@@ -9,6 +9,24 @@ without an explicit new decision.
 - **Locked masters:** this folder (`audio/album/`)
 - **Working/alternate takes:** `../songs/` (PRO instrumental, VOX sung, SAMPLED, RAW)
 
+## Release package
+
+- [`README.md`](README.md) — release front door (concept, tracklist, format, how to finish)
+- [`LYRICS.md`](LYRICS.md) — full 24-track lyrics booklet
+- [`CREDITS.md`](CREDITS.md) — performance / writing / production credits
+- [`cover/`](cover/) — cover-art slot + art-direction spec (art not yet produced)
+
+## Freshness note (tracks 4–24 lyrics rewrite)
+
+The lyrics for **tracks 04–24 were rewritten** (distinct per-track romance, `[Both]`
+voice tags removed) and committed to `master`. Consequences for the masters below:
+- **01–03** — lyrics unchanged; locked masters are final.
+- **04** — its locked master (`04_weather-in-your-hands.mp3`, locked 2026-07-08)
+  **predates** the rewrite. Re-master from the new Suno take before treating as final.
+- **05–24** — pending. Fresh Suno vocal takes are downloaded
+  (`~/Downloads/suno_raw`, `a+_neko/suno_raw`); the resample into final masters has
+  **not** completed. Build `epNN_song_FINAL.mp3` from the new takes, then promote here.
+
 ## Status
 
 | # | Title | Door | Status | Master | Length |

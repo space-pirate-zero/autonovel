@@ -55,7 +55,7 @@ TRANSMISSION"; all text baked with Pillow (no ffmpeg drawtext here).
 |---|---|---|
 | **LinkedIn** | root `linkedin/` (Digital Insurgency 30-day campaign) | `build_li.py`; published ids in `linkedin_slugs.json` |
 | **Substack** | per-book `substack/` | `build_posts.py` / `gen_posts.py`, `push_substack.py` / `push_and_schedule.py`, weekday drip |
-| **X @spaceshipalpha9** | `x/` on branch `spz/x-profile-integration-c32b12` | `xcli.py` (Tweepy v2, `X_*` creds in `.env`); Free tier writes but can't read timelines |
+| **X @spaceshipalpha9** | `x/` (on master) | `xcli.py` (Tweepy v2, `X_*` creds in `.env`; all writes support `--dry-run`); Free tier writes but can't read timelines |
 | **Facebook** | `books/the-last-human-ceo/fb/` | daily-drip kit (schedule + posts) |
 | **Amazon KDP** | per-book `kdp/` | `KDP_UPLOAD.md` + metadata; watch 6×9 gutter/margin specs (past rejection logged) |
 | **Press** | `publishing/` press page + `make_presskit.sh` | press kit zip on GCS, git-ignored |

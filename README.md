@@ -26,6 +26,25 @@ book-related experiences on the web — all shipped as transmissions from
 | Run day-to-day ops (publish, socials, KDP) | [docs/OPERATIONS.md](docs/OPERATIONS.md) |
 | Point an AI agent at this repo | [CLAUDE.md](CLAUDE.md) |
 
+## 🛸 Digital Insurgency — 2nd Edition · "The Recording Edition" (LIVE)
+
+The most fully-realized title in the repo: the field manual re-cut into a
+**14-episode audio field course** *and* a **live interactive course website**
+where readers run the physics, pass the Mirror Test, and earn a LinkedIn
+credential.
+
+- **▶ Live site:** <https://digital-insurgency-373293565001.us-central1.run.app>
+  (custom domain `digital-insurgency.com` pending).
+- Everything under [`books/digital-insurgency/`](books/digital-insurgency/):
+  charter [`2ND_EDITION.md`](books/digital-insurgency/2ND_EDITION.md), podcast
+  [`podcast/`](books/digital-insurgency/podcast/) (standalone show
+  `spz-podcast-insurgency`), recording scripts + section score
+  [`audiobook/`](books/digital-insurgency/audiobook/) (Ep 01 sample rendered),
+  Next.js site [`website/`](books/digital-insurgency/website/), canonical
+  vessel art [`art/spaceships/`](books/digital-insurgency/art/spaceships/).
+- Remaining: Claude-backed GHOST, Boss-Fight simulator, server-side Open
+  Badge, full 14-ep audiobook render, custom domain.
+
 ## What lives here
 
 ```
@@ -48,7 +67,14 @@ The repo root also still carries the original **autonovel pipeline** files for
 *Digital Insurgency* (manuscript, chapters/, ~27 `*.py` tools, linkedin/,
 substack/, kdp/, build/). These are a historical duplicate of
 `books/digital-insurgency/` — the `books/` copy is canonical. New work never
-happens at root.
+happens at root. The `x/` directory is live, though: the **@spaceshipalpha9 X
+channel** tooling (`xcli.py`, see [x/README.md](x/README.md)).
+
+**THE SPZ HEADSHOT.** [`SPZ-HEADSHOT.png`](SPZ-HEADSHOT.png) (repo root; mirror in
+`brand/spz/spz-headshot.png`) is the **one canonical** Space Pirate Zero portrait —
+the blue-haired painterly headshot. Use it for author bios, wanted posters, avatars,
+and any SPZ likeness across every book and asset. **Do not regenerate, restyle, or
+swap it** for an AI-made face. (Same law as the vessel: RULES.md §3.5.)
 
 ## The catalog (one line each)
 
