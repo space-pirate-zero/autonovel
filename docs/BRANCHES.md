@@ -24,7 +24,7 @@ Snapshot: 2026-07-15.
 | `spz/digital-insurgency-2nd-edition-09052d` | `digital-insurgency-2nd-edition-09052d` | DI 2E: audio field course + interactive site | ✅ MERGED (PRs #3/#4); site LIVE; branch stays for future 2E work |
 | `spz/x-profile-integration-c32b12` | `x-profile-integration-c32b12` | `x/` — X @spaceshipalpha9 client | ✅ MERGED (PR #5); worktree can be pruned |
 | `spz/dreamy-leakey-46aa02` | `dreamy-leakey-46aa02` | brand-kit reproducible build (repo-relative paths + recovered clips) | ✅ MERGED (PR #6); worktree can be pruned |
-| `spz/cloud-run-mcp-assets-578774` | `cloud-run-mcp-assets-578774` | asset-mcp (was **uncommitted** there — branch tip equals master) | ✅ code rescued via this branch; worktree can be retired |
+| `spz/cloud-run-mcp-assets-578774` | `cloud-run-mcp-assets-578774` | asset-mcp | ✅ MERGED (PR #8, reviewed: SSRF guard + gen-failure hardening); worktree can be pruned |
 | `spz/last-human-ceo-audiobook-7bb567` | `last-human-ceo-audiobook-7bb567` | TLHC audiobook production (Act 1 done; slots 10–29 pending greenlight) | paused for greenlight |
 | `spz/suno-zero-kat-voices-734e42` | `fervent-driscoll-47742e` | Suno voice work (ZERO/KAT) | — |
 | `album-release-tmp` | `mystifying-hertz-fe888c` | *Signal Finds Signal* album release prep | album packaged on master (dd107d2); verify then prune |
