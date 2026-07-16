@@ -87,6 +87,33 @@
         "publishing",
         "the-last-human-ceo"
       ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "xcli.py raised an uncaught traceback instead of a clean message when X credentials (or tweepy) were absent: 'ModuleNotFoundError: No module named tweepy' and bare XError on whoami.",
+      "root_cause": "tweepy was imported inline and not a declared dependency, and the import wasn't wrapped, so ImportError escaped the XError handler in main(); creds were also only checked deep in a property.",
+      "fix": "Added tweepy>=4.14 to pyproject deps; wrapped imports in _import_tweepy() that raises XError with a uv/pip hint; kept _require() raising XError for missing X_* keys. main() catches XError -> 'error: ...' with exit code, no traceback.",
+      "tags": [
+        "x",
+        "tweepy",
+        "xcli",
+        "credentials",
+        "import",
+        "error-handling"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "error_message": "`xcli.py --dry-run follow @user` failed with 'Missing X credentials' and made a network call, unlike every other dry-run write which is creds/network-free.",
+      "root_cause": "XClient.follow() called resolve_user() (which hits get_user, needing creds+network) BEFORE the dry_run guard.",
+      "fix": "Moved the dry_run branch above resolve_user(); in dry-run just echo username.lstrip('@') instead of resolving it to an id.",
+      "tags": [
+        "x",
+        "xclient",
+        "follow",
+        "dry-run",
+        "code-review"
+      ]
     }
   ]
 }

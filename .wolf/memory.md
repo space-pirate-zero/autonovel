@@ -360,3 +360,24 @@ Consolidated all TLHC launch work into reusable, cross-book form:
 - Social motion upgrade also shipped: glow-pulse audiograms, title-reveal trailer
   intro, 29 per-episode teaser Reels (`social/gen_teasers.py`), reproducible
   `social/make_presskit.sh` (press-kit.zip → GCS, git-ignored).
+
+## X (@spaceshipalpha9) channel added (2026-07-15)
+- New `x/` folder at repo root — sibling to `linkedin/` + `substack/` — to publish,
+  read, and manage the studio's X profile @spaceshipalpha9.
+- `x/xclient.py`: `XClient`, a lazy Tweepy wrapper over X API v2 (+ v1.1 for media
+  upload & profile edit). Offline-safe helpers: `weighted_len()` (X weighted chars,
+  URL=23/CJK=2), `split_thread()` (paragraph→sentence→word packing, numbered i/n).
+  Connections built on first use; `dry_run=True` prints writes, no network/creds.
+- `x/xcli.py`: CLI — post/thread/reply, whoami/profile/read/tweet/mentions/export,
+  delete/like/retweet/follow/set-profile. Every write honors `--dry-run`.
+- Creds: `X_API_KEY/X_API_SECRET/X_ACCESS_TOKEN/X_ACCESS_TOKEN_SECRET` (+ optional
+  `X_BEARER_TOKEN`, `X_HANDLE`) in gitignored `.env` (template in `.env.example`).
+  `tweepy>=4.14` added to pyproject deps. `x/export/` gitignored.
+- Docs: `x/README.md` (setup/auth/usage + Free-tier can write but not read) and
+  `x/PROFILE.md` (the social-network reference: voice, content pillars, cross-channel
+  map, API tiers/limits). Recorded in `.wolf/anatomy.md`.
+- Verified offline: thread-split stays ≤280, dry-run post/thread/set-profile, and
+  the missing-credential path is a clean error (no traceback). Live posting needs
+  the four X_* keys in `.env`.
+- Next-build hook (not done): `x/build_x.py` mirroring `linkedin/build_li.py` —
+  read `substack/series_data.py` → emit per-day X posts/threads → `xcli.py thread`.
