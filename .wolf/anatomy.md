@@ -74,6 +74,13 @@ per-book README (book-specific) + PIPELINE.md/WORKFLOW.md.
   with `--dry-run`), `README.md`, `PROFILE.md` (voice, pillars, cross-channel
   map, API tiers). Creds `X_*` in gitignored `.env`; `x/export/` gitignored.
   Sibling to `linkedin/` + `substack/`.
+- `web/` — the **studio marketing web** (merged 2026-07-15, PR #7):
+  `sa9-website/` (spaceshipalpha9.co Next.js), `spz-site/`
+  (spacepiratezero.com), shared `packages/{analytics,marketing,auth}` +
+  `platform/signal-corps`, `links.json` (canonical link registry),
+  `STUDIO-MIGRATION-PLAN.md` (the studio-vs-products division table +
+  phases). Phase 1 snapshot — `@sa9/*` deps need re-pointing before builds
+  run here (Phase 2).
 - `.env.example`, `pyproject.toml`, `uv.lock` — Python env (uv; `tweepy` is a
   core dep). Secrets in Google Secret Manager (project `stylelift`);
   `load-secrets.sh` regenerates `.env`.

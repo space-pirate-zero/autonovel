@@ -28,7 +28,7 @@ Snapshot: 2026-07-15.
 | `spz/last-human-ceo-audiobook-7bb567` | `last-human-ceo-audiobook-7bb567` | TLHC audiobook production (Act 1 done; slots 10–29 pending greenlight) | paused for greenlight |
 | `spz/suno-zero-kat-voices-734e42` | `fervent-driscoll-47742e` | Suno voice work (ZERO/KAT) | — |
 | `album-release-tmp` | `mystifying-hertz-fe888c` | *Signal Finds Signal* album release prep | album packaged on master (dd107d2); verify then prune |
-| `spz/sa9-studio-web-2026-07` | — (pushed to origin) | SA9 studio web work | — |
+| `spz/sa9-studio-web-2026-07` | — | SA9 + SPZ marketing sites → `web/` (studio repo base) | ✅ MERGED (PR #7); Phase 2 wiring pending (`web/STUDIO-MIGRATION-PLAN.md`) |
 | `spz/spaceship-spacepirate-refresh-517692` | — | site refresh | — |
 | `spz/relaxed-panini-37ed19` | `sitemap-problem-972312` | sitemap fix work | tip == master parent, likely done/stale |
 | `spz/jovial-hodgkin-726069`, `spz/zen-heyrovsky-aacee1`, `spz/fervent-driscoll-47742e`, `spz/sitemap-problem-972312` | assorted | scratch/auto-named sessions | triage & delete when confirmed landed |

@@ -440,3 +440,12 @@ DI 2E merge PRs #3/#4, album release packaging, SPZ headshot canon) into
 spz/studio-repo-docs-setup-efc7a9. Docs updated to match: 2E + x/ now on
 master; brand-kit path issue RESOLVED; DI art/spaceships/ holds the canonical
 vessel renders.
+
+## 2026-07-15 — Studio web merged; boundary finalized
+PR #7 brought the SA9 + SPZ marketing sites INTO autonovel at web/
+(sa9-website = spaceshipalpha9.co, spz-site = spacepiratezero.com, shared
+@sa9/* packages, links.json, STUDIO-MIGRATION-PLAN.md). Boundary docs updated
+to the plan's division table: studio side (books/web/marketing/SEO/brand) =
+autonovel; hardcore products = SpaceShipAlpha9 repo. RULES §8.0, CLAUDE.md,
+README, anatomy, CATALOG, BRANCHES all reflect it. Phase 2 (workspace wiring:
+pnpm-workspace + workspace:* deps) still pending.

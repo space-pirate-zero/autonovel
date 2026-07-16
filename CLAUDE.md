@@ -16,10 +16,12 @@ marketing, brand, and web experiences for **Spaceship Alpha 9** /
 
 ## Ground truth (do not re-derive)
 
-- **Repo boundary:** THIS repo is the studio — all books, podcasts, album,
-  brand, publishing, socials, marketing, and book web experiences live here.
-  The private `SpaceShipAlpha9` repo is product/company site code ONLY.
-  **Never put studio stuff in the SpaceShipAlpha9 repo** (RULES.md §8.0).
+- **Repo boundary:** THIS repo is the studio — books, podcasts, album, brand,
+  publishing, socials, marketing, AND the marketing web (spaceshipalpha9.co +
+  spacepiratezero.com now live at `web/`). The private `SpaceShipAlpha9` repo
+  is hardcore product code ONLY (StyleLift/GhostDeck/DARKWAVE/TradeCraft/
+  OSMIX + product infra). **Never put studio stuff in the SpaceShipAlpha9
+  repo** (RULES.md §8.0; division table in `web/STUDIO-MIGRATION-PLAN.md`).
 - **One spaceship:** the SA9 vessel has a single canonical design
   (UNIVERSE.md §1a; RULES.md §3.5) — dome-cockpit saucer, pink circuit-grid
   hull, "SPACESHIP ALPHA 9" nameplate, red beacon, teal tractor beam. No

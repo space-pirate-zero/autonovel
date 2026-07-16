@@ -5,9 +5,12 @@ album, the publishing pipelines, the socials, the marketing, the brand, and the
 book-related experiences on the web — all shipped as transmissions from
 **Spaceship Alpha 9**, narrated by **Space Pirate Zero**.
 
-> **Boundary:** studio stuff lives HERE and only here. The private
-> `SpaceShipAlpha9` repo is product/company site code only (spaceshipalpha9.co,
-> StyleLift, GhostDeck, …) — never put studio content there (RULES.md §8.0).
+> **Boundary:** studio stuff lives HERE and only here — including the
+> marketing web (spaceshipalpha9.co + spacepiratezero.com, at [web/](web/)).
+> The private `SpaceShipAlpha9` repo is hardcore product code only (StyleLift
+> app, GhostDeck, DARKWAVE, TradeCraft, OSMIX, product infra) — never put
+> studio content there. Division table: RULES.md §8.0 +
+> [web/STUDIO-MIGRATION-PLAN.md](web/STUDIO-MIGRATION-PLAN.md).
 
 > *Signal finds signal.*
 

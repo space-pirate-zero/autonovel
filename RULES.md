@@ -121,14 +121,18 @@ Source of truth: `brand/spz/*.json`. Checklist form: `brand/spz/ENFORCEMENT.md`.
 
 ## 8. Repo hygiene
 
-8.0 **Repo boundary — this repo IS the studio.** ALL studio content and
-    content ops live HERE: books, podcasts, the album, brand, publishing,
-    socials, marketing, and book-related web experiences. The private
-    `space-pirate-zero/SpaceShipAlpha9` repo is **product/company site code
-    only** (spaceshipalpha9.co, spacepiratezero.com, StyleLift, GhostDeck,
-    DARKWAVE, etc.). **Never put studio stuff in the SpaceShipAlpha9 repo** —
-    if a piece of work is about a story, a launch, brand content, or a book
-    site, it belongs in this repo, full stop.
+8.0 **Repo boundary — this repo IS the studio.** Division of responsibility
+    (canon: `web/STUDIO-MIGRATION-PLAN.md`):
+    - **HERE (autonovel = studio):** books, podcasts, the album, brand kit +
+      art generation, publishing/SEO/press, socials, Substack/dispatches, and
+      the **marketing web** — spaceshipalpha9.co (`web/sa9-website/`) and
+      spacepiratezero.com (`web/spz-site/`).
+    - **SpaceShipAlpha9 repo (products):** hardcore product code only —
+      StyleLift app, GhostDeck, DARKWAVE, TradeCraft, OSMIX, product
+      infra/k8s.
+    **Never put studio stuff in the SpaceShipAlpha9 repo** — if it's about a
+    story, a launch, brand content, marketing, or a book/site experience, it
+    belongs in this repo, full stop.
 
 8.1 Books are self-contained under `books/<name>/`. No new work at repo root;
     the root pipeline files are a frozen duplicate of Digital Insurgency.

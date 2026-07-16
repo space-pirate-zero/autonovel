@@ -83,7 +83,7 @@ Updated: 2026-07-15.
 
 | Property | Where |
 |---|---|
-| SA9 + SPZ websites | private `space-pirate-zero/SpaceShipAlpha9` repo (spaceshipalpha9.co, spacepiratezero.com); 2026-07 reimagining on its `spz/site-reimagine-2026-07` branch |
+| SA9 + SPZ marketing sites | **now in this repo at `web/`** (PR #7): `web/sa9-website/` = spaceshipalpha9.co, `web/spz-site/` = spacepiratezero.com; Phase 2 workspace wiring pending (`web/STUDIO-MIGRATION-PLAN.md`) |
 | X channel @spaceshipalpha9 | `x/` on master (Tweepy client + CLI; see `x/PROFILE.md`) |
 | Asset MCP (studio endpoint) | `asset-mcp/` — on this branch, see [../asset-mcp/README.md](../asset-mcp/README.md) |
 | Six released music albums | catalog in `brand/spz/catalog.json` |
