@@ -360,3 +360,15 @@ Consolidated all TLHC launch work into reusable, cross-book form:
 - Social motion upgrade also shipped: glow-pulse audiograms, title-reveal trailer
   intro, 29 per-episode teaser Reels (`social/gen_teasers.py`), reproducible
   `social/make_presskit.sh` (press-kit.zip → GCS, git-ignored).
+
+## 2026-07-15 — brand kit build made reproducible (dreamy-leakey worktree)
+- `brand/spz/build_brand_kit.py` had hard-coded absolute paths: FONTS into the
+  removed mystifying-hertz worktree, CLIPS/OUT into a wiped /private/tmp scratchpad.
+- Repointed to repo-relative defaults resolved from `__file__` (FONTS=`<repo>/fonts`,
+  CLIPS=`brand/spz/clips/`, OUT=`brand/spz/brand_kit.html`), each overridable via
+  `BRAND_KIT_FONTS`/`BRAND_KIT_CLIPS`/`BRAND_KIT_OUT` env vars.
+- The 4 audio clips (sting/theme/vault/sid.mp3) no longer existed anywhere on disk;
+  recovered them by decoding the base64 data URIs embedded in the canonical
+  `brand_kit.html` into `brand/spz/clips/`.
+- Verified: rebuild (defaults and env overrides) produces byte-identical
+  `brand_kit.html` (1,551,042 bytes). Logged in `.wolf/buglog.json`.
